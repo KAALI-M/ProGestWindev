@@ -1,0 +1,255 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COL_OneDrive
+ major_version : 25
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x15e4771200c2a7f0
+ internal_properties : BQAAAAUAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     internal_properties : BQAAAAUAAAA4qHgDwdTIKb2E1Zwk5bkv9tcoPKQGsKbE5/TM96UA/u/2NlnOto6L4HnSi/5Eupn/KuXpxJGjTHTsJwXSOc4BiS6U0dJI5IadJ19MOpMtKRwS1+6DI3AWRv1N7JwDjAYGYIwzgjYhQX3P9uB0+g4xdpmqfgJ6egrfT+I525Qt1xCX3FeW9lBILNIwp5d8TBlJ/pz6KwX8F/JgwmlRLBmaKI6z27CWYvHiezxf9tBLvVEjhqHW5cdL0x1wdp8awyg7
+     code : |1+
+      // Déclaration des structures des différents objets renvoyés par l'API OneDrive
+      
+      // STQuota représente des informations sur l'espace utilisé dans un drive
+      STQuota est une structure
+      	deleted est un entier sur 8
+      	remaining est un entier sur 8
+      	state est une chaine
+      	total est un entier sur 8
+      	used est un entier sur 8
+      FIN
+      
+      // STIdentity représente une "personne" (physique ou virtuelle)
+      STIdentity est une structure
+      	displayName est une chaine
+      	id est une chaine
+      FIN
+      
+      // STIdentitySet représente un compte utilisateur
+      STIdentitySet est une structure
+      	user est un STIdentity
+      	application est un STIdentity
+      	device est un STIdentity
+      	
+      FIN
+      
+      // La ressource STDrive représente un lecteur dans le système OneDrive.
+      // Un utilisateur peut avoir un ou plusieurs STDrive.
+      // Un utilisateur a toujours un et un seul STDrive par défaut
+      // Un STDrive contient des ressources de type "item", "root" et "special"
+      STDrive est un structure
+      	id est une chaîne
+      	driveType est une chaine
+      	owner est un STIdentitySet
+      	quota est un STQuota
+      FIN
+      
+      // Un STItemReference est un "pointeur" vers un objet (fichier ou répertoire)
+      STItemReference est une structure
+      	driveId est une chaine
+      	id est une chaine
+      	path est une chaine
+      FIN
+      
+      // Les types ST*Facet sont les diverses "visualisations" possibles d'un élément
+      STFolderFacet est une structure
+      	childCount est un entier sur 8
+      FIN
+      
+      STHashesType est une structure
+      	sha1Hash est une chaine
+      	crc32Hash est une chaine
+      FIN
+      
+      STFileFacet est une structure
+      	mimeType est une chaîne
+      	hashes est un STHashesType
+      FIN
+      
+      STFileSystemInfoFacet est une structure
+      	createdDateTime est une chaîne
+      	lastModifiedDateTime est une chaine
+      FIN
+      
+      STImageFacet est une structure
+      	width est un entier
+      	height est un entier
+      FIN
+      
+      STPhotoFacet est une structure
+      	takenDateTime est une chaine
+      	cameraMake est une chaîne
+      	cameraModel est une chaîne
+      	fNumber est un reel
+      	exposureDenominator est un entier
+      	exposureNumerator est un entier
+      	focalLength est un reel
+      	iso est un entier
+      FIN
+      
+      STAudioFacet est une structure
+      	album est une chaine
+      	albumArtist est une chaine
+      	artist est une chaine
+      	bitrate est un entier
+      	composers est une chaine
+      	copyright est une chaine
+      	disc est un entier
+      	discCount est un entier
+      	duration est un entier
+      	genre est une chaine
+      	hasDrm est un booleen
+      	isVariableBitrate est un booleen
+      	title est une chaine
+      	track est un entier
+      	trackCount est un entier
+      	year est un entier
+      FIN
+      
+      STVideoFacet est une structure
+      	bitrate est un entier
+      	duration est un entier
+      	height est un entier
+      	width est un entier
+      FIN
+      
+      STLocationFacet est une structure
+      	altitude est un reel
+      	latitude est un reel
+      	longitude est un reel
+      FIN
+      
+      STSpecialFolder est une structure
+      	name est une chaine
+      FIN
+      
+      STItemList est une structure
+      	value est un tableau de STItem
+      FIN
+      
+      // Un STItem représente un élément (fichier ou dossier) stocké dans le OneDrive
+      // Un STItem contient des ressources de type :
+      // "content" : contenu du fichier
+      // "children" : items contenus dans un répertoire
+      // "thumbnails" : aperçus
+      STItem est une structure
+      	id est une chaine
+      	name est une chaine
+      	eTag est une chaine
+      	cTag est une chaine
+      	createdBy est un STIdentitySet
+      	createdDateTime est une chaine
+      	lastModifiedBy est un STIdentitySet
+      	lastModifiedDateTime est une chaine
+      	size est un entier sur 8
+      	webUrl est une chaine
+      	description est une chaine
+      	parentReference est un STItemReference
+      	folder est un STFolderFacet
+      	file est un STFileFacet
+      	fileSystemInfo est un STFileSystemInfoFacet
+      	image est un STImageFacet
+      	photo est un STPhotoFacet
+      	audio est un STAudioFacet
+      	video est STVideoFacet
+      	location est un STLocationFacet
+      	specialFolder est un STSpecialFolder
+      fin
+      
+      
+      STDriveList est une structure
+      	value est un tableau de STDrive
+      FIN
+      
+      STError est une structure
+      	code est une chaîne
+      	message est une chaine	
+      FIN
+      
+      STRetourError est une structure
+      	error est un STError
+      FIN
+      
+      // Structure des infos de connexion à l'API
+      STInfoSerial est une structure
+      	bMemoApp est un booleen
+      	sIDClient est une chaine
+      	sSecretKey est une chaine
+      FIN
+      
+      
+      gbAccesEnCours est un booleen
+      
+      // La variable globale gclClientOneDrive identifie l'application auprès de OneDrive
+      // Les valeurs de ClientID et SecretKey sont obtenues dans le panneau de configuration de OneDrive après enregistrement de l'application
+      gclClientOneDrive est une CConnexionOneDrive
+      gclClientOneDrive.sScope = "wl.signin wl.offline_access onedrive.readwrite"
+     type : 720896
+  procedures :
+   -
+     name : DebutAccesWSOneDrive
+     internal_properties : BQAAAAUAAAA+/yXfbNL3a0NezO5n2mP1oUWIELsDqr1lKZTBe5Hbst3au9GYfzM3smu0NNL8DZ0HPKMTzYa8WX+zE3Kh2htcp5IKexbuil5lMNUfI51ncvPbwYgiFylWL1WrQha/8HbZSivs/+D5UpmLiYMzj3dBT1Mfr4/gUvnlueVaILbPJen5Wd759MANsgi/Gi6Md7Lvklbud3mrbdogokQ4/yOUqfF9
+     procedure_id : 1581225105325647323
+     type_code : 15
+     code : |1-
+      // Résumé : Procédure à appeler avant une série d'appels au webservice pour afficher la jauge
+      // Syntaxe :
+      //DebutAccesWSOneDrive ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE DebutAccesWSOneDrive()
+      
+      si gbAccesEnCours = faux alors
+      	TitreSuivant("Accès au webservice OneDrive")
+      	sablier(vrai)
+      	gbAccesEnCours = vrai
+      fin
+     type : 458752
+   -
+     name : FinAccesWSOneDrive
+     internal_properties : BQAAAAUAAACWmE5sKA3/OT8snJT7fGOfXICj6uIxu9V5TL4TG0UwXKiJDR4mhWtPdzlT3JkWJLYl3FS5NxBxO9rUqy4J/AyeA8HF3aAJZE3liuzoapkhF8l7MtK5sCSAozSB9n1kCffUZi704Pl86E00AamcVuIu5nnekU4vz7UbZHlOVdvkTHl+10OLYuaU6/xkd5KIT3qz/zYXLw==
+     procedure_id : 1581225298599220440
+     type_code : 15
+     code : |1+
+      // Résumé : Procédure à appeler après une série d'appels au webservice pour cacher la jauge
+      // Syntaxe :
+      //FinAccesWSOneDrive ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE FinAccesWSOneDrive()
+      
+      si gbAccesEnCours=vrai ALORS
+      	gbAccesEnCours = faux
+      	sablier(faux)
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x15e4771200c1a7f0
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,8 @@
+//MO556-557.TXT ANA00556 TO ANA00557
+TypeProjet	IDTyPeProjet	NNR	IDType	ATTENTION : la clé IDType a pour nouveau nom IDTyPeProjet
+TypeProjet	TypeProjet	NNR	Type	ATTENTION : la clé Type a pour nouveau nom TypeProjet
+TypeOS	TypeOS	NNR	Type	ATTENTION : la clé Type a pour nouveau nom TypeOS
+TypeCourrier	TypeCourrier	NNR	Type	ATTENTION : la clé Type a pour nouveau nom TypeCourrier
+typeDocArchive	TypeDoc	NNR	Type	ATTENTION : la clé Type a pour nouveau nom TypeDoc
+TypeOrganisme	TypOrganisme	NNR	Type	ATTENTION : la clé Type a pour nouveau nom TypOrganisme
+TypePoste	TypePoste	NNR	Type	ATTENTION : la clé Type a pour nouveau nom TypePoste

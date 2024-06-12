@@ -1,0 +1,4 @@
+//MO539-540.TXT ANA00539 TO ANA00540
+VersionsOrganismes		TAR	43	nouvelle taille enregistrement : 43
+VersionsOrganismes	DateDébutVersion	NNR	DateVersion	ATTENTION : la clé DateVersion a pour nouveau nom DateDébutVersion
+VersionsOrganismes	DatefinVersion	RUB+		DatefinVersion est une nouvelle rubrique

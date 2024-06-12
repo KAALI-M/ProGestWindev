@@ -1,0 +1,7 @@
+//MO647-648.TXT ANA00647 TO ANA00648
+DéfPrix	IDBPDE	RUB+		IDBPDE est une nouvelle clé
+DéfPrix	IDBPDE	RUB-		la rubrique IDBPDE est supprimée
+AppelOffres		NFI		nouveau fichier
+Contrainte_BPDE_DéfPrix		NWL	BPDE (IDBPDE) et DéfPrix (IDBPDE)	Nouvelle liaison entre les fichiers BPDE (IDBPDE) et DéfPrix (IDBPDE)
+Contrainte_Projet_AppelOffres		NWL	Projet (IDProjet) et AppelOffres (IDProjet)	Nouvelle liaison entre les fichiers Projet (IDProjet) et AppelOffres (IDProjet)
+Cte_BPDE_DéfPrix		DEL	BPDE (IDBPDE) et DéfPrix (IDBPDE)	Liaison supprimée entre les fichiers BPDE (IDBPDE) et DéfPrix (IDBPDE)

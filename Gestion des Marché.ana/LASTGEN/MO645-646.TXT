@@ -1,0 +1,3 @@
+//MO645-646.TXT ANA00645 TO ANA00646
+DocAGenerer		TAR	128	nouvelle taille enregistrement : 128
+DocAGenerer	FichGlobal	CNW	Booléen$Chaîne	la rubrique FichGlobal a pour nouveau type Booléen

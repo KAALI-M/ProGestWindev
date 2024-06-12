@@ -1,0 +1,4 @@
+//MO599-600.TXT ANA00599 TO ANA00600
+Courriers		TAR	403	nouvelle taille enregistrement : 403
+Courriers	IDOuvrages	RUB+		IDOuvrages est une nouvelle clé
+Ouvrages_Courriers		NWL	Ouvrages (IDOuvrages) et Courriers (IDOuvrages)	Nouvelle liaison entre les fichiers Ouvrages (IDOuvrages) et Courriers (IDOuvrages)

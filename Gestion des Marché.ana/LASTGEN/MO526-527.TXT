@@ -1,0 +1,4 @@
+//MO526-527.TXT ANA00526 TO ANA00527
+AffectationPersonnel		TAR	91	nouvelle taille enregistrement : 91
+AffectationPersonnel	TypePoste	CNW	Combinaison$Chaîne	la rubrique TypePoste a pour nouveau type Combinaison
+RoleUtilisateur		ENUMCOMBI+		L'énumération/combinaison RoleUtilisateur a été créée.

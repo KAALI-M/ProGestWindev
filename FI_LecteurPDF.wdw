@@ -1,0 +1,154 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_LecteurPDF
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_LecteurPDF
+ identifier : 0x2103de742296b299
+ internal_properties : BQAAAAUAAACiVd8XnNu6lAy71D41KhRfr3S6QoIT2yAiilIUv2UHCwK1c7d2V9L2mdacQ1m9SSwlM1MYMIoBtPU9VuX3nwk7/ZO/5DlQf9kY8Dyk9CWppQm3dR3AYb6nwSXlWOz9XouNM3jxLJKqqWbT8glYZZfymY1dtNxSxioF3xFpcb3CAZVmRRStxNfi0u81u2yXf42h88A4j/Yv7qL6caoaCE1wRlbXPb0cCfiWAQfmWWI0K/B2KPnZlVmyOLcEpTcvXbjUxCKTg8zK5rnVw24KGWpqUlXCJLaavUmop5kAPuub3BaR//GSF6zytS7k1tQGHBymVYwu+vCTo771pUsZ1Y7S0icaN++6UHNwaqSn6Qr3Mt/Ipvcr4V4ga7x5NZVYtpyIGKVDZdxJZ0tD9lHsO7UAZwze053zDqJ8JvS1Eeuvg6UxUJz8S6O1oWnK0caBATuEf7KNf3hkEAUgp9OMumNc1yjsZJHFanDJN5jctwAz68iaW+6bftcxK8g78+eFBnJTgB0gkTeK3NgkfXhwlHbqKicN7VDoccQBpxnKh087MrSy2ZhZ3Y3P0fCyOhuXkBZxbbyyypgPfrl6r7immM1revPs348WXVHmwK9cyqVKXYY9n14FjX6+Z8VR2ulfwzu6ClnJ1WHzxTqsC4oqhS+tEFuH4gQT3UFCMzug4C688bkunVY=
+ controls :
+  -
+    name : FI_LecteurPDF
+    identifier : 0x2103de742297b299
+    internal_properties : BQAAAAUAAACZHI4Af5RuizvqOGPRaqYt4oPs6HTN4HITRTElM7QnXeEmxB14h9GfDACeC8wf7iFsJlRhfok/FSaYFg1cwWX5xOUBrSH64CQpy1Cx249Z8ykmytokWhfbynz6e84qMcyE5eM4Y6EkX/oqsM2v9SIZmEHsLbzvuosaax501SsLz8WPK36VcUXy1czpNEU9GSPIlKtX/kRdrmP/7QzHUMXJxx66fqr7NT+zfzr0b1ck+FUduPI4TFWbB1yPCxSNYtUTp63MYkZtKoQ/IJpy8M9AWTW/mGFQO0VdQ1U1MplL8zY72fqug9Z5ZcOWtZKqjEIlgl23m8skbDFr/bFHeQZJmQYTFsyYEYARaLdO4kQbdbGrwIiUCe/YDksCipGi73J9Q0TkRSUCDpV5YNPkaW6RebsOVg7gEYziZ2i+qc0dP8CP9EPKaxDMzOix6Is3pHSV
+    controls :
+     -
+       name : PDF_LecteurFI
+       identifier : 0x22066e0e2ff06e50
+       internal_properties : BQAAAAUAAAAOIV7mY8nAJCmyYow7URrhhfpJpytnq7oTVrISZKpBkCSVp0G3jYuKR8qDMp26Xjiyy6TN1xyJKtqEpnyWFCfN1VUK+z0ZjvTxpRQSNnqdicmEy7q6JevSirVdx6DR4K2lWSrq68YPVYjhLh76cZbouz7rtYhqASymhG4FcSGmLgdDX5EW1r2CCt6ut2cXzLxAtJFMiGYL2UGw66CTVP5INSN9snBb4A2fC9RbKIvOnC1wfEgyChgui1Bh1+dH9oLTnrrfZqoNwBi+L+AQCDL6u5P8yJ0YEct0Kb0n8oSvysq4x32C9q8gTJgyqrqh+lmoMvH9r+kVvtlgu1Rc7xZ6wDq3AmOGXxY/HP4KhfqcAmEUIJiuG0vYZ6gQ2x2eDdQwjcCe7NW1Vs1URJRpwwf5lj2CS7csCEBRheoRUvIZ7iCWlIRtqvX6evanqnMWqptFo6CDoWbr+Gtun9GVMD3jxLdPM87mCG43Vinr7yeixXy6ZgFt1DneE+1zPRHKpa1kLnM17gzQF/j9LLxiTZUysIDYu71aiLQcxb5V87HQvXLtALxM42lt1JkvDWemo4skbUR0sYgQdf87IgSOmaN38fMowXV4kCOecv6sCEXuRDP1eSrqft5+vpZKW5S6oTWp2pMCEPiPRJ2q1IcvzIcsLo797eo4sQW2hemJgZWeJNq8x6cKk6B5FqLH5IKfX8gswO9mNXL46ZNQUiuxFMWKM2HJZIhR9GPPWmbQ7y/4cDujW1pbJLwv8E/g6pICq8br2EJ2XGKcsrvKaVKdhnOlYSJf9DcIEehjkDvnFx3KMGTiPX2J
+       type : 128
+       code_elements :
+        type_code : 152
+        p_codes :
+         -
+           code : |1+
+            
+            
+           type : 14
+     -
+       name : IMG_PDFAfficheRuban
+       identifier : 0x22066f20334b9c51
+       internal_properties : BQAAAAUAAAC9+lQUB9hTYAa67C7woZyzjqh8G/UygV1I6/ac6DfONWLqoYKwMD67EIrxTKsDjMhf3EdavgLxG6950YXzxC6WpSYqVeRCgioIOOpZWBDimyc0yOy1XF/q9OGJR197UbkmYY6lVtkhlBB2R4km+hH6hnHdEmtv9mrPt2pXQhuvSEEKRXimfQrnKApcANWdi+askaeERifyFic3z6jRHx9na6dNOsr3a3ej4+/Y6HRZMhsUS+qFEbEyxN+gKX7nxwkrSMW+EAv6hwnaMVdw5rYJMF3g365oa1HAXWwlAhjuExlqvk7Rzase3QNISGJraF9fySckf8gR3+b+B1G0H1xJZJOQ1HlhEBydl6EDloFu4vqcXW4hUDQ+5PFwB+DIVRnuYpinV1DDchOXoDprfCVMPHE4EIWs3CMF84O3PK4/vkJKzVnDIH3U3fpQyEtLTz2wDAw/dDQe0jecU73l9v5H3Tp2hcUcfunBn7poczJR2wmnnaKwcRcMBO7yEG8/SW2mvKq5XW/G+6S55wWbjnI5I5VZjYZ9UWRs44NqsNACD0aYlx1Celgvux57g117q+WmovZ1Q+AdY2HffsQHe+XySL33mdDIIYYDTlvFDXlBS3z7ocqRp+lKwTDR7D6VOx9qNeLlz+zK9M/tEaNNLK5HWF+tuNXHJ9YLpqW1VnNI+DqWYTQo5LOAuUSziJqS4t1tu0RguUQtUSLI0NpcEgLFrdROCdYW5GtkElq+V1W4xwbEI2nXQUdxw8T8d0QiqCMK891HkwBTjvceSHL9NK8KU+jSIzO258sspY2eQPMOCRZy44MY4Woi2+4a/uyGw2EWNV/8yVacrQ==
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            MoiMême.Visible = Pas FI_WindevFAA_RubanLecteurPDF.Visible
+            
+           type : 14
+         -
+           code : |1-
+            PDF_LecteurFI..BarreOutilsVisible =vrai
+            MoiMême.Visible = faux
+            IMG_PDFCacheRuban.Visible = vrai
+           type : 18
+     -
+       name : IMG_PDFCacheRuban
+       identifier : 0x2206713f368ee6d1
+       internal_properties : BQAAAAUAAAA1GtmzV5nF43hSVfhKFIwoiaLbNDx58VbLb/V0qQrmycVWvrjG9/RPiG3gw4yeBbUnBdvzZNRqq0U4iZ4w8/R504cCOd9xc6fLzk36yJAbUSdynvIqECrNAKHb9hSoLHlwKiVbQ8J+QY20Cn4uvFyNHh8+ErTJlWSmHU4j8aOALQXaEjnEbV95WiWwxsm8V1YYoBm3GOuYRBB6XZuI098dwb+WEIKXjsxbnHCmhoZLctqMiIqBn875xQmpGwz+8dkHyR/KLnc7czAqzRF0VLaWXZAa1UwyeE7XL3v5EhV7f7MFD5Ola61BNfWRVvNBi7nvNmcKY/AJqtntdZCDHoMFJU6o9RSKFB1UZfrFPUjKMUW3r38wYOJlIKZkAFwXvN9xcZ17amGLf3QJiwGdTAx0SHTiqMR7kDOWOp2FoycrGyiBFBwpI/y7tyD1oHMV1BB103tVedS+uZi11gbxDJXo1THHmkEOJAdobhivmD92qRnmDFwphmOspkdwe/J0qeMJ4Kj3O47MfTcuvPz2pZVxja+p+s3oRaC8dyXIfSpJK56EmveTBG0R8DRxQzxXjLGAK2c1xBXrrW4IFPsCj5jFhl4Oz4Yt5kMqz8jDQ8hLWkoycgsQIcIr6Q2u1wjc/IMeREg5BT+Ub364fm2mhAfaYjAuXlrB0HigxPOKSkD0FE63imv3qWAYE5i2Ah6IwmvDFHO/pcdE+DRG/a0MCXR52/HhZ7PWIuVS65nudxQsfvpAUizhjPbp3M/TY0j1EL7Z3K6+aw/wQXB28MnB8I3iUcqcnFtj40mF9Eb1Kwm0Q3oAGtqu2QRirFWNhKc+fjp/um2YquGfojs8NA==
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            MoiMême.Visible =faux
+           type : 14
+         -
+           code : |1-
+            
+            PDF_LecteurFI.BarreOutilsVisible = faux
+            MoiMême.Visible							= Faux
+            IMG_PDFAfficheRuban.Visible					= Vrai
+           type : 18
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1+
+         PROCEDURE MaFenêtre(gsCheminPDF est une chaîne, IDarchieDoc est un entier sur 8 octets = 0)
+         
+         PDF_LecteurFI.Zoom											= zoomAdapteLargeur
+         FI_WindevFAA_RubanLecteurPDF.BTN_WDFAA_Ouvrir.Visible	= Faux
+         PDF_LecteurFI.BarreOutilsVisible								= Faux
+         DocCourrierChargé est un CFichierChargé
+         
+         SI IDarchieDoc > 0 ALORS 
+         	DocCourrierChargé.ChargeFichierParID(IDarchieDoc)
+         	SI DocCourrierChargé.GetCheminFichier() <> "" ALORS
+         		PDF_LecteurFI	= DocCourrierChargé.ChemFichier
+         		gsCheminPDF	=  DocCourrierChargé.ChemFichier
+         		
+         	SINON 
+         		Info("Le fichier IDArchive : ("+ IDarchieDoc+") n'a pas été trouvé dans l'archive!")
+         	FIN
+         SINON
+         	si gsCheminPDF <> "" et fFichierExiste(gsCheminPDF) ALORS
+         		PDF_LecteurFI.Ouvre(gsCheminPDF)
+         	sinon
+         		PDF_LecteurFI.Ferme()
+         	FIN
+         
+         fin
+ menu :
+  name : _Menu
+  identifier : 0x2103de692293886c
+  internal_properties : BQAAAAUAAADiNkh1O6bsUdojdCyc5rvMKOb4KGdCuKthEpeb9YgToXKniNhTa74qqTWW/kn9AHiAwpYRHxIfmwB4rUjWCTsHt96kYeogf6aF/P/qLr5YC+/q/4GecKHBIXzFYdqjswEetQud+3e/nTe5+xoit8ijZM2EBaVaXCH6Yfad
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+  procedures :
+   -
+     name : fermerFichier
+     procedure_id : 1507089335861254966
+     type_code : 14
+     code : |1+
+      procédure global fermerFichier(avecSauvegarde est un booléen = 0, sansSauvegarde est un booléen = 0 )
+      
+      
+     type : 458752
+   -
+     name : sauvegardeFichier
+     procedure_id : 1507089340156288048
+     type_code : 14
+     code : |1-
+      procédure GLOBAL sauvegardeFichier()
+      //rien
+     type : 458752
+   -
+     name : estModifié
+     procedure_id : 1507115560585282817
+     type_code : 14
+     code : |1+
+      procédure global estModifié()
+      
+      renvoyer 0 // le fichier PDF n'est pas modifiable
+      
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x1103de6901f1886c
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

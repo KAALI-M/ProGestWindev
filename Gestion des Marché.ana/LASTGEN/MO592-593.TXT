@@ -1,0 +1,3 @@
+//MO592-593.TXT ANA00592 TO ANA00593
+Projet		TAR	588	nouvelle taille enregistrement : 588
+Projet	DateApprobation	RUB+		DateApprobation est une nouvelle rubrique

@@ -1,0 +1,20 @@
+//MO650-651.TXT ANA00650 TO ANA00651
+matériaux		NFI		nouveau fichier
+Profilé		NFI		nouveau fichier
+VaneWagon		NFI		nouveau fichier
+sousOuvrage		NFI		nouveau fichier
+GaletCoussinet		NFI		nouveau fichier
+JointEtanchete		NFI		nouveau fichier
+typeJointEtanchiete		NFI		nouveau fichier
+TétierVWG		NFI		nouveau fichier
+Contrainte_typeJointEtanchiete_JointEtanchete		NWL	typeJointEtanchiete (IDtypeJointEtanchiete) et JointEtanchete (IDtypeJointEtanchiete)	Nouvelle liaison entre les fichiers typeJointEtanchiete (IDtypeJointEtanchiete) et JointEtanchete (IDtypeJointEtanchiete)
+Contrainte_JointEtanchete_VaneWagon		NWL	JointEtanchete (IDJointEtanchete) et VaneWagon (IDJointEtancheteSommet)	Nouvelle liaison entre les fichiers JointEtanchete (IDJointEtanchete) et VaneWagon (IDJointEtancheteSommet)
+Contrainte_JointEtanchete_VaneWagon1		NWL	JointEtanchete (IDJointEtanchete) et VaneWagon (IDJointEtancheteLaté)	Nouvelle liaison entre les fichiers JointEtanchete (IDJointEtanchete) et VaneWagon (IDJointEtancheteLaté)
+Contrainte_Profilé_VaneWagon		NWL	Profilé (IDProfilé) et VaneWagon (IDRaidHoriz)	Nouvelle liaison entre les fichiers Profilé (IDProfilé) et VaneWagon (IDRaidHoriz)
+Contrainte_Profilé_VaneWagon1		NWL	Profilé (IDProfilé) et VaneWagon (IDRaidVert)	Nouvelle liaison entre les fichiers Profilé (IDProfilé) et VaneWagon (IDRaidVert)
+Contrainte_GaletCoussinet_VaneWagon		NWL	GaletCoussinet (IDGaletCoussinet) et VaneWagon (IDGaletCoussinet)	Nouvelle liaison entre les fichiers GaletCoussinet (IDGaletCoussinet) et VaneWagon (IDGaletCoussinet)
+Contrainte_matériaux_Profilé		NWL	matériaux (IDmatériaux) et Profilé (IDmatériaux)	Nouvelle liaison entre les fichiers matériaux (IDmatériaux) et Profilé (IDmatériaux)
+Contrainte_matériaux_GaletCoussinet		NWL	matériaux (IDmatériaux) et GaletCoussinet (IDmatériauxGalet)	Nouvelle liaison entre les fichiers matériaux (IDmatériaux) et GaletCoussinet (IDmatériauxGalet)
+Contrainte_matériaux_GaletCoussinet1		NWL	matériaux (IDmatériaux) et GaletCoussinet (IDmatériauxCoussinet)	Nouvelle liaison entre les fichiers matériaux (IDmatériaux) et GaletCoussinet (IDmatériauxCoussinet)
+Contrainte_matériaux_JointEtanchete		NWL	matériaux (IDmatériaux) et JointEtanchete (IDmatériaux)	Nouvelle liaison entre les fichiers matériaux (IDmatériaux) et JointEtanchete (IDmatériaux)
+TétierVWG		FRN		

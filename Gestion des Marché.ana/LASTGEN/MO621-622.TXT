@@ -1,0 +1,3 @@
+//MO621-622.TXT ANA00621 TO ANA00622
+OS		TAR	599	nouvelle taille enregistrement : 599
+OS	NumOSTotal	RUB+		NumOSTotal est une nouvelle rubrique

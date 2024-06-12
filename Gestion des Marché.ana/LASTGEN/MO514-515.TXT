@@ -1,0 +1,22 @@
+//MO514-515.TXT ANA00514 TO ANA00515
+GPU_Utilisateur		TAR	1807	nouvelle taille enregistrement : 1807
+GPU_Utilisateur	Civilité	RUB+		Civilité est une nouvelle rubrique
+GPU_Utilisateur	CompteActif	RUB+		CompteActif est une nouvelle rubrique
+GPU_Utilisateur	DateNaissance	RUB+		DateNaissance est une nouvelle rubrique
+GPU_Utilisateur	Email	RUB+		Email est une nouvelle rubrique
+GPU_Utilisateur	Adresse	RUB+		Adresse est une nouvelle rubrique
+GPU_Utilisateur	DateRecrutement	RUB+		DateRecrutement est une nouvelle rubrique
+Contrainte_Utilisateur_Courriers		NWL	GPU_Utilisateur (IDUtilisateur) et Courriers (IDCreatedBy)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et Courriers (IDCreatedBy)
+Contrainte_GPU_Utilisateur_Projet		NWL	GPU_Utilisateur (IDUtilisateur) et Projet (IDChargéAff)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et Projet (IDChargéAff)
+Contrainte_GPU_Utilisateur_Tasks		NWL	GPU_Utilisateur (IDUtilisateur) et Tasks (IDLogin)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et Tasks (IDLogin)
+Contrainte_GPU_Utilisateur_Courriers		NWL	GPU_Utilisateur (IDUtilisateur) et Courriers (IDChargéAff)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et Courriers (IDChargéAff)
+Contrainte_Utilisateur_EntitéPersonnel		NWL	GPU_Utilisateur (IDUtilisateur) et EntitéPersonnel (IDEmployé)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et EntitéPersonnel (IDEmployé)
+Contrainte_Utilisateur_Projet		NWL	GPU_Utilisateur (IDUtilisateur) et Projet (IDCreatedBy)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et Projet (IDCreatedBy)
+Contrainte_GPU_Utilisateur_archivedocs		NWL	GPU_Utilisateur (IDUtilisateur) et archivedocs (IDCreatedBy)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et archivedocs (IDCreatedBy)
+Contrainte_Login_Projet		DEL	Personnel (IDPersonnel) et Projet (IDChargéAff)	Liaison supprimée entre les fichiers Personnel (IDPersonnel) et Projet (IDChargéAff)
+Contrainte_Login_Courriers		DEL	Personnel (IDPersonnel) et Courriers (IDCreatedBy)	Liaison supprimée entre les fichiers Personnel (IDPersonnel) et Courriers (IDCreatedBy)
+Contrainte_Login_archivedocs		DEL	Personnel (IDPersonnel) et archivedocs (IDCreatedBy)	Liaison supprimée entre les fichiers Personnel (IDPersonnel) et archivedocs (IDCreatedBy)
+Contrainte_Login_Tasks		DEL	Personnel (IDPersonnel) et Tasks (IDLogin)	Liaison supprimée entre les fichiers Personnel (IDPersonnel) et Tasks (IDLogin)
+Contrainte_Employés_ReprésentantEntité		DEL	Personnel (IDPersonnel) et EntitéPersonnel (IDEmployé)	Liaison supprimée entre les fichiers Personnel (IDPersonnel) et EntitéPersonnel (IDEmployé)
+Contrainte_Personnel_Projet		DEL	Personnel (IDPersonnel) et Projet (IDCreatedBy)	Liaison supprimée entre les fichiers Personnel (IDPersonnel) et Projet (IDCreatedBy)
+Contrainte_Personnel_Courriers		DEL	Personnel (IDPersonnel) et Courriers (IDChargéAff)	Liaison supprimée entre les fichiers Personnel (IDPersonnel) et Courriers (IDChargéAff)

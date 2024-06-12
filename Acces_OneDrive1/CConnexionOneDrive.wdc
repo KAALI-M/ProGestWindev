@@ -1,0 +1,619 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CConnexionOneDrive
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x15e42cf50019262b
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     internal_properties : BQAAAAUAAADI2gym3ZQXzigz9PaqHIZzchjPsJEbMUq76N51MV04XJJFs/6YRy9xGf0nJs/GBFYD/PrZlYYBLYxoQ/wTQCga+QlnaX7DIOc/fvO/C/7ydFQE86WW1V+v0hOMdfbR2kSTp68z4Tq7s1hf+JilI59vWepvzOO80rgGjxz1Fl9QJIrjanR6nRAqFHW5RdnmUy/1uXhV7Q==
+     code : |1-
+      CONSTANT
+      	// URL de redirection à transmettre à OneDrive pour une application Mobile
+      	AUTH_REDIRECT_URI = "https://progest.com/ProGestConnexionURI"
+      	// Nom du paramètre utilisé pour conserver le jeton d'authentification (token)
+      	PARAM_TOKEN = "REFRESH_TOKEN"
+      FIN
+      
+      // Structure d'un jeton d'authentification OneDrive
+      STTokenOneDrive est une structure
+      	token_type est une chaine			// Type de jeton
+      	expires_in est un entier			// Expiration
+      	scope est une chaine				// Portée
+      	access_token est une chaine			// Jeton pour les accès à l'API
+      	refresh_token est une chaine		// Jeton permanent pour régénérer le jeton d'accès
+      fin
+      
+      
+      // Cette classe modélise une connexion au  OneDrive
+      CConnexionOneDrive est une Classe
+      	sClientID est une chaine				// Identifiant de l'application
+      	sSecretKey est une chaine				// Clé secrète de l'application
+      	sScope est une chaine					// Portée de l'accès demandé
+      	sCodeConnexion est une chaine			// Code de connexion initial fourni par l'API OneDrive
+      	bConnecté est un booleen				// Vrai si l'utilisateur est connecté
+      	sLastError est une chaine				// Dernière erreur reçue
+      	stToken est un STTokenOneDrive			// Structure du jeton d'authentification
+      	
+      	pclDisqueDefaut est un COneDriveDisque dynamique
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1577435200266839595
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()
+      
+      // Par défaut, l'utilisateur n'est pas connecté
+      bConnecté = Faux
+      pclDisqueDefaut = null
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1577435200266905131
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : _URIVersTableau
+     procedure_id : 1577435488029976774
+     type_code : 12
+     code : |1+
+      // Résumé : Conversion des paramètres d'une URI en un tableau associatif de chaines (fonctionnement similaire au type avancé HTTPRéponse)
+      // Syntaxe :
+      // [ <Résultat> = ] _URIVersTableau (<sParamURI> est chaîne)
+      //
+      // Paramètres :
+      //	sParamURI (chaîne UNICODE) : URI à analyser
+      // Valeur de retour :
+      // 	tableau associatif : paramètres de l'URI, les clés sont les noms des paramètres
+      //
+      
+      PROCEDURE PROTÉGÉE _URIVersTableau( sParamURI est une chaine )
+      
+      taParam est un tableau associatif de chaines
+      
+      sComposantURI est une chaîne
+      POUR TOUTE CHAÎNE sComposantURI DE sParamURI SEPAREE PAR "&"
+      	sNomParam est une chaîne = ExtraitChaîne(sComposantURI,1,"=")
+      	sValParam est une chaîne = ExtraitChaîne(sComposantURI,2,"=")
+      	taParam[sNomParam] = sValParam
+      fin
+      
+      renvoyer taParam
+     type : 458752
+   -
+     name : Connexion_bAnalyseURIRetour
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1577435488030042388
+     type_code : 12
+     code : |1-
+      // Résumé : Analyse de l'URI renvoyé par la page d'authentification à OneDrive
+      // Syntaxe :
+      //[ <Résultat> = ] Connexion_bAnalyseURIRetour (<sURI> est chaîne)
+      //
+      // Paramètres :
+      //	sURI (chaîne UNICODE) : URI à analyser
+      // Valeur de retour :
+      // 	booléen : Vrai si l'URI correspond à u retour d'authentification (que l'utilisateur soit connecté ou pas)
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE Connexion_bAnalyseURIRetour( sURI est une chaine )
+      
+      // Si l'URI commence par l'URI de redirection d'une application mobile, la phase d'authentification est terminée
+      SI sURI[=AUTH_REDIRECT_URI ALORS
+      	// Analyse du résultat
+      	sParamURI est une chaine = sURI[[position(sURI,"?")+1 à]]
+      	taReponse est un tableau associatif de chaines = _URIVersTableau(sParamURI)
+      	SI taReponse["code"]<>"" ALORS
+      		// L'API a donné un code de connexion, on le mémorise et on le transforme en jeton d'accès
+      		sCodeConnexion = taReponse["code"]
+      		_DemandeTokenAccès()
+      		bConnecté = vrai
+      		renvoyer vrai
+      	FIN
+      	si  taReponse["error_description"]<>"" ALORS
+      		// L'API a renvoyé une erreur
+      		sLastError = taReponse["error_description"]
+      		RENVOYER Vrai
+      	FIN
+      FIN
+      
+      // URI non reconnue, l'authentification n'est pas terminée
+      RENVOYER faux
+      
+      CAS ERREUR:
+      	
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	
+      	renvoyer faux
+     type : 458752
+   -
+     name : Connexion_GenereURI
+     procedure_id : 1577435488030304657
+     type_code : 12
+     code : |1+
+      // Résumé : Construction de l'URI d'authentification
+      // Syntaxe :
+      // [ <Résultat> = ] Connexion_GenereURI ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	chaîne ANSI : URI à afficher dans un champ HTML pour réaliser l'authentification OneDrive
+      //
+      PROCEDURE Connexion_GenereURI()
+      
+      _sClientID est une chaine ansi = sClientID
+      _sScope est une chaine ansi = sScope
+      _sURIRedirect est une chaine ansi = AUTH_REDIRECT_URI
+      
+      sURLConnexion est une chaine ansi = ChaîneConstruit("https://login.live.com/oauth20_authorize.srf?client_id=%1&scope=%2&response_type=code&redirect_uri=%3",URLEncode(_sClientID),URLEncode(_sScope),URLEncode(_sURIRedirect))
+      
+      renvoyer sURLConnexion
+     type : 458752
+   -
+     name : _DemandeTokenAccès
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1577438245401326726
+     type_code : 12
+     code : |1-
+      // Résumé : Conversion d'un code de connexion en jeton d'accès
+      // Syntaxe :
+      //_DemandeTokenAccès ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE protegee _DemandeTokenAccès()
+      
+      _sClientID est une chaine ansi = sClientID
+      _sURIRedirect est une chaine ansi = AUTH_REDIRECT_URI
+      _sSecretKey est une chaine ansi = sSecretKey
+      _sCodeConnexion est une chaine ansi = sCodeConnexion
+      sContenu est une chaine ansi = ChaîneConstruit("client_id=%1&redirect_uri=%2&client_secret=%3&code=%4&grant_type=authorization_code",URLEncode(_sClientID),URLEncode(_sURIRedirect),URLEncode(_sSecretKey),URLEncode(_sCodeConnexion))
+      
+      _RequeteToken(sContenu)
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      
+      	retour
+     type : 458752
+   -
+     name : _ActualiseToken
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1577464448997461697
+     type_code : 12
+     code : |1-
+      // Résumé : Redemande un jeton d'accès à l'API OneDrive à partir du jeton permanent obtenu lors de la connexion initiale
+      // Syntaxe :
+      //_ActualiseToken ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE PROTÉGÉE _ActualiseToken()
+      
+      _sClientID est une chaine ansi = sClientID
+      _sURIRedirect est une chaine ansi = AUTH_REDIRECT_URI
+      _sSecretKey est une chaine ansi = sSecretKey
+      _sToken est une chaine ansi = stToken.refresh_token
+      sContenu est une chaine ansi = ChaîneConstruit("client_id=%1&redirect_uri=%2&client_secret=%3&refresh_token=%4&grant_type=refresh_token",URLEncode(_sClientID),URLEncode(_sURIRedirect),URLEncode(_sSecretKey),URLEncode(_sToken))
+      
+      _RequeteToken(sContenu)
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	retour
+     type : 458752
+   -
+     name : RequeteAPI_JSON
+     internal_properties : BQAAAAUAAAAQ/Be2f7TrQAyp0hhooJNxJ+KudoQHel3iZSSxVsh/vYNHBzpfilEGO3HfkyalIdGW+d4PmDW99Rhkb3CAOTS/nOqRv2E2bC+fV2DnCn+ORFAcx+aE0HdBDAyrQVNa4m5xh2uYZ6Nv0RZgRyYwgD7EaqSfk8fZ8GLG1EKqAu7F4D7J2s4d5gyJoN/O8BFBfuZrKrCpajSD
+     procedure_id : 1577522937869949582
+     type_code : 12
+     code : |1-
+      // Résumé : Lance une requête à l'API OneDrive et analyse le JSON obtenu en retour.
+      // Syntaxe :
+      //RequeteAPI_JSON (<sUriRequete> est chaîne, <stResultat> [, <sSelectAttr> est chaîne ANSI])
+      //
+      // Paramètres :
+      //	sUriRequete (chaîne UNICODE) : URI de la requête
+      //	stResultat : variable a remplir avec le JSON obtenu
+      //	sSelectAttr (chaîne ANSI - valeur par défaut="") : filtre de sélection pour la requête
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE RequeteAPI_JSON( sUriRequete est une chaine, stResultat, local sSelectAttr est une chaine ansi = "" )
+      
+      // Construction de la requête
+      sChaineUTF8 est une chaine ansi = ChaîneVersUTF8(sUriRequete)
+      sURI est une chaine ansi = "https://graph.microsoft.com/v1.0"+urlencode(sChaineUTF8)
+      si sSelectAttr<>"" ALORS
+      	sURI += "?select="+URLEncode(sSelectAttr)
+      FIN
+      
+      clReq est un CHTTPReq
+      clReq.m_sURI = sURI
+      clReq.m_nVerbe = httpget
+      
+      // Ajout du jeton d'authentification
+      clReq.AjouteEntete("Authorization","bearer "+stToken.access_token)
+      
+      // Appel de l'API
+      clReq.envoi()
+      
+      // Analyse du résultat
+      si clReq.m_nCodeReponse = 200 alors
+      	bufReponse est une buffer = clReq.m_bufContenuReponse
+      	QUAND EXCEPTION DANS 
+      		Désérialise(stResultat,bufReponse,psdJSON)
+      	FAIRE
+      		// En cas d'erreur, la variable n'est pas modifiée
+      	FIN
+      fin
+      
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	retour
+     type : 458752
+   -
+     name : Connexion_Restaure
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1577785695380134967
+     type_code : 12
+     code : |1-
+      // Résumé : Recharge le jeton d'authentification obtenu lors d'une utilisation précédente de l'application
+      // Syntaxe :
+      //[ <Résultat> = ] Connexion_Restaure ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	booléen : Vrai si la reconnexion s'est faite correctement
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE Connexion_Restaure()
+      
+      stToken.refresh_token = ChargeParamètre(PARAM_TOKEN)
+      si stToken.refresh_token<>"" ALORS
+      	_ActualiseToken()
+      FIN
+      
+      renvoyer bConnecté
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	renvoyer faux
+     type : 458752
+   -
+     name : _RequeteToken
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1577786459884360630
+     type_code : 12
+     code : |1-
+      // Résumé : Méthode commune pour l'obtention d'un jeton d'authentification
+      // Syntaxe :
+      //_RequeteToken (<sContenu>)
+      //
+      // Paramètres :
+      //	sContenu : Requête à transmettre à l'API
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE PROTÉGÉE _RequeteToken(sContenu)
+      
+      sContentType est une chaîne = "application/x-www-form-urlencoded"
+      
+      QUAND EXCEPTION DANS
+      	HTTPRequête("https://login.live.com/oauth20_token.srf","","",sContenu,sContentType)
+      	Désérialise(stToken,HTTPDonneRésultat(),psdJSON)
+      FAIRE
+      	bConnecté = Faux
+      FIN
+      
+      bConnecté = (stToken.access_token<>"")
+      si bConnecté ALORS
+      	Disque_Defaut()
+      FIN
+      SI bConnecté ALORS
+      	// Si l'utilisateur est connecté, on mémorise le jeton pour pouvoir le réactiver lors d'une exécution future sans refaire l'authentification
+      	SauveParamètre(PARAM_TOKEN,stToken.refresh_token)
+      FIN
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      	
+      	retour
+     type : 458752
+   -
+     name : Disque_Liste
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1577851137842862992
+     type_code : 12
+     code : |1+
+      // Résumé : Liste les "drives" OneDrive d'un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] Disque_Liste ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	tableau : tableau des disques
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE Disque_Liste()
+      
+      tabDisque est un tableau de COneDriveDisque dynamique
+      
+      // Récupération du disque par défaut
+      ajoute(tabDisque,Disque_Defaut())
+      
+      // Récupération des autres disques
+      stResultat est un STDriveList
+      RequeteAPI_JSON("/drives",stResultat,"id")
+      pour tout stDisque de stResultat.value
+      	si stDisque.id<>tabDisque[1].m_description.id ALORS
+      		pclDisque est un COneDriveDisque dynamique = allouer un COneDriveDisque(objet)
+      		pclDisque.m_bDefaut = faux
+      		pclDisque.m_description = stDisque
+      		Ajoute(tabDisque,pclDisque)
+      	FIN
+      FIN
+      
+      renvoyer tabDisque
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      	
+      	TableauSupprimeTout(tabDisque)
+      	RENVOYER tabDisque
+     type : 458752
+   -
+     name : Disque_Defaut
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1578229528720454101
+     type_code : 12
+     code : |1-
+      // Résumé : Récupère le disque par défaut d'un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] Disque_Defaut ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Type indéterminé : disque par défaut
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE Disque_Defaut()
+      
+      //si pclDisqueDefaut<>Null ALORS
+      //	renvoyer pclDisqueDefaut
+      //FIN
+      
+      // Récupération du disque par défaut
+      stDisqueDefaut est un STDrive
+      RequeteAPI_JSON("/drive",stDisqueDefaut)
+      pclDisqueDefaut = allouer un COneDriveDisque(objet)
+      pclDisqueDefaut.m_bDefaut = Vrai
+      pclDisqueDefaut.m_description = stDisqueDefaut
+      
+      renvoyer pclDisqueDefaut
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	renvoyer null
+     type : 458752
+   -
+     name : RequeteAPI_Brut
+     internal_properties : BQAAAAUAAABJAHXNrNski8QQg/nWCAsxgavUfehouLE2SyeLnj6GWINQTLKc/Vui0Wslgmb4DiTiYFIjUBVNTS6CzPlwW7xYqZcK++K5KRm7gGwPo+v6Rl1gYbRApypSpBPf5S0jGqsY4rUtdEjnc+30cLH1KHC66WR8efzC2khRYr0bZQg5ULw+ELTIibt+B4lhHxbZBzO3ZaBeGuNdzve6w6mTvW64wI8bF6Dv1a+cpnivYZIVsP2g/4IoC+ImWnUnmiRFiNY4vP4CegDAQQ==
+     procedure_id : 1578252386523112798
+     type_code : 12
+     code : |1-
+      // Résumé : Lance une requête à l'API OneDrive et retourne le buffer sans analyse
+      // Syntaxe :
+      //[ <Résultat> = ] RequeteAPI_Brut (<sURIRequete> est chaîne [, <nVerbe> est entier [, <sContentType> est chaîne [, <bufContenu> est buffer]]])
+      //
+      // Paramètres :
+      //	sURIRequete (chaîne UNICODE) : URI de la requête
+      //	nVerbe (entier - valeur par défaut=1) : Verbe HTTP de la requête
+      //	sContentType (chaîne UNICODE - valeur par défaut="application/x-www-form-urlencoded") : Type de contenu de la requête (au sens de HTTPRequête)
+      //	bufContenu (buffer - valeur par défaut="") : Buffer à envoyer dans la requête
+      // Valeur de retour :
+      // 	Type indéterminé : Buffer renvoyé par l'API en réponse
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE RequeteAPI_Brut( sURIRequete est une chaine, nVerbe est un entier = httpget, sContentType est une chaine = "application/x-www-form-urlencoded", bufContenu est un buffer = "" )
+      
+      // Construction de la requête
+      sChaineUTF8 est une chaine ansi = ChaîneVersUTF8(sURIRequete)
+      sURI est une chaine ansi = "https://graph.microsoft.com/v1.0"+urlencode(sChaineUTF8)
+      clReq est un CHTTPReq
+      clReq.m_sURI = sURI
+      clReq.m_nVerbe = nVerbe
+      clReq.m_sContentType = sContentType
+      clReq.m_bufContenu = bufContenu
+      
+      // AJout du jeton d'authentification
+      clReq.AjouteEntete("Authorization","bearer "+stToken.access_token)
+      
+      // Requête
+      clReq.envoi()
+      
+      renvoyer clReq.m_bufContenuReponse
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	renvoyer ""
+     type : 458752
+   -
+     name : SupprimeToken
+     internal_properties : BQAAAAUAAAANze9rCZOos1AVCd6fSxwEjkktPWy7t6Y1GLTnluOn3PL/zxH1zJNM5NY736lTqn33blp2lSLRV3oKOVkDAEXs2Bi+Ne9gwRxnNNw0XEQrbBlqNypbk1LNuEelXJmrSXAStdNq6r5ofyAhd9skU4RxFpD/WW4G2drQo71OlylB+KtDPO0Jx+noGu2UdIxzkhQsY//2
+     procedure_id : 1583469285764261749
+     type_code : 12
+     code : |1-
+      // Résumé : Efface le token d'authentification mémorisé
+      // Syntaxe :
+      // SupprimeToken ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE SupprimeToken()
+      
+      SauveParamètre(PARAM_TOKEN,"")
+     type : 458752
+   -
+     name : Deconnexion_GenereURI
+     internal_properties : BQAAAAUAAACrd6WhykHueYxhSwLjT/wUJumle0JJ4ZDZRGI7Un//FDq3M4v37nWy5J7FM2XzEi0Xlo6YD8x38SKai9WvoGWUfKSCpzky907zyOvDFXtAF6S1OgWc0pHKZfTUY1oqTnsdGApZxxnL2Jkygu45LiG8QaOGYHMpBIf9JLCxLER6l8pyg3y+isTF1ypfp8EuZ0rimaVQ
+     procedure_id : 1583469513398564352
+     type_code : 12
+     code : |1+
+      // Résumé : Construit l'URI de déconnexion du webservice
+      // Syntaxe :
+      //[ <Résultat> = ] Deconnexion_GenereURI ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	chaîne ANSI : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      //	_sURIRedirect (chaîne ANSI) : <indiquez ici le rôle de _sURIRedirect>
+      PROCEDURE Deconnexion_GenereURI()
+      
+      _sClientID est une chaine ansi = sClientID
+      _sURIRedirect est une chaine ansi = AUTH_REDIRECT_URI
+      sURLConnexion est une chaine ansi = ChaîneConstruit("https://login.live.com/oauth20_logout.srf?client_id=%1&redirect_uri=%2",URLEncode(_sClientID),URLEncode(_sURIRedirect))
+      
+      RENVOYER sURLConnexion
+     type : 458752
+   -
+     name : Deconnexion_bAnalyseURIRetour
+     procedure_id : 1583476149126875916
+     type_code : 12
+     code : |1+
+      // Résumé : Analyse de l'URI renvoyé par la page d'authentification à OneDrive
+      // Syntaxe :
+      //[ <Résultat> = ] Deconnexion_bAnalyseURIRetour (<sURI> est chaîne)
+      //
+      // Paramètres :
+      //	sURI (chaîne UNICODE) : URI à analyser
+      // Valeur de retour :
+      // 	booléen : Vrai si l'URI correspond à u retour d'authentification (que l'utilisateur soit connecté ou pas)
+      //
+      PROCEDURE Deconnexion_bAnalyseURIRetour( sURI est une chaine )
+      
+      // Si l'URI commence par l'URI de redirection d'une application mobile, la phase d'authentification est terminée
+      SI sURI[=AUTH_REDIRECT_URI ALORS
+      	renvoyer vrai
+      FIN
+      
+      // URI non reconnue, l'authentification n'est pas terminée
+      RENVOYER faux
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x15e42cf50016260b
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

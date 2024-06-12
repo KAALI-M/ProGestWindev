@@ -1,0 +1,159 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MProjet
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 4
+class :
+ identifier : 0x12ed3c2307fa869f
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MProjet est une Classe <mapping=Projet><§rad:1§>
+      	<§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".
+      	PUBLIC
+      		
+      	<MAPPING>
+      	m_nIDProjet					est un entier  <mapping=IDProjet>
+      	m_nIDChargéAff				est un entier <mapping=IDChargéAff>
+      	m_nIDCreatedBy				est un entier <mapping=IDCreatedBy>
+      	m_nIDEntitésAdmin			est un entier sur 8 octets <mapping=IDEntitésAdmin>
+      	m_sObjetP					est une chaîne ANSI <mapping=ObjetP>
+      	m_dDateCreation				est une date <mapping=DateCreation>
+      	m_nIDEtat					est un entier <mapping=IDEtat>
+      	m_sEtat						est une chaîne ANSI <mapping=Etat>
+      	m_sNomOuvrage				est une chaîne ANSI <mapping=NomOuvrage>
+      	m_nIDOuvrages				est un entier sur 8 octets <mapping=IDOuvrages>
+      	m_dDateModification			est une date <mapping=DateModification>
+      	m_nIDProjetdeControle		est un entier <mapping=IDProjetdeControle>
+      	m_nIDProjetParent			est un entier <mapping=IDProjetParent>
+      	m_bEstMarché				est un booléen <mapping=estMarché>
+      	m_sNumero					est une chaîne ANSI <mapping=numero>
+      	m_sObjetMarché				est une chaîne ANSI <mapping=ObjetMarché>
+      	m_nDélaisExecution			est un entier <mapping=DélaisExecution>
+      	m_nIDType					est un entier <mapping=IDType>
+      	m_sTypeProjet				est une chaîne ANSI <mapping=TypeProjet>
+      	m_nIDForme					est un entier <mapping=IDForme>
+      	m_sForme					est une chaîne ANSI <mapping=Forme>
+      	m_nIDCaractère_Prix			est un entier <mapping=IDCaractère_Prix>
+      	m_sCaractère_Prix			est une chaîne ANSI <mapping=Caractère_Prix>
+      	m_nIDModePassation			est un entier <mapping=IDModePassation>
+      	m_sModePassation			est une chaîne ANSI <mapping=ModePassation>
+      	m_xMontantDetailEst			est un numérique <mapping=MontantDetailEst>
+      	m_xMontantEstMO				est un numérique <mapping=MontantEstMO>
+      	m_xSAV_InteretsMoratoire	est un numérique <mapping=SAV_InteretsMoratoire>
+      	m_xSAV_RevisionPrix			est un numérique <mapping=SAV_RevisionPrix>
+      	m_sNumArtDélais				est une chaîne ANSI <mapping=NumArtDélais>
+      	m_nIDGroupeProjets			est un entier sur 8 octets <mapping=IDGroupeProjets>
+      	m_sNomGroupe				est une chaîne ANSI <mapping=NomGroupe>
+      	m_bImpDélaisDansOSetPv		est un booléen <mapping=ImpDélaisDansOSetPv>
+      	m_bImDélaisGlobal			est un booléen <mapping=ImDélaisGlobal>
+      	m_nIdArchiveDocs			est un entier sur 8 octets <mapping=IdArchiveDocs>
+      	m_dDateApprobation			est une date <mapping=DateApprobation>
+      	<FIN>
+      	
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1363812383318574751
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()<§rad:1§>
+      VariableRAZ(m_nIDProjet				)<§rad:1§>
+      VariableRAZ(m_nIDChargéAff			)<§rad:1§>
+      VariableRAZ(m_nIDCreatedBy			)<§rad:1§>
+      VariableRAZ(m_nIDEntitésAdmin		)<§rad:1§>
+      VariableRAZ(m_sObjetP				)<§rad:1§>
+      VariableRAZ(m_dDateCreation			)<§rad:1§>
+      VariableRAZ(m_nIDEtat				)<§rad:1§>
+      VariableRAZ(m_sEtat					)<§rad:1§>
+      VariableRAZ(m_nIDOuvrages			)<§rad:1§>
+      VariableRAZ(m_sNomOuvrage			)<§rad:1§>
+      VariableRAZ(m_dDateModification		)<§rad:1§>
+      VariableRAZ(m_nIDProjetdeControle	)<§rad:1§>
+      VariableRAZ(m_nIDProjetParent		)<§rad:1§>
+      VariableRAZ(m_bEstMarché			)<§rad:1§>
+      VariableRAZ(m_sNumero				)<§rad:1§>
+      VariableRAZ(m_sObjetMarché			)<§rad:1§>
+      VariableRAZ(m_nDélaisExecution		)<§rad:1§>
+      VariableRAZ(m_nIDType				)<§rad:1§>
+      VariableRAZ(m_sTypeProjet			)<§rad:1§>
+      VariableRAZ(m_nIDForme				)<§rad:1§>
+      VariableRAZ(m_sForme				)<§rad:1§>
+      VariableRAZ(m_nIDCaractère_Prix		)<§rad:1§>
+      VariableRAZ(m_sCaractère_Prix		)<§rad:1§>
+      VariableRAZ(m_nIDModePassation		)<§rad:1§>
+      VariableRAZ(m_sModePassation		)<§rad:1§>
+      VariableRAZ(m_xMontantDetailEst		)<§rad:1§>
+      VariableRAZ(m_xMontantEstMO			)<§rad:1§>
+      VariableRAZ(m_xSAV_InteretsMoratoire)<§rad:1§>
+      VariableRAZ(m_xSAV_RevisionPrix		)<§rad:1§>
+      VariableRAZ(m_sNumArtDélais			)<§rad:1§>
+      VariableRAZ(m_nIDGroupeProjets		)<§rad:1§>
+      VariableRAZ(m_sNomGroupe			)
+      VariableRAZ(m_bImpDélaisDansOSetPv)
+      VariableRAZ(m_bImDélaisGlobal)
+      VariableRAZ(m_nIdArchiveDocs)
+      VariableRAZ(m_dDateApprobation)
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1363812383318640287
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()<§rad:1§>
+     type : 655360
+   -
+     name : SetID
+     procedure_id : 1363813023269702651
+     type_code : 12
+     code : |1-
+      procédure SetID(IDProjet est un entier)
+      Si IDProjet > 0 ALORS<§rad:1§>
+      //	<§rad:1§>
+      //	REQ_Projets.ParamestMarché	=null<§rad:1§>
+      //	REQ_Projets.ParamIDChargéAff	=null<§rad:1§>
+      //	REQ_Projets.ParamIDCreatedBy	=null<§rad:1§>
+      //	REQ_Projets.ParamIDEntitésAdmin	=null<§rad:1§>
+      //	REQ_Projets.ParamIDEtat	=null<§rad:1§>
+      //	REQ_Projets.ParamIDGroupeProjets	=null<§rad:1§>
+      //	REQ_Projets.ParamIDOuvrages	=null<§rad:1§>
+      	REQ_Projets.ParamIDProjet=IDProjet<§rad:1§>
+      	            <§rad:1§>
+      	HExécuteRequête(REQ_Projets,MaConnexion,hRequêteDéfaut)<§rad:1§>
+      	FichierVersMémoire(This,req_projets)<§rad:1§>
+      	<§rad:1§>
+      sinon<§rad:1§>
+      	this.constructeur()<§rad:1§>
+      	<§rad:1§>
+      FIN<§rad:1§>
+      <§rad:1§>
+      <§rad:1§>
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x12ed3c23080386de
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

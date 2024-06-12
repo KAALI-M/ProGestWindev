@@ -1,0 +1,3 @@
+//MO630-631.TXT ANA00630 TO ANA00631
+AutorisAbsence		TAR	859	nouvelle taille enregistrement : 859
+AutorisAbsence	Rémunérée	RUB+		Rémunérée est une nouvelle rubrique

@@ -1,0 +1,5 @@
+//MO635-636.TXT ANA00635 TO ANA00636
+Tasks		TAR	780	nouvelle taille enregistrement : 780
+Tasks	IDtypeTask	RUB+		IDtypeTask est une nouvelle clé
+typeTask		NFI		nouveau fichier
+Contrainte_typeTask_Tasks		NWL	typeTask (IDtypeTask) et Tasks (IDtypeTask)	Nouvelle liaison entre les fichiers typeTask (IDtypeTask) et Tasks (IDtypeTask)

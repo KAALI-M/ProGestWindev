@@ -1,0 +1,2 @@
+//MO610-611.TXT ANA00610 TO ANA00611
+DocProjetRpse	Document	NNR	CorpsDocument	ATTENTION : la rubrique CorpsDocument a pour nouveau nom Document

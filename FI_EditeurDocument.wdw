@@ -1,0 +1,106 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_EditeurDocument
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_EditeurDocument
+ identifier : 0x21e332e958ac6a98
+ internal_properties : BQAAAAUAAABwikIMG4ixERw0jvcZZ/6A7RF8H67xc+cfG3BdbUe0CCyWsbxkIyERDUl1f2IOGJnVmSefxgG8lw86ybYBJcgQ0RNfbP3bXkoIwPcskd9B3IoUUnl4ywtAPU4PJAkYGqZZUR0TU+V+uh962sQAXzo9ZGIv6PHzC3lJhmfhv/AkbZdqIxhKwaQuL0gjjyIjB9S5GITY2wSfZAjD8sVDo81v+X/w3AeN7FCtD2WrwNcJaZWn3V1v4WWMVSJ+Q2Xbm0xuLntOSTFBlR3omnFWPSDeBOKbbCdul2ab+JEEjwhRckM4TDVPd33w2DCxxfxEdPhqm85u0KFLe54vjA2xObzy9/DH5xMlLBpE890Sdpj+pUquubaxVxs6RbTOqPGd9U8w7PnWCX+wJsCltPEflPfPBemFT1f1osBrR7aR3Uf+s1lvQ6OXcwP7ke7DwFXECtjZUmAfBQo82UtO/77a/phr5fvZG+pgxemgt9UT55nL6cd+Vqi9sdomdcMheP1+yIrrBEikVDCVzOBa1lcyV4CN4YZNT9fzNVXE/o9UAadL14+wxfTHQTZN8gNRsjAViDIy7qfaTB4+w/li9MtKYN7ZiWG1y/hFRSFRMhxntD+xSnxt+xuoXmjmgziP9jrXd4vgnuDJkSk0XKFQQnH9+IZylkeIvYs4d2Q0dxFik5nLgBs2bq0ADB3zCRVEvr78tz8rSUymEpBZp50ehql7mdl5Qer+gT0rE7qGT6o1
+ controls :
+  -
+    name : FI_EditeurDocument
+    identifier : 0x21e332e958ad6a98
+    internal_properties : BQAAAAUAAACD9ihy2baYkVUQwlUzlERPFDU+kq6PojDFSwXAvPH4pAqB3eYhovSKYOVb1MF25a3na6uIWFpABJPR905uYW1vCrtNz8cWisCj30wRRU8djW9kVujeyu0r9LDmjzwmOfqC0xMaTUHKp+QWQG3R/coHmh+AjxIDnKdQG5KU90unmSvNPyjXSQN2OyhJNDel9aWyDsM5VND30n1jVVwpoB2vkQCimMBvj0Nwhsmb1n5XpeJg681bEfjaTBv2YrN0beqoMhBfxXuQSc0qw92N357ZIrw2FyDRljxaegQU0fDifAO2bH0hcMHA6lo91PFNW7ei5Th6xpDPv3rOqHw6dE1qwo0qBRPhtBvya4oJpY/mQv7eY1MHruI1iyg5I2l8tbyFev+9fhz/tdvBYN2eNTLJf4NGsHhOhwIUKap8bxdL6WoxFqFolUaCtgJbBunJCt5/
+    controls :
+     -
+       name : ONG_Douments
+       identifier : 0x21e334415d51a99c
+       internal_properties : BQAAAAUAAADvHmNoCkmscz12BY+SYUzzuUIuz/3fr6zZ4l/D5DasCwOpYoyO8ehNZ0KkP/yJaafvDpnEvo89doksPZrn8iNIZ7TSxRS3li7wnU5mNHQlXP9UrYNTjfFMiBr5mH6gpdtGMQPwdLSMfpnOpHxpWkKK0JnQW75BP2DhvnAOCBZVhqWnJPrdvoFCBXhmQNDj2WxkwPjdcqVRb2wW3Zls+8MKf/IkMBtuahrHV+8N/+8287e8Ud+Pey/jRcIWsrOgvLnWge23WQQVo8EThSXa3a0CY/6ariLxjyu2/oepUKwNM5rFCN4IHiibuVcqwwTECmZY1WjPyif9bBW62D//iuUArfzG9ogMEukpZ4gy9XoSXv2EwSepcFKWeykFIqlWqR/qsmXLhjhO2DYTMXODVZ0bQL7wKreoSdjQ6AxGWjLSfvmoBQ4lLrzuI4i4QkraTlG4InTBziUVD5hzqTXju5s6F6IPwfzA3mwg83k2s04pLp99NQwdOdxvvyakv2BRI7jFwG5PR1jqVFGraaKpjYBbgz+XfFIkF92Ct+W4JkQs4EdqXOSFs1bosutlwAe4dTrjYUCn7nUYy+82s9QCJf7orb4kg+ibKysYzz1thRPrlDVl9+2rJkQNfBLHvCQMeHP33hyYp4O5b0F7IMwAo5bOBdh2WCBPBjPGZsW4cdkp8q835Ew6XpQtg1tsCehFZPq5jSk+MUHDBBbPQlYTSIDwJ2/x5COiX+QT3vP7UwvNv7FwtSEDUO2jY22Ju8cWYxeo0WY3+8JCZIHgbIqthUv4UHSDzhjLGilEuopyMcCxBV7BwWbADuqX6+/c7VDiZ1Z8ms+bpAaWez1YPRF8m4/xM+wv7Cf2zH8umJpnHrQpPaMHR0wpERPXgV45NIE8jqS3HEH4jFiIxxcrXcypaSd2qrPz/HZ83M9IAJ01RXBv8fl+c7eOTtkWE/nrXGsR/eie6aYWMYS1VecLZM6ZNHHNk8Sd35AsE1v1gHxmzjXTrilRva3SpxWgciN3omcQnB+X6WUKR8LicE9MkXPjWU75WasmQWet/lyPAhFB5h8V60a9nMSncZR2TI/Mgn5jNH46MMamYdG+Ats79w9w3xTihfS0H9QwUESZ9+AEdOp4J5rVkkd+3R4Lit6XW3xF59oGpfuZr/KXOhxAzW1QtwCODoi90w6J
+       tabs : []
+       type : 16
+       code_elements :
+        type_code : 24
+        p_codes : []
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1+
+         PROCEDURE MaFenêtre()
+ menu :
+  name : _Menu
+  identifier : 0x21e332dd58a93b0c
+  internal_properties : BQAAAAUAAABSRlhFi5Y8wUr0EhuV1Jka3CLwjq+O4jlpDY/75TjJoyle9oddWd70q4gGgbQfHm3YI89XkynQtNic3/8C/6UkNhfZUmx+IysMKKS/LBiyRteYdGrX9xQCBy5CN+YdPZ9cD/qMNMaW8kJs6nGdoqE5Hzx0FZUqLHEKcYYN
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+  procedures :
+   -
+     name : OuvreDocumentOnglet
+     procedure_id : 1288931707465816871
+     type_code : 14
+     code : |1+
+      procédure OuvreDocumentOnglet(nIDArchive est un entier sur 8 octets = 0, ChemFichier est une chaine ="")
+      
+      champOnglet	est un champ
+      
+      i			est un entier	= 1
+      
+      ResChamp	est une chaîne
+      ResChamp = EnumèreChamp(ONG_Douments, i)
+      Si ChemFichier <> "" alors 
+      	TANTQUE ResChamp <> "" 
+      		SI ONG_Douments[ResChamp].Libellé = fExtraitChemin(ChemFichier,fFichier+fExtension)	 ALORS
+      			SORTIR
+      		FIN
+      		i++
+      		ResChamp = EnumèreChamp(ONG_Douments, i)
+      	FIN
+      	//ouverture de l'onglet doucment
+      	SI ResChamp ="" ALORS  //aucun champ du mme nom n'a été trouvé
+      		champOnglet <-  OngletOuvre(ONG_Douments,fExtraitChemin(ChemFichier,fFichier+fExtension),FI_EditeurDOCX,nIDArchive,ChemFichier)
+      	SINON //le champ existe
+      		champOnglet <- {ResChamp,indChamp}		
+      		ONG_Douments= ResChamp
+      	FIN
+      sinon  //nouveau document
+      	TANTQUE ResChamp <> "" 
+      		SI ONG_Douments[ResChamp].Libellé = "Nouveau Document"	 ALORS
+      			SORTIR
+      		FIN
+      		i++
+      		ResChamp = EnumèreChamp(ONG_Douments, i)
+      	FIN
+      	//ouverture de l'onglet doucment
+      	SI ResChamp ="" ALORS  //aucun champ du mme nom n'a été trouvé
+      		champOnglet <-  OngletOuvre(ONG_Douments,"Nouveau Document",FI_EditeurDOCX,nIDArchive,ChemFichier)
+      	SINON //le champ existe
+      		champOnglet <- {ResChamp,indChamp}		
+      		ONG_Douments= ResChamp
+      	FIN
+      fin 
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x11e332dd12733b0c
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

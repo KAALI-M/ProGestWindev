@@ -1,0 +1,8 @@
+//MO628-629.TXT ANA00628 TO ANA00629
+AutorisAbsence		TAR	778	nouvelle taille enregistrement : 778
+AutorisAbsence	Intérim	CNW	Chaîne unicode$Chaîne	la rubrique Intérim a pour nouveau type Chaîne unicode
+AutorisAbsence	LieuRésidence	CNW	Chaîne unicode$Chaîne	la rubrique LieuRésidence a pour nouveau type Chaîne unicode
+AutorisAbsence	Départ	CNW	Chaîne unicode$Chaîne	la rubrique Départ a pour nouveau type Chaîne unicode
+AutorisAbsence	Destinations	CNW	Chaîne unicode$Chaîne	la rubrique Destinations a pour nouveau type Chaîne unicode
+AutorisAbsence	CauseAbs	CNW	Chaîne unicode$Chaîne	la rubrique CauseAbs a pour nouveau type Chaîne unicode
+AutorisAbsence	Nomfichier	CNW	Chaîne unicode$Chaîne	la rubrique Nomfichier a pour nouveau type Chaîne unicode

@@ -1,0 +1,352 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clCourrier
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x13474879307a5e07
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      clCourrier est une Classe <contexte HFSQL léger>
+      	herite de MCourriers	
+      	m_sTypeCourrier		est une chaîne ANSI <mapping=TypeCourrier>
+      	m_sEtatCourrier		est une chaîne ANSI <mapping=EtatCourrier>
+      	m_sTypeDoc			est une chaîne ANSI <mapping=TypeDoc>
+      	
+      	
+      	CLcourrierModifié	est un booleen	= 0	// indique une modification du Courrier en cours
+      	
+      public constant
+      	CourrierParent	est un MCourriers		// données du courrier parent
+      	DocCourrier		est un Marchivedocs		//
+      	CourrierOuvrage	est un MOuvrages
+      	CourrierProjet	est un clProjet
+      	TabDestExp		est un tableau dynamique de stExpDest
+      	tabPJcourrier	est un tableau dynamique de stPJ
+      	tabProjetRép	est un tableau dynamique de stDocRépse
+      	
+      fin
+      stExpDest est une structure 
+      	DestEXP		est une clEntité	
+      	bAjouté		est un booléen
+      	bModifié	est un booleen
+      	bSupprimé	est un booléen
+      fin
+      stPJ est une structure 
+      	PJ				est une MPJCourrier
+      	FichierChargé	est une CFichierChargé
+      	bAjouté			est un booléen
+      	bModifié		est un booleen
+      	bSupprimé		est un booléen
+      fin
+      stDocRépse est une structure 
+      	ProjetRép	est un mcourriers
+      	iNdRéponse	est une chaine
+      	bAjouté		est un booléen
+      	bModifié	est un booleen
+      	bSupprimé	est un booléen
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1389158695408721430
+     type_code : 27
+     code : |1+
+      procédure Constructeur()
+      MCourriers.Constructeur()
+      CourrierParent.constructeur()
+      DocCourrier.constructeur()
+      CourrierOuvrage.Constructeur()
+      CourrierProjet.constructeur()
+      
+      VariableRAZ(m_sEtatCourrier	)
+      //VariableRAZ(m_CorpsDocument	)
+      //VariableRAZ()
+      //VariableRAZ()
+      
+      TabDestExp.SupprimeTout()
+      tabPJcourrier.SupprimeTout()
+      tabProjetRép.SupprimeTout()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1389158695408786966
+     type_code : 28
+     code : |1-
+      procédure Destructeur()
+     type : 655360
+   -
+     name : SetID
+     procedure_id : 1389165258131681060
+     type_code : 12
+     code : |1+
+      procédure SetID ( IDCourrier)
+      THIS.constructeur()
+      SI IDCourrier > 0 ALORS
+      	//recherche du courrier ayant l'IDCourrier
+      	REQ_CourriersListe.paramIDcourrier = IDCourrier
+      	HExécuteRequête(REQ_CourriersListe,MaConnexion,hRequêteDéfaut)
+      	FichierVersMémoire(This,REQ_CourriersListe)
+      	DocCourrier.SETID(REQ_CourriersListe.IDArchiveDocs)
+      	CourrierOuvrage.SetID(REQ_CourriersListe.IDOuvrages)
+      	CourrierProjet.SetID(REQ_CourriersListe.IDProjet)
+      	
+      	
+      	//recherche des Dest/exp
+      	REQ_CourrierExp_Dest.ParamIDCourriers = REQ_CourriersListe.IDCourriers
+      	HExécuteRequête(REQ_CourrierExp_Dest,MaConnexion,hRequêteDéfaut)
+      	DestExp est un stExpDest
+      	pour TOUT REQ_CourrierExp_Dest
+      		VariableRAZ(DestExp)
+      		DestExp.DestEXP.constructeur()
+      		DestExp.DestEXP.SetID(REQ_CourrierExp_Dest.IDEntitéExpDest)
+      		TabDestExp.Ajoute(DestExp)		
+      	FIN
+      
+      	//recherche PJ 
+      	REQ_PJ_courrier.ParamIDCourriers = REQ_CourriersListe.IDCourriers
+      	HExécuteRequête(REQ_PJ_courrier,MaConnexion,hRequêteDéfaut)
+      	PJCourrier est un stPJ
+      	POUR TOUT REQ_PJ_courrier
+      		VariableRAZ(PJCourrier)
+      		PJCourrier.PJ.Constructeur() //raz
+      		
+      		PJCourrier.PJ._SetID(REQ_PJ_courrier.IDPJCourrier)
+      		
+      		tabPJcourrier.Ajoute(PJCourrier)		
+      	FIN
+      	//recherhce courrier Parent // att réxécution req courrier
+      	REQ_CourriersListe.paramIDcourrier = REQ_CourriersListe.IDCourriersParent
+      	HExécuteRequête(REQ_CourriersListe,MaConnexion,hRequêteDéfaut)
+      	FichierVersMémoire(This.CourrierParent ,REQ_CourriersListe)
+      	
+      	//recherhe Projets courrier projet réponse // attention réxécution req courrier
+      	REQ_CourriersListe.paramIDcourrientParent = IDCourrier
+      	REQ_CourriersListe.ParamEstProjetRépse = 1
+      	
+      	HExécuteRequête(REQ_CourriersListe,MaConnexion,hRequêteDéfaut)
+      	ProjetReps est une stDocRépse
+      	POUR TOUT REQ_CourriersListe
+      		VariableRAZ(ProjetReps)
+      		ProjetReps.ProjetRép.Constructeur() //raz
+      		ProjetReps.ProjetRép._SetID(REQ_CourriersListe.IDCourriers)
+      		ProjetReps.iNdRéponse = "Réponse " + tabProjetRép.Occurrence()+1
+      		tabProjetRép.Ajoute(ProjetReps)		
+      	FIN
+      	
+      //	//recherche du corps de réponse du courrier si le courrier est un courrier réponse
+      //	REQ_CorpsRéponseCourrierRéponse.ParamIDDocProjetRpse = REQ_CourriersListe.IDCourriers
+      //	HExécuteRequête(REQ_CorpsRéponseCourrierRéponse,MaConnexion,hRequêteDéfaut)
+      //	
+      	RENVOYER IDCourrier
+      fin
+      
+      SI IDCourrier = 0 ALORS
+        // nouveau courrier
+        renvoyer 0
+      fin
+      
+      Si IDCourrier <0 ALORS
+      	RENVOYER -1
+      FIN
+     type : 458752
+   -
+     name : _AjouterExpDest
+     procedure_id : 1389342370727389187
+     type_code : 12
+     code : |1-
+      procédure _AjouterExpDest(IDEntité est un entier sur 8 octets)
+      DestExp est un stExpDest
+      //raz
+      VariableRAZ(DestExp)
+      DestExp.DestEXP.Constructeur()
+      //
+      REQ_EntitésDeVersionsOrganisme.ParamIDEntitésOrg=IDEntité
+      FichierVersMémoire(DestExp.DestEXP,REQ_EntitésDeVersionsOrganisme)
+      DestExp.bAjouté=1
+      
+      TabDestExp.Ajoute(DestExp)
+      
+      CLcourrierModifié = 1
+     type : 458752
+   -
+     name : _SupprimerExpDest
+     procedure_id : 1389353473221221436
+     type_code : 12
+     code : |1+
+      procédure _SupprimerExpDest(IDEntité est un entier sur 8 octets)
+      
+      ind est un entier = 0
+      //raz
+      ind = TableauCherche(TabDestExp,tcLinéaire,"DestEXP.m_nIDEntitéExpDest",IDEntité)
+      si ind >0 ALORS
+      	Si TabDestExp[ind].bAjouté = 1 ALORS
+      		TableauSupprime(TabDestExp,[ind])	
+      	sinon
+      		TabDestExp[ind].bSupprimé = 1
+      	fin
+      FIN
+      
+      
+      CLcourrierModifié = 1
+     type : 458752
+   -
+     name : _modifierDestExp
+     procedure_id : 1389366937944928617
+     type_code : 12
+     code : |1+
+      procédure _modifierDestExp (DestEXP		est une MDestinataire_Expediteur)
+      
+      ind est un entier = 0
+      //raz
+      ind = TableauCherche(TabDestExp,tcLinéaire,"DestEXP.m_nIDEntitéExpDest",DestEXP.m_nIDEntitéExpDest)
+      SI ind >0 ALORS
+      	TabDestExp[ind].DestEXP  <= DestEXP
+      	TabDestExp[ind].bModifié = 1
+      FIN
+      
+      CLcourrierModifié = 1
+     type : 458752
+   -
+     name : _AjouterPJ
+     procedure_id : 1389386866594676001
+     type_code : 12
+     code : |1-
+      procédure _AjouterPJ(IDArchiveDocs est un entier sur 8 octets=0,ChemFichierexterne est une chaine ="",chemficheirExterneTemporaire est une chaine ="", Qté est un entier=0)
+      PJCourrier est une stPJ
+      variableraz(PJCourrier)
+      PJCourrier.PJ.constructeur()
+      PJCourrier.FichierChargé.constructeur()
+      //
+      si (IDArchiveDocs > 0 et ChemFichierexterne <> "" ) ou (ChemFichierexterne <> "" ET chemficheirExterneTemporaire <> "")ou (IDArchiveDocs > 0 ET chemficheirExterneTemporaire <> "")  ALORS
+      	erreur (" plsuieurs types de PJ sont specifiées en meme temps ! ")
+      	retour
+      FIN
+      si IDArchiveDocs > 0 ALORS  //fichier interne archive
+      	 PJCourrier.FichierChargé.ChargeFichierParID(IDArchiveDocs)
+      Fin
+      SI ChemFichierexterne <> "" ALORS //fichier local sur disqe dur à consrver 
+      	PJCourrier.FichierChargé.ChargeFichierExterne(ChemFichierexterne)
+      FIN
+      SI  chemficheirExterneTemporaire <> "" ALORS //fichier local sur disqe dur à supprimer
+      	PJCourrier.FichierChargé.ChargeFichierExterneTemporaire(chemficheirExterneTemporaire)
+      FIN
+      chemfichier est une chaine = PJCourrier.FichierChargé.GetCheminFichier()
+      Si chemfichier <> "" ALORS
+      	//PJCourrier.PJ.m_dDateDocument = fDate(chemfichier,"",fCréation) //récupération date création
+      
+      	PJCourrier.PJ.m_nIDCourriers = 0
+      	PJCourrier.PJ.m_sQté = Qté
+      	
+      	PJCourrier.PJ.m_sTitre = fExtraitChemin(chemfichier,fFichier+fExtension)
+      	//PJCourrier.PJ.m_sTaille = fTaille(chemfichier)
+      	
+      	PJCourrier.bAjouté = 1
+      	tabPJcourrier.Ajoute(PJCourrier)
+      	
+      	//indication que le fichier est ajouter pour sauvegarde après 
+      sinon
+      	erreur ("le chemin du fichier de la PJ est énixistant ! ")
+      	VariableRAZ(PJCourrier)
+      	PJCourrier.PJ.Constructeur()
+      	PJCourrier.FichierChargé.Constructeur()
+      FIN
+      
+      CLcourrierModifié = 1
+     type : 458752
+   -
+     name : _SupprimerPJCourrier
+     procedure_id : 1389386995443724959
+     type_code : 12
+     code : |1-
+      //procédure _SupprimerPJCourrier(IDPJcourrier est un entier sur 8 octets)
+      //ind est un entier =0 
+      //ind = TableauCherche(tabPJcourrier,tcLinéaire,"PJ.m_nIDCourriers",IDPJcourrier)
+      //SI ind >0 ALORS
+      //	tabPJcourrier[ind].bSupprimé = 1
+      //FIN
+      //
+      //CLcourrierModifié = 1
+     type : 458752
+   -
+     name : _modifierPJCourrier
+     procedure_id : 1389387055573346671
+     type_code : 12
+     code : |1-
+      //procédure _modifierPJCourrier(IDCourrier est une entier sur 8 Octets, IDArchiveDocs est un entier sur 8 octets=0,ChemFichierexterne est une chaine ="",chemficheirExterneTemporaire est une chaine ="", Qté est un entier=0)
+      //
+      ////
+      //SI (IDArchiveDocs > 0 ET ChemFichierexterne <> "" ) OU (ChemFichierexterne <> "" ET chemficheirExterneTemporaire <> "")OU (IDArchiveDocs > 0 ET chemficheirExterneTemporaire <> "")  ALORS
+      //	Erreur (" plsuieurs types de PJ sont specifiées en meme temps ! ")
+      //	RETOUR
+      //FIN
+      //SI IDArchiveDocs > 0 ALORS  //fichier interne archive
+      //	PJCourrier.FichierChargé.ChargeFichierParID(IDArchiveDocs)
+      //FIN
+      //SI ChemFichierexterne <> "" ALORS //fichier local sur disqe dur à consrver 
+      //	PJCourrier.FichierChargé.ChargeFichierExterne(ChemFichierexterne)
+      //FIN
+      //SI  chemficheirExterneTemporaire <> "" ALORS //fichier local sur disqe dur à supprimer
+      //	PJCourrier.FichierChargé.ChargeFichierExterneTemporaire(chemficheirExterneTemporaire)
+      //FIN
+      //chemfichier est une chaine = PJCourrier.FichierChargé.GetCheminFichier()
+      //SI chemfichier <> "" ALORS
+      //	PJCourrier.PJ.m_dDateDocument	= fDate(chemfichier,"",fCréation) //récupération date création
+      //	
+      //	PJCourrier.PJ.m_nIDCourriers	= 0
+      //	PJCourrier.PJ.m_nQté			= Qté
+      //	PJCourrier.PJ.m_sNom			= fExtraitChemin(chemfichier,fFichier+fExtension)
+      //	PJCourrier.PJ.m_sTaille			= fTaille(chemfichier)
+      //	
+      //	PJCourrier.bAjouté				= 1
+      //	tabPJcourrier.Ajoute(PJCourrier)
+      //	
+      //	//indication que le fichier est ajouter pour sauvegarde après 
+      //SINON
+      //	Erreur ("le chemin du fichier de la PJ est énixistant ! ")
+      //	VariableRAZ(PJCourrier)
+      //	PJCourrier.PJ.Constructeur()
+      //	PJCourrier.FichierChargé.Constructeur()
+      //FIN
+      //
+      //
+      //CLcourrierModifié = 1
+      //
+     type : 458752
+   -
+     name : _SauvegarderCourrier
+     procedure_id : 1389496645964726591
+     type_code : 12
+     code : |1+
+      //procédure _SauvegarderCourrier()
+      //
+      //PJCourrier..m_nIDArchiveDocs = 1234567  // sauvegarde de la PJ et récupération du IDArchive si la Pj est ajoutée
+     type : 458752
+   -
+     name : _modifierDonnésCourrier
+     procedure_id : 1389718573922439555
+     type_code : 12
+     code : |1+
+      procédure _modifierDonnésCourrier()
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1347487130743e3a
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

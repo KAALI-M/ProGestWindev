@@ -1,0 +1,9 @@
+//MO616-617.TXT ANA00616 TO ANA00617
+AutorisAbsence		TAR	309	nouvelle taille enregistrement : 309
+AutorisAbsence	Datedébut	CNW	Date et Heure (aaaammjjhhmmssccc)$Date (aaaammjj)	la rubrique Datedébut a pour nouveau type Date et Heure (aaaammjjhhmmssc
+AutorisAbsence	DateFin	CNW	Date et Heure (aaaammjjhhmmssccc)$Chaîne	la rubrique DateFin a pour nouveau type Date et Heure (aaaammjjhhmmssc
+AutorisAbsence	Fichier	CNW	Mémo Binaire$Chaîne	la rubrique Fichier a pour nouveau type Mémo image
+AutorisAbsence	LieuRésidence	RUB+		LieuRésidence est une nouvelle rubrique
+AutorisAbsence	Départ	RUB+		Départ est une nouvelle rubrique
+AutorisAbsence	Destinations	RUB+		Destinations est une nouvelle rubrique
+AutorisAbsence	MotifAbs	RUB+		MotifAbs est une nouvelle rubrique

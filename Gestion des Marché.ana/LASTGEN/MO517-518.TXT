@@ -1,0 +1,2 @@
+//MO517-518.TXT ANA00517 TO ANA00518
+DroitsUtilisateur		ENUMCOMBI+		L'énumération/combinaison DroitsUtilisateur a été créée.

@@ -1,0 +1,3 @@
+//MO605-606.TXT ANA00605 TO ANA00606
+Courriers		TAR	712	nouvelle taille enregistrement : 712
+Courriers	Consignes	RUB+		Consignes est une nouvelle rubrique

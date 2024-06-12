@@ -1,0 +1,6 @@
+//MO617-618.TXT ANA00617 TO ANA00618
+AutorisAbsence		TAR	321	nouvelle taille enregistrement : 321
+AutorisAbsence	Datedébut	CNW	Date (aaaammjj)$Date et Heure (aaaammjjhhmmssccc)	la rubrique Datedébut a pour nouveau type Date (aaaammjj)
+AutorisAbsence	DateFin	CNW	Date (aaaammjj)$Date et Heure (aaaammjjhhmmssccc)	la rubrique DateFin a pour nouveau type Date (aaaammjj)
+AutorisAbsence	HeureDébut	RUB+		HeureDébut est une nouvelle rubrique
+AutorisAbsence	HeureFin	RUB+		HeureFin est une nouvelle rubrique

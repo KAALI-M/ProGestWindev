@@ -1,0 +1,24 @@
+//MO542-543.TXT ANA00542 TO ANA00543
+ConfigurationDroitsAccès		NFI		nouveau fichier
+Modules		NFI		nouveau fichier
+GPU_UtilisateurWeb		FIC-	GPU_UtilisateurWeb	Fichier supprimé GPU_UtilisateurWeb
+GPU_UtilisateurMDP		FIC-	GPU_UtilisateurMDP	Fichier supprimé GPU_UtilisateurMDP
+GPU_Cible		FIC-	GPU_Cible	Fichier supprimé GPU_Cible
+GPU_HistoriqueConnexion		FIC-	GPU_HistoriqueConnexion	Fichier supprimé GPU_HistoriqueConnexion
+GPU_Options		FIC-	GPU_Options	Fichier supprimé GPU_Options
+GPU_MotPasseExport		FIC-	GPU_MotPasseExport	Fichier supprimé GPU_MotPasseExport
+GPU_SecuriteExport		FIC-	GPU_SecuriteExport	Fichier supprimé GPU_SecuriteExport
+GPU_Configuration		FIC-	GPU_Configuration	Fichier supprimé GPU_Configuration
+GPU_Element		FIC-	GPU_Element	Fichier supprimé GPU_Element
+GPU_Configuration_Element		FIC-	GPU_Configuration_Element	Fichier supprimé GPU_Configuration_Element
+Contrainte_Modules_Modules		NWL	Modules (IDModules) et Modules (CopieDeIDModules)	Nouvelle liaison entre les fichiers Modules (IDModules) et Modules (CopieDeIDModules)
+Contrainte_Modules_ConfigurationDroitsAccès		NWL	Modules (IDModules) et ConfigurationDroitsAccès (IDModules)	Nouvelle liaison entre les fichiers Modules (IDModules) et ConfigurationDroitsAccès (IDModules)
+Contrainte_GPU_Utilisateur_GPU_UtilisateurMDP		DEL	GPU_Utilisateur (IDUtilisateur) et GPU_UtilisateurMDP (IDUtilisateur)	Liaison supprimée entre les fichiers GPU_Utilisateur (IDUtilisateur) et GPU_UtilisateurMDP (IDUtilisateur)
+Contrainte_GPU_Utilisateur_GPU_UtilisateurWeb		DEL	GPU_Utilisateur (IDUtilisateur) et GPU_UtilisateurWeb (IDUtilisateur)	Liaison supprimée entre les fichiers GPU_Utilisateur (IDUtilisateur) et GPU_UtilisateurWeb (IDUtilisateur)
+Contrainte_HistoriqueConnexion_Cible		DEL	GPU_Cible (IDCible) et GPU_HistoriqueConnexion (IDCible)	Liaison supprimée entre les fichiers GPU_Cible (IDCible) et GPU_HistoriqueConnexion (IDCible)
+Contrainte_HistoriqueConnexion_Utilisateur		DEL	GPU_Utilisateur (IDUtilisateur) et GPU_HistoriqueConnexion (IDUtilisateur)	Liaison supprimée entre les fichiers GPU_Utilisateur (IDUtilisateur) et GPU_HistoriqueConnexion (IDUtilisateur)
+Contrainte_WDGPU_Configuration_WDGPU_Cible		DEL	GPU_Cible (IDCible) et GPU_Configuration (IDCible)	Liaison supprimée entre les fichiers GPU_Cible (IDCible) et GPU_Configuration (IDCible)
+Contrainte_WDGPU_Cible_WDGPU_Element		DEL	GPU_Cible (IDCible) et GPU_Element (IDCible)	Liaison supprimée entre les fichiers GPU_Cible (IDCible) et GPU_Element (IDCible)
+Contrainte_WDGPU_Configuration_WDGPU_Element		DEL	GPU_Configuration (IDConfiguration) et GPU_Configuration_Element (IDConfiguration)	Liaison supprimée entre les fichiers GPU_Configuration (IDConfiguration) et GPU_Configuration_Element (IDConfiguration)
+Contrainte_WDGPU_Element_WDGPU_Configuration		DEL	GPU_Element (IDElement) et GPU_Configuration_Element (IDElement)	Liaison supprimée entre les fichiers GPU_Element (IDElement) et GPU_Configuration_Element (IDElement)
+Filtres		ENUMCOMBI+		L'énumération/combinaison Filtres a été créée.

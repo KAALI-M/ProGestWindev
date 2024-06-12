@@ -1,0 +1,108 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clEtatDélaisProjet
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1335581f105a6e4a
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      clEtatDélaisProjet est une Classe
+      
+      PUBLIC CONSTANT 
+      	Projet est un clProjet
+      //	nbreChampsSansOS_PV est un entier 
+      	tabEtatDélais est un tableau dynamique de tableaux dynamique
+      
+      
+      fin
+      stLigneEtatDélais est une structure
+      	IDDélai est un entier sur 8 octets
+      	Indice est un entier
+      	NumDélais est un entier
+      	Désignation est une chaine
+      	délai est un entier
+      	Unité est une chaine
+      	Etat est une chaine
+      	DateFC est une date
+      	DélaisConsommé est un réel
+      	PourcentageDélai est un réel
+      	Retard est un entier
+      	PénalitéJournlière est un réel
+      	MtPénalité est un réel
+      	
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1384109350927953513
+     type_code : 27
+     code : |1+
+      procédure Constructeur(idProjet est un entier )
+      
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1384109350928019049
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : ActualiseEtat
+     procedure_id : 1384110317296016362
+     type_code : 12
+     code : |1+
+      procédure ActualiseEtat(gnIDProjet est un entier= 0,dDateRéf est une date = DateSys())
+      SI gnIDProjet > 0 alors 
+      
+      	
+      	VariableRAZ(tabEtatDélais)
+      	LigneDélais est une stLigneEtatDélais
+      	
+      		
+      //	VariableRAZ(nbreChampsSansOS_PV)
+      	//préparation des éléments
+      	/// requêtes
+      	
+      		HExécuteRequête(REQ_OSetPV,MaConnexion,hRequêteDéfaut,gnIDProjet,dDateRéf)
+      		HExécuteRequête(REQ_Délais_desOSPV,MaConnexion,hRequêteDéfaut,gnIDProjet,dDateRéf)
+      		HExécuteRequête(REQ_Délais,MaConnexion,hRequêteDéfaut,gnIDProjet,dDateRéf)
+      	///nbre de PV/OS
+      	// création champ TABLE
+      	pour tout REQ_Délais
+      		
+      	FIN
+      	tabEtatDélais = allouer un tableau [1,1] de chaînes  // deux lignes :1 nom colonne, 2 titre affiché
+      		
+      	//ajout des délais  
+      	
+      	// ajout des détails de chaque OS/PV
+      	
+      FIN
+      
+      
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1335580610540eb5
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,3 @@
+//MO586-587.TXT ANA00586 TO ANA00587
+PJCourrier		NNF*	RapportsdesCourrier	nouveau nom PJCourrier
+PJCourrier	IDPJCourrier	NNR	IDRapport	ATTENTION : la clé IDRapport a pour nouveau nom IDPJCourrier

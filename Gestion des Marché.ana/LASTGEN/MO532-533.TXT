@@ -1,0 +1,3 @@
+//MO532-533.TXT ANA00532 TO ANA00533
+RoleUtilisateur	chargéAffaire	ECOPTIONNN	technique	La valeur technique a pour nouveau nom chargéAffaire.
+RoleUtilisateur	comptable	ECOPTIONNN	comptabilité	La valeur comptabilité a pour nouveau nom comptable.

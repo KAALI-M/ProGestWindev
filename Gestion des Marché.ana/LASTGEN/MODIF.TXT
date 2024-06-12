@@ -1,0 +1,8 @@
+//MO649-650.TXT ANA00649 TO ANA00650
+Ouvrages		TAR	293	nouvelle taille enregistrement : 293
+Ouvrages	PHE	RUB+		PHE est une nouvelle rubrique
+Ouvrages	RN	RUB+		RN est une nouvelle rubrique
+Ouvrages	TN	RUB+		TN est une nouvelle rubrique
+Ouvrages	PenteAmont	RUB+		PenteAmont est une nouvelle rubrique
+Ouvrages	Type	RUB+		Type est une nouvelle rubrique
+Ouvrages	CoéfSéisme	RUB+		CoéfSéisme est une nouvelle rubrique

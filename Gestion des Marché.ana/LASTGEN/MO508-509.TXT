@@ -1,0 +1,72 @@
+//MO508-509.TXT ANA00508 TO ANA00509
+Projet		FCNX+	Connexion à '127.0.0.1'	
+TabDélais		FCNX+	Connexion à '127.0.0.1'	
+BPDE		FCNX+	Connexion à '127.0.0.1'	
+EtatProjet		FCNX+	Connexion à '127.0.0.1'	
+ModePassation		FCNX+	Connexion à '127.0.0.1'	
+TypeProjet		FCNX+	Connexion à '127.0.0.1'	
+FormeMarché		FCNX+	Connexion à '127.0.0.1'	
+CaractèrePrix		FCNX+	Connexion à '127.0.0.1'	
+OS		FCNX+	Connexion à '127.0.0.1'	
+OS_TabDélais		FCNX+	Connexion à '127.0.0.1'	
+Réception		FCNX+	Connexion à '127.0.0.1'	
+TypeOS		FCNX+	Connexion à '127.0.0.1'	
+Courriers		FCNX+	Connexion à '127.0.0.1'	
+TypeCourrier		FCNX+	Connexion à '127.0.0.1'	
+RapportsdesCourrier		FCNX+	Connexion à '127.0.0.1'	
+EtatCourrier		FCNX+	Connexion à '127.0.0.1'	
+archivedocs		FCNX+	Connexion à '127.0.0.1'	
+typeDocArchive		FCNX+	Connexion à '127.0.0.1'	
+Ouvrages		FCNX+	Connexion à '127.0.0.1'	
+Documents		FCNX+	Connexion à '127.0.0.1'	
+Priorité		FCNX+	Connexion à '127.0.0.1'	
+DétailAttachements		FCNX+	Connexion à '127.0.0.1'	
+ControlesTechniques		FCNX+	Connexion à '127.0.0.1'	
+ControlesdesPrix		FCNX+	Connexion à '127.0.0.1'	
+ControlesdesPrix_Rapports		FCNX+	Connexion à '127.0.0.1'	
+ElementPrix		FCNX+	Connexion à '127.0.0.1'	
+ElementsdePrixValidés		FCNX+	Connexion à '127.0.0.1'	
+Personnel		FCNX+	Connexion à '127.0.0.1'	
+RapportControle		FCNX+	Connexion à '127.0.0.1'	
+DétailPvRéception		FCNX+	Connexion à '127.0.0.1'	
+ProjetRéponse		FCNX+	Connexion à '127.0.0.1'	
+Tasks		FCNX+	Connexion à '127.0.0.1'	
+EtatTask		FCNX+	Connexion à '127.0.0.1'	
+Destinataire_Expediteur		FCNX+	Connexion à '127.0.0.1'	
+DestinatairesProjetRéponse		FCNX+	Connexion à '127.0.0.1'	
+EntitésOrg		FCNX+	Connexion à '127.0.0.1'	
+EntitéPersonnel		FCNX+	Connexion à '127.0.0.1'	
+TypeOrganisme		FCNX+	Connexion à '127.0.0.1'	
+Organismes		FCNX+	Connexion à '127.0.0.1'	
+VersionsOrganismes		FCNX+	Connexion à '127.0.0.1'	
+GroupePersonnel		FCNX+	Connexion à '127.0.0.1'	
+GroupeProjets		FCNX+	Connexion à '127.0.0.1'	
+MaitresOuvrages		FCNX+	Connexion à '127.0.0.1'	
+Titulaires		FCNX+	Connexion à '127.0.0.1'	
+GPU_UtilisateurWeb		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_UtilisateurWeb		FCNX+	Connexion à '127.0.0.1'	
+GPU_UtilisateurMDP		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_UtilisateurMDP		FCNX+	Connexion à '127.0.0.1'	
+GPU_Utilisateur		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_Utilisateur		FCNX+	Connexion à '127.0.0.1'	
+GPU_Utilisateur_Groupe		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_Utilisateur_Groupe		FCNX+	Connexion à '127.0.0.1'	
+GPU_Groupe		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_Groupe		FCNX+	Connexion à '127.0.0.1'	
+GPU_Cible		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_Cible		FCNX+	Connexion à '127.0.0.1'	
+GPU_HistoriqueConnexion		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_HistoriqueConnexion		FCNX+	Connexion à '127.0.0.1'	
+GPU_Options		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_Options		FCNX+	Connexion à '127.0.0.1'	
+GPU_MotPasseExport		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_MotPasseExport		FCNX+	Connexion à '127.0.0.1'	
+GPU_SecuriteExport		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_SecuriteExport		FCNX+	Connexion à '127.0.0.1'	
+GPU_Configuration		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_Configuration		FCNX+	Connexion à '127.0.0.1'	
+GPU_Element		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_Element		FCNX+	Connexion à '127.0.0.1'	
+GPU_Configuration_Element		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GPU_Configuration_Element		FCNX+	Connexion à '127.0.0.1'	
+Connexion à '127.0.0.1'		CNX+		

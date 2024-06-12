@@ -1,0 +1,3 @@
+//MO574-575.TXT ANA00574 TO ANA00575
+GPU_Utilisateur		TAR	1809	nouvelle taille enregistrement : 1809
+GPU_Utilisateur	Interne	RUB+		Interne est une nouvelle rubrique

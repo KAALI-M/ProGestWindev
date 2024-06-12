@@ -1,0 +1,103 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MGPU_Utilisateur
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1235d4b602353e87
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MGPU_Utilisateur est une Classe <mapping=GPU_Utilisateur><§rad:1§>
+      	<§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	<MAPPING><§rad:1§>
+      	m_nIDUtilisateur	est un entier <mapping=IDUtilisateur>
+      	m_sLogin			est une chaîne UNICODE <mapping=Login>
+      	m_sCivilité			est une chaîne ANSI <mapping=Civilité>
+      	m_sNom				est une chaîne UNICODE <mapping=Nom>
+      	m_sPrenom			est une chaîne UNICODE <mapping=Prenom>
+      	m_sMotPasse			est une chaîne UNICODE <mapping=MotPasse>
+      	m_bSuperviseur		est un booléen <mapping=Superviseur>
+      	m_bCompteActif		est un booléen <mapping=CompteActif>
+      	m_bMotPasseASaisir	est un booléen <mapping=MotPasseASaisir>
+      	m_Photo				est un buffer <mapping=Photo>
+      	m_sTéléphone		est une chaîne ANSI <mapping=Téléphone>
+      	m_dDateNaissance	est une date <mapping=DateNaissance>
+      	m_sEmail			est une chaîne ANSI <mapping=Email>
+      	m_sAdresse			est une chaîne <mapping=Adresse>
+      	m_dDateRecrutement	est une date <mapping=DateRecrutement>
+      	m_bInterne			est un booléen <mapping=Interne>
+      	m_sNomArab			est une chaîne UNICODE <mapping=NomArab>
+      	m_sPrénomArab		est une chaîne UNICODE <mapping=PrénomArab>
+      	m_sCadreArab		est une chaîne UNICODE <mapping=CadreArab>
+      	m_sAffectationArab	est une chaîne UNICODE <mapping=AffectationArab>
+      	
+      	
+      	
+      	
+      	<FIN><§rad:1§>
+      	<§rad:1§>
+      	
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1312188744634613398
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1312188744634678934
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()
+     type : 655360
+   -
+     name : SetID
+     procedure_id : 1365200645508996790
+     type_code : 12
+     code : |1+
+      procédure SetID(IDutilisateur est un entier )
+      SI IDutilisateur > 0 ALORS
+      	REQ_Utilisateur.ParamCompteActif = Null
+      	REQ_Utilisateur.ParamIDUtilisateur = IDutilisateur
+      	
+      	HExécuteRequête(REQ_Utilisateur,MaConnexion,hRequêteDéfaut)
+      	HLitPremier(REQ_Utilisateur)
+      	si Pas  HEnDehors(REQ_Utilisateur) ALORS
+      		FichierVersMémoire(This,REQ_Utilisateur)
+      	sinon 
+      		renvoyer -1
+      	FIN
+      SINON
+      	
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x181202850006c2e1
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

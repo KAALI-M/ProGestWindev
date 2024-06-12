@@ -1,0 +1,3 @@
+//MO634-635.TXT ANA00634 TO ANA00635
+Tasks		TAR	772	nouvelle taille enregistrement : 772
+Tasks	notifparMail	RUB+		notifparMail est une nouvelle rubrique

@@ -1,0 +1,123 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COneDriveDisque
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x15e5a65e03806a56
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      // Classe modélisant un "drive" de OneDrive
+      COneDriveDisque est une Classe
+      	m_pclConnexion est un CConnexionOneDrive dynamique
+      	m_description est un STDrive
+      	m_bDefaut est un booleen	// Vrai si c'est le disque par défaut de l'utilisateur
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1577850167179176534
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur( pclConnexion est un CConnexionOneDrive dynamique )
+      
+      m_pclConnexion = pclConnexion
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1577850167179242070
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : RepertoireRacine
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1578215789114646895
+     type_code : 12
+     code : |1-
+      // Résumé : Récupère le répertoire racine de l'utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] RepertoireRacine ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Type indéterminé : Répertoire
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE RepertoireRacine()
+      
+      pclRepRacine est un COneDriveElement dynamique = allouer un COneDriveElement(m_pclConnexion)
+      pclRepRacine.InitialiseParPath(m_description.id,"/drives/"+m_description.id+"/root:/")
+      
+      renvoyer pclRepRacine
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      	renvoyer null
+     type : 458752
+   -
+     name : RépertoireApplication
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1578229124992582465
+     type_code : 12
+     code : |1-
+      // Résumé : Récupère le répertoire des applications de l'utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] RépertoireApplication ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Type indéterminé : Répertoire
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE RépertoireApplication()
+      
+      pclRepApp est un COneDriveElement dynamique = allouer un COneDriveElement(m_pclConnexion)
+      pclRepApp.InitialiseParPath(m_description.id,"/drives/"+m_description.id+"/special/approot")
+      
+      RENVOYER pclRepApp
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	renvoyer null
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x15e5a65e037d6a56
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

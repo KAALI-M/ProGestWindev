@@ -1,0 +1,3 @@
+//MO602-603.TXT ANA00602 TO ANA00603
+PJCourrier		TAR	135	nouvelle taille enregistrement : 135
+PJCourrier	Qté	CNW	Chaîne$Entier non signé sur 4 octets	la rubrique Qté a pour nouveau type Chaîne

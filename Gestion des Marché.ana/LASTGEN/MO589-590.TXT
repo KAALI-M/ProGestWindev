@@ -1,0 +1,6 @@
+//MO589-590.TXT ANA00589 TO ANA00590
+TabDélais		TAR	407	nouvelle taille enregistrement : 407
+TabDélais	Indice	CNW	Entier non signé sur 4 octets$Entier non signé sur 2 octets	la rubrique Indice a pour nouveau type Entier non signé sur 4 octets
+BPDE		TAR	294	nouvelle taille enregistrement : 294
+BPDE	Indice	CNW	Entier non signé sur 4 octets$Entier non signé sur 2 octets	la rubrique Indice a pour nouveau type Entier non signé sur 4 octets
+ControlesTechniques	Indice	CNW	Entier non signé sur 4 octets$Entier sur 4 octets	la rubrique Indice a pour nouveau type Entier non signé sur 4 octets

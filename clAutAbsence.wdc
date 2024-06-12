@@ -1,0 +1,124 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clAutAbsence
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x13f78bfd006fa0be
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clAutAbsence est une Classe
+       herite de MAutorisAbsence
+       
+       
+      PUBLIC CONSTANT
+      	DocumentChargé est un CFichierChargé
+      	
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1438772524718530750
+     type_code : 27
+     code : |1-
+      procédure Constructeur()
+      MAutorisAbsence.Constructeur()
+      DocumentChargé.ViderFichier()
+      
+      
+      	
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1438772524718596286
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : _SetID
+     procedure_id : 1438773173261102164
+     type_code : 12
+     code : |1+
+      procédure _SetID(IDAutoisAbsence est un entier sur 8 octet =0)
+      this.constructeur()
+      
+       MAutorisAbsence._SetID(IDAutoisAbsence)
+       
+      SI This.m_sNomfichier ="" ALORS
+      	
+      SINON
+      	SI fSauveBuffer(TempDirectory+fSep()+ This.m_sNomfichier,This.m_bufFichier) ALORS
+      		DocumentChargé.ChargeFichierExterneTemporaire (TempDirectory+fSep()+ This.m_sNomfichier)
+      	SINON
+      		Erreur ("la recharge du fichier a échoué !")
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : _sauveAutAbsence
+     procedure_id : 1438773345059834598
+     type_code : 12
+     code : |1-
+      procédure _sauveAutAbsence()
+      PasErreur est un booléen = 1 
+      si m_nIDAutorisAbsence > 0 ALORS  // modification
+      	HLitRecherchePremier(AutorisAbsence,IDAutorisAbsence,m_nIDAutorisAbsence)
+      	si pas HTrouve(AutorisAbsence) ALORS
+      		erreur ("l'autorisation (ID: " + m_nIDAutorisAbsence+ ") n'a pas été trouvée dans la BDD !" )
+      		PasErreur = 0
+      	sinon
+      		MémoireVersFichier(this,AutorisAbsence)
+      		
+      		si HAttacheMémo(AutorisAbsence,Fichier,DocumentChargé.GetCheminFichier()) ALORS
+      			
+      			si pas HModifie(AutorisAbsence) ALORS
+      				erreur ("la sauvegarde na pas pu être effectué ")		
+      				PasErreur = 0
+      			sinon
+      				This._SetID(AutorisAbsence.IDAutorisAbsence)		
+      			FIN
+      		sinon 
+      			erreur ("le document n'a pas pu être chargé")
+      			PasErreur = 0
+      			
+      		FIN
+      	FIN
+      sinon  // Nouvel autorisation
+      	MémoireVersFichier(This,AutorisAbsence)
+      	SI HAttacheMémo(AutorisAbsence,Fichier,DocumentChargé.GetCheminFichier()) ALORS
+      		SI pas HAjoute(AutorisAbsence) ALORS
+      			Erreur ("la sauvegarde na pas pu être effectué ")	
+      			PasErreur = 0
+      		sinon
+      			this._setid(AutorisAbsence.IDAutorisAbsence)
+      		FIN
+      	SINON 
+      		Erreur ("le document n'a pas pu être chargé")
+      		PasErreur = 0
+      	FIN
+      FIN
+      
+      renvoyer PasErreur
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x13f78beb00695916
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

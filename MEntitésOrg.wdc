@@ -1,0 +1,101 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MEntitésOrg
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x12408c5e032a3b09
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      MEntitésOrg est une Classe <mapping=EntitésOrg><§rad:1§>
+      	<§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	<MAPPING>
+      	m_nIDEntitésOrg			est un entier sur 8 octets <MAPPING=IDEntitésOrg>
+      	m_sIntitulé				est une chaîne ANSI <MAPPING=Intitulé>
+      	m_sAbréviation			est une chaîne ANSI <MAPPING=Abréviation>
+      	m_sAdresse				est une chaîne <MAPPING=Adresse>
+      	m_sVille				est une chaîne ANSI <MAPPING=Ville>
+      	m_sPays					est une chaîne ANSI <MAPPING=Pays>
+      	m_sTéléphone			est une chaîne ANSI <MAPPING=Téléphone>
+      	m_sFax					est une chaîne ANSI <MAPPING=Fax>
+      	m_EntetePage			est un Buffer <MAPPING=EntetePage>
+      	m_PiedPage				est un Buffer <MAPPING=PiedPage>
+      	m_nIDEntitésOrgParent	est un entier sur 8 octets <MAPPING=IDEntitésOrgParent>
+      	m_nIDVersionsOrg		est un entier sur 8 octets <MAPPING=IDVersionsOrg>
+      	m_sIntituléArab			est une chaîne UNICODE <mapping=IntituléArab>
+      	<FIN>
+      	
+      	<§rad:1§>
+      FIN<§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1315205426600164121
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur( )
+      VariableRAZ(m_nIDEntitésOrg			)
+      VariableRAZ(m_sIntitulé				)
+      VariableRAZ(m_sAbréviation			)
+      VariableRAZ(m_sAdresse				)
+      VariableRAZ(m_sVille				)
+      VariableRAZ(m_sPays					)
+      VariableRAZ(m_sTéléphone			)
+      VariableRAZ(m_sFax					)
+      VariableRAZ(m_EntetePage			)
+      VariableRAZ(m_PiedPage				)
+      VariableRAZ(m_nIDEntitésOrgParent	)
+      VariableRAZ(m_nIDVersionsOrg		)
+      VariableRAZ(m_sIntituléArab	)
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1315205426600229657
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()<§rad:1§>
+     type : 655360
+   -
+     name : SetID
+     procedure_id : 1363576241755821210
+     type_code : 12
+     code : |1+
+      procédure SetID(IDEntitésOrg est un entier sur 8 octets = 0  )
+      SI IDEntitésOrg > 0 ALORS
+      	REQ_EntitésDeVersionsOrganisme.ParamIDEntitésOrg =IDEntitésOrg
+      	REQ_EntitésDeVersionsOrganisme.ParamIDEntitésOrgParent = null
+      	REQ_EntitésDeVersionsOrganisme.ParamIDVersionsOrg = null
+      	
+      	HExécuteRequête(REQ_EntitésDeVersionsOrganisme,MaConnexion,hRequêteDéfaut)
+      	FichierVersMémoire(This,REQ_EntitésDeVersionsOrganisme)
+      SINON
+      	
+      FIN
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x12408c5e03333b58
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,6 @@
+//MO548-549.TXT ANA00548 TO ANA00549
+AffectationPersonnel		TAR	94	nouvelle taille enregistrement : 94
+AffectationPersonnel	IDTypePoste	RUB+		IDTypePoste est une nouvelle clé
+AffectationPersonnel	TypePoste	RUB-		la rubrique TypePoste est supprimée
+TypePoste		NFI		nouveau fichier
+Contrainte_TypePoste_AffectationPersonnel		NWL	TypePoste (IDTypePoste) et AffectationPersonnel (IDTypePoste)	Nouvelle liaison entre les fichiers TypePoste (IDTypePoste) et AffectationPersonnel (IDTypePoste)

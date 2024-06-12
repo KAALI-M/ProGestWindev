@@ -1,0 +1,3 @@
+//MO618-619.TXT ANA00618 TO ANA00619
+AutorisAbsence		TAR	392	nouvelle taille enregistrement : 392
+AutorisAbsence	Nomfichier	RUB+		Nomfichier est une nouvelle rubrique

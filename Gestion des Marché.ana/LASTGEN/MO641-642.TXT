@@ -1,0 +1,3 @@
+//MO641-642.TXT ANA00641 TO ANA00642
+TabDélais	PénalitéEnRetenue	NNR	Retenue	ATTENTION : la rubrique Retenue a pour nouveau nom PénalitéEnRetenue
+TabDélais	MtPénalitéRetard	NNR	Valeur	ATTENTION : la rubrique Valeur a pour nouveau nom MtPénalitéRetard

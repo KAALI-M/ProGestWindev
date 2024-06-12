@@ -1,0 +1,238 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_EditeurDocx
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_EditeurDocx
+ identifier : 0x2216b40a061e1e8b
+ internal_properties : BQAAAAUAAAAokY1XEPqlRSp8CiTInJmGSsKzbl8rhiekIlYSHx0WZzkpcMiXvlE7NHE/AHC4oW/p32VZponvsbuGuTD52GTe48y+2s6YsAby4lTSKeA/3dYWOaKgs14X78HXay6Qeo9X99Yz8bFS9U5hsc8r6QrGlWVn8REH/YjWa0JSR8AHMKhAhWjVPs7HnbrJ7zdklOlk6jhE6XCC6/CZePrdGvZtUkDeWECBSMTDPGshn3ghBSKP92ID7BPBWLjv2D9UxgkQorgLKNhyasQwc4E3M7KIInyR+NZNAMxOk3ltf7Tf4XCcx7UeBdY5oNh4PUfAyesulAmFGCHmEUG0/nRMZ2Vy5SpSOYOwnSJXsASjLYTn9QH73HgSg0EwjfzsLaQJMUN30UAMBvHYLo4D5CbcCiEtElxHREVG10c6s2B6iNIBqKtHldIHms6EIFUkEtspuUl9AIYSJaE3ovZpOB44ITvIgVlBXvBTCPrNDFiR40zohNGieq3FKAknBLoOVtulH5vL6hAhqAnWT6fRu0Msvhnkd2Kj3mPGVkQnMbwe9YAaKDO+y+XrtNvAUSKOlBBq14PW4A8B1EGjdv4/86t0E5+g/7qOiR+b5yOTRHgsv9nRIrPqYjPOttFZhgWJZ6FuUjLjl9BfGhQ6rMdYvyHmpbk3y2EnKaII69HRvLgVbg9LYFplli+QU2UDSYdA4CuXYEAnwJQK3HznwBa5/IvuAJNukNASttfM
+ controls :
+  -
+    name : FI_EditeurDocx
+    identifier : 0x2216b40a061f1e8b
+    internal_properties : BQAAAAUAAADr16Qw0ipkr8QkxdFNiyYOtj4rTzrviw6f6Lz1Syk0X1dDPPUZ9pkDiqZKgTaCauL2D9ZowGqXun+s9p+j8JB91Abnc9oFxgF2ozaSkUmZz3mpRt8e7eQAUiibrHtDxP9GbBKntLCNoZhoVFJZHMQ3O6l294HTYQlb6lgjS5rWMgLfIxTlBlbIlysXTcGCAn1TaI5QqWeyYTngAN1LKhBofO4nz5/kef14Qf5WS28sxQpSuHmTn+bGKau0XTPx6bo9tTNlFlwrQjC9Wn99FaLVG6LauhsMeEY3jy+cN7z2/S3nvVzQe4vwLaW36JbWXGoMoAXvDnsrFjRaYUQeJtsBt+wpG+By9vUhMna2BgmHXtVR8BRbE9+2lxCu8EYtYnEck2bb+Nzy5G5tSC7YhBS6mks2h/zmRziUVn9QZh7THORsfIryzHszK6GTHoORe2noy1yLV1fQ
+    controls :
+     -
+       name : IMG_PDFAfficheRuban
+       identifier : 0x2216dde0072b8b56
+       internal_properties : BQAAAAUAAAARNvqx2i/nddevU2DQGgCiI5CyekQokdJVXPgMaVVpXPEPOyBYZMbbflSaW12YvRhEn2ri3CQ3h8yHV9UnIaUCsDw5sReZwVHj8Vou4qbGnCKEWa/WBm21A9+VrsZhOigiajSYP7EwIpNe8W3Iqw8qXiGoK3cL48TY2VPIJymiuLVUfBJJ95caMepMJ/3dCQhuvLecliR0fRvFhqcDXZlTiog1fAuSP9SexvdfU3TTeM34xOVC/1pMEnXb4NiJBTLphRuaiwdc26650R6lT2Oo8Md8CfyNRctmGqoVJU8qCIv2m8XjKiHEpr3D/yL5u9FVYeoAVlmc1b9hWJgbSIcJBJX+BHPpw3L3gC1W7giCVutqUBnbWgoBWceztb8wQVVNaBCjh2TzTTCBnD065ydJL9jaU8ZxL2opyQVau4ZG1ix+BZd912IcCPzRO9Hg/9StVfQVzp5F1VFeRo7Yl+ycYEUTowh2GT6Bm6KUdrBVuRzFTRZOZxqqamc4iqu4hXrp1XxTDlg2bL46C/RUXu/3GEVKgAIaMzgH3d8gxYfOiNjLJ13Dc3B9avRwK70SxKpk945KCRGQSWiNsW3NQhcUbQnxE8jmTZTEW9VCjtL4FmaA7LiJOcSHV+yVIdcLpROrjllGArZFKOMi56Fw923u3bGtdNNpWp2zJCt74OHUtX3gfWxJIA0UQjnw/EWRywv5Gf+OYOJ/m3S2CGD2KJ2mtd/LqDZGZU//m1FlVGWcQHNhGsjW8KAmJFyCjS/sOgC2zvV4EMkpJVUE6AwUR2tNmzwE/csj8N0XkXgkOMzHbTOVrx83Kvfks1s=
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            MoiMême.Visible = Pas FI_WinDevFAA_RubanTT.Visible
+            
+           type : 14
+         -
+           code : |1-
+            TT_SansNom..BarreOutilsVisible =vrai
+            MoiMême.Visible = faux
+            IMG_PDFCacheRuban.Visible = vrai
+           type : 18
+     -
+       name : IMG_PDFCacheRuban
+       identifier : 0x2216dde0072f8b66
+       internal_properties : BQAAAAUAAAC8R/f/XZ8LKiMZi/tSlXOXzdlgq20aKunFyakS6uOxnLdDKa6nZtkwcWHlG6JpNhYOBNtlJtstgp3UmzZqxif3EBjoA2OjmwJobTjBg2FThmRt+N2AHCEdYJYE8yynBTgexpuFjefrA0gyaR5x5fWQABc8unJukJdWSzYsl3ouILtSU4ndy/vnL7sQ7FG8groNPQ9q1fjfzhugTHjcrqIh1M5aTjgx2yLlcrlYXZHdPlQtN5VvuFPyVkZzfW84WfxO6Bt7M0TS6XheRs4z8w4WjiEIZy+29i/WcrDCcaDx51coxka6beKBTPKRENdqXQRyhtTXdVCHonG5jqJj6cYhx/gqN8HlvdRaAWqzcmjW+yiTGB99K5yp2sc5OMyGJw2TwT7+HbJvz/ILSgRD3DSPnGetqScz2Wtbdcw41L7qbrxIsotYDFKl41fHQr2Q4f1ru55RFKHGR2KGUale8xGG/aIjn4IOlFCeNlOq3YDJRflsjWA33h5v/vVjMFBhRpG+FsCwi0fN0wQFlsd16KmX0Lpwd7RoNxjY3JTKNvt2ZeoSMAPe3w9A+nl0JNsX5EyCylsIT6SRfnxynpl5ApKARY1NPJJOKB3LYrP42C8zy3WzxUpM+zjDqDByRLyHOt+Yc8Y7cBnMv1luzrv2DGT7tVCERKaSVaBvj6hJL9WE6mTjZ74DMYvJvBFshjYMoKi6L/Z1BiH1vMqFbRahxOUVSIIbPkzW5M1zlvcAcco1k6CF0xUq/MlR8e4Xm0C3WAEGiGhnAgyoqR84m7Zvw8tFMzmfE9R6HLP7HW4NYyUwQTSAI+DTeZ7UiTvOu4YX1am4
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            MoiMême.Visible =faux
+           type : 14
+         -
+           code : |1-
+            
+            TT_SansNom.BarreOutilsVisible = faux
+            MoiMême.Visible							= Faux
+            IMG_PDFAfficheRuban.Visible					= Vrai
+           type : 18
+     -
+       name : TT_SansNom
+       identifier : 0x2216b41e06576d47
+       internal_properties : BQAAAAUAAAA4keS2lKb/2Y81I7awAtzT4OHVOxUvgR/JBH/oxn6Sg74iXnpdMUKFyQO7oh1UWpkv23of8VCqtNYR6Zzmri5UY26tSFV7UkvNn1OxelqjIFbPDrN8RQm4/e40dzkdJxNv9OoSzrem1AnjACbua/cyjhFmBFAYGhC6+k1U0WAL3BwmSeNmO1W8j5gCrrWTPV3OeeFcMBOYhuTVC8T5AOIn4fZFqbDc7TAP9VCW6s2OXrJKbBuXaA63JYy3i71A2UU89P/bUU+mACT5ijEYW3FFSXfzE9nL9Q3b776+FpBMrhvoMA1PUCBEQ0okFBMClbYKRDGHsV20NhH7fhPdJY6T5YugkGUMbt7bfgpzqzHkh+rspEpU8vKeHngMR0Dq6RaMEPJThVBpJOQDAM3awhyP9d/HmQXsDtEfO97bkj8hUNQsq11ct7xQ9YT3KrPZELmxqEV17smbaxkZWC+mR5m2+RP170iU7HDVAZ10u62vUdTnFGq/iMdeGtjjWaZhOZrj+8G1NqDZ2N/llX4ehLswNKFxksU6Baw1N1bjQpFrin4+dvTV3MNc3/V5yoaqcD4rOc+TEe1ItbqZLOO0KqnIiQUh2hg7BnEmSGshjPAlwuUPE0mUKSAWhn6IHTm/MVOzQtqZ4Cq/HWfB8MrAJHwu7CZPWSF357z98G8m/PQCXYGIZEwNEGxrDBW45vXHnp3wfPOitN4urI3YhT2J0obhu1Lb5a8lYpUQdVzoEbvffL7nDZe9JeNrc1tnqsE1Tw==
+       type : 120
+       code_elements :
+        type_code : 147
+        p_codes : []
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1+
+         PROCEDURE MaFenêtre(gsChemin est une chaine, IDarchieDoc est un entier sur 8 octets = 0)
+         
+         
+         TT_SansNom.Zoom											= zoomAdapteLargeur
+         TT_SansNom.BarreOutilsVisible								= Faux
+         DocCourrierChargé est un CFichierChargé
+         
+         si IDarchieDoc > 0 ALORS 
+         	DocCourrierChargé.ChargeFichierParID(IDarchieDoc)
+         	SI DocCourrierChargé.GetCheminFichier() <> "" ALORS
+         		TT_SansNom	= DocCourrierChargé.ChemFichier
+         		gsChemin =  DocCourrierChargé.ChemFichier
+         		
+         	SINON 
+         		Info("Le fichier IDArchive : ("+ IDarchieDoc+") n'a pas été trouvé dans l'archive!")
+         	FIN
+         sinon
+         	SI gsChemin <> "" ALORS
+         		//	FEN_EditeurDocuments.Titre						= fExtraitChemin(gsChemin,fFichier)
+         		TT_SansNom										= gsChemin
+         		
+         		FI_WinDevFAA_RubanTT.BTN_WDFAA_Nouveau.Visible	= Faux
+         		FI_WinDevFAA_RubanTT.BTN_WDFAA_Ouvrir.Visible	= Faux
+         		FI_WinDevFAA_RubanTT.BTN_WDFAA_Save.Visible		= Faux
+         	SINON
+         		TT_SansNom.Ouvre("")
+         	FIN
+         FIN
+         
+         
+         fermerAvecSauvgarde, fermerSansSauvegarde est un booléen = (0,0)
+         
+      -
+        code : |1+
+         TT_SansNom.Modifié = 0
+        type : 14
+      -
+        code : |1+
+         // enregistrement du Document ?? trois fermeture forcée avec ou sans sauvegarde  est ferméture normale avec question de l'user 
+         
+         //2* fermeture sans sauvegarde
+         si fermerAvecSauvgarde = 1 ALORS
+         	sauvegardeFichier()
+         sinon
+         	//3* fermeture normal
+         	SI fermerSansSauvegarde ALORS
+         		//rein fermeture
+         	sinon //demande d'action à l’utilisateur
+         		SI TT_SansNom.Modifié = 1 ALORS
+         			//1 : &Enregistrer
+         			//2 : &Ne pas enregistrer
+         			//3 : &Annuler
+         			SELON Dialogue(<§?1216B90901C4A3FB§>)
+         				CAS 1 
+         					sauvegardeFichier()
+         					TT_SansNom.Ferme()
+         				CAS 2 
+         				CAS 3 
+         					RepriseSaisie(TT_SansNom)
+         			FIN
+         		SINON
+         		FIN
+         		RENVOYER gsChemin
+         	FIN
+         FIN
+         
+        type : 2
+ menu :
+  name : _Menu
+  identifier : 0x2216b3e3024b87c9
+  internal_properties : BQAAAAUAAADiNkh1O6bsUdojdCyc5rvMKOb4KGdCuKthEpeb9YgToXKniNhTa74qqTWW/kn9AHiAwpYRHxIfmwB4rUjWCTsHt96kYeogf6aF/P/qLr5YC+/q/4GecKHBIXzFYdqjswEetQud+3e/nTe5+xoit8ijZM2EBaVaXCH6Yfad
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+  procedures :
+   -
+     name : estModifié
+     procedure_id : 1506619178313827759
+     type_code : 14
+     code : |1+
+      procédure global estModifié()
+      
+      renvoyer TT_SansNom.Modifié
+      
+     type : 458752
+   -
+     name : sauvegardeFichier
+     procedure_id : 1507064149897158262
+     type_code : 14
+     code : |1-
+      procédure global sauvegardeFichier()
+      
+      SI IDarchieDoc > 0 // cas de fichier ouvert par IDArchivedoc ALORS
+      	TT_SansNom.Sauve(DocCourrierChargé.ChemFichier) // sauvegarde des modif vers le fichier local
+      	fichierCopie est un chaine = fExtraitChemin(gsChemin,fRépertoire+fFichier)+"(1)"+fExtraitChemin(gsChemin,fExtension)
+      	fCopieFichier(gsChemin,fichierCopie) // copie du fichier car le fichier ne peut être pas 
+      	DocCourrierChargé.ChemFichier = fichierCopie
+      	DocCourrierChargé.SauveFichierDansArchive("","","","","","","",1)  // les paramètre ne seront pas requis	
+      	fSupprime (fichierCopie ) // supression du fichier crée	
+      	TT_SansNom.modifié =0
+      SINON
+      	SI gsChemin = "" ALORS // cas d'un nouveau document
+      		gsChemin = fSélecteur(fRepExe(), "NouveauDocument.docx", ...
+      		"Sélectionner un fichier", ...
+      		"Fichier (*.docx)" + TAB + "*.docx"  + TAB + "*.*", "docx", fselCrée+fselExiste)
+      		TT_SansNom.Modifié =0
+      	SINON 
+      		TT_SansNom.Sauve(gsChemin)
+      		TT_SansNom.Modifié = 0
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : fermerFichier
+     procedure_id : 1507085702305558784
+     type_code : 14
+     code : |1+
+      procédure global fermerFichier(avecSauvegarde est un booléen = 0, sansSauvegarde est un booléen = 0 )
+      fermerSansSauvegarde  = sansSauvegarde
+      fermerAvecSauvgarde  = avecSauvegarde
+      //ferme(ParentObjet(MoiMême))
+      //TT_SansNom.Ferme()
+      
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x1216b3e300a387c9
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+ dialogs :
+  -
+    identifier : 0x1216b90901c4a3fb
+    internal_properties : BQAAAAUAAACh0PAuoqyADyEG+wGMbQCQQkxuv+pRb60n3XEmHNnoQZKP4Z5IlqlyO61G7L/PEEIpViH75ngWKtF60pPgfu0ZZ7qhlYf2T2NamaNN7Qt+nQ==
+    label :
+     fr-FR : "\"voulez-vous enregistrer le fichier modifié ? \""
+    image : {}
+    cancel_button : 2
+    buttons :
+     -
+       label :
+        fr-FR : "&Enregistrer"
+       image : {}
+       value : 1
+     -
+       label :
+        fr-FR : "&Ne pas enregistrer"
+       image : {}
+       value : 2
+     -
+       label :
+        fr-FR : "&Annuler"
+       image : {}
+       value : 3
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

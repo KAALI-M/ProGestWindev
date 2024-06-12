@@ -1,0 +1,210 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Connexion_OneDrive
+ major_version : 25
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Connexion_OneDrive
+ identifier : 0x21ffe86e18fb04f4
+ internal_properties : BQAAAAUAAABW829OZonvwEqv3f5HLIHtqFta01RA9Cpns7eqe72q+QztdE6zsQ/+I2vGdncBOBseNMD14++nOed6x36ebq3f0kFgmbElYF4NTpFVblGLHPPo48+adA/yGNRuxrd9lghXsrAx+AtZzxMZAk+g/spoO3AatUIzBpc8moXNBXQzExEufIO0D1yx4EFRoqysyCU6LhZ7eR3IjIXCbjPXjj7SiI1HGDfKqQdpVSGaGdSxXsICUDXJZUiHdriAbFUgXcsOi3q+4qE2ZbUV7XVdzSpd9QShfw/6xy154q69o3qkWJe/wtSGz6z1XHrhgbnA4wct5mVO85EnFheCg6Dm07M4eb2HZk+g10W9ra94wE6cc4AWM92JqsFCowCUt6nNMAaqsutq32EK7C3qVQsDe9onkm0M1bJwtQnGpvptWEzXMaUVqgDHr9L3OvN25P97l7clCPoCUqjRXiCndgEatlKtkAFHUF+vabZemvS2uN8G5wR7DLAQX2ms3NOyxZtS1jz7xZ7UMR/+yT+/ldcczR1If7fiYfNjjHcDkLAP4Uz9F/GuXX7dgVWPxNvEat++C8I5EOAv8KhsT1vE/bEHdgKdbV9cgU4FPKSeEfye/ANdOhBnt3I6DeSnJFjUaIW+a2OU+a9CkVEoKx4+ihx2GCxvYaodm2urFhB/iNUjDxxB0g==
+ controls :
+  -
+    name : HTM_Connexion
+    identifier : 0x21ffe87419021a31
+    internal_properties : BQAAAAUAAAAAc4w6VkcEoKoGYAzK9KqzKyU9egYAtip23o9fWkmmhYa650OEMWRYzkRiG8Ua9D6Bd9xyPCyuuHppvT3pdI1UCXM8AGwnUyu9X5hNk1/7xg6apDvWb/lLA3i9H4IjbFltI/ZQ7IjS+Yl11qNQ0SbeZNbhdfRJYu0Nv6m6jEko7jnn4uwUpxZfadoRCeS5LhX2MhDz06JeasmEWVwrikph2TSSVv2dhyCreZdyE+42b1NgouiITD1GW4GsWppgi+en17oInx77vQXwzgnt4AEvLPtzsubBMPGRwcjLaZIgB2BVqWo0N/oQjkEydl2J7OMgbr8TJw==
+    type : 23
+    code_elements :
+     type_code : 36
+     p_codes : []
+  -
+    name : SAI_SansNom1
+    identifier : 0x253ae4acc58d5489
+    internal_properties : BQAAAAUAAACwkL1yO1ZSEHFGuQs2Nw2GZN0DQltOFF1B3iamULoRazClFHa931FqgYA/z2TyFOhe5XVj/2wqNhMxyxPv8Osou5DcFIdESwaI3ZwCFQsuBxB4LhFPQrwYPc1QHBRdUR5emYpol5h82XJL+WmBDDCbtuptlLU61AMlGIwK/4RGF2sGycqFP22vdBEdEZXahCk1/lR/bYJxlcVORjGfUH2fsE3TqX3U9fMcy8a9OQoP6X3pYjnJmCAwSaC6I08T9WhNh+8H7DupI39US3itcC06XrBbYN+Dz5vllbW7EPOOuNoOZbRrg5nAn5KMMVWJ4t4U/wj1DvYBZamZH1otDGPKaYzQAHxYFKLWIVHnIAQZuA57OIkVMIDFbOumtqnKMUI8OsjOxFFdOGy0GofF1Lbpo4zIq/+OQo1KDY0zbRB/Ge8/209yCKT339qJVTj/g9yA8Ay2VhdX1s+vQxofh5YeO5Itocmf+GM5t7oM9Tq1eZQX/Am0eSTqPvGdorwFNhj8kyZf70cKD7EKCZ7SeHyBC5s7b6stN0UvlceAiw+lGIfTS6GvATHE688Bw/OdFJYTqlaWPJut9OyzVXXASpB1joc7iAKG62hNLTNQP9Rrvnludhru+Pmy2uYm5qlB7aeb9KM0GQRnKuUhycujbhB+923VZHW7BDVoAsOAyfwh2gRC3U2v7kaS6TSVrBxGxSbEfrrprGqvDwaBeiAJ9JRLQG38VOT5Ne5U/yZGaUpWrpn1ljQzkZGmTnfJ+lObpWDLLo1ekiQVPGueek5lSByDqV2zutordsQd1oqaPoHqkU73THYODMilJVJOJkbY2WRcCH50yAAh35CahPel92hh7m4VezPodgg6eflHQYrhLLK8yp5PmXiFTPDY9nkfYmlynytdEnMk83FPtx0JzXTjqzHDq3EEjQ5+FOIgs+nJRbpt35ycm2L9YyUxPBTZFquAP5T8lrP6/vzyLPf6cvDWiU2pueGDBicHoBU3w9jt15er4Q8WOtSIuKo170AfTCmq2W2jgqcyr528zLOZCcEl5COQaAVEKfLl5C2KUGLulNDbQjWk8lmY
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : BTN_SansNom1
+    identifier : 0x233192c8305891b6
+    internal_properties : BQAAAAUAAADPyYc2dMSmFjdALWiq5u1uLk9vyIbCDNPqfroLiX1MSPHC/Y9YKwZ2DcIo2Fp94yjMQ3d6YGIZdtc2HMANfVaOrFV4tuWCZUyosZnfWhlKerXihjYp6X65WwzXar4tI032L8EJr+7kK/K0akQwVZ+F0QVeb6FXen3COgTFbOAxY1BvRHUgxpP76Ozm0jzL5HnK0zQej5DMLpLNKOSpsProDRJ484B1HZsmLCvHBI1tU1YnVoxpuFkNCD1Wtg1ljpfuVAjsQrNKavJSqAEe/eh5ybYJUmHVrfdxO1DzoXURrM6wIQh/sDfr2VAYN+LBfQtVwQ207eHOtpc2CHbC5arHGSN8O2T/iKzDt7h3vXX9pwFHKeFzWgX6HZHGqiMFUrxYrdOnx3shQx+oyxIp+MOwL0MzStw2mSdbWa9joqPJTaV9vZwcAwk5ng0eni+1Dkmq3RZp7fXMbaKjtHv0f4xRnwQDFMPs/pi90rb0ItKxTYJ50hLFHKcLezQeyz0y6t+W/b+vuLB35NOmNDzEyLi8NTpb9n7hjeegTYXDLz318Zej3V5Q7dDe7dzoAHHYPtc7hU3TzhhQX8ienTol+81VyB9IiLiqIyTyUdxvozeMtaj0BkdEeJLER/S71oA460GaBsGafj6B5Ot+0k80CR/dzAoKeW0ZlNMav5gssuSeYA0pXVQBKm+RIgo/bBsBLeW5knPDs7hJtXM3dphgsD/YGbyilQ==
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         SAI_SansNom1 = HTM_Connexion..Valeur
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BQAAAAUAAADKsJlg2Ltpl5r+Zc57ji8hPYDMiS+bliLE2xo0GExCKcZS4g8MvJbO2unxMH/Ew39ndfsVCH3lk9Ucyyb/y6CvEtFTeSEEVgWC9VqHT5smVjYSsTm3xSlJws4D0hDxpd8sOBfyevI2eVq/TrbRbp7AxCwyQeebeJ8Vql3El3wPHveQ0bNOFXtUApIe9yo9j3SOLpbdRFl1JQiYphbUcFWvVifGYP6UzeQeq8zpvBmm+2wfsFD1bc0OmaE1khBHvQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : BQAAAAUAAABqPQh6HC8RxAVkp2SqPYLuZrfVhd+1KX4lx22hIT8uqEpE6yP7Sbc2rmVqdmL816EWzXOkEe9ijOtYwchZKAfpy3B1cNqhpJgsnbUs
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      PROCEDURE MaFenêtre(Connect est une booléen =1 )
+      
+      MaFenêtre..ValeurRenvoyée = Faux
+      
+      gbAnalyseEnCours est un booleen = faux
+      
+      // Vérifie que les paramètres de l'application sont renseignés
+      SI COL_OneDrive.gclClientOneDrive.sClientID="" _OU_ COL_OneDrive.gclClientOneDrive.sSecretKey="" ALORS
+      	Erreur("Vous devez renseigner les paramètres de votre application OneDrive ")
+      //	ferme()
+      FIN
+   -
+     code : |1+
+      // Sinon, lance la procédure d'identification et d'autorisation d'accès
+      si Connect =1 ALORS
+      	
+      	HTM_Connexion = COL_OneDrive.gclClientOneDrive.Connexion_GenereURI()
+      
+      	// Cette procédure attend que la connexion à l'API soit effective
+      sinon
+      	HTM_Connexion= COL_OneDrive.gclClientOneDrive.Deconnexion_GenereURI() 	
+      	
+      FIN
+      
+      	AttenteFinAuthentification()
+      
+     type : 34
+   -
+     type : 230
+     enabled : false
+  procedures :
+   -
+     name : LireURLEnCours
+     procedure_id : 1297016399101754534
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] LireURLEnCours ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	variant : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE LireURLEnCours()
+      
+      renvoyer HTM_Connexion..Valeur
+      
+     type : 458752
+   -
+     name : ValideConnexion
+     procedure_id : 1297016454936342288
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //ValideConnexion ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE ValideConnexion()
+      Ferme(FEN_Connexion_OneDrive,1) // fermer la fenêtre de connexion est renvoyer 1
+      
+      
+      
+     type : 458752
+   -
+     name : AttenteFinAuthentification
+     internal_properties : BQAAAAUAAAA4fd0q/fH29dh1Il++iH2lQUd74W8Xge/LvajzGBFfinf4oap2/HQs3tYsyqD7We26BG6Kkx9frI9sfntZ8MA5VoJBg4twZeKk/Te5d0EEWuDjp2EMIhIEcbQbKrjz0/120vK56E7AhMx1AEmm2xY7wMKVOPC0fHdRALolRg5T2nywsbY=
+     procedure_id : 1297145171120192505
+     type_code : 14
+     code : |1+
+      // Procédure automatique :
+      // La procédure est exécutée manuellement, lors d'un appel dans le code
+      // Elle sera répétée en boucle, en attendant 1 seconde entre chaque appel
+      // Chaque appel suivant exécute une seule fois la procédure, sans timer
+      // 
+      PROCEDURE AttenteFinAuthentification()
+      
+      SI gbAnalyseEnCours ALORS RETOUR
+      gbAnalyseEnCours = Vrai
+      ActualiseAffichageUrl() //actulaise l'affichage du lien dans la fentre de connexion 
+      
+      Si connect = 1 Alors  // demande de connexion
+      
+      	SI COL_OneDrive.gclClientOneDrive.Connexion_bAnalyseURIRetour(ExécuteThreadPrincipal(LireURLEnCours)) ALORS
+      		FinAutomatismeProcédure()
+      		ExécuteThreadPrincipal(ValideConnexion)
+      	FIN
+      Sinon  //on demande de déconnexion
+      	SI COL_OneDrive.gclClientOneDrive.Deconnexion_bAnalyseURIRetour(ExécuteThreadPrincipal(LireURLEnCours)) ALORS
+      		FinAutomatismeProcédure()
+      		ExécuteThreadPrincipal(ValideConnexion)
+      	FIN
+      FIN
+      
+      
+      FIN:
+      gbAnalyseEnCours = Faux
+     type : 458752
+   -
+     name : ActualiseAffichageUrl
+     procedure_id : 1537955131958322257
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // ActualiseAffichageUrl ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure ActualiseAffichageUrl()
+      SAI_SansNom1 = HTM_Connexion..Valeur
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x11ffe86404d3dbc1
+  internal_properties : BQAAAAUAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

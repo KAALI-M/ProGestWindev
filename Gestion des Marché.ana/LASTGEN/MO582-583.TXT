@@ -1,0 +1,3 @@
+//MO582-583.TXT ANA00582 TO ANA00583
+Projet		TAR	570	nouvelle taille enregistrement : 570
+Projet	ImpDélaisDansOSetPv	RUB+		ImpDélaisDansOSetPv est une nouvelle rubrique

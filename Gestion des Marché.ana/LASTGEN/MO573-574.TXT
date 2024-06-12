@@ -1,0 +1,3 @@
+//MO573-574.TXT ANA00573 TO ANA00574
+EntitésOrg		TAR	524	nouvelle taille enregistrement : 524
+EntitésOrg	TypePays	RUB-		la rubrique TypePays est supprimée

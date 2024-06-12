@@ -1,0 +1,65 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clProjet
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x130cc40f13d23592
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clProjet est une Classe
+      hérite de Mprojet
+      public constant 
+      Intervenant est un clIntervenantProjet
+      MaitreOuvrage est un clMaitreOuvrageProjet
+      titulaire est un clTitulaire
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1372687555477321106
+     type_code : 27
+     code : |1-
+      procédure Constructeur()
+      intervenant.constructeur()
+      MaitreOuvrage.Constructeur()
+      titulaire.Constructeur()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1372687555477386642
+     type_code : 28
+     code : |1-
+      procédure Destructeur()
+     type : 655360
+   -
+     name : ChercheMaitreOuvrage
+     procedure_id : 1372688350046456273
+     type_code : 12
+     code : |1+
+      procédure ChercheMaitreOuvrage(IDprojet est un entier , DateRef est une date ="" )
+      this.ChercheMaitreOuvrage(IDprojet , DateRef)
+      Intervenant.ChercheIntervenantProjet(IDprojet,DateRef)
+      MaitreOuvrage.ChercheMaitreOuvrage(IDprojet,DateRef)
+      titulaire.ChercheTitulaire(IDprojet,DateRef)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x130cc40a13cc216e
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

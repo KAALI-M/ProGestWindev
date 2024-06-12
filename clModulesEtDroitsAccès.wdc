@@ -1,0 +1,80 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clModulesEtDroitsAccès
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x130026eb080f9ac8
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clModulesEtDroitsAccès est une Classe
+      herite de MConfigurationDroitsAccès
+      herite de MModules
+      tabModulesProjet est un tableau dynamique de stModule
+      fin
+      
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1369137077615106760
+     type_code : 27
+     code : |1+
+      procédure Constructeur()
+      VariableRAZ(tabModulesProjet)
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1369137077615172296
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : RécupèreModulesProjet
+     procedure_id : 1369137167809571907
+     type_code : 12
+     code : |1+
+      procédure RécupèreModulesProjet()
+      Module est une stModule
+      NomFenêtre est une chaîne = EnumèreElément(enumFenêtre+enumFenêtreInterne)
+      
+      // Parcours de toutes les fenêtres
+      TANTQUE NomFenêtre <> ""
+      	Module.nom = NomFenêtre 
+      	si fRepExiste(fRepParent(fRepExe())+fSep()+NomFenêtre+".wdw") ALORS
+      		
+      		ImageFenêtre("C:\Mes Projets\ProGest\FI_Archive.wdw",Module.image)
+      		
+      	FIN
+      	
+      		
+      	tabModulesProjet.Ajoute(Module)
+      	
+      	// Passage à la fenêtre suivante
+      	NomFenêtre = EnumèreElément()
+      FIN
+      
+      renvoyer tabModulesProjet
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1300236f07d90156
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

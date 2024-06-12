@@ -1,0 +1,3 @@
+//MO607-608.TXT ANA00607 TO ANA00608
+Courriers		TAR	671	nouvelle taille enregistrement : 671
+Courriers	EstUnProjetRéponse	CNW	Booléen$Chaîne	la rubrique EstUnProjetRéponse a pour nouveau type Booléen

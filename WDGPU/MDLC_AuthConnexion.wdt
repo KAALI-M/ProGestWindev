@@ -1,0 +1,261 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MDLC_AuthConnexion
+ major_version : 25
+ minor_version : 0
+ type : 20
+ description : ""
+ subtype : 0
+window :
+ name : MDLC_AuthConnexion
+ identifier : 0x2b180b6e37cec38c
+ internal_properties : BQAAAAUAAAAs+vp3PQA8OjOQTJ+X8isg/J9YfaURQ2/5FThsJa/Kt4RDzKJ9RTJk7KOC9MQqiQEtrEOZmmIAjderw3K+U6zJID6hcy+9YUXMXM73YcILT5PVM+V69ZP2h/v3cyEDpmhiTjEhTDy903CFc1T+YqSeyvLbgSd9JUk+2B6GfJr1UVPieOyGblKVC4WMjCn5xtaQA/e+/UO6o1YYEJp0lez+gUA5MWkWJVMtOvIbxYUuZ2mLcjgh8Ir6aNm21uE6cqDB8ln+/8IyrJ7cnpVSI6AS4NHG2mLf6L2DWPCbj7LyOfQ9ieodZjoH6pnEDkampKmD4rDBFyQ10pUpkulvRKUwRddX24AatyN3T4ze36PIpmoqg73JpOvMCSco91xuDpViMyiPbzE8Nh+BjQKxz+Av5vrUTseu9fjekQOFPEJOV8qWvnPqJ5vkBWkFkxuGSUZCG/fCAmlcDzmGGNIPih6GAYB4G2NzGWpbt3Ds7Jg0+uaEH6oecfQK+tlWsRfMWhpD+v4COuny78oUwWoUhhov/biYLA76bpKGuv53AEcvZds8NUCel97h308vQtKWHwqr0Nt1xuUJuv5UNFeWFgPdaJRXUIwR6HOCahVDaBDUT7sldRUtFbKe4kG1Ny20NufnDDzKlSvnBltmzTEnWA4U3Y+EZ+NXzAEleHfxS8mzM0F3zMGZRv88Io6Oe8WqE/yeOJDImAQuEA9x2HqVigqzn3EMPxyuWZQkfsd5S9nv9LIYAU2k0CE6zEvSkiA8q2xcKrRItQ7VdrK8jglm2OhiqE42nPfdtdrPHzvIV9A3oHNYP6UE2rBXfEtHpgcPdfA1BZmldIlM6fwsHDogFMPG1LGf1Y87seykVaRzJ33ALyaPmt0w1uhUMPsKepCs/fgTQlG5bD6iSeTSEaX/pPZW0gaUp6i4+fGcC1YerWuGDcf6vAhv3goGXT8CTcTSXGcloIX5SyNBWAgCuXFrY/UlTSOPQRsNOLX+t7Sbna0PkDjIMbjfYu56j1xjAtYx+rsy8+Exi2A4P3Rw4MmYdKD1hDhEqw6vgJ1RT5OWYP40ilYVAICMkfVV0VmG7vKE9EJGSPclpurXb/TnJlW2JoYCuCQPmF/LY3NKI3/DXZqiP7GYLsEf6YMJhnbxrqOxjxTXf1HGsJUoHIUY0h0An6ubHTOSIThYrw==
+ controls :
+  -
+    name : MDLC_AuthConnexion
+    identifier : 0x2b180b6e37cfc38c
+    internal_properties : BQAAAAUAAABl7tK/5B3nTkq9vq2jV859syxfiohm37VpO3e6b75F3vRzuey0MV/rWv5KNEx9AwoFWuiRZH91gtXVBZfwMj19dJqAd6AH1dg+S97oy43ZqHITTjLv6yhqGJ4QVIDpboSRxKclQCwenJcB950RJn5TEMZ66CwlMGCL+MuHOQHyBcaSiviPwzfPPNnX6y85E2NbD3Thj3Z+SvVqFlw6yeRT0hYifdzTLM1di3OgsCXAFVo4J4xyhgyovm6P8NnBujUzsHPWunUr9wiOq2uVdNKhYj7Pzr6tmOCLPfmbElNDgnvr09k1Kzg1wi5z9NvQBEkqP7Os4pruwNkAzrCm39OFpvcYz2MRhzSIQhSVcwVBfLnhiEojEmMt/Y9F/F8OZNMHNmS0KqAMJ37aXyVe6H4elEHXuBMUQEH/EMkfJpciBQuFfAIbOUgAO9qkT1rT1+UzQiYqRCVqP4bV3xncN3xlOvi95imkljMFJPHLMlufHI5AqYDakj4hYJb9cEn/SU2gQWiovny1zqcFjPaFclUZOPIvJMzr6tedMOl/5Ot6gEq01F1AjBkxjeXz3smetwSeseMgwgHMIcKuT1PwwIdjq6lhUk7rsVGFAXNUG3rM7KOilemQaA6VX+VY3Os48w8cxoxYUqxyJlON7YrHNKTgeuHl5kKRT+W5CNK3bshVIvhKmXl2XcQupGjX3OC/+Iae/QZZ7B+6JTbfFWBvWEWHiavIyux72+QHxdbcnNB6weQbURmrVPe3q5LaVWKc7OPChlRCjaM80b1MVvObzxV7IymV/0TjyRcLhlZNBUNCBEdg3tM1IHMrSexJ6yEp6f7tacTcDUsyEeOgb7PUWlDesorJDDTcBi+0Mxlibc9/Y+SkpbAqwfRrLRSnJ/Ts2DIfMW0vKlYvVTofCp6AWdjvY0ZPE8AvbE0MPQON4oAecOE=
+    controls :
+     -
+       name : DISP_AuthConnexion
+       identifier : 0x2b180b6e37d0c38c
+       internal_properties : BQAAAAUAAAAJP/XZJCUANOaaHeeM6F41bW9UUP7cUTsYI3DZ0jON8Ybr7I1dfa6V9WKJh39JJseYm60ao/0IW2f3cPP1k+6I2o9WJxdXfRTXniVjmORJykHcqP8tV+eoHQHEQqsjNBw+J2Ip7CnI/9djUokrA66QHVFaWMKBnylOcSMv4nt/z7JGxl6lB3G0PE74X5p1OnMrcDwWPZf6CUs5h76xznmTUxnSXYIccq1dLFXyR6m0ujeu7YALxVkZImmQqgR6KkU9WBZL55tWzXydx+R7b1giO4TC0Pf40thOFGxE8zx67zE914PDeba3oemp259pis8HPUtw/mqF8xsqJx2cvCz5T25G7/TiLdQ5VHHFzfQGOGHJESbKaYVZLfn2An/VbUxsXZqmADYub5pauqf968JXD7+KIkO1whPbO8AHApIoGWyaF2UKFj8AvPvpjqp3thd42kJPQTuqRjJ+lkGNvGagZnkNGHoiZwI7jUexy0pIY72o2YwMsYi9fOq1SsAHGJfkNxcytUfmZxL3ACQqS6JdlY6f9/5JCgaepc8PzRoS8ZcR66lMdfSJoJW1kuxErmzGQnruK2ldVk7MwWOEBr0FNzad8+k3J3SyGoMWtNxUhYBQRDS1xTVxoDP1GchML0Ftozl7oiAuC3/qpNQziuUQ1/pv1nPimJsBnytvu0L9Ld4VcJw0P5/tyujGHiYrRq90vc2cEADTB95ghTHKJXBeZW/g0FmCIpfh5lDQu4QR1Iys0miEyz8d23Unj4BsnJoxR+d8BNPNBH8oNq9datYjz9JFbZ4tmyNwzUjftTlSx6DHAIITfmxwRE0Zr7T3BGGeruXPuujZJUv/2wK+yA1Mzbv1HXSONXD9p03itbx8GHqCXT/wrQqP2NDL/oB20k+/VD4LFp7VOgRe3kSJmaq3twZjCd5I2vfkK4dedHPuOKJxNZIUsJC6K3Do3L5EzGFZ2zPiVJvquB0ce+DE068STVn20JJzBmhYxs9EsIaPNpLpLanzr9Wuc7WM5Kv8E3nyZsu1DDA33OI4IGmP4pOesxTkCF+js2LygJwFx8htinwv61GbXrGc433SYU6X6Sroz1/Rmm1sMyvyhIPlB3rdj0wO3PmxNkprYsaJmftt+DNrvcC6/Nu+FcSpy5B0WGkXNMUizBEg5xyZgUPVAeNjKPzZo5B2xeiemla43dKVU7+rykvbJc5CaOM4CcB4mqe4JBYe4E4OmkTapfcOnBpZwbbwAfQd2BkSMHuMfWdLr2M6f3S3WnPiONrKzZwvylzOaLBU/mg0XtF65Um6WhB+D5IAuDat7RPJ5Ql0atVmD+CNTB5VO92MNZqFjcR2n4kchOrRCTAZ0c3KrlYBcTeeArB3kaULsCSAiF1ns5OXoQlf+UbYEgq2N5F2Sv313saGfgvTKK8mxdqo+WOA4yoz9T912l9LnTY8IXSwue3K+NmmuD0rCzL7Rs1aQEqnHg2yjTGQxcvgf8qz6FKG
+       cells :
+        -
+          internal_properties : BQAAAAUAAADY3aQ8MrtALrt8llhQJmxPeHIxNS3dvRxfEB43TRN/hZ2bsq/tkhLzy+dJr0g2D9+wyKydJu6ye4y1B1G0NRbeOzVfAzJiX+3EwwQWYNycBDGKHp9kUhZ8EqEbp+9N1gIGOcsDHyg7s2ui6ji1o6GM7km918tAMjqVT2fTvF/grQigShPFN2LSKA8ahDPGoHRNyQ==
+          controls :
+           -
+             name : BTN_Google
+             identifier : 0x2b180b6e37d2c38c
+             internal_properties : BQAAAAUAAAA3sL7JfXNDqNMHS96WQ59QWUAgDFeu0+dxH2JDnOj38+xqvj7FivMftORm9FESNAIOY0CTdIys7LRZGMmvKw83nZmeFAmpO/gF2a+tIKMA6PQvk4BRLb36ZNXdj4hDYlHKjNXcvbtHupM/6zr6QVjj4QrEHdBU3jYHgAQPx9YvN8VM0/7vLuCZ6//gTGWl4T+ifdjB1Q9K3GtjjDMu7ABnGNEwQz9N3MAVAHQjIQZlQuh7BZuZPNjf0JqAFMhGBc2l0ekC6ahN8/7kzGamEBtO5bLn0ZyhdiAyNTfeyaD4Jp0f5CgGS549Ldu9Rz+HYlI1c5JQC9rzbs1eleNsnX4Lp6yn6Jj9A72H84zXZyU94Zd7/mKHI6gFEZZk0SM8YALWoI1qFGhvBrb4T5tD1ntK8lQ27yDIg9G96sqD6EW8nWbyk2pZo3kxNtsWwdOXCSWAs3kSIr0tP7kW+g0HiLkUCYn9Wo4+VawFXJc87ZvfTnH01Kr66Hi12rC8oRBw1+pH9HcnHqRO56FzE5rTa8+IrKGxwcLoCYMiCQ/ldc9QDZUvGf3vbgAecwtlWS61IOmKT921tD7t81knCts3U5bb3tMzZISNXIzBYJGkUXzdzQ0H0mxXx+JB/4uxngqKlHgudAtpXyTwgPAZYf/Kzkur0s1pDOG5lC4AaW5Fl3mCEAiA+Uzp9hyOA8sEyws7kKxmTKkM6vBk91P7Wy2bsMA2CT/jV6wiLLTBVcgKnHIQN8qz5VvhELsXKUlm0kvDYcr0Gs2NGzIRtXK6P5b2y88dIXD5KHeys/77goRUf1GqeDlj5xYcJTO0suH28mLS2uXqHRKtqph8Cqb9etWPANCwhzV2wZa2UqOSRZnR7IBmZsW0vKhrptGEZ5i5b+VgYceSyD5hoKmjYlATEjNyBRhW6hfR0SJMq974cCilQ7+/iREkW9NtJaZGQeIA1ZS1tB1ab2fyyulF+HtJyv7sAmhD2u9L+ruo98AVLPmyNu93C1yT1AwjdhYPZ/g+eeOUs8sfN2H+X0JcfDEnbmFfHN5BnQQgyiMn7huOWHxw5M9dom9P4l2PZCbN5L0duj3BYLMmKNCT6wanVTYsB25IdAFtGDEoLw9ViF/SaFL6TKxzTvnBildltas0KUTSezz8MuqqYGK7/6V/wcFt0hVUfkPsT/yRzBSefqg6wPS7rG2KCNYBg/KQlIOTulMLKbautlkGPkAh6/H4a2EEE8MEo3t9TNiL12fuMoeJnrGyq0IOI0DyDCemu0Qawhq+6B+kqsZXAeGhMHcYV9NwzF10VkDtwfPvY3Ir5KsD3biJvp0t/y6zNiNvK75j416GlAIAZUxOplVZ6pG89ktW49DOI+C8yrqr3yS8BIB+F7jYTO1KvaIGwbUJcBvv7TZV5UEsZHzP66B+lXInayHIj3JYG8QhqRVilmwNZtiNG3WHrQFxqrQZwkrFKcjsetMOMYm9BtB+P2kOLDb6oi3OOmBAvQAZbxGif4WQA3EIQW75uk3G5pzWwyCJL0yguIGChMU4rLhtuslHDYZDfJ9PSBGSDK+edtTbaAxIPqWIFzFiupE2i33H5hcKgoUK1aTTmi2bmIq2IEtP6LM=
+             type : 4
+             code_elements :
+              type_code : 4
+              p_codes :
+               -
+                 code : |1-
+                  moimeme..Visible = (GPU_nAuthLogin(gpwGoogle) <> 0)
+                 type : 14
+               -
+                 code : |1-
+                  GPU_OuvreAuthLogin(moimeme, gpwGoogle)
+                 type : 18
+               -
+                 type : 161
+                 enabled : false
+        -
+          internal_properties : BQAAAAUAAABYXSS8sjvArjv8FtjQpuzP+PKxta1dPZzfkJ63zZP/BR0bMi9tEpJzS2fJL8i2j18wSCwdpm4y+ww1h9E0tRbeOzVfAzJiX+3EQ4SW4FwchLEKnh/k0pb8kiGbJ2/NVoKGuUuDn6i7M+siarg1IyEMbsk9V0vAsroVz+dTPN9gLYggypNFt+JSqI+aBLNGIPTNSQ==
+          controls :
+           -
+             name : BTN_Facebook
+             identifier : 0x2b180b6e37d4c38c
+             internal_properties : BQAAAAUAAABG67PSlIGw6JtzXwUnpzN7hR0Yza7G7i7dNb3wiuzAAZi9VEoSuEjHrH6V8xBY6Opye5bI+eI+0+IagpAKdEcFk1/X4u8JYQPium1/Md7EnjIidrW9KRdqnqm91CNVELRYMdlWj51cy1Gxr/EtEmb4Y1LlGnRRP9UZyDxvGKpwQO71OoW5spu004n36WZSuIzR/5+AH3ucyaVnBINMASPaGyIpJ7lgvxI/3OIxo2eYX65BSyO0HUjTInY+VFG06FmWpmT3hrLMl5+T1qenm4TPAryLH3es+//9czZ+McqGmOIux0p1gm0nl8/XQfnWIiSHLF66QK8xKk11+nFpT5R5xNnoO7S54J3JTaLqexNfURUfSaJxA6FVDFePuDs7vvx0OE7DLQJIJtKqUZ5FQPYWVawgJlB1OredeY7Jus+FgQshtLrjrK20w+VPYZ/rsK38ucTdQX/qDBfIS8Zixxc7SycxjQTx+R42WZWpLWgU1NW2X1sJ/5IjEBR8twNo1p0cFyXQmXXFM1aWTbMB2YF+BIGzm0nv1CB96SKq+GUx8VJDPoOAM4iWsi8cvfFaiTvZwOKEEadNqoVqFFQxGy7YP0cqttw7mHrlf7v4DRYB0r0+6J25viNAh0I6CMxZZ8vfrYossueO5CMws1DYYfKNjkY2WR7cB9j1UMn7nnxhwxPQDJxL2VKuYAZEiGR3YcndaciTqjoEEmM3PFUiKoTvIlYIV0/UZi/v8AW5H3WHEeWsJJThJpUlShO94mjZ6QVO0Ymb9dsT6T+C1QTPq6HCNJjSCqEfl9CkuuRgcL7VtwvrBY/EmShTanCny6KboblhbevaT/gXf7n5nUTSxD9vuuHoSVoYvrNd11wadud7XO5B1aX+86ImNQzxIro3BQY7jeZH0Dq2rg3SPTd7Od4oio1R/s2z68wz9BsRVM5vuEedJRUqjFdPCl3ZEtB9YbnUJw7wziXbQib9vhMdoKeeKqAnPEVlgE5q5O0BuLmet2p8WMNsw6yUB9O9SQWXfSfn2NmCUSTAkfgvegVeTrCA+aBsUpSM78dDCEzfCxojS5UCeHUdNmIfqfB6Obw9QpTeQzSevo8tb41Q6wAUaS5vAmMPxtKJHB1Ji2UfdL8kWOm61N6Z0jKR/aYoKKrdAcmtVA1f9Gyr/BUCAmLjHADcV0DzSi7bgNa/s+2jNvrj+3fXNnwkZctAShT8lC+cqCIYUsy6BasB1WGGDDyeLsTx9SxdnjIjlG3+r2Xh+oxNj6cjPDcC89e8mFqO9NI2otikp9Ik0mBVBUbyZLfxxCSGiPSfkMNt+XHi8FS26WyS769gYh0eZQB70hD5TS/gF1fuhYB6nTIMB4LlIWg7XWG4uNCpxFXDG/wWdaxRCpTbY+l+yWqjEApZYjOVXbUdM/VKzAyGIQAbbE7tY14VL//QgdPpq5KfsrcxVff12tjCt87ysWTJrP17f/zyfC9z2xSDeQvWmQxSjyfb4oCNc7kkFr7tqJzNE7scpWJkUd3USeT7P4YfYiGIWT7SYCr6YxUDYoFV+SQghrzladAg7s4AvNIVloWeW9K6ikYOkI+m/kN7N3RP+VFIxIUuR6qcdoMrMaNrljOwctyr8jp1ZCRCeLHN29ZvNL702iqFD0Op
+             type : 4
+             code_elements :
+              type_code : 4
+              p_codes :
+               -
+                 code : |1-
+                  MoiMême..Visible = (GPU_nAuthLogin(gpwFacebook) <> 0)
+                 type : 14
+               -
+                 code : |1-
+                  GPU_OuvreAuthLogin(MoiMême, gpwFacebook)
+                 type : 18
+               -
+                 type : 161
+                 enabled : false
+        -
+          internal_properties : BQAAAAUAAADvgrujy8z5sTjNJ8khDwf2syt4DNZGnv/scfucmkCquMhg7QJ2K/vS6NguAPHP9lYzSRMcp28z+g02mNI1tolGt6fX++CwEec4oqV9uUMtk6IFhybj05X9kyKcJm7OV4GHukSadpGiGIyDyx9cDD4vMxbyIn6VjZc2oMiyU6gZZEFZ8/rsyPFjuZCbO+o/KYN6/g==
+          controls :
+           -
+             name : BTN_Microsoft
+             identifier : 0x2b180b6e37d6c38c
+             internal_properties : BQAAAAUAAABCr+Y9IEMKxcFq8qWxESfvFXcvU5VYgWfs7WPWET1lcbMEapx2gKQTB4z+nPBaNt5zIcmOAj0RmVEH4FQcnHiChXVqRdvIXt5zouE1O8HcLb2ihRRFMW6Ytlo4eKvB5LPSsvHbkzmowll5GjS3Z9/bVcLVMLW50T6uR5t5inq4/G3wuxqsAZL8X9tZDN2E2gHl7y6WraY9KkcfUckzPMSFj93VrR1x2ln4/HanV0CtDAlRCd94xAQ2EvZWW6mZFL8LJdMnJb8P+PKvKqbdZKBOZsKJOkTCM79kTzfmfqVFR5QKECj+bBGA6rc1MPDlLo0rYnCH1E2vEUV5IZd6fb3F59VYIFJQ/9UaiOfO+Kbn2C5r7ND7Pi/kDlZ79+EpXDqMEAp3Kxt5Qmwbhefi6u0g9SGVbsE2ik9UpmiE8c0aDbk1D57urAK05p6iW/eu/zlMHOE8cLCTELYSkTiXH35TfAHlsUUS8VtdvWBj9K955RfPJhPY0UFO7iI1sgt/5R0Yd0DU978ejo2QXoFIbTMmEjbVx7SqJyp8bIZl+uRTt+4qb5uvjsUlpQ0UreW4NmYvr/8iDSGYE6rNDePcssZG2RrIhNW6fyk+Jo4si6mPbL9myBUHCscATm5Ggs1hnVIrGt2nJfNd0yCSKCtclRkKKdrg2TRF38xvgF6CRtWuqVjoJey1HUJkqUJL3lXqn+cRwLX8kbCP/5An6e1TBDI40mwn4vxrQA/acpKSyUg5zgk5FMrdJ9ELgp81hHutR/iQktjRl8+/Tsd6Ggygw7s1v1mzOLxnCVXnxxCJIFgsECX1mTjUHCQnm0nRPUuOrbk7I3hNjD/JK4KI8AjYGlTOXjqp6dbQ2KJ5wrFvW3iiYsB/yzJ8V3YK7V+ORTfOhS6Sq5XOF0bURi5mnI+pSWmTte68FhGcc6lIY3tWP9PBwq8r51p/mduK1WUCe4RSrVYCG4WjyT55utTcLn+jxyAKN3erGVzrHwCsLUrlS8XwV5GwMHPA4UtdF6Zbb80qgG4WaeeJKgaRBmS/hMIHEW4p8dyfWPyLg0KWCdr38MsHRoTfoCMplJU182WmY3rVyYhdjepugfr2q7Ozu8AZheGHtHbp58GlPFjSXpcIGMbW+/CCL10JTN01Enkv0YfPqePy0OqV7OJYgAhDkRgNWva5xkmzBHKQ6PcF2Fn1xDAGg9LQkoWPIAOPbeylP0IkZUaaD0SFRTKrwZrwrKJoWPklvpPhalhenx4L49Zij3m8YWMEbNwoNnbkZYGs0YR/dvhC8TH0ka1T/5LVxetYwLLm88OnqO9SozNq8kGx9mhVhq8CR1lTJ6zXEd6GGwyA9Px49OjikasH1q5/EvusvcQ67pppMkurNGLIOcDX8dxkHhY+Re/78qZ/VBRwJ49HvEsa3I+H+e1shjyHvIKQsMwp5/NVwXfQKVKRDxD2ny6P5iW7n2VnFwePSpsBHs1OCftHSNoWMsAzDi6KrRPUEanlVyA6wM0vdksUmtUsIuGrhCADx3J39o+bbs7/iEbHsQrEXlapG+n807WRdlNY9lf0wGx7SHI0d5jwb54nT4FvIwrm8j3A2EhTP2gcz16cwBrq78uH64uFZ2fXL95RpGhgFbMKKHZH8S9kr7c=
+             type : 4
+             code_elements :
+              type_code : 4
+              p_codes :
+               -
+                 code : |1-
+                  MoiMême..Visible = (GPU_nAuthLogin(gpwMicrosoft) <> 0)
+                 type : 14
+               -
+                 code : |1-
+                  GPU_OuvreAuthLogin(MoiMême, gpwMicrosoft)
+                 type : 18
+               -
+                 type : 161
+                 enabled : false
+        -
+          internal_properties : BQAAAAUAAAAWi9IK4OlWJL1CuE6mlJJ5BphvE8Nzm4LhduDlk0lNZ2P5kMXL6DjJ7c0jBfbUhWEm3oIrrGRA4Tb7sW/ie0ySG1nPA04GM908FcpI3i5CXrdMVOkuiEAmyBeBOXnTSPAUz1GNgY6lHYGIwGKfyftqzK8bCYWOhIw7pc21Xr0CU67OeGV3RXTkPhUQjgUU0iqDhw==
+          controls :
+           -
+             name : BTN_Salesforce
+             identifier : 0x2b180b6e37dac38c
+             internal_properties : BQAAAAUAAABKoQpoDE/eFHMRoDjTrdG+j+3mWzaJcKk9HGuDYEJ6uoOyvSH3LJuMhObh84dqBwKf278ROx+s1g8gStPadRcu+8v8eHVhthlxpt52tIBVXZbP6gWcDJMOLS4hSH+31fu3xpwSfCfGK4WOOU04rhePGQNAUoirCHWgA+KLlchlqMYrD7FZ/V0PhIhlgarTK30z8KfWj2rGiXnqvKpE647xX6nVhquq4LFUb2jqm9nVYowGT9kigde2PS35C0I/Zt91ehxx5URZKRjrk1XO0UVpGbkpeMzZA0mNwC3o15JmaguHG+Rc6NYw0t3Zd+7fg/rIJYJboSNQsGymvneDb1piFLm/Ks7R+ET3tDPecuDBrD8HshFMYg+uB7EPiKUtFUwKuOEq+cUmPXhUEkCU/dVVgirNZh2vTCEIVt5TyNH9msXaSo4W7Dx6CgIHTzbq4idApa3yObZl2GP5NO3f1wU/8Ek9Aq86gZbA5UduIjjEfWpbkGPh+6QyQPlSrdyc8xvjTjrmIJfRgI0g/CKgtbxmtOCfhsCGAjdzgoyLBBUYvEjragmkFjgDYw9bdLoW4wI8mRgbP10d84IDZRdBy/I4luHZNUk4R3Pj3HM2hU0eTNcbBnME5Aj16s3m1EoXXj3YrksBpAPKa1BsO428a1W8CN4PiKcQBPxhcOUIn4NUJAWMJWV6BLWKwzFWGAa/jwcq3WuMu0dOrQQQOK2eLZ3i3WZQ3mPkkS6dxATO3KLg4loTzAbOrNeDqBkA3eOCLDIptAXJyRB2/I+M9qMILAq21PYFonn5V0RBkOcNyAfBZ7+VdS6DB4+b78812latqJfUP5rePxCrd112HOjFJY1GK+vwNYcoFcZkCnmokpz/c8YCMCMLe/c+gZndf2DNwartaW8wCTFkytckUodnAg1+SXPYLSciELda+FLrL2Q+M2e8rDX03coxfiP2smGxHiZTfHaaimAZHfWzpVn9CeG4fTTJjAk5m75HhroAMKOwG/W7tmPsrt4wvYEE8cmQz0lIEXJM7nViwWeUDsNHj0kVufDCf01eC+562UVd9l8xnzhoTEhq3olRNwtHmUPcRNEDE1bRl5gT9ieFYfxTWhS5olr9vJtiQjAH5ShAAteF50+7hsOx6TRmT0k+Pf6OZuKCePGD7dr5MsR6826kIXKViJNrfWnU/3HYPPtgFGYz6attymMZTJzVEv90EPqXwCHAE+uG1sWISxKNzt3CnbwNjwk1T6i9hxTtz9d+kiyFFd5T4aF8WogFn9r1f+87N3d8RtActDnsdjbzn6rXvCfDYdQbmnvCoYKIT7bSkuAjPByQviJRM5QXYOOrMVeOZR/DU0F9eGpvEaxxPwq47UpVrmvpVLluMc2mjppC9EWbZBsRuMA+rhGfWoh5KIMjS4bx4dNIW+tITpEjTYuI3ZhZjXcxFtXdjy0uQQNn4DTnjLOX9ZbbjS/4lCRQ8j23kGVkhs/hOIAu4CSuNed6caEiaAJsbl2fm8SkkpT8OCJMCHyK6sUrfVpn89eY2x31I/NjGNKgNm7A5mKPWlXYil3/0+4X0LtZZFeEd0fZM1lNPtwkMhukuT8hvHwdYnQ++aK4FeABgYCnkQ5r5tBoYzpAcwH3NH6jBnLX2YuZ/WKKrgservaURqBsHpmJpqWuRcY=
+             type : 4
+             code_elements :
+              type_code : 4
+              p_codes :
+               -
+                 code : |1-
+                  MoiMême..Visible = (GPU_nAuthLogin(gpwSalesforce) <> 0)
+                 type : 14
+               -
+                 code : |1-
+                  GPU_OuvreAuthLogin(MoiMême, gpwSalesforce)
+                 type : 18
+               -
+                 type : 161
+                 enabled : false
+        -
+          internal_properties : BQAAAAUAAACWC1KKYGnWpD3COM4mFBL5hhjvk0PzGwJh9mBlE8nN5+N5EEVLaLhJbU2jhXZUBeGmXgKrLOTAYbZ7Me9i+0ySG1nPA04GM908lUrIXq7C3jfM1GmuCMCmSJcBuflTyHCUT9ENAQ4lnQEIQOIfSXvqTC+biQUOBAy7JU013j2C0y5O+OX3xfRkvpWQDoWUUqoDBw==
+          controls :
+           -
+             name : BTN_Auth1
+             identifier : 0x2b180b6e37dcc38c
+             internal_properties : BQAAAAUAAACpoDCdKpQN/gehx740YDGKn+bgaj9+MJzY7gnpZcBYUoS9rD6aV07I0ZN7z+4l7MWbffk9ZkeJnEy3VEV4GseSuXzQBMX+5dAaKz9Mpullh0lt1uG/AMs6qGUQBaOSJTpqUM4x2eV6c1JAtdwtpzM52Mq3KAszclYjpwY1e6ZXDiCiacmj34jv3NSDUJGrRtBtVPchsS29mqI2ke49Iehey9pVlmEYwCa//yrm0EOdSNIN89Hzf/VgsD6wJ3oFF2Sy859h3pxO0vzgQMQ94uPHRuBQIbZBCNTg25E3mB1cx/vGSmtINSizhgJKJGvuKSb+/v8/qv929nGQHHnBNp+fxyveWb1YgqnSRrOE1EfDZlucr91TD55hKaE/22ZbfmZwNYwJ4uO1fvYh7dZE/bpXqRMrvgBR4E9DDRQ2IQqEUDaILr5fscuMz0y45qnaAcCtn1HWJlAzuXvAbflXlx1e6vNbNPvfXIHzv02WMeK8+okCa9TeGV9CKERWCX+TgyRNIvdZdjSRm6NlDM2pslsUJPaJQRD+rLQHvsNTQQBpb+QpXysj7aOxrhNT/AfJT0yIMnCxSS5WrJsKrbKyX8tpJ/pp8g2GcJoyFLQZNEj93avsDPnHVD2Y3X2ypG8vIl9NpK+cQOjMNPHQF9LW2hgEnisJ5+fPn5CtW5XaWacXa5RbgqFJ8aPoPZEoZkplGaH26BKQlwb4yqvHviqw/Go4IJ1vve6SvrX4QkUDGompgUI1OL83H/df+mfJndLZMsi5vHJHHL/spwxt7FTdfZEgZxWtBZ5rP8AC/Xo4gdTwTBZPBkzJ5nfSQBaz0B8exrj+kpgtQvXsijTIy5COqLXjhjn45RIBIS7budw7n746P8/Nc3IUSHt6WXAl8XyLFq9q9fmF0ZsffLNSLKfN35q9AN+xDa0592kw80OMx5cf1zxEgskSRtebAE9bJLEPB/2hiCtjE7BMNpAJIkiJ+6RHT8rFeDnPhc+nX4sm9QB41BvXXJpM4nIFKBb9aVDUv6V9SIP3xJHjsC+HFfEqa0gAhz+o5q/HUIdy9jY/a675bVGyZNVebvbD7g2upMjXFELkXKF8ZLndmJwzndgNvsdjhFtk8bxg7XSo9ZvemDPBJC7vvAnru899SEJqRaeVO8a/kFZ9jp4SIsF1nz0upx3ZKzh1eTzYWxIrMHGW6ByC8DqPqHdEpHUsytsj05wRVCtDD29PGFKuZKOLiVsvQrqpUhpOz+f0yvrWlOPyrWPkzPwwjzcsJjOAnK7S9COfNwYQNqVssTGG7xbcwrRzDW41iDLb3fMsEuD/K2zcKKgui1vt66Kv3fYrgHiiRr0N30nNlBBjqg1zI3sW0bB+3rn0khZwWWl/B3EZpuGXxasHjAJCT6KVZ0SbdiV7D8Q0iH2Ra4hnn6PDSdiY4oUExRV8hcZ4ahN1W0hDq5mVoQjkFbsHaIFWZEYi0g4c6E9FzlJlQUZzqlE70grCIBRh2Q93cHsO1yBKMli8U0jztUHeYOgzAPifamO/+JO2Rmjaz+ku3s9Vinhe5fO0pR+hoTot5r3PUB3EWqfiCJARWTbF9BtIGEXWJuxG684usS4UphM1PZgRpt964BECRSQypN4=
+             type : 4
+             code_elements :
+              type_code : 4
+              p_codes :
+               -
+                 code : |1-
+                  soit nIndice = GPU_nAuthLogin(gpwConnexion, 1)
+                  SI nIndice = 0 ALORS
+                  	MoiMême..Visible = Faux
+                  sinon
+                  	moimeme..Image = GPU_stDonneAuthLogin(nIndice).sImage
+                  	moimeme..Bulle = GPU_stDonneAuthLogin(nIndice).sLibelle
+                  FIN
+                 type : 14
+               -
+                 code : |1-
+                  GPU_OuvreAuthLogin(MoiMême, gpwConnexion, 1)
+                 type : 18
+               -
+                 type : 161
+                 enabled : false
+        -
+          internal_properties : BQAAAAUAAACtwHlhCYI//0oLcYdvTUWw8eEGeuRkdO1ury2iyJb4Cra2wxB8IcFAmrYYHp9tTJjxj9FSZa35qP+kCqBbBCfa14ufM5T0vV8w1AsPb90TrWiHHZB1QQdvAdDK8DAMkb9F+ApE2HeMArpxOelmEjAdAWRAVEjDv0nkHraMdZYrencXMTyuDjstd95pdSz968E4PA==
+          controls :
+           -
+             name : BTN_Auth2
+             identifier : 0x2b180b6e37dec38c
+             internal_properties : BQAAAAUAAACGz88Eg6/0lVoEWtPRDWxXtMXHiVxZX7v7yWRq6kXb7wFIL6kvOtFfeGoarE8CwyqwTMhsr47g4yvOwyrpazbn7kdr554FcCdBwia9F968TAaUjSj8U1p1Z6xXpb2iv+AumvrHx+WW9SySa0Tv93n3uNxTPm2PAqBt0XB9tQbNJCg0jf+du8B53uYtCMtjgKoplr8rm+FlaKwwq9KrxaY0f5iBZGdwXDAFJew6Nt+DGrqzJ291+yVSFnyeyyChPZ6akRcLPJwqgC7iNniLDrUZtg4oa8C1iKq2+Wvn4tWuqbuIOr1i0Uh9hCAoqLGqj5jCFN/JTNNuZPPCzh3vWuXp0xVOayfkyi9o7P3QMvvZkCveMyt9WxanVw/B14QvyMTQ79RrMCMxKERHG2aejexxCU0nhL6RLBkpK9LS10bmXgaSjiChTcsSia6mIp+my5rR4R0cHMinR7Fe791tC5foglk3og2rfGN1Ucue+xI6xLXMK/6AfWd0ejYkJSUPEb7JvEu/iHCpIZUvtrmfviHGkIyVdza+SIbN5DWfxywDccS3Y9kx/f/3fGGVHOmppZIgnPh7z3aavmEwLxYIsyUjC5SBbFdSQDDQ6h5FGsSnF5NW2D+5YN3SP7+ojAEv5PntnruqYtw8FoPyCT5EVpaC2t1pCW2nO+JvNb9WhwM1NYzh3l8LtavOO296Noy94/e+opaGkSLQeBUBLDaGwPy2SPfzO2BmJqdCdDsHkEVrkza7rB2NR8ttqLUnHQypKArlDsqB6n+AmXKzEqgr2WcSF+fth5QbW9ZYm1SEzxj6H8vu5R3Sv1Qr4cHuE4qLUecPraOS64J9J9HP0g89GThit+RrYp86XifI2ItWirM1HlxEoiOpfawnCjtgvDfcteonLKgmVmDwseQ1H6o4cDkAxSYIVqKGWHJJ1qYfkpxWyoED2ULTM7D04XJux6x89tBiO1Y4WEnBT/n0zePc9OPKcO24JeZEBlA8VpLdpCWjw2i2q6s1Q9fq9aUMnLuBzrAW0xbUCU6k/aCSMBQ1OEtnbA6/L3xkEaAT4SEOkv+E1DaZW74fJ4OoW9yNB/v0VyFVP5wRwXqaQXV+WBt4L0rqDf6H3s0RmqWBGL79z1x0Q3+qp15I4OBuOd3lyAIqgulQC5mKIzuzRzroUsStDJw0hJOYpi0JqLtAF1jh6yHVB0Oic+ytsYY5x1qi3ueiMw40cjLspUuLpbhiwGIuUwlU77nlCMAl7wsnt/ZteHTj74FPrqi1v9A5BbmNs4LweoUBMWjpBvpr1HN7Yc8+VoWITQn63kA1/zH0IrMPgwWJYrCsKvNESncEkUvF5UyK/gQGT1uo0w5QYKQp1DOZR/RT8/Fb7tJ00Nq+HWgWPJzK2/O9Mr8aRAW8l+iuprsljyCCVvuEbJy4nhVX0Yg/gtS/RgErNzSCRG2k3ryo7KmjcOQqcwbHAd+Hvz0b53Yi6RGieA1ck9KYQ+O1I5Nops6yDaIlMNmReyNLogc8/giRlb8KbwmIQTyWg+4RIw0FGrYdzT7m+8+3vJrrbFCS0BUKxZwu8X5b8z51myOG1qlIeZ7Lm8JrSQllyu3N0g8zgWjoaLN2Q3ofB0jJnI1bi/E=
+             type : 4
+             code_elements :
+              type_code : 4
+              p_codes :
+               -
+                 code : |1-
+                  soit nIndice = GPU_nAuthLogin(gpwConnexion, 2)
+                  SI nIndice = 0 ALORS
+                  	MoiMême..Visible = Faux
+                  SINON
+                  	MoiMême..Image = GPU_stDonneAuthLogin(nIndice).sImage
+                  	MoiMême..Bulle = GPU_stDonneAuthLogin(nIndice).sLibelle
+                  FIN
+                 type : 14
+               -
+                 code : |1-
+                  GPU_OuvreAuthLogin(MoiMême, gpwConnexion, 2)
+                 type : 18
+               -
+                 type : 161
+                 enabled : false
+        -
+          internal_properties : BQAAAAUAAAAtQPnhiQK/f8qL8QfvzcUwcWGG+mTk9G3uL60iSBZ4ijY2Q5D8oUHAGjaYnh/tzBhxD1HS5S15KH8kiiDbhCfa14ufM5T0vV8wVIuP712TLegHnRD1wYfvgVBKcLCMET/FeIrEWPcMgjrxuWnmkrCdgeTA1MhDP8lknjYM9Rar+veXsbwujrut917p9ax9a0G4vA==
+          controls :
+           -
+             name : BTN_Auth3
+             identifier : 0x2b180b6e37e0c38c
+             internal_properties : BQAAAAUAAAB/1uYjoI4TwPX39aQuTi+Q9YQGUBUQ5lYWtM+vp4aeEFp7msQQ2bQiL7kJnTiTunPpKzcD1PEnDtI12tsaOOUwn5L2Yhuwq4KomQ1quJfrdd/TVG/FmnG8Lpue/ScalU5GbNrRfX3C14Z01WTJVwtVZK5bwG+zCnpH2051/1Yn+nRutWH/R6BbsLiTwH1jjjQhGCvx1T3FLmaage65cbCihw4Rfj24UHJjA5oWtGs9NKZJpzGfx20cdDKY1+71v0gWnzMxetx+3hAkMDzxaisTSvT8AVoR4PDk31H/RKXkexeSpjP8TUjnuoaS3NduuUK6Skvfzje2Cg0cvOllnt97Y4ciiTEgOg3GistsAG+zeodog1WXZ94t3QWnuwLrbvIsmeAZBjMVGrI9hdb49YK7jc+n/sxh+OOXQUxmncr81KIEul7r+RMwi/gIdn26uezZ+41emngrVafsffFLj226PhdPVPfXRLWfa10OtaoczjVGPzS6odfeNBBGWVODK7iRVoMBimTpX/e5hNU1ShPQyGoVuVwGDBCTqlvr1TAxG9DNE+OXdVttwifLZCMhj2jUXjxJPXb+0Fc2lULOz8vlo/4lcgmOoEbuwNwJUIidKSdYIAGrBBVkMQH67DMf4us5SCsUzHhUiDXEl0JCqnhoijfFtwOHj0wZZ82qHfc/z0g3lmHFsbN8AYUYNo4tWf1KFA640074jjcj5rKURLKcJKm7FRI6pklUfr2LLvHZlTa5rE/zn5eLbkvhzUZhUuQNUO63+E+cg2i5FKwxHbFsS0FRheozR1T2cTKQzWwILkhtbIZv0HkQwpQRujnw+HIoqKaP6IeGIN7e4Tpgwp/FaBcWJ/g7g+xNRwrdITi8odHDOZwa+lXwwzZbu8YdqCHMSw/vh03pEgXYkjnvqVyHyiV3x9Mr4e+yIVG2Yem5cSayCMOAUNm5YoVRrlPZAd+D9pn1mZIWfCqXsMIDbT7hmZADqgeRTyXJBcFgd3rSrkWN8uTy5HwLImSrO0oGgee/FtGZMjtlznHF4yM8NVpymc0+MG3pmm0U1GRJ3bizx7soktckIKBpWCu83gK5ztTmSlem6rPvdr750+LXEHlVlgGCcxoi1/oqQ0noEqVDrsh9yhuxJTHr+gCoDyHHRQjxRpzXDHDsOJMzLacY6Y8L/X7zyyoqtahl1oe40g6USpRthumihl8SlGmx1eajJl3lrY0BhozgMnUJR2UJ1OybpOBEifVGJHBQguFEN7XG9oa+1bHi0OXO7ixgHi1hSfjiDPvm53vIXcAasAatDwAHSgjhd6H+3EYRseLeWpLA1QV7MTxNR2i5GsZAmNdfSXvvQh4FQB9tSZV8R7pY8IOejAw+y7ehIUcr5K9BX02JNtywffRDsZZpCIPZ8fbuss9ToU6xTZ3Fp3puyBd2P4eOB0y2zAkX5Y6FedfXs7JuZ22tRmM8fnjApCQiYoH/0JTXN4wdmEsdMJxQvrZLyykJ4vmMWaLItNoy2c51N89IznZBFtKxGBXxLlmMqIq46YdM/O23FPbQV2EiE+lr92zjPAudAm+qRJGYfgabI3x/MtmO1gcQ7LaQIbQEm9BywCkrK44rmC3Msifou66Ecog=
+             type : 4
+             code_elements :
+              type_code : 4
+              p_codes :
+               -
+                 code : |1-
+                  soit nIndice = GPU_nAuthLogin(gpwConnexion, 3)
+                  SI nIndice = 0 ALORS
+                  	MoiMême..Visible = Faux
+                  SINON
+                  	MoiMême..Image = GPU_stDonneAuthLogin(nIndice).sImage
+                  	MoiMême..Bulle = GPU_stDonneAuthLogin(nIndice).sLibelle
+                  FIN
+                 type : 14
+               -
+                 code : |1-
+                  GPU_OuvreAuthLogin(MoiMême, gpwConnexion, 3)
+                 type : 18
+               -
+                 type : 161
+                 enabled : false
+       type : 126
+       controls : []
+       code_elements :
+        type_code : 151
+        p_codes : []
+    type : 42
+    code_elements :
+     type_code : 92
+     p_codes :
+      -
+        code : |1-
+         
+ menu :
+  name : _Menu
+  identifier : 0x2b180b54379f60bc
+  internal_properties : BQAAAAUAAACZOvu5xZX2htmkDW+L9WcT1Eq1ECKdQOSKnahD3tjYuEoOhjfH8XErObSppgz2JnLv5sAtl1rD3ucKY90vr2eL7Ou5JMfp2oGKAfhGRuqOyjsVXmOE8OcSlp2fAHDf1LXMC1bxG5NUUdJzCTXfbk5Q5evsfUPoTMSIdnRgOizzmDtP3sEMCwLL/3SI/KRrJALZqF2nvXk1qSrJiWWguUb21MnH5k2dfSiPvXqnREFVyA/Jo3jSbcLydYvk3jeYFGcmDwhGKV+xvt5T5B6TZBBwwbE19kyR+tKuQjxLaFqPqbFSchBro/Yi2U4MTg9POmuwciyf/5NCJe0kvSZC
+  options : []
+ languages :
+  - fr-FR
+  - en-GB
+  - es-ES
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 91
+  p_codes : []
+  procedures :
+   -
+     name : ValideIdentite
+     procedure_id : 1952581751553648211
+     type_code : 14
+     code : |1+
+      // Valide l'identité
+      PROCEDURE ValideIdentite(clIdentite est une OpenIDIdentité <utile>)
+      
+     type : 458752
+   -
+     name : GPU_OuvreAuthLogin
+     procedure_id : 1952582846771153562
+     type_code : 14
+     code : |1+
+      // Ouvre le navigateur pour se connecter
+      PROCEDURE GPU_OuvreAuthLogin(chpBouton est un champ, nType est un entier, nIndice est un entier = 0)
+      
+      clIdentite est une OpenIDIdentité = gpwAuthLogin(nType, nIndice)
+      SI ErreurDétectée ALORS
+      	Erreur("Echec de l'identification." + rc + ErreurInfo())
+      	RepriseSaisie(chpBouton)
+      sinon
+      	ValideIdentite(clIdentite)
+      fin
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : MDLC_SansNom1
+resources :
+ string_res :
+  identifier : 0x1b180b5400b560bc
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

@@ -1,0 +1,3 @@
+//MO643-644.TXT ANA00643 TO ANA00644
+FcihierAGenerer		NFI		nouveau fichier
+Contrainte_GPU_Utilisateur_FcihierAGenerer		NWL	GPU_Utilisateur (IDUtilisateur) et FcihierAGenerer (IDUtilisateur)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et FcihierAGenerer (IDUtilisateur)

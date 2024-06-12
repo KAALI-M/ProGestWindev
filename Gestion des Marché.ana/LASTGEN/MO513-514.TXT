@@ -1,0 +1,3 @@
+//MO513-514.TXT ANA00513 TO ANA00514
+GroupePersonnel		FIC-	GroupePersonnel	Fichier supprimé GroupePersonnel
+Contrainte_GroupePersonnel_Personnel		DEL	GroupePersonnel (IDGpePersonnel) et Personnel (IDGpePersonnel)	Liaison supprimée entre les fichiers GroupePersonnel (IDGpePersonnel) et Personnel (IDGpePersonnel)

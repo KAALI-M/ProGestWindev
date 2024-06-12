@@ -1,0 +1,3 @@
+//MO633-634.TXT ANA00633 TO ANA00634
+Tasks		TAR	771	nouvelle taille enregistrement : 771
+Tasks	notifDate	RUB+		notifDate est une nouvelle rubrique

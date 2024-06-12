@@ -1,0 +1,3 @@
+//MO583-584.TXT ANA00583 TO ANA00584
+GPU_Utilisateur		TAR	1807	nouvelle taille enregistrement : 1807
+GPU_Utilisateur	Superviseur	RUB-		la rubrique Superviseur est supprimée

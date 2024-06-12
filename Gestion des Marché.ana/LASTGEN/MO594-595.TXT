@@ -1,0 +1,12 @@
+//MO594-595.TXT ANA00594 TO ANA00595
+Courriers		TAR	395	nouvelle taille enregistrement : 395
+Courriers	IDParentProjetRéponse	RUB+		IDParentProjetRéponse est une nouvelle clé
+Courriers	EstUnProjetRéponse	RUB+		EstUnProjetRéponse est une nouvelle rubrique
+DocProjetRpse		NFI		nouveau fichier
+ProjetRéponse		FIC-	ProjetRéponse	Fichier supprimé ProjetRéponse
+DestinatairesProjetRéponse		FIC-	DestinatairesProjetRéponse	Fichier supprimé DestinatairesProjetRéponse
+DocumentProjetRéponse		NWL	Courriers (IDCourriers) et DocProjetRpse (IDCourriers)	Nouvelle liaison entre les fichiers Courriers (IDCourriers) et DocProjetRpse (IDCourriers)
+Courrier ProjetRéposne		NWL	Courriers (IDCourriers) et Courriers (IDParentProjetRéponse)	Nouvelle liaison entre les fichiers Courriers (IDCourriers) et Courriers (IDParentProjetRéponse)
+Contrainte_ProjetRéponse_MaitreOuvrage		DEL	ProjetRéponse (IDProjetRép) et DestinatairesProjetRéponse (IDProjetRép)	Liaison supprimée entre les fichiers ProjetRéponse (IDProjetRép) et DestinatairesProjetRéponse (IDProjetRép)
+Contrainte_Entité_DestinatairesProjetRéposne		DEL	EntitésOrg (IDEntitésOrg) et DestinatairesProjetRéponse (IDEntitéExpDest)	Liaison supprimée entre les fichiers EntitésOrg (IDEntitésOrg) et DestinatairesProjetRéponse (IDEntitéExpDest)
+Contrainte_Courriers_DocumentsEditionEncours		DEL	Courriers (IDCourriers) et ProjetRéponse (IDCourriers)	Liaison supprimée entre les fichiers Courriers (IDCourriers) et ProjetRéponse (IDCourriers)

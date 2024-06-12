@@ -1,0 +1,3 @@
+//MO555-556.TXT ANA00555 TO ANA00556
+Ouvrages	NomOuvrage	NNR	Nom	ATTENTION : la clé Nom a pour nouveau nom NomOuvrage
+Ouvrages	ExNomOuvrage	NNR	ExNom	ATTENTION : la rubrique ExNom a pour nouveau nom ExNomOuvrage

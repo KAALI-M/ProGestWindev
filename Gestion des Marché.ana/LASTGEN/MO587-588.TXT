@@ -1,0 +1,3 @@
+//MO587-588.TXT ANA00587 TO ANA00588
+Projet		TAR	571	nouvelle taille enregistrement : 571
+Projet	ImDélaisGlobal	RUB+		ImDélaisGlobal est une nouvelle rubrique

@@ -1,0 +1,64 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clReprésenantEntité
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x12f22f3802d30e84
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      clReprésenantEntité est une Classe
+      herite de MAffectationPersonnel
+      
+      public CONSTANT
+      	Personne est un MGPU_Utilisateur
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1365205554658807428
+     type_code : 27
+     code : |1-
+      procédure Constructeur()
+      Personne.Constructeur()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1365205554658872964
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+     type : 655360
+   -
+     name : SetID
+     procedure_id : 1365212022880209174
+     type_code : 12
+     code : |1-
+      procédure SetID(IDEntitéOrg est un entier sur 8 octets, DateRéf est une date =DateSys())
+      SI IDEntitéOrg > 0 ALORS
+      	ChercheReprésentant(IDEntitéOrg,DateRéf)
+      	personne.SetID(this.m_nIDEmployé)
+      SINON
+      	
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x12f22e7902cd243d
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

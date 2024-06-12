@@ -1,0 +1,4 @@
+//MO580-581.TXT ANA00580 TO ANA00581
+ConfigurationDroitsAccès		TAR	43	nouvelle taille enregistrement : 43
+ConfigurationDroitsAccès	Modules	RUB+		Modules est une nouvelle rubrique
+ModulesApplication		ENUMCOMBI+		L'énumération/combinaison ModulesApplication a été créée.

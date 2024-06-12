@@ -1,0 +1,2 @@
+//MO533-534.TXT ANA00533 TO ANA00534
+Contrainte_Utilisateur_EntitéPersonnel		MCL	0,1->1,1	

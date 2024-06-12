@@ -1,0 +1,2 @@
+//MO615-616.TXT ANA00615 TO ANA00616
+typeAutAbsence	TypeAutAbsence	NNR	Type	ATTENTION : la rubrique Type a pour nouveau nom TypeAutAbsence

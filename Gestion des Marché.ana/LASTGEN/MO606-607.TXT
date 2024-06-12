@@ -1,0 +1,3 @@
+//MO606-607.TXT ANA00606 TO ANA00607
+Courriers		TAR	721	nouvelle taille enregistrement : 721
+Courriers	DateAffectation	RUB+		DateAffectation est une nouvelle rubrique

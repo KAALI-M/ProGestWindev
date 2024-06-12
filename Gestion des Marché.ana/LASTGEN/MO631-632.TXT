@@ -1,0 +1,3 @@
+//MO631-632.TXT ANA00631 TO ANA00632
+AutorisAbsence		TAR	862	nouvelle taille enregistrement : 862
+AutorisAbsence	DuréeCongés	RUB+		DuréeCongés est une nouvelle rubrique

@@ -1,0 +1,8 @@
+//MO584-585.TXT ANA00584 TO ANA00585
+AffectationPersonnel		TAR	99	nouvelle taille enregistrement : 99
+AffectationPersonnel		IDE+*		fichier avec identifiant
+AffectationPersonnel	IDAffectPersonnel	RUB+		IDAffectPersonnel est une nouvelle clé
+IntervenantProjet		NFI		nouveau fichier
+INTERVENANT_PROJET		NWL	AffectationPersonnel (IDAffectPersonnel) et IntervenantProjet (IDAffectPersonnel)	Nouvelle liaison entre les fichiers AffectationPersonnel (IDAffectPersonnel) et IntervenantProjet (IDAffectPersonnel)
+Contrainte_Projet_AffectationPersonnel		NWL	Projet (IDProjet) et IntervenantProjet (IDProjet)	Nouvelle liaison entre les fichiers Projet (IDProjet) et IntervenantProjet (IDProjet)
+IntervenantProjet		FRN		

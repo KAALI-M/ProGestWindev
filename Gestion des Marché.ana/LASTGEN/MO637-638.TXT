@@ -1,0 +1,2 @@
+//MO637-638.TXT ANA00637 TO ANA00638
+typeTask	TypeTask	CLEU*		la rubrique TypeTask est maintenant une clé

@@ -1,0 +1,2 @@
+//MO544-545.TXT ANA00544 TO ANA00545
+GPU_Groupe	IDGroupeGroupeParent	RUB-		la rubrique IDGroupeGroupeParent est supprimée

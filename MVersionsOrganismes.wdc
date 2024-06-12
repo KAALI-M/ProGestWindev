@@ -1,0 +1,102 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MVersionsOrganismes
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x12ec4c1903b4de66
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MVersionsOrganismes est une Classe <mapping=VersionsOrganismes><§rad:1§>
+      	<§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	<MAPPING>
+      		m_nIDVersionsOrg	est un entier sur 8 octets <mapping=IDVersionsOrg>
+      		m_dDateDébutVersion	est une date <mapping=DateDébutVersion>
+      		m_nIDOrganismes		est un entier sur 8 octets <mapping=IDOrganismes>
+      		m_dDatefinVersion	est une date <mapping=DatefinVersion>
+      	<FIN><§rad:1§>
+      	<§rad:1§>
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1363548457506561638
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur(IDVersionOrg est un entier sur 8 octets = 0 ) <§rad:1§>
+      //setid(IDVersionOrg)<§rad:1§>
+      <§rad:1§>
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1363548457506627174
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()<§rad:1§>
+     type : 655360
+   -
+     name : SetID
+     procedure_id : 1363576890296034078
+     type_code : 12
+     code : |1-
+      procédure SetID(IDVersionOrg est un entier sur 8 octets = 0 ) <§rad:1§>
+      SI IDVersionOrg > 0 ALORS<§rad:1§>
+      	REQ_VersionOrgansime.ParamDateRéf = null<§rad:1§>
+      	REQ_VersionOrgansime.ParamIDOrganismes =Null <§rad:1§>
+      	REQ_VersionOrgansime.ParamIDVersionsOrg = IDVersionOrg<§rad:1§>
+      	REQ_VersionOrgansime.ParamLimit = Null<§rad:1§>
+      	HExécuteRequête(REQ_VersionOrgansime,MaConnexion,hRequêteDéfaut)<§rad:1§>
+      	<§rad:1§>
+      	FichierVersMémoire(This,REQ_VersionOrgansime)<§rad:1§>
+      SINON<§rad:1§>
+      	<§rad:1§>
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 458752
+   -
+     name : ChercheVersion
+     procedure_id : 1365416330433980984
+     type_code : 12
+     code : |1+
+      procédure ChercheVersion(IDOrganisme est un entier sur 8 octets, DateRéf est une date = datesys())
+      
+      REQ_VersionOrgansime.ParamDateRéf = DateRéf
+      REQ_VersionOrgansime.ParamIDOrganismes = IDOrganisme
+      REQ_VersionOrgansime.ParamLimit = 1
+      HExécuteRequête(REQ_VersionOrgansime,MaConnexion,hRequêteDéfaut)
+      HLitPremier(REQ_VersionOrgansime)
+      si pas HEnDehors(REQ_VersionOrgansime) ALORS
+      	FichierVersMémoire(This,REQ_VersionOrgansime)
+      sinon 
+      	renvoyer -1
+      FIN
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x12ec4c1903bddeb4
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,3 @@
+//MO629-630.TXT ANA00629 TO ANA00630
+AutorisAbsence		TAR	858	nouvelle taille enregistrement : 858
+AutorisAbsence	CauseAbs	TAI+	80	la rubrique CauseAbs a comme nouvelle taille 242 au lieu de 162

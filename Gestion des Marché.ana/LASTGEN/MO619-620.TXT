@@ -1,0 +1,3 @@
+//MO619-620.TXT ANA00619 TO ANA00620
+OS		TAR	599	nouvelle taille enregistrement : 599
+OS	NumOrdreOS	RUB+		NumOrdreOS est une nouvelle rubrique

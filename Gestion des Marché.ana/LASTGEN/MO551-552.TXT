@@ -1,0 +1,3 @@
+//MO551-552.TXT ANA00551 TO ANA00552
+		ENUMCOMBI-	TypeDroitsAcces	L'énumération/combinaison TypeDroitsAcces a été supprimée.
+		ENUMCOMBI-	TypeRoleUtilisateur	L'énumération/combinaison TypeRoleUtilisateur a été supprimée.

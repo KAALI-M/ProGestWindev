@@ -1,0 +1,4 @@
+//MO537-538.TXT ANA00537 TO ANA00538
+MaitresOuvrages		TAR	39	nouvelle taille enregistrement : 39
+MaitresOuvrages	DateDébutMaitreOuvrage	NNR	DateMaitreOuvrage	ATTENTION : la rubrique DateMaitreOuvrage a pour nouveau nom DateDébutMaitreOuvrage
+MaitresOuvrages	DateFinMaitreOuvrage	RUB+		DateFinMaitreOuvrage est une nouvelle rubrique

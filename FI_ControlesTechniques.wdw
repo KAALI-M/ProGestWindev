@@ -1,0 +1,673 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_ControlesTechniques
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_ControlesTechniques
+ identifier : 0x21051a0f04b73c36
+ internal_properties : BQAAAAUAAADSl91NLXBI42qJ2jOeBs+EE8PmX1ziTyZFfpVXdGol3T0Pa6RXZbhv4aGRFT9UMNOkfzNZfp+kEi8ehmF1cdfftPgToKKIWuvLjnJDJTdQ52PlVgu+e7to1PLGI210Lr4KvTa4pMSHLCK5nBX5V/1G4awoDg1R6QI36oImBVg29PMkTPf49y7DR3nbWKFTaX8/g7UZ7Ecfa2pLcPSCWH2e9k9iJGMYUFVmM0Z7ys0Yzwe3vKAg+dikyaKhwZs78PavXPpuyS4QUcDF5+OZx+ykwUvM6dHU/jju9mDwt6JiY5rrubocz7xffZFTWUCQnJjr1+EdtAu7aOZIT9sLbAlvjMUf42qM0glL3l6YwoyA2Tg3aNNZQHzXca2szzi5/1KqExyz/ZUTOTOUC9y1XPGeeK2AFum8BklIl9i5pCE8SUEdN+9VR2UCd7RVa7x5FFD21NQuVmLqwfA71+WuHVYlvx943uUPRn9FqoaDpUfMof8J3Un4MxFLcjuZR/VSubcnqT+de6W3RvNWkblFAiUesIF9abVEWs2nWvnE8mtuuIUMldnXwDsC+Wcl4LE81+2XgLvC/l34/VJv1gqwZX+ENC5juRGK6Lf9D3uC5rfvHgpCRtrFytCj9aN1jwFHu2oG2UmgAi02PTQ5Pr0kwfYDPHBNQ/M=
+ controls :
+  -
+    name : FI_ControlesTechniques
+    identifier : 0x21051a0f04b83c36
+    internal_properties : BQAAAAUAAADR8FJK/tOjw7nswOD5L0rAPH/2JEDyztSwDf2QbfAFUzhfFv3r39m5jr//1nKw1iOoFRNjTkXGhjOpYkt+mvtjjIXOFJtpp6LCBdjSSnpdxZgO7s3fxJ8mssEEnvA4hDhiwuRXTqS+6aHWodtzTMm9IRkM4HqG1ST+xGtxct/hWOTfE3I7dE8+JFcSmivkODN4ffLeZTsS+m2LOV47Wyyl4bejE5naXEf3ZBU0e1Hu1CtEcjoz7WeDogevtFaXfpkffOTo62XwefeTeX+w30ax7RDQG7CnAXQHihZarVygfJau2Kx/aHRU8Zmi3CIxhJeQZzo5Ve0Rx5IuLjjTkjKfydHgcWBpZ+g8Ev3xTAtUGG1niULm5iB7eMN00sGbkWtyPQcpa65+1LKdN7wMOMZ/koiFTyi0auVWxEBZmDewzVbdttCDzPPzgJFJMN5eQmwRoDojToXo6PllqSAi4raC1jPaqQ==
+    controls :
+     -
+       name : IMG_Rafraichir
+       identifier : 0x21051a0f04bd3c36
+       internal_properties : BQAAAAUAAABCpjRu7v/Z7cmHljHbSZ4Aj31Osv+FCvaQls//eSQDIfItX0vE0cX1sFeho9bieSnhG3l42KUjZTLkb6BaHiXCIbgqdxOFtplobSE3BKZdGhPz4AXY0Jn/IAaFfDuZnytgUmfpTyFAgIa4RL6E5VxsSYXi2XDHvBRBSGHJLGmTExWzSWt8hJttk2/UyZ8hAcpdUam4NNbV+qNOr9EAXHNBxJXceCQlmLNoROkQlNOJ9IufgVGqVzGXFNs+6jF4CEIgR6tOJq2SsgVY5P/0PCTtm9cT+DdVMPWxV9SBg9M4+kHDlpqNO1XFULYDgZL8v+NwpeSY061pR9twnWAU16Nw6nXV87b8Zd4LrO1F8azHO3+n3vZGmuTHdB97nYDRVBylzOmqh5tTqpfEQmAewmQE5/gmhm+A7uWTJ1pAMH3iEdn9/N3Kpc95fa88Y29ivMdqFmee0LEKI/71lJ6PemnHK836TkMDp4Ditv++zM+RdDT+2iZ/8pPbBF7T6DzwhUmAep27lkdo3df8DZlgCrKBBhQNhufCu9FV6YQAR6kG5dtwje6NZhfZ3+EEGvj//2HQe7lsAaMNt/+A3lV+vQRN40Eu7D02qBxXyD1xlBwXPJb/VFQcLEyLpdEz84bg31+qw+dHUUuM8oRDHTYlB73gbekzJY5EQeLN7jpDl4uhvA6qwYHnDV45fexdS85E++WD985RxIVHld0LaeJRcab6hxneOXYDM4Q2oTg9UQojJbbXz+RxaIejbWeOuPKVBPYsbYJxB63GSvNWD/aRNB7caTT0HDl5xcQ//2W3ASOvYMKQr6fn/3D44g==
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            
+            tableaffiche(TABLEH_BaseControlesTechniques, taInit)
+           type : 18
+     -
+       name : LIB_ProjetEdition
+       identifier : 0x21051a0f04c03c36
+       internal_properties : BQAAAAUAAAAy8kgEgPxIwqn3x3zaozvSv9LqQMrMVrjrAu8yEYy2xQ+7dvLrJ4o1yaWPK/fDKCzqj7PKHbL3UQeKCTzqvb/2mmW3/YpGIupR9syV5E2aPgFsXvUz2s0ILS/S3DpLdOi11ERp9/NWOoKEafHc33EnB+odRd35OlJfws/jZEEyJDHFHP6SchEqRJgqkIoj4oaWq51UQVVLtouPH71TSuf50z+daflV/YT0qRoVtmj5Z+lWbCMHBeQ2QXGu1gGGVl9DkTSh+049aOfig7DgEgg0GbzCUSzjuyfILxc/qidH8B++ITIrMCQ+GZs2kG/xLSLmRk+B9NVw+p7EBvrEl76fjqyD0IPVCpIHWpUC+wf4SSYlbRiMN6UApqvAsU9HE8/519EKZVOFTtJBhqUJ0/2j4L1/hHOeqISEmYVMuyW8aaBWu+sKuIImM/X6FC9CR4Q6I18Q8cBMcBo=
+       type : 3
+       code_elements :
+        type_code : 2
+        p_codes :
+         -
+           type : 18
+           enabled : false
+     -
+       name : IMG_DeleteProject
+       identifier : 0x21051a0f04d63c46
+       internal_properties : BQAAAAUAAACpmyRGz9WZqG5g+0CX07rp2Mv9o6dd2VNARMRqgiZD/x0+f8WK8XLiLougB9+GbxMUxP7VNdR0FlJ7t3g5QGo1v/1uK7xIdGQqT7/LWFyVJ/bkyUnMsBR5oeLQnwbMBr8viV+cXuPx+ahKocVxkOcWo+aH/5Q1/HU/XJ2j3a/2WV4U2uSov9746iUsFsAf/X/0kC/3XxvlwYMQaP+epuLhuQsbR4O6V9T6Dv4e+btblzJrxdXViv2a5yEj1pD0RN4XXWSsD6oqsGb1emT9afTdWBEs44ZLi0173mIUuW+OXRx517kWCYGm7FX/qCkxkuxJmOQCoPZ7hmlAsz7rRrK0DnK1Xssvl3jT9Pb+O1ArRulXR4KONdyFCDQnzu5haIia+5Q0d81oAuHtrm/1kwZ+uAXNfC/5m/LS6c7Iyrh6fDofA3FtB0jh1FUPAc/51VujHQzFM2TMzJrqaeZGOIIMoKmKaZwfTxlxUZrH6ZOlRsx9whEvkc4K6gq9KDsmWS2leNka8BNYgCzfgI9QbYtn1/Z5ssMoMmgqFIU5D6ZfVS9oe/KKr5D7LxdgaFzMIHi8wLach4RRafKRtX8d1fd7haIQKxA10SeyJgDS3mWKKDOs4ZGxNXZ7rswLtXAOOWmN/5VTvGiJelGteUCkTv1oHi7logyneRdg8U4PdnUyIZjt+qyLCuTbCA/YBEIHkUqOhrY1LD3sCubwfEXnqyOivgd2QrjSlStqAPP2X5/hCWFAqNJYivighiEyHBq4WnGo4WzZPFS0fZySBbqH2sFNmtUHbtACdJsCD12xqJBoeg12Iz+z6N2leCR1bg==
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            b est un entier = TableSelectOccurrence(TABLEH_BaseControlesTechniques)
+            
+            SI b > 0 ALORS 
+            	SI OuiNon(0,"voulez vous supprimer les contrôles sélectionnés  ?") = Oui ALORS     
+            		POUR i=1 À b
+            			
+            			HLitRecherchePremier(ControlesTechniques,ControlesTechniques.IDControle,TABLEH_BaseControlesTechniques[TableSelect(TABLEH_BaseControlesTechniques,i)].COL_IDBaseControle)
+            			SI HTrouve() = Vrai ALORS
+            				HSupprime(ControlesTechniques)
+            				
+            			FIN
+            		FIN
+            	FIN
+            FIN
+            TableAffiche(TABLEH_BaseControlesTechniques,taInit)
+           type : 18
+     -
+       name : TABLEH_BaseControlesTechniques
+       identifier : 0x21051b41073be832
+       internal_properties : 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
+       columns :
+        -
+          name : COL_IDBaseControle
+          identifier : 0x21051b41073ce832
+          internal_properties : BQAAAAUAAACHQ2q6gun/9KzO9ZaSLLDv77WnU6es2NyVF6xGQaVEmcegauA3ftbXpmt5TTXyp/+8EbFIBzKZtWbQtqz/vaafWG2bKhsGKtPmAwtzYhOTF3qZ8qjJ97aTonHRwQ8okttNYNUAhHjhSXgUuA+ZIPB6rUTelClnHpgfVKIGoQiKb+aS9zv5iLf+n6PFRPyr
+          type : 2
+          content :
+           internal_properties : BQAAAAUAAAD/ZfLrRguU1teSPFPhIVtZHVeOt1qgVKZ69CrH28JwPk3EiZUIi4U7xZMEptUEkKI8cs4evGfOOvLORqdbc6HxV5ZeASCNREjklz7HaLF/7uZr3ogRjkbcf3//A9rQwtRleR3NzWRqg4tID2xGdg3gFq3H5aOADkkbpgxnxu6IewlvKOGpbY45X54qAPgvgXK7072FRBdRrWN4FTCwODMvLSSqdg8K8m112w7lZdvO9dhh9Kw4sxRgks5pTnUqMf2p5F1VDX9BbENJrGcw3zgcvIewsU4blERqsvmGCL17Bfrla04fdD7zgb8/RSr02aZx0S20wZtoc+WyQiiMiZnpWfS+3Z+ODXjbz6dOs1209syXxFWvPjuT2mpC0wvozSCNSUbagEfQL0r1evWsxurW3U612HeFW/cMxKHPo7gcbLYe4V1kXAnU7+i3mmDGfCzopx+eUxjcwWGZU9eAl0DZ9DAL9EFk2D9di6qyCYTX4QErfoMu0Gj1L7wu5ch4j/j15cUxngCefsgs5R4GVVdR2kezu0vNyxL8iMuX83I3n2QLVlsq74HJX+O2TQSMsXYoxOpnxU3t4znY5CWjXD8TGFGoGN4lIoPX/ZJWhcFLxGaOb20UPenJNzfuHX7vuwu1HFBtAN+/KPtF9t3mlxioqpn1jIbq4SAE4+EmYAlA2kJYFfV0BCpxV4meLO9pjWNHbwjAJ2nc2iSse6rz5dqMWq6sPrn6m+Lb7qE6SmefI6gzf3cKKobnkUueiVaVfuAaqU2pLqeHipW1UUbLV6WKWw==
+           type : 2
+          code_elements :
+           internal_properties : BQAAAAUAAAAAG2IbkF3i/mhvqPnm5SB8ccf6KZ/SxdtlBgOr7P/0470d7/cIr37f5uR0KkbeX0HQFx+OSoH+RTwBfDPaKbXynAwC
+           type_code : 3
+           p_codes :
+            -
+              type : 276
+              enabled : false
+            -
+              type : 277
+              enabled : false
+            -
+              type : 278
+              enabled : false
+        -
+          name : COL_Indice
+          identifier : 0x21051b41073de832
+          internal_properties : BQAAAAUAAAA7IQh9rx1943tn3HoSAzpbasJnNPhWnrWaYmvoub/FMAvtM/j3WX2JMHzUFsU+69/Jx2QQvVq5tKh2dhBaYHAJ/3NcCu45l77mUw2IHKH+8cfNbAKv4w99Hczbg67NYjZrgdE0GBPLDsvhamA5FO05N8leKTMiw1ymF6xTkyIWeJXF05CU
+          type : 2
+          content :
+           internal_properties : BQAAAAUAAAALiFx9sZn32nMTuViGcYpIq4Zu5gn2jLmGgjg5w9nENlB0h5BLC0QO4GXOLoYQwFuwF9bOG8dA0xAcZDU+Vo/AaxWIUgpxgjIYWRB5wT9Xl+oPl9KATfADNM/VjyOa8a0XMY1v/kMQHF06+Q75LgKq1gJW23wCKtFVeBV5fff3DzCJ+4rd8iTvT+LhJ7nUUE4/m1+Qpm9mU0Z/x3wriErkCCxFKYtpeqav4qm4OM9pkNxMPqRvKn3RuOOwv2RhCZ36T2u2Jp9zXBmyr7D6jd4gNrvydlD0MIGHzCFUGqBiKAs2zgYkse5oNjI7ka6vcGP+QeQEQPZcnDh95V9TgDA1i25UFiKT6tO+ufet9rMgMXRo+fBJP3lgzsohKMVj19GTrC2MNLcbjikiOJJ3iwYg/QUPA/l1K8TcHrYRwI0uw5YJ8mJMZgTu2YVxZK7tFo2D2H7IYV8LBNoFVOVDG/Jrw5fNz6AYVcAwwknjE+l5p5WgzPMbe+R9LhV6RkbhTvDga9NHkiLpFhGczpazfp2OLVbdJxn5LPWaWkiHZRajjOYttxXlAinlrDv8xc7JjIxJI3wsZpstBfuNReC905jfPBhs6mzaKLW9+VpLr/C0Baoxf8Pz7WAmzU2d4pyJJP0N+BDVMoGkzBhTNS9HYZxDEF9MAsPTrnUNDQsXQbMhKHsKgCbpYrSfIA5J1sdInjcexk3biaSTvByzJGjjm4oLLu5+P5Icka6tSzp/8kEb2r4jTmjjEJCY1CBTjl+NAgU=
+           type : 2
+          code_elements :
+           internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+           type_code : 3
+           p_codes :
+            -
+              type : 276
+              enabled : false
+            -
+              type : 277
+              enabled : false
+            -
+              type : 278
+              enabled : false
+        -
+          name : COL_Désignation
+          identifier : 0x21051b41073ee832
+          internal_properties : BQAAAAUAAAC3LcMn9dEtZ6vkawqbQeYqbXfFh5q+TQxUE5wGjn+NBVr66Hl3Zs+ES7WD+m/j/2NkxyLZw3poKpsKUvLcgdRQYM5z1ZAaaZIz70X4oLXUST3xvNpGmF8zmiXc+KRVBsXt5rlgUZ2VWPS1tm0i9be6
+          type : 2
+          content :
+           internal_properties : BQAAAAUAAAAt6+KPuR+qu8vWSA78WSRVqw0GgskmdXnSLRNWm4BoP2gBQ0EVNcn5uq9duaH/tdMlh7VWF+NIve2BTJYrJHlyO/l2B83m6yR50jEVJ6O7qqULjzktwIJY7OJjr5JkemWcKY0bt6ZqvOBvcZONkhwmOySoLaZjpxuml2FjuKOlud8V3nkNPiQhr+kCh94w/hPNEeaBkghJ5GQnQYiGCIr/PR7WWHJlHfAyVqNahrVVlMEnemPpP9r6sG/U0QTzmkY24l1fFgvavD4zMkVtuum28GAZuhD0z6UTs8+XWftRbQmhNDHkO1Woi5daxuyrjdXcbDN4e/LqErbqcKHdkKF0+bjM/pstKD5sIO/CNUUh+Z0SebzleGrG1pcmenn8L+0Yyu8GvK6GTzY2z70XN5D23ZUPL6DD0OkOk8RZ0IXKXFo3DZixvmKoh834Xs/fNizMemXzujwnpw96WNnPYnzfSHXLWaRuv6vH6OPELjv3E3XopsAxsDHR6auZq+PvE/pliNMO+V4hdsDjUH4LdsNLcBDx3pxDOuaAm9onCBn7HQ7UGigF5aDbs9J5ZSG92aBkByqOagc8P3mrozPet1WrsEaAHUUTI4fFfg8GQGzJPGQndWj9G9AdSYyHk7/wQ013ldbGfw0MYgGq/69zPpqoYBxzP19ybjgafOYaSThTCqByVwFDS0FHlWtqVbhytwZArz0rGTKVSgNZUbWLjeDkXr5hcjP0MpL3KNkiLQTTGSs5hhLYxw==
+           type : 2
+          code_elements :
+           internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+           type_code : 3
+           p_codes :
+            -
+              code : |1+
+               
+               
+              type : 14
+            -
+              type : 276
+              enabled : false
+            -
+              type : 277
+              enabled : false
+            -
+              type : 278
+              enabled : false
+        -
+          name : COL_IDArchiveDocs
+          identifier : 0x21051b41073fe832
+          internal_properties : BQAAAAUAAAA/60Ji6uTUEvSsupca4LIcas3nY5lKc8Yeu/jzXuS0qlQsvo6gyPE8egEfvnUXZYQ3obbaj2L8aTmDJoDK4XYErENtJozZvwg8WcQr3n+4zGLE15hNDg/dkZLCCDugEO1xIiB8n3ZfgzaC17HjVzT0KHI1MwqFYAdea2pfY7hoTsw7DOLBR1fWp7vtHJQD
+          type : 2
+          content :
+           internal_properties : BQAAAAUAAACBIvdIc7hPJSn+Y61CHQFVoAH/XKxsVZ6BeISq9mxON3LlaZSh+ywSqkgFWgGnN3bgGLJWs+6fUoG8tTfX6fi/Rc84MmpoTHMIqfBxg+K6lhjbrZHhhMMae0o8G3bsAg468SG2p6vHLo3oiFUd2BWMBDHIuB2DsKdA9xHFqiCXi0/Xte7lc1gU+carlDXMZVave3ZIilUILIBwCwDy43GtVpx47h9lfPn8Ur2CA6G0GYCzh/rRCcor5WNld+35PtUAZmmYILhXKk7P+yanGWuiZtOW+ZPLDUwJIxwUdFCsCEklV3KRYqiiDDtCVF6P53ofRrNAchWt4L6ItbXl0ccRoR+8Z6ymOlDCOpub43XhP6TxABs8SnwrDJDlITGaW6LKIP0oLInxRpwzHI+aywDzyV75MfYZEmo4dtcVdTne60ZE417D0lBDjygzxtDfOF3sm6f1aM7Ttu3VU98EJnD48A51W768DUwFUYx2ccVjJuU9VK53Sunwu+6MWSCp2VNhc6degaCD+/p2k1zgzOXWHDWN/tzBsJMsssG5sZlHYhZBqMZX58R++2vC4zal0/e4bG5WRnfKqkvKwoeBXd9Ett8KN08J37atz9CAK04RFaoMuRD1p4IG32eip3RWHT7L1k7yM4mGefHLIGn2iMzzyFuTywPakHM8L7maUlQlB8CtOQsdF9/Kh9RjHU+MpaHKos8194oNWTk9i2CfjxYEnP9cKXtMchoGW1iZV4z1hR6q+FFvT8rC8rkGLY1pJ+/xhIGHQ74OSjTrlXsCivQ=
+           type : 2
+          code_elements :
+           internal_properties : BQAAAAUAAADPUhtC1xovqz+ADS/X5gkFxCzB0jSPYDzQUShW+XXVjKqEaSLjvcBxJKxaBmK0MRHwx70uGtu0+uFm0eaVbu6p1cVL
+           type_code : 3
+           p_codes :
+            -
+              type : 276
+              enabled : false
+            -
+              type : 277
+              enabled : false
+            -
+              type : 278
+              enabled : false
+        -
+          name : COL_Fichier
+          identifier : 0x21051b410740e832
+          internal_properties : BQAAAAUAAABOYH0JlN8Wq4+AyLgJ8Rnxz1TzxUN2Y+dCHFJQZwmxgp75z2G6Re4t5zTOtjEjaI4lcA2LxIRWb9RghTVo6VMz1Be8wTF/sRTmOSS4pyLANWO129XqrP+KT0w+o1XsFSDzAZT+oT7Wj2RRcU5thETOMCjQXC1iQxaMr9E+d2ZKgXYuWWFVxAyq0ETO
+          type : 40
+          content :
+           internal_properties : BQAAAAUAAAD2qJc9IrPhAnAv8b93PsUp+Rx6R+m8m6cRzZ4amDqw37XHqIEDV56Qmtj1osfN5IKwIuonJNrrI2unJCfgSgSCDPfNs8bmdzHmH5E/zNjRa5V5aa57ELojDuzq1pEJRkYh0OKDfV9HWEeKtaS2TIVll9pS0yz/v+nV0eUbhKnX0IaEUHlX/rgmIv4c0LI3BCrzG+R7R6A4XDICRwrT4kIRtUtvIwVbwLbSHASzmW0BT49eZ+HSJWKLaixBvzcrjZFwFEVB/RB2CC4OoeovmDw83yqUZMTICdjZalY1dtXB92HnxniLwAQKHgcCYSwIz3oJ4feHOueUjRBltt3Ve5eArAu6eedlNRaMBHbcfxtAU+cbcbOl0jj0yxWMYgRB0vPXxVZ3zw==
+           controls :
+            -
+              name : IMG_Fichier
+              identifier : 0x21051b410741e832
+              internal_properties : BQAAAAUAAABzg+4oriS2t0jYBYp4yM8gU6T0MQHBFMfa7W0MDsmJu8MOki2RzpDNp2wgus+q/6Dl7ZrWg3O41nP3HXqlmeH0iS2ukhuP1b4ImBzst4j5g89WnyBgyA+pY1Hy/0u9rd84XzQIeprpsj6HA5Ty0f7o/b3088mUwJRrB4xP3wlMewIgV/ZAbdZ0smFmXLiPTMJuJTSr25dxPMCasCAOIKsswMNbTk15eC93JB/tq1jQXcsk0R/SCHfirNGpjZpejBvbVrrkiTJZF10bvGVU+WKbxgs09DBnvI+G6VsjDOQLEbbcl4CPYXD+MBqyt5QlqsJNbTO21UdiXJjJGv5SKPU19DuCz8KpDOHKDx7KUS2VWCBitsXCozC6M1HXZcXqei0n9D9/CLjih56nX8amFYqM8n5Vh9jNvjFA128A+agxqdpgXBN+0mZDUjED3FWsmyQrZG5x9kqpR7ATahn6+TP6IDqCc19uNFco+gYi09sgAhgcH2kwsU9XB3ANQM/NEgclWxGMLzO3jD/3yH2u0jFT0KpPRaxv48TZQkSz9WLr7Vciz49Sd8WOwnvb8iziM/MkAyT83wbFu879YQ4qIVCou8TCsrJv8hV0jZIstX8oCj06Q1rOGVuMXhCVuFh2Kx6CBXdHA7QU80FK9qj8Fo3vL7dpME/KzihHOKYRjbztMVMTnWAk8EVkR5W8K60mTDY4wJw4elm1trKtaLU8EMbvOWYKiWk3LhLrRTKwdnLEyVV6ej7CKhtJ7Unqg0e8TIx3zm+Mk9XmcLBS6g==
+              type : 8
+              code_elements :
+               type_code : 8
+               p_codes : []
+            -
+              name : LIB_Fichier
+              identifier : 0x21051b410742e832
+              internal_properties : BQAAAAUAAACg87khblZYiyr+arj0Gnw0XP0HuiPzful1++9EFW64ZjV5RR8F+oc8sEfkyiIlY8xI7WY19xaJcR10GFOHFbHXkWz7ZMgXiXCtzMOwLMhrJQ7afcHkk3wzNLsu7fnTy5OZi6qeE30F7BiLNZT+NoduiYiIRPLnRFKU1CEXTXriE0YakwyyD7SfDQNFz/qHvybWsi9faFuJMQUog1HQhY6hv2gNo1ICQFV9X4Cg8ZsJAbcT40t8TrVGR9uvUT/Z3lovyYcrnjaSicUB/6pvQ0zBCJYNZPm87CfE4P63QqM3Arllh8jFhRSa4TvE656Bb7+JybCnJPCTu5TSJT5AuebtkLxMVCtVKu+AE81XNzFJ2WbdtVHkD7X0lfY3uKZm4sI1MQ==
+              type : 3
+              code_elements :
+               type_code : 2
+               p_codes :
+                -
+                  type : 18
+                  enabled : false
+           type : 40
+          controls : []
+          code_elements :
+           internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+           type_code : 34
+           p_codes :
+            -
+              enabled : false
+            -
+              type : 234
+              enabled : false
+            -
+              type : 43
+              enabled : false
+            -
+              type : 42
+              enabled : false
+        -
+          name : COL_IDBaseControleParent
+          identifier : 0x21051b410743e832
+          internal_properties : BQAAAAUAAAAf40KDJH0eZYET+kcdX4WgnNGW2Ajh4T5uRl58nZ6dq3rmIijbR2ZGbk4PPFdkYVnN3KW9MKHBs5KTfrywzk8gkPPZntUbCYEKXoM4NhJE9oEwHySj7tfSrcpKY/byUHUn2imvt1DzG8tVctUtMjwDkCSmdDBDyjq4jXstiqbMWS+DHuzxfYikZNCf9oqN7P/BDRHk
+          type : 2
+          content :
+           internal_properties : BQAAAAUAAAD9zhPkJxPqskarNHQdSj7gvvHvfNzs9VJ0IYu0sEG3PJoYc2rxuasKoa5hRljM4ixpRZbYqo4bmAdCK69ZARa5QUmgdFSUVMX6O96VWRYUVHxlSadbmBO4HWwuE+jMCHg256GY7fM7DJeS6pEb1D+mlL+AImszBAVSAa+BMLz9dTt5fdjz84xul0wpjAd0L8yPgaJ2BAHQSmJSYZzgf7//zqKM5KGJTNsiUDsmwb3G36ytnySrxbJl06kjM7MtkKMk2NHqilRPkEhZ8aqd/ZVs1vlGq2XnPUKbbaI8XiAWckUXT8R/KowEXoV0ZKDfyUDr/PemmE2pEsDiwzUn6Xln3W1USWp25iYwGMHH8XGfYVjXFAGWJlTBfrKbKfsCIQhiCh0CwgGlL3VWz8rFaNMiZo2oUoeCVxvpqap44N5BCufXThPUxymUxO96vf+MiywtVuKqvVs8Ky5I5ka7ZwczvV2cdEPVIkXCoGtNAFbWnco0g49wu0bpoNXjBGN6zGrm+n6nruW0tKMhPmv3pYBtNcgQ+91GORylvdwg2HJySU8U8zvI1LU7ZBYt/klyUrLlAzXfA7wLf9ytBfIEaibPo8Z5mLjm0JN2anvThlvAoKdzKHHqLCNL2EL9gldnGNVgbZ3DRGZvWpYi51iFJU8SeZaugAxPIbw1WlSFDVVo7jkYrMieiEz7/KNCcOIRrKRfOVa+aD+mWv5kxdwDxKKWlZM1MFQVqmpVKj3yzoqp/F5bZXJThJYaGgHuBXVhAcc5Rts7k3S63JKPyQ+e7gg=
+           type : 2
+          code_elements :
+           internal_properties : BQAAAAUAAAAJEGEYlVD14X3yO8hVNJ+tIhSp3uSFaH4O7Z46E055t6dgwJh5Pg9ucX+fx9spim7/xk7f+9BPFM+UjyDPJLDvmwMJ
+           type_code : 3
+           p_codes :
+            -
+              type : 276
+              enabled : false
+            -
+              type : 277
+              enabled : false
+            -
+              type : 278
+              enabled : false
+        -
+          name : COL_Action
+          identifier : 0x21051b410745e832
+          internal_properties : BQAAAAUAAABMYntj4vqrrJCfz6ecQPG34L3V1T6hJaMW2I4J/3xevI9YGLgGUQAFRO6tOH20ta5PVby9C9wWxaz72Chb303fUL0iTzrA8jJ3imUjfro/tWu519cYaeNIySQb0XLHNLmqS95dzd6kliwFhc3mJ+8uSOjYrF+/K/1SGTlL9fbCe3QqX2GtqvaUzkLM
+          type : 40
+          content :
+           internal_properties : BQAAAAUAAABMR2diJ44CmdWp5o7xiNNcQTUKf4nhsulXWyIOQQrXtbVsIq1ubu/a31byttJy9HP/m2VRKofO9F/RTJhUrinbKMZZJJKyCcoJNlCBr41TktojhdO/CTMPaGlXlqxDncH47fid99Zb6QskEdYV24Gr0NkQhURNna3yT1MG2I4HbZeJWcUxxQUnTp6vnOaCvVHGOx3rKmN9BYL+3s00b9pYSUP+df02Xfeu3Bu1n+1C6A7d1VVl+JOGiXmN5ehLObfrALrGfzUi2vn2eryZlG7rDDy3wcyRglbJfPOGbAvVuU0+RAtcYOPb7654Csc6XINT1qoSvLbak9737W19rJK56tIAqRYYYXnsCHAfR1oPnSV2E5vr5/bVneOqnTvsza/xNYNcdxw=
+           controls :
+            -
+              name : IMG_Ajout_document_Archive
+              identifier : 0x2111bdba1292a8ff
+              internal_properties : BQAAAAUAAACJCEnqzMckhFIpyg5w+0De+0i6mWTHnkB9iJuXO6+MPZOexsto5NKXDd75V0YAhbitABRWHQsDWq4BL0Ow8LkspmSd8LWJ+lsPE+9WhQrpE/iU+xH3F+4Sk5nR5/sBep/EVXXQRx7GJcFSkGO9rBE4YRihgT278/nZAHvAJQFB6T3+H67SO1J6qKXpRhdGh/3vLWoH0vf3mzV9iXc0lcJQRdBWCKSlhsNRgI6A/DaG+ggrByvLhPiaQZCgekDvvNlrPbTyNgHxkKMMyoKJ8tJsxMVH5tRoRhtVRqadFV2XUUp3I7I9FfzBQyR/rgnI+4DONWUOxk6FEYRuXAMxGSM6SEeYFlO8IPwQXX81zncgbL+F31RiJaButnCxnWdkLrUgR0rvx3ClKVUp+hTYfOvN2910k3Az8VmMoFoupvzCm2KLw9/Hajk5CeRagzmK65nuhqkyujpr1axtRamRoQdx8/YODWz6OmZlOWuvhog5CaxlthfoA73hkE8QKwcSykRumGb36m038KbStAFe4DxLnVe0taZPpWTNR706cVDxu8+Xqo7F1HvhUL4iN+vKHzdNKiFubAltmRV9qkOW3YbUpHdC1pciDamIe4FfSknLqMCKhyJHO40gv8XZrLg73MTEToxr37e4HI+6JSJRE93nmRM0DCtg6mViANwh94mPVjXSDSHDfNrUxS0Qfnck8OsqoUXmYW8BMQ7ZVbjPwCaD1R7BFm3UQr9n45EFcYn8O1eFfbRex0evhgGcf2hH2oTb6X0HxQJKDnoXfp5+auZpGgu2wCV9M1p9Ck+if5TTbF6AiA==
+              type : 8
+              code_elements :
+               type_code : 8
+               p_codes :
+                -
+                  code : |1+
+                   id est un entier = COL_IDBaseControle
+                   nIdControle est un entier = COL_IDBaseControle
+                   nIdArchiveDoc est une entier sur 8 octets = 0 
+                   (nIdArchiveDoc,) = Ouvre(FEN_Archive,1,0) //1 permet de specifier le fenetre en monoselection
+                   Si nIdArchiveDoc <> 0 alors
+                   	
+                   	//affectation du control par sa fiche de controle
+                   	HLitRecherchePremier(ControlesTechniques,IDControle,nIdControle)
+                   	SI HTrouve(ControlesTechniques) ALORS
+                   		ControlesTechniques.IdArchiveDocs = nIdArchiveDoc
+                   			
+                   		SI HModifie(ControlesTechniques) ALORS
+                   			
+                   		FIN
+                   	SINON 
+                   		Erreur("pas d'ajout de la fichecontrole")
+                   	FIN
+                   TableAffiche(TABLEH_BaseControlesTechniques, taInit)
+                   //reselction de la ligne 
+                   TableSelectMoins(TABLEH_BaseControlesTechniques)
+                   TableSelectPlus(TABLEH_BaseControlesTechniques,TableCherche(COL_IDBaseControle,id))
+                   
+                   	fin
+                  type : 18
+            -
+              name : BTN_Fichier
+              identifier : 0x2111bdba12a8a8ff
+              internal_properties : BQAAAAUAAAAVcKaJWdQhR/2Tg9BKc5I94cft4oLuWYmv50qBst7381+McAch/XlyT9moSaEgQYRxp4H/5JO8DHCFJWkmv3JsUbycDOuQhhjkhEZJ2pIlh2+Sv1+Mh7pb396GLR8qizvUp1EpsJJv4hMfFMxROS06hjX92tIZjxF4bR2MPpNPCJZJrPaewJgHMutCDnyDaAlzZksA5ayq2cI4PTDaz0BHhX0BX3vCDsRVECr0b7mFOMUWR7u87c1lJm6Z9s9WhZ5hZi27C11n9+fsWf7d6dQBCOIIoZ/gmmeE/GIW/W4TQlwszaTtC5lFW7C59M7LUwFidBblEicNJNFkfbZae8KQvDOL4aseyYDR2F9bO4of2G8k6tCPiu02Z5PIwEY9Rlsmy4S5kVlG+FFeFEVlsu2JLehP+0yntGheb1djSOg3iWbItlHkFKdmvgWIHbGEYxRDfl2RPUoCASPltoPFsvDksLuCw8MPJ6Ko2euzyEVd3Uv/QWIMo+lqcFAW31rVXH8pt7F4brdJg+puSMW95BNPP2VwuB36LucM86M49EnU0xtPrZK9gH/D7AHlyChTnmZGIZLxsL6ZUWrwMjvArQyq9QegkPosLYL/pVfcQh4WoxWUonA4l9srXHg4CqFq8NxdJhqlYIaadx0oXiP43x726McgS0KPGGjVmpYAAhHmmBJlYQw6jEAxNsUhjnrvI5BAlhAaglOeA371QKthD1kq9OIln1+bD17WNMrWPAXuraCZfmdXB7rsy9P47np/9zlCTNZRkzMc58wFVOe3mjdudoH4ULeexLkdPPQ=
+              type : 4
+              code_elements :
+               type_code : 4
+               p_codes :
+                -
+                  code : |1+
+                   sFichiers est un chaine
+                   nom est une chaine
+                   nIdControle est un entier sur 8 octets = COL_IDBaseControle
+                   id est un entier = COL_IDBaseControle
+                   
+                   
+                   
+                   sFichiers = fSélecteur(fRepExe(), "", ...
+                   "Sélectionner un fichier", ...
+                   "Tous" + TAB + "*.*"+ RC + "Fichier (*.PDF)" + TAB + "*.pdf"+ RC + "Document Word (*.doc*)" + TAB + "*.doc*"+ RC + "Document Excel (*.xl*)" + TAB + "*.xl*" , "")
+                   
+                   	nom = fExtraitChemin(sFichiers,fFichier + fExtension)
+                   si sFichiers <> "" ALORS
+                   
+                   
+                   	archivedocs.IDCreatedBy =  Utilisateur.IDLogin	
+                   	archivedocs.AccésPublic = faux
+                   	archivedocs.Nom				= nom
+                   	archivedocs.Taille			= fTaille(sFichiers)
+                   	archivedocs.DateDocument	= fDate (sFichiers)
+                   	HAttacheMémo(archivedocs,Document,sFichiers)
+                   	
+                   	
+                   	
+                   	SI HAjoute(archivedocs) ALORS
+                   		//affectation du control par sa fiche de controle
+                   		HLitRecherchePremier(ControlesTechniques,IDControle,nIdControle)
+                   		si Htrouve(ControlesTechniques) ALORS
+                   			ControlesTechniques.IdArchiveDocs = archivedocs.idArchiveDocs				
+                   			si HModifie(ControlesTechniques) ALORS
+                   			FIN
+                   		sinon 
+                   			erreur("pas d'ajout de la fichecontrole")	
+                   		FIN
+                   		// ajout du document dans la base de donnés des documents
+                   //		Documents.IdArchiveDocs = archivedocs.idArchiveDocs
+                   //		HAttacheMémo(Documents,Document,sFichiers)
+                   //		Si HAjoute(Documents) alors
+                   //			//affectation du control par sa fiche de controle
+                   //			HLitRecherchePremier(ControlesTechniques,IDControle,nIdControle)
+                   //			si Htrouve(ControlesTechniques) ALORS
+                   //				ControlesTechniques.IdArchiveDocs = archivedocs.idArchiveDocs				
+                   //				si HModifie(ControlesTechniques) ALORS
+                   //				FIN
+                   //			sinon 
+                   //				erreur("pas d'ajout de la fichecontrole")	
+                   //			FIN
+                   //		SINON 
+                   //			erreur("pas d'ajout de document dans la base des doucment")
+                   //		FIN
+                   	SINON 
+                   		erreur("pas d'ajout de fd'archive doc")
+                   	FIN
+                   	TableAffiche(TABLEH_BaseControlesTechniques, tainit)
+                   //reselction de la ligne 
+                   TableSelectMoins(TABLEH_BaseControlesTechniques)
+                   TableSelectPlus(TABLEH_BaseControlesTechniques,TableCherche(COL_IDBaseControle,id))
+                   Fin 
+                   
+                   	
+                   
+                   
+                  type : 18
+                -
+                  type : 161
+                  enabled : false
+           type : 40
+          controls : []
+          code_elements :
+           internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+           type_code : 34
+           p_codes :
+            -
+              enabled : false
+            -
+              type : 234
+              enabled : false
+            -
+              type : 43
+              enabled : false
+            -
+              type : 42
+              enabled : false
+       breaks : []
+       type : 35
+       controls : []
+       code_elements :
+        type_code : 89
+        p_codes :
+         -
+           code : |1+
+            
+            /** 
+            
+            TableSupprimeTout(TABLEH_BaseControlesTechniques)
+            HExécuteRequête(REQ_BaseControlesTechniques,MaConnexion,hRequêteDéfaut)
+            
+            
+            RemplirTableControlesTechniques()
+            nNbreLigne =TableOccurrence(TABLEH_BaseControlesTechniques) // permet de détecter l'ajout d'un enregistrement en fin de tableau
+            HLibèreRequête(REQ_BaseControlesTechniques)
+            
+           type : 14
+         -
+           type : 35
+           enabled : false
+         -
+           code : |1+
+            id est un entier sur 8 octets
+            SI TableOccurrence(TABLEH_BaseControlesTechniques)> nNbreLigne  ALORS
+            	
+            	SI COL_Indice = 0 ALORS
+            		COL_Indice = TableSelect(TABLEH_BaseControlesTechniques)*10
+            	FIN
+            		
+            	ControlesTechniques.IDControle	= COL_IDBaseControle
+            	ControlesTechniques.Désignation					= COL_Désignation
+            	ControlesTechniques.Indice 						= COL_Indice
+            	ControlesTechniques.IdArchiveDocs				= COL_IDArchiveDocs
+            	ControlesTechniques.IDControleParent		= COL_IDBaseControleParent
+            	
+            	HAjoute(ControlesTechniques)
+            SINON 
+            	HLitRecherchePremier(ControlesTechniques,IDControle,COL_IDBaseControle)
+            	
+            	SI HTrouve() = Vrai ALORS
+            		ControlesTechniques.IDControle = COL_IDBaseControle
+            		ControlesTechniques.Désignation = COL_Désignation
+            		ControlesTechniques.Indice 						= COL_Indice
+            		ControlesTechniques.IdArchiveDocs = COL_IDArchiveDocs
+            		ControlesTechniques.IDControleParent = COL_IDBaseControleParent
+            		
+            		
+            		HModifie(ControlesTechniques)
+            		
+            		
+            		id = COL_IDBaseControle
+            	
+            	FIN
+            FIN
+            TableAffiche(TABLEH_BaseControlesTechniques,taInit)
+            
+            //reselction de la ligne 
+            TableSelectMoins(TABLEH_BaseControlesTechniques)
+            TableSelectPlus(TABLEH_BaseControlesTechniques,TableCherche(TABLEH_BaseControlesTechniques,id))
+           type : 20
+         -
+           type : 22
+           enabled : false
+         -
+           type : 24
+           enabled : false
+         -
+           type : 23
+           enabled : false
+         -
+           type : 25
+           enabled : false
+         -
+           code : |1+
+            
+            MaColonne	est une chaîne
+            MaColonne	= TableInfoXY(TABLEH_BaseControlesTechniques, tiNomColonne, SourisPosX(), SourisPosY())
+            SI MaColonne = "COL_Fichier" ALORS
+            		Ouvre_Document(TABLEH_BaseControlesTechniques.COL_IDArchiveDocs,"",COL_Fichier.LIB_Fichier.ValeurAffichée)
+            FIN
+           type : 66051
+     -
+       name : IMG_ReculerControleTech
+       identifier : 0x21051b41074fe861
+       internal_properties : BQAAAAUAAABFnh0PKKJzkOuPAjjGEpqLgvE35UIx3PsKmaK3mfcuQLM3CDXOxVg2Xw5D1DWlR4ce4iXS2PlvGdj1cji2rGURS3WiYxA3IXmubWvVh+8SsPQqJoX0AT23dcnvwtY1DsiCLGGxjCpN5VCd2lBkb3KRrVv/KT9eYhm1We+Gs4E87RkCjCD6RO7yJf4MbkGjQ0sNX/qum5p64osWyoLEtSROrMMlnIPj8QZi2oMO/BeBziM6bmisSoTSmxmw1TcGfDWwL4Ldt5fK5GI7DQbOvNQS7Zg3psgO2YIY8heIwNTFLyXPOvYpIpEo60OKncWmhF43fjTu1fxWo++ksboAqMeCCy0IJs+QngchZebpXzRUNNgt608wxK2su2DKPz+YyUrhH2u0rZr5UOwbFasmPESGq2BEz77WdBXZAlJbrbDNji4qv8fAtVK4DrJBbhgPoXhd0x3sCVJqCVjGn9p8bqxpBJGHQhIALaFn4Ax/MaRcS6pS4QJR6W2E1bBTl/RPScp6z7QO54t9cPHRBPcjZY3mMtClqwffg3Yofj1DK7gWZ7z9xJTUmWf+LNlfZCs2a6hdWzrs3jg3uN3EXYhyZeTG8nWke3QOb2yWV6GYxF7lSwJ4rJJsL3XODhv4srLP2K2opJgMJh5bP+4l57MqAw6HLP+kXp8XQ6JJcJI7pZzdszuj1446zNWBMsPhgCOsgzLlTQqAwqY0AkOhlvykLggBx7uxam16udImKh9a5jVd1mkJtx0AQYN8ny21z9rVkQNliyqMBzLPrZ8BLnwsRS6+ip1hjUUN3sKiO36Lc9vzMDJqFMQ4rttSVJaayqhByWcia9rrcc3A3Ygm7U4t2wF+rGhnJ4/w0n8rZNW+4uw3boLwcUsv7YAOrRKM7tZikY82BOV9dqk3TtPgEIR6Yt86mfCRrYB++z7jDnoWCrSQlms9a+D7k/tMK9X1D3LzHO0Fy3TWYg==
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            
+            id est un entier sur 8 octets
+            // recule la ligne actuelle d'un niveau (recherche le pere du pere et l'affecte au pere de la ligne actuelle)
+            i	est un entier	//parcours des selections
+            N	est un entier	= TableSelectOccurrence(TABLEH_BaseControlesTechniques)
+            
+            j	est un entier	// parcours recherche des précedent
+            SI N>0 ALORS
+            	 i=1
+            		
+            		//recherche enrgistrement précendet ayant le mme IDparent 
+            		j=TableSelect(TABLEH_BaseControlesTechniques,i)
+            		TANTQUE TABLEH_BaseControlesTechniques[j].COL_IDBaseControle <> TABLEH_BaseControlesTechniques[TableSelect(TABLEH_BaseControlesTechniques,i)].COL_IDBaseControleParent
+            			j-=1
+            			SI j=0 ALORS
+            				RETOUR
+            			FIN
+            		FIN
+            		SI j>0 ALORS
+            			
+            			HLitRecherchePremier(ControlesTechniques,IDControle,TABLEH_BaseControlesTechniques[TableSelect(TABLEH_BaseControlesTechniques,i)].COL_IDBaseControle)
+            			SI HTrouve(ControlesTechniques) ALORS
+            				ControlesTechniques.IDControleParent = TABLEH_BaseControlesTechniques[j].COL_IDBaseControleParent //égaliser les parents
+            			
+            				HModifie(ControlesTechniques)
+            				id = COL_IDBaseControle
+            				TableAffiche(TABLEH_BaseControlesTechniques,taInit)
+            				//reselction de la ligne 
+            				TableSelectMoins(TABLEH_BaseControlesTechniques)
+            				TableSelectPlus(TABLEH_BaseControlesTechniques,TableCherche(COL_IDBaseControle,id))
+            			FIN
+            		FIn			
+            
+            FIN
+            
+           type : 18
+     -
+       name : IMG_AvancerControleTech
+       identifier : 0x21051b410753e861
+       internal_properties : BQAAAAUAAABoHULYiJ/v/3ADlhnKxtJGcNHKkqKmsF59FeQ+vOf84U2OuWpqRkrPdHy5tp/JM6Vcp4pZvAC3TE+hdrXM5mfmKzLl/oCm11qBq6vs3ZN+2Q7nKSQ0qJ/03k016eY9QrFIwzTQolNDUgUXJMGOrV4+ufQy7GNP2fRSe+i5i9HEO5srSRWkW+CHTHVe3d0fcbzfNmlmA5dWPeyn9uVy/CzAKN5u83V4Vdv5Xh/7huVB099Lu8MBPfr1OEvdy/e+JoKAjP9Zk6AwUT/heAX+jiP2AZOgBI4lm/Uvaq9uGibZfK5+o2ZKVokI2+g+2y+BmxztVVhNFTEOdk+h5B2fHNvYIfG1Sd3OTgBteJ/QwXwO6aUBoosDeUSDnErZoddoMv0AEx4mnyxCfsn9gQ8mQRsNK6+Eo5YVTtO/gxsoe7rzY3aQimUX76uBE+I9+4w7O4lWc+Ji7lxmfUgw6wf0sMAkIDKMQX/euZK9zIFDwAy6Blenly6SiXz+CBS9K1uxzhD4YyEyfCaS0iXy0+m5Q4HjQorEoR1BnEStG5K8po+XJdlNh09tCIJnG9xALYPxhi5CwPF+rEiyamiG5LkkW1W13rS5vR6bbJrxPUr04tMxMBShzxJKGCfjPinFEqF1vl3GFwcHaVah+z6oCKheHib7aJQvZTaQgbns5gPtE3FPwqNPi8ECksSFifVngUzEN/ucTd9D22Q0XFs5fNLtm6qzbVW2DU2uWULAySu0pHF3QyooqlOZIGmC1Sx184rmfv1q4SOYDxs/W85jL56XMABam2PrJQzyQL+2vgSFNH20nZYC00/ZJxIBzlBleLo5STBemhqjGsW7LwNxWLm/46PxUk8Q301HRjDb3TND4UTfq+yWobVNeSrmBy2Gy7xSVXhGZnu7LM9YbCemuwnBI01amhKTaWkOkGzTYGk0hu8oWeVBbtuOwSjDoMPikAyuZGOVmrKS4uLlG6qC
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            id est un entier sur 8 octets
+            	// avance la ligne actuelle d'un niveau (recherche de laigne précedent ayant le mme niveau et la choisi comme père)
+            	i	est un entier	//parcours des selections
+            	N	est un entier	= TableSelectOccurrence(TABLEH_BaseControlesTechniques)
+            	j	est un entier	// parcours recherche des précedent
+            	SI N>0 ALORS
+                     i=1
+            			
+            			//recherche enrgistrement précendet ayant le mme IDparent 
+            			j=TableSelect(TABLEH_BaseControlesTechniques,i)-1
+            			si j>0 alors
+            				TANTQUE TABLEH_BaseControlesTechniques[j].COL_IDBaseControleParent <> TABLEH_BaseControlesTechniques[TableSelect(TABLEH_BaseControlesTechniques,i)].COL_IDBaseControleParent ET j>0
+            					j-=1
+            					SI j=0 ALORS
+            						RETOUR
+            					FIN
+            				FIN
+            			FIN
+            			
+            			SI j>0 ALORS
+            				
+            				HLitRecherchePremier(ControlesTechniques,IDControle,TABLEH_BaseControlesTechniques[TableSelect(TABLEH_BaseControlesTechniques,i)].COL_IDBaseControle)
+            				SI HTrouve(ControlesTechniques) ALORS
+            										ControlesTechniques.IDControleParent= TABLEH_BaseControlesTechniques[j].COL_IDBaseControle
+            					HModifie(ControlesTechniques)
+            					id = COL_IDBaseControle
+            					TableAffiche(TABLEH_BaseControlesTechniques,taInit)
+            					//reselction de la ligne 
+            					TableSelectMoins(TABLEH_BaseControlesTechniques)
+            					TableSelectPlus(TABLEH_BaseControlesTechniques,TableCherche(COL_IDBaseControle,id))
+            	
+            				
+            				FIN
+            				
+            			FIN
+            	
+            	FIN
+           type : 18
+     -
+       name : IMG_ValidControleTech
+       identifier : 0x21051b410757e861
+       internal_properties : BQAAAAUAAABfpI8e8YJno5ny4BSHuwEpOcLQj6ri6FCf1uYYat+Mle6HKyC/lgt5fqLfN9jrwB/BnHEjWe+jbIjbSEVUjYHUh/dbQ4NA4wBb/yqSFG4xoD0w6bwazozGXA4fCxDNjUPTymx9FwVTHVi1etZpJzOEkhFwhMXFwAPVSefX0XSNG6QBS1yD3UJZTd3LcZjrdlGJ0NUQX2PTNy6Ippc1XU19tBQAS6FXtVBABhfNpuReIxgUuUbxj8nPC/udkeAiDcGr5dcMHGCijsYwHgSQOTlp66cXfNj5PLcPMdUXbcsnnzZuJc7kUDYqdgWlHk1KmQp0tQOOU0geWtOAgSKssgA+vg4xO2453cIMQBTzty2MuirFbSI8UKuiq3M5nni9+S7mXdA5+Dv1kVqcJAs5aBeL6ZodqJ3P0uVJj6oS7+IMrHdl9l/8MJTlRB7yAGlqRLqHxNMIQUtBE1RCS204g3n3rRzozaMQEo021Pqy1HorbQu+T57w/jC/CVaYYRgFlr1hiLVJrktyvxzRU5lpCyddbLHmHZzvBlbs6MEeGp2zxOe6tzkfZX5CXpSrW+SpgmUGY0s2y0IiVxjCry8l4jxCeHKxYOExe4q1QjurGN9O1VLJEkZYlwnan7YNSE9S6jKU4FUyDlrONysP+FaFFhvL9IezhrgC71RFniCwaeb/IdESiYLIO0isMuBNfXYJaFNFZ8q/GtAWP/gC88lki0oRU5lu27c4Z607CmtZAcWPsDF6vbL0yyPix7Lozo33C1vy2ogMFZfp6nK63/QoPT2Y0+255+UO3zMHBKQPpOOJ4MUtDT2b/hQKkRyaslPuP30eJwHGrKCxlbcVt5SRwIYU1JBJNAhlmON24k1TqzRN6tI14U5OzSYDwDRV7LuqXetx23JrDSeOixojAv2jJuKNbD8o8Lf6qA12JVuqJr0qUnsAWChxnvAAOLTkAN9MQmTmIOEGtvn1Mka6L4Ak
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            TABLEH_BaseControlesTechniques.EnSaisie = faux
+            IMG_AvancerControleTech.Visible=faux
+            IMG_ReculerControleTech.Visible=faux
+            COL_Action.Visible = faux
+            IMG_EditControleTech.visible= vrai
+            TABLEH_BaseControlesTechniques.EnSaisie = Faux
+            
+           type : 18
+     -
+       name : IMG_EditControleTech
+       identifier : 0x21051b41075be870
+       internal_properties : BQAAAAUAAAAfy5MDewUcv77jmmdlQeOoq7fiQdRnKG0DKLq3DdtWE+QkPK5+q6QTXMghJ80q531FyzMWZlzCkLb6zJUsMsNE6kdY04DpV/LkqME1DsEBHVro5+WuW36LyG9QH5DeW9I502coFd4xa4XUtJVctAPvTvYxeMkuhOENnA13SFoJRaro4vqe7vlPmnRkkYlwUJ9KTgqUGFE3hUa1LNr9SZY+pJUs5LtGVxGyBLXfcEBbAwoQrhQ0isFKLzvUapPJ/SzWH9DJgyEMtrPV30i41Fdgur+P/TuCz41p6kS5+jeAOUV5ZOlrWXjGEBegmyyF7p64csoeV0xWf5pfhhzPDdmNNKOz2yyPMW73lUR5VT/E9XP3p3sLgEsX5xxYHKLggQZBUzHGeWSQX6npOOGJtoCtf+SIhAtiglyxfPN0p++OaLzralHregcCJzRRWghZpVZA5MvpEF16mU/x8g1atuydXph4R6k7juqVytyJYJyPeY+y7sBhDyEcfLVGhb1QRqrq9oYlsi0PODkase9p+4rbG6HC3vVtcSLGblDHbCORX1obIRGVgu/wgwC0Q/MvvNZqUOS64mu9YHUu0mdQCERx9Vd9ixYkoIZf8QkZaG+HydCiar8rktnDLjU8w7f2Zc885nK5+MPpKDY34HzYd9z0dUgc/Xn11XhbMM1up7SlSNg6f2nUbkSw+rkm5T16/f+OXDYjmoWJiiOM0ug5u7aMBsd5EdA9BndLRSv+Zy5Ynjg+AlJqpLKJxM9GpKRWQueSLjhcidIKf+SwIqQOAtoqnCVKMiJU+3URpkngRPKNit5lleNFzLd/2TFK/wUSYsoN5VTVQfG8ybRB0DfTXId7rtRWyKnSf/iyFVVkB5cUIH4NO7rBXu3O1ZrNqQ5NpENQEmbBJUSIPaKQjnZI4djnslNo2e7PjzrnxTO70DwBRSo0uRXtBZGdqRYfBLbWJzws1JVQp3S+VyIQHA==
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes :
+         -
+           code : |1+
+            TABLEH_BaseControlesTechniques.EnSaisie	= Vrai
+            IMG_AvancerControleTech.Visible		= Vrai
+            IMG_ReculerControleTech.Visible		= Vrai
+            COL_Action.Visible = Vrai
+            TABLEH_BaseControlesTechniques.EnSaisie = vrai
+            
+            
+            
+           type : 18
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1+
+         PROCEDURE MaFenêtre()
+         nNbreLigne est un entier
+ menu :
+  name : _Menu
+  identifier : 0x20f474f807f0579b
+  internal_properties : BQAAAAUAAABSRlhFi5Y8wUr0EhuV1Jka3CLwjq+O4jlpDY/75TjJoyle9oddWd70q4gGgbQfHm3YI89XkynQtNic3/8C/6UkNhfZUmx+IysMKKS/LBiyRteYdGrX9xQCBy5CN+YdPZ9cD/qMNMaW8kJs6nGdoqE5Hzx0FZUqLHEKcYYN
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+  procedures :
+   -
+     name : AjoutFils
+     procedure_id : 1226436058928880657
+     type_code : 14
+     code : |1+
+      // necessite que la requete REQ_Délais_Projets oit executé avant
+      procédure AjoutFils(LOCAL nIdActuel est un entier sur 8 octets, Local nNumActuel est un entier = Null )
+      
+      bFilsexiste est un booléen = 0//retourné pour indiquer si des fils d'un id  donné ont été ajoutés (existent)
+      nPosActuel est un entier
+      nPositionFils est un entier
+      
+      //ajout de l'élément actuel
+      
+      nPosActuel = TableAjouteFils(TABLEH_BaseControlesTechniques,nNumActuel,REQ_BaseControlesTechniques.IDControle,REQ_BaseControlesTechniques.Indice,REQ_BaseControlesTechniques.Désignation,REQ_BaseControlesTechniques.IdArchiveDocs,"", REQ_BaseControlesTechniques.IDControleParent)
+      SI nPosActuel <>-1 ALORS	
+      	// Recherche des Fils
+      	POUR TOUT REQ_BaseControlesTechniques sur Indice AVEC "IDControleParent="+   nIdActuel 
+      		nPositionFils = HSauvePosition(REQ_BaseControlesTechniques) //sauve la position actuelle la fonction suivante chnagera la psoition sur la requete
+      		bFilsexiste = 1 
+      		AjoutFils(REQ_BaseControlesTechniques.IDControle,nPosActuel) //ajout des fils ayant le parent IDactuel
+      		HRetourPosition(nPositionFils)
+      	FIN
+      	
+      sinon
+      
+      	Info("Le contrôle technique" + REQ_BaseControlesTechniques.Désignation + " n'a pas pu être crée")
+      FIN
+      // les lignes n'ayant  pas de fils et non ligne de premier niveau sont des document normalement
+      SI bFilsexiste = 0 et nNumActuel <> Null ALORS 
+      	TABLEH_BaseControlesTechniques[nPosActuel].COL_Désignation.Couleur	= BleuClair
+      	TABLEH_BaseControlesTechniques[nPosActuel].ImageEnroulée			=  fRepExe+fSep()+"icons ProGest"+fSep()+"COntrol Tech.png"
+      FIN		
+      si REQ_BaseControlesTechniques.Nom <> "" ALORS
+      	COL_Fichier[nPosActuel].IMG_Fichier = fRepExe()+fSep()+"icons ProGest"+fSep()+"file(1).png"
+      	COL_Fichier[nPosActuel].LIB_Fichier = REQ_BaseControlesTechniques.Nom
+      FIN
+      
+      
+      
+      //TableModifie(TABLEH_BaseControlesTechniques,REQ_BaseControlesTechniques.IDControle,REQ_BaseControlesTechniques.Indice,REQ_BaseControlesTechniques.Désignation,REQ_BaseControlesTechniques.IdArchiveDocs,fRepExe()+fSep()+"papier.png",REQ_BaseControlesTechniques.Nom,REQ_BaseControlesTechniques.IDBasecontroleParent,REQ_BaseControlesTechniques.IDDocument,nPosActuel)
+      
+      
+      
+     type : 458752
+   -
+     name : RemplirTableControlesTechniques
+     procedure_id : 1232222251785957737
+     type_code : 14
+     code : |1-
+      PROCÉDURE RemplirTableControlesTechniques()
+      
+      nPosition	est un entier
+      
+      POUR TOUT REQ_BaseControlesTechniques SUR Indice AVEC "IDControleParent=  0 "
+      	nPosition	= HSauvePosition(REQ_BaseControlesTechniques)
+      	AjoutFils(REQ_BaseControlesTechniques.IDControle)
+      	HRetourPosition(nPosition)
+      FIN
+      TableDérouleTout(TABLEH_BaseControlesTechniques)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x11051a0f00163dec
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

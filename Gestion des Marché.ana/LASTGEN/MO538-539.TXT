@@ -1,0 +1,4 @@
+//MO538-539.TXT ANA00538 TO ANA00539
+MaitresOuvrages		TAR	21	nouvelle taille enregistrement : 21
+MaitresOuvrages	DateDébutMaitreOuvrage	RUB-		la rubrique DateDébutMaitreOuvrage est supprimée
+MaitresOuvrages	DateFinMaitreOuvrage	RUB-		la rubrique DateFinMaitreOuvrage est supprimée

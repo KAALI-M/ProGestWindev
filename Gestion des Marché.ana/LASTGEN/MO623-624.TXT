@@ -1,0 +1,10 @@
+//MO623-624.TXT ANA00623 TO ANA00624
+EntitésOrg		TAR	575	nouvelle taille enregistrement : 575
+EntitésOrg	IntituléArab	RUB+		IntituléArab est une nouvelle rubrique
+GPU_Utilisateur		TAR	2113	nouvelle taille enregistrement : 2113
+GPU_Utilisateur	NomArab	RUB+		NomArab est une nouvelle rubrique
+GPU_Utilisateur	PrénomArab	RUB+		PrénomArab est une nouvelle rubrique
+GPU_Utilisateur	CadreArab	RUB+		CadreArab est une nouvelle rubrique
+GPU_Utilisateur	AffectationArab	RUB+		AffectationArab est une nouvelle rubrique
+DonnéesAdminUtilisteur		FIC-	DonnéesAdminUtilisteur	Fichier supprimé DonnéesAdminUtilisteur
+Contrainte_GPU_Utilisateur_DonnéesAdminUtilisteur		DEL	GPU_Utilisateur (IDUtilisateur) et DonnéesAdminUtilisteur (IDUtilisateur)	Liaison supprimée entre les fichiers GPU_Utilisateur (IDUtilisateur) et DonnéesAdminUtilisteur (IDUtilisateur)

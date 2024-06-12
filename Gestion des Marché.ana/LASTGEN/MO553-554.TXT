@@ -1,0 +1,4 @@
+//MO553-554.TXT ANA00553 TO ANA00554
+Projet		TAR	569	nouvelle taille enregistrement : 569
+Projet	IDTitulaireEntité	RUB-		la rubrique IDTitulaireEntité est supprimée
+Contrainte_Organismes_Projet		DEL	Organismes (IDOrganismes) et Projet (IDTitulaireEntité)	Liaison supprimée entre les fichiers Organismes (IDOrganismes) et Projet (IDTitulaireEntité)

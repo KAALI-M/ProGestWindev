@@ -1,0 +1,3 @@
+//MO531-532.TXT ANA00531 TO ANA00532
+AffectationPersonnel		TAR	91	nouvelle taille enregistrement : 91
+AffectationPersonnel	TypePoste	CNW	Combinaison$Chaîne	la rubrique TypePoste a pour nouveau type Combinaison

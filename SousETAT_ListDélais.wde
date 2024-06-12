@@ -1,0 +1,75 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : SousETAT_ListDélais
+ major_version : 25
+ minor_version : 0
+ type : 3
+ description : ""
+ subtype : 0
+report :
+ identifier : 0x51ab898304359568
+ internal_properties : BQAAAAUAAACCXiKRbb7r1xr3zdGLInq2tf3fB0FchTrva4IQ3/anp5NcQ06Zrq+JfWbbvQDRuwbZisqvGlbuGM8yTqfSkpX9JguvGOE5w5j88WRKmdIpQZe8CG0+Wp+zps1RMnxhS9LTWJDzTkJz2dTnuSr2wIc9gN2DPwbrPxG1/XOurto1eiogw2ry01uO5SKSHwuR0mXdMOZibU5rzPbJlmOtp62fIGLTFXlNvisBhBz6db8hy/Gh8QuubiwaF+d2HzZLoDg0nKfT1JGvutRQmTf0O6/YVVRsbJfPZPKBjij22UINIv3Wv36vqhZ9nkBhrFKSfLDZoNmNWJdlDpIvtmYg+wrBVIISN/BV+d4O549NAfOZtaFqaPnLSeuCiIykylGF8Q1Mm2/FYnQtLiy9aBgHEc82ee7HlpThoYC/s5zkfnJUin6+ZPNGUjAjuthbZL6OS7hNTOxWglWtx6GF1evxA/gVUfjCqiS76QbeRcyDGMRd0clAThh6dRcKrGDsC2dNSLhnV72VSoE4IaVyRthQTvqEl9qD7PPgqWlGx1n8spuS125cqGD/VcdlapOthgxds0AD9Av9d8CP/NJFpEkFD3Uqw+y4L0eg34rpaR9MoAIZnjM7jDXygFyFHyGblPWxGVK+IxJJlGkC78SxMqEMCVQEElRzM0IBrP0tN4vhvXrtDS/6nTs1PhcGjM+XVH8dKDgXVe+OYEwnB0dyH5ZQVCVTlZDoBCZyUdlJfJiUvOTCnY/SclvrT+IvCyIBHvyznlS1muu8ilstFHXrpJoFgYzyE5tiymUSSLx5ldym70rDzvQ0sb6tH5V3Gwsr9LKxegclAh2SKCGpT/byN1dcyBsgYGub+yF5K4MkJMnWmjWtuSVVNpUDlm1eUgUD27hJ+09As7NvtEqxIbS3YqIsncHE5jznpkOZExSEkZYZYmEIbJ4zssPQQ+c8uUDFWpCY9xFoukfhdnqT8xP6YKyAI4uM
+ languages :
+  - fr-FR
+ blocks :
+  -
+    name : HAUT_DE_PAGE
+    identifier : 0x51ab898304399578
+    internal_properties : BQAAAAUAAABpFPRrc9IcQjqGGabL6N64DkcAd0FYNn8JrERFCxOYID/8mkbr9LEKdxOvKpH3IOePDbBC4XOnbG+gSBJvCkB1qm+msidtbVrHGBcITGHCqvU2VfmPY1cn53sWqc4+mcWAtAdZK4AMxC5mr7+bvO8AFRM5EMrSomZpBtVd/YDWQCU5m+2WUXUrP2cP96h5B3eOnaTZ/L2+cHmsmDQ7yNyHXfa8edDY5/usMTSc4A5lybjbfxt84mY3MwpBVuN0oN+luqQnSGTbD6eftDPXan3M5vQbc44F
+    controls :
+     -
+       name : LIB_SansNom
+       identifier : 0x51ab8983043a9578
+       internal_properties : BQAAAAUAAADFKx/DS8CTBfEEE0V5h4U+AhveIMx433QmSAKoKuaTxdQVL9L0kryfRu/+V+XYJrIHPzJkd6PkGkDd4vFrLK3mnCSBAKKC219iG3YsLHHD2GNR2A8ku7q984uLbVuDizZeoioRSIzNct6Q+Lim/jH/CzVlT9GVam7xA/+zvySY6ke0ZRQu/jPL8Zy4TU2APiKU8Bmr9ELXRV9Mz7A+lmbA4dI0LlUVqlA+ux6hANu4yBQ4i2PZyvnMVPMY+0hY1LYST+iFxY9bLUmD25p3r7Ei0E0YaRByoHhlg6/H4yrK/ycLubG1guD24n+AhmhoOZpWzLXZcV3ErCrAHzzxsHk5SnhWlXQqxMuiuJLVQ3/Bqq2WS5axv2Hvf+1NLwbUwxRKj2cNyou2f8Dtm/aiWLukOziqmt8YPy40wEMtR8v8M8kCYw8AQeUgTEiNkIwFCjdXeIP2sTIqxIchNNICnKfbcYtc4dqLnX1r
+       code_elements :
+        type_code : 29
+        p_codes : []
+    code_elements :
+     type_code : 30
+     p_codes : []
+  -
+    name : CORPS
+    identifier : 0x51ab8983043b9578
+    internal_properties : BQAAAAUAAAARJ31CpxBE6RFbSm8J7Tp9CZiGExCbffVbk5iylg+q7Mo1/98W1iMnfIOszbCdf/85m4lpdq5DQp2iKmMGI1v23usX5MNBmChwqdcE5Ahiici+aWFPbBp1QNbIN2ufRXZDAOD15YOQ88jtlKaZ3gwFfPb/wN37CEVGnZVr8rt7TT5auXWt2CA/yMQw4g7aC6RuiFsWzABMcOJqXkQGs9sq7eFco17asOlltLZTM15QDElQ+pp2u//m5GcbWbPa2D1XWEYbmuQiJCMe/HiSFQ==
+    controls :
+     -
+       name : LIB_SansNom1
+       identifier : 0x51ab8983043c9578
+       internal_properties : BQAAAAUAAABWv+xLxw0HQuJn1OUKiNNOu3RKquRPdHFKrIiVDeOw76714dSI3gGkUNTQ9TUL4sfXllTC4qUNo7dLNMQa56h+4DziMBktA1+PisbcdmMZ2GMOYhhUtu0RbLJ9kuvlK2wJQREpmX3f/j8rNhw4O1q5ml+PRLMP3bJ3S2o+cLXgAeR+XTMK9uG0EM3BnTRbeqlG0rVSiDNPzAOTcgwrpv4BAMHC/VxScTdBVIZpsJNRi7lbIZqGYb9HZGh/+/xvFGYBpJ+++0LIF3GjQ9iCWEGOCqk2Mbg9fF5g5J1S+fsQYQPH7cJ2bRSGyQtgIA4/tr+cubLTLpNm1ohZOmM17RULpVXXHv0YsHazCgAkdp+4t0kgM1ubYExMcVXfMK3VbURhwYynKcOle543bwRYYaIY1qkfULUoEne33p89IhueScxm6Tdy2BScczbVC+02q+HrMuyErIwp3S2pvZxUVyUMU7fSNvAClD+6NHd5HV51w1wiz439QxsM694419f3aLlgHsNpKC/jgvzvls2IlKj6fg2NgdN6oqg3ildhCNl8f+jg3Qnj2ndGsSjkSO5p8khDEy/NaQ==
+       code_elements :
+        type_code : 29
+        p_codes : []
+    code_elements :
+     type_code : 30
+     p_codes :
+      -
+        code : |1+
+         //LIB_Délais = ETAT_PVReception.gsdDélaisRéceptionnés.Désignation +"(délai " + ETAT_PVReception.gsdDélaisRéceptionnés.NumDélais +")"
+         //HLitSuivant(REQ_Délaisréceptionnés)
+        type : 327692
+ controls : []
+ code_elements :
+  type_code : 13
+  p_codes :
+   -
+     code : |1+
+      PROCEDURE SousETAT_ListDélais()
+      gpolPolice1 est une police
+      gpolPolice1.Couleur = Noir
+      iPolice(gpolPolice1) // selection de la police pour l'ensemble de l'etat
+     type : 327680
+   -
+     code : |1-
+      
+     type : 327695
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  integrate_compiled_code : true
+  original_name : ETAT_SansNom1
+resources :
+ string_res :
+  identifier : 0x11ab89140777e2d6
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=

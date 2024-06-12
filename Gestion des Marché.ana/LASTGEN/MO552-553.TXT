@@ -1,0 +1,3 @@
+//MO552-553.TXT ANA00552 TO ANA00553
+Contrainte_Organismes_Projet		NWL	Organismes (IDOrganismes) et Projet (IDTitulaireEntité)	Nouvelle liaison entre les fichiers Organismes (IDOrganismes) et Projet (IDTitulaireEntité)
+Contrainte_EntitésOrg_Projet		DEL	EntitésOrg (IDEntitésOrg) et Projet (IDTitulaireEntité)	Liaison supprimée entre les fichiers EntitésOrg (IDEntitésOrg) et Projet (IDTitulaireEntité)

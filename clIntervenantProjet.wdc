@@ -1,0 +1,83 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clIntervenantProjet
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x130c8b32123e1744
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clIntervenantProjet est une Classe
+       herite de MIntervenantProjet
+       public constant 
+       	Affectation est une MAffectationPersonnel
+       	PersoneIntervenant est un MGPU_Utilisateur
+       	EntitéInt est un MEntitésOrg
+       	VersionOrg est MVersionsOrganismes
+       	
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1372625033611908932
+     type_code : 27
+     code : |1+
+      procédure Constructeur()
+      Affectation.constructeur()
+      PersoneIntervenant.constructeur()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1372625033611974468
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : ChercheIntervenantProjet
+     procedure_id : 1372641865596921046
+     type_code : 12
+     code : |1-
+      procédure ChercheIntervenantProjet(IDProjet est un entier = 0, DateRéf est une date ="" )
+      
+      SI IDProjet> 0 ET DateRéf <>"" ALORS
+      	REQ_IntervenantProjet.ParamDateRéf = DateRéf 
+      	REQ_IntervenantProjet.ParamIDEntitésOrg = null
+      	REQ_IntervenantProjet.ParamIDProjet = IDProjet
+      	
+      	HExécuteRequête(REQ_IntervenantProjet,MaConnexion,hRequêteDéfaut)
+      	HLitPremier(REQ_IntervenantProjet)
+      	SI PAS HEnDehors(REQ_IntervenantProjet) ALORS
+      		FichierVersMémoire(This,REQ_IntervenantProjet)
+      		This.DateRéf = DateRéf
+      		FichierVersMémoire(Affectation,REQ_IntervenantProjet)
+      		EntitéInt.SetID(This.Affectation.m_nIDEntitésOrg)
+      		PersoneIntervenant.setid(this.affectation.m_nIDEmployé)
+      		VersionOrg.SetID(this.EntitéInt.m_nIDVersionsOrg)		
+      	SINON
+      		This.Constructeur()		
+      		RENVOYER -1
+      	FIN
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x130c8b1c1238c2eb
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

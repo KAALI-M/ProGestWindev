@@ -1,0 +1,154 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MDestinataire_Expediteur
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x13474ba930fed187
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MDestinataire_Expediteur est une Classe <mapping=Destinataire_Expediteur><§rad:1§>
+      	<§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	<MAPPING><§rad:1§>
+      	m_nIDCourriers		est un entier sur 8 octets	<mapping=IDCourriers><§rad:1§>
+      	m_nIDEntitéExpDest	est un entier sur 8 octets	<mapping=IDEntitéExpDest>
+      	m_sIntitulé 		est une chaîne ANSI <mapping=Intitulé>
+      	m_sAbréviation		est une chaîne ANSI <mapping=Abréviation>
+      	m_sAdresse			est une chaîne <mapping=Adresse>
+      	m_sVille			est une chaîne ANSI <mapping=Ville>
+      	m_sPays				est une chaîne ANSI <mapping=Pays>
+      	m_sTéléphone		est une chaîne ANSI <mapping=Téléphone>
+      	m_sFax				est une chaîne ANSI <mapping=Fax>
+      	<FIN>
+      	
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1389162200110715271
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      VariableRAZ(m_nIDCourriers)
+      variableraz(m_nIDEntitéExpDest)
+      VariableRAZ(m_sIntitulé 	)
+      VariableRAZ(m_sAbréviation	)
+      VariableRAZ(m_sAdresse		)
+      VariableRAZ(m_sVille		)
+      VariableRAZ(m_sPays			)
+      VariableRAZ(m_sTéléphone	)
+      VariableRAZ(m_sFax			)
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1389162200110780807
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+     type : 655360
+   -
+     name : _SetID
+     procedure_id : 1392520877391133198
+     type_code : 12
+     code : |1+
+      procédure _SetID(IDPJCourrier)
+      SI IDPJCourrier > 0 ALORS
+      	HLitRecherchePremier(Destinataire_Expediteur,IDPJCourrier,IDPJCourrier)
+      	SI PAS HTrouve(Destinataire_Expediteur) ALORS
+      		Erreur("L'Expediteur/Destinataire  ayant l'ID: "+IDPJCourrier + "n'a pas pus être trouvée !" )
+      		RENVOYER -1
+      	SINON
+      		FichierVersMémoire(This,Destinataire_Expediteur)
+      		renvoyer Destinataire_Expediteur.IDEntitéExpDest
+      	fin
+      SINON<§rad:1§>
+      	renvoyer -1
+      FIN
+      
+     type : 458752
+   -
+     name : _AjoutPJCourrier
+     procedure_id : 1392520877391067600
+     type_code : 12
+     code : |1+
+      procédure _AjoutPJCourrier ()
+      MémoireVersFichier(this,Destinataire_Expediteur)
+      Si pas HAjoute(Destinataire_Expediteur) ALORS
+      	erreur(herreurinfo())
+      	This.m_nIDEntitéExpDest = -1 
+      	renvoyer This.m_nIDEntitéExpDest
+      sinon
+      	this.m_nIDEntitéExpDest  = Destinataire_Expediteur.IDEntitéExpDest
+      	renvoyer (This.m_nIDEntitéExpDest)
+      FIN
+     type : 458752
+   -
+     name : _ModifierPJCourrier
+     procedure_id : 1392520877391002017
+     type_code : 12
+     code : |1+
+      PROCÉDURE _ModifierPJCourrier ()
+      HLitRecherchePremier(Destinataire_Expediteur,IDEntitéExpDest,This.m_nIDEntitéExpDest)
+      SI PAS HTrouve(Destinataire_Expediteur) ALORS
+      	Erreur("L'Expediteur/Destinataire ayant l'ID: "+This.m_nIDEntitéExpDest + "n'a pas pus être trouvé !" )
+      	RENVOYER -1
+      SINON
+      	MémoireVersFichier(This,Destinataire_Expediteur)
+      	SI PAS HModifie(Destinataire_Expediteur) ALORS
+      		Erreur(HErreurInfo())
+      		RENVOYER  -1 
+      	SINON
+      		RENVOYER (This.m_nIDEntitéExpDest)
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : _supprimerPJCourrier
+     procedure_id : 1392520877390936450
+     type_code : 12
+     code : |1-
+      PROCÉDURE _supprimerPJCourrier ()
+      HLitRecherchePremier(Destinataire_Expediteur,IDEntitéExpDest,This.m_nIDEntitéExpDest)
+      
+      SI PAS HTrouve(Destinataire_Expediteur) ALORS
+      	Erreur("L'Expediteur/Destinataire ayant l'ID: "+This.m_nIDEntitéExpDest + "n'a pas pus être trouvé !" )
+      	RENVOYER -1
+      SINON
+      	SI PAS HSupprime(Destinataire_Expediteur) ALORS
+      		Erreur(HErreurInfo())
+      		RENVOYER  -1 
+      	SINON
+      		This.Constructeur()	
+      		RENVOYER  0
+      	FIN
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x13474ba93107d1d5
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,7 @@
+//MO604-605.TXT ANA00604 TO ANA00605
+Courriers		TAR	411	nouvelle taille enregistrement : 411
+Courriers	IDDocProjetRpse	RUB+		IDDocProjetRpse est une nouvelle clé
+DocProjetRpse		TAR	25	nouvelle taille enregistrement : 25
+DocProjetRpse	IDCourriers	RUB-		la rubrique IDCourriers est supprimée
+Contrainte_DocProjetRpse_Courriers		NWL	DocProjetRpse (IDDocProjetRpse) et Courriers (IDDocProjetRpse)	Nouvelle liaison entre les fichiers DocProjetRpse (IDDocProjetRpse) et Courriers (IDDocProjetRpse)
+DocumentProjetRéponse		DEL	Courriers (IDCourriers) et DocProjetRpse (IDCourriers)	Liaison supprimée entre les fichiers Courriers (IDCourriers) et DocProjetRpse (IDCourriers)

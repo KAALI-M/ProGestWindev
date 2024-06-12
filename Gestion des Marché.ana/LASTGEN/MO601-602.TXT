@@ -1,0 +1,4 @@
+//MO601-602.TXT ANA00601 TO ANA00602
+PJCourrier		TAR	88	nouvelle taille enregistrement : 88
+PJCourrier	IdArchiveDocs	RUB+		IdArchiveDocs est une nouvelle clé
+Contrainte_archivedocs_PJCourrier		NWL	archivedocs (idArchiveDocs) et PJCourrier (IdArchiveDocs)	Nouvelle liaison entre les fichiers archivedocs (idArchiveDocs) et PJCourrier (IdArchiveDocs)

@@ -1,0 +1,4 @@
+//MO581-582.TXT ANA00581 TO ANA00582
+ConfigurationDroitsAccès		TAR	39	nouvelle taille enregistrement : 39
+ConfigurationDroitsAccès	Modules	RUB-		la rubrique Modules est supprimée
+		ENUMCOMBI-	ModulesApplication	L'énumération/combinaison ModulesApplication a été supprimée.

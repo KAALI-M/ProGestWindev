@@ -1,0 +1,2 @@
+//MO577-578.TXT ANA00577 TO ANA00578
+ConfigurationDroitsAccès	Suppression	NNR	Supression	ATTENTION : la rubrique Supression a pour nouveau nom Suppression

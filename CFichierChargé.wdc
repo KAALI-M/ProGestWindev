@@ -1,0 +1,282 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CFichierChargé
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x12126951007e3cce
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CFichierChargé est une Classe
+      
+      public
+      
+      ChemFichier		est une chaine 
+      PUBLIC CONSTANT
+      	IDArchiveDoc	est un entier sur 8 octets	// si IDDrive>0 Alors Fichier est dans archive (sauvé ou charger depuis)
+      	estVide est un booléen
+      Privé
+      bFichierASuprimer est un booléen //si fichier chargé depuis Drive
+      //bFichieramettreajour est un booléen =0
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1302219038885100765
+     type_code : 27
+     code : |1-
+      procédure Constructeur()
+      IDArchiveDoc = 0
+      //bFichieramettreajour =0
+      
+      ChemFichier =""
+      estVide= vrai
+      bFichierASuprimer = faux
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1302219038885166301
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      si  bFichierASuprimer = vrai ALORS
+      	fSupprime(ChemFichier)
+      FIN
+     type : 655360
+   -
+     name : ChargeFichierParID
+     procedure_id : 1302219038885231837
+     type_code : 12
+     code : |1-
+      procédure ChargeFichierParID(_IDArchiveDoc est un entier sur 8 octets)
+      SI  bFichierASuprimer = Vrai ALORS
+      	fSupprime(ChemFichier)
+      FIN
+      
+      IDArchiveDoc = _IDArchiveDoc
+      ChemFichier = ""
+      //bFichieramettreajour =0
+      estVide =faux
+      bFichierASuprimer = Faux
+     type : 458752
+   -
+     name : ChargeFichierExterne
+     procedure_id : 1302219038885297373
+     type_code : 12
+     code : |1-
+      procédure ChargeFichierExterne(_chemFichier est un chaine)
+      SI  bFichierASuprimer = Vrai ALORS
+      	fSupprime(ChemFichier)
+      FIN
+      IDArchiveDoc	= 0
+      //bFichieramettreajour =0
+      ChemFichier		= _chemFichier
+      estVide = Faux
+      bFichierASuprimer = Faux
+     type : 458752
+   -
+     name : MajFcihierChargé
+     procedure_id : 1505884897841925611
+     type_code : 12
+     code : |1-
+      //procédure MajFcihierChargé(_chemFichier est un chaine) //permet de mettre à jour le fichier chargé en gardant le meme ID si le fichier est déjà dans La BDD
+      //si IDArchiveDoc > 0 ALORS
+      //	ChemFichier		= _chemFichier
+      ////	bFichieramettreajour = 1
+      //sinon
+      //	ChargeFichierExterne(_chemFichier)
+      //FIN
+     type : 458752
+   -
+     name : SauveFichierDansArchive
+     procedure_id : 1302219038885362909
+     type_code : 12
+     code : |1-
+      Procédure SauveFichierDansArchive(Local _NomFichier est une chaine,Local _RéfDocument est un chaine, Local _DateDocument est une date,Local  _IDTypeDoc est un entier sur 8 octets,Local _IDProjet est un entier,Local  _IDOuvrage est un entier sur 8 octets,local _IDSociété est une chaine,majFichier est un booléen =0)
+      
+      si IDArchiveDoc <> 0 ALORS
+      		si majFichier = 1 ALORS
+      			HLitRecherchePremier(archivedocs,idArchiveDocs, IDArchiveDoc)
+      			SI HTrouve(archivedocs) ALORS
+      				//enregistrement Fichier dans Archive
+      	//			archivedocs.IDCreatedBy		= Utilisateur.m_nIDUtilisateur
+      	//			archivedocs.AccésPublic		= Faux
+      	//			archivedocs.Nom				= _NomFichier
+      	//			archivedocs.Taille			= fTaille(ChemFichier)
+      	//			archivedocs.DateDocument	= _DateDocument
+      	//			archivedocs.IDtypeDoc		= _IDTypeDoc
+      	//			archivedocs.IDOuvrages		= _IDOuvrage
+      	//			archivedocs.Réf				= _RéfDocument
+      	//			archivedocs.IDProjet		= _IDProjet
+      	//			archivedocs.IDAuteur		= _IDSociété
+      				HAttacheMémo(archivedocs,Document,ChemFichier)
+      				SI PAS HModifie(archivedocs) ALORS
+      					Erreur(HErreurInfo())
+      					RENVOYER -1  // erreur
+      				SINON
+      //					bFichieramettreajour = 0
+      					RENVOYER IDArchiveDoc
+      				FIN
+      			FIN
+      			
+      		FIN
+      	RENVOYER IDArchiveDoc
+      	
+      Sinon
+      	//fichier externe
+      	
+      	SI ChemFichier <> "" ALORS
+      		HLitRecherchePremier(archivedocs,Nom,_NomFichier )
+      		
+      		SI HTrouve(archivedocs) ALORS
+      			Info("Un fichier portant le nom '"+_NomFichier +"' existe déjà dans la base de données ! celui sera utilisé. en cas de besoin renommer l'un des fichiers ")
+      			IDArchiveDoc = archivedocs.idArchiveDocs
+      			RENVOYER archivedocs.idArchiveDocs //doublon
+      			//		si HVérifieMémo(archivedocs.document) = "" ALORS
+      			//			Info("Un fichier portant le nom '"+_NomFichier +"' existe déjà dans la base de données ! celui sera utilisé. en cas de besoin renommer l'un des fichiers ")
+      			//			RENVOYER archivedocs.idArchiveDocs //doublon
+      			//		sinon
+      			//			info("Un fichier portant le nom '"+_NomFichier +"' existe déjà dans la base de données.", "Le document associé n'existe pas !! penser à le recharger")
+      			//			RENVOYER -1
+      			//		FIN
+      			
+      		SINON
+      			//enregistrement Fichier dans Archive
+      			archivedocs.IDCreatedBy		= Utilisateur.m_nIDUtilisateur
+      			archivedocs.AccésPublic		= Faux
+      			archivedocs.Nom				= _NomFichier
+      			archivedocs.Taille			= fTaille(ChemFichier)
+      			archivedocs.DateDocument	= _DateDocument
+      			archivedocs.IDtypeDoc		= _IDTypeDoc
+      			archivedocs.IDOuvrages		= _IDOuvrage
+      			archivedocs.Réf				= _RéfDocument
+      			archivedocs.IDProjet		= _IDProjet
+      			archivedocs.IDAuteur		= _IDSociété
+      			SI HAttacheMémo(archivedocs,Document,ChemFichier,hAccepteFichierOuvert) ALORS
+      				SI PAS HAjoute(archivedocs) ALORS
+      					Erreur(HErreurInfo())
+      					RENVOYER -1  // erreur
+      				SINON
+      					IDArchiveDoc = archivedocs.idArchiveDocs
+      					RENVOYER IDArchiveDoc
+      				FIN
+      			SINON
+      				Erreur(HErreurInfo())
+      				RENVOYER -1  // erreur
+      			FIN
+      			
+      		FIN
+      	sinon
+      		renvoyer 0
+      	FIN
+      FIN
+      
+      
+      //si ChemFichier ="" et IDArchiveDoc = 0 ALORS
+      //	renvoyer 0
+      //FIN
+     type : 458752
+   -
+     name : ChargeFichierExterneTemporaire
+     procedure_id : 1302219038885428445
+     type_code : 12
+     code : |1-
+      procédure ChargeFichierExterneTemporaire(_chemFichier est un chaine, _bFichierASuprimer est un booléen =vrai  ) // cas de fichier charger par Onedrive dans le disque dur du Pc il sera supprimer
+      
+      SI  bFichierASuprimer = Vrai ALORS
+      	fSupprime(ChemFichier)
+      FIN
+      IDArchiveDoc	= 0
+      //bFichieramettreajour =0
+      ChemFichier		= _chemFichier
+      estVide =Faux
+      bFichierASuprimer = _bFichierASuprimer
+     type : 458752
+   -
+     name : SupprimeFichier
+     procedure_id : 1302219038885493981
+     type_code : 12
+     code : |1-
+      procédure SupprimeFichier()
+      IDArchiveDoc	= 0
+      //bFichieramettreajour =0
+      si bFichierASuprimer = vrai ALORS
+      	fSupprime(ChemFichier)
+      	ChemFichier	= ""
+      	bFichierASuprimer = Faux
+      FIN
+      
+      estVide = Vrai
+     type : 458752
+   -
+     name : ViderFichier
+     procedure_id : 1393031570730652217
+     type_code : 12
+     code : |1-
+      procedure ViderFichier()
+      this.constructeur()
+     type : 458752
+   -
+     name : GetCheminFichier
+     procedure_id : 1302231597375020287
+     type_code : 12
+     code : |1+
+      procedure GetCheminFichier ()
+      Si chemFichier <> ""  ALORS
+      	renvoyer ChemFichier
+      Sinon
+      	si IDArchiveDoc > 0 ALORS //fichier chargé depuis Archive
+      		HLitRecherchePremier(archivedocs,idArchiveDocs,IDArchiveDoc)
+      		si Pas HTrouve(archivedocs) ALORS
+      			renvoyer ""
+      		sinon
+      			si archivedocs.Nom <> "" ALORS
+      				SI Pas HExtraitMémo(archivedocs,Document,TempDirectory+[fSep()] + fExtraitChemin(archivedocs.Nom,fFichier+fExtension)) ALORS
+      					Erreur(HErreurInfo())
+      					ChemFichier =""
+      				SINON
+      					ChemFichier			= TempDirectory+fSep() + fExtraitChemin(archivedocs.Nom,fFichier+fExtension)
+      					SI fFichierExiste(ChemFichier) ALORS
+      						fDate(TempDirectory+[fSep()] + fExtraitChemin(archivedocs.Nom,fFichier+fExtension),archivedocs.DateDocument,fCréation)
+      						bFichierASuprimer	= Vrai
+      					SINON
+      						Erreur ("le fichier '" +archivedocs.Nom + "' n'a pas pu être extrait ")
+      					FIN
+      				FIN
+      			RENVOYER ChemFichier
+      			sinon 
+      				RENVOYER ""
+      			FIN
+      		FIN
+      	sinon
+      		renvoyer ""
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : MàjFichierchargé
+     procedure_id : 1505882965099638545
+     type_code : 12
+     code : |1+
+      procedure MàjFichierchargé(_chemFichier est un chaine)
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x1212315c0063a749
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

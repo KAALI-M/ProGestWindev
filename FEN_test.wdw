@@ -1,0 +1,170 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_test
+ major_version : 25
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_test
+ identifier : 0x2244c35b1a9c0638
+ internal_properties : BQAAAAUAAABPBqXdINk4UjR5Se/PHtTJGg2dHLs+AlCNjTs6xTaCsyixTMw/dVtMib3pobK4hY0iNuaukatrvKZjqhAHlRJGbb//Mbk4SlQp9Xm0ktbxc/avQ4ME3MVoq+upM64lMkBHtqTaFbzUy9V/ez0NlJ0R2sATA274am9a+mOfjEdOKzgLObyc/5QjTuwHV6vuMx9uTfyVwSA1BaRGhaPYdfJdiE2TFnf4fWJBkaW4Y3sXcwZZGWZnnQRg9pddO5O1t1ayPRybP11tcFBF3JFrGuG8pAoOSExVTqCm1mz/jh4NfCnIGuaZ/1MgsDQuamrR8dIaaqD91KkGtlGVb+p8vig975qIT6uJT+CkEH4djkOOklUPFV3WNtc11DXtwl8CIulH4ylCJBPShaBJyDzd9ppkTbyMP8cQEWg/C3kadOl3wsygaJTO75SAec61YVdGt8Dkow6EF6DV0RmMf/xwfUKcia6XCgQrw99hYa1J6tJAeL1QWEbb4eGZYWzTWFOdso1C2HR+UDei0PxwaLKAfqc9Mad7gA7PdB1LTIy2IYJelt8+DaUlTumg6C/nmsSXyT1sWYg2Eq35GSUShDtuq/dh6la9yFy9ypwPlBstMltQvh5Jyf7jVs5YyEtpaOpT8C4hBgnghr1P6NGg/K8tut2p6JhKFyKOZ+OrEBkt+9qRnaOFONDdWEUVbtyTp9r5
+ controls :
+  -
+    name : SPLIT_SansNom1
+    identifier : 0x24ef91d905682c52
+    internal_properties : BQAAAAUAAADjDxXdoNLow3CKRmTIGHagLNiDChQvvgXJksyuACEGRBrCUlUVgYzLUhHCf78BNkZXQ3pBKIWTJrUia66AntTtoF1pFOf9HH5VJe+brTuJ5bG4JB/KxMLlo4L85VvrsSaEHPVxaGOYL6ApLMP5g3IJzHnCja0Qf180OP0KvUAWKzSuexQ+BMZ/Osny3nC7GazIvHpwICEiVipPWNRwNKSSmyiKakSsIBTHtkfV8GEN+9nSuI5skQpvYIW7THGe84t6mf93MlVvMSytSGuYTcttOm5rrr3ToWM6tW9rTNejaD9aIAt6DSJA9Tb+3aMc9LbVBat1R/8fwpCz5gJegjfhxZTkRZvneDVWSoV7rxkL04ZY5/HU+G9kzQMMWl+0GCgdR0GOU2Q3GO4S8TOfrW+d1Efln0gjtDmNELUt8h3Vl4Jiw1GSny0eyq9mBYO/L7xVfj5GUfAnW3tUWVfNOHChRhwCFDxn
+    type : 28
+    code_elements :
+     type_code : 61
+     p_codes : []
+  -
+    name : SAI_Email
+    identifier : 0x2508ad83089d9473
+    internal_properties : BQAAAAUAAABb/oX8qK28N67cHHLSD0AH83HXZdkFVJpHaiFzz7QW47OdkvvOZC8msG5O2uAXQ9TudwfHOrxqxqyj2icjCyBPIQqk79v1/tH1SyWwLFKG6PLHDB1Ig7xAQeNyPBdaLm8oCJlo7cI4knFDMy6sDxW5YjonS/CI3+hByaxr//ldM8llDqcGpnERIl2uhHy66T3e7dlG3hBGRGiKIL1iZ5Xa1nhRuOYqByzLL0hUo4R8qHyMLObFVtsRTEKBEYNCO4PVDfHjXXtRVHmXUZDkUQTY2vQ7N090tgaVJXzIee29sAiKCJeDdj5guF/57XsmjuhEw965ffmh3WEfKmOy1T7Ynq/GMvsFqWp11lvhrcNh1ugNZbHyW8kf/X0S45IZqHSuyvgx05sp6PQSPrM/Jjk1yH4bPzENMyuRpP18XJLk5vkTlRN6qu/mTgnNpDgUFGpc+RXzHkkXPlIaN03AJXQ52cgaThapgrM+/JhWCKHunAjpSkGM2VwIN8QDZlA7LNsxkDdEEgdmeeRaZ4bCdD26S+jAPX+pl6hNDMYPsGPc43d5H56iAk3h8q65XvSzPOasKNK+rVE0XdOrwj+WocRw2tMLQAl8NDXnA7RkotSBRs5qkjycpmSmd8+X8da5iXCJq7dezyiJIZxlnKyQJdN8vtF+r7x03JnnSxKe2DRIgEHl7cVS9SrUsvxhplmvLJZCSGnv3CUwTxuATiU2NEXEbW2DqKfCiNMe0jH2XbfxasGiriaq1/DFsdi+zWqBj0m1nGYMgOjNiOCN9u1KzfzbDRXJ5/AgRUrCfFJ7dI9PnTjJaMwNjMatqLNIOJY8xlXgdFVax1EcZnepntYl139zi9jmprQaBhOVwIfW2G5F0jnhC/eg+IgQRqjofX/FNHjosj/Wd01UDHSgXYUYLxCBK4Xt9pKeT7UniWD1Qe57IfLRdtnpgx55GihyNJYNrzpZWUqU9XZzgH7o22VYTT9M3P/wx8o6beJEXo4xZWElna7liEdDwhD4UBtm4DaUHjA2wi801sWtV2x2m7gQkzJF6eZ7KulXY+oyS4BkIWHdbBTsvfz0a19CFPYafRg1df4WNukCK+FtBCfNQJhLQqshQQNpZqW1MLyTjaJuzCcxb9P6hoFSKpMUiGTniR9rIQEyxSJHkPU+
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Saisie d'une adresse email
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : SAI_Message
+    identifier : 0x2508ad8a08a7ae64
+    internal_properties : BQAAAAUAAADNKEter678y9tS1iV0ZcksIiGNluZakQhLib4X2aZ7qxHM9wek8qATzoEfmastmAGVQnmoeIGsWeoRz0qvl4ZUj8KVLTSC0IuouJRviYLl+pDBWfppBpCkDXgVep2Px9FDT8jo+stD/RNkWc9htqLlLN7RH1+DDOe5f83bJVtsPBb84Emi01FJCmr3fw3LtgF3ElfEwdK7xA+OTiNhEjt5cHVYjy6dSzkR6oT7CV75rSNJGTTxSLv/P4VO6hG5xAeJbQKu8xasIXKdgL+i+sAACSGdjUb4BSosUTBXqrwpuC7eT4nx+CkfecLPhS4Jz3WRqll5YkkZgbXpTtRVOmLROSLOpzcV52/rdUH9s+AkbjwglTzGacT5uTIKWwEkWlXGv+v/VocV0rsm8zFP1pNFJxRbTY9lqWqFRt8F2s4Z/764rO8Ay9bTUUvc8/qtCLS6cG0b/xyD0wWUq43lOk/0KxhavgbhkHlq8XHJrnzEPkQUcbWgMqHRWbTuLhoeAQRo4g6T2cskcdNmQMtngmkSvBIW66TUm05aOobKAq4PuCHdnaKAOqpvZvjs7DVfOI4kmK0/CgrwyGfTP9Sb4vw1lQgnHEcSHDU36F80iRe5lRiM3FsJ1Od+UhjGk+1i9mMCNbqzebeQstrzMr6/2SKeBaYqLWfol6kb/oHjXH3kdcb8Nri5LywBxQLdsu2t0DSDdGyDAuIuBacgsncvnwPahqAewF3negGsW20QsMgn5n6d7Nt+ujM81j0MAm9PDC1uG9/Y7daAstUfZqWde9ZEoArKoQLMFGHVHYdoMF7xW+vnzu0GhrrY23LblCqGk/W5JHURf/whYHwrCefim9nSz98sKPt+2O2jRU2NBmeJyVqMg6Zuk5BmDd7dN0xBHXP70CG1FS+PKhsKS8B5vIbA4NVsPKeYTx5dwFrEyrmvZRxQMd/QVSbaSwompv+SQR2In0GbWpG18Zydzn2czMgcoVpdra0Bdhf/7htvcfXDdHaF60lZvhWG1OweszFT5Ijv902VddHMwMan1vdGMdedBZNYU+twtFzx4N0dxFmU9lPp72NRxtNJYA5R3jDFYip6A9wScES/DcAL8PdHivLJ53miVJ1WLu0CxEZJS1QamDlKTP3fDsTehsEHWBRRqMyeNu7HPw+TO42p2rM+WQ==
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1-
+         // Version 1
+         // Description 
+         // Saisie de texte multiligne
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : SAI_Objet1
+    identifier : 0x2508ad9908aae8cd
+    internal_properties : BQAAAAUAAACwmUh53l/5DA/SSahuntUkmC8RsIQWmmB1LeF+S5ylS/hh+cLUBPX2P7K1tKHJf51NYg8pP34O6HXh6E9qjY8H71/KbEJg8Pv36AR8ptcBTWxFzkJ2N1o3rgBz5eymSB5i7FcCG7U4GF9rv6+K41TGfgO75YmShq2qWfR+wOGL8vIIW+Qf2ipFM/mwY9uPLMsqfkgNTd9AuKhy3AGJoiL9LjYcQDixfYZ0+box4oyU2X7iP5EnMCOJKcmuioSyBjhKIYrIPO/d+bMugbrN7Gns5ozuMu+aeYhxpxd5MBaM/04xTKUmVwA45MvIrmJvhbMygqEB+obqZGnb+4DNtQLSbuCfEBj7x5Cn94o6XtIoX04+XDhbaCIlzVEnF80wjAGcyf4WYm0BqOoZ+i9MwLWzFzeQiH6RXkoflTUsqO814GnDGJPYWt67MbWVRGjVRoP5MfcR9DFTXpPUXCyBq4UZWbhhEBdsk9+ya91Bcir7aDihRsa/ya17IxV+4GiRPxgoez08IxWynGfLAH/UYV3MQjmb2+OvpR+tGBm4k3jP1loSgivb7jr8a0e/C/rbrDX0y+wNBkoFxhnMCLx33PNeABCZK7iex3qNz2JDfjAVXCbeN2d4+U8TnKYmpGxTvnaceyr1CHAsV6LPaPr6QyZhAPMHjfmO2imlbDTULsq+E6CPVR6Uqc0OYkBzUuuUDBEdUkUxG1MYuDB91juTvu2dV9jqmut6nQX23w+ny30VM4Pbp+Y5+uoP94HMxS+UML/R8QhMHk0Qe9x1+LpqSvdsX1SWeY2M9jcgLHRoeuTfFVFSQ4FYyLwbNb8xUWoCOZPhZiVxKW5poX6H8CnAfGbJQLHuxT7AKEs/szMUbT/FZvA0Z55q57UySgqBoipeyKMnL65gHPA7fUNMmcQF2pWWHjIBg6zHItRptAVFls8GFn1wZ8ZSJFUAHz+FZAGGzD6ERRZMFIghCToJ4PX5nv12PKedFmQQ+1SRzc3Y3ihTgKZgk+qPkDFewNy1E9Iv6F8kLUXwFNKr2P45T46mbSscYq5yI8bdudmZuYeppufEfnjX8AbxtLvSVYg8rws=
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1-
+         // Version 1
+         // Description 
+         // Saisie de texte multiligne
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : BTN_Envoyer
+    identifier : 0x2508ada008f10492
+    internal_properties : BQAAAAUAAABQUD19klrnNHPRXneFcJCZyvG1ALySMbodT1mjxq349MSpZV3rh24ZLlioEijzRAgagc4a36HwX9SAgBDcuuCfqlFuaSrozPMa2MG0K95PNj4kXRYvmzU1kZOM1fwrrnOr+b8eSMR2iXutVsMXpn8knNTheeG+D/WaPYCOZJUvAillE2ariAiAqa8JL5rYDWIYpZ3WLMdalTrhEvTCiCFAdgPaWwVelDu3TREOY6ReT8JaqEpDNFiDMWX94jEU8T6mA/Cb5SfpGAFiTW1lJdrADtTo8J0IDumU0TgdX4oEexvB9iOvxG7S+FssgCNUFrcF44ci9fk7PIxRt3nFg8Nq288M7GIzMjoAvyGwLrklzGbIlDMNxpBllWoPM9tibLcUEV6hycysbMcbtQ/lZUXzqORyO3Oq+449rNgDuhbPZZeWCLiwiBZYCaxqeXOqON9lwRVL8JUmvpUBW9ZNFh02wq6x1WN39nFsary+cRRuROm6S6Qko/YINEaCkpMPDsq3xpcBWvUG3t/3mReV6lHTIfDrolBLdFbPW5lg8odhryb6HwGh03bkmjGjbW2m2qpO94JC2CbmOKInXdl0k28gcTrr9ld7yYG5iQNNYZ/eVpvh+JyrQP/qwmXhMlm4vd+7a5AMJss8fg9vezji/r6u07OwGED97d4mzU1EpGP5nUhCQ2dsCCmD2eaRzZfI0hIfDO+UCqt/C7kqZ/2GalRHvBsTcAdfksc34t5fo8Q=
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         envoiMailNotif()
+                          
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BQAAAAUAAADKsJlg2Ltpl5r+Zc57ji8hPYDMiS+bliLE2xo0GExCKcZS4g8MvJbO2unxMH/Ew39ndfsVCH3lk9Ucyyb/y6CvEtFTeSEEVgWC9VqHT5smVjYSsTm3xSlJws4D0hDxpd8sOBfyevI2eVq/TrbRbp7AxCwyQeebeJ8Vql3El3wPHveQ0bNOFXtUApIe9yo9j3SOLpbdRFl1JQiYphbUcFWvVifGYP6UzeQeq8zpvBmm+2wfsFD1bc0OmaE1khBHvQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : BQAAAAUAAABqPQh6HC8RxAVkp2SqPYLuZrfVhd+1KX4lx22hIT8uqEpE6yP7Sbc2rmVqdmL816EWzXOkEe9ijOtYwchZKAfpy3B1cNqhpJgsnbUs
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      PROCEDURE MaFenêtre()
+      aliasOngletDoc est une chaine 
+   -
+     type : 230
+     enabled : false
+  procedures :
+   -
+     name : AfficheDocRéponse
+     procedure_id : 1507021131419011102
+     type_code : 14
+     code : |1+
+      PROCÉDURE AfficheDocRéponse(Onglet est un champ, LibeléChamp est une chaine,FenetreInterne est une chaine <nom de fenêtre>,*)
+      i			est un entier	= 1
+      ResChamp	est une chaîne
+      ResChamp = EnumèreChamp(Onglet, i)
+      TANTQUE ResChamp <> "" 
+      	SI Onglet[ResChamp].Libellé = LibeléChamp	 ALORS
+      		SORTIR
+      	FIN
+      	i++
+      	ResChamp = EnumèreChamp(Onglet, i)
+      FIN
+      
+      SI ResChamp ="" ALORS  //aucun champ du mme nom n'a été trouvé
+      	ResChamp = WL.OngletOuvre(Onglet,LibeléChamp,FenetreInterne, MesParamètres[4 À ])
+      	
+      SINON //le champ existe
+      	Onglet = ResChamp
+      FIN
+      
+      renvoyer ResChamp
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x1244c35603dff37b
+  internal_properties : BQAAAAUAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+associated_test :
+ name : TEST_test.wxt
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

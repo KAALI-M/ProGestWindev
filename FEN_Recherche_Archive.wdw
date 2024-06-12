@@ -1,0 +1,275 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Archive
+ major_version : 25
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Archive
+ identifier : 0x210af41e0bb1b1dc
+ internal_properties : BQAAAAUAAACCpnwAPM9cQuGBdETAqpHxT9Dd5LwKWtic8Tcm/Wc3oCA/4WX5oQif7dcziNwbKGi+WoqniqMQ7K5ZzJY8FdpIXOxkIsTje2IyWXT0E7BPwCGPSd89dWU0QZnDD0SUxktfhexjY7Vbnmn+8X2I1ZkakqzyxmTkZeo0YdPxDKKkcEIFqp8k8zgweHK7yCKHdN7Almp69kCyMtos0fJZz85wEgGY8Vn75j2MsEGkftSsoeZjM3c9ysnr+YVx0w4dx4JGt3H/pn4A+WE+sqo6m6hluk+KXVEzwBqix4T80t+pBdywXyL9pyufofKQHE3UZ+cato71HqcAV2Ebd+TINdnRIeEfd2mGjN+bg5rXUCHJUUrKyE45OzM/9XkCa2ue+jgUg7nqqkjI/z9M44bTEEe6LMHuBfJ7cb+Zx6NluCfUN5/Spp1+sMQCAx/2hdT6/GG5mz06CpkWVPttWlOMS3gmDvDuY8lKpQWFgZjSWf4sBQluGSppAdh6Kdlm2I3D3S8pgYJg5Up0flsO0sXh6aG0PrZzBS6G96bUnuiLl628fZ+6XDGcWey8B9uP6PpJ0smRmPRz/LdtyVwXK4RQq63dzyZRmDtvxTmyjarQm9HxQVPzlq+u5XBHTaHP8lcH/yxmaf3VidQT4Mw9M2NdgIdAaVGT549GfQqqwfBFpFl83sIsBkzt5QSid3BeJ9IaCkhI738=
+ controls :
+  -
+    name : FRM_SansNom1
+    identifier : 0x210af41e0bbcb1dc
+    internal_properties : BQAAAAUAAAA5+aYqGkA0tym8DELy2NgTfJklhLYq2/N5FzIW8zMiQFkUsrvk9x2hucZTd3zCH1bcmCe9/6AXx3wYfZw/4rl6kpGQ0Osz7VxPldl+Msqrc/dWyHWheGb6jpc0PpVHzNgBAZ2OEsuITywNoWePWagcdEngRHCg9YqE0boK5dHMARsDIlVI4Lp+c12sRu22NgfVu4PWkVMgu92rvbwJ+DyQ5asSc5pzwXMOf8VwOrew28nAjUodhaHqlVX7O7QA41swiqfTeZprKOL/MXBwKL3SDCTDG5+iFqYOo9oYSS6DCqFB4RtZpH2ErI3wJkKlCw7mzgWjqWW8LbNCVvR+/dX91fVxxBgsMVvZLxQ8j1b6HKTRWRzbr+tq+T03
+    type : 20
+    code_elements :
+     type_code : 32
+     p_codes : []
+  -
+    name : CFI_Archive
+    identifier : 0x21155e86025a908a
+    internal_properties : BQAAAAUAAAAXcMnBu/50zd3mjXbtey7rooxdk5JZMtAcgKZGT2d72kGEmWp1XfzTcvJPXIyg9coJT8e0lWin0IpTRNUGqEUSeJ5lFZONTptoKH9htUwqu6a0WYfKbhMhGhBZ8INwsobyx8J5ZT58M4l1iiGlt+Xo/AB8QzTV8n+Rl9Vg0bqKI1+u472e5mFxwS9EOSW1HwUD3+xlC05sYPZeYtSCVY6j5avM13VdR114ndsh97njhRNd3vONEgBGtd2EhENksMsc+pbcbmW+MGV0cUUZNTz2Ozcv49zNKY+MWntbOPsi+5cAI0iy/d9XKWk7mo4TFDrJqN/U77wEDVsXREOOu9TbCC4tp9ydpp2jimHY9WPe032GlqCNQrEbobtB3u6l/07LGB92OPMpgypqvkkuNRjFrVsf2G/aQIs6DUoowhYhjg3N1Lrf/RvYWcJhp1yIlCXlCsDAMUDjLqOb3LJhWGCfB3GcniKrDUdS/Sy8VhJY
+    controls : []
+    type : 31
+    code_elements :
+     type_code : 73
+     p_codes :
+      -
+        type : 33
+        enabled : false
+  -
+    name : FRM_SansNom2
+    identifier : 0x21183f3e32459f44
+    internal_properties : BQAAAAUAAABmJ1kld4Lr2uMNQr9+w0T7B2JVbxAaI4SJSg1C9AhICIghrYLfzficvSbVXksDZRTi4WCcgkkkBTMMPknd+IAehrMgkAM+JXLGluglFAUbByNEQl219C+/zeVCbEbZj/RI5Akti2lYIVF6K3cpdVjxJ1q22dwF6vWr703LL/91PslkVnR5GFOc2Az0SJ5kLppBK+jjik6RE4Yf0q3u0lgRY/DZtDNGqv9VBB2Wph4Cf6E7iXYIZBYyOlVMgp8ikwZiGlxQAofawElhSFM/+DcNBprwmBBDWUb3BVulMsIx2b3F1I746WwYRX+rxJXZxmha0xLgfC2qpAlVd9qrCDj6HOP8EdlG3d0cRz//FhT2g7l4e6zqND2kTg==
+    type : 20
+    code_elements :
+     type_code : 32
+     p_codes : []
+  -
+    name : LIB_AbrevUser
+    identifier : 0x21183f5b32470e79
+    internal_properties : BQAAAAUAAAD7K02ONbY5+Qkv1isRr/14ORO5ckoBSl0mysQPcNN2NcR0RCOtz8fNVUWr1Zn0akGiV1EvqeYvLLw5wcB8c3N57G7yJH26QjVPgDrzxsi5Hi2Ds0oXIWSC0+NAuEV73uHwX33hRMBIMstGvG3RaFgGAI7TcP3r6qgseGzERT9WVy4hHvJdI8nhNVknJNyPDmGXTQvx8BOdTknIzv00MBCRyese/oGuMqMPnfCYUvx3jxGn8qToGPVm8sumWuN4TMrUfn8RmYyNi640D9+z8530Fzg1BnBxgcm9Xvx9/NFJJExMeo8ZPsocIxsavqByhahxLKWhHcxpHW4M+spnixhz4vxL/b6bI4NoHv/NfzH3pkpox6TOvbGNpcB1nDXOh0b3JIr9bE55KdHNFgkAMNT8gemFFebJk6PvwaplFND1tv+5VufcN513u5NCq0cbYJHA7kbm34Aw9cWJ3/4isZT9OU8Isg1vLScTP3jZqNyaxpsVc2/YcgIArL/lpMnQWeUeR8V+Cw3jGTM=
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         MoiMême.Valeur = Gauche(Utilisateur.m_sNom,1)+Gauche(Utilisateur.m_sPrenom,1)
+        type : 14
+      -
+        type : 18
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BQAAAAUAAADKsJlg2Ltpl5r+Zc57ji8hPYDMiS+bliLE2xo0GExCKcZS4g8MvJbO2unxMH/Ew39ndfsVCH3lk9Ucyyb/y6CvEtFTeSEEVgWC9VqHT5smVjYSsTm3xSlJws4D0hDxpd8sOBfyevI2eVq/TrbRbp7AxCwyQeebeJ8Vql3El3wPHveQ0bNOFXtUApIe9yo9j3SOLpbdRFl1JQiYphbUcFWvVifGYP6UzeQeq8zpvBmm+2wfsFD1bc0OmaE1khBHvQ==
+  options : []
+ popup_menus :
+  -
+    name : MENU_SansNom1
+    identifier : 0x210af41e0bc1b1dc
+    internal_properties : BQAAAAUAAAAnVIBCdMoBPybzcTTO17vqNxOw6K4aei3AEaR5i2fBlufS/Qi4clTWVb1dFJxo7gmfT9yu8zq92OV5SBCnyz0qm0xLkUuYntZi+T0jhg8T/nLJWwdxMF28b+m2MFwCwR1UGaePIeRJMRlhjf3O82NkgooYjUXqadvAwUi44M3GMc/qTHgScqOUT6QNKZBsCNxYe70fyK0fafS3NFMAuJiitpkJ/sZZlG69T82mSYl86hZG3ZV5yZkoBkR4anRBfDkFuvVHEC+9hdqc7e90SFdUhj1S9MQGhs9NwmPAMR14PXBCGgv+ovROLrxwImIimS1kFNJPq7NBVytDV0/pUYAlngPpo5gD
+    options :
+     -
+       name : OPT_LectureExterne
+       identifier : 0x210af41e0bc2b1dc
+       internal_properties : BQAAAAUAAABm82xvoji2HcpCGStol/RKYYb5Vv8YTocvYYNt2WLOsyheTJY3ist+RVooE4NNiybHtaZX6kopjtJ1wwbopwcE5lu7+sugSPOTc89pjHJFc3RmjAFth5mugWtP1vOmIBELI7cVBbcsavhmEL8J7yeZapqF20T5Y5D7oj8TsZTIsaJyqyAZS5Exgo8UJsXFDauR7V3DCEPV7WhIySQHPgqtTjLFkDjiWC6EiynpoU9b9xrUYej/t4mbuuKZbjO7JowR/iCf1pASZJCC1sMC4OV4MxG2CeJaP+JtfLPLMC135BRMUuKePkfnfwCxUNI0U8xrrA/Lpxjj7gHvYmGM2sj7wFkGgYYEeVDIQ9s=
+       code_elements :
+        type_code : 26
+        p_codes :
+         -
+           internal_properties : BQAAAAUAAABJLk0DNR2bUzm+I+5Ap6S0ltXSZ8+5UPmTV09uQipxjfmG889VI1qq0ynpTfLABQafzXFg7zdTSKqV8/3L8SzQ387GtBBWWSE3cASDKjcIyJdF31osPDWfj1AX3wsDuR949Bm0kvXt2HUZBAPbHKnFa5i5V5p/Lo4IMvFlZWQsLVLILWo+tTI=
+           type : 32
+    controls : []
+    code_elements :
+     type_code : 26
+     p_codes : []
+ languages :
+  - fr-FR
+ message_bar :
+  internal_properties : BQAAAAUAAABqPQh6HC8RxAVkp2SqPYLuZrfVhd+1KX4lx22hIT8uqEpE6yP7Sbc2rmVqdmL816EWzXOkEe9ijOtYwchZKAfpy3B1cNqhpJgsnbUs
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      PROCÉDURE MaFenêtre(fenAppelant est un entier, bOneDriveSeul est un booléen, bselctionScan est un booléen = 0) 
+      // en cas d'appel pour selection si bonedrive =1 seul ondrive sera selectionné les valeur retourné contient les chemins
+      // d'accés des fichier et non pas les IDarchive
+      
+      ChangeFenêtreSource(CFI_Archive,FI_Archive,fenAppelant,bOneDriveSeul,bselctionScan)
+   -
+     code : |1+
+       
+      RENVOYER (FI_Archive.fichiersAjoutés)
+     type : 2
+   -
+     type : 230
+     enabled : false
+  procedures :
+   -
+     name : SupprimerFichiers
+     procedure_id : 1228062258106184156
+     type_code : 14
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //SupprimerFichiers ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure SupprimerFichiers()
+      //i est un entier
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x108463d000d86e35
+  internal_properties : BQAAAAUAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+  strings :
+   -
+     text :
+      fr-FR : Insérez ici le code de recherche pour %1
+     index : 0
+   -
+     text :
+      fr-FR : Largeur
+     index : 1
+   -
+     text :
+      fr-FR : Largeur
+     index : 2
+   -
+     text :
+      fr-FR : Insérez ici le code de recherche pour %1
+     index : 3
+   -
+     text :
+      fr-FR : Largeur
+     index : 4
+   -
+     text :
+      fr-FR : Largeur
+     index : 5
+   -
+     text :
+      fr-FR : Insérez ici le code de recherche pour %1
+     index : 6
+   -
+     text :
+      fr-FR : Largeur
+     index : 7
+   -
+     text :
+      fr-FR : Largeur
+     index : 8
+   -
+     text :
+      fr-FR : Insérez ici le code de recherche pour %1
+     index : 9
+   -
+     text :
+      fr-FR : Largeur
+     index : 10
+   -
+     text :
+      fr-FR : Largeur
+     index : 11
+   -
+     text :
+      fr-FR : Insérez ici le code de recherche pour %1
+     index : 12
+   -
+     text :
+      fr-FR : Largeur
+     index : 13
+   -
+     text :
+      fr-FR : Largeur
+     index : 14
+   -
+     text :
+      fr-FR : Insérez ici le code de recherche pour %1
+     index : 15
+   -
+     text :
+      fr-FR : Largeur
+     index : 16
+   -
+     text :
+      fr-FR : Largeur
+     index : 17
+   -
+     text :
+      fr-FR : Le numéro de TVA doit commencer par 0 ou 1 comme le numéro d'entreprise
+     index : 18
+   -
+     text :
+      fr-FR : Seuls les chiffres sont acceptés après les deux premiers caractères
+     index : 19
+   -
+     text :
+      fr-FR : Seuls le premier et le dernier caractères peuvent être des lettres
+     index : 20
+   -
+     text :
+      fr-FR : Le numéro doit être constitué de 7 chiffres suivis par 1 ou 2 lettres
+     index : 21
+   -
+     text :
+      fr-FR : Les deux premiers caractères peuvent être des lettres à l'exception du O et du I
+     index : 22
+   -
+     text :
+      fr-FR : Le numéro de TVA doit comporter au moins %1 caractères
+     index : 23
+   -
+     text :
+      fr-FR : "Échec de l'appel au service Web : "
+     index : 24
+   -
+     text :
+      fr-FR : Numéro de TVA valide
+     index : 25
+   -
+     text :
+      fr-FR : Numéro de TVA valide
+     index : 26
+   -
+     text :
+      fr-FR : Numéro de TVA invalide
+     index : 27
+   -
+     text :
+      fr-FR : Insérez ici le code de recherche pour %1
+     index : 28
+   -
+     text :
+      fr-FR : Largeur
+     index : 29
+   -
+     text :
+      fr-FR : Largeur
+     index : 30
+   -
+     text :
+      fr-FR : Insérez ici le code de recherche pour %1
+     index : 31
+   -
+     text :
+      fr-FR : Largeur
+     index : 32
+   -
+     text :
+      fr-FR : Largeur
+     index : 33
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

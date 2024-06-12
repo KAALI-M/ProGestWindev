@@ -1,0 +1,178 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_test_délai
+ major_version : 25
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_test_délai
+ identifier : 0x259144e6024f2b5a
+ internal_properties : BQAAAAUAAADuIMtAe1u/Kz76h6TVmTZVT/RahOdy4P/0uTfQvzoUunUY/Mciy39Hxj1vf/+iIKeQmSMKzmh4m2JCeC6xRac/8nTTT6EtcAWklcnwhPDO6x1PXVFnIZsP3PaLui0sCowxk5v9uK//JhK9vBZKEftwxMwraB5zNhLRAFzCuvqfplL0K09YC/hneVDu8TLlY7TDGDWEXi86uZrdk396S9FHiTKr1oevd1lNX3mQI9lOkbUkIHcWyvwz9ZM6SUnxCNX4KIQl09w1GidxJLERRK2YSwm6pgtCPZE1k1n96yglz2WvAuaJxjmtgbnrdFFIpgsw6W3PqmbiBYeGRedsGkqmTa7Bu1phjRO/g/pkAE1+B/mg4UcSr/Yjdx1bUo8UHgm1m1XytWq4EWGnlKTf4/G8hOIHIsU3gwCrDSwDnv1e4E7S55B/gue33L5Rc+FAhi0qEEdOE6Rpc8RDFirvDqIkdn1AcNdlv784/BzNiySmOeDCtH5xmyRh07AY/nMSyGHjzTLoYSkSmppJdYkVmy1NN+ucifXFKQ/+7P5BCi9xZCQ/bTUI6TVz+rcCYkvedSnCrmvK91BzIBmY5efoEXEdcPyXZ19r4Rf7vXNHsIED0UBwkQhLJrUbAheW4WocshCQ1bZGsprt
+ controls :
+  -
+    name : BTN_SansNom1
+    identifier : 0x259144eb02953d8a
+    internal_properties : BQAAAAUAAADQ5pBzMaxf2bX21eHXk8uks6gzkT6soSXjh53sf/MYrNUUheOzV14Q38f2Vll+OW749ZogotL1GypKUJoy6pTc5xMWQHuzzWvnf5rIfRI4Z4lQczsYPFAB6KBb7SxBY5oeC+nZe2tyD3kZUFvMgmBwglxKm5SbK2EIJ+vmp0gl0TvCRIDvFAoQpxMHYq/BwgnD106HjcFNbmqNfGp2jTi/HsbjzWURH+D3qGIoT8g18l5rW4UBPRGI9iuxdv1PSkj0GVcJIrFQZLNAmQ/UTpM6D7hs5ehLCZOenbpGcbW5ciQHXoV8iuXEihCDDyB96RRVV0EdCGruof4UqdbLvsTQ64Tz0wTJ/WHGgObycSoWdXlGptV/PtffEHMQ0dUw0T1JTf72zcVZW7bbm35DdsmwJfGHptPDF2rDLMgq1lOp7W8oy+yKZcsmSK1GM6JoBmJfWrAvNum42BwNpxBbF9cua4Y0CHJAr4WY6PyD7W89VIciR8+6nr/LyplsmUH9AKNUM4HKLl0R5Tb4Rg+o7FeIbxVHG51i3Xr69TlBhVxWh7D3XYbupiwVnpntTLJzB/e/Iehvf6JhsZTCg23+iBPJA5luPhl7+BbIXMt4IQgpcB1Rm6bozMeuCsknpukjC1U+mulPHXt/4cBzmxN71GJKFbxMyal1dW9Ck5VFi0vDWgfDpeRx8k2Pm+uwLTFDPluvc/Tes5k0jpgbXTC8SCQT1L+9ig==
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         dAte1, dAte2 est une date
+         dAte1 = SAI_Date_1.Valeur
+         dAte2 = SAI_Date_2.Valeur
+         
+         stDurée est un stDuréeMoisJours = DiffMoisEtJour(dAte1,dAte2)
+         
+         info(stDurée.mois +" mois ", stDurée.Jour + " jours")
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : SAI_Date_1
+    identifier : 0x259144f403306297
+    internal_properties : BQAAAAUAAABiYrat6JQ3ss6ZpxeRh+god5YAurCVZHBgIEA6BMfXakZt+JrnoA0phm05THuZ6TyVtkq8HjEibevE5yq3BFRQgmNfTuEquczu4AWzztMEFoURyFqQ3Ixv5W9EYXGdKKL6422TzzokHRDn8HLDsgta3TVqooWXb/3QhfaG7afyswDD4xST8MDbSI6GtLNxhTctZjXUn4/6JimdHvIkjruTN6MuafopVzo04psTOqjttWZC27BJFoB+Zihtvk7mqTjK6u7bXZBw7TSklexaOD1ubsxhUZSkZF6zJ8cOWMJ1Ikn6e5bOjrQHtAGenaOxB8luw1f8IHyr1AYGiAelJ2as/7gClZEpLpN2OTsrBYDXCgQMiAopLsh23PyEYw6eN5kDYL03xQKRJFEogm8cXztQBHLVDtB2RoyN8v4MhfGA/kVfVsJ0wwUbQrNBmUPetnI0bQSL1YnPAodTA6Cg8Bxe+WtngMNDoqWjvbSYaPqoRbpq14t81C9xmUITkyCOr3JQyy5IjMTvb7TJRz6s/Ug/i/GDiieD/x4w98cAl95CvHtMShg7g5kyK6WuCx1LsqO3+aFz1yUeYdFGF/QuvFpto5kf1QH/2Ke6XG4snzb+760NK+I3mpTlDRmAm+J2YgmKr03152V+DzRmf2CIT29ylgDPxhYryHr6xHh3kfA/pj61ateoT98lGophNB++DwY5jKXg/oHzDMmWW2X3IOBnOho8nadwSVB09bBuVamZonOgrZuX5cq/JHGXeL7GaTCG4GSyshuRJwWd5Do6PKSmdGSDbXOXCAztKm/PaRXMtB7oeMkIeHsngDVEa5505FoFo6u2WnVKpsgWs/TFtlyA5KBRknUc7xJ27WMjzRLWWKIcD3A8S+ncsr8agrgw+24B8g8YNQLuDr6XeQeWRwFuRiT9Q9kzlAJB1wlGoRw+VjijZZ7YGjqvb4a+hbC/a0e/N6aIc7plMXHEGWBseQUayhOdidef6Ug9o8CCWlvQg9WAIFqiOtT5KfvB8bNgXUxN1eqzLhapiOMsN2c/FKFUoe/gYZlOC2o2nK897TBpwZ+SO6lTUpte7nQeQx9C6BBiDSw/IuCOLs713aQtfazeAvlH+JBYG0nqvlFLPI1DSfp2+Bw4NHb6vo3o4nPdeGsSLaetRl3pj8/nvg1iF3AVgC5Llf4SoLmWhFUUvrD3r17qyIQN0QYtRpbBdRly0DbECVOvWo97iZ4UGxlUawVIx/LsVb1M93MwCHGhshH0j36cfV64IGxgwMQs3KnCbbCaE0cnNZK0t7h7hnu5mGqbHBbNQiyzeIFCTUMFcQ==
+    calendar :
+     internal_properties : BQAAAAUAAAA7ncOQ6kxuYj477kQdowHOVyWA62ylGrl1+5doAh1Z10C9QHAQinnSkZLJ+r/XA3nglMoHLahr9FEwJk9zkG1ZquogmHc3VVNqX5DtEK7TMSZKzPqGAm6sJCZheBQCdUFNUbUh6pTk+vLfmbO+5WwyMbQGO4eeanyg8luM+GIBIsTzljXtqRuv2lFNGw7+nhIyvhW9/vue+yr3NHWPDFsY5P1YY5zAtl1n6XABPbStgecpwTkVR2XLZNM6Gm8+XXtMUB/YfCfFiOl+dy7hUhe3TsRXNIggiL1LHHwrMvx6VwTlJdVq+xqaQxAhacaBq42q28I/seCo2WiZKk/PLT8kYdW80YQllsMqK5INjLZ8GAve/r+TVdmxhD5vsZCvD9ldRIxjoX+zMGi9c2hTG2k7BnVM5CclAHepTspZFIn4q+dFV5w5rzw0yakJXHp9V3pIhIrdjUNnzbJansX6zZ82VWVsamJZqBQ+F5D3ZDuBLDspg4faLnUdvutsbvzihfhXPJFjFAazSp7ewQeD8yyJ3W/MxkCcbrpsgZ1H9JPanZtFz9VgAoyM0q/bJlvfC9vsPeVMoRkYWPAilLjJsvkdmlvNR624jlB2ViHJBtKi/3YxE5KltqYHWTD3fdoZu0ZC2x/bIcb6gR8Rw2nLErIU/4uRVaU67nh6RSzmuV16SS043cEdrMPuybpb7UaC1c5OQv4YudyeHUmuX9rDDGIt35iJL6EVFMrvicJnK1J907U81+1nv5mIXaWULAvq6JF98g4bEqAUyYiYM9J1tp6cBQ+7pq/CbOzVtFU/VOFCcODQr75+eacceG9/ENmOYinbqVMoOyj4AIU6T/IF81hYPjQkYgDTkz4UJk8EoUFPYs4HQ/bsKywBKMZo7EWMpyYChzRsGkpCzhq3+zO+0SDekj6VDygbTc3ri48lYM5ihpJq+ZsVW7cVL8HRts4nHevBa9k1I+9FCDoYly/vN9dW/A5xBnNgSjrlsrYMMMleGdlG3mB72znZzd45c/nxpopELGnlDJbQScJcFM2IfWUkECCwaf0tVcKgOO1tTe0JfygMjJHJTi6slcwv1AIHnaWpbS4tS3iOxaoQFhYaZ1bGq2dIuTruIOT1VfWbj/OFqaOrxneXD1pOH2aw3fp2WHZkKSs5NVZ8UZmNNnEUFySyfsIZ0Mhbcy1LaprmcSch/wSW2YeMsoCszcmJlR9URVcp0fvXgsVxPZMRnhKXgoRbGQPGHJupi0S0i24fEckzYWYcaBqTOEryx9RbsUu5287AOpv0kKnMawF8Y2aOENykz0EIcEdQIKHOrEGreTR6jm2OgZvLDPtFCtcTUUmfpmjD4+hxMtZ5kgSWEmzqG159J4+IvbDEtG9x7llrBcoYKw==
+     type : 47
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Saisie d'une date avec calendrier
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : SAI_Date_2
+    identifier : 0x259144f703336e10
+    internal_properties : BQAAAAUAAADs0gUVNHUH4lsP4KcBZZyFPYkYQqpX35nAcxXSr3Uxc3JpZpBrU2ugU8ODpK/3jDvHY3nbubM+5QWCzZJDqnpEQnoyTCydgwagx/gOUPDBHJbZz7K2LSme2N6xJ/3VlwZAuh+QC6PjWRxYB2ljhV/vDSRMw4+G+5VdiwhnlPe6h4Nr5x2RK6IEiW90VSNiP0eXCSDYEjleqHGSeVQSOTeN/pK0/5jMvWQYBX1GziNxr/aLQEl5Sna4cyBRD+gv8t4OhSjGENePQ6M9bfbqciKivSH9rcqKoBwoe1eqAC0Q/aKi4S9qw5p+jed7lzS2XySxnIp5aFe1MLees+1rPdURlxIpcBaaiIdZ9+yal4gIyo4vnraV3/ej76IEMI5AZ9BDQ5Oqi2dXoA+TseP++YxUOg0ClBuJCk7XtHSIxlXjjX0bt2YdkVJMi4MfDoz4srjV3eQH5/vaaIh2WIqtAT/LROMEBZmYCxeu8WlsreSjCAz7qCPJiojOAlOOHj/mfLkltfMt1git5QYuWeYhq9efx5aeKEgq2qARtqpsDFyXji4c5SjZ07RVVJT5dbHg6KAHNkvDXLJ0pPOGMfc18W5xiR5G8qSLNaGj3dn4vaK2Ut3oM0D2OY67yPG5/5K+5Xjg1mPDv38+hgVOjReY2sCJfPIeg1Uyvhyk/7llbvuFx1WyUw9Nzcs85dH13DqqvRCSh4/0iElWX73kizVQZKlZk0eFQOJSIA/HEKlsZp3/WFC6uHZQRu2RuSHwADHFvM3wCJYBsjXo2nm8QHSpVOe7OUMfZ3XunZlCOlWNS8+8a+y6a3ZOGkBxPmzFHMWfnoXforujoAR+1W4I+dtGL7dLEvagVoCzliYaYMdI9mFEbNBorWBqUzR0TYnb3r5pobOZFkeBB78GDtbdj4jnUOFLFHMKG4u9IEgBrkwejcacMI97rz+L/jhFsyF7Ik9oSZ74oYfPdm6E3moOwBMp7G5iokCs5vqhcTJU+sV7VgbGHtU8viDp9VpsWH6DzYPaDTes19T2JZFVmdcFv5xr9oxYQL2xGIkfQ3cK+anwLp2rYhcKA3P99PlIImWc5xRPQXWeHaO27/NGXi5zo0G4QbPKHYjCajVqb+2se9Lwm7Vy8LVsyJYdH2F2uUjmg/zZtVF6ZnZc2lR0YIgPxu1y/bpaz2vU+0u2asH4U71eVsOCVZ4cDrYlNNKPe0KU6Y7RZdoIT5s6c98oZRioMd9tVg==
+    calendar :
+     internal_properties : BQAAAAUAAAA7ncOQ6kxuYj477kQdowHOVyWA62ylGrl1+5doAh1Z10C9QHAQinnSkZLJ+r/XA3nglMoHLahr9FEwJk9zkG1ZquogmHc3VVNqX5DtEK7TMSZKzPqGAm6sJCZheBQCdUFNUbUh6pTk+vLfmbO+5WwyMbQGO4eeanyg8luM+GIBIsTzljXtqRuv2lFNGw7+nhIyvhW9/vue+yr3NHWPDFsY5P1YY5zAtl1n6XABPbStgecpwTkVR2XLZNM6Gm8+XXtMUB/YfCfFiOl+dy7hUhe3TsRXNIggiL1LHHwrMvx6VwTlJdVq+xqaQxAhacaBq42q28I/seCo2WiZKk/PLT8kYdW80YQllsMqK5INjLZ8GAve/r+TVdmxhD5vsZCvD9ldRIxjoX+zMGi9c2hTG2k7BnVM5CclAHepTspZFIn4q+dFV5w5rzw0yakJXHp9V3pIhIrdjUNnzbJansX6zZ82VWVsamJZqBQ+F5D3ZDuBLDspg4faLnUdvutsbvzihfhXPJFjFAazSp7ewQeD8yyJ3W/MxkCcbrpsgZ1H9JPanZtFz9VgAoyM0q/bJlvfC9vsPeVMoRkYWPAilLjJsvkdmlvNR624jlB2ViHJBtKi/3YxE5KltqYHWTD3fdoZu0ZC2x/bIcb6gR8Rw2nLErIU/4uRVaU67nh6RSzmuV16SS043cEdrMPuybpb7UaC1c5OQv4YudyeHUmuX9rDDGIt35iJL6EVFMrvicJnK1J907U81+1nv5mIXaWULAvq6JF98g4bEqAUyYiYM9J1tp6cBQ+7pq/CbOzVtFU/VOFCcODQr75+eacceG9/ENmOYinbqVMoOyj4AIU6T/IF81hYPjQkYgDTkz4UJk8EoUFPYs4HQ/bsKywBKMZo7EWMpyYChzRsGkpCzhq3+zO+0SDekj6VDygbTc3ri48lYM5ihpJq+ZsVW7cVL8HRts4nHevBa9k1I+9FCDoYly/vN9dW/A5xBnNgSjrlsrYMMMleGdlG3mB72znZzd45c/nxpopELGnlDJbQScJcFM2IfWUkECCwaf0tVcKgOO1tTe0JfygMjJHJTi6slcwv1AIHnaWpbS4tS3iOxaoQFhYaZ1bGq2dIuTruIOT1VfWbj/OFqaOrxneXD1pOH2aw3fp2WHZkKSs5NVZ8UZmNNnEUFySyfsIZ0Mhbcy1LaprmcSch/wSW2YeMsoCszcmJlR9URVcp0fvXgsVxPZMRnhKXgoRbGQPGHJupi0S0i24fEckzYWYcaBqTOEryx9RbsUu5287AOpv0kKnMawF8Y2aOENykz0EIcEdQIKHOrEGreTR6jm2OgZvLDPtFCtcTUUmfpmjD4+hxMtZ5kgSWEmzqG159J4+IvbDEtG9x7llrBcoYKw==
+     type : 47
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Saisie d'une date avec calendrier
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : SAI_Mois
+    identifier : 0x2591f634014280ec
+    internal_properties : BQAAAAUAAAB9ZJckHA38+VakQ6auLsl2cC0QDBOOkRk9DEf6XEG8SxmeMwa5oTsvxPYlYY8AxZ0pFAPhgQwC7xDnWO9+zb7Z3rU2UYSuPg2WFhHkDd9+2/LIiGxDOOmExqAgYwbeyvVgRCE7c+O33r+uBlqAulIBSDChvbBbEuADJmB1KQ2sni66Ls+Im7XKIcltWUv1JMviW+FNg0ZPFTbDDIN41gew8KZFdKwQMzvKjJ3FfBLp1PtL1P0KT0/GB9DHYjFTUbh4LmcP4lLfO2JvoMTvse/v69nANBXQx3CfTjk5HFjhympxnWF6t5MPy+sj9GwEqw8FonOZsBUBXbSLpjIsCLtrBXt3tSgRHMRBbs/w83MSV5Go7JlNQsfj8KWVk/2X9bjNerXSAf6iPiqOM5CuWcW1VWBioSxjy4RDB5WwjA7swd0+y/QEQhWgREEM+KRJRUc5zykNj6DBF5ZOxkBZ4NUlAdW7dg8840HM5be3E1rMr+POMs3uoHWo4uk6c6qap3mRp7w29sNEzpY6vhXmbwCMGC71/JQjzd1oJmm5upXtz8VEY+hr3J/22JAvRJCsRIBYiqvw2DghXD2nItN44qwNSLsec6XgdleV7mVojLnzRj4plO3A8djQDc99DuFpvup8x9RlcSIC+TFAfSsSFYlX6uIOymcEI8JO4FsdUnVwD9BMAOzxMVLIDFBbztnaA0Mx88Y/xJh+LRbUGY4E9WW7JeHA4PfpKmkhC0taqU5qy59DF/MdFCbN0molJwxxopUqr3zlOq/QeCD+zR2d8nqCDj56gLXW+dlWLADfvvjUpuGqbsqxh2KBYDtVSYQagaL4nfQY8q3Jqf0GxS/Rn+bM83GIlmkenZT456hRUc/dsmBbk1KWO2wXpqfQnkiM0eJIFrsNpVfaG7y3AnxaxHF9zNmdawcV+1Wj0vFSbd/xFs8zaFPQkU3oOn2BRE9DGkQjlReXxFiLXvuFevIxexu8XICPROrO2jQ+0HyUKuPihnyJwADaGhkx2wrw8VLWEPSWdMXmv5f54oAZQmaby49lTI8oRAJPD6c9rHQQaypv+EhGzwwnWbVQxq017oZwig==
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : SAI_Jours
+    identifier : 0x2591f63b01449b4a
+    internal_properties : BQAAAAUAAAB2E0lbMOM6+bxTo+0YMUEg/Pl6d5o1fcA0Ym5KPVGnG4Z+EuKoI0pfOlamKSy3hwJvicI0tLg5DJBYAEBNUw7zci5Q4oPcnFrOMhv7ep76czJ4kv5RXCxxdVYcEf6Et71L4xKeFC/+XhW07dMiJwngHYJ0cqBKEd1G2afOd0CKVKVX0DKPcrGd5OU03jZY+r94cuneHldLQKHYgM2hFRg2dU4bhIo/3MX1fT67AZkIemiIMF6l0MI/qjKdF2AXpOBoAawXeKQ7mL3VEOjDEudp7ZWZjU4fdlwnHbTJbrq39eomkoi9VW1CqcJ6g3wc4dLJYPf/Ne3EwhbbLs16Wk/rILSVBJ3iEMy+ku1iYD6o3pM7K8fRaoI4KjYRBju4ExfsiiGtr+pEtUhy5ZzutZyKtRwUGYcv096CnDB63gJ/tRWFFXT3z2i81hHIav4vjFbE/O5e8Hvq2Q51g+3BTJY/KNRSUu2XJKXaQyc/I45I1oZIM54e9Ir/mQcFt0qru1az/1YG6KV47mklnwySLa1nNgNRDL8/cviBSMxT674bgQxc6BeQmIuMM6womHX97pbXyoDP8SChwibJ8cG1+4YV2wtLAoZmvH9qqNCap6DB2knxQdwpdwLYdGe4jlqihtSzva3wbtgcSzLizMEPUuEn0/i3BSwGhZzNdKCzgTzWNZE4nROieXi2SXSuyJrHCTGkIweCoXx4dZ22ToT5IlnnFBVld/i1Em1cEd7ikrdo0yCTCJZKXiDBuVpGkW9MTPsnYTuq+Wl6onOS4mOy68Y2fW5JHTAQdXej4PF52TMQDgAOuUNo965Rh2XQmRVHEZq9lR+x8ZkdXTYqSBfgaqQ6hl8J4UZGobxHdfnzSoSL6gFJPGVjj3oJI6tz+Ks/T1IfqGBUBjFqVxV1cZppP9/Z3xvMgJq/i5mwpjim4lxfjNqBWVYpU9Nkd5uyfopuUgjan150MwwBNv4Fjx0BJtMB1uHFFwjqVwhD2h6yJ7saf1WQZFioXPIUQ4MmWJBo6sr1QvxI5NCFescTDlGryeDlp3aa8v1MqWwa7FHCZVpKj4BPU9RvWpp/hCFgEKmid/g=
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : BTN_SansNom2
+    identifier : 0x2591f6420146b75d
+    internal_properties : BQAAAAUAAAB9SlD+GjSvMTUTGsTNrn5qv95I6YBzIL+zccJ2UJCh9A59CmnhPuZAUNYTXTUB+Kmf3o6P86RAJ5Ob45F8B41eElhfEyLImEM2YrawxbO7TH8o4UWeaZ0YlMtYyJMdJpJX0IG3+IfYtW7aSWXn+PqrXEId/h4BtCKiqaAnALothJRKFXXH0lO+t4GTaR4OeiBksnmNHicEdUtg8eF28D8SLUkiG5l9tHDP+70Jpc2jbseDgVTZDLmQu4fLP43Y6NHk4zvF0kEFmfmb3nEuNgfa2Po50Tfdd63TCnEfveVVd/KizYLsXCu6HEPx7goJTUGtwpYFCdw0rH5BzqPvmw/jTMnUg4QCJMsmTjbHFkzSHKfO7Z2V/HASTpSrNHpUb+Ikce5LHcF6q0h7ZAaGAUyUwf0Y5EB2Ah1GQu5FSWaieStbJvTi4dot14hdKkIkr2WahYMtm8OtL3/iP2GhnPFR8xhC4uPIq5q+5Rv4aRl+y7r5Pdb51EBxaP8XT7IPCwvyyYDtigKUGsJvM6ZXu7/y++gE2ohzTk9jCvIxjuTiv5AVyh46INoJZ1SaLxckWHrSxNOgrf0DmErJ9ca/VBQbspmf0bIMlWhm5VVUnX26fD3BTaqYJHt85E2uLtk/xWSHTUGXGxV4FTo1q/ojmeXSsM0yEH40XpAQR8eC2wFZqJYT/cNCRNZGZJLFYVLVwqRxSqYdOBnISbKckkynDr8/lmJ0+vUWXO0=
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         dAte1, dAte2 est une date
+         dAte1 = SAI_Date_1.Valeur
+         
+         duréet est un stDuréeMoisJours
+         duréet.jour =SAI_Jours
+         duréet.Mois = SAI_Mois
+         
+         
+         dAte2 = DecalDateParMoisJours(duréet,dAte1)
+         
+         info(DateVersChaîne(dAte2))
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BQAAAAUAAADKsJlg2Ltpl5r+Zc57ji8hPYDMiS+bliLE2xo0GExCKcZS4g8MvJbO2unxMH/Ew39ndfsVCH3lk9Ucyyb/y6CvEtFTeSEEVgWC9VqHT5smVjYSsTm3xSlJws4D0hDxpd8sOBfyevI2eVq/TrbRbp7AxCwyQeebeJ8Vql3El3wPHveQ0bNOFXtUApIe9yo9j3SOLpbdRFl1JQiYphbUcFWvVifGYP6UzeQeq8zpvBmm+2wfsFD1bc0OmaE1khBHvQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : BQAAAAUAAABqPQh6HC8RxAVkp2SqPYLuZrfVhd+1KX4lx22hIT8uqEpE6yP7Sbc2rmVqdmL816EWzXOkEe9ijOtYwchZKAfpy3B1cNqhpJgsnbUs
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      PROCEDURE MaFenêtre()
+   -
+     type : 230
+     enabled : false
+ code_parameters :
+  internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x159144d80113f1eb
+  internal_properties : BQAAAAUAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

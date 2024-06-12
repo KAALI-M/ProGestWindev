@@ -1,0 +1,62 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_testGénération
+ major_version : 25
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_testGénération
+ identifier : 0x25fb4ea802732e90
+ internal_properties : BQAAAAUAAACrbkVDV5FX4wQdvtqnbcRmIReRP9yAj6jUiqzjRFhUVcO0kHjF/MmS0VlwTTpIWacsGSWGkgvRKFnvPH5yzJlC2O4hmLpCqOl5LQtqW35EEhi4UBfdLR1j76atz9HnQLxc02x4B73JcVDJjxiuPaV1p+6zeSFrNw5KQ7Ku2Ivcz4mKCXJxL5VU80zWkJxRV2hA/Ds6diNP2LB345lQn2PCxx8Zisyrl7JmTRS3LemQeZc19bcAZwwVDYOZacxsbOrD3pFzNZFoNx9hD72fKfIdFzXDMGJfgzq0Tf4y6KRxEgR1cHjFrOPB/12Wz1A9don86cRj/q6164rVFIeixMN4wI3g0qGgrXl63o1uTJdBgzDd9vL9NloHWjZkfnksGSP0ErzDRr8igapKNwj5Ucy2QRn+/WAqY6bMzGOnhO8BLEmPVPHYl+vVTR8Ku0uYB0u5W2pRZquDdYVkd7TzmsE0+8bJJ/ZAtRthx5f1FQIHodEFR10f25X2vXlSVSjfdqTVUujo1E/vORM6PTICGY/5kne3rmgeZI+gF341xmEsMwGxuGW4/kmJzrqrDoVkNwZPvUiL60YximJY+0NedaxwxcL5nB775FtboM+Qw520E6+eMUlV4k3K0LSjFCzGvGBIKH2F1MJUrFzREvKD/JKmpw==
+ controls : []
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BQAAAAUAAADKsJlg2Ltpl5r+Zc57ji8hPYDMiS+bliLE2xo0GExCKcZS4g8MvJbO2unxMH/Ew39ndfsVCH3lk9Ucyyb/y6CvEtFTeSEEVgWC9VqHT5smVjYSsTm3xSlJws4D0hDxpd8sOBfyevI2eVq/TrbRbp7AxCwyQeebeJ8Vql3El3wPHveQ0bNOFXtUApIe9yo9j3SOLpbdRFl1JQiYphbUcFWvVifGYP6UzeQeq8zpvBmm+2wfsFD1bc0OmaE1khBHvQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : BQAAAAUAAABqPQh6HC8RxAVkp2SqPYLuZrfVhd+1KX4lx22hIT8uqEpE6yP7Sbc2rmVqdmL816EWzXOkEe9ijOtYwchZKAfpy3B1cNqhpJgsnbUs
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      PROCEDURE MaFenêtre()
+   -
+     code : |1+
+      oProjet est un clProjet
+      
+      def est une definition
+      def = RécupèreDéfinition(oProjet)
+      Proc est une Description de variable
+      
+      // Liste des procédures (ou méthodes) de l'objet Def
+      POUR TOUT Proc DE def.variable
+      	Trace (Proc.Nom)  // Affiche le nom de la procédure trouvée
+      FIN
+      
+      
+      
+      
+      
+     type : 34
+   -
+     type : 230
+     enabled : false
+ code_parameters :
+  internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x15fb4dc80106c593
+  internal_properties : BQAAAAUAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

@@ -1,0 +1,3 @@
+//MO596-597.TXT ANA00596 TO ANA00597
+TypeProjet_TypeCourrier		DEL	TypeProjet (TypeProjet) et TypeCourrier (TypeCourrier)	Liaison supprimée entre les fichiers TypeProjet (TypeProjet) et TypeCourrier (TypeCourrier)
+TypeProjet_typeDocArchive		DEL	TypeProjet (TypeProjet) et typeDocArchive (TypeDoc)	Liaison supprimée entre les fichiers TypeProjet (TypeProjet) et typeDocArchive (TypeDoc)

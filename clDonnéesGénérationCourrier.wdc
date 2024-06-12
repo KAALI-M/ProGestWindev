@@ -1,0 +1,100 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clDonnéesGénérationCourrier
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x134f243e33b356e2
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      clDonnéesGénérationCourrier est une Classe
+      PUBLIC 
+      entete est un buffer
+      
+      ExpPays,ExpVille, NiveauHiérarchique1, NiveauHiérarchique2, NiveauHiérarchique3,...
+      NiveauHiérarchique4, NiveauHiérarchique5, NiveauHiérarchique6, NiveauHiérarchique7,...
+      NiveauHiérarchique8, NiveauHiérarchique9, NiveauHiérarchique10	 est une chaine
+      
+       
+      CourrierObjet, CourrierRéf est une chaîne
+      ParentRéf est une chaine =""
+      ParentRéfDate est une date =""
+      
+      //TabDestinatire est un tableau de clEntité
+      TabPJ est un tableau de PiècesJointes
+      
+      ProjetCourrier, OuvrageCourrier, numMarché est une Chaine
+      courrierDate est une date
+      	
+      CivilitéDestinataire, NomPrénomDestinatire, QualitéDestinataire,...
+       VilleDestinataire, PaysDestinataire, EntitéDestinataire,...
+       AdresseDestinaire, FaxDestinatire  est une chaîne
+       
+       piedPage est une buffer
+      fin
+      
+      PiècesJointes est une structure
+      	PJDésignation est une chaîne
+      	PJnombre est un chaine
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1391370659454801634
+     type_code : 27
+     code : |1+
+      procédure Constructeur()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1391370659454867170
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : AjouterPJ
+     procedure_id : 1391395411380028754
+     type_code : 12
+     code : |1+
+      procédure AjouterPJ(Désignation est une chaine, qté est une chaine ="")
+      stPj est PiècesJointes
+      
+      stPj.PJDésignation = Désignation
+      stPj.PJnombre = qté
+      
+      TabPJ.Ajoute(stPj)
+     type : 458752
+   -
+     name : AjouterDestinataire
+     procedure_id : 1395843824819719108
+     type_code : 12
+     code : |1+
+      //PROCÉDURE AjouterDestinataire(IDEntitéDestinataire est un entier, dateRéf est une date = datesys())
+      //OEntité est une clEntité
+      //OEntité.SetID(IDEntitéDestinataire,dateRéf)
+      //
+      //TabDestinatire.Ajoute(OEntité)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x134ef1ea3276bf8d
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

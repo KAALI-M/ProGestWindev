@@ -1,0 +1,3 @@
+//MO620-621.TXT ANA00620 TO ANA00621
+OS		TAR	595	nouvelle taille enregistrement : 595
+OS	NumOrdreOS	RUB-		la rubrique NumOrdreOS est supprimée

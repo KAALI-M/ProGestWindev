@@ -1,0 +1,3213 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COL_ProcéduresGlobales
+ major_version : 25
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1111a7030044f134
+ internal_properties : BQAAAAUAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  internal_properties : BQAAAAUAAAC5UeusyHZ8DgwLfrJjeiehXMJsdCm3i0dHMtjrZ/yCmZdiVF7ma9a7pj3D2CQvAqNXHTdbsw35AoiWJVNOvxF4sLjkIsT3ZhdaOfMEX/hAwQ+/XUFI/8KUDNuRYZOnJBJOjaa1ymmfFhutf+VAxleZEXiDpvX1tTk23/GfgE6TKG12hg77tpO7VAZSiS9se3NwY6OkreFP54KMcFMRzWIy52H0sQ+UTEIpaHprS6waTKAfcazdh3tkpYVS/+DqbkHpV26Kc4rLfXy6tg==
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : getJourCalendaireSuivant
+     procedure_id : 1275812583518585661
+     type_code : 15
+     code : |1+
+      procédure getJourCalendaireSuivant(dAte est une date)
+      dAte.Jour ++
+      selon dAte.VersJourDeLaSemaine()
+      	cas 6 //samedi
+      		 dAte.jour += 2 
+      		RENVOYER dAte
+      	cas 7  //dimanche
+      		dAte.Jour += 1
+      		RENVOYER dAte
+      	AUTRE CAS
+      		Renvoyer dAte
+      FIN
+      
+     type : 458752
+   -
+     name : getJourCalendairePrécedent
+     procedure_id : 1275819455467073173
+     type_code : 15
+     code : |1+
+      procédure getJourCalendairePrécedent(dAte est une date, ecartJour est un entier =0)
+      dAte.Jour -= ecartJour
+      
+      SELON dAte.VersJourDeLaSemaine()
+      	CAS 6 //samedi
+      		dAte.Jour += -1 
+      		RENVOYER dAte
+      	CAS 7  //dimanche
+      		dAte.Jour += -2
+      		RENVOYER dAte
+      	AUTRE CAS
+      		RENVOYER dAte
+      FIN
+      
+     type : 458752
+   -
+     name : Chainecherche
+     procedure_id : 1278924700073322845
+     type_code : 15
+     code : |1+
+      procédure Chainecherche(local chaine1 est une chaine,local  sChaineRecherhcé est une chaine, SChaineSeparation est une chaine, local Début est un entier = 1)
+      
+      pour toute chaine sElem de chaine1 separee par SChaineSeparation
+      	si sElem = sChaineRecherhcé ALORS
+      		renvoyer Début
+      	FIN
+      	Début++
+      FIN
+      renvoyer -1
+      
+      
+      
+     type : 458752
+   -
+     name : Ouvre_Document
+     procedure_id : 1283182859126566598
+     type_code : 15
+     code : |1+
+      procédure Ouvre_Document(nIDArchive est un entier sur 8 octets,ChemFichier est un chaine ,sNomDocument est une chaîne)
+      
+      
+      SI nIDArchive <> 0  ALORS // ouverture d'un fichier par son IDArchive
+      	HLitRecherchePremier(archivedocs,IdArchiveDocs,nIDArchive)
+      	SI HTrouve(archivedocs) ET archivedocs.Document <> Null ALORS
+      		// pointage du fichier dans le dossier temporaire de Windows (le fichier n'est pas encore créer)
+      		ChemFichier = TempDirectory +fSep() + sNomDocument
+      		//création du fichier extrait de la base de donnée vers le chemin spécifié
+      		QUAND EXCEPTION DANS 
+      			HExtraitMémo(archivedocs,Document,ChemFichier)
+      		FAIRE
+      			Info("une erreur s'est produite : ",ErreurInfo())
+      		FIN		
+      		SI fFichierExiste(ChemFichier) ALORS
+      //			SI fExtraitChemin(ChemFichier,fExtension) =".docx" ALORS
+      //				champOnglet	est un champ
+      //				
+      //				i			est un entier	= 1
+      //				ResChamp	est une chaîne
+      //				ResChamp = EnumèreChamp(FEN_ProGest.OngletPrincipal, i)
+      //				TANTQUE ResChamp <> "" 
+      //					SI FEN_ProGest.OngletPrincipal[ResChamp].Libellé = "Documents"	 ALORS
+      //						SORTIR
+      //					FIN
+      //					i++
+      //					ResChamp = EnumèreChamp(FEN_ProGest.OngletPrincipal, i)
+      //				FIN
+      //				//ouverture de l'onglet doucmen
+      //				SI ResChamp ="" ALORS  //aucun champ du mme nom n'a été trouvé
+      //					champOnglet <-  OngletOuvre(FEN_ProGest.OngletPrincipal,"Documents",FI_EditeurDocument)
+      //				SINON //le champ existe
+      //					champOnglet <- {ResChamp,indChamp}		
+      //					FEN_ProGest.OngletPrincipal= ResChamp
+      //				FIN
+      //				champOnglet.FI_EditeurDocument.OuvreDocumentOnglet(nIDArchive, ChemFichier)	//ouverture du fichier extrait avec passage de l'ID archive pour sauvegarde eventuelle
+      //			SINON
+      //				LanceAppliAssociée(ChemFichier)
+      //			FIN
+      			LanceAppliAssociée(ChemFichier)
+      		SINON
+      			Erreur ("le fichier n'a pas été crée")
+      		FIN
+      	FIN
+      SINON   // FICHER AVEC CHEMEIN OU NOUVEUA DOCUMENT
+      	SI  ChemFichier  = "" OU ChemFichier  <> "" ALORS  // chemin de fichier 
+      //		SI fExtraitChemin(ChemFichier,fExtension) =".docx" ou ChemFichier  = "" ALORS
+      //			champOnglet	est un champ 
+      //						i			est un entier	= 1
+      //			ResChamp	est une chaîne =""
+      //			ResChamp = EnumèreChamp(FEN_ProGest.OngletPrincipal, i)
+      //			TANTQUE ResChamp <> "" 
+      //				SI FEN_ProGest.OngletPrincipal[ResChamp].Libellé = "Documents"	 ALORS
+      //					SORTIR
+      //				FIN
+      //				i++
+      //				ResChamp = EnumèreChamp(FEN_ProGest.OngletPrincipal, i)
+      //			FIN
+      //			//ouverture de l'onglet doucment
+      //			SI ResChamp ="" ALORS  //aucun champ du mme nom n'a été trouvé
+      //				champOnglet <- OngletOuvre(FEN_ProGest.OngletPrincipal,"Documents",FI_EditeurDocument)
+      //				champOnglet.FI_EditeurDocument.OuvreDocumentOnglet(0, ChemFichier)
+      //			SINON //le champ existe est rescham contient l'alias
+      //				champOnglet <- FEN_ProGest.OngletPrincipal[ResChamp]
+      //				champOnglet.FI_EditeurDocument.OuvreDocumentOnglet(0, ChemFichier)
+      //				FEN_ProGest.OngletPrincipal= ResChamp
+      //				
+      //			FIN
+      //			// ouverture du fichier a travers la focntion de la fenetre interne 
+      //			
+      //		SINON
+      //			LanceAppliAssociée(ChemFichier)
+      //		FIN
+      //**
+      LanceAppliAssociée(ChemFichier)
+      	FIN
+      FIN
+      
+     type : 458752
+   -
+     name : Connexion_HFSQL
+     procedure_id : 1284697191926460891
+     type_code : 15
+     code : |1+
+      procédure Connexion_HFSQL( Server est une chaine ,User est une chaine , MotdePass est une chaine ,BDD est une chaine )
+      
+      sListeDesErreurs est une chaîne
+      
+      
+      //si HDécritConnexion(MaConnexion,User,MotdePass,Server,BDD,hAccèsHFClientServeur,hOLectureEcriture)  ALORS
+      //	Erreur(HErreurInfo())
+      //	RENVOYER -1
+      //fin 
+      
+      
+      
+      
+      		MaConnexion.Provider		= hAccèsHFClientServeur
+      		MaConnexion.Serveur			= Server
+      		MaConnexion.Utilisateur		= User
+      		MaConnexion.MotDePasse		= MotdePass
+      		MaConnexion.BaseDeDonnées	= BDD
+      		MaConnexion.Accès			= hOLectureEcriture
+      		MaConnexion.Cryptage		= hCryptageStandard
+      		//SI PAS GpwOuvreConnexion(MaConnexion) ALORS //ouvreConnexion Au GPW 
+      		SI PAS HOuvreConnexion(MaConnexion) ALORS //ouvreConnexion Au GPW 
+      			Erreur(HErreurInfo())
+      			renvoyer -1
+      		sinon
+      			SI PAS HChangeConnexion("*",MaConnexion) // associe la connexion aux Fichiers ALORS //ouvreConnexion Au GPW 
+      				Erreur(HErreurInfo())
+      				RENVOYER -1
+      			Sinon
+      					HChangeConnexion("*",MaConnexion) // associe la connexion aux Fichiers
+      					
+      					// sauver les paramètres
+      					
+      					SauveParamètre("Server",Server)
+      					SauveParamètre("User",User)
+      					SauveParamètre("MotdePass",MotdePass)
+      					SauveParamètre("BDD",BDD)
+      					
+      					// Vérification stricte de la structure de fichiers
+      					HVérifieStructure("*", hIdentique)
+      					// Pour tous les fichiers
+      					POUR TOUTE CHAÎNE sNomUnFichier DE HListeFichier() SÉPARÉE PAR RC
+      						QUAND EXCEPTION DANS
+      							// Ouverture ou création du fichier de données
+      							HCréationSiInexistant(sNomUnFichier, "123")
+      						FAIRE
+      							// Problème
+      							// Il y a une différence de structure ?
+      							SI HErreur(hErrEnCours) = 70016 ALORS
+      								// Erreur 70016: LE FICHIER NE CORRESPOND PAS A SA DESCRIPTION
+      								ToastAffiche("Mise à jour de la structure du fichier <" + ...
+      								sNomUnFichier + "> en cours...", toastCourt, cvMilieu, chCentre)
+      								// On met à jour la structure du fichier
+      								SI PAS HModifieStructure(sNomUnFichier) ALORS
+      									// Echec de la mise à jour de la structure du fichier
+      									sListeDesErreurs += [RC] + ...
+      									"- Erreur de modification de structure pour le fichier <" + ...
+      									sNomUnFichier + "> : " + HErreurInfo()
+      								SINON
+      									HMiseAJourLiaison(sNomUnFichier,hmsNormal)
+      								FIN
+      							SINON
+      								// Autres erreurs qu'une différence de structure
+      								sListeDesErreurs += [RC] + "- Erreur d'accès au fichier <" + ...
+      								sNomUnFichier + "> : " + HErreurInfo()
+      							FIN
+      						FIN
+      					FIN
+      					
+      					HVérifieStructure("*", hCompatible)
+      					
+      					SI sListeDesErreurs <> "" ALORS
+      						// Message afin de prévenir
+      						SI PAS OuiNon("Des erreurs sont apparus lors de l'ouverture des fichiers : " + RC + ...
+      							sListeDesErreurs + RC +...
+      							"Continuer quand même l'application ?") ALORS
+      							FinProgramme()
+      						SINON
+      							RENVOYER -1
+      						FIN
+      					SINON 
+      						créeDonnéesdeBaseSiInexistant()
+      						RENVOYER 1
+      					FIN
+      			FIn
+      fin
+     type : 458752
+   -
+     name : Login
+     procedure_id : 1285081801555663741
+     type_code : 15
+     code : |1+
+      procédure Login(LoginUser, LoginMdPass )
+      
+      HLitRecherchePremier(GPU_Utilisateur,Login,LoginUser)
+      SI HTrouve(GPU_Utilisateur) ALORS
+      	si GPU_Utilisateur.MotPasseASaisir = 1 alors // mot de pass à saisir
+      		renvoyer -1
+      	FIN
+      	SI GPU_Utilisateur.MotPasse = LoginMdPass ALORS
+      		SI GPU_Utilisateur.CompteActif =Faux ALORS 
+      			Info("Votre Compte a été désactivé par un administrateur !","Veuillez contacter l'Admin du serveur.")
+      			renvoyer 0
+      		FIN
+      		//
+      //		utilisateur.SetUtilistaeur(GPU_Utilisateur.IDUtilisateur)
+      		
+      		ToastAffiche("Bonjour " +GPU_Utilisateur.Nom + " " + GPU_Utilisateur.Prenom,300,cvBas,chCentre)
+      		
+      		renvoyer GPU_Utilisateur.IDUtilisateur
+      	SINON
+      		ToastAffiche("Utilisateur ou mot de passe incorrect!",toastCourt,cvBas)
+      		RENVOYER 0
+      	FIN 
+      SINON 
+      	ToastAffiche("Utilisateur ou mot de passe incorrect!",toastCourt,cvBas)
+      	RENVOYER 0
+      FIN
+     type : 458752
+   -
+     name : GénèreOS
+     internal_properties : BQAAAAUAAACj0vYjDCjSyBN9OtZ24TMh4k0tFKlBHYhIyjq492Jugh3TZ5yujN1oaA9HpmOjOr20Qp81H3cDooDgd8ixqxg8sXvuUI8Txynd9kZa7w18nw==
+     procedure_id : 1286685503753019065
+     type_code : 15
+     code : |1+
+      PROCÉDURE publique GénèreOS(gnIDOS est un entier sur 8 octets)
+      
+      HExécuteRequête(REQ_OS,hRequêteDéfaut,Null,gnIDOS)
+      DonnéesMarché est un clDonnéesMarché
+      DateNotifOS est une date = REQ_OS.DateNotification
+      DonnéesMarché.ChercheDonnées(REQ_OS.IDProjet,DateNotifOS)
+      
+      ImpDélaiGlobal est un booleen = 0 // a modifier 
+      
+      //HExécuteRequête(REQ_DonnésMarché,hRequêteDéfaut,REQ_OS.IDProjet)
+      
+      //*** liste des délais hiérarchiques
+      HExécuteRequête(REQ_DélaisduOS,MaConnexion,hRequêteDéfaut,gnIDOS)  // délais affecté au OS actuel
+      
+      si HNbEnr(REQ_DélaisduOS) > 0  ou REQ_OS.Décisions_Infos <> Null ALORS	
+      	chemFichierGénéré est une chaine =TempDirectory + fSep() +fConstruitNomFichier(DonnéesMarché.m_sNumero+"_OS"+REQ_OS.NumOS+"_"+REQ_OS.DateEffet+".docx")
+      	
+      	si Pas fCopieFichier(fRepExe()+fSep()+"Modèle docs"+fSep()+"Modèle OS.docx",chemFichierGénéré) ALORS
+      		Erreur( ErreurInfo())
+      		RENVOYER Faux
+      	FIN
+      	MonDoc	est un Document =chemFichierGénéré
+      	largeurDoc est un entier = MonDoc.Section.LargeurPage-MonDoc.Section.MargeDroite-MonDoc.Section.MargeGauche
+      	MonDoc.Section.MargeEntête		= 10
+      	MonDoc.Section.MargePiedDePage	= 2.5
+      	
+      	//** remplacement des variables
+      	DocRemplace(MonDoc,VariablesGénOS.PaysMo..Valeur,  Majuscule(DonnéesMarché.MaitreOuvrage.EntitéMO.m_sPays),MotComplet)
+      	
+      	//Génération Hiérarchie jusqu’à l'ordre 10
+      	
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique1..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(1).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique2..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(2).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique3..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(3).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique4..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(4).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique5..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(5).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique6..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(6).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique7..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(7).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique8..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(8).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique9..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(9).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NiveauHiérarchique10..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(10).m_sIntitulé,MotComplet)
+      	
+      	
+      	DocRemplace(MonDoc,VariablesGénOS.CivilitéIntervenantMarché..Valeur,DonnéesMarché.intervenant.PersoneIntervenant.m_sCivilité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NomPrénomIntervenantMarché..Valeur,DonnéesMarché.intervenant.PersoneIntervenant.m_sNom + " " + DonnéesMarché.intervenant.PersoneIntervenant.m_sPrenom,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.QualitéIntervenantMarché..Valeur,DonnéesMarché.intervenant.Affectation.m_sQualité,MotComplet)
+      	
+      	DocRemplace(MonDoc,VariablesGénOS.N°Registre..Valeur,REQ_OS.RefRegistre,MotComplet)
+      	
+      	DocRemplace(MonDoc,VariablesGénOS.N°Marché..Valeur,DonnéesMarché.m_sNumero,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.ObjetMarché..Valeur,DonnéesMarché.m_sObjetMarché,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.N°OS,REQ_OS.NumOS,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.RéfNOS,REQ_OS.refnos,MotComplet)
+      	
+      	
+      	//Titulaire
+      	
+      	DocRemplace(MonDoc,VariablesGénOS.CivilitéTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.NomPrénomTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.Personne.m_sNom+ " "+DonnéesMarché.Titulaire.Représentant.Personne.m_sPrenom ,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.QualitéTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.m_sQualité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.AdresseTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sAdresse,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.VilleTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sVille,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.PaysTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sPays,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.EntitéTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sIntitulé,MotComplet)
+      	
+      	selon DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité
+      		cas "Mme"
+      			DocRemplace(MonDoc,VariablesGénOS.Le_LaTitulaire..Valeur,"la", MotComplet)
+      		cas "M."
+      			DocRemplace(MonDoc,VariablesGénOS.Le_LaTitulaire..Valeur,"le", MotComplet)	
+      	FIN
+      	
+      	
+      	//** liste des OS Arrêt des délais de l'OS dans le cas d'un OS reprise
+      		expRéfOSArret est une chaine = ""	
+      	expAction est une chaine = ""
+      	selon REQ_OS.TYPE
+      		cas "commencement", "arrêt", "reprise"
+      			
+      			SI REQ_OS.TYPE = "reprise" ALORS
+      				listDélaisOS est une chaine =""
+      				POUR TOUT REQ_DélaisduOS 
+      					listDélaisOS += [";"] + REQ_DélaisduOS.IDTabDélais
+      				FIN
+      				HExécuteRequête(REQ_OSsDesDélais,hRequêteDéfaut,listDélaisOS, REQ_OS.DateEffet)
+      				
+      				
+      			
+      				ObOS est une MOS		
+      				TabNumOSArret est une Tableau de MOS
+      				
+      				POUR TOUT REQ_DélaisduOS SUR Indice
+      					POUR TOUT REQ_OSsDesDélais SUR DateEffet AVEC "IDTabDélais="+REQ_DélaisduOS.IDTabDélais DEPUISFIN
+      						SI REQ_OSsDesDélais.TypeOS = "arrêt" ALORS
+      							FichierVersMémoire(ObOS,REQ_OSsDesDélais)
+      							TabNumOSArret.Ajoute(ObOS)
+      						FIN
+      						SORTIR // exécution de la premiere ligne
+      					FIN
+      				FIN
+      				TabNumOSArret.SupprimeDoublon(ttMembre,"m_nNumOS")
+      				
+      			
+      				TabNumOSArret.Trie(ttMembre,"+m_nNumOS")
+      				
+      				NbreOS est un entier = TableauOccurrence(TabNumOSArret)
+      				SELON  NbreOS
+      					CAS 0 
+      						Erreur("Un OS de 'Reprise' doit avoir un des délais en arrêt !"," Revoir le type de l'OS ou l’état de ses délais." )
+      					CAS 1
+      						//				DocRemplace(MonDoc,"%expRéfOSArret%","Considérant l'OS d'arrêt n°: " +TableauVersChaîne(TabNumOSArret,", ") + ", " )
+      						expRéfOSArret = "Considérant l'OS d'arrêt n°: " + TabNumOSArret[1].m_sRefRegistre + ", "
+      					CAS >1  // n° 1, 2, ... et N
+      						listOSArret est une chaine =""
+      						POUR i=1 _a_ NbreOS-1
+      							listOSArret += [", "] + TabNumOSArret[i].m_sRefRegistre
+      						FIN
+      						listOSArret +=  " et " +TabNumOSArret[NbreOS].m_sRefRegistre
+      						//DocRemplace(MonDoc,"%expRéfOSArret%","Considérant les OS d'arrêt n°: " +listOSArret + ", " )
+      						expRéfOSArret = "Considérant les OS d'arrêt n°: " +listOSArret + ", "
+      				FIN
+      			SINON
+      				//DocRemplace(MonDoc,"%expRéfOSArret%","")
+      				expRéfOSArret = ""
+      			FIN
+      			
+      			
+      			SELON REQ_OS.TYPE 
+      				CAS "commencement"
+      					//DocRemplace(MonDoc,"%expAction%","commencer",MotComplet)
+      					expAction = "commencer"
+      				CAS "arrêt"
+      					//DocRemplace(MonDoc,"%expAction%","surseoir",MotComplet)
+      					expAction = "surseoir provisoirement"
+      				CAS "reprise"
+      					//DocRemplace(MonDoc,"%expAction%","reprendre",MotComplet)
+      					expAction = "reprendre"
+      			FIN
+      			si DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité = "Mme" ALORS
+      				DocRemplace(MonDoc,VariablesGénOS.Corps..valeur, expRéfOSArret+ "Est invitée à "+ expAction+" les prestations du marché objet des délais ci-dessous à partir du "+ DateVersChaîne (REQ_OS.DateEffet) + " :",MotComplet)
+      			SINON
+      				DocRemplace(MonDoc,VariablesGénOS.Corps..Valeur, expRéfOSArret+ "Est invité à "+ expAction+" les prestations du marché objet des délais ci-dessous à partir du "+ DateVersChaîne (REQ_OS.DateEffet) + " :",MotComplet)
+      			FIN
+      			
+      			
+      		
+      		cas "notification"
+      			
+      		cas "décision"
+      			DocRemplace(MonDoc,VariablesGénOS.Corps..Valeur,RTFVersTexte(REQ_OS.Décisions_Infos) ,MotComplet)
+      			
+      	FIN
+      	
+      	//DocRemplace(MonDoc,"%dateEffet%", DateVersChaîne(REQ_os.DateEffet),MotComplet)
+      	
+      	
+      	/**
+      	listFrag est tableau de docFragments = DocRecherche(MonDoc,VariablesGénOS.ListeDélais..Valeur,MotComplet)
+      	fragment est docfragment = listFrag[1]
+      	policeNom		est une chaîne	= fragment.MiseEnForme.PoliceNom
+      	policeTaille	est une entier	= fragment.MiseEnForme.PoliceTaille
+      	
+      	//**
+      	listdélais est un Document =  GénèreListeHiérarchique("REQ_DélaisduOS",3,policeNom,policeTaille,"IDtabDélais","IDtabDélaisParent","Désignation","NumDélais",DonnéesMarché.m_bImpDélaisDansOSetPv)
+      	fragment.Texte = ""
+      	fragment.MiseEnPage.EspacementAprès=0
+      	
+      	docInsère(MonDoc,fragment.PositionDébut,listdélais)
+      	
+      	DocRemplace(MonDoc,VariablesGénOS.VilleMO..Valeur,DonnéesMarché.MaitreOuvrage.EntitéMO.m_sVille,MotComplet)
+      	DateNotif est une date =REQ_OS.DateNotification 
+      	DocRemplace(MonDoc,VariablesGénOS.DateNotification..Valeur, DateVersChaîne(DateNotif),MotComplet)
+      	DocRemplace(MonDoc,VariablesGénOS.DateNotifactionLettre..Valeur, DateVersJourEnLettre(DateNotif)+ " " + NombreEnLettres(DateNotif.jour) +" "+ DateVersMoisEnLettre(DateNotif) +" "+ NombreEnLettres(DateNotif.Année) ,MotComplet)
+      	//libération des requêtes
+      	hlibèreRequête(REQ_OS)
+      	//HLibèreRequête(REQ_DonnésMarché)
+      	HLibèreRequête(REQ_DélaisduOS)  
+      	
+      	// sauvegarde document
+      	MonDoc.Sauve()
+      	MonDoc.Ferme()
+      	//fSupprime(chemFichierGénéré)
+      	
+      	RENVOYER chemFichierGénéré
+      
+      sinon
+      	//liberation des requêtes
+      	HLibèreRequête(REQ_OS)
+      	//HLibèreRequête(REQ_DonnésMarché)
+      	HLibèreRequête(REQ_DélaisduOS)  
+      	renvoyer ""
+      fin
+      
+     type : 458752
+   -
+     name : GénèreListeHiérarchique
+     internal_properties : BQAAAAUAAADaQ4BfFne0WzE4+NsIeLQh8XukLlHDjk+Tl/xIlHaFe2BQijb3bOZgf6uSAFaLFyf4rD8Z5nMzoapsohDvtw0=
+     procedure_id : 1286997400056951613
+     type_code : 15
+     code : |1+
+      procédure GénèreListeHiérarchique(SourceDonnées est Chaine, retrait est un entier, PoliceNom est une chaine , PoliceTaille est un entier, ID est une chaine, IDParent est une chaine, Désignaton est une chaine, NumRéf est une chaine ="", ImpNumDélais est un booléen = 0 )
+      DocListeHiérarchique est un Document
+      DocListeHiérarchique.Paragraphe[1].MiseEnPage.EspacementAprès = 0
+      
+      nposition					est un entier
+      slistParentsPossibleDélai	est un chaine	= ""
+      POUR TOUT SourceDonnées 
+      	slistParentsPossibleDélai += [";"] + {SourceDonnées+"."+ID,indRubrique}
+      FIN
+      
+      //ajout des délais parent n'ayant aucun parent 
+      POUR TOUT SourceDonnées SUR "Indice"  // Ajout des délais de l'OSPV actuel
+      	SI Chainecherche(slistParentsPossibleDélai,{SourceDonnées +"."+IDParent,indRubrique} ,";") = -1 ALORS  // c'est un parent
+      		nposition= HSauvePosition(SourceDonnées)
+      		AjoutFils_ListeHiérarchique(SourceDonnées ,DocListeHiérarchique,retrait, {SourceDonnées+"."+ID,indRubrique},ID,IDParent,Désignaton,NumRéf,0,ImpNumDélais) 							
+      		HRetourPosition(nposition)
+      	FIN
+      FIN
+      
+      fragment est un docFragment(DocListeHiérarchique,1,DocListeHiérarchique.Paragraphe[DocListeHiérarchique.Paragraphe..Occurrence].PositionFin)
+      fragment.MiseEnForme.PoliceNom = PoliceNom
+      fragment.MiseEnForme.PoliceTaille = PoliceTaille
+      
+      
+      //Ouvre(FEN_test,"",DocListeHiérarchique)
+      renvoyer DocListeHiérarchique
+      
+      
+      	PROCÉDURE INTERNE AjoutFils_ListeHiérarchique(sSourceDonnées est une Chaine ,dDocListeHiérarchique est un Document,nRetrait est un entier,LOCAL IdActuel est un entier sur 8 octets, sID est une chaine, sIDParent est une chaine, sDésignaton est une chaine , sNumRéf est une chaine = "",Local nNiveauActuel est un entier = 0, ImprNumDélais est un booléen = 0)
+      	nPositionFils	est un entier
+      	DélaisàUnFils est un booléen
+      	// ajout du délai actuel
+      	nPositionFils	= HSauvePosition(sSourceDonnées)
+      	HLitRecherchePremier(sSourceDonnées,sIDParent,IdActuel)
+      	DélaisàUnFils = vrai
+      	SI HTrouve(sSourceDonnées) ALORS //le délais à un fils
+      		dDocListeHiérarchique.Paragraphe[dDocListeHiérarchique.Paragraphe.Occurrence].MiseEnForme.PoliceGras	= Vrai
+      		DélaisàUnFils = vrai
+      	SINON
+      		dDocListeHiérarchique.Paragraphe[dDocListeHiérarchique.Paragraphe.Occurrence].MiseEnForme.PoliceGras	= Faux
+      		DélaisàUnFils = faux
+      	FIN
+      	HRetourPosition(nPositionFils)
+      	
+      	SI sNumRéf = ""   ALORS
+      		dDocListeHiérarchique.Ajoute ([RC] + {sSourceDonnées+"."+sDésignaton,indRubrique})
+      	SINON 
+      		SI {sSourceDonnées+"."+sNumRéf,indRubrique} <> "" ALORS
+      			si ImprNumDélais = 1 ALORS // impression des Num des délais entre Parenthèse 
+      				si DélaisàUnFils = 1 ALORS
+      					dDocListeHiérarchique.Ajoute ([RC] +{sSourceDonnées+"."+sDésignaton,indRubrique}+ "  (Délai : "+{sSourceDonnées+"."+sNumRéf,indRubrique}+ ")")
+      				sinon 
+      					dDocListeHiérarchique.Ajoute ([RC] + {sSourceDonnées+"."+sDésignaton,indRubrique}+ "  (Délai : "+{sSourceDonnées+"."+sNumRéf,indRubrique}+ ")")
+      				FIN
+      			sinon
+      				SI DélaisàUnFils = 1 ALORS
+      					dDocListeHiérarchique.Ajoute ([RC] + {sSourceDonnées+"."+sDésignaton,indRubrique})
+      				SINON 
+      					dDocListeHiérarchique.Ajoute ([RC] + {sSourceDonnées+"."+sDésignaton,indRubrique})
+      				FIN
+      				
+      			FIN
+      		SINON
+      			dDocListeHiérarchique.Ajoute ([RC] + {sSourceDonnées+"."+sDésignaton,indRubrique})
+      		FIN
+      	FIN
+      	
+      	
+      	dDocListeHiérarchique.Paragraphe[dDocListeHiérarchique.Paragraphe.Occurrence].MiseEnPage.RetraitGauche = nNiveauActuel*nRetrait
+      	
+      	nNiveauActuel ++
+      	
+      	// Recherche des Fils
+      	
+      	POUR TOUT sSourceDonnées SUR "Indice" AVEC sIDParent+" ="+  IdActuel	
+      		nPositionFils	= HSauvePosition(sSourceDonnées) //sauve la position actuelle la fonction suivante chnagera la psoition sur la requete
+      		AjoutFils_ListeHiérarchique(sSourceDonnées,dDocListeHiérarchique, nRetrait,{sSourceDonnées+"."+sID,indRubrique},sID,sIDParent,sDésignaton,sNumRéf,nNiveauActuel,ImprNumDélais) //ajout des fils ayant le parent IDactuel
+      		HRetourPosition(nPositionFils)
+      	FIN
+      	FIN
+     type : 458752
+   -
+     name : fConstruitNomFichier
+     procedure_id : 1287082174024057847
+     type_code : 15
+     code : |1+
+      procédure  fConstruitNomFichier(Nomfichier est une chaîne)
+      Nomfichier = Remplace(Nomfichier,["<",",",">",":","/","\","|","?","*" ],"-")
+      renvoyer Nomfichier
+      
+      
+      
+     type : 458752
+   -
+     name : GénèrePVRéception
+     internal_properties : BQAAAAUAAACj0vYjDCjSyBN9OtZ24TMh4k0tFKlBHYhIyjq492Jugh3TZ5yujN1oaA9HpmOjOr20Qp81H3cDooDgd8ixqxg8sXvuUI8Txynd9kZa7w18nw==
+     procedure_id : 1287376740050372636
+     type_code : 15
+     code : |1-
+      PROCÉDURE publique GénèrePVRéception ( gnIDRéception  est un entier sur 8 octets)
+      
+      // //Données Réception 
+      REQ_Données_duneRéception.ParamIDReception = gnIDRéception
+      
+      HExécuteRequête(REQ_Données_duneRéception,MaConnexion,hRequêteDéfaut,gnIDRéception)
+      // titre de l’état
+      //HExécuteRequête(REQ_DonnésMarché,MaConnexion,hRequêteDéfaut,REQ_Données_duneRéception.IDProjet) // a faire : revoir cette requete doit etre executé dans lors de la selection du projet (evitre execution répetitve)
+      
+      ////Données Marché
+      DonnéesMarché	est un clDonnéesMarché
+      DateConstServFait		est une date	= REQ_Données_duneRéception.DateSignatAttachement
+      DonnéesMarché.ChercheDonnées(REQ_Données_duneRéception.IDProjet,DateConstServFait)
+      
+      
+      //*** liste des délais hiérarchiques
+      HExécuteRequête(REQ_Délaisréceptionnés,MaConnexion,hRequêteDéfaut,gnIDRéception)
+      
+      si HNbEnr(REQ_Délaisréceptionnés) > 0 ALORS
+      	
+      	chemFichierGénéré est une chaine =TempDirectory + fSep() +fConstruitNomFichier(DonnéesMarché.m_sNumero+"_PV"+REQ_Données_duneRéception.NumPV+"_"+REQ_Données_duneRéception.DatePV +".docx")
+      	si Pas fCopieFichier(fRepExe()+fSep()+"Modèle docs"+fSep()+"Modèle PVRéception.docx",chemFichierGénéré) ALORS
+      		Erreur( ErreurInfo())
+      		RENVOYER Faux
+      	FIN
+      	
+      	MonDoc	est un Document =chemFichierGénéré
+      	largeurDoc est un entier = MonDoc.Section.LargeurPage-MonDoc.Section.MargeDroite-MonDoc.Section.MargeGauche
+      	
+      	//**entête
+      	InsereEntete(MonDoc,dChargeImage(DonnéesMarché.MaitreOuvrage.EntitéMO.m_EntetePage))
+      	//** pied de page
+      	InserePiedPage(MonDoc,dChargeImage(DonnéesMarché.MaitreOuvrage.EntitéMO.m_PiedPage))
+      	
+      	
+      	//** remplacement des variables
+      	DocRemplace(MonDoc,VariablesGénPV.paysMO..valeur,  Majuscule(DonnéesMarché.MaitreOuvrage.EntitéMO.m_sPays),MotComplet)
+      	//Génération Hiérarchie jusqu’à ordre 10
+      		
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique1..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(1).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique2..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(2).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique3..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(3).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique4..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(4).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique5..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(5).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique6..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(6).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique7..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(7).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique8..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(8).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique9..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(9).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NiveauHiérarchique10..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(10).m_sIntitulé,MotComplet)
+      	
+      	
+      	DocRemplace(MonDoc,VariablesGénPV.N°Marché..Valeur,DonnéesMarché.m_sNumero,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.ObjetMarché..valeur,DonnéesMarché.m_sObjetMarché,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.N°PV..valeur,REQ_Données_duneRéception.NumPV,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.N°ArticleDélais..Valeur,DonnéesMarché.m_sNumArtDélais,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.villeMO..Valeur,DonnéesMarché.MaitreOuvrage.EntitéMO.m_sVille, MotComplet)
+      	
+      	//** liste des délais de la réception 
+      	listFrag	est tableau de docFragments	= DocRecherche(MonDoc,VariablesGénOS.ListeDélais..Valeur,MotComplet)
+      	fragment	est docfragment	
+      	si 	listFrag.occurrence > 0 ALORS
+      			fragment= listFrag[1]
+      	FIN
+      	
+      	
+      	policeNom est une chaîne = fragment.MiseEnForme.PoliceNom
+      	policeTaille est une entier = fragment.MiseEnForme.PoliceTaille
+      	
+      	listdélais	est un Document =  GénèreListeHiérarchique("REQ_Délaisréceptionnés",3,policeNom,policeTaille,"IDtabDélais","IDtabDélaisParent","Désignation","NumDélais",DonnéesMarché.m_bImpDélaisDansOSetPv)
+      	fragment.Texte = ""
+      	DocInsère(MonDoc,fragment.PositionDébut,listdélais)
+      	
+      	SELON HNbEnr(REQ_Délaisréceptionnés)
+      		CAS  1 : 
+      			DocRemplace(MonDoc,VariablesGénPV.ExpDe_sDélai_sMentionné_s..valeur,"du délai mentionné",MotComplet)
+      		CAS >1 :
+      			DocRemplace(MonDoc,VariablesGénPV.ExpDe_sDélai_sMentionné_s..Valeur,"des délais mentionnés",MotComplet)
+      	FIN
+      	
+      	
+      	//** table des OS/délais de la réception
+      	HExécuteRequête(REQ_listOS_desDélais_duneReception,hRequêteDéfaut,gnIDRéception)
+      	gtabOS est un tableau d'entier sur 8 octets
+      	//liste des OS 
+      	POUR TOUT REQ_listOS_desDélais_duneReception SUR NumOS //liste des OS des délais de la réception
+      		gtabOS.Ajoute(REQ_listOS_desDélais_duneReception.IDOS)
+      	FIN
+      	TableauSupprimeDoublon(gtabOS)
+      	
+      	//expression des OS / l'OS
+      	SELON gtabOS.Occurrence
+      		CAS  1 : 
+      			DocRemplace(MonDoc,VariablesGénPV.ExpLe_sOS..valeur,"l'ordre de service", MotComplet)
+      		CAS >1 :
+      			DocRemplace(MonDoc,VariablesGénPV.ExpLe_sOS..Valeur,"les ordres de service", MotComplet)	
+      	FIN
+      	
+      	//Tiutilaire
+      	
+      	DocRemplace(MonDoc,VariablesGénPV.CivilitéTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.NomPrénomTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.Personne.m_sNom+ " "+DonnéesMarché.Titulaire.Représentant.Personne.m_sPrenom ,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.QualitéTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.m_sQualité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.AdresseTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sAdresse,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.VilleTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sVille,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.PaysTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sPays,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.EntitéTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sIntitulé,MotComplet)
+      	
+      	SELON DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité
+      		CAS "Mme"
+      			DocRemplace(MonDoc,VariablesGénPV.Le_LaTitulaire..Valeur,"la", MotComplet)
+      		CAS "M."
+      			DocRemplace(MonDoc,VariablesGénPV.Le_LaTitulaire..Valeur,"le", MotComplet)	
+      	FIN
+      	
+      	
+      	DocRemplace(MonDoc,VariablesGénPV.dateServiceFait..Valeur,DateVersChaîne(REQ_Données_duneRéception.DatePV), MotComplet)
+      	DocRemplace(MonDoc,VariablesGénPV.dateConstServiceFait..Valeur, DateVersChaîne(REQ_Données_duneRéception.DateSignatAttachement),MotComplet)
+      	
+      	
+      	// Insertion tableau des OS / délais 
+      	listFrag2		est tableau de docFragments	= DocRecherche(MonDoc,VariablesGénPV.ListeOSRéf..Valeur,MotComplet)
+      	FragTabList	est un docfragment
+      	Si listFrag2.Occurrence()>0 ALORS
+      		FragTabList					= listFrag2[1]
+      		FragTabList.Texte = ""
+      	FIN
+      	policeNom2		est une chaîne	= FragTabList.MiseEnForme.PoliceNom
+      	policeTaille2	est une entier	= FragTabList.MiseEnForme.PoliceTaille
+      	
+      	MondocTabOS est un Document
+      	FragTabListOS est un docFragment
+      	FragTabListOS = DocInsèreTableau(MondocTabOS,1,4,gtabOS.Occurrence+1)
+      	
+      	pour TOUT para de FragTabListOS.Paragraphe
+      		si para.Tableau <> Null ALORs
+      			para.Tableau.Colonnes[1].LargeurMillimètres = largeurDoc*0.11
+      			para.Tableau.Colonnes[2].LargeurMillimètres = largeurDoc*0.2
+      			para.Tableau.Colonnes[3].LargeurMillimètres = largeurDoc*0.55
+      			para.Tableau.Colonnes[4].LargeurMillimètres = largeurDoc*0.15
+      			//1ere ligne titre
+      			para.Tableau.Cellules[1, 1].Contenu.Texte = "N° OS"
+      			para.Tableau.Cellules[1, 2].Contenu.Texte = "Type OS"
+      			para.Tableau.Cellules[1, 3].Contenu.Texte = "N° délais"
+      			para.Tableau.Cellules[1, 4].Contenu.Texte = "Date Effet"
+      			
+      			
+      			// autre lignes	
+      			Pour i = 1 _a_ gtabOS.Occurrence
+      				HLitRecherchePremier(REQ_listOS_desDélais_duneReception,IDOS, gtabOS[i],hIdentique)
+      				si HTrouve(REQ_listOS_desDélais_duneReception) ALORS
+      					para.Tableau.Cellules[i+1, 1].Contenu.Texte	= REQ_listOS_desDélais_duneReception.NumOS
+      					para.Tableau.Cellules[i+1, 2].Contenu.Texte	= REQ_listOS_desDélais_duneReception.TypeOs
+      					para.Tableau.Cellules[i+1, 4].Contenu.Texte	= DateVersChaîne(REQ_listOS_desDélais_duneReception.DateEffet)
+      					
+      					
+      	//				para.Tableau.Cellules[i+1,4].MiseEnPage.Alignement							= chGauche
+      	//				para.Tableau.Cellules[i+1,4].Contenu.MiseEnForme.PoliceNom					= policeNom2
+      	//				para.Tableau.Cellules[i+1,4].Contenu.MiseEnForme.PoliceTaille				= policeTaille2
+      	//				para.Tableau.Cellules[i+1,4].Contenu.Paragraphe[1].MiseEnPage.RetraitGauche = 5
+      	//				para.Tableau.Cellules[i+1,4].Contenu.MiseEnForme.PoliceBarrée				= Vrai
+      	
+      					
+      					POUR TOUT REQ_listOS_desDélais_duneReception SUR indice AVEC "IDOS ="+ gtabOS[i]
+      						para.Tableau.Cellules[i+1, 3].Contenu.Texte	+= ["; "]+ REQ_listOS_desDélais_duneReception.NumDélais
+      					FIN
+      					
+      					pour j =1 _a_ para.Tableau.lignes[i+1].NombreCellules
+      					FIN
+      				FIN
+      			fin
+      			sortir
+      		FIN	
+      	FIN
+      	fragmentTab est un docFragment(MondocTabOS,MondocTabOS.Paragraphe[1].PositionDébut,MondocTabOS.Paragraphe[MondocTabOS.Paragraphe..Occurrence].PositionDébut)
+      	fragmentTab.MiseEnForme..PoliceTaille =policeTaille2
+      	fragmentTab.MiseEnForme..PoliceNom = policeNom2
+      	
+      	
+      	MonDoc.Insère(FragTabList.PositionDébut,MondocTabOS)
+      	
+      	
+      	
+      	
+      	//liberation des requêtes
+      	HLibèreRequête(REQ_Données_duneRéception) 
+      	HLibèreRequête(REQ_Délaisréceptionnés)
+      	
+      	// sauvegarde document
+      	MonDoc.Sauve()
+      	MonDoc.Ferme()
+      	//fSupprime(chemFichierGénéré)
+      	
+      	RENVOYER chemFichierGénéré
+      
+      sinon // pas de donnés à imprimer
+      	//liberation des requêtes
+      	HLibèreRequête(REQ_Données_duneRéception)
+      
+      	HLibèreRequête(REQ_Délaisréceptionnés)
+      	renvoyer ""
+      fin
+     type : 458752
+   -
+     name : GénèreAttRéception
+     internal_properties : BQAAAAUAAADaQ4BfFne0WzE4+NsIeLQh8XukLlHDjk+Tl/xIlHaFe2BQijb3bOZgf6uSAFaLFyf4rD8Z5nMzoapsohDvtw0=
+     procedure_id : 1287844470568533034
+     type_code : 15
+     code : |1+
+      procédure GénèreAttRéception(gnIDRéception est un entier sur 8 octets)
+      //**paramètres
+      TVA est un réél = 20    // en pourcentage 
+      
+      // //Données Réception 
+      HExécuteRequête(REQ_Données_duneRéception,MaConnexion,hRequêteDéfaut,gnIDRéception)
+      
+      ////Données Marché
+      DonnéesMarché			est un clDonnéesMarché
+      DateConstServFait		est une date	= REQ_Données_duneRéception.DateSignatAttachement
+      DonnéesMarché.ChercheDonnées(REQ_Données_duneRéception.IDProjet,DateConstServFait)
+      
+      //** table des prix/ qté
+      HExécuteRequête(REQ_PrixRéceptionnésAtt,MaConnexion,hRequêteDéfaut, gnIDRéception)
+      
+      
+      si HNbEnr(REQ_PrixRéceptionnésAtt) > 0 ALORS
+      	
+      	
+      	chemFichierGénéré est une chaine =TempDirectory + fSep() +fConstruitNomFichier(DonnéesMarché.m_sNumero+"_ATT"+REQ_Données_duneRéception.NumPV+"_"+REQ_Données_duneRéception.DatePV +".docx")
+      	SI PAS fCopieFichier(fRepExe()+fSep()+"Modèle docs"+fSep()+"Modèle AttRéception.docx",chemFichierGénéré) ALORS
+      		Erreur( ErreurInfo())
+      		RENVOYER Faux
+      	FIN
+      	
+      	MonDoc		est un Document	= chemFichierGénéré
+      	largeurDoc	est un entier	= MonDoc.Section.LargeurPage-MonDoc.Section.MargeDroite-MonDoc.Section.MargeGauche
+      	
+      	////**entête
+      	//InsereEntete(MonDoc)
+      	//
+      	////** pied de page
+      	//InserePiedPage(MonDoc)
+      	
+      
+      	//** remplacement des variables
+      	DocRemplace(MonDoc,VariablesGénAtt.PaysMO..valeur,  Majuscule(DonnéesMarché.MaitreOuvrage.EntitéMO.m_sPays),MotComplet)
+      	//Génération Hiérarchie jusqu’à ordre 10
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique1..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(1).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique2..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(2).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique3..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(3).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique4..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(4).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique5..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(5).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique6..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(6).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique7..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(7).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique8..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(8).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique9..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(9).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique10..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(10).m_sIntitulé,MotComplet)
+      	
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.N°Marché..Valeur,DonnéesMarché.m_sNumero,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.ObjetMarché..Valeur,DonnéesMarché.m_sObjetMarché,MotComplet)
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.villemo..Valeur,DonnéesMarché.MaitreOuvrage.EntitéMO.m_sVille,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.adresseMO..Valeur,DonnéesMarché.MaitreOuvrage.EntitéMO.m_sAdresse ,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.entitéMO..Valeur,DonnéesMarché.MaitreOuvrage.EntitéMO.m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.QualitéMO..Valeur,DonnéesMarché.MaitreOuvrage.Représentant.m_sQualité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.civilitéMO..Valeur,DonnéesMarché.MaitreOuvrage.Représentant.Personne.m_sCivilité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NomPrénomMO..Valeur,DonnéesMarché.MaitreOuvrage.Représentant.Personne.m_sNom + " "+DonnéesMarché.MaitreOuvrage.Représentant.Personne.m_sPrenom ,MotComplet)
+      	
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.CivilitéTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.NomPrénomTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.Personne.m_sNom+ " "+DonnéesMarché.Titulaire.Représentant.Personne.m_sPrenom ,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.QualitéTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.m_sQualité,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.AdresseTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sAdresse,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.VilleTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sVille,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.PaysTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sPays,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.EntitéTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sIntitulé,MotComplet)
+      	
+      	SELON DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité
+      		CAS "Mme"
+      			DocRemplace(MonDoc,VariablesGénAtt.Le_LaTitulaire..Valeur,"la", MotComplet)
+      		CAS "M."
+      			DocRemplace(MonDoc,VariablesGénAtt.Le_LaTitulaire..Valeur,"le", MotComplet)	
+      	FIN
+      	
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.N°Att..Valeur,REQ_Données_duneRéception.NumAttach,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.dateServiceFait..Valeur,DateVersChaîne(REQ_Données_duneRéception.DatePV), MotComplet)
+      	
+      	
+      	// Insertion tableau des OS / délais 
+      	listFrag		est tableau de docFragments		= DocRecherche(MonDoc,VariablesGénAtt.TableauAtt..Valeur,MotComplet)
+      	FragTabList		est un docfragment				= listFrag[1]
+      	policeNom		est une chaîne					= FragTabList.MiseEnForme.PoliceNom
+      	policeTaille	est une entier					= FragTabList.MiseEnForme.PoliceTaille
+      	FragTabList.Texte = ""
+      	
+      	mondoctabAttachement		est un Document
+      	mondoctabAttachement.Section.MargeDroite = MonDoc.Section.MargeDroite
+      	mondoctabAttachement.section.MargeGauche = MonDoc.Section.MargeGauche
+      	
+      	
+      	FragTabAttachement	est un docFragment
+      	Nligne est un entier = HNbEnr(REQ_PrixRéceptionnésAtt)
+      	Ncolonne est un entier = 6
+      	FragTabAttachement = DocInsèreTableau(mondoctabAttachement,1,Ncolonne,Nligne+1+3)
+      	
+      	TotalHT est un réél = 0
+      	totalTTC est un réel = 0
+      	para est un docParagraphe
+      	
+      	POUR TOUT para de FragTabAttachement.Paragraphe
+      		SI para.Tableau <> Null ALORS
+      			para.Tableau.Colonnes[1].LargeurMillimètres	= largeurDoc*0.04
+      			para.Tableau.Colonnes[2].LargeurMillimètres	= largeurDoc*0.5
+      			para.Tableau.Colonnes[3].LargeurMillimètres	= largeurDoc*0.03
+      			para.Tableau.Colonnes[4].LargeurMillimètres	= largeurDoc*0.07
+      			para.Tableau.Colonnes[5].LargeurMillimètres	= largeurDoc*0.16
+      			para.Tableau.Colonnes[Ncolonne].LargeurMillimètres	= largeurDoc*0.18
+      			//1re ligne titre
+      			para.Tableau.Cellules[1, 1].Contenu.Texte	= "N° prix"
+      			para.Tableau.Cellules[1, 2].Contenu.Texte	= "Désignation"
+      			para.Tableau.Cellules[1, 3].Contenu.Texte	= "Unité"
+      			para.Tableau.Cellules[1, 4].Contenu.Texte	= "Qté"
+      			para.Tableau.Cellules[1, 5].Contenu.Texte	= "Prix Unitaire"
+      			para.Tableau.Cellules[1, Ncolonne].Contenu.Texte	= "Prix Total"
+      			//mise en forme 1ere ligne
+      			POUR j = 1 à Ncolonne
+      				para.Tableau.Cellules[1,j].Contenu.MiseEnForme.PoliceGras = Vrai
+      				para.Tableau.Cellules[1,j].MiseEnPage.Alignement	= chCentre
+      				para.Tableau.Cellules[1,j].MiseEnPage.CouleurFond= RGB(242,242,242)
+      				para.Tableau.Cellules[1,j].Contenu.MiseEnPage.EspaceBordHaut = 10
+      			FIN
+      			
+      			// autre lignes prix	
+      			i est un entier =0
+      			POUR tout REQ_PrixRéceptionnésAtt   // parcours Hiérarchique
+      				i++
+      					para.Tableau.Cellules[i+1, 2].Contenu.Texte	= REQ_PrixRéceptionnésAtt.Désignation
+      					para.Tableau.Cellules[i+1, 3].Contenu.Texte	= REQ_PrixRéceptionnésAtt.Unité
+      					si REQ_PrixRéceptionnésAtt.NumPrix > 0 ALORS // les cellules des prix 
+      						para.Tableau.Cellules[i+1, 1].Contenu.Texte	= REQ_PrixRéceptionnésAtt.NumPrix
+      						para.Tableau.Cellules[i+1, 4].Contenu.Texte	=  REQ_PrixRéceptionnésAtt.quantité
+      						
+      						para.Tableau.Cellules[i+1, 5].Contenu.Texte	=   NumériqueVersChaîne(REQ_PrixRéceptionnésAtt.PU_HT,"10.2fS")
+      						para.Tableau.Cellules[i+1, 6].Contenu.Texte	=  NumériqueVersChaîne(REQ_PrixRéceptionnésAtt.PU_HT* REQ_PrixRéceptionnésAtt.quantité,"10.2fS")
+      					Sinon  // les non prix sont gras
+      						para.Tableau.Cellules[i+1,2].Contenu.MiseEnForme.PoliceGras = Vrai
+      					fin
+      	
+      					// caclul de somme 
+      					TotalHT += REQ_PrixRéceptionnésAtt.PU_HT* REQ_PrixRéceptionnésAtt.quantité 
+      					
+      					//mise en forme des colonnes de la ligne actuelle
+      					Pour j = 1 à Ncolonne
+      						selon j
+      							cas 1,3,4
+      								para.Tableau.Cellules[i+1,j].MiseEnPage.Alignement								= chCentre
+      							cas 2
+      								para.Tableau.Cellules[i+1,j].MiseEnPage.Alignement								= chGauche
+      							cas 5,6
+      								para.Tableau.Cellules[i+1,j].MiseEnPage.Alignement								= chDroite
+      						FIN
+      						para.Tableau.Cellules[i+1,j].MiseEnPage.Cadre.TraitHaut.Type=TraitAucun
+      						si i < Nligne alors
+      						para.Tableau.Cellules[i+1,j].MiseEnPage.Cadre.TraitBas.Type=TraitAucun
+      						fin
+      					FIN
+      			FIN
+      			//lignes totaux
+      			totalTTC = TotalHT*(1+TVA/100)
+      			para.Tableau.Cellules[Nligne+1+1, 5].Contenu.Texte	= "Total HT" 
+      			para.Tableau.Cellules[Nligne+1+1, 6].Contenu.Texte	=  NumériqueVersChaîne(TotalHT,"10.2fS")
+      	
+      			para.Tableau.Cellules[Nligne+1+2, 5].Contenu.Texte	= "TVA (20%)"
+      			para.Tableau.Cellules[Nligne+1+2, 6].Contenu.Texte	= NumériqueVersChaîne(TotalHT*TVA/100,"10.2fS")
+      	
+      			para.Tableau.Cellules[Nligne+1+3, 5].Contenu.Texte	= "Total TTC"
+      			para.Tableau.Cellules[Nligne+1+3, 6].Contenu.Texte	= NumériqueVersChaîne(totalTTC,"10.2fS")
+      		
+      			
+      			POUR k =Nligne+1+1 à Nligne+1+3  //ligne
+      				POUR j = 1 à 6 // colonne
+      					SELON j
+      						CAS 1,2,3,4
+      							para.Tableau.Cellules[k,j].MiseEnPage.Cadre.Trait =TraitAucun
+      						CAS 5
+      							para.Tableau.Cellules[k,j].Contenu.MiseEnForme.PoliceGras= vrai
+      						CAS 6
+      							para.Tableau.Cellules[k,j].MiseEnPage.Alignement								= chDroite				
+      					FIN
+      				FIN
+      				
+      			FIN
+      			SORTIR
+      		FIN	
+      	FIN
+      	
+      	
+      	//insertion de la table dans le document
+      	MonDoc.Insère(FragTabList.PositionDébut,mondoctabAttachement)
+      	mondoctabAttachement.Ferme()
+      	
+      	//application taille et police au deux tableaux
+      	fragmentTab est un docFragment(mondoctabAttachement,mondoctabAttachement.Paragraphe[1].PositionDébut,mondoctabAttachement.Paragraphe[mondoctabAttachement.Paragraphe..Occurrence].Positionfin)
+      	fragmentTab.MiseEnForme..PoliceTaille	= policeTaille
+      	fragmentTab.MiseEnForme..PoliceNom		= policeNom
+      	
+      	
+      	//total en lettre 
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.Totalttc..Valeur,ArrondiInférieur(totalTTC, 2), MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.Totalht..Valeur,ArrondiInférieur(TotalHT, 2), MotComplet)
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.totalTTCLettre..Valeur,NombreEnLettres(ArrondiInférieur(totalTTC, 2), "Dirham(s)", "Centime(s)"),MotComplet)
+      	//libération des requêtes
+      	HLibèreRequête(REQ_Données_duneRéception)
+      	
+      	HLibèreRequête(REQ_Délaisréceptionnés)
+      	// sauvegarde document
+      	MonDoc.Sauve()
+      	MonDoc.Ferme()
+      	//fSupprime(chemFichierGénéré)
+      	
+      	//Ouvre(FEN_test,"",MonDoc)
+      
+      
+      	
+      	RENVOYER chemFichierGénéré
+      SINON //pas de donnés à affichés
+      	HLibèreRequête(REQ_Données_duneRéception)
+      	
+      	HLibèreRequête(REQ_Délaisréceptionnés)
+      	renvoyer ""
+      fin
+     type : 458752
+   -
+     name : InsereEntete
+     procedure_id : 1288010934893978798
+     type_code : 15
+     code : |1+
+      procédure InsereEntete(MonDoc est un document, ImgEntete	est une Image )
+      
+      MonDoc.Section.MargeEntête		= 10
+      	
+      //**entête
+      largeurDoc	est un entier	= MonDoc.Section.LargeurPage-MonDoc.Section.MargeDroite-MonDoc.Section.MargeGauche
+      
+      s			est une docSection		= MonDoc.Section
+      FragEntete	est un docFragment(s.Entête.PremièrePage, 1)
+      MonPara		est un docParagraphe	= FragEntete.Paragraphe[1]
+      MonPara.MiseEnPage.Alignement = chCentre
+      //Insertion d'une image dans l'entête
+      MonElementImage	est un docElément
+      MonElementImage.Type				= typeDocElémentImage
+      MonElementImage.Image.BufferImage	= ImgEntete
+      MonElementImage.Image.Largeur		= largeurDoc
+      MonElementImage.Image.Hauteur		= 20
+      DocInsère(FragEntete, MonElementImage)
+     type : 458752
+   -
+     name : InserePiedPage
+     procedure_id : 1288033242954196273
+     type_code : 15
+     code : |1-
+      procédure InserePiedPage(MonDoc est un document,ImgPiedPage est une Image )
+      
+      
+      MonDoc.Section.MargePiedDePage	= 2.5
+      //** pied de page
+      largeurDoc	est un entier			= MonDoc.Section.LargeurPage-MonDoc.Section.MargeDroite-MonDoc.Section.MargeGauche
+      
+      s			est une docSection		= MonDoc.Section
+      FragPied		est un docFragment(s.PiedDePage.PagePaire, 1)
+      MonPara2		est un docParagraphe	= FragPied.Paragraphe[1]
+      MonPara2.MiseEnPage.Alignement = chCentre
+      //Insertion d'une image dans le pied de page
+      MonElementImage	est un docElément
+      MonElementImage.Type				= typeDocElémentImage
+      MonElementImage.Image.BufferImage	= ImgPiedPage
+      MonElementImage.Image.Largeur		= MonDoc.Section.LargeurPage-30
+      MonElementImage.Image.Hauteur		= 10
+      DocInsère(FragPied, MonElementImage)
+     type : 458752
+   -
+     name : GénèreFicheParapheur
+     internal_properties : BQAAAAUAAADaQ4BfFne0WzE4+NsIeLQh8XukLlHDjk+Tl/xIlHaFe2BQijb3bOZgf6uSAFaLFyf4rD8Z5nMzoapsohDvtw0=
+     procedure_id : 1288446685120085262
+     type_code : 15
+     code : |1+
+      procédure GénèreFicheParapheur(ObjetEnvoi est une chaine,ImgEntete	est une Image="", Urgent est un booléen = 0 , Secret est un booléen = 0,NomPrénom est une chaîne =Utilisateur.m_sNom +" "+ Utilisateur.m_sPrenom, Date est une chaine = DateSys())
+      
+      chemFichierGénéré est une chaine =TempDirectory + fSep() +fConstruitNomFichier("Fiche Paraph "+ Date+".docx")<§aad:0§>
+      
+      SI PAS fCopieFichier(fRepExe()+fSep()+"Modèle docs"+fSep()+"Modèle FicheParapheur.docx",chemFichierGénéré) ALORS
+      	Erreur( ErreurInfo())
+      	RENVOYER Faux
+      FIN
+      MonDoc	est un Document =chemFichierGénéré
+      
+      //**entête
+      //InsereEntete(MonDoc,dChargeImage(ImgEntete))
+      
+      //** remplacement des variables
+      DocRemplace(MonDoc,"%date%",DateVersChaîne(Date),MotComplet)
+      DocRemplace(MonDoc,"%nomPrénomUtilisateur%",NomPrénom,MotComplet)
+      DocRemplace(MonDoc,"%date%",DateVersChaîne(Date),MotComplet)
+      DocRemplace(MonDoc,"%objet%",ObjetEnvoi,MotComplet)
+      si Urgent = 1 alors
+      DocRemplace(MonDoc,"%Urg%","X",MotComplet)
+      sinon
+      DocRemplace(MonDoc,"%Urg%","",MotComplet)
+      FIN
+      
+      SI Secret = 1 ALORS
+      	DocRemplace(MonDoc,"%Sec%","X",MotComplet)
+      SINON
+      	DocRemplace(MonDoc,"%Sec%","",MotComplet)
+      FIN
+      
+      // sauvegarde document
+      MonDoc.Sauve()
+      MonDoc.Ferme()
+      //fSupprime(chemFichierGénéré)
+      
+      renvoyer chemFichierGénéré
+     type : 458752
+   -
+     name : OuvreOnglet
+     internal_properties : BQAAAAUAAABoQfud425Su4Opo60bB5yu7vQEzyOEIex1lt6WZjr3lRl622ECC0OEOlGY72Z0InuLTFZ2t+w=
+     procedure_id : 1288855003499354588
+     type_code : 15
+     code : |1-
+      procédure OuvreOnglet(Onglet est un champ, LibeléChamp est une chaine,FenetreInterne est une chaine <nom de fenêtre>,*)
+      
+      i	est un entier	= 1
+      ResChamp	est une chaîne
+      ResChamp = EnumèreChamp(Onglet, i)
+      TANTQUE ResChamp <> "" 
+      	SI Onglet[ResChamp].Libellé = LibeléChamp	 ALORS
+      		Sortir
+      	FIN
+      	i++
+      	ResChamp = EnumèreChamp(Onglet, i)
+      FIN
+      
+      SI ResChamp ="" ALORS  //aucun champ du mme nom n'a été trouvé
+      	Wl.OngletOuvre(Onglet,LibeléChamp,FenetreInterne, MesParamètres[4 À ])
+      	
+      SINON //le champ existe
+      	Onglet= ResChamp
+      FIN
+     type : 458752
+   -
+     name : créeDonnéesdeBaseSiInexistant
+     procedure_id : 1289281506503538798
+     type_code : 15
+     code : |1+
+      procédure créeDonnéesdeBaseSiInexistant()
+      // proejt/marché
+      CaractèresPrix est une liste de chaine  = ["prix fermes", "Prix révisables", "prix Provisoires"]
+      pour Tout Elemnt  de CaractèresPrix
+      	HLitRecherchePremier(CaractèrePrix,Caractère_Prix,Elemnt)
+      	si pas HTrouve(CaractèrePrix) ALORS
+      		CaractèrePrix.Caractère_Prix = Elemnt
+      		HAjoute(CaractèrePrix)
+      	FIN
+      FIN
+      
+      EtatsProjet est une liste de chaine  = ["en cours", "en garantie", "clôturé"]
+      POUR TOUT Elemnt  de EtatsProjet
+      	HLitRecherchePremier(EtatProjet,Etat,Elemnt)
+      	SI PAS HTrouve(CaractèrePrix) ALORS
+      		EtatProjet.Etat = Elemnt
+      		HAjoute(EtatProjet)
+      	FIN
+      FIN
+      
+      ModesPassation est une Liste de chaîne  = ["avec présélection", "négocié", "concours", "ouvert","restreint"]
+      POUR TOUT Elemnt  de ModesPassation
+      	HLitRecherchePremier(ModePassation,ModePassation,Elemnt)
+      	SI PAS HTrouve(ModePassation) ALORS
+      		ModePassation.ModePassation = Elemnt
+      		HAjoute(ModePassation)
+      	FIN
+      FIN
+      
+      typesProjet est une Liste de chaîne  = ["études", "fournitures", "travaux", "services autres que les études"]
+      POUR TOUT Elemnt  de typesProjet
+      	HLitRecherchePremier(typeProjet,TypeProjet,Elemnt)
+      	SI PAS HTrouve(TypeProjet) ALORS
+      		TypeProjet.TypeProjet = Elemnt
+      		HAjoute(TypeProjet)
+      	FIN
+      FIN
+      
+      FormesMarché est une Liste de chaîne  = ["alloti", "cadre", "reconductible", "lot unique","tranche conditionnelle"]
+      POUR TOUT Elemnt  de FormesMarché
+      	HLitRecherchePremier(FormeMarché,Forme,Elemnt)
+      	SI PAS HTrouve(FormeMarché) ALORS
+      		FormeMarché.Forme = Elemnt
+      		HAjoute(FormeMarché)
+      	FIN
+      FIN
+      
+      //OS
+      TypesOS est une Liste de chaîne  = ["notification", "commencement", "arrêt", "reprise","décision"]
+      POUR TOUT Elemnt  de TypesOS
+      	HLitRecherchePremier(TypeOS,TypeOS,Elemnt)
+      	SI PAS HTrouve(TypeOS) ALORS
+      		TypeOS.TypeOS = Elemnt
+      		HAjoute(TypeOS)		
+      	FIN
+      FIN
+      
+      // Courrier
+      EtatsCourrier est une Liste de chaîne  = ["en attente", "en cours", "en signature", "en suivi", "clôturé"]
+      POUR TOUT Elemnt  de EtatsCourrier
+      	HLitRecherchePremier(EtatCourrier,etatcourrier,Elemnt)
+      	SI PAS HTrouve(EtatCourrier) ALORS
+      		EtatCourrier.EtatCourrier = Elemnt
+      		HAjoute(EtatCourrier)	
+      	FIN
+      FIN
+      
+      TypesCourrier est une Liste de chaîne  = ["arrivé", "départ"]
+      POUR TOUT Elemnt  de TypesCourrier
+      	HLitRecherchePremier(TypeCourrier,TypeCourrier,Elemnt)
+      	SI PAS HTrouve(TypeCourrier) ALORS
+      		TypeCourrier.TypeCourrier = Elemnt
+      		HAjoute(TypeCourrier)	
+      	FIN
+      FIN
+      
+      Priorités est une Liste d'entiers  = [1,2,3,4]
+      POUR TOUT Elemnt  de Priorités
+      	HLitRecherchePremier(Priorité,Priorité,Elemnt)
+      	SI PAS HTrouve(Priorité) ALORS
+      		Priorité.Priorité = Elemnt
+      		selon Elemnt
+      			cas 1
+      				HAttacheMémo(Priorité,Image,fRepExe+fSep()+"icons ProGest"+fSep()+"Priority"+fSep() + "1_critical.png",hMémoImg)				
+      			cas 2 
+      				HAttacheMémo(Priorité,Image,fRepExe+fSep()+"icons ProGest"+fSep()+"Priority"+fSep() + "2_high.png",hMémoImg)	
+      			cas 3
+      				HAttacheMémo(Priorité,Image,fRepExe+fSep()+"icons ProGest"+fSep()+"Priority"+fSep() + "3_normal.png",hMémoImg)	
+      			cas 4
+      				HAttacheMémo(Priorité,Image,fRepExe+fSep()+"icons ProGest"+fSep()+"Priority"+fSep() + "4_low.png",hMémoImg)	
+      		FIN
+      		HAjoute(Priorité)	
+      	FIN
+      FIN
+      
+      
+      TypesDocumentArchive est une Liste de chaîne  = ["lettre","fax", "bordereau", "ordre de service", "réception", "compte rendu", "tableau de mission", "fiche contrôle", "rapport", "rapport de contrôle","marché"]
+      
+      POUR TOUT Elemnt  de TypesDocumentArchive
+      	HLitRecherchePremier(typeDocArchive,TypeDoc,Elemnt)
+      	SI PAS HTrouve(typeDocArchive) ALORS
+      		typeDocArchive.TypeDoc = Elemnt
+      		HAjoute(typeDocArchive)	
+      	FIN
+      FIN
+      
+      EtatsTask est une Liste de chaîne  = ["en attente", "en cours", "terminée"]
+      
+      POUR TOUT Elemnt  de EtatsTask
+      	HLitRecherchePremier(EtatTask,Etat,Elemnt)
+      	SI PAS HTrouve(EtatTask) ALORS
+      		EtatTask.Etat = Elemnt
+      		HAjoute(EtatTask)	
+      	FIN
+      FIN
+      
+      TypesOrganisme est une Liste de chaîne  = ["interne", "externe"]
+      POUR TOUT Elemnt  de TypesOrganisme
+      		
+      	HLitRecherchePremier(TypeOrganisme,TypOrganisme,Elemnt)
+      	SI PAS HTrouve(TypeOrganisme) ALORS
+      		TypeOrganisme.TypOrganisme = Elemnt
+      		HAjoute(TypeOrganisme)	
+      	FIN	
+      FIN
+      
+      TypesPoste est une Liste de chaîne  = ["comptable", "représentant","secrétaire","technique"]
+      POUR TOUT Elemnt  de TypesPoste
+      	HLitRecherchePremier(TypePoste,TypePoste,Elemnt)
+      	SI PAS HTrouve(TypePoste) ALORS
+      		TypePoste.TypePoste = Elemnt
+      		HAjoute(TypePoste)	
+      	FIN
+      FIN
+      TypesTask est une Liste de chaîne  = ["task", "OS Notification"]
+      POUR TOUT Elemnt  DE TypesTask
+      	HLitRecherchePremier(TypeTask,TypeTask,Elemnt)
+      	SI PAS HTrouve(TypeTask) ALORS
+      		TypeTask.TypeTask = Elemnt
+      		HAjoute(typeTask)	
+      		
+      	FIN
+      FIn
+      
+      
+      //Modules de l'application
+      //ModulesApplication est une Liste de chaîne  = ["Accueil","Administration Organisation","Gestion Droits d'Accès","Gestion Documents","Gestion Projets","Supervision Projets","Saisi Courriers","Traitement Courriers"]
+      POUR TOUT Elemnt  de ModulesApp
+      	HLitRecherchePremier(MODULES,NomModule,Elemnt)
+      	SI PAS HTrouve(Modules) ALORS
+      		Modules.NomModule = Elemnt..valeur
+      		HAjoute(Modules)
+      	FIN
+      FIN
+      
+      
+      //ActionsCourrier est une Liste de chaîne  = ["à traiter", "à suivre" ,"à classer"]
+      //
+      //POUR TOUT Elemnt  de ActionsCourrier
+      //	
+      //	HLitRecherchePremier(ActionCourrier,Action,Elemnt)
+      //	SI PAS HTrouve(ActionCourrier) ALORS
+      //		ActionCourrier.Action = Elemnt
+      //		HAjoute(ActionCourrier)	
+      //	FIN
+      //FIN
+      
+      //Création es types Autorisations Absence
+      
+      TypesAutAbsence est une Liste de chaîne  = ["congés", "autorisation d'absence","certificat médicale","mission","report congés"]
+      POUR TOUT Elemnt  de TypesAutAbsence
+      	HLitRecherchePremier(typeAutAbsence,typeAutAbsence,Elemnt)
+      	SI PAS HTrouve(typeAutAbsence) ALORS
+      		typeAutAbsence.typeAutAbsence = Elemnt
+      		HAjoute(typeAutAbsence)
+      	FIN
+      FIN
+      
+      CatéPénalitéRetard est une Liste de chaîne  = ["Pén. DG", "Pén. DP","Pén. Part"]
+      POUR TOUT Elemnt  DE CatéPénalitéRetard
+      	HLitRecherchePremier(CatPénalitéRetard,catpénalité,Elemnt)
+      	SI PAS HTrouve(CatPénalitéRetard) ALORS
+      		CatPénalitéRetard.CatPénalité = Elemnt
+      		HAjoute(CatPénalitéRetard)
+      	FIN
+      FIN
+      
+      
+      RéféPénalitéRetard est une Liste de chaîne  = ["‰ MtGlobal++", "‰ MtGlobal","-"]
+      POUR TOUT Elemnt  DE RéféPénalitéRetard
+      	HLitRecherchePremier(RéfPénalitéRetard,RéfPénalitéRetard,Elemnt)
+      	SI PAS HTrouve(RéfPénalitéRetard) ALORS
+      		RéfPénalitéRetard.RéfPénalitéRetard = Elemnt
+      		HAjoute(RéfPénalitéRetard)
+      	FIN
+      FIN
+      
+      
+      //calcul vanne
+      TypeJointEtanchiét est une Liste de chaîne  = ["Joint Note de Musique", "Joint Chapeau Chinois","Joint en L"]
+      POUR TOUT Elemnt  DE TypeJointEtanchiét
+      	HLitRecherchePremier(typeJointEtanchiete,type,Elemnt)
+      	SI PAS HTrouve(typeJointEtanchiete) ALORS
+      		typeJointEtanchiete.Type = Elemnt
+      		HAjoute(typeJointEtanchiete)
+      	FIN
+      FIN
+      
+     type : 458752
+   -
+     name : SauverDsArchive
+     procedure_id : 1296736268374951531
+     type_code : 15
+     code : |1+
+      // à appeler si une modification du fichier (idarchive ou fichier externe a été detectée
+      // valeur retournée : -1 erreur -2 fichier existe déjà
+      
+      procédure SauverDsArchive(LOCAL  sfichiers est une chaine, LOCAL  DateEdition est un date, Local IDType est un entier sur 8 octets,LOCAL IDOuvrage est un entier sur 8 octets,LOCAL IDSociété est un entier sur 8 octets,LOCAL  IDProjet est un entier, LOCAL RefDoc est une chaine )
+      
+      	SI sfichiers <> "" ALORS  // un fichier externe a été spécifié
+      		HLitRecherche(archivedocs,Nom,sfichiers)
+      		si HTrouve(archivedocs) ALORS // le fichier existe déjà 
+      			renvoyer -2 
+      		FIN
+      		archivedocs.IDCreatedBy		= Utilisateur.m_nIDUtilisateur
+      		archivedocs.AccésPublic		= Faux // un rapport est par defaut nn public
+      		archivedocs.Nom				= fExtraitChemin(sfichiers,fFichier+fExtension)
+      		archivedocs.Taille			= fTaille(sfichiers)
+      		archivedocs.DateDocument	= DateEdition
+      		archivedocs.IDtypeDoc		= IDType
+      		archivedocs.IDOuvrages		= IDOuvrage
+      		archivedocs.IDAuteur		= IDSociété
+      		archivedocs.IDProjet		= IDProjet
+      		archivedocs.Réf				= RefDoc
+      		HAttacheMémo(archivedocs,Document,sfichiers)
+      		
+      		SI HAjoute(archivedocs)  ALORS
+      			RENVOYER archivedocs.IdArchiveDocs
+      		sINON 		
+      			SI HErreurDoublon() = Vrai ALORS  //cas de doublon
+      				Erreur("Erreur de doublon sur clé unique", HErreurInfo(hErrRubrique))
+      				renvoyer -1
+      			FIN
+      			SI HErreurIntégrité() = Vrai ALORS
+      				Erreur(HErreurInfo())
+      				RENVOYER -1
+      			FIN
+      		FIN
+      	SINON 
+      		renvoyer 0 	
+      	FIN
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      //si sFichierexterne <> "" ALORS
+      //
+      //	
+      //	SI HAjoute(archivedocs) ALORS
+      //		// ajout du document dans la base de donnés des documents
+      //		Documents.IdArchiveDocs = archivedocs.idArchiveDocs
+      //		HAttacheMémo(Documents,Document,sFichierexterne)
+      //		SI HAjoute(Documents) ALORS
+      //			ToastAffiche("Rapport Ajouté", toastCourt,cvMilieu)
+      //			RENVOYER Documents.IdArchiveDocs
+      //		SINON 
+      //			Erreur("pas d'ajout de document dans la base des documents")
+      //			RENVOYER 0
+      //		FIN
+      //	SINON 
+      //		Erreur("pas d'ajout du fichier du rapport de contrôle dans l'archive doc")
+      //		RENVOYER  0
+      //	FIN
+      //Sinon
+      //	Erreur("aucun fichier externe ni spécifier")
+      //	renvoyer 0 
+      //FIN
+      
+     type : 458752
+   -
+     name : GetIDTypeDocument
+     procedure_id : 1302512045893039616
+     type_code : 15
+     code : |1+
+      procédure GetIDTypeDocument(typeDoc est une chaine)
+      HLitRecherchePremier(typeDocArchive,TypeDoc,typeDoc)
+      si HTrouve(typeDocArchive) ALORS
+      	renvoyer typeDocArchive.IDtypeDoc
+      sinon
+      	renvoyer 0
+      FIN
+      
+     type : 458752
+   -
+     name : EncrypteMotDePasse
+     procedure_id : 1311581625217138947
+     type_code : 15
+     code : |1+
+      procédure EncrypteMotDePasse( sMotDePass est un chaine )
+      MotDePass est un buffer = sMotDePass
+      sCle		est un buffer	= HashChaîne (HA_MD5_128, "PassWord123789")
+      sMotDePassCrypte	est un buffer	= CrypteStandard (MotDePass,sCle,crypteAES128)
+      
+      RENVOYER sMotDePassCrypte
+     type : 458752
+   -
+     name : DecrypteMotdePasse
+     procedure_id : 1311587324655664948
+     type_code : 15
+     code : |1+
+      procédure DecrypteMotdePasse( MotDePass est une buffer)
+      
+      sCle est un buffer	= HashChaîne (HA_MD5_128, "PassWord123789")
+      sMotDePassdeCrypte	est un buffer	= deCrypteStandard (MotDePass,sCle,crypteAES128)
+      
+      RENVOYER sMotDePassdeCrypte
+      
+      
+     type : 458752
+   -
+     name : Génère_Courrier
+     internal_properties : BQAAAAUAAADSOlmiK4ddZ8YsnXltBnJiuhl2ufzUxToVJ5+bUapmHpWDbtAhVwL//XOvHiFlDAAlxLhaPHMsGx03
+     procedure_id : 1390979726706485945
+     type_code : 15
+     code : |1+
+      procédure Génère_Courrier(local oCourrier est une clCourrier)
+      //nom fichier générer 
+      
+      
+      chemFichierGénéré est une chaine = TempDirectory + fSep() + GénèreNomFichier(oCourrier.CourrierOuvrage.m_sNomOuvrage,oCourrier.CourrierProjet.m_sNomOuvrage,oCourrier.CourrierProjet.m_sNumero,oCourrier.m_sRéférence,oCourrier.m_dDatecourrier) + ".docx"
+      
+      
+      
+      	SI PAS fCopieFichier(fRepExe()+fSep()+"Modèle docs"+fSep()+"Modèle " +oCourrier.m_sTypeDoc+ ".docx",chemFichierGénéré) ALORS
+      		Erreur( ErreurInfo())
+      		RENVOYER Faux
+      	FIN
+      	
+      	MonDoc		est un Document	= chemFichierGénéré
+      	largeurDoc	est un entier	= MonDoc.Section.LargeurPage-MonDoc.Section.MargeDroite-MonDoc.Section.MargeGauche
+      	
+      	
+      	//**entête
+      	InsereEntete(MonDoc,dChargeImage(Utilisateur.EntitéUtilisateurActuel.m_EntetePage))
+      	//** pied de page
+      	InserePiedPage(MonDoc,dChargeImage(Utilisateur.EntitéUtilisateurActuel.m_PiedPage))
+      	
+      	
+      	//DOnnées Expéditeur
+      	DocRemplace(MonDoc,VariablesGénCourrier.PaysMonOrganisme..Valeur,  Majuscule (Utilisateur.EntitéUtilisateurActuel.m_sPays),MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.VilleMonOrganisme..Valeur,Utilisateur.EntitéUtilisateurActuel.m_sVille, MotComplet)
+      	//Génération Hiérarchie jusqu’à ordre 10
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique1..Valeur,utilisateur.RécupèreEntitéHierarchique(1).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique2..Valeur,Utilisateur.RécupèreEntitéHierarchique(2).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique3..Valeur,Utilisateur.RécupèreEntitéHierarchique(3).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique4..Valeur,Utilisateur.RécupèreEntitéHierarchique(4).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique5..Valeur,Utilisateur.RécupèreEntitéHierarchique(5).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique6..Valeur,Utilisateur.RécupèreEntitéHierarchique(6).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique7..Valeur,Utilisateur.RécupèreEntitéHierarchique(7).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique8..Valeur,Utilisateur.RécupèreEntitéHierarchique(8).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique9..Valeur,Utilisateur.RécupèreEntitéHierarchique(9).m_sIntitulé,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.NiveauHiérarchique10..Valeur,Utilisateur.RécupèreEntitéHierarchique(10).m_sIntitulé,MotComplet)
+      	
+      	
+      	// données Lettre 
+      	DocRemplace(MonDoc,VariablesGénCourrier.LettreObjet..Valeur,"Objet: "+oCourrier.m_sObjetCourrier,MotComplet)
+      	
+      SI oCourrier.CourrierParent.m_sRéférence = "" ALORS
+      	tabFrag est un tableau de docFragments =  DocRecherche(MonDoc,VariablesGénCourrier.LettreParentRèf..Valeur)
+      	POUR TOUT f DE tabFrag
+      		POUR TOUT E DE f..Element
+      			DocSupprime(E)
+      		FIN
+      	FIN
+      	//		DocRemplace(MonDoc,"",listePJ,MotComplet)
+      SINON
+      	DocRemplace(MonDoc,VariablesGénCourrier.LettreParentRèf..Valeur, "Réf:    Votre envoi N° " +oCourrier.CourrierParent.m_sRéférence + " du " + DateVersChaîne(oCourrier.CourrierParent.m_dDatecourrier) ,MotComplet)
+      	//a faire : récupération des dates des courrier REF,
+      FIN
+      	
+      	//PJ
+      listePJ			est une chaîne	= ""
+      ListeNobrePj	est une chaine	= ""
+      nbrePj			est un entier	= TableauOccurrence(oCourrier.tabPJcourrier)
+      
+      
+      
+      
+      /**** Bordereau
+      Si oCourrier.m_sTypeDoc = "bordereau" ALORS
+      	
+      	// Insertion tableau des OS / délais 
+      	listFrag		est tableau de docFragments		= DocRecherche(MonDoc,VariablesGénCourrier.tabBordereau..Valeur,MotComplet)
+      	
+      	FragTabList		est un docfragment				= listFrag[1]
+      	policeNom		est une chaîne					= FragTabList.MiseEnForme.PoliceNom
+      	policeTaille	est une entier					= FragTabList.MiseEnForme.PoliceTaille
+      	FragTabList.Texte = ""
+      	//****
+      	mondoctabAttachement		est un Document
+      	mondoctabAttachement.Section.MargeDroite	= MonDoc.Section.MargeDroite
+      	mondoctabAttachement.Section.MargeGauche	= MonDoc.Section.MargeGauche
+      	
+      	FragTabAttachement	est un docFragment
+      	
+      	Ncolonne			est un entier	= 3
+      	Nligne				est un entier	= nbrePj+3
+      	si oCourrier.m_sRéférence <>"" ALORS
+      		Nligne+=1	
+      	FIN
+      	
+      	FragTabAttachement = DocInsèreTableau(mondoctabAttachement,1,Ncolonne,Nligne)
+      	para		est un docParagraphe
+      	i est un entier
+      	
+      	f	est DocFragment	
+      	elt	est DocElement
+      	retraitgauche est un entier = 12
+      	retraitPremiereLigne est un entier = -10
+      	
+      	POUR TOUT para DE FragTabAttachement.Paragraphe
+      		SI para.Tableau <> Null ALORS 
+      			para.Tableau.Colonnes[1].LargeurMillimètres			= largeurDoc*0.5
+      			para.Tableau.Colonnes[2].LargeurMillimètres			= largeurDoc*0.2
+      			para.Tableau.Colonnes[Ncolonne].LargeurMillimètres	= largeurDoc*0.3
+      			
+      			//1re ligne titre
+      			para.Tableau.Cellules[1, 1].Contenu.Texte			= "Désignation"
+      			para.Tableau.Cellules[1, 2].Contenu.Texte			= "Nombre"
+      			para.Tableau.Cellules[1, Ncolonne].Contenu.Texte	= "Observations"
+      			//mise en forme 1 ere ligne
+      			POUR j = 1 à Ncolonne
+      				para.Tableau.Cellules[1,j].Contenu.MiseEnForme.PoliceGras		= Vrai
+      				para.Tableau.Cellules[1,j].MiseEnPage.Alignement				= chCentre
+      				para.Tableau.Cellules[1,j].MiseEnPage.CouleurFond				= RGB(255,255,255)
+      				para.Tableau.Cellules[1,j].Contenu.MiseEnPage.EspaceBordHaut	= 10
+      				para.Tableau.Cellules[1,j].MiseEnPage.Interligne = 2
+      				
+      			FIN
+      			
+      			//ligne Objet		
+      			para.Tableau.Cellules[2, 1].Contenu.Texte	= "Objet: " +oCourrier.m_sObjetCourrier
+      			// retrait gauche 
+      			f <- para.Tableau.Cellules[2, 1].Contenu
+      			POUR TOUT elt DE f.Elément
+      				SI elt.Paragraphe.MiseEnPage <> Null
+      					elt.Paragraphe.MiseEnPage.RetraitPremièreLigne = retraitPremiereLigne //  représente la longueur de "Objet:"
+      					elt.Paragraphe.MiseEnPage.RetraitGauche = retraitgauche
+      					//elt.Paragraphe.miseenpage.Alignement = chGauche
+      				FIN
+      			FIN
+      			
+      			
+      			
+      			para.Tableau.Cellules[2, 3].Contenu.Texte	= "Transmis "
+      			
+      			
+      			// retrait gauche 
+      			f <- para.Tableau.Cellules[2, 3].Contenu
+      			POUR TOUT elt DE f.Elément
+      				SI elt.Paragraphe.MiseEnPage <> Null
+      					elt.Paragraphe.MiseEnPage.RetraitGauche	= retraitgauche
+      					
+      					elt.Paragraphe.MiseEnPage.Alignement	= chJustifié
+      				FIN
+      			FIN
+      			//			Rendre objet en gras 
+      			
+      			// ligne réf
+      			si  oCourrier.m_sRéférence <>"" ALORS
+      				para.Tableau.Cellules[3, 1].Contenu.Texte	= "Réf:    " + "Votre envoi n° " +oCourrier.m_sRéférence +" du "+ DateVersChaîne(oCourrier.CourrierParent.m_dDatecourrier)
+      				// retrait gauche 
+      				f <- para.Tableau.Cellules[3, 1].Contenu
+      				POUR TOUT elt DE f.Elément
+      					SI elt.Paragraphe.MiseEnPage <> Null
+      						elt.Paragraphe.MiseEnPage.RetraitGauche	= retraitgauche
+      						elt.Paragraphe.MiseEnPage.RetraitPremièreLigne =  retraitPremiereLigne// 1 représente la longueur de "réf:"
+      						elt.Paragraphe.MiseEnPage.Alignement	= chJustifié
+      					FIN
+      				FIN
+      				//rendre objet en gras 
+      				//									Selection2 est un docFragment(para,para.Tableau.Cellules[2, 2].contenu.positiondébut, 4)
+      				//									Selection2.MiseEnForme.PoliceGras = Vrai
+      			FIN
+      			
+      			// ligne PJ
+      			para.Tableau.Cellules[4, 1].Contenu.Texte	= "PJ: "
+      			para.Tableau.Cellules[4,1].Contenu.MiseEnForme.PoliceGras =  Vrai
+      			para.Tableau.Cellules[4,1].Contenu.MiseEnForme.PoliceSoulignée =  Vrai
+      			f <- para.Tableau.Cellules[4, 1].Contenu
+      			POUR TOUT elt DE f.Elément
+      				SI elt.Paragraphe.MiseEnPage <> Null
+      					elt.Paragraphe.MiseEnPage.RetraitPremièreLigne = retraitPremiereLigne 
+      					elt.Paragraphe.MiseEnPage.RetraitGauche			= retraitgauche
+      					
+      				FIN
+      			FIN
+      
+      			
+      			k est un entier =0
+      			POUR i=2  _A_ Nligne  
+      				
+      				Si i<=Nligne - nbrePj alors 
+      					
+      					
+      					
+      					//rendre objet en gras 
+      					//			Selection3 est un docFragment(para.Tableau.Cellules[2, 2].Contenu,0,3)
+      					//			Selection3.MiseEnForme.PoliceGras =Vrai
+      				Sinon
+      					
+      //					//tabParagraphe est un tableau de docParagraphes = 
+      //					MaNumérotation	est une docNumérotation
+      //					niveau			est un docNiveauNumérotation
+      //					// 1er niveau de la numérotation
+      //					niveau..Texte								= "** "
+      //					niveau..ValeurInitiale						= 1
+      //					niveau..MiseEnPage..RetraitPremièreLigne	= 10
+      //					niveau..Format								= fnumRomainMajuscule
+      //					Ajoute(MaNumérotation..Niveau, niveau)
+      //					// Ajout de la numérotation au document
+      //					soit id = Ajoute(MonDoc..Numérotation, MaNumérotation)
+      //					POUR  TOUT para2 de para.Tableau.Cellules[i, 1].Contenu.Paragraphe
+      //						para2..Numérotation..Identifiant	= id
+      //						para2..Numérotation..Niveau			= 1
+      //					FIN	
+      					
+      					
+      					//
+      					k++
+      					SI i = Nligne ALORS
+      						para.Tableau.Cellules[i, 1].Contenu.Texte	= "  - " +oCourrier.tabPJcourrier[k].PJ.m_sTitre+ RC+RC+RC+RC+RC+RC // espace pour signature
+      					sinon
+      						para.Tableau.Cellules[i, 1].Contenu.Texte	= "  - " +oCourrier.tabPJcourrier[k].PJ.m_sTitre
+      	
+      						
+      					FIN
+      					
+      					si oCourrier.tabPJcourrier[k].PJ.m_sQté > 1 ALORS
+      						para.Tableau.Cellules[i, 2].Contenu.Texte	= oCourrier.tabPJcourrier[k].PJ.m_sQté + " Exemplaire"
+      						si oCourrier.tabPJcourrier[k].PJ.m_sQté > 1 ALORS
+      							para.Tableau.Cellules[i, 2].Contenu.Texte+= "s"
+      						FIN
+      					sinon 
+      						erreur ("Vérifier le nombre d'exemplaire des PJ")
+      					FIN
+      					
+      					//mise en forme des colonnes de des lignes des PJ
+      					POUR j = 1 à Ncolonne
+      						SELON j
+      							CAS 1
+      								//							para.Tableau.Cellules[i,j].MiseEnPage.Alignement								= chGauche
+      								f <- para.Tableau.Cellules[i,j].Contenu
+      								POUR TOUT elt DE f.Elément
+      									SI elt.Paragraphe.MiseEnPage <> Null
+      										elt.Paragraphe.MiseEnPage.RetraitGauche			= retraitgauche
+      										elt.Paragraphe.MiseEnPage.RetraitPremièreLigne	= -4 // 0.5 représente la longueur de "- " avant les Pj
+      										elt.Paragraphe.MiseEnPage.Alignement			= chJustifié
+      									FIN
+      								FIN
+      							CAS 2
+      								para.Tableau.Cellules[i,j].MiseEnPage.Alignement								= chCentre
+      							CAS 3
+      								para.Tableau.Cellules[i,j].MiseEnPage.Alignement								= chJustifié
+      						FIN
+      					FIN
+      					
+      				FIN
+      				POUR j = 1 À Ncolonne 
+      					para.Tableau.Cellules[i,j].MiseEnPage.Cadre.TraitHaut.Type=TraitAucun
+      					SI i < Nligne ALORS
+      						para.Tableau.Cellules[i,j].MiseEnPage.Cadre.TraitBas.Type=TraitAucun
+      					SINON
+      						para.Tableau.Cellules[i,j].MiseEnPage.Cadre.TraitBas.Type=TraitContinu
+      					FIN
+      				FIN 
+      
+      			FIN
+      			
+      			SORTIR
+      		FIN	
+      	FIN
+      	
+      	
+      	//insertion de la table dans le document
+      	MonDoc.Insère(FragTabList.PositionDébut,mondoctabAttachement)
+      	mondoctabAttachement.Ferme()
+      FIN
+      
+      
+      
+      
+      
+      
+      
+      Si oCourrier.m_sTypeDoc = "fax" ou oCourrier.m_sTypeDoc = "lettre" alors
+      	Si nbrePj > 2 alors
+      		POUR MonDoc=1 a nbrePj -1
+      			listePJ += RC +["- "] +oCourrier.tabPJcourrier[MonDoc].PJ.m_sTitre+";"
+      			si oCourrier.tabPJcourrier[MonDoc].PJ.m_sQté >0 ALORS
+      				ListeNobrePj += RC  +oCourrier.tabPJcourrier[MonDoc].PJ.m_sQté+ " Exemplaire"
+      				si oCourrier.tabPJcourrier[MonDoc].PJ.m_sQté >1 alors
+      					ListeNobrePj += "s"
+      				FIN
+      			sinon 
+      				erreur ("Revoir le nombre d'exemplaire des PJ !!")
+      			FIN
+      			
+      		FIN
+      		listePJ += [RC] + ["- "]+ oCourrier.tabPJcourrier[TableauOccurrence(oCourrier.tabPJcourrier)].PJ.m_sTitre+ "."
+      			SI oCourrier.tabPJcourrier[TableauOccurrence(oCourrier.tabPJcourrier)].PJ.m_sQté >0 ALORS
+      				ListeNobrePj += RC +oCourrier.tabPJcourrier[TableauOccurrence(oCourrier.tabPJcourrier)].PJ.m_sQté+ " Exemplaire"
+      				SI oCourrier.tabPJcourrier[TableauOccurrence(oCourrier.tabPJcourrier)].PJ.m_sQté >1 ALORS
+      					ListeNobrePj += "s"
+      				FIN
+      			SINON 
+      				Erreur ("Revoir le nombre d'exemplaire des PJ !!")
+      			FIN
+      			
+      	SINON
+      		Si nbrePj > 0 ALORS
+      			listePJ +=  [" "]+ oCourrier.tabPJcourrier[TableauOccurrence(oCourrier.tabPJcourrier)].PJ.m_sTitre+ "."
+      			SI oCourrier.tabPJcourrier[TableauOccurrence(oCourrier.tabPJcourrier)].PJ.m_sQté >0 ALORS
+      				ListeNobrePj += RC +oCourrier.tabPJcourrier[TableauOccurrence(oCourrier.tabPJcourrier)].PJ.m_sQté+ " Exemplaire"
+      				SI oCourrier.tabPJcourrier[TableauOccurrence(oCourrier.tabPJcourrier)].PJ.m_sQté>1 ALORS
+      					ListeNobrePj += "s"
+      				FIN
+      			SINON 
+      				Erreur ("Revoir le nombre d'exemplaire des PJ !!")
+      			FIN
+      		FIN
+      		
+      		
+      	FIN
+      fin
+      	
+      	si nbrePj  = 0 ALORS
+      	tabFrag est un tableau de docFragments =  DocRecherche(MonDoc,VariablesGénCourrier.LettrePJ..Valeur)
+      		POUR TOUT f DE tabFrag
+      			POUR TOUT E DE f..Element
+      				DocSupprime(E)
+      			FIN
+      		FIN
+      	//		DocRemplace(MonDoc,"",listePJ,MotComplet)
+      	Sinon
+      		SELON oCourrier.m_sTypeDoc
+      			CAS  "fax", "lettre"
+      				DocRemplace(MonDoc,VariablesGénCourrier.LettrePJ..Valeur,"PJ:      " +listePJ,MotComplet)
+      		fin
+      	FIN
+      	
+      	//Tiutilaire 
+      	
+      	DocRemplace(MonDoc,VariablesGénCourrier.NomPrénomDestinatire..Valeur,oCourrier.TabDestExp[1].DestEXP.Représentant.Personne.m_sNom+" "+oCourrier.TabDestExp[1].DestEXP.Représentant.Personne.m_sPrenom,MotComplet)
+      	SELON oCourrier.TabDestExp[1].DestEXP.Représentant.Personne.m_sCivilité
+      		CAS "Mme"
+      			DocRemplace(MonDoc,VariablesGénCourrier.CivilitéDestinataire..Valeur,Majuscule("Madame") ,MotComplet)
+      			DocRemplace(MonDoc,VariablesGénCourrier.Le_LaDestinataire..Valeur,Majuscule("la"), MotComplet)
+      			DocRemplace(MonDoc,VariablesGénCourrier.Destinataire..Valeur,Majuscule("Madame la "+oCourrier.TabDestExp[1].DestEXP.Représentant.m_sQualité),MotComplet)
+      			
+      		CAS "M."
+      			DocRemplace(MonDoc,VariablesGénCourrier.CivilitéDestinataire..Valeur,Majuscule("Monsieur"),MotComplet)
+      			DocRemplace(MonDoc,VariablesGénCourrier.Le_LaDestinataire..Valeur,Majuscule("le"), MotComplet)
+      			DocRemplace(MonDoc,VariablesGénCourrier.Destinataire..Valeur,Majuscule("Monsieur le "+oCourrier.TabDestExp[1].DestEXP.Représentant.m_sQualité ),MotComplet)
+      	FIN
+      	DocRemplace(MonDoc,VariablesGénCourrier.QualitéDestinataire..Valeur, Majuscule(oCourrier.TabDestExp[1].DestEXP.Représentant.m_sQualité),MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.VilleDestinataire	..Valeur, oCourrier.TabDestExp[1].DestEXP.Entité.m_sVille,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.PaysDestinataire..Valeur,oCourrier.TabDestExp[1].DestEXP.Entité.m_sPays,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.EntitéDestinataire..Valeur,oCourrier.TabDestExp[1].DestEXP.Entité.m_sIntitulé,MotComplet)
+      	
+      	DocRemplace(MonDoc,VariablesGénCourrier.AdresseDestinataire..Valeur,oCourrier.TabDestExp[1].DestEXP.Entité.m_sAdresse,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénCourrier.FaxDestinatire..Valeur,oCourrier.TabDestExp[1].DestEXP.Entité.m_sFax,MotComplet)
+      	
+      
+      	selon oCourrier.m_sTypeDoc
+      		cas  "fax" 
+      			DocRemplace(MonDoc,VariablesGénCourrier.AdresseOuFaxDestinataire,"Fax: "+oCourrier.TabDestExp[1].DestEXP.Entité.m_sFax,MotComplet)
+      		cas "lettre"
+      			DocRemplace(MonDoc,VariablesGénCourrier.AdresseOuFaxDestinataire..Valeur,oCourrier.TabDestExp[1].DestEXP.Entité.m_sAdresse,MotComplet)
+      		cas "bordereau"
+      		autre cas
+      	FIN
+      		
+      	// sauvegarde document
+      	MonDoc.Sauve()
+      	MonDoc.Ferme()
+      	//fSupprime(chemFichierGénéré)
+      	
+      	RENVOYER chemFichierGénéré
+      	
+      
+      
+     type : 458752
+   -
+     name : GénèreNomFichier
+     procedure_id : 1391320872180610200
+     type_code : 15
+     code : |1+
+      procédure global GénèreNomFichier(Ouvrage est une chaine UNICODE, Projet est une chaine ANSI, numMarché est une chaine ANSI,TypeEtRèf est une chaîne ANSI, dateDoc est une date)
+      renvoyer fConstruitNomFichier(Ouvrage + ["-"]+Projet+ ["-Marché"]+numMarché + ["-"]+TypeEtRèf + ["- "]+dateDoc)
+      
+      
+     type : 458752
+   -
+     name : Génère_Aut_Absence
+     internal_properties : BQAAAAUAAABmvi2XSyzPATHGayrtRrKiupn2ObwURToV51+bkQrGvrWjzrBBdyLfXdPPPgHFe2uCuk5ok1AAb6GL
+     procedure_id : 1439098371108061528
+     type_code : 15
+     code : |1+
+      procédure Génère_Aut_Absence(local DonnéesAutAbsence est une clAutAbsence )
+      //nom fichier générer 
+      
+      chemFichierGénéré	est une chaine	= TempDirectory + fSep() + "doc RH" +fsep()+ DonnéesAutAbsence.typeAutAbsence + " "+ DonnéesAutAbsence.m_dDatedébut+"-" + DonnéesAutAbsence.m_dDateFin +".docx"
+      
+      
+      NomModéleDoc		est une chaine	= ""
+      
+      SI PAS fCopieFichier(fRepExe()+fSep()+"Modèle docs"+fSep()+"Modèle "+DonnéesAutAbsence.typeAutAbsence+".docx",chemFichierGénéré) ALORS
+      	Erreur( ErreurInfo())
+      	RENVOYER Faux
+      FIN
+      
+      MonDoc		est un Document	= chemFichierGénéré
+      largeurDoc	est un entier	= MonDoc.Section.LargeurPage-MonDoc.Section.MargeDroite-MonDoc.Section.MargeGauche
+      
+      //**entête
+      InsereEntete(MonDoc,dChargeImage(utilisateur.EntitéUtilisateurActuel.m_EntetePage))
+      //** pied de page
+      InserePiedPage(MonDoc,dChargeImage(Utilisateur.EntitéUtilisateurActuel.m_PiedPage))
+      
+      DocRemplace(MonDoc,VariablesGénAutAbsence.PaysMonOrganisme..Valeur,  Majuscule (Utilisateur.EntitéUtilisateurActuel.m_sPays),MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.VilleMonOrganisme..Valeur,Utilisateur.EntitéUtilisateurActuel.m_sVille, MotComplet)
+      //Génération Hiérarchie jusqu’à ordre 10
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique1..Valeur,Utilisateur.RécupèreEntitéHierarchique(1).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique2..Valeur,Utilisateur.RécupèreEntitéHierarchique(2).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique3..Valeur,Utilisateur.RécupèreEntitéHierarchique(3).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique4..Valeur,Utilisateur.RécupèreEntitéHierarchique(4).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique5..Valeur,Utilisateur.RécupèreEntitéHierarchique(5).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique6..Valeur,Utilisateur.RécupèreEntitéHierarchique(6).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique7..Valeur,Utilisateur.RécupèreEntitéHierarchique(7).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique8..Valeur,Utilisateur.RécupèreEntitéHierarchique(8).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique9..Valeur,Utilisateur.RécupèreEntitéHierarchique(9).m_sIntitulé,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NiveauHiérarchique10..Valeur,Utilisateur.RécupèreEntitéHierarchique(10).m_sIntitulé,MotComplet)
+      
+      
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NomUtilisateur..Valeur,Utilisateur.m_sNom,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.PrénomUtilisateur..Valeur,Utilisateur.m_sPrenom,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.TelephoneUtilisateur..Valeur,utilisateur.m_sTéléphone ,MotComplet) 
+      DocRemplace(MonDoc,VariablesGénAutAbsence.CadreUtilisateur..Valeur,Utilisateur.m_sCadreArab,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.lieuAffectation..Valeur,Utilisateur.m_sAffectationArab,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.Service..Valeur,Utilisateur.EntitéUtilisateurActuel.m_sIntitulé,MotComplet)
+      //DocRemplace(MonDoc,VariablesGénAutAbsence.Division			..Valeur,Utilisateur.m_sNomArab,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.TypeAutorisation..Valeur,Utilisateur.m_sNomArab,MotComplet) // idaria 
+      annéeReportCongés est une chaine =  DonnéesAutAbsence.m_dDatedébut.Année-1
+      DocRemplace(MonDoc,VariablesGénAutAbsence.AnnéeReportCongés	..Valeur,annéeReportCongés,MotComplet) // idaria 
+       
+      
+      //durée de congés 
+      DocRemplace(MonDoc,VariablesGénAutAbsence.DateAujourdhui..Valeur, DateVersChaîne(DateSys()) ,MotComplet)
+      
+      DocRemplace(MonDoc,VariablesGénAutAbsence.DateDébut				..Valeur, DateVersChaîne(DonnéesAutAbsence.m_dDatedébut) ,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.DateFin					..Valeur,DateVersChaîne( DonnéesAutAbsence.m_dDateFin) ,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.heurDébut				..Valeur, HeureVersChaîne(DonnéesAutAbsence.m_hHeureDébut,"HH:MM") ,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.HeureFin				..Valeur, HeureVersChaîne(DonnéesAutAbsence.m_hHeureFin,"HH:MM") ,MotComplet) 
+      
+      datedébusemaine, datefinsemaine est une date
+      datedébusemaine = PremierJourDeLaSemaine(DonnéesAutAbsence.m_dDatedébut)
+      datefinsemaine = DernierJourDeLaSemaine(DonnéesAutAbsence.m_dDateFin)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.dateDébutSemaine				..Valeur, DateVersChaîne(datedébusemaine),MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.dateFinSemaine				..Valeur, DateVersChaîne(datefinsemaine) ,MotComplet) 
+      
+      
+      Duree est une chaine = DonnéesAutAbsence.m_nDuréeCongés
+      DocRemplace(MonDoc,VariablesGénAutAbsence.Durée				..Valeur,Duree  ,MotComplet)
+      
+      DocRemplace(MonDoc,VariablesGénAutAbsence.Année				..Valeur,"-",MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.lieuRésidence						..Valeur,DonnéesAutAbsence.m_sLieuRésidence,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.DépartMission						..Valeur,DonnéesAutAbsence.m_sDépart,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.DestinationsMission 				..Valeur,DonnéesAutAbsence.m_sDestinations,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.MotifAbsence_ObjMission 						..Valeur,DonnéesAutAbsence.m_sCauseAbs,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.Intérim				..Valeur,DonnéesAutAbsence.m_sIntérim,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.DateDébut				..Valeur,DateVersChaîne( getJourCalendaireSuivant(DonnéesAutAbsence.m_dDateFin + 1)) ,MotComplet)
+      
+      //variable arabe à intégrer plustard si windev supporte l'arabe sion les intégrer dans le fchier modèle pour chaque user
+      DocRemplace(MonDoc,VariablesGénAutAbsence.NomUtilisateurArab				..Valeur,Utilisateur.m_sNomArab,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.PrénomUtilisateurArab			..Valeur,Utilisateur.m_sPrénomArab,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.CadreUtilisateurArab			..Valeur,Utilisateur.m_sCadreArab,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.lieuAffectationArab				..Valeur,Utilisateur.m_sAffectationArab,MotComplet)
+      DocRemplace(MonDoc,VariablesGénAutAbsence.ServiceArab						..Valeur,Utilisateur.EntitéUtilisateurActuel.m_sIntituléArab,MotComplet)
+      
+      
+      // sauvegarde document
+      MonDoc.Sauve()
+      MonDoc.Ferme()
+      //fSupprime(chemFichierGénéré)
+      
+      RENVOYER chemFichierGénéré
+      
+      
+      
+      
+     type : 458752
+   -
+     name : GetJourOuvrables
+     procedure_id : 1451870877994425851
+     type_code : 15
+     code : |1+
+      procédure GetJourOuvrables(dDebut est une date, dFin est une date )
+      nJoursOuvres est un entier = 0
+      
+       datesFeries est un tableau de chaînes  //sous d forme de dateverschaine ci-dessous 
+       
+        // = ["01/01", "01/05", "08/05", "14/07", "25/12"]
+      
+      
+      // Boucle pour compter les jours ouvrables
+      
+      d est une date
+      Pour d = dDebut à dFin
+      	Si DateVersJour (d) <> 6 ET DateVersJour (d) <> 7 ET Pas(EstDansListe(d, datesFeries)) ALORS
+      		nJoursOuvres++
+      	Fin
+      Fin
+      
+      renvoyer nJoursOuvres
+      
+      
+      // Fonction pour vérifier si une date est dans une liste de dates
+      procedure interne EstDansListe(locale dte est une Date,locale Lliste est un Tableau dynamique)
+      		POUR TOUT b DE Lliste	
+      			SI DateVersChaîne(dte, "JJ/MM")= b ALORS   // on dit
+      				renvoyer  Vrai
+      			FIN
+      		FIN
+      	renvoyer Faux
+      FIN
+      
+      
+     type : 458752
+   -
+     name : GénèreBordereau
+     internal_properties : BQAAAAUAAADaQ4BfFne0WzE4+NsIeLQh8XukLlHDjk+Tl/xIlHaFe2BQijb3bOZgf6uSAFaLFyf4rD8Z5nMzoapsohDvtw0=
+     procedure_id : 1505934191173922463
+     type_code : 15
+     code : |1+
+      procédure GénèreBordereau(oDonnéesCourrier est un clDonnéesGénérationCourrier)
+      
+      	chemFichierGénéré est une chaine =TempDirectory + fSep() + GénèreNomFichier(oDonnéesCourrier.OuvrageCourrier,oDonnéesCourrier.ProjetCourrier,...
+      	oDonnéesCourrier.numMarché,"Projet Réponse",oDonnéesCourrier.courrierDate) + ".docx"
+      	
+      	SI PAS fCopieFichier(fRepExe()+fSep()+"Modèle docs"+fSep()+"Modèle bordereau.docx",chemFichierGénéré) ALORS
+      		Erreur( ErreurInfo())
+      		RENVOYER Faux
+      	FIN
+      	
+      	MonDoc		est un Document	= chemFichierGénéré
+      	largeurDoc	est un entier	= MonDoc.Section.LargeurPage-MonDoc.Section.MargeDroite-MonDoc.Section.MargeGauche
+      	
+      	////**entête
+      	//InsereEntete(MonDoc)
+      	//
+      	////** pied de page
+      	//InserePiedPage(MonDoc)
+      	
+      	
+      //	//** remplacement des variables
+      //	DocRemplace(MonDoc,VariablesGénAtt.PaysMO..Valeur,  Majuscule(DonnéesMarché.MaitreOuvrage.EntitéMO.m_sPays),MotComplet)
+      //	//Génération Hiérarchie jusqu’à ordre 10
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique1..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(1).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique2..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(2).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique3..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(3).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique4..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(4).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique5..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(5).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique6..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(6).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique7..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(7).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique8..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(8).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique9..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(9).m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NiveauHiérarchique10..Valeur,DonnéesMarché.MaitreOuvrage.RécupèreEntitéHierarchique(10).m_sIntitulé,MotComplet)
+      //	
+      //	
+      //	DocRemplace(MonDoc,VariablesGénAtt.N°Marché..Valeur,DonnéesMarché.m_sNumero,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.ObjetMarché..Valeur,DonnéesMarché.m_sObjetMarché,MotComplet)
+      //	
+      //	DocRemplace(MonDoc,VariablesGénAtt.VilleMO..Valeur,DonnéesMarché.MaitreOuvrage.EntitéMO.m_sVille,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.adresseMO..Valeur,DonnéesMarché.MaitreOuvrage.EntitéMO.m_sAdresse ,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.entitéMO..Valeur,DonnéesMarché.MaitreOuvrage.EntitéMO.m_sIntitulé,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.QualitéMO..Valeur,DonnéesMarché.MaitreOuvrage.Représentant.m_sQualité,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.civilitéMO..Valeur,DonnéesMarché.MaitreOuvrage.Représentant.Personne.m_sCivilité,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NomPrénomMO..Valeur,DonnéesMarché.MaitreOuvrage.Représentant.Personne.m_sNom + " "+DonnéesMarché.MaitreOuvrage.Représentant.Personne.m_sPrenom ,MotComplet)
+      //	
+      //	
+      //	DocRemplace(MonDoc,VariablesGénAtt.CivilitéTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.NomPrénomTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.Personne.m_sNom+ " "+DonnéesMarché.Titulaire.Représentant.Personne.m_sPrenom ,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.QualitéTitulaire..Valeur,DonnéesMarché.Titulaire.Représentant.m_sQualité,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.AdresseTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sAdresse,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.VilleTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sVille,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.PaysTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sPays,MotComplet)
+      //	DocRemplace(MonDoc,VariablesGénAtt.EntitéTitulaire..Valeur,DonnéesMarché.Titulaire.EntitéTitulaire.m_sIntitulé,MotComplet)
+      //	
+      //	SELON DonnéesMarché.Titulaire.Représentant.Personne.m_sCivilité
+      //		CAS "Mme"
+      //			DocRemplace(MonDoc,VariablesGénAtt.Le_LaTitulaire..Valeur,"la", MotComplet)
+      //		CAS "M."
+      //			DocRemplace(MonDoc,VariablesGénAtt.Le_LaTitulaire..Valeur,"le", MotComplet)	
+      //	FIN
+      	
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.N°Att..Valeur,REQ_Données_duneRéception.NumAttach,MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.dateServiceFait..Valeur,DateVersChaîne(REQ_Données_duneRéception.DatePV), MotComplet)
+      	
+      	
+      	// Insertion tableau des OS / délais 
+      	listFrag		est tableau de docFragments		= DocRecherche(MonDoc,VariablesGénAtt.TableauAtt..Valeur,MotComplet)
+      	FragTabList		est un docfragment				= listFrag[1]
+      	policeNom		est une chaîne					= FragTabList.MiseEnForme.PoliceNom
+      	policeTaille	est une entier					= FragTabList.MiseEnForme.PoliceTaille
+      	FragTabList.Texte = ""
+      	
+      	mondoctabAttachement		est un Document
+      	mondoctabAttachement.Section.MargeDroite	= MonDoc.Section.MargeDroite
+      	mondoctabAttachement.Section.MargeGauche	= MonDoc.Section.MargeGauche
+      	
+      	
+      	FragTabAttachement	est un docFragment
+      	Nligne				est un entier	= HNbEnr(REQ_PrixRéceptionnésAtt)
+      	Ncolonne			est un entier	= 6
+      	FragTabAttachement = DocInsèreTableau(mondoctabAttachement,1,Ncolonne,Nligne+1+3)
+      	
+      	TotalHT		est un réél	= 0
+      	totalTTC	est un réel	= 0
+      	para		est un docParagraphe
+      	
+      	POUR TOUT para DE FragTabAttachement.Paragraphe
+      		SI para.Tableau <> Null ALORS
+      			para.Tableau.Colonnes[1].LargeurMillimètres			= largeurDoc*0.04
+      			para.Tableau.Colonnes[2].LargeurMillimètres			= largeurDoc*0.5
+      			para.Tableau.Colonnes[3].LargeurMillimètres			= largeurDoc*0.03
+      			para.Tableau.Colonnes[4].LargeurMillimètres			= largeurDoc*0.07
+      			para.Tableau.Colonnes[5].LargeurMillimètres			= largeurDoc*0.16
+      			para.Tableau.Colonnes[Ncolonne].LargeurMillimètres	= largeurDoc*0.18
+      			//1re ligne titre
+      			para.Tableau.Cellules[1, 1].Contenu.Texte			= "N° prix"
+      			para.Tableau.Cellules[1, 2].Contenu.Texte			= "Désignation"
+      			para.Tableau.Cellules[1, 3].Contenu.Texte			= "Unité"
+      			para.Tableau.Cellules[1, 4].Contenu.Texte			= "Qté"
+      			para.Tableau.Cellules[1, 5].Contenu.Texte			= "Prix Unitaire"
+      			para.Tableau.Cellules[1, Ncolonne].Contenu.Texte	= "Prix Total"
+      			//mise en forme 1ere ligne
+      			POUR j = 1 à Ncolonne
+      				para.Tableau.Cellules[1,j].Contenu.MiseEnForme.PoliceGras		= Vrai
+      				para.Tableau.Cellules[1,j].MiseEnPage.Alignement				= chCentre
+      				para.Tableau.Cellules[1,j].MiseEnPage.CouleurFond				= RGB(242,242,242)
+      				para.Tableau.Cellules[1,j].Contenu.MiseEnPage.EspaceBordHaut	= 10
+      			FIN
+      			
+      			// autre lignes prix	
+      			i est un entier =0
+      			POUR TOUT REQ_PrixRéceptionnésAtt   // parcours Hiérarchique
+      				i++
+      				para.Tableau.Cellules[i+1, 2].Contenu.Texte	= REQ_PrixRéceptionnésAtt.Désignation
+      				para.Tableau.Cellules[i+1, 3].Contenu.Texte	= REQ_PrixRéceptionnésAtt.Unité
+      				SI REQ_PrixRéceptionnésAtt.NumPrix > 0 ALORS // les cellules des prix 
+      					para.Tableau.Cellules[i+1, 1].Contenu.Texte	= REQ_PrixRéceptionnésAtt.NumPrix
+      					para.Tableau.Cellules[i+1, 4].Contenu.Texte	=  REQ_PrixRéceptionnésAtt.quantité
+      					
+      					para.Tableau.Cellules[i+1, 5].Contenu.Texte	=   NumériqueVersChaîne(REQ_PrixRéceptionnésAtt.PU_HT,"10.2fS")
+      					para.Tableau.Cellules[i+1, 6].Contenu.Texte	=  NumériqueVersChaîne(REQ_PrixRéceptionnésAtt.PU_HT* REQ_PrixRéceptionnésAtt.quantité,"10.2fS")
+      				SINON  // les non prix sont gras
+      					para.Tableau.Cellules[i+1,2].Contenu.MiseEnForme.PoliceGras = Vrai
+      				FIN
+      				
+      				// caclul de somme 
+      				TotalHT += REQ_PrixRéceptionnésAtt.PU_HT* REQ_PrixRéceptionnésAtt.quantité 
+      				
+      				//mise en forme des colonnes de la ligne actuelle
+      				POUR j = 1 à Ncolonne
+      					SELON j
+      						CAS 1,3,4
+      							para.Tableau.Cellules[i+1,j].MiseEnPage.Alignement								= chCentre
+      						CAS 2
+      							para.Tableau.Cellules[i+1,j].MiseEnPage.Alignement								= chGauche
+      						CAS 5,6
+      							para.Tableau.Cellules[i+1,j].MiseEnPage.Alignement								= chDroite
+      					FIN
+      					para.Tableau.Cellules[i+1,j].MiseEnPage.Cadre.TraitHaut.Type=TraitAucun
+      					SI i < Nligne ALORS
+      						para.Tableau.Cellules[i+1,j].MiseEnPage.Cadre.TraitBas.Type=TraitAucun
+      					FIN
+      				FIN
+      			FIN
+      //			//lignes totaux
+      //			totalTTC											= TotalHT*(1+TVA/100)
+      //			para.Tableau.Cellules[Nligne+1+1, 5].Contenu.Texte	= "Total HT" 
+      //			para.Tableau.Cellules[Nligne+1+1, 6].Contenu.Texte	=  NumériqueVersChaîne(TotalHT,"10.2fS")
+      //			
+      //			para.Tableau.Cellules[Nligne+1+2, 5].Contenu.Texte	= "TVA (20%)"
+      //			para.Tableau.Cellules[Nligne+1+2, 6].Contenu.Texte	= NumériqueVersChaîne(TotalHT*TVA/100,"10.2fS")
+      //			
+      //			para.Tableau.Cellules[Nligne+1+3, 5].Contenu.Texte	= "Total TTC"
+      //			para.Tableau.Cellules[Nligne+1+3, 6].Contenu.Texte	= NumériqueVersChaîne(totalTTC,"10.2fS")
+      //			
+      //			
+      //			POUR k =Nligne+1+1 à Nligne+1+3  //ligne
+      //				POUR j = 1 à 6 // colonne
+      //					SELON j
+      //						CAS 1,2,3,4
+      //							para.Tableau.Cellules[k,j].MiseEnPage.Cadre.Trait =TraitAucun
+      //						CAS 5
+      //							para.Tableau.Cellules[k,j].Contenu.MiseEnForme.PoliceGras= Vrai
+      //						CAS 6
+      //							para.Tableau.Cellules[k,j].MiseEnPage.Alignement								= chDroite				
+      //					FIN
+      //				FIN
+      //				
+      //			FIN
+      			SORTIR
+      		FIN	
+      	FIN
+      	
+      	
+      	//insertion de la table dans le document
+      	MonDoc.Insère(FragTabList.PositionDébut,mondoctabAttachement)
+      	mondoctabAttachement.Ferme()
+      	
+      	//application taille et police au deux tableaux
+      	fragmentTab est un docFragment(mondoctabAttachement,mondoctabAttachement.Paragraphe[1].PositionDébut,mondoctabAttachement.Paragraphe[mondoctabAttachement.Paragraphe..Occurrence].Positionfin)
+      	fragmentTab.MiseEnForme..PoliceTaille	= policeTaille
+      	fragmentTab.MiseEnForme..PoliceNom		= policeNom
+      	
+      	
+      	//total en lettre 
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.TotalTTC..Valeur,ArrondiInférieur(totalTTC, 2), MotComplet)
+      	DocRemplace(MonDoc,VariablesGénAtt.TotalHT..Valeur,ArrondiInférieur(TotalHT, 2), MotComplet)
+      	
+      	DocRemplace(MonDoc,VariablesGénAtt.totalTTCLettre..Valeur,NombreEnLettres(ArrondiInférieur(totalTTC, 2), "Dirham(s)", "Centime(s)"),MotComplet)
+      	//libération des requêtes
+      	HLibèreRequête(REQ_Données_duneRéception)
+      	
+      	HLibèreRequête(REQ_Délaisréceptionnés)
+      	// sauvegarde document
+      	MonDoc.Sauve()
+      	MonDoc.Ferme()
+      	//fSupprime(chemFichierGénéré)
+      	
+      	//Ouvre(FEN_test,"",MonDoc)
+      	
+      	
+      	
+      	RENVOYER chemFichierGénéré
+      //SINON //pas de donnés à affichés
+      //	HLibèreRequête(REQ_Données_duneRéception)
+      //	
+      //	HLibèreRequête(REQ_Délaisréceptionnés)
+      //	RENVOYER ""
+      FIN
+      
+      
+     type : 458752
+   -
+     name : AlliasOnglet
+     procedure_id : 1507023957511493128
+     type_code : 15
+     code : |1+
+      procédure global AlliasOnglet(Onglet est un champ, LibeléChamp est une chaine)
+      
+      i			est un entier	= 1
+      ResChamp	est une chaîne
+      ResChamp = EnumèreChamp(Onglet, i)
+      TANTQUE ResChamp <> "" 
+      	SI Onglet[ResChamp].Libellé = LibeléChamp	 ALORS
+      		SORTIR
+      	FIN
+      	i++
+      	ResChamp = EnumèreChamp(Onglet, i)
+      FIN
+      
+      SI ResChamp ="" ALORS  //aucun champ du mme nom n'a été trouvé
+      	renvoyer ResChamp
+      SINON //le champ existe
+      	renvoyer ResChamp
+      	//OngletFerme(Onglet,ResChamp)
+      FIN
+     type : 458752
+   -
+     name : envoiMailNotif
+     internal_properties : BQAAAAUAAACWj3wII3FCbrKse3PKuIKTjX3IVBPX3tHluaJwvmZHihHzPZOc4TcNaNa9U9HcYo7B7/r+xrM+rfYUs2Q7e8E=
+     procedure_id : 1516421728201474872
+     type_code : 15
+     code : |1+
+      procédure envoiMailNotif()
+      Connexion est une connexion
+      
+      Connexion.Provider		= hAccèsHFClientServeur
+      Connexion.Serveur			= ChargeParamètre("Server")
+      Connexion.Utilisateur		=  ChargeParamètre("User")
+      Connexion.MotDePasse		= ChargeParamètre("MotdePass")
+      Connexion.BaseDeDonnées	= ChargeParamètre("BDD")
+      Connexion.Accès			= hOLectureEcriture
+      Connexion.Cryptage		= hCryptageStandard
+      Info(ProjetInfo(piRegistre))
+      
+      mailMessage est une chaine =""
+      n est un entier=1
+      
+      SI PAS HOuvreConnexion(Connexion) ALORS //ouvreConnexion Au GPW 
+      	Erreur(HErreurInfo())
+      	RENVOYER -1
+      SINON
+      	HLitRecherchePremier(GPU_Utilisateur,Login,ChargeParamètre("LoginUser"))
+      	SI PAS HTrouve(GPU_Utilisateur) ALORS
+      		erreur("merci de vous connecter sur l'application ProGest et redémarrer les service Progest...")
+      	sinon
+      		REQ_Tasks.ParamTerminée		=  0
+      		REQ_Tasks.ParamIDLogin = GPU_Utilisateur.IDUtilisateur
+      		REQ_Tasks.ParamnotifparMail	= 1
+      		HExécuteRequête(REQ_Tasks,Connexion,hRequêteDéfaut)
+      		
+      		SI hNbEnr(REQ_Tasks) > 0 ALORs
+      			POUR TOUT REQ_Tasks 
+      				si REQ_Tasks.notifDate = DateSys() ALORS
+      					mailMessage += RC+RC+"Task "+n+": " + REQ_Tasks.TASK+RC + " > "+ REQ_Tasks.Détail+...
+      					RC+ "Due date : " + DateVersChaîne(REQ_Tasks.DueDate)
+      					n++
+      				FIN
+      			FIN
+      		FIN
+      	FIN
+      		si mailMessage <> "" ALORS
+      		mailMessage = "Bonjour " + GPU_Utilisateur.Civilité +" "+ GPU_Utilisateur.Nom+","+RC+
+      		"l'application ProGest estime que les taches suivantes méritent votre attention : " + mailMessage + RC+RC+ "Pour annuler la réception de ce type de mail, merci de contacter l'Admin ou les Réglage de votre App ProGest."
+      		mailMessage+= RC +RC +"Cordialement."+rC+RC+ "ProGest app"
+      		// Ouverture d'une session SMTP
+      		MaSession est un emailSessionSMTP
+      		MaSession..AdresseServeur	= "smtp.gmail.com"
+      		MaSession..Nom				= "progest.app@gmail.com"
+      		MaSession..MotDePasse		= "voqunxqlxrqateix"
+      		MaSession..Port				= 587
+      		MaSession..Option			= emailOptionSécuriséTLS
+      		
+      		EmailOuvreSession(MaSession)
+      		
+      		// Construction d'un email
+      		MonMessage est un Email
+      		MonMessage..Expediteur = "progest.app@gmail.com"
+      		Ajoute(MonMessage..Destinataire, GPU_Utilisateur.Email)
+      		MonMessage..Sujet	= "Système de notification ProGest"
+      		MonMessage..Message	= mailMessage
+      	
+      		
+      		// Envoi du message
+      		EmailEnvoieMessage(MaSession, MonMessage)
+      		FIN
+      	
+      	
+      fin
+     type : 458752
+   -
+     name : ElemenstValidés
+     procedure_id : 1554144769466198580
+     type_code : 15
+     code : |1+
+      PROCÉDURE ElemenstValidés(IDPrix , IDControle =null , IDrapport = null,dAteRef est une date =DateSys(),sListIDrapportExclus est une chaine ="")
+      
+      stElemValidés est une Structure 
+      	tabIDElemValidés	est un tableau dynamique d'entier sur 8 octets
+      	tabElemValidés		est un tableau dynamique de chaînes
+      	tabQtéValidés		est un tableau dynamique de réels
+      FIN
+      stElem est une stElemValidés
+      VariableRAZ(stElem)
+      
+      HExécuteRequête(REQ_ElementsValidés_PrixOUControleOuRapport,MaConnexion,hRequêteDéfaut,IDPrix,IDControle,IDrapport,dAteRef,sListIDrapportExclus)
+      POUR TOUT REQ_ElementsValidés_PrixOUControleOuRapport 
+      	stElem.tabIDElemValidés.Ajoute(REQ_ElementsValidés_PrixOUControleOuRapport.IDElement)
+      	stElem.tabElemValidés.Ajoute(REQ_ElementsValidés_PrixOUControleOuRapport.Element)
+      	stElem.tabQtéValidés.Ajoute( REQ_ElementsValidés_PrixOUControleOuRapport.Qté)
+      FIN
+      HLibèreRequête(REQ_ElementsValidés_PrixOUControleOuRapport)
+      
+      RENVOYER (stElem.tabIDElemValidés,stElem.tabElemValidés,stElem.tabQtéValidés)// Syntaxe :
+      
+      
+      // Nouvelle_Procédure ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple : 
+      // Indiquez ici un exemple d'utilisation.
+      //
+      
+      
+     type : 458752
+   -
+     name : TableRestaureFiltre
+     procedure_id : 1554146002136844835
+     type_code : 15
+     code : |1-
+      procédure TableRestaureFiltre(maTable, sListFiltre)
+      
+      SI sListFiltre <>"" ALORS
+      	POUR TOUTE CHAÎNE sColfiltre de sListFiltre Séparée par RC
+      		TableActiveFiltre({maTable..nom +"."+ExtraitChaîne(sColfiltre,1,";"),indChamp},ExtraitChaîne(sColfiltre,2,";"),ExtraitChaîne(sColfiltre,3,";"))		
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : SituationDélai
+     procedure_id : 1554147703291172146
+     type_code : 15
+     code : |1+
+      Procedure SituationDélai(dDateRéférrence est une date, nIDDélai est un entier sur 8 octets, nDélai est un entier , sUnité est une chaine Ansi = "", sListOSExclus est une chaine = null,sListReceptionExclues est une chaine = null,stypecalcul est un chaine = gtabTypeCalculDélai[1] )
+      //valeurs retournée
+      
+      dDateFinInitiale	est une Date	= ""					// inclue
+      duDuréeArret		est une DURée							// inclus le jour de référrence 
+      
+      dDateFinContract	est une Date	= ""					// cette date est incluse
+      duDuréeRestante		est une stDuréeMoisJours					// inclus le jour de référrence 
+      duDuréeConsomée		est une stDuréeMoisJours
+      duDuréeTotalConsomée		est une stDuréeMoisJours					// inclus le jour de référrence 
+      dDateEffet			est une Date	= "" 
+      dDateEffetAntécident est une Date	= "" 
+      duRetard, duRetardDpRéception			est une durée						// le jour de référrence inclu
+      xdurée est une durée
+      resteConsoméJour est un entier  // reste de la div euclidienne de la durée consommée
+      
+      sErreurPV			est une chaine	= "" 
+      sErreurOS			est une chaine	= "" 
+      sEtatDélai			est une chaine	= "non lancé"
+      bErreurOSBloquant	est un booleen	= 0						// un erreur qui bloque le calcul de l'état du délais
+      
+      //Diagramme gant
+      ChronologieDélai	est tableau dynamique de strChronlogie	// type:Dateeffet,type:Dateeffet...
+      DélaiEvenement		est un strChronlogie
+      DélaiEvenement.TypeEvenement	= ""
+      DélaiEvenement.nomColonne	= ""
+      
+      // variables internes 
+      dDateDébut			est une Date 
+      dDateFin			est une date
+      dDateCloture		est un date		= ""
+      Délai		est une stDuréeMoisJours
+      
+      
+      
+      stLigneDuréeConso est une stLigneDuréeConsommée
+      
+      tabDuréesConsomées est un tableau dynamique de stLigneDuréeConsommée 
+      
+      //calcul methode 1 
+      nbrejourDumois est un entier =30
+      
+      
+      
+      SELON  sUnité //calcul du délais si le délais n'
+      	CAS "jours", "Jours", "jour", "Jour" :
+      		Délai.jour = nDélai  
+      		duDuréeRestante.Jour = nDélai
+      	CAS "Mois","mois":
+      		Délai.Mois = nDélai
+      		duDuréeRestante.mois = nDélai
+      	AUTRE CAS
+      		//sortie
+      		sErreurOS +=[ RC] + 	"- L'unité du délai '" +sUnité +"' n'est pas reconnue"<§aad:0§>
+      		bErreurOSBloquant= 1
+      FIN
+      
+      //n'est pas un délai
+      SI nDélai = 0  ALORS // ET sUnité = ""
+      	ChronologieDélai.Ajoute(DélaiEvenement)
+      	tabDuréesConsomées.ajoute(stLigneDuréeConso)
+      	
+      	RENVOYER ("", Délai,duDuréeTotalConsomée, "",duDuréeRestante, 0,"", "","",ChronologieDélai,tabDuréesConsomées)
+      	
+      SINON
+      	//si un délai	
+      	
+      	REQ_OSetPVdunDélais.ParamDateEffet			= dDateRéférrence
+      	REQ_OSetPVdunDélais.ParamIDProjet			= Null
+      	REQ_OSetPVdunDélais.ParamListIDTabDélais	= nIDDélai
+      	REQ_OSetPVdunDélais.ParamSansIDOS			= sListOSExclus
+      	REQ_OSetPVdunDélais.ParamSansIDReception	= sListReceptionExclues
+      	
+      	HExécuteRequête(REQ_OSetPVdunDélais,MaConnexion,hRequêteDéfaut)
+      	
+      	
+      	Si stypecalcul = gtabTypeCalculDélai[2] ou sUnité="jours" OU sUnité="Jours" OU sUnité="jour" OU sUnité="Jour" 
+      		POUR TOUT REQ_OSetPVdunDélais
+      			dDateEffet = REQ_OSetPVdunDélais.DateEffet
+      			SELON sEtatDélai 
+      				CAS "non lancé" :
+      					SELON REQ_OSetPVdunDélais.TYPE
+      						CAS "commencement","reprise":
+      							dDateFinInitiale = dDateEffet
+      							SELON  sUnité 
+      								// calcul dDateFinInitiale 
+      								CAS "jours", "Jours", "jour", "Jour" :
+      									dDateFinInitiale.Jour += nDélai-1  //jour calculé inclu
+      								CAS "Mois","mois":
+      									dDateFinInitiale.Mois += nDélai 
+      									dDateFinInitiale.Jour -- //jour calculé inclu
+      								AUTRE CAS
+      									//sortie
+      									//sErreurOS +=[ RC] + 	"- L'unité du délai '" +sUnité +"' n'est pas reconnue" // déja traité
+      							FIN
+      							dDateFinContract	= dDateFinInitiale 
+      							xdurée		= dDateFinInitiale - dDateEffet
+      							Délai.Jour = xdurée.Jour
+      							Délai.Jour += 1 
+      							sEtatDélai					= "en cours"
+      							
+      							DélaiEvenement.TypeEvenement	= "début"
+      							DélaiEvenement.nomColonne	= "OS_" + REQ_OSetPVdunDélais.type+"_"+REQ_OSetPVdunDélais.IDOSPV
+      							ChronologieDélai.Ajoute(DélaiEvenement)
+      							
+      						CAS "arrêt" :
+      							sErreurOS +=[RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai	
+      							bErreurOSBloquant= 1
+      						CAS "Réception"  :
+      							sErreurPV +=[RC] + "- Le  PV n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai	
+      						AUTRE CAS
+      							sErreurOS +=[RC] + "Le type OS/PV '" + 	REQ_OSetPVdunDélais.TYPE + "' n'est pas prévu dans le traitement"
+      							bErreurOSBloquant= 1			
+      					FIN
+      					
+      				CAS  "en cours":
+      					SELON REQ_OSetPVdunDélais.TYPE
+      						CAS "commencement","reprise":
+      							sErreurOS += [RC ]+ 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai					
+      							SI dDateEffet >= dDateFinContract ET dDateFinContract <> "" ALORS // pas de calcul
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      							SINON 
+      								//rien
+      							FIN
+      						CAS "arrêt" :
+      							SI  dDateEffet >= (dDateFinContract+1) ET dDateFinContract <> "" ALORS // pas de calcul 
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      								dDateDébut = dDateEffet
+      								SI duRetard.Jour > 0 ALORS
+      									duRetard+= (dDateEffet-dDateEffetAntécident)
+      									duRetardDpRéception += (dDateEffet-dDateEffetAntécident)
+      								SINON
+      									duRetard +=(dDateEffet-dDateFinContract)
+      									duRetard.Jour--
+      									duRetardDpRéception +=(dDateEffet-dDateFinContract)
+      									duRetardDpRéception.Jour--
+      									//
+      								FIN
+      								
+      							SINON 
+      								dDateFinContract				= ""
+      								//ChronologieDélai +=[","]+REQ_OSetPVdunDélais.TYPE+":"+REQ_OSetPVdunDélais.DateEffet
+      							FIN
+      							sEtatDélai						= "en arrêt"
+      							DélaiEvenement.TypeEvenement	= "arrêt"
+      							DélaiEvenement.nomColonne		= "OS_" + REQ_OSetPVdunDélais.TYPE+"_"+REQ_OSetPVdunDélais.IDOSPV
+      							ChronologieDélai.Ajoute(DélaiEvenement)
+      							
+      							
+      							
+      						CAS "Réception" :
+      							SI  dDateEffet > dDateFinContract ALORS
+      								SI duRetard.Jour > 0 ALORS
+      									duRetard+= (dDateEffet-dDateEffetAntécident)
+      									duRetard.Jour++
+      								SINON
+      									duRetard +=(dDateEffet-dDateFinContract)
+      								FIN
+      							SINON 
+      							FIN
+      							duRetardDpRéception=0// réinitlisation du compteur
+      							dDateDébut			= dDateEffet
+      								dDateDébut.Jour+=1 // l'arret du délai commence le lendemain
+      							SI REQ_OSetPVdunDélais.DélaiClôtué = 1 ALORS
+      								sEtatDélai			= "clôturé" 
+      								
+      								//dDateFinContract	= ""
+      								DélaiEvenement.TypeEvenement	= "arrêt"
+      								DélaiEvenement.nomColonne		= "Récep_"+REQ_OSetPVdunDélais.IDOSPV
+      								ChronologieDélai.Ajoute(DélaiEvenement)
+      								
+      								//ChronologieDélai +=[","]+"arrêt"+":"+REQ_OSetPVdunDélais.DateEffet
+      							FIN
+      							//						SI dDateEffet >= dDateFinContract ALORS //cloture // calcul des délais
+      							//							sEtatDélai ="clôturé"
+      							//							dDateCloture = dDateEffet
+      							//							dDateCloture.jour += 1
+      							//							// prend effet le jour suivant
+      							//						SINON  
+      							//							//rien
+      						//						FIN
+      						AUTRE CAS
+      							sErreurOS +=[ RC] + "Le type OS/PV '" + 	REQ_OSetPVdunDélais.TYPE + "' n'est pas prévu dans le traitement"
+      							bErreurOSBloquant= 1		
+      					FIN
+      				CAS  "en arrêt" :
+      					SELON REQ_OSetPVdunDélais.TYPE
+      						CAS "commencement":
+      							sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai
+      							
+      							SI dDateEffet >= dDateFinContract ET dDateFinContract <> "" ALORS // pas de calcul :  délai en arret après fin contractuelle
+      								sEtatDélai			= "en cours"
+      								
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      								//bErreurOSBloquant= 1
+      							FIN
+      							//SI dDateFinContract ="" alors // délai en arrêt avant fin contractuelle
+      							dDateFin = dDateEffet
+      							duDuréeArret += (dDateFin-dDateDébut)
+      							si dDateFinContract = "" ALORS
+      								dDateFinContract				= dDateFinInitiale + duDuréeArret //inclue 
+      							FIN
+      							
+      							sEtatDélai						= "en cours"
+      							DélaiEvenement.TypeEvenement	= "début"
+      							DélaiEvenement.nomColonne		= "OS_" + REQ_OSetPVdunDélais.TYPE+"_"+REQ_OSetPVdunDélais.IDOSPV
+      							ChronologieDélai.Ajoute(DélaiEvenement)
+      							
+      							//ChronologieDélai +=[","]+"commencement"+":"+REQ_OSetPVdunDélais.DateEffet
+      						//FIN
+      						CAS "arrêt" :
+      							sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai	
+      							bErreurOSBloquant= 1
+      							SI dDateEffet >= dDateFinContract ET dDateFinContract <> "" ALORS // pas de calcul :  délai en arret après fin contractuelle
+      								sEtatDélai ="en arrêt"
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      							FIN
+      							SI dDateFinContract ="" ALORS // délai en arrêt avant fin contractuelle
+      								//rien
+      							FIN
+      						CAS "reprise" :
+      							SI dDateEffet >= dDateFinContract ET dDateFinContract <> "" ALORS // pas de calcul :  délai en arret après fin contractuelle
+      								sEtatDélai			= "en cours"
+      								sErreurOS += [RC ]+ 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      								//	bErreurOSBloquant= 1
+      							FIN
+      							//						SI dDateFinContract ="" ALORS // délai en arrêt avant fin contractuelle
+      							dDateFin = dDateEffet
+      							duDuréeArret += (dDateFin-dDateDébut)
+      							 si dDateFinContract ="" ALORS
+      							 	dDateFinContract				= dDateFinInitiale + duDuréeArret //inclu
+      							 FIN
+      							
+      							sEtatDélai						= "en cours"
+      							DélaiEvenement.TypeEvenement	= "début"
+      							DélaiEvenement.nomColonne		= "OS_" + REQ_OSetPVdunDélais.TYPE+"_"+REQ_OSetPVdunDélais.IDOSPV
+      							ChronologieDélai.Ajoute(DélaiEvenement)
+      							
+      							//						FIN
+      							
+      						CAS "Réception"  :
+      							bErreurOSBloquant= 1
+      							sErreurPV +=[ RC ]+ "- Le  PV n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai
+      							SI  dDateEffet >= dDateFinContract ET dDateFinContract <> "" ALORS // pas de calcul :  délai en arret après fin contractuelle
+      								sErreurPV +=[ RC] + "- Le  PV n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      							FIN 
+      							SI dDateFinContract ="" ALORS // délai en arrêt avant fin contractuelle
+      								//rien
+      							FIN
+      						AUTRE CAS
+      							sErreurOS +=[RC] + "Le type OS/PV '" + 	REQ_OSetPVdunDélais.TYPE + "' n'est pas prévu dans le traitement"
+      							bErreurOSBloquant= 1		
+      					FIN
+      					
+      				CAS "clôturé":
+      					bErreurOSBloquant= 1
+      					SELON REQ_OSetPVdunDélais.TYPE
+      						CAS "arrêt", "commencement", "reprise" :
+      							sErreurOS +=[RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai	
+      						CAS "Réception" : 
+      							sErreurPV +=[RC] + "- Le  PV n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai
+      						AUTRE CAS
+      							sErreurOS += [RC]+ "Le type OS/PV '" + 	REQ_OSetPVdunDélais.TYPE + "' est non prévu et intervient alors que le délai est " +sEtatDélai
+      					FIN
+      				AUTRE CAS :
+      					
+      			FIN
+      			dDateEffetAntécident = dDateEffet
+      			si REQ_OSetPVdunDélais.type ="Réception" ALORS
+      				dDateEffetAntécident.jour++
+      			FIN
+      		FIN
+      		
+      		SI bErreurOSBloquant = 1 ALORS
+      			sEtatDélai = "erreur"
+      			HLibèreRequête(REQ_OSetPVdunDélais)
+      			RENVOYER (sEtatDélai, Délai,duDuréeConsomée, "", duDuréeRestante,"","", sErreurOS,sErreurPV,ChronologieDélai,tabDuréesConsomées)
+      			
+      		SINON
+      			
+      			SELON sEtatDélai 
+      				CAS "en cours", "en arrêt", "clôturé" :
+      					SI sEtatDélai = "en arrêt" OU sEtatDélai = "clôturé" ALORS
+      						dDateFin = dDateRéférrence
+      						duDuréeArret += (dDateFin-dDateDébut)
+      						duDuréeArret.jour+=1 //inclus le jours actuel
+      						xdurée =dDateRéférrence-dDateFinInitiale
+      						duDuréeRestante.jour		= duDuréeArret.Jour - xdurée.Jour
+      						
+      						duDuréeRestante.Jour --
+      					SINON //en cours
+      						xdurée = dDateRéférrence-dDateFinInitiale
+      						duDuréeRestante.jour		= duDuréeArret.jour - xdurée.Jour
+      						
+      						dDateEffet = dDateRéférrence
+      						SI  dDateEffet > dDateFinContract et dDateFinContract<>"" ALORS
+      							SI duRetard.Jour > 0 ALORS
+      								duRetard += (dDateEffet-dDateEffetAntécident)
+      								duRetard.Jour++
+      								duRetardDpRéception += (dDateEffet-dDateEffetAntécident)
+      								duRetardDpRéception.Jour++
+      							SINON
+      								duRetard += (dDateEffet-dDateFinContract)
+      								duRetardDpRéception +=(dDateEffet-dDateFinContract)
+      							FIN
+      						fin
+      						
+      					FIN
+      					
+      					duDuréeConsomée.jour		= Délai.Jour-duDuréeRestante.jour
+      					SI duDuréeRestante.jour < 0 ALORS
+      						duRetard.jour		= - duDuréeRestante.jour
+      						duDuréeRestante.jour	= 0
+      					FIN
+      				CAS "non lancé" :
+      					//rien les variables retournés sont vide
+      			FIN
+      			HLibèreRequête(REQ_OSetPVdunDélais)
+      			RENVOYER (sEtatDélai,Délai,duDuréeConsomée, dDateFinContract, duDuréeRestante , duRetard.Jour, duRetardDpRéception.Jour, sErreurOS,sErreurPV, ChronologieDélai,tabDuréesConsomées)
+      		FIN		
+      	fin
+      	
+      	//calcul selon les durée consommée en mois et jour : option possible juste pour délai en Mois
+      	si stypecalcul = gtabTypeCalculDélai[1] ALORS
+      		
+      		POUR TOUT REQ_OSetPVdunDélais
+      			dDateEffet = REQ_OSetPVdunDélais.DateEffet
+      			SELON sEtatDélai 
+      				CAS "non lancé" :
+      					SELON REQ_OSetPVdunDélais.TYPE
+      						CAS "commencement","reprise":
+      							dDateFinInitiale = dDateEffet
+      							SELON  sUnité 
+      								// calcul dDateFinInitiale 
+      								CAS "jours", "Jours", "jour", "Jour" :
+      									Délai.jour =nDélai 
+      								CAS "Mois","mois":
+      									Délai.Mois =nDélai
+      								AUTRE CAS
+      									//sortie
+      									//sErreurOS +=[ RC] + 	"- L'unité du délai '" +sUnité +"' n'est pas reconnue" // déja traité
+      							FIN
+      							
+      							dDateDébut				= dDateEffet
+      							
+      //							resteConsoméJour		= modulo(duDuréeTotalConsomée.Jour,nbrejourDumois)
+      //							duDuréeRestante.Mois	= Délai.Mois - (duDuréeTotalConsomée.Mois+ (duDuréeTotalConsomée.Jour- resteConsoméJour)/nbrejourDumois)
+      //							SI resteConsoméJour > 0 ALORS 
+      //								duDuréeRestante.Mois --
+      //								duDuréeRestante.Jour= 30 -resteConsoméJour
+      //							FIN
+      							
+      							
+      //							SI duDuréeConsomée.Jour >0 ALORS
+      //								duDuréeRestante.Mois--
+      //								duDuréeRestante.Jour = nbrejourDumois - duDuréeTotalConsomée.Jour
+      //							FIN
+      							
+      							
+      							dDateFinContract = DecalDateParMoisJours(duDuréeRestante,dDateEffet) 
+      
+      							sEtatDélai						= "en cours"
+      							DélaiEvenement.TypeEvenement	= "début"
+      							DélaiEvenement.nomColonne		= "OS_" + REQ_OSetPVdunDélais.TYPE+"_"+REQ_OSetPVdunDélais.IDOSPV
+      							ChronologieDélai.Ajoute(DélaiEvenement)
+      							
+      							//détail de calcul des délais consommée
+      							stLigneDuréeConso.TypeOSPV		= REQ_OSetPVdunDélais.TYPE
+      							stLigneDuréeConso.IDOSPV		= REQ_OSetPVdunDélais.IDOSPV
+      							stLigneDuréeConso.DateEffet		= REQ_OSetPVdunDélais.DateEffet
+      							stLigneDuréeConso.DuréeConso	= duDuréeConsomée
+      							tabDuréesConsomées.Ajoute(stLigneDuréeConso)	
+      							
+      						CAS "arrêt" :
+      							sErreurOS +=[RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai	
+      							bErreurOSBloquant= 1
+      						CAS "Réception"  :
+      							sErreurPV +=[RC] + "- Le  PV n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai	
+      						AUTRE CAS
+      							sErreurOS +=[RC] + "Le type OS/PV '" + 	REQ_OSetPVdunDélais.TYPE + "' n'est pas prévu dans le traitement"
+      							bErreurOSBloquant= 1			
+      					FIN
+      					
+      				CAS  "en cours":
+      					SELON REQ_OSetPVdunDélais.TYPE
+      						CAS "commencement","reprise":
+      							sErreurOS += [RC ]+ 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai					
+      							SI dDateEffet >= dDateFinContract  ET dDateFinContract<>"" ALORS // pas de calcul
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      							SINON 
+      								//rien
+      							FIN
+      							
+      						CAS "arrêt" :
+      							SI  dDateEffet >= (dDateFinContract+1)  ET dDateFinContract<>"" ALORS
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      								SI duRetard.Jour > 0 ALORS
+      									duRetard+= (dDateEffet-dDateEffetAntécident)
+      									duRetardDpRéception += (dDateEffet-dDateEffetAntécident)
+      								SINON
+      									duRetard +=(dDateEffet-dDateFinContract)
+      									duRetard.Jour--
+      									duRetardDpRéception +=(dDateEffet-dDateFinContract)
+      									duRetardDpRéception.Jour--
+      									//
+      								FIN
+      								
+      							SINON 
+      								dDateFinContract				= ""
+      							FIN
+      							dDateFin						= dDateEffet
+      							dDateFin.jour-- //le délai prend fin le jour avant
+      							sEtatDélai						= "en arrêt"
+      							duDuréeConsomée = DiffMoisEtJour(dDateDébut,dDateFin)
+      							duDuréeTotalConsomée.Mois +=duDuréeConsomée.mois
+      							duDuréeTotalConsomée.jour +=duDuréeConsomée.jour
+      							
+      							
+      							// conversion jour en mois
+      							resteConsoméJour		= modulo(duDuréeTotalConsomée.Jour,nbrejourDumois)
+      							duDuréeTotalConsomée.Mois += (duDuréeTotalConsomée.Jour- resteConsoméJour)/nbrejourDumois
+      							duDuréeTotalConsomée.Jour	=  resteConsoméJour
+      							
+      							duDuréeRestante.Mois		= Délai.Mois -duDuréeTotalConsomée.Mois
+      							SI duDuréeTotalConsomée.Jour > 0 ALORS 
+      								duDuréeRestante.Mois --
+      								duDuréeRestante.Jour= nbrejourDumois -duDuréeTotalConsomée.Jour
+      							FIN
+      							
+      							SI duDuréeRestante.Mois <0 OU duDuréeRestante.Jour < 0 ALORS
+      								duDuréeRestante.Mois	= 0
+      								duDuréeRestante.Jour	= 0
+      							FIN
+      							
+      							
+      							//détail de calcul des délais consommée
+      							stLigneDuréeConso.TypeOSPV = REQ_OSetPVdunDélais.type
+      							stLigneDuréeConso.IDOSPV = REQ_OSetPVdunDélais.IDOSPV
+      							stLigneDuréeConso.DateEffet = REQ_OSetPVdunDélais.DateEffet
+      							stLigneDuréeConso.DuréeConso = duDuréeConsomée
+      							tabDuréesConsomées.Ajoute(stLigneDuréeConso)		
+      																					
+      							DélaiEvenement.TypeEvenement	= "arrêt"
+      							DélaiEvenement.nomColonne		= "OS_" + REQ_OSetPVdunDélais.TYPE+"_"+REQ_OSetPVdunDélais.IDOSPV
+      							ChronologieDélai.Ajoute(DélaiEvenement)
+      						CAS "Réception" :
+      //							dDateFin			= dDateEffet
+      //							duDuréeConsomée		= DiffMoisEtJour(dDateDébut,dDateFin)
+      //							duDuréeTotalConsomée.Mois +=duDuréeConsomée.Mois
+      //							duDuréeTotalConsomée.Jour +=duDuréeConsomée.Jour
+      //							
+      //							//détail de calcul des délais consommée
+      //							stLigneDuréeConso.TypeOSPV		= REQ_OSetPVdunDélais.TYPE
+      //							stLigneDuréeConso.IDOSPV		= REQ_OSetPVdunDélais.IDOSPV
+      //							stLigneDuréeConso.DateEffet		= REQ_OSetPVdunDélais.DateEffet
+      //							stLigneDuréeConso.DuréeConso	= duDuréeConsomée
+      //							tabDuréesConsomées.Ajoute(stLigneDuréeConso)	
+      //							
+      //							
+      //							SI  dDateEffet > dDateFinContract ALORS
+      //								SI duRetard.Jour > 0 ALORS
+      //									duRetard+= (dDateEffet-dDateEffetAntécident)
+      //									duRetard.Jour++
+      //								SINON
+      //									duRetard +=(dDateEffet-dDateFinContract)
+      //								FIN
+      //							SINON 
+      //							FIN
+      //							duRetardDpRéception	= 0// réinitlisation du compteur
+      //							
+      //							dDateDébut			= dDateEffet
+      //							dDateDébut.Jour++
+      							SI REQ_OSetPVdunDélais.DélaiClôtué = 1 ALORS
+      								sEtatDélai						= "clôturé" 
+      								//dDateFinContract	= ""
+      								DélaiEvenement.TypeEvenement	= "arrêt"
+      								DélaiEvenement.nomColonne		= "Récep_"+REQ_OSetPVdunDélais.IDOSPV
+      								ChronologieDélai.Ajoute(DélaiEvenement)
+      								
+      								//ChronologieDélai +=[","]+"arrêt"+":"+REQ_OSetPVdunDélais.DateEffet
+      							FIN
+      							
+      							
+      						AUTRE CAS
+      							sErreurOS +=[ RC] + "Le type OS/PV '" + 	REQ_OSetPVdunDélais.TYPE + "' n'est pas prévu dans le traitement"
+      							bErreurOSBloquant= 1		
+      					FIN
+      				CAS  "en arrêt" :
+      					SELON REQ_OSetPVdunDélais.TYPE
+      						CAS "commencement", "reprise":
+      							si REQ_OSetPVdunDélais.TYPE = "commencement" ALORS
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai
+      							FIN
+      							
+      							
+      							SI dDateEffet >= dDateFinContract ET dDateFinContract <> "" ALORS 
+      								sEtatDélai = "en cours"
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      								//bErreurOSBloquant= 1
+      							FIN
+      							//SI dDateFinContract ="" alors // délai en arrêt avant fin contractuelle
+      							dDateDébut = dDateEffet
+      							
+      							
+      //							resteConsoméJour		= modulo(duDuréeTotalConsomée.Jour,nbrejourDumois)
+      //							duDuréeRestante.Mois	= Délai.Mois - (duDuréeTotalConsomée.Mois+ (duDuréeTotalConsomée.Jour- resteConsoméJour)/nbrejourDumois)
+      //							SI resteConsoméJour > 0 ALORS 
+      //								duDuréeRestante.Mois --
+      //								duDuréeRestante.Jour= 30 -resteConsoméJour
+      //							FIN
+      							
+      							
+      							si  dDateFinContract="" ALORS
+      								dDateFinContract = DecalDateParMoisJours(duDuréeRestante,dDateEffet)
+      							FIN
+      													
+      							
+      							sEtatDélai						= "en cours"
+      							DélaiEvenement.TypeEvenement	= "début"
+      							DélaiEvenement.nomColonne		= "OS_" + REQ_OSetPVdunDélais.TYPE+"_"+REQ_OSetPVdunDélais.IDOSPV
+      							ChronologieDélai.Ajoute(DélaiEvenement)
+      							
+      							//détail de calcul des délais consommée
+      							stLigneDuréeConso.TypeOSPV		= REQ_OSetPVdunDélais.TYPE
+      							stLigneDuréeConso.IDOSPV		= REQ_OSetPVdunDélais.IDOSPV
+      							stLigneDuréeConso.DateEffet		= REQ_OSetPVdunDélais.DateEffet
+      							stLigneDuréeConso.DuréeConso.Mois	= 0
+      							stLigneDuréeConso.DuréeConso.jour	= 0
+      							tabDuréesConsomées.Ajoute(stLigneDuréeConso)
+      							
+      							//ChronologieDélai +=[","]+"commencement"+":"+REQ_OSetPVdunDélais.DateEffet
+      						//FIN
+      						CAS "arrêt" :
+      							sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai	
+      							bErreurOSBloquant= 1
+      							SI dDateEffet >= dDateFinContract ET dDateFinContract <> "" ALORS // pas de calcul :  délai en arret après fin contractuelle
+      								sEtatDélai ="en arrêt"
+      								sErreurOS +=[ RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      							FIN
+      							SI dDateFinContract ="" ALORS // délai en arrêt avant fin contractuelle
+      								//rien
+      							FIN
+      						
+      						CAS "Réception"  :
+      							bErreurOSBloquant= 1
+      							sErreurPV +=[ RC ]+ "- Le  PV n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai
+      							SI  dDateEffet >= dDateFinContract ET dDateFinContract <> "" ALORS // pas de calcul :  délai en arret après fin contractuelle
+      								sErreurPV +=[ RC] + "- Le  PV n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient après la date de fin contractuelle "	+ DateVersChaîne(dDateFinContract)
+      							FIN 
+      							SI dDateFinContract ="" ALORS // délai en arrêt avant fin contractuelle
+      								//rien
+      							FIN
+      							
+      						AUTRE CAS
+      							sErreurOS +=[RC] + "Le type OS/PV '" + 	REQ_OSetPVdunDélais.TYPE + "' n'est pas prévu dans le traitement"
+      							bErreurOSBloquant= 1		
+      					FIN
+      					
+      				CAS "clôturé":
+      					
+      					SELON REQ_OSetPVdunDélais.TYPE
+      						cas "arrêt"  // un arret après cloture on calcul jusqu'a la date d'arret
+      							sErreurOS +=[RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai
+      					
+      						CAS  "commencement", "reprise" :
+      							bErreurOSBloquant= 1
+      							sErreurOS +=[RC] + 	"- L'OS de " + REQ_OSetPVdunDélais.TYPE +  " n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai	
+      						CAS "Réception" : 
+      							bErreurOSBloquant= 1
+      							sErreurPV +=[RC] + "- Le  PV n°"+ REQ_OSetPVdunDélais.NumOSPV +" intervient alors que le délai est " +sEtatDélai
+      						AUTRE CAS
+      							bErreurOSBloquant= 1
+      							sErreurOS += [RC]+ "Le type OS/PV '" + 	REQ_OSetPVdunDélais.TYPE + "' est non prévu et intervient alors que le délai est " +sEtatDélai
+      					FIN
+      				AUTRE CAS :
+      					
+      			FIN
+      			dDateEffetAntécident = dDateEffet
+      			SI REQ_OSetPVdunDélais.TYPE ="Réception" ALORS
+      				dDateEffetAntécident.Jour++
+      			FIN
+      			
+      		FIN
+      		
+      		
+      		SI bErreurOSBloquant = 1 ALORS
+      			sEtatDélai = "erreur"
+      			HLibèreRequête(REQ_OSetPVdunDélais)
+      			
+      			RENVOYER (sEtatDélai, Délai,duDuréeTotalConsomée, "", duDuréeRestante,"","", sErreurOS,sErreurPV,ChronologieDélai,tabDuréesConsomées)
+      			
+      		SINON
+      			SELON sEtatDélai 
+      				CAS "en cours", "en arrêt", "clôturé" :
+      					SI sEtatDélai = "en cours" ALORS
+      							dDateFin						= dDateRéférrence
+      							dDateEffet						= dDateFin
+      							
+      							duDuréeConsomée					= DiffMoisEtJour(dDateDébut,dDateFin)
+      							duDuréeTotalConsomée.Mois +=duDuréeConsomée.Mois
+      							duDuréeTotalConsomée.Jour +=duDuréeConsomée.Jour
+      							//retard supplémentaire jq dateREF
+      							//détail de calcul des délais consommée
+      							stLigneDuréeConso.TypeOSPV		= "Aujourd'hui"
+      							stLigneDuréeConso.IDOSPV		= 0
+      							stLigneDuréeConso.DateEffet		= dDateRéférrence
+      							stLigneDuréeConso.DuréeConso	= duDuréeConsomée
+      							tabDuréesConsomées.Ajoute(stLigneDuréeConso)
+      							
+      							
+      							SI  dDateEffet > dDateFinContract ET dDateFinContract<>"" ALORS
+      								
+      								SI duRetard.Jour > 0 ALORS
+      									duRetard += (dDateEffet-dDateEffetAntécident)
+      									duRetard.Jour++
+      									duRetardDpRéception += (dDateEffet-dDateEffetAntécident)
+      									duRetardDpRéception.Jour++
+      								SINON
+      									duRetard += (dDateEffet-dDateFinContract)
+      									duRetardDpRéception +=(dDateEffet-dDateFinContract)
+      								FIN
+      								
+      							SINON  // en arrêt /cloturé
+      								
+      								//dDateFinContract				= ""
+      							FIN
+      														
+      					SINON			
+      							
+      					FIN 
+      						
+      						
+      
+      
+      						//					SI duDuréeRestante < 0 ALORS
+      						//						duRetard		= -duDuréeRestante
+      						//						duDuréeRestante	= 0
+      						//					FIN
+      				CAS "non lancé" :
+      					//rien les variables retournés sont vide
+      			FIN
+      			HLibèreRequête(REQ_OSetPVdunDélais)
+      			selon sUnité  // conversion de somme des jours en mois (30 jours)
+      				cas "Mois","mois":
+      					
+      					resteConsoméJour		= modulo(duDuréeTotalConsomée.Jour,nbrejourDumois)
+      					duDuréeTotalConsomée.mois += (duDuréeTotalConsomée.Jour- resteConsoméJour)/nbrejourDumois
+      					duDuréeTotalConsomée.jour =  resteConsoméJour
+      					
+      					duDuréeRestante.Mois	= Délai.Mois -duDuréeTotalConsomée.Mois
+      					SI duDuréeTotalConsomée.Jour > 0 ALORS 
+      						duDuréeRestante.Mois --
+      						duDuréeRestante.Jour= nbrejourDumois -duDuréeTotalConsomée.Jour
+      					FIN
+      					
+      					SI duDuréeRestante.Mois <0 OU duDuréeRestante.Jour < 0 ALORS
+      						duDuréeRestante.Mois	= 0
+      						duDuréeRestante.Jour	= 0
+      					FIN
+      				AUTRE CAS
+      					
+      			FIN
+      			
+      			RENVOYER (sEtatDélai,Délai,duDuréeTotalConsomée, dDateFinContract, duDuréeRestante , duRetard.Jour,duRetardDpRéception.jour, sErreurOS,sErreurPV, ChronologieDélai,tabDuréesConsomées)
+      		FIN	
+      	FIN
+      
+      FIN
+      
+     type : 458752
+   -
+     name : DiffMoisEtJour
+     procedure_id : 1554159991273913813
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] DiffMoisEtJour (<dDAteDébut> est date, <dDAteFin> est date)
+      //
+      // Paramètres :
+      //	dDAteDébut (date) : <indiquez ici le rôle de dDAteDébut>
+      //	dDAteFin (date) : <indiquez ici le rôle de dDAteArret>
+      // Valeur de retour :
+      // 	stDuréeMoisJours : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure DiffMoisEtJour(dDAteDébut	est une Date,dDAteFin	est une date)
+      
+      dDAteFin.jour++
+      nBreMois	est un entier	= 0
+      dCompteur	est une date
+      
+      durée		est un stDuréeMoisJours
+      si dDAteDébut<=dDAteFin ALORS
+      
+      	dAtetemp	est une date	= dDAteDébut
+      	tantque  dAtetemp <= dDAteFin
+      		nBreMois++
+      		dAtetemp.mois ++ 
+      		dAtetemp.jour= dDAteDébut.Jour
+      	FIN
+      	nBreMois--
+      	dAtetemp.Mois -- 
+      	dAtetemp.Jour= dDAteDébut.Jour
+      	
+      	durée.Jour	= DateDifférence(dAtetemp,dDAteFin)
+      	durée.Mois	= nBreMois
+      	
+      	SI dAtetemp.Jour <> dDAteDébut.Jour ALORS
+      		durée.Jour--	
+      	FIN
+      	
+      FIN
+      RENVOYER durée 
+      
+      
+      
+     type : 458752
+   -
+     name : DecalDateParMoisJours
+     procedure_id : 1554289982367403319
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] DecalDateParMoisJours (<dDurée> est stDuréeMoisJours [, <dDateDébut> est date])
+      //
+      // Paramètres :
+      //	dDurée (stDuréeMoisJours) : <indiquez ici le rôle de stDurée>
+      //	dDateDébut (date - valeur par défaut="") : <indiquez ici le rôle de DateDébut>
+      // Valeur de retour :
+      // 	Type indéterminé : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure DecalDateParMoisJours(dDurée est stDuréeMoisJours ,dDateDébut est une date=""  )
+      dateCalc est une date = dDateDébut
+      si dDateDébut <> "" ALORS
+      	
+      	dateCalc.mois += dDurée.mois
+      	si dateCalc.jour = dDateDébut.jour ALORS
+      		dateCalc.jour-= 1
+      	FIN
+      	dateCalc.jour+=dDurée.jour
+      FIN
+      renvoyer dateCalc
+      
+      
+      
+     type : 458752
+   -
+     name : TestGenDocVarClass
+     internal_properties : BQAAAAUAAADaQ4BfFne0WzE4+NsIeLQh8XukLlHDjk+Tl/xIlHaFe2BQijb3bOZgf6uSAFaLFyf4rD8Z5nMzoapsohDvtw0=
+     procedure_id : 1588342871031179521
+     type_code : 15
+     code : |1-
+      procédure TestGenDocVarClass(ObjetDonnées,ptabListVar est un tableau dynamique, ImgEntete	est une Image="", bUrgent est un booléen = 0 , bSecret est un booléen = 0,sNomPrénom est une chaîne =Utilisateur.m_sNom +" "+ Utilisateur.m_sPrenom, Date est une chaine = DateSys())
+      
+      chemFichierGénéré est une chaine =TempDirectory + fSep() +fConstruitNomFichier("Fiche Paraph "+ Date+".docx")<§aad:0§>
+      
+      SI PAS fCopieFichier(fRepExe()+fSep()+"Modèle docs"+fSep()+"Modèle FicheParapheur.docx",chemFichierGénéré) ALORS
+      	Erreur( ErreurInfo())
+      	RENVOYER Faux
+      FIN
+      
+      MonDoc	est un Document =chemFichierGénéré
+      ClasseVariables(ObjetDonnées,"","")
+      // sauvegarde document
+      MonDoc.Sauve()
+      MonDoc.Ferme()
+      //fSupprime(chemFichierGénéré)
+      
+      renvoyer chemFichierGénéré
+      
+      
+      	PROCÉDURE INTERNE ClasseVariables(ClasseInst, local sNomParent est une chaine ="",sListe ="")
+      	
+      		Def					est une Définition
+      		var					est une Description de Variable
+      		proc 				est une description de procédure
+      		
+      		sVraiableAInserer	est une chaine	= ""
+      	
+      		
+      		Def = RécupèreDéfinition(ClasseInst)
+      		//variables
+      		
+      		POUR TOUT var DE Def.Variable
+      			
+      			SELON  var.Définition.Type 
+      				CAS 37 // classe instance
+      					ClasseVariables({ClasseInst,var},sNomParent+["."]+var.Nom,sListe)
+      				CAS 1,2,3,4,5,6,7,8,10,13,16,19,22,23,24,25,26,27  // variable
+      //					sListe += [RC]
+      //					sListe += sNomParent+["."]+var.Nom
+      					SI var.Définition.Type = 24 ALORS
+      						sVraiableAInserer =DateVersChaîne( {"ObjetDonnées."+sNomParent+["."]+var.Nom,indVariable})
+      					sinon
+      						sVraiableAInserer= {"ObjetDonnées."+sNomParent+["."]+var.Nom,indVariable}
+      					FIN
+      					DocRemplace(MonDoc,"%"+(sNomParent+["."]+var.Nom)+"%",sVraiableAInserer,MotComplet)
+      				CAS 34   // tableau
+      					
+      				CAS 36    //structure
+      					
+      				CAS 61 //procedure
+      //					sListe += [RC]
+      //					sListe += sNomParent+["."]+var.Nom
+      				AUTRES CAS	
+      			FIN
+      		FIN
+      		
+      			//procédures
+      		POUR TOUT proc DE Def.Procédure
+      			
+      			SELON 61 //proc.Définition.Type
+      					
+      				CAS 61  // variable
+      					//					sListe += [RC]
+      					
+      					sVraiableAInserer= ExécuteTraitement(ClasseInst,sNomParent+["."]+proc.Nom,"aert")
+      
+      					DocRemplace(MonDoc,"%"+(sNomParent+["."]+proc.Nom)+"%",sVraiableAInserer,MotComplet)
+      				CAS 34   // tableau
+      					
+      				CAS 36    //structure
+      					
+      				AUTRES CAS	
+      			FIN
+      			
+      		FIN
+      	FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x1111a7030043f134
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

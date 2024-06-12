@@ -1,0 +1,3 @@
+//MO535-536.TXT ANA00535 TO ANA00536
+TypeDroitsAcces		ENUMCOMBINN	DroitsUtilisateur	L'énumération/combinaison DroitsUtilisateur a pour nouveau nom TypeDroitsAcces.
+TypeRoleUtilisateur		ENUMCOMBINN	RoleUtilisateur	L'énumération/combinaison RoleUtilisateur a pour nouveau nom TypeRoleUtilisateur.

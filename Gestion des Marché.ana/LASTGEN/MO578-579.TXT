@@ -1,0 +1,2 @@
+//MO578-579.TXT ANA00578 TO ANA00579
+Modules	NomModule	NNR	Nom	ATTENTION : la clé Nom a pour nouveau nom NomModule

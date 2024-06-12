@@ -1,0 +1,3 @@
+//MO570-571.TXT ANA00570 TO ANA00571
+EntitésOrg		IDE+*		fichier avec identifiant
+EntitésOrg	IDEntitésOrg	CNW	Identifiant automatique (8 octets)$Entier sur 8 octets	la rubrique IDEntitésOrg a pour nouveau type Identifiant automatique (8 oct

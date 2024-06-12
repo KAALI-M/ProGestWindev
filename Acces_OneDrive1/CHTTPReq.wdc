@@ -1,0 +1,204 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CHTTPReq
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x15e708ed00176b9e
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      // Classe d'abstraction d'une requête HTTP (équivalent du type avancé HTTPRequête) commune pour Android/iOS/Windows
+      CHTTPReq est une Classe
+      	// Eléments d'une requête
+      	m_sURI est une chaine ANSI
+      	m_nVerbe est un entier
+      	m_bufContenu est un buffer
+      	m_sContentType est une chaine
+      	m_taEnteteRequete est un tableau associatif de chaines ansi
+      	
+      	// Eléments d'une réponse
+      	m_nCodeReponse est un entier
+      	m_taEnteteReponse est un tableau associatif de chaines
+      	m_bufContenuReponse est un buffer
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1578240008418519966
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1578240008418585502
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : Envoi
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1578240635483890979
+     type_code : 12
+     code : |1-
+      // Résumé : Envoi la requête HTTP au serveur
+      // Syntaxe :
+      //Envoi ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE Envoi()
+      
+      sBuf est une chaine ansi
+      si m_bufContenu<>"" alors
+      	sBuf = m_bufContenu
+      FIN
+      
+      selon m_nVerbe
+      	cas httpGet, httppost
+      		HTTPRequête(m_sURI,"",_ConstruitEntete(),sBuf,m_sContentType)
+      
+      	AUTRE CAS // httpPut, httpPatch, httpCopy, httpDelete		
+      		HTTPCréeFormulaire("HTTPForm")
+      		HTTPAjouteParamètre("HTTPForm","",sBuf)
+      		HTTPEnvoieFormulaire("HTTPForm",m_sURI,m_nverbe,"",_ConstruitEntete(),m_sContentType)
+      		
+      FIN
+      
+      
+      _AnalyseEnteteResultat()
+      m_bufContenuReponse = HTTPDonneRésultat(httpRésultat)
+      
+      si pas m_nVerbe dans ( httpGet, httpPost ) alors
+      	HTTPAnnuleFormulaire("HTTPForm")
+      fin
+      
+      // Traitement d'une redirection
+      si m_nCodeReponse=302 _et_ m_taEnteteReponse["Location"]<>"" ALORS
+      	m_sURI = m_taEnteteReponse["Location"]
+      	Envoi()
+      FIN
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	retour
+     type : 458752
+   -
+     name : _ConstruitEntete
+     procedure_id : 1578241352743465698
+     type_code : 12
+     code : |1+
+      // Résumé : Construction de l'entête de la requête
+      // Syntaxe :
+      //[ <Résultat> = ] _ConstruitEntete ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	chaîne UNICODE : chaîne contentant les entêtes supplémentaire au format HTTP
+      //
+      PROCEDURE PROTÉGÉE _ConstruitEntete()
+      
+      sEntetePlus est une chaine
+      pour tout sVal, sCle de m_taEnteteRequete
+      	sEntetePlus += [rc]+scle+": "+sval
+      FIN
+      
+      renvoyer sEntetePlus
+     type : 458752
+   -
+     name : AjouteEntete
+     procedure_id : 1578246854599753293
+     type_code : 12
+     code : |1+
+      // Résumé : Ajoute une entête HTTP supplémentaire pour la prochaine requête
+      // Syntaxe :
+      //AjouteEntete (<sNomEntete>, <sValEntete>)
+      //
+      // Paramètres :
+      // 	sNomEntete : Nom de l'entête
+      // 	sValEntete : Valeur de l'entête
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE AjouteEntete( sNomEntete, sValEntete )
+      
+      m_taEnteteRequete[sNomEntete] = sValEntete
+      
+      
+     type : 458752
+   -
+     name : _AnalyseEnteteResultat
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1578247722183218075
+     type_code : 12
+     code : |1-
+      // Résumé : Analyse des entêtes de la réponse HTTP
+      // Syntaxe :
+      //_AnalyseEnteteResultat ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE PROTÉGÉE _AnalyseEnteteResultat()
+      
+      sBlocEntete est une chaine = HTTPDonneRésultat(httpEntête)
+      
+      sPremièreLigne est une chaine = ExtraitChaîne(sBlocEntete,1,rc)
+      m_nCodeReponse = Val(ExtraitChaîne(sPremièreLigne,2," "))
+      
+      sBlocEntete = sBlocEntete[[taille(sPremièreLigne)+taille(rc)+1 à]]
+      pour toute chaine sLigne de sBlocEntete separee par rc
+      	nPosDeuxPoint est un entier = position(sLigne,":")
+      	m_taEnteteReponse[sLigne[[ à nPosDeuxPoint-1]] ]=sLigne[[nPosDeuxPoint+2 à]]
+      FIN
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      		ErreurPropage()
+      	
+      <fin>
+      
+      
+      	retour
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x15e708ed00146b9e
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

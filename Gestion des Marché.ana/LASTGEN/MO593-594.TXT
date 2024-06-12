@@ -1,0 +1,3 @@
+//MO593-594.TXT ANA00593 TO ANA00594
+AffectationPersonnel		TAR	199	nouvelle taille enregistrement : 199
+AffectationPersonnel	Qualité	TAI+	100	la rubrique Qualité a comme nouvelle taille 151 au lieu de 51

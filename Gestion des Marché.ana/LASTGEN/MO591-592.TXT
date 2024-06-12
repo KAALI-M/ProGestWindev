@@ -1,0 +1,4 @@
+//MO591-592.TXT ANA00591 TO ANA00592
+Projet		TAR	579	nouvelle taille enregistrement : 579
+Projet	IdArchiveDocs	RUB+		IdArchiveDocs est une nouvelle clé
+Archivedocs_Projet		NWL	archivedocs (idArchiveDocs) et Projet (IdArchiveDocs)	Nouvelle liaison entre les fichiers archivedocs (idArchiveDocs) et Projet (IdArchiveDocs)

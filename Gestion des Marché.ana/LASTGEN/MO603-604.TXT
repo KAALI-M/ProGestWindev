@@ -1,0 +1,2 @@
+//MO603-604.TXT ANA00603 TO ANA00604
+PJCourrier	IDCourriersIdArchiveDocs	RUB+		IDCourriersIdArchiveDocs est une nouvelle clé

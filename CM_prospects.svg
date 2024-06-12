@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Calque_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="56px" height="56px"
+	 viewBox="0 0 56 56" enable-background="new 0 0 56 56" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  x="14" y="-47.324" width="28" height="38.648" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g>
+	<g>
+		<path fill="#010101" d="M28.001,9.676c3.978,0,7.214,3.236,7.214,7.213c0,3.978-3.236,7.214-7.214,7.214
+			c-3.979,0-7.216-3.236-7.216-7.213C20.785,12.912,24.022,9.676,28.001,9.676 M28.001,8.676c-4.536,0-8.216,3.679-8.216,8.214
+			s3.68,8.213,8.216,8.213s8.214-3.678,8.214-8.214S32.535,8.676,28.001,8.676L28.001,8.676z"/>
+	</g>
+	<g>
+		<path fill="#010101" d="M31.484,26.662c2.537,0,4.927,0.991,6.726,2.791c1.8,1.8,2.791,4.188,2.79,6.725v7.88l-0.06,0.03
+			c-0.181,0.091-4.498,2.236-12.034,2.236c-4.459,0-9.137-0.751-13.906-2.231v-7.915c0-5.247,4.269-9.516,9.516-9.516H31.484
+			 M31.484,25.662h-6.969C18.718,25.662,14,30.38,14,36.178v8.523l0.021,0.134l0.587,0.184c5.534,1.729,10.342,2.306,14.298,2.306
+			c7.729,0,12.209-2.204,12.486-2.345l0.547-0.277H42v-8.524C42.002,30.38,37.283,25.662,31.484,25.662L31.484,25.662z"/>
+	</g>
+</g>
+</svg>

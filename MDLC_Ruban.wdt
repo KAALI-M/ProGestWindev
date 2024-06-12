@@ -1,0 +1,69 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MDLC_Ruban
+ major_version : 25
+ minor_version : 0
+ type : 20
+ description : ""
+ subtype : 0
+window :
+ name : MDLC_Ruban
+ identifier : 0x22d47d2c360dd145
+ internal_properties : BQAAAAUAAAAPKbeHJgvIqkVnHSApNiyP6yF1OP/I/j55ZgKw4LUAT9sOVHCMH0pul2qHCBpoGbLNQsGsxO9Y8QbzxM1PAvz8GxgPqfkTsJBa9JrwUsCb3hRf1F5A/+rgMfrlWBOHxhsWmZWverr03rpDsMisQUXCoPZ/Fwcc/cal/hqbo+3gtIWLpmg/QhAitr7L19jY4Gvf/IO3U0knsfA4dBLa/tPt7cBSxfBL0pP1W/ik0DUsFPcMNukxylOrWIxoGRkPh0hd0HcILENSOW7aZBFVpfP4udGd1QjOxf/GZZox89Vs3NBdqChAnXxeHFLqxwxA57PIzKdakRyyldizM5cfYLBcnpAKwYLf/Zt3HtB+37iPqHrab+alySORFh52k9hHFWX9vfhXMxNuZIyZaGM3XKe/1WWjHD/NypizjP8GMl/0zShGgeVbr7EZ84BdXmtO8jgpOkA1zYKSrx2IYQ5W8qhDfc9JoZgyZRmSaX9L35HftUNOnD51gcYCaa9c1YbFF5sKL6tNnOidvZPsB2zM3eAiRO+QXsu/9UX0hnd86VAiaE6rLjGmojFWS+zyQYes+qvpHXKdqs3wtTmaNCqcRZ7zVVgOQNcKso7aazkWfHeKI/ajqc62rhOTK2xbYOJreCrp98XHI8DloJnKu3rkjEo2ywA3UNrT7Ni6+SIj8EZPthkpFF13nfJu5OkUbpDTBdYIjbFI+Co6j7fC08g=
+ controls :
+  -
+    name : MDLC_Ruban
+    identifier : 0x22d47d2c360ed145
+    internal_properties : BQAAAAUAAAAKlTfnpe1haqH6Vz7g18u2SfzgpKPzchKIhc8QgvvPySph9U4FOJPGd/3aMzMy7rDruJ7cPVWY9sST2TTk+xIc5342v/VEwnpm7CQzIAwvJD1gttr4dRBxsnQo5fJ2S7/ZuXhHJIBxVZyqDuzWtlEy+oMyPQJFrCoWOLcx7URpKbVGqlQvZ0eIU4w2hewKjqTK9CCWOHYrCB3jknX4W52hf5dOlvZNfRftaZAdc05csL21ADkILXF9AcbBtXIwbDkjAN9PYDGP4qx7nAqyuJ7WIQmnaxyAWtkzckDCn4SEwrl1oIS7Y5yHNZ076cuOp+t7KbJwlkJTtyjy8UjqBNMSNkTRwxDcy1Uf9h1Qclwg/1B7h7uPxiblShyVrLteOG6TIelNJk23+YIAbPPUh5B/9QhIEp6PspU4WwTGLLNC9h0AYXqRhOuuA+uaoEBs5wcG
+    controls :
+     -
+       name : RUBAN_Menu
+       identifier : 0x22d47d2c360fd145
+       internal_properties : BQAAAAUAAACxjy6AFzH3tH61tSzwPtcGIcmhGsRgiVzYVCNi5HGtFOuJp97iFjro3R9B2Gl0C8o9YD2SrRrF1Q1+Jyqo285YSMEcpwO2QYKvm7AFQIR8f5eGRlyzDtE7/M1gTT2Ze4+DO4Ujv4fqOL/Hex3JpKfOayobmKdsKMt7Zc8D/ziAIFpXxQUF7ldBbo122MXlQ9KZXEn5FIoNSamqjnH/hkKvWFkd7k9QgIIzCF5BTft/wK96CSEncNtTzF9U81sOlcotuVvErBhvbkP5+HjHNDtM0+EtwM8ULXKD4WTHK9JuhnarVqYfMmr8274RLm5H8EEqSywSEJhzwKORqqNJJjkMIkUnhdfSCGBFPDAMpKvhSn6Up56IBQQU9sAYXAKYMH3ryilTtt0AFrcGvqAXT1BOluh+NzNYAeo6ZCxUMykjK6oAbVt6Cyoen9wf0B8YEKaGTUT0CXzmrHSuZMqZQTT9fgpib+DQdABgdrxyTfwXV23glZVQTIyFiPFIlIAroVZQWR6B3qtjif2NKtCr5oN4fEbF9B088RWuodwjjxyFCJ4ZGAaJeBvyQ7TApzsxt3QvwuR31lkmNebTRVpVLLdsAbswkNkpZF64oX7Lun+9vclrJ2+Gw+5ydIuKVTCGJzaNotUeTyXso5Zr37bg7/Cv4nIhIbpdp3M+NFJn1oTD3JKWKO3Y6OY7t7XD5taD1DuppZdcWoYYz3eRAhxnhBMgiZ7Sf/f/VH5ibqOJNL7/rRWMZ63Rqr2lw/QvOQJ9J7Lp7uAhCpC5ZV3j8EVb0/Mywp0nbfjUX0wJV9FIU+Q+zXr9EuXS3GWsqMkRxWF3u6I/TrNc6HIE4vQ7QTOPhTrjBwWRnUWkEyDne5I7Nmihpi20O8zxqWXVbxsJsZeK2JfXa4TMfrD/n53XBsKAjFblltxGfI5KYuW7Xly6PzIRmPo2ddPwELUpzNE/tWI0ZMO0YGrZeEhv60ys+SK+nxT+alIRul94/1HEAFxKEd6yMsff/U6JyOMONrtaOGLHZ0nWgTXjJf/gE89U9+jVHKY=
+       tabs :
+        -
+          internal_properties : BQAAAAUAAAC5+6GcoaFVOwjoKb5FZ4SuzkCFO2Y8efgrwkis/n0WUO9nG9PpAzC+9C5T+ySCQ0JlC4ZDWGY2uHHQGqBAPs9dgKl2qGXNgAjxcTnF/FdpwUnpdl74cULStAwCmseyzA==
+          ribbon_groups :
+           -
+             name : GRPRUB_General
+             identifier : 0x22d47d2c3611d145
+             internal_properties : BQAAAAUAAABCvaYFtU/SjviefaTwrxTmuQpsDppzO2YOiucJgoujyVIcxZBHgeOjw2VVJiNvogm1qFUp2ngblbe/z8WADBVA/YViMQ+Tq8Mnxd0nJpuwDCut2qov2oRieSgj0lzAVS4/aITGpPkZE5wzx/a9W0eOhcFY0NJ3Uv5ezXsMWh6P54X8RYmhg99ma/Di/6e4lLX0Q4U3oZ8LPUc4Y6czB27XKat00LZdc0uzpl3KRKTtIVeuD+JU7K9HIuoOkUgLBhWukOPB0nOZ2HZMWsBo81tRe9oVOkv+conINOnpZ7e80DLZ6qdjjGL1QpPJQNI5M/1JyFTOuoLv30SfMhdeg+xnrLvxZyxn08tAhtzk0fkpkVDcbMrpcbOBghFg0bqhWIQQ4yzcoUehbpTOnJOaN+At5+SOrfzjr09WGU+1k4Qhfz6KvE1yfiyDUTmfvBPgFVA5D8lUWe2FhZKzT7eTLFG2lnC69fl/A8DSa6M=
+             controls : []
+             type : 88
+             code_elements :
+              type_code : 123
+              p_codes : []
+          controls : []
+       type : 87
+       controls : []
+       code_elements :
+        type_code : 119
+        p_codes : []
+    type : 42
+    code_elements :
+     type_code : 92
+     p_codes : []
+ menu :
+  name : _Menu
+  identifier : 0x2576ae7c0a6bb5ee
+  internal_properties : BQAAAAUAAADiNkh1O6bsUdojdCyc5rvMKOb4KGdCuKthEpeb9YgToXKniNhTa74qqTWW/kn9AHiAwpYRHxIfmwB4rUjWCTsHt96kYeogf6aF/P/qLr5YC+/q/4GecKHBIXzFYdqjswEetQud+3e/nTe5+xoit8ijZM2EBaVaXCH6Yfad
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 91
+  p_codes : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : MDLC_SansNom1
+resources :
+ string_res :
+  identifier : 0x1576ae7c001ab5ee
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAAD39s3VyoVm+q6akjcLRvOB8ZmYgHkeEQabbFEhJ23WteDQTnUEJmTM1QRk9lyGmAGGYY731CsuapRNBfu7mwrLKbg8/nPv0qgHvZu66dmIWjQnJO+AuRNtsBWWk4D2yo7GG6h4x4QFrh/OZg==

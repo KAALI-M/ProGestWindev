@@ -1,0 +1,5 @@
+//MO600-601.TXT ANA00600 TO ANA00601
+PJCourrier		TAR	80	nouvelle taille enregistrement : 80
+PJCourrier	Titre	RUB+		Titre est une nouvelle rubrique
+PJCourrier	IDArchiveDocs	RUB-		la rubrique IDArchiveDocs est supprimée
+Contrainte_ArchiveDocs_Documents		DEL	archivedocs (idArchiveDocs) et PJCourrier (IDArchiveDocs)	Liaison supprimée entre les fichiers archivedocs (idArchiveDocs) et PJCourrier (IDArchiveDocs)

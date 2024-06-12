@@ -1,0 +1,3 @@
+//MO595-596.TXT ANA00595 TO ANA00596
+DocumentProjetRéponse		NWL	Courriers (IDCourriers) et DocProjetRpse (IDCourriers)	Nouvelle liaison entre les fichiers Courriers (IDCourriers) et DocProjetRpse (IDCourriers)
+DocumentProjetRéponse		DEL	Courriers (IDCourriers) et DocProjetRpse (IDCourriers)	Liaison supprimée entre les fichiers Courriers (IDCourriers) et DocProjetRpse (IDCourriers)

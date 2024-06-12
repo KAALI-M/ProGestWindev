@@ -1,0 +1,2054 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COL_GPU
+ major_version : 25
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x1ff6ec00008fec32
+ internal_properties : BQAAAAUAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  internal_properties : BQAAAAUAAAC8Sl0pfseidXE9/kBmawagKU2LQSv8bn6/vNDKIJF1LaO5OrXnJBCSprdxyfnkeSCSHo4FglHTPzGvuw==
+  type_code : 31
+  p_codes :
+   -
+     code : |1+
+      CONSTANT 
+      	nETATELEMENTDEFAUT 	= gpwEtatAutorisé				// par défaut l'état des éléments est accessible
+      	nVERSIONCOLGPU		= 8								// numéro de version
+      fin
+      
+      // cache
+      STCache est une structure
+      	sNom 				est une chaine unicode
+      	nId 				est un entier
+      	bEstUnGroupe 		est un booléen
+      	sValeur 			est une chaine unicode
+      	nValeur 			est un entier
+      FIN
+      
+      STInfoUtilisateur est une structure
+      	sLogin				est une chaine unicode
+      	bNom				est un booléen
+      	sNom				est une chaine unicode
+      	bPrenom				est un booléen
+      	sPrenom 			est une chaine unicode
+      FIN
+      
+      STAuthLogin est une structure
+      	nTypeAuth 			est un entier
+      	sLibelle 			est une chaine unicode
+      	sImage 				est une chaine unicode
+      fin
+      
+      gbCacheActif 			est un booléen=vrai													// activation du cache
+      gsDerniereErreur 		est une chaîne														// dernière erreur survenue
+                                                              									
+      gTabAuthLogin 			est un tableau de STAuthLogin										// tableau contenant de paramètres d'authentification (Facebook, Google, etc.)
+      gbAvecInscription		est un booléen = faux												// vrai si les inscriptions sont autorisées
+      gclUtilisateur 			est un gpwUtilisateur												// dernier utilisateur logué
+      
+      gtaRGPDElement		est un tableau associatif (ccSansAccent + ccSansCasse) de booléens	// tableau associatif contenant la liste des éléments manipulant des données personnelles
+      
+      // gestion d'un cache pour limiter les accès fichiers
+      gstCacheUtilisateur 	est un STCache
+      gTabCacheGroupe 		est un tableau associatif de STCache
+      gTabCacheListeGroupes 	est un tableau associatif de STCache
+      gtabCacheEtatDefaut 	est un tableau associatif de STCache
+      gTabCacheElement 		est un tableau associatif de booléens
+      gsCacheCle				est une chaine unicode
+      gTabCacheParent 		est un tableau associatif d'entiers
+      gstCacheInfoUtilisateur est un STInfoUtilisateur
+      
+     type : 720896
+  procedures :
+   -
+     name : GPU_Init
+     procedure_id : 2303288366970446352
+     type_code : 15
+     code : |1+
+      // Résumé : Initialisation des fichiers
+      // Syntaxe :
+      //GPU_Init ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE GPU_Init()
+      
+      // si le fichier des utilisateurs est vide
+      si HNbEnr(GPU_Utilisateur)=0 ALORS
+      	// création du superviseur
+      	HRAZ(GPU_Utilisateur)
+      	GPU_Utilisateur.Login=gpwSuperviseur
+      //	GPU_Utilisateur.MotPasse=gpwSuperviseur
+      	GPU_Utilisateur.MotPasseASaisir=vrai
+      	GPU_Utilisateur.Superviseur=Vrai
+      	hajoute(GPU_Utilisateur)
+      
+      	// si on a des mots de passes cryptés
+      	SI gpwMotsDePasseCryptés(gpwOptionProjet) ALORS
+      		// il faut l'écrire dans le fichier des options
+      		HLitPremier(GPU_Options,IDOptions)
+      		SI HEnDehors(GPU_Options) ALORS
+      			HRAZ(GPU_Options)
+      			GPU_Options.CryptageMDP=Vrai
+      			HAjoute(GPU_Options)
+      		SINON
+      			GPU_Options.CryptageMDP=Vrai
+      			HModifie(GPU_Options)
+      		FIN
+      	FIN
+      fin
+     type : 458752
+   -
+     name : GPU_AjouteLogConnexion
+     internal_properties : BQAAAAUAAAAPHRN9TY+0oJN0VFStELe+1tW2bnADtheFZ25YjLIMkzlFHWqk0e/xcvwuN6OsCM5zANhQCTyoxfsuC049lWcTWujkiYjor+uh5Mo2G/HHQ6Ql8IE2XQOLlXIq6DHBk6nD3BY0eCKBYRs=
+     procedure_id : 1181183042260759132
+     type_code : 15
+     code : |1-
+      // Résumé : Ajoute un log de connexion
+      // Syntaxe :
+      //GPU_AjouteLogConnexion (<sLogin> est chaîne UNICODE, <sNomAppli> est chaîne UNICODE, <sDate> est chaîne UNICODE, <sHeure> est chaîne UNICODE, <sAdresseIP> est chaîne UNICODE)
+      //
+      // Paramètres :
+      //	sLogin (chaîne UNICODE) : login de l'utilisateur
+      //	sNomAppli (chaîne UNICODE) : nom de l'application
+      //	sDate (chaîne UNICODE) : date de la connexion
+      //	sHeure (chaîne UNICODE) : heure de la connexion
+      //	sAdresseIP (chaîne UNICODE) : adresse IP
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE GPU_AjouteLogConnexion(sLogin est une chaine unicode, sNomAppli est une chaine UNICODE, sDate est une chaine UNICODE, sHeure est une chaine UNICODE, sAdresseIP est une chaîne UNICODE)
+      
+      // recherche de la cible
+      bufValRech est un buffer=HConstruitValClé(GPU_Cible,NomEstUnComposantExterne,sNomAppli,faux)
+      HLitRecherchePremier(GPU_Cible,NomEstUnComposantExterne,bufValRech)
+      // pas trouvé trouvée
+      SI PAS HTrouve(GPU_Cible) ALORS
+      	// ajoute la cible
+      	GPU_Cible.Nom=sNomAppli
+      	GPU_Cible.EstUnComposantExterne=faux
+      	SI HAjoute(GPU_Cible)=Faux ALORS
+      		retour
+      	FIN
+      FIN
+      
+      // recherche de l'utilisateur
+      hlitrecherchePremier(GPU_Utilisateur,Login,sLogin)
+      si pas htrouve(GPU_Utilisateur) ALORS
+      	retour
+      FIN
+      
+      // ajoute l'enregistrement dans le fichier
+      Hraz(GPU_HistoriqueConnexion)
+      GPU_HistoriqueConnexion.IDUtilisateur=GPU_Utilisateur.IDUtilisateur
+      GPU_HistoriqueConnexion.IDCible=GPU_Cible.IDCible
+      GPU_HistoriqueConnexion.DateConnexion=sDate
+      GPU_HistoriqueConnexion.HeureConnexion=sHeure
+      GPU_HistoriqueConnexion.AdresseIP=sAdresseIP
+      si HAjoute(GPU_HistoriqueConnexion)=faux alors
+      	Erreur(<§@1ff6ec00008eec320001§>)
+      FIN
+     type : 458752
+   -
+     name : GPU_nVerifLogin
+     internal_properties : BQAAAAUAAAAPHRN9TY+0oJN0VFStELe+1tW2bnADtheFZ25YjLIMkzlFHWqk0e/xcvwuN6OsCM5zANhQCTyoxfsuC049lWcTWujkiYjor+uh5Mo2G/HHQ6Ql8IE2XQOLlXIq6DHBk6nD3BY0eCKBYRs=
+     procedure_id : 1181199303014528272
+     type_code : 15
+     code : |1-
+      // Résumé : Vérification de l'existence d'un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nVerifLogin (<sLogin> est chaîne UNICODE, <nTypeIdentification> est entier)
+      //
+      // Paramètres :
+      //	sLogin (chaîne UNICODE) : login de l'utilisateur
+      //	nTypeIdentification (entier) : type d'identification
+      // Valeur de retour :
+      // 	Type indéterminé : // 	Aucune
+      //
+      PROCEDURE GPU_nVerifLogin(sLoginOuEmail est une chaine unicode, nTypeIdentification est un entier)
+      
+      // vide le cache des infos de l'utilisateur courant
+      GPU_VideCacheInfoUtilisateur()
+      
+      // en mode LDAP
+      selon nTypeIdentification
+      	cas gpwModeLDAP, gpwModeWindows, gpwModeGroupware:
+      		// recherche de l'utilisateur
+      		nRes est un entier=GPU_nRechercheUtilisateur(sLoginOuEmail, gclUtilisateur, Faux)
+      		
+      		// utilisateur trouvé
+      		SI nRes <> gpwOk ALORS
+      			renvoyer nRes
+      		FIN
+      		
+      		// trouvé
+      		RENVOYER gclUtilisateur.Superviseur ?  gpwAdministration SINON gpwOk
+      
+      	autre cas:
+      		dbgAssertion(Faux,<§@1ff6ec00008eec320002§>)
+      fin
+      
+      // pas trouvé
+      renvoyer gpwUtilisateurInconnu
+     type : 458752
+   -
+     name : GPU_nVerifMotPasse
+     procedure_id : 1181215181508648589
+     type_code : 15
+     code : |1-
+      // Résumé : Vérification d'un mot de passe
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nVerifMotPasse (<sLogin> est chaîne UNICODE, <sMotDePasse> est chaîne UNICODE [, <bVerifSimple> est booléen])
+      //
+      // Paramètres :
+      //	sLogin (chaîne UNICODE) : Login de l'utilisateur
+      //	sMotDePasse (chaîne UNICODE) : Mot de passe de l'utilisateur
+      //	bVerifSimple (booléen - valeur par défaut=0) : Vrai pour valider un utilisateur dont le mot de passe est à saisir
+      // Valeur de retour :
+      // 	entier : // 	Aucune
+      //
+      PROCEDURE GPU_nVerifMotPasse(sLogin est une chaine unicode, sMotDePasse est une chaine unicode, bVerifSimple est un booléen=Faux)
+      
+      // recherche de l'utilisateur
+      HLitRecherchePremier(GPU_Utilisateur,Login,sLogin)
+      si htrouve(GPU_Utilisateur)=faux ALORS
+      	renvoyer gpwUtilisateurInconnu
+      fin
+      	
+      // si le mot de passe était à saisir
+      si bVerifSimple=faux _et_ GPU_Utilisateur.MotPasseASaisir alors
+      	// modification de l'enregistrement
+      	si gpwMotsDePasseCryptés() alors
+      		// pas de mot de passe en clair dans le fichier des utilisateurs
+      		GPU_Utilisateur.MotPasse=GPU_sDonneCodeChaine(sMotDePasse+GPU_Utilisateur.Login+GPU_Utilisateur.IDUtilisateur)
+      
+      		// recherche de l'utilisateur dans le fichier des mots de passe cryptés
+      		si GPU_bCrypteMotDePasse(GPU_Utilisateur.IDUtilisateur,sMotDePasse)=faux ALORS
+      			Erreur("Erreur lors de l'enregistrement du mot de passe.")
+      			renvoyer gpwErreur
+      		FIN
+      	sinon
+      		GPU_Utilisateur.MotPasse=sMotDePasse
+      		GPU_UtilisateurMDP.MotPasseCrypte=""
+      	fin
+      	GPU_Utilisateur.MotPasseASaisir=faux
+      	si hmodifie(GPU_Utilisateur)=faux alors
+      		Erreur("Erreur lors de l'enregistrement du mot de passe.")
+      		renvoyer gpwerreur
+      	FIN
+      fin
+      
+      // si le mot de passe est déjà saisi, compare en tenant compte de la casse
+      si gpwVerifieMotDePasse(sLogin,sMotDePasse) alors
+      	renvoyer gpwok
+      fin
+      
+      // mot de passe invalide
+      renvoyer gpwMotPasseInvalide
+     type : 458752
+   -
+     name : GPU_AjouteUtilisateur
+     internal_properties : BQAAAAUAAAAPHRN9TY+0oJN0VFStELe+1tW2bnADtheFZ25YjLIMkzlFHWqk0e/xcvwuN6OsCM5zANhQCTyoxfsuC049lWcTWujkiYjor+uh5Mo2G/HHQ6Ql8IE2XQOLlXIq6DHBk6nD3BY0eCKBYRs=
+     procedure_id : 1181484991343076840
+     type_code : 15
+     code : |1-
+      // Résumé : Ajout d'un utilisateur
+      // Syntaxe :
+      //GPU_AjouteUtilisateur (<sLogin> est chaîne UNICODE, <sNom> est chaîne UNICODE, <sPrenom> est chaîne UNICODE)
+      //
+      // Paramètres :
+      //	sLogin (chaîne UNICODE) : Login de l'utilisateur
+      //	sNom (chaîne UNICODE) : Nom de l'utilisateur
+      //	sPrenom (chaîne UNICODE) : Prénom de l'utilisateur
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE GPU_AjouteUtilisateur(sLogin est une chaîne UNICODE, sNom est une chaine unicode, sPrenom est une chaine unicode)
+      
+      // recherche de l'utilisateur
+      HLitRecherchePremier(GPU_Utilisateur,Login,sLogin)
+      
+      // si l'utilisateur existe déjà, on ne fait rien
+      SI HTrouve(GPU_Utilisateur) ALORS
+      	retour
+      FIN
+      
+      // ajoute l'utilisateur dans le fichier
+      HRAZ(GPU_Utilisateur)
+      GPU_Utilisateur.Login=sLogin
+      GPU_Utilisateur.Nom=sNom
+      GPU_Utilisateur.Prenom=sPrenom
+      GPU_Utilisateur.MotPasseASaisir=faux
+      GPU_Utilisateur.Superviseur=faux
+      si hajoute(GPU_Utilisateur)=faux ALORS
+      	Erreur(<§@1ff6ec00008eec320004§>+sLogin+".")
+      FIN
+     type : 458752
+   -
+     name : GPU_RecupInfoUtilisateur
+     internal_properties : BQAAAAUAAAAPHRN9TY+0oJN0VFStELe+1tW2bnADtheFZ25YjLIMkzlFHWqk0e/xcvwuN6OsCM5zANhQCTyoxfsuC049lWcTWujkiYjor+uh5Mo2G/HHQ6Ql8IE2XQOLlXIq6DHBk6nD3BY0eCKBYRs=
+     procedure_id : 1181518431958495899
+     type_code : 15
+     code : |1-
+      // Résumé : Récupération d'une information sur un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_RecupInfoUtilisateur (<sLogin> est chaîne UNICODE, <nInfo> est entier)
+      //
+      // Paramètres :
+      //	sLogin (chaîne UNICODE) : Login de l'utilisateur
+      //	nInfo (entier) : Type de l'information à récupérer
+      // Valeur de retour :
+      // 	Type indéterminé : // 	Résultat de la recherche
+      //
+      PROCEDURE GPU_RecupInfoUtilisateur(sLogin est une chaine unicode, nInfo est un entier)
+      
+      // le nom et le prénom sont conservés en cache
+      si gbCacheActif _et_ sLogin = gstCacheInfoUtilisateur.sLogin ALORS
+      	SELON nInfo
+      		CAS gpwInfoLogin: 		RENVOYER sLogin
+      		CAS gpwInfoNom:			si gstCacheInfoUtilisateur.bNom 	alors RENVOYER gstCacheInfoUtilisateur.sNom
+      		CAS gpwInfoPrénom:		SI gstCacheInfoUtilisateur.bPrenom 	ALORS RENVOYER gstCacheInfoUtilisateur.sPrenom
+      	fin
+      FIN
+      
+      // réinitialisation du cache si changement de login
+      si sLogin <> gstCacheInfoUtilisateur.sLogin ALORS
+      	GPU_VideCacheInfoUtilisateur()
+      FIN
+      
+      // recherche de l'utilisateur
+      HLitRecherchePremier(GPU_Utilisateur,Login,sLogin)
+      si HTrouve(GPU_Utilisateur) ALORS
+      	// cache
+      	gstCacheInfoUtilisateur.sLogin = sLogin
+      
+      	// selon l'info demandée
+      	selon nInfo
+      		cas gpwInfoNom:
+      			gstCacheInfoUtilisateur.sNom = GPU_Utilisateur.Nom
+      			gstCacheInfoUtilisateur.bNom = Vrai
+      			renvoyer gstCacheInfoUtilisateur.sNom
+      
+      		CAS gpwInfoPrénom:
+      			gstCacheInfoUtilisateur.sPrenom = GPU_Utilisateur.Prenom
+      			gstCacheInfoUtilisateur.bPrenom = Vrai
+      			RENVOYER gstCacheInfoUtilisateur.sPrenom
+      
+      		CAS gpwInfoLogin: 		RENVOYER sLogin
+      		CAS gpwInfoSuperviseur:	RENVOYER GPU_Utilisateur.Superviseur
+      		cas gpwInfoGroupe:		renvoyer GPU_sRecupGroupesUtilisateur(GPU_Utilisateur.IDUtilisateur)
+      		cas 999:				renvoyer GPU_Utilisateur.MotPasse
+      			
+      		AUTRE CAS:	dbgAssertion(Faux,<§@1ff6ec00008eec320005§>)
+      	FIN
+      FIN
+      
+      RENVOYER nInfo=gpwInfoSuperviseur ? Faux SINON ""
+     type : 458752
+   -
+     name : GPU_sRecupGroupesUtilisateur
+     procedure_id : 1181524466387640692
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération des groupes d'un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_sRecupGroupesUtilisateur (<nIdUtilisateur> est entier)
+      //
+      // Paramètres :
+      //	nIdUtilisateur (entier) : Identifiant unique de l'utilisateur
+      // Valeur de retour :
+      // 	chaîne UNICODE : // 	Retourne la liste des groupes de l'utilisateur séparés par des TAB
+      //
+      PROCEDURE GPU_sRecupGroupesUtilisateur(nIdUtilisateur est un entier)
+      
+      // si on a déjà l'information dans le cache
+      SI gbCacheActif _ET_ PAS gTabCacheListeGroupes[nIdUtilisateur]..Vide ALORS
+      	RENVOYER gTabCacheListeGroupes[nIdUtilisateur].sValeur
+      FIN
+      
+      stCache est un STCache
+      
+      // init
+      stCache.nId=0
+      stCache.sValeur=""
+      
+      // construction de la requête
+      sReq est une chaine unicode=
+      [
+      	SELECT GPU_Groupe.Nom AS Nom
+      	FROM GPU_Groupe,GPU_Utilisateur_Groupe
+      	WHERE  GPU_Groupe.IDGroupe = GPU_Utilisateur_Groupe.IDGroupe AND GPU_Utilisateur_Groupe.IDUtilisateur = %1
+      ]
+      ReqGroupeUtilisateur est une source de donnees
+      sReq=ChaîneConstruit(sReq,nIdUtilisateur)
+      
+      // exécution de la requête
+      SI HExécuteRequêteSQL(ReqGroupeUtilisateur,hSansSablier,sReq) ALORS
+      	// modification du cache
+      	stCache.nId=nIdUtilisateur
+      	
+      	// parcours du résultat de la requête
+      	POUR TOUT ReqGroupeUtilisateur 
+      		SI stCache.sValeur<>"" ALORS stCache.sValeur+=TAB
+      		stCache.sValeur+=ReqGroupeUtilisateur.Nom
+      	FIN
+      FIN
+      
+      // ajout la liste des groupes en cache
+      si gbCacheActif
+      	gTabCacheListeGroupes[nIdUtilisateur]=stCache
+      fin
+      
+      RENVOYER stCache.sValeur
+     type : 458752
+   -
+     name : GPU_bFiltreConfigurationElement
+     procedure_id : 1181535676252337682
+     type_code : 15
+     code : |1+
+      // Résumé : Active un filtre sur le fichiers contenant les droits
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_bFiltreConfigurationElement (<nIdUtilisateurOuGroupe> est entier, <bEstUnGroupe> est booléen, <sCible> est chaîne UNICODE, <bEstUnComposantExterne> est booléen)
+      //
+      // Paramètres :
+      //	nIdUtilisateurOuGroupe (entier) : Identifiant auto de l'utilisateur ou du groupe sur lequel il faut filtrer
+      //	bEstUnGroupe (booléen) : Vrai si l'identifiant précédent correspond à un groupe
+      //	sCible (chaîne UNICODE) : Nom de l'application ou du composant interne sur lequel il fut filtrer
+      //	bEstUnComposantExterne (booléen) : Vrai si la cible est un composant externe
+      // Valeur de retour :
+      // 	booléen : // 	Retourne Vrai si le filtre a été activé
+      //
+      PROCEDURE GPU_bFiltreConfigurationElement(nIdUtilisateurOuGroupe est un entier, bEstUnGroupe est un booléen,  sCible est une chaine unicode, bEstUnComposantExterne est un booléen, sNomElement est une chaine unicode="")
+      
+      // si l'élément est dans la liste, cela signifie qu'il n'y a aucun droit dessus
+      sCle est une chaîne UNICODE=nIdUtilisateurOuGroupe+TAB+bEstUnGroupe+TAB+sCible+TAB+bEstUnComposantExterne+TAB+sNomElement
+      SI gbCacheActif _ET_ PAS gTabCacheElement[sCle]..Vide _ET_ (gTabCacheElement[sCle]=Faux _OU_ gsCacheCle=sCle) ALORS
+      	RENVOYER gTabCacheElement[sCle]
+      FIN
+      
+      // paramétrage de la requête
+      REQ_GPU_FiltreConfigurationElement.ParamNom=sCible
+      REQ_GPU_FiltreConfigurationElement.ParamEstUnComposantExterne=bEstUnComposantExterne
+      REQ_GPU_FiltreConfigurationElement.ParamEstUnGroupe=bEstUnGroupe
+      REQ_GPU_FiltreConfigurationElement.ParamIDUtilisateurOuGroupe=nIdUtilisateurOuGroupe
+      REQ_GPU_FiltreConfigurationElement.ParamNomElement=(sNomElement="" ? Null SINON sNomElement)
+      
+      // exécution de la requête
+      bRes est un booléen=Vrai
+      SI HExécuteRequête(REQ_GPU_FiltreConfigurationElement,hSansSablier)=Faux _OU_ HNbEnr(REQ_GPU_FiltreConfigurationElement)=0 ALORS
+      	// rien pour cette fenêtre
+      	bRes=Faux
+      FIN
+      
+      // garde le résultat en cache
+      SI gbCacheActif ALORS
+      	gTabCacheElement[sCle]=bRes
+      	gsCacheCle=sCle
+      FIN
+      
+      // résultat
+      RENVOYER bRes
+     type : 458752
+   -
+     name : GPU_sEnumEtat
+     procedure_id : 1181569400339858413
+     type_code : 15
+     code : |1+
+      // Résumé : Enumération de l'état des éléments
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_sEnumEtat (<sParent> est chaîne UNICODE [, <bPremier> est booléen])
+      //
+      // Paramètres :
+      //	sParent (chaîne UNICODE) : Nom de l'élément parent (fenêtre, page)
+      //	bPremier (booléen - valeur par défaut=0) : Vrai pour le premier élément
+      // Valeur de retour :
+      // 	Type indéterminé : // 	Retourne une chaine de la forme <Nom de l'élément>+TAB+<Etat>
+      //
+      PROCEDURE GPU_sEnumEtat(sParent est une chaine UNICODE, bPremier est un booléen=faux)
+      
+      // parcours de l'élément suivant
+      SI GPU_bParcoursElements(bPremier)=Faux ALORS
+      	RENVOYER ""
+      FIN
+      
+      // extraction du nom du parent
+      sParentElement est une chaine UNICODE=ExtraitChaîne(REQ_GPU_FiltreConfigurationElement.Nom,1,".")
+      // tant que le parent ne correspond pas
+      TANTQUE Majuscule(sParentElement)<>Majuscule(sParent)
+      	// élément suivant
+      	SI GPU_bParcoursElements(Faux)=Faux ALORS
+      		RENVOYER ""
+      	FIN
+      	// extraction du nom du parent
+      	sParentElement=ExtraitChaîne(REQ_GPU_FiltreConfigurationElement.Nom,1,".")
+      FIN
+      
+      // construction du résultat
+      sResultat est une chaine unicode=REQ_GPU_FiltreConfigurationElement.Nom+tab+REQ_GPU_FiltreConfigurationElement.Etat
+      
+      RENVOYER sResultat
+     type : 458752
+   -
+     name : GPU_nRecupIdUtilisateur
+     internal_properties : BQAAAAUAAAAPHRN9TY+0oJN0VFStELe+1tW2bnADtheFZ25YjLIMkzlFHWqk0e/xcvwuN6OsCM5zANhQCTyoxfsuC049lWcTWujkiYjor+uh5Mo2G/HHQ6Ql8IE2XQOLlXIq6DHBk6nD3BY0eCKBYRs=
+     procedure_id : 1181577363209310047
+     type_code : 15
+     code : |1-
+      // Résumé : Récupération de l'identifiant unique d'un utilisateur à partir de son nom
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nRecupIdUtilisateur (<sLogin> est chaîne UNICODE)
+      //
+      // Paramètres :
+      //	sLogin (chaîne UNICODE) : Login de l'utilisateur
+      // Valeur de retour :
+      // 	entier : Identifiant auto de l'utilisateur ou 0 si l'utilisateur n'existe pas dans le fichier
+      //
+      //	bSauvegardePosition (booléen - valeur par défaut=0) : Vrai pour ne pas déplacer l'enregistrement courant du fichier Utilisateur
+      PROCEDURE GPU_nRecupIdUtilisateur(sLogin est une chaîne UNICODE)
+      
+      // si l'utilisateur est dans le cache
+      SI gstCacheUtilisateur.sNom=sLogin ALORS
+      	RENVOYER gstCacheUtilisateur.nId
+      FIN
+      
+      // initialisation du cache
+      gstCacheUtilisateur.sNom=""
+      gstCacheUtilisateur.nId=0
+      
+      // recherche de l'utilisateur dans le fichier
+      HLitRecherchePremier(GPU_Utilisateur,Login,sLogin)
+      
+      // trouvé
+      SI HTrouve(GPU_Utilisateur) ALORS
+      	gstCacheUtilisateur.sNom=sLogin
+      	gstCacheUtilisateur.nId=GPU_Utilisateur.IDUtilisateur
+      FIN
+      
+      // pas trouvé
+      RENVOYER gstCacheUtilisateur.nId
+     type : 458752
+   -
+     name : GPU_nRecupIdGroupe
+     procedure_id : 1181578342461884673
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération de l'identifiant unique d'un groupe à partir de son nom
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nRecupIdGroupe (<sGroupe> est chaîne UNICODE)
+      //
+      // Paramètres :
+      //	sGroupe (chaîne UNICODE) : Nom du groupe
+      // Valeur de retour :
+      // 	entier : Identifiant auto du groupe ou 0 si le groupe n'existe pas dans le fichier
+      //
+      PROCEDURE GPU_nRecupIdGroupe(sGroupe est une chaine UNICODE)
+      
+      // si le groupe est déjà dans le cache
+      SI gbCacheActif _ET_ PAS gTabCacheGroupe[sGroupe]..Vide ALORS
+      	RENVOYER gTabCacheGroupe[sGroupe].nId
+      FIN
+      
+      // init du cache
+      stCache est un stCache
+      stCache.sNom=""
+      stCache.nId=0
+      
+      // recherche de l'utilisateur dans le fichier
+      HLitRecherchePremier(GPU_Groupe,Nom,sGroupe)
+      
+      // trouvé
+      SI HTrouve(GPU_Groupe) ALORS
+      	stCache.sNom=sGroupe
+      	stCache.nId=GPU_Groupe.IDGroupe
+      FIN
+      
+      // ajoute le groupe dans le cache
+      si gbCacheActif
+      	gTabCacheGroupe[sGroupe]=stCache
+      fin
+      
+      // pas trouvé
+      RENVOYER stCache.nId
+     type : 458752
+   -
+     name : GPU_nRecupIdGroupeParent
+     procedure_id : 1182951555172147788
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération de l'identifiant auto du parent d'un groupe
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nRecupIdGroupeParent (<nIdGroupe> est entier)
+      //
+      // Paramètres :
+      //	nIdGroupe (entier) : Identifiant auto du groupe
+      // Valeur de retour :
+      // 	entier : // 	Identifiant du groupe parent
+      //
+      PROCEDURE GPU_nRecupIdGroupeParent(nIdGroupe est un entier)
+      
+      // si le parent n'est pas encore connu
+      SI gbCacheActif _ET_ PAS gTabCacheParent[nIdGroupe]..Vide ALORS
+      	RENVOYER gTabCacheParent[nIdGroupe]
+      FIN
+      
+      nIdGroupeParent est un entier=0
+      
+      // recherche du groupe dans le fichier
+      HLitRecherchePremier(GPU_Groupe,IDGroupe,nIdGroupe)
+      SI HTrouve(GPU_Groupe) ALORS
+      	// récupération de l'identifiant auto du groupe parent
+      	nIdGroupeParent=GPU_Groupe.IDGroupeParent
+      FIN
+      
+      // ajoute le parent dans le cache
+      si gbCacheActif alors
+      	gTabCacheParent[nIdGroupe]=nIdGroupeParent
+      fin
+      
+      RENVOYER nIdGroupeParent
+     type : 458752
+   -
+     name : GPU_nRecupEtatElement
+     procedure_id : 1219710307656802169
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération de l'état d'un élément (fenêtre, état)
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nRecupEtatElement (<sNomCible> est chaîne UNICODE, <bEstUnComposantExterne> est booléen, <sNomElement> est chaîne UNICODE, <nIdUtilisateurOuGroupe> est entier, <bEstUnGroupe> est booléen, <bEtatParDefaut> est booléen)
+      //
+      // Paramètres :
+      //	sNomCible (chaîne UNICODE) : nom de la cible (application ou composant interne)
+      //	bEstUnComposantExterne (booléen) : Vrai si la cible est un composant interne et Faux si la cible est une application
+      //	sNomElement (chaîne UNICODE) : Nom de l'élément (fenêtre, état)
+      //	nIdUtilisateurOuGroupe (entier) : identifiant de l'utilisateur ou du groupe
+      //	bEstUnGroupe (booléen) : Vrai pour un groupe et Faux pour un utilisateur
+      //	bEtatParDefaut (booléen) : Vrai si l'état de l'élément est l'état par défaut (sortie)
+      // Valeur de retour :
+      // 	entier : Retourne l'état de l'élément
+      //
+      PROCEDURE GPU_nRecupEtatElement(sNomCible est une chaîne UNICODE, bEstUnComposantExterne est un booléen, sNomElement est une chaîne UNICODE, nIdUtilisateurOuGroupe est un entier, bEstUnGroupe est un booléen, bEtatParDefaut est un booléen)
+      
+      // indique si l'élément a l'état par défaut ou un état surchargé
+      bEtatParDefaut=Vrai
+      
+      // récupération de l'état par défaut
+      nIdGroupeContenantDroit est un entier
+      nEtatDefaut est un entier=GPU_nRecupEtatDefaut(nIdUtilisateurOuGroupe,bEstUnGroupe,nIdGroupeContenantDroit)
+      nEtat est un entier=nEtatDefaut
+      
+      // paramétrage de la requête
+      REQ_GPU_EtatElement.ParamNomCible=sNomCible
+      REQ_GPU_EtatElement.ParamEstUnComposantExterne=bEstUnComposantExterne
+      REQ_GPU_EtatElement.ParamIDUtilisateurOuGroupe=nIdUtilisateurOuGroupe
+      REQ_GPU_EtatElement.ParamEstUnGroupe=bEstUnGroupe
+      REQ_GPU_EtatElement.ParamNomElement=sNomElement
+      
+      // exécution de la requête
+      si HExécuteRequête(REQ_GPU_EtatElement,hSansSablier)=faux ALORS
+      	renvoyer nEtat
+      FIN
+      
+      // lecture du résultat
+      HLitPremier(REQ_GPU_EtatElement)
+      si HEnDehors() ALORS
+      	RENVOYER nEtat
+      FIN
+      nEtat=REQ_GPU_EtatElement.Etat
+      
+      // si l'élément a l'état par défaut
+      si nEtat=gpwEtatDéfaut ALORS
+      	nEtat=nEtatDefaut
+      	bEtatParDefaut=vrai
+      sinon
+      	// indique que l'état est surchargé
+      	bEtatParDefaut=Faux
+      FIN
+      
+      renvoyer nEtat
+     type : 458752
+   -
+     name : GPU_bRecupEtatDefautDansFichier
+     procedure_id : 1219818433480835068
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération de l'état par défaut des éléments
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_bRecupEtatDefautDansFichier (<nIdUtilisateurOuGroupe> est entier, <bEstUnGroupe> est booléen, <nEtatDefaut> est entier)
+      //
+      // Paramètres :
+      //	nIdUtilisateurOuGroupe (entier) : identifiant de l'utilisateur ou du groupe
+      //	bEstUnGroupe (booléen) : Vrai pour un utilisateur et Faux pour un groupe
+      //	nEtatDefaut (entier) : état par défaut (sortie)
+      // Valeur de retour :
+      // 	booléen : Retourne Faux si l'état par défaut n'est pas défini
+      //
+      PROCEDURE GPU_bRecupEtatDefautDansFichier(nIdUtilisateurOuGroupe est un entier, bEstUnGroupe est un booléen, nEtatDefaut est un entier)
+      
+      // état par défaut
+      nEtatDefaut=gpwEtatDéfaut
+      
+      // si l'information est déjà dans le cache
+      SI gbCacheActif _ET_ PAS gtabCacheEtatDefaut[nIdUtilisateurOuGroupe+TAB+bEstUnGroupe]..Vide ALORS
+      	SI gtabCacheEtatDefaut[nIdUtilisateurOuGroupe+TAB+bEstUnGroupe].nValeur<>-1
+      		nEtatDefaut=gtabCacheEtatDefaut[nIdUtilisateurOuGroupe+TAB+bEstUnGroupe].nValeur
+      		RENVOYER Vrai
+      	FIN
+      	
+      	// état par défaut non défini	
+      	RENVOYER Faux
+      FIN
+      
+      // paramétrage de la requête
+      REQ_GPU_EtatDefautElement.ParamNom=ProjetInfo(piNomProjet)
+      REQ_GPU_EtatDefautElement.ParamEstUnComposantExterne=Faux
+      REQ_GPU_EtatDefautElement.ParamIDUtilisateurOuGroupe=nIdUtilisateurOuGroupe
+      REQ_GPU_EtatDefautElement.ParamEstUnGroupe=bEstUnGroupe
+      REQ_GPU_EtatDefautElement.ParamIDElement=0
+      
+      // modification du cache
+      stCache est un STCache
+      stCache.nId=nIdUtilisateurOuGroupe
+      stCache.bEstUnGroupe=bEstUnGroupe
+      stCache.nValeur=-1
+      
+      // ajout le cache
+      si gbCacheActif
+      	gtabCacheEtatDefaut[nIdUtilisateurOuGroupe+TAB+bEstUnGroupe]=stCache
+      fin
+      
+      // exécution de la requête
+      SI HExécuteRequête(REQ_GPU_EtatDefautElement,hSansSablier)=Faux ALORS
+      	RENVOYER Faux
+      FIN
+      
+      // lecture du résultat
+      HLitPremier(REQ_GPU_EtatDefautElement)
+      SI HEnDehors() ALORS
+      	RENVOYER Faux
+      FIN
+      
+      // stocke l'état dans le cache
+      stCache.nValeur=REQ_GPU_EtatDefautElement.Etat
+      
+      // paramètre de sortie
+      nEtatDefaut=REQ_GPU_EtatDefautElement.Etat
+      
+      // l'état par défaut est défini pour l'utilisateur/groupe
+      RENVOYER Vrai
+     type : 458752
+   -
+     name : GPU_nRecupEtatDefaut
+     procedure_id : 1220442788556592477
+     type_code : 15
+     code : |1+
+      // Résumé : Algorithme de détermination de l'état par défaut pour un utilisateur ou un groupe
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nRecupEtatDefaut (<nIdUtilisateurOuGroupe> est entier, <bEstUnGroupe> est booléen, <nIdGroupeContenantDroit> est entier)
+      //
+      // Paramètres :
+      //	nIdUtilisateurOuGroupe (entier) : identifiant de l'utilisateur ou du groupe
+      //	bEstUnGroupe (booléen) : Vrai pour un groupe
+      //	nIdGroupeContenantDroit (entier) : Identifiant du groupe contenant les droits d'accès (sortie)
+      // Valeur de retour :
+      // 	entier : Etat par défaut du groupe ou de l'utilisateur
+      //
+      //	nEtatDefaut (entier) : <indiquez ici le rôle de nEtatDefaut>
+      PROCEDURE GPU_nRecupEtatDefaut(nIdUtilisateurOuGroupe est un entier, bEstUnGroupe est un booléen, nIdGroupeContenantDroit est un entier)
+      
+      // initialisation
+      nEtat est un entier=gpwEtatDéfaut
+      nIdGroupeContenantDroit=0
+      
+      // pour un groupe
+      si bEstUnGroupe ALORS
+      	nEtat=GPU_nCalculEtatDefautGroupeRecursif(nIdUtilisateurOuGroupe,nIdGroupeContenantDroit)
+      // pour un utilisateur
+      sinon
+      	nEtat=GPU_nCalculEtatDefautUtilisateur(nIdUtilisateurOuGroupe,nIdGroupeContenantDroit)
+      FIN
+      
+      // si l'état n'est pas défini
+      SI nEtat=gpwEtatDéfaut ALORS
+      	// par défaut
+      	nEtat=nETATELEMENTDEFAUT
+      FIN
+      
+      renvoyer nEtat
+     type : 458752
+   -
+     name : GPU_nCalculEtatDefautGroupeRecursif
+     procedure_id : 1220445387011887568
+     type_code : 15
+     code : |1+
+      // Résumé : Calcul de l'état par défaut d'un groupe en remontant jusqu'à la racine 
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nCalculEtatDefautGroupeRecursif (<nIdGroupe> est entier, <nIdGroupeContenantDroit> est entier)
+      //
+      // Paramètres :
+      //	nIdGroupe (entier) : Identifiant du groupe
+      //	nIdGroupeContenantDroit (entier) : Identifiant du groupe contenant les droits d'accès (sortie)
+      // Valeur de retour :
+      // 	entier : Etat du groupe
+      
+      PROCEDURE GPU_nCalculEtatDefautGroupeRecursif(nIdGroupe est un entier, nIdGroupeContenantDroit est un entier)
+      
+      // récupération de l'état du groupe dans le fichier
+      nEtatDefaut est un entier=gpwEtatDéfaut
+      bDefniDansGroupe est un booléen=GPU_bRecupEtatDefautDansFichier(nIdGroupe,Vrai,nEtatDefaut)
+      
+      // si le groupe interdit l'accès par défaut
+      si nEtatDefaut=gpwEtatInterdit ALORS
+      	
+      	// si les droits sont définis dans le groupe
+      	si bDefniDansGroupe ALORS
+      		nIdGroupeContenantDroit=nIdGroupe
+      	FIN
+      	
+      	// terminé, l'état est celui-là
+      	renvoyer nEtatDefaut
+      FIN
+      
+      // récupération du groupe parent
+      nIdGroupeParent est un entier=GPU_nRecupIdGroupeParent(nIdGroupe)
+      // si il y a un groupe parent
+      si nIdGroupeParent<>0 ALORS
+      	nEtatDefaut=GPU_nCalculEtatDefautGroupeRecursif(nIdGroupeParent,nIdGroupeContenantDroit)
+      FIN
+      
+      renvoyer nEtatDefaut
+     type : 458752
+   -
+     name : GPU_nCalculEtatDefautUtilisateur
+     procedure_id : 1220453856704833925
+     type_code : 15
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nCalculEtatDefautUtilisateur (<nIdUtilisateur> est entier, <nIdGroupeContenantDroit> est entier)
+      //
+      // Paramètres :
+      //	nIdUtilisateur (entier) : <indiquez ici le rôle de nIdUtilisateurOuGroupe>
+      //	nIdGroupeContenantDroit (entier) : Identifiant du groupe contenant les droits d'accès (sortie)
+      // Valeur de retour :
+      // 	entier : // 	Aucune
+      //
+      PROCEDURE GPU_nCalculEtatDefautUtilisateur(nIdUtilisateur est un entier, nIdGroupeContenantDroit est un entier)
+      
+      // récupération de l'état de l'utilisateur dans le fichier
+      nEtatDefaut est un entier=gpwEtatDéfaut
+      GPU_bRecupEtatDefautDansFichier(nIdUtilisateur,faux,nEtatDefaut)
+      
+      // si l'utilisateur interdit l'accès par défaut
+      SI nEtatDefaut=gpwEtatInterdit ALORS
+      	// terminé, l'état est celui-là
+      	RENVOYER nEtatDefaut
+      FIN
+      
+      // récupération des groupes parents
+      sListeGroupe est une chaine unicode=GPU_sRecupGroupesUtilisateur(nIdUtilisateur)
+      
+      sGroupe est une chaine unicode
+      nIdGroupe est un entier
+      
+      // parcours des groupes
+      pour TOUTE CHAINE sGroupe DE sListeGroupe SEPAREE PAR tab
+      	// récupération de l'identifiant du groupe
+      	nIdGroupe=GPU_nRecupIdGroupe(sGroupe)
+      	// récupération de l'état par défaut du groupe
+      	nEtatDefaut=GPU_nCalculEtatDefautGroupeRecursif(nIdGroupe,nIdGroupeContenantDroit)
+      	
+      	// si l'état du groupe est défini
+      	si nEtatDefaut=gpwEtatInterdit ALORS
+      		// terminé, l'état est celui-là
+      		RENVOYER nEtatDefaut
+      	FIN
+      FIN
+      
+      renvoyer nEtatDefaut
+     type : 458752
+   -
+     name : GPU_nRecupEtatElementUtilisateur
+     procedure_id : 1220467226938058823
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération de l'état d'un élément pour un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nRecupEtatElementUtilisateur (<sNomCible> est chaîne UNICODE, <bEstUnComposantExterne> est booléen, <sNomElement> est chaîne UNICODE, <nIdUtilisateur> est entier, <bEtatParDefaut> est booléen [, <nIdGroupeContenantDroit> est entier])
+      //
+      // Paramètres :
+      //	sNomCible (chaîne UNICODE) : nom de la cible
+      //	bEstUnComposantExterne (booléen) : Vrai si la cible est un composant interne
+      //	sNomElement (chaîne UNICODE) : Nom de l'élément
+      //	nIdUtilisateur (entier) : Identifiant de l'utilisateur
+      //	bEtatParDefaut (booléen) : Vrai si on a pris la valeur par défaut (sortie)
+      //	nIdGroupeContenantDroit (entier - valeur par défaut=0) : Identifiant du groupe contenant les droits (sortie)
+      // Valeur de retour :
+      // 	entier : Etat de l'élément
+      //
+      PROCEDURE GPU_nRecupEtatElementUtilisateur(sNomCible est une chaîne UNICODE, bEstUnComposantExterne est un booléen, sNomElement est une chaîne UNICODE, nIdUtilisateur est un entier, bEtatParDefaut est un booléen, nIdGroupeContenantDroit est un entier=0)
+      
+      // récupération de l'état de l'élément
+      bEtatParDefaut=faux
+      nEtat est un entier=GPU_nRecupEtatElement(sNomCible,bEstUnComposantExterne,sNomElement,nIdUtilisateur,Faux,bEtatParDefaut)
+      
+      // si l'état est défini pour l'utilisateur, on retourne cet état là
+      si bEtatParDefaut=Faux ALORS
+      	renvoyer nEtat
+      FIN
+      
+      // récupération des groupes parents
+      sListeGroupe est une chaine unicode=GPU_sRecupGroupesUtilisateur(nIdUtilisateur)
+      
+      sGroupe est une chaine unicode
+      nIdGroupe est un entier
+      nEtatGroupe est un entier
+      nEtat=gpwEtatDéfaut
+      tabEtat est un tableau d'entiers
+      
+      // parcours des groupes parents
+      POUR TOUTE CHAÎNE sGroupe DE sListeGroupe SEPAREE PAR TAB
+      	// récupération de l'identifiant du groupe
+      	nIdGroupe=GPU_nRecupIdGroupe(sGroupe)
+      	
+      	// récupération de l'état du groupe
+      	nEtatGroupe=GPU_nRecupEtatElementGroupe(sNomCible,bEstUnComposantExterne,sNomElement,nIdGroupe,bEtatParDefaut,nIdGroupeContenantDroit)
+      	si bEtatParDefaut ALORS
+      		nEtatGroupe=gpwEtatDéfaut
+      	FIN
+      	
+      	// ajoute l'état du groupe dans le tableau
+      	Ajoute(tabEtat,nEtatGroupe)
+      FIN
+      
+      // parcours du tableau des états
+      nIndiceGroupe est un entier=0
+      POUR TOUT nEtatGroupe DE tabEtat
+      	// indice du groupe
+      	nIndiceGroupe++
+      	
+      	// si l'état est défini pour le groupe et qu'il est plus restrictif
+      	SI ((nEtat=gpwEtatDéfaut _et_ nEtatGroupe<>gpwEtatDéfaut) _OU_ nEtatGroupe=gpwEtatAutorisé) ALORS
+      		// on garde cet état
+      		nEtat=nEtatGroupe
+      	
+      		// récupération de l'identifiant du groupe contenant les droits d'accès
+      		nIdGroupeContenantDroit=GPU_nRecupIdGroupe(extraitchaine(sListeGroupe,nIndiceGroupe,TAb))
+      	FIN
+      FIN
+      
+      // si rien n'est défini alors on prend l'état par défaut de l'utilisateur
+      si nEtat=gpwEtatDéfaut ALORS
+      	bEtatParDefaut=vrai
+      	nEtat=GPU_nRecupEtatDefaut(nIdUtilisateur,Faux,nIdGroupeContenantDroit)
+      sinon
+      	bEtatParDefaut=Faux
+      FIN
+      
+      renvoyer nEtat
+      
+     type : 458752
+   -
+     name : GPU_CalculEtatGroupeRecursif
+     procedure_id : 1220510988342536670
+     type_code : 15
+     code : |1+
+      // Résumé : Calcul de l'état d'un groupe en remontant jusqu'à la racine récursivement
+      // Syntaxe :
+      //GPU_CalculEtatGroupeRecursif (<sNomCible> est chaîne UNICODE, <bEstUnComposantExterne> est booléen, <sNomElement> est chaîne UNICODE, <nIdGroupe> est entier, <nEtat> est entier, <nIdGroupeContenantDroit> est entier)
+      //
+      // Paramètres :
+      //	sNomCible (chaîne UNICODE) : Nom de la cible
+      //	bEstUnComposantExterne (booléen) : Vrai si la cible est un composant externe
+      //	sNomElement (chaîne UNICODE) : nom de l'élément
+      //	nIdGroupe (entier) : identifiant du groupe
+      //	nEtat (entier) : état de l'élément (sortie)
+      //	nIdGroupeContenantDroit (entier) : Identifiant du groupe parent contenant les droits (sortie)
+      // Valeur de retour :
+      // 	Aucune
+      
+      PROCEDURE GPU_CalculEtatGroupeRecursif(sNomCible est une chaine unicode, bEstUnComposantExterne est un booléen, sNomElement est une chaine unicode, nIdGroupe est un entier, nEtat est un entier, nIdGroupeContenantDroit est un entier)
+      
+      // récupération de l'état de l'élément dans ce groupe
+      bEtatParDefaut est un booléen
+      nEtatGroupe est un entier=GPU_nRecupEtatElement(sNomCible,bEstUnComposantExterne,sNomElement,nIdGroupe,vrai,bEtatParDefaut)
+      
+      // état par défaut
+      si bEtatParDefaut ALORS
+      	nEtatGroupe=gpwEtatDéfaut
+      FIN
+      
+      // si l'état est défini pour le groupe et qu'il est plus restrictif
+      SI ((nEtat=gpwEtatDéfaut _ET_ nEtatGroupe<>gpwEtatDéfaut) _OU_ nEtatGroupe=gpwEtatAutorisé) ALORS
+      	// on garde cet état
+      	nEtat=nEtatGroupe
+      	
+      	// indique que le droit provient de ce groupe
+      	nIdGroupeContenantDroit=nIdGroupe
+      FIN
+      
+      // récupération du groupe parent
+      nIdGroupeParent est un entier=GPU_nRecupIdGroupeParent(nIdGroupe)
+      // si il y a un groupe parent
+      SI nIdGroupeParent<>0 ALORS
+      	GPU_CalculEtatGroupeRecursif(sNomCible,bEstUnComposantExterne,sNomElement,nIdGroupeParent,nEtat,nIdGroupeContenantDroit)
+      FIN
+     type : 458752
+   -
+     name : GPU_nRecupEtatElementGroupe
+     procedure_id : 1220532351514578438
+     type_code : 15
+     code : |1-
+      // Résumé : Récupération de l'état d'un élément pour un groupe
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nRecupEtatElementGroupe (<sNomCible> est chaîne UNICODE, <bEstUnComposantExterne> est booléen, <sNomElement> est chaîne UNICODE, <nIdGroupe> est entier, <bEtatParDefaut> est booléen [, <nIdGroupeContenantDroit> est entier])
+      //
+      // Paramètres :
+      //	sNomCible (chaîne UNICODE) : Nom de la cible
+      //	bEstUnComposantExterne (booléen) : Vrai si la cible est un composant
+      //	sNomElement (chaîne UNICODE) : Nom de l'élément
+      //	nIdGroupe (entier) : identifiant du groupe
+      //	bEtatParDefaut (booléen) : Vrai si l'état est l'état par défaut (sortie)
+      //	nIdGroupeContenantDroit (entier - valeur par défaut=0) : Identifiant du groupe parent contenant les droits (sortie)
+      // Valeur de retour :
+      // 	entier : // 	Aucune
+      //
+      //	bEstUnComposantExterne : <indiquez ici le rôle de bEstUnComposantExterne>
+      //	nEtatGroupe : <indiquez ici le rôle de nEtatGroupe>
+      PROCEDURE GPU_nRecupEtatElementGroupe(sNomCible est une chaîne UNICODE, bEstUnComposantExterne est un booléen, sNomElement est une chaîne UNICODE, nIdGroupe est un entier, bEtatParDefaut est un booléen, nIdGroupeContenantDroit est un entier=0)
+      
+      nEtatGroupe est un entier=gpwEtatDéfaut
+      bEtatParDefaut=faux
+      
+      // récupération de l'état pour le groupe et ses parents
+      GPU_CalculEtatGroupeRecursif(sNomCible,bEstUnComposantExterne,sNomElement,nIdGroupe,nEtatGroupe,nIdGroupeContenantDroit)
+      
+      // si on a l'état par défaut
+      si nEtatGroupe=gpwEtatDéfaut ALORS
+      	bEtatParDefaut=vrai
+      	nEtatGroupe=GPU_nRecupEtatDefaut(nIdGroupe,vrai,nIdGroupeContenantDroit)
+      FIN
+      
+      // si le groupe contenant les droit est le groupe lui-même, on repasse l'identifiant à 0
+      si nIdGroupeContenantDroit=nIdGroupe ALORS
+      	nIdGroupeContenantDroit=0
+      FIN
+      
+      renvoyer nEtatGroupe
+     type : 458752
+   -
+     name : GPU_bParcoursElements
+     procedure_id : 1242362364650071436
+     type_code : 15
+     code : |1+
+      // Résumé : Parcours des éléments
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_bParcoursElements ( [<bPremier> est booléen])
+      //
+      // Paramètres :
+      //	bPremier (booléen - valeur par défaut=0) : Vrai pour le premier élément
+      // Valeur de retour :
+      // 	booléen : Retourne Faux si la parcours est terminé
+      //
+      PROCEDURE GPU_bParcoursElements(bPremier est un booléen=faux)
+      
+      // premier enregistrement
+      SI bPremier ALORS
+      	HLitPremier(REQ_GPU_FiltreConfigurationElement)
+      	// enregistrement suivant
+      SINON
+      	HLitSuivant(REQ_GPU_FiltreConfigurationElement)
+      FIN
+      
+      // si l'énumération est terminée
+      SI HEnDehors(REQ_GPU_FiltreConfigurationElement) ALORS
+      	RENVOYER faux
+      FIN
+      
+      renvoyer vrai
+     type : 458752
+   -
+     name : GPU_RecupTabNomCompletGroupes
+     internal_properties : BQAAAAUAAABLUf+AH/kbDHaiPEdaRjCKEUyC4D80xZBGXNc6lt7HuJdJ3OL3hFHxPx8/ZasEcQS40IynDgupeNAc4K4LKad8Phr5GApPt5ksx1qw1Dj/0qRsY+c51A8vAQSyKX9QK8CShcQg3BV7Oym0XdK0PlfklMFVQj+7YlbFao8E
+     procedure_id : 1257920488524567968
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération du nom complet des groupes
+      // Syntaxe :
+      //GPU_RecupTabNomCompletGroupes (<tabGroupe> est tableau)
+      //
+      // Paramètres :
+      //	tabGroupe (tableau) : tableau à remplir avec le nom complet des groupes
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE GPU_RecupTabNomCompletGroupes(tabGroupe est un tableau de chaine UNICODE)
+      
+      tabIdGroupe est un tableau d'entier
+      taIndiceGroupe est un tableau associatif (*,0,wlentier) d'entier
+      
+      // construction d'un tableau trié
+      POUR TOUT GPU_Groupe SUR IDGroupe
+      	// si le groupe a un parent et que le parent n'est pas déjà dans le tableau
+      	si GPU_Groupe.IDGroupeParent<>0 _et_ taIndiceGroupe[GPU_Groupe.IDGroupeParent]=0 ALORS
+      		// ajoute le groupe dans le tableau
+      		Ajoute(tabIdGroupe,GPU_Groupe.IDGroupeParent)
+      		// ajoute l'indice du groupe dans la table de hash
+      		taIndiceGroupe[GPU_Groupe.IDGroupeParent]=tabIdGroupe..Occurrence
+      	FIN
+      	
+      	// ajoute le groupe s'il n'est pas déjà présent dans le tableau
+      	si taIndiceGroupe[GPU_Groupe.IDGroupe]=0 ALORS
+      		// ajoute le groupe dans le tableau
+      		tableauAjoute(tabIdGroupe,GPU_Groupe.IDGroupe)
+      		// ajoute l'indice du groupe dans la table de hash
+      		taIndiceGroupe[GPU_Groupe.IDGroupe]=tabIdGroupe..Occurrence
+      	FIN
+      	
+      fin
+      
+      sNomCompletGroupe est une chaîne UNICODE
+      
+      // parcours du tableau des identifiant de groupe
+      pour TOUT nIdGroupe DE tabIdGroupe
+      	// recherche du groupe
+      	HLitRecherchePremier(GPU_Groupe,IDGroupe,nIdGroupe)
+      	si htrouve ALORS
+      		// récupération du nom complet du groupe
+      		sNomCompletGroupe=GPU_sDonneNomCompletGroupe(GPU_Groupe.IDGroupe)
+      		
+      		// si le nom du groupe est vide
+      		SI sNomCompletGroupe="" ALORS CONTINUE
+      		
+      		// ajoute l'identifiant auto du groupe
+      		sNomCompletGroupe+=TAB+GPU_Groupe.IDGroupe
+      		
+      		TableauAjoute(tabGroupe,sNomCompletGroupe)
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : GPU_RecupUtilisateurDansGroupe
+     internal_properties : BQAAAAUAAABxbJpjb/rKS7574jJ4xaST9LlAgXcKJ7loGIQ2+XFYKIw93tc3E4hC9mnID/0M84MubEEfIv67hmUaRT5u9BbCpsNZJ+39yQtrJuT+9iZeOt7r+rIMAaBO+Gt9JlzzlO9TGtHOY80pDWGTiF/6aZAzz0tPOJO2tjjLVKBxrzJvpYPXPSvOap8L742rNA==
+     procedure_id : 1257920488524633863
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération des utilisateurs d'un groupe
+      // Syntaxe :
+      //GPU_RecupUtilisateurDansGroupe (<nIdGroupe> est entier, <tabUtilisateur> est tableau)
+      //
+      // Paramètres :
+      //	nIdGroupe (entier) : identifiant auto du groupe
+      //	tabUtilisateur (tableau) : tableau des utilisateur à remplir
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE GPU_RecupUtilisateurDansGroupe(nIdGroupe est un entier, tabUtilisateur est un tableau de chaînes unicode)
+      
+      // vide le tableau
+      TableauSupprimeTout(tabUtilisateur)
+      
+      // le tableau doit être trié
+      TableauTrie(tabUtilisateur,ttCroissant+tccSansCasse+tccRespecteNumérique)
+      
+      Req est une Source de Données
+      sReq est une chaîne unicode
+      
+      // recherche des utilisateurs d'un groupe
+      si nIdGroupe<>0 alors
+      	// construction de la requête
+      	sReq=
+      	[
+      		SELECT GPU_Utilisateur.Login AS Login
+      		FROM GPU_Groupe,GPU_Utilisateur,GPU_Utilisateur_Groupe
+      		WHERE  GPU_Utilisateur.IDUtilisateur = GPU_Utilisateur_Groupe.IDUtilisateur
+      		AND	GPU_Groupe.IDGroupe=GPU_Utilisateur_Groupe.IDGroupe
+      		AND	GPU_Groupe.IDGroupe=%1
+      	]
+      	sReq=ChaîneConstruit(sReq,nIdGroupe)
+      // recherche des utilisateurs ne faisant partie d'aucun groupe
+      sinon
+      	// construction de la requête
+      	sReq=
+      	[
+      		SELECT GPU_Utilisateur.Login AS Login
+      		FROM GPU_Utilisateur,GPU_Utilisateur_Groupe
+      		WHERE  GPU_Utilisateur.IDUtilisateur = GPU_Utilisateur_Groupe.IDUtilisateur
+      	]
+      fin
+      
+      // parcours de la requête
+      SI HExécuteRequêteSQL(Req,hSansSablier,sReq) ALORS
+      	POUR TOUT Req 
+      		// ajoute le login de l'utilisateur
+      		TableauAjouteTrié(tabUtilisateur,Req.Login)
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : GPU_sDonneNomCompletGroupe
+     procedure_id : 1257920488524699493
+     type_code : 15
+     code : |1-
+      // Résumé : Retourne le nom complet d'un groupe
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_sDonneNomCompletGroupe (<nIdGroupe> est entier)
+      //
+      // Paramètres :
+      //	nIdGroupe (entier) : identifiant du groupe
+      // Valeur de retour :
+      // 	Type indéterminé : // 	Retourne le nom complet du groupe sous la forme suivante <Parent1> TAB <Parent2> TAB[...] TAB <ParentN>.<Groupe>
+      //
+      PROCEDURE GPU_sDonneNomCompletGroupe(nIdGroupe est un entier)
+      
+      // sauve la position dans le fichier groupe
+      clPosPosition est un CGPUHSauvePosition(GPU_Groupe..Nom) <utile>
+      
+      // appel de la fonction récursive pour calculer le nom complet
+      renvoyer GPU_sDonneNomCompletGroupeRecursif(nIdGroupe)
+     type : 458752
+   -
+     name : GPU_sDonneNomCompletGroupeRecursif
+     procedure_id : 1257920492819732418
+     type_code : 15
+     code : |1+
+      // Résumé : Calcul du nom complet d'un groupe de façon récursive
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_sDonneNomCompletGroupeRecursif (<nIdGroupe> est entier)
+      //
+      // Paramètres :
+      //	nIdGroupe (entier) : identifiant du groupe dont on veut connaître le nom complet
+      // Valeur de retour :
+      // 	chaîne UNICODE : nom complet du groupe
+      //
+      PROCEDURE GPU_sDonneNomCompletGroupeRecursif(nIdGroupe est un entier)
+      
+      sNomComplet est une chaîne unicode=""
+      
+      // recherche du groupe
+      HLitRecherchePremier(GPU_Groupe,IDGroupe,nIdGroupe)
+      SI HTrouve _et_ GPU_Groupe.IDGroupeParent<>nIdGroupe ALORS
+      	sNomGroupe est un chaîne UNICODE=GPU_Groupe.Nom
+      	nIdgroupeParent est un entier = GPU_Groupe.IDGroupeParent
+      	sNomGroupeParent est un chaîne UNICODE=GPU_sDonneNomCompletGroupeRecursif(nIdgroupeParent)
+      	// construction du nom complet du groupe
+      	SI sNomGroupeParent<>"" ALORS
+      		sNomComplet=sNomGroupeParent+TAB+sNomGroupe
+      	SINON
+      		sNomComplet=sNomGroupe
+      	FIN
+      FIN
+      
+      RENVOYER sNomComplet
+     type : 458752
+   -
+     name : GPU_nDonneEtatChamp
+     procedure_id : 1286490731238291081
+     type_code : 15
+     code : |1-
+      // Résumé : Récupération de l'état d'un champ
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nDonneEtatChamp (<sNomCible> est chaîne UNICODE, <bEstUnComposantExterne> est booléen, <sNomElement> est chaîne UNICODE, <sNomCompletChamp> est chaîne UNICODE, <nIdUtilisateurOuGroupe> est entier, <bEstUnGroupe> est booléen)
+      //
+      // Paramètres :
+      //	sNomCible (chaîne UNICODE) : Nom de la cible dans laquelle se trouve l'élément
+      //	bEstUnComposantExterne (booléen) : Vrai si la cible est un composant externe et Faux si c'est le projet
+      //	sNomElement (chaîne UNICODE) : nom de l'élément contenant le champ
+      //	sNomCompletChamp (chaîne UNICODE) : nom complet du champ
+      //	nIdUtilisateurOuGroupe (entier) : identifiant auto du groupe ou de l'utilisateur concerné
+      //	bEstUnGroupe (booléen) : Vrai si c'est un groupe et Faux si c'est un utilisateur
+      // Valeur de retour :
+      // 	Type indéterminé : état su champ
+      //
+      // 	nEtatChamp : <indiquez ici le rôle de nEtatChamp>
+      PROCEDURE GPU_nDonneEtatChamp(sNomCible est une chaine unicode, bEstUnComposantExterne est un booléen, sNomElement est une chaine unicode, sNomCompletChamp est une chaine unicode, nIdUtilisateurOuGroupe est un entier, bEstUnGroupe est un booleen)
+      
+      // paramétrage de la requête
+      REQ_GPU_EtatElement.ParamNomCible=sNomCible
+      REQ_GPU_EtatElement.ParamEstUnComposantExterne=bEstUnComposantExterne
+      REQ_GPU_EtatElement.ParamIDUtilisateurOuGroupe=nIdUtilisateurOuGroupe
+      REQ_GPU_EtatElement.ParamEstUnGroupe=bEstUnGroupe
+      REQ_GPU_EtatElement.ParamNomElement=sNomElement+"."+sNomCompletChamp
+      
+      // exécution de la requête
+      SI HExécuteRequête(REQ_GPU_EtatElement,hSansSablier)=Faux ALORS
+      	RENVOYER gpwEtatDéfaut
+      FIN
+      
+      // lecture du résultat
+      HLitPremier(REQ_GPU_EtatElement)
+      SI HEnDehors() ALORS
+      	RENVOYER gpwEtatDéfaut
+      FIN
+      
+      RENVOYER REQ_GPU_EtatElement.Etat
+     type : 458752
+   -
+     name : GPU_bMotsDePasseCryptes
+     procedure_id : 1507360717213349303
+     type_code : 15
+     code : |1+
+      // Résumé : Savoir si les mots de passe des utilisateurs sont cryptés
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_bMotsDePasseCryptes ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Type indéterminé : Vrai si les mots de passe sont cryptés
+      //
+      PROCEDURE GPU_bMotsDePasseCryptes()
+      
+      // il faut regarder dans le fichier des options
+      hlitpremier(GPU_Options)
+      si HEnDehors(GPU_Options)=faux ALORS
+      	renvoyer GPU_Options.CryptageMDP
+      FIN
+      
+      // les mots de passe ne sont pas cruyptés
+      renvoyer faux
+      
+     type : 458752
+   -
+     name : GPU_sDonneMotPasseEnClair
+     procedure_id : 1507361451652862258
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération du mot de passe en clair d'un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_sDonneMotPasseEnClair (<sLogin> est chaîne UNICODE)
+      //
+      // Paramètres :
+      //	sLogin (chaîne UNICODE) : login de l'utilisateur
+      // Valeur de retour :
+      // 	Type indéterminé : Mot de passe se trouvant dans le fichier GPU_Utilisateur
+      //
+      PROCEDURE GPU_sDonneMotPasseEnClair(sLogin est une chaine unicode)
+      
+      // recherche de l'utilisateur
+      HLitRecherchePremier(GPU_Utilisateur,Login,sLogin)
+      si PAS HTrouve(GPU_Utilisateur) ALORS
+      	renvoyer ""
+      FIN
+      
+      renvoyer GPU_Utilisateur.MotPasse
+      
+     type : 458752
+   -
+     name : GPU_pDonneMotPasseCrypte
+     procedure_id : 1507363444517758042
+     type_code : 15
+     code : |1+
+      // Résumé : Récupération du buffer contenant le mot de passe crypté d'un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_pDonneMotPasseCrypte (<sLogin> est chaîne UNICODE)
+      //
+      // Paramètres :
+      //	sLogin (chaîne UNICODE) : login de l'utilisateur
+      // Valeur de retour :
+      // 	buffer : mot de passe crypté
+      //
+      PROCEDURE GPU_pDonneMotPasseCrypte(sLogin est une chaine UNICODE)
+      
+      BufferMotDePasse est un buffer
+      
+      // récupération du buffer contenant le mot de passe crypté dans le fichier GPU_UtilisateurMDP
+      HLitRecherchePremier(GPU_Utilisateur,Login,sLogin)
+      SI PAS HTrouve(GPU_Utilisateur) ALORS
+      	// recherche avec l'adresse email
+      	HLitRecherchePremier(GPU_UtilisateurWeb, Email, sLogin)
+      	SI PAS HTrouve(GPU_UtilisateurWeb) ALORS
+      		RENVOYER BufferMotDePasse
+      	FIN
+      	HLitRecherchePremier(GPU_UtilisateurMDP,IDUtilisateur,GPU_UtilisateurWeb.IDUtilisateur)
+      SINON
+      	HLitRecherchePremier(GPU_UtilisateurMDP,IDUtilisateur,GPU_Utilisateur.IDUtilisateur)
+      FIN
+      	
+      // récupération du buffer contenant le mot de passe crypté
+      SI HTrouve(GPU_UtilisateurMDP) ALORS
+      	BufferMotDePasse=GPU_UtilisateurMDP.MotPasseCrypte
+      FIN
+      
+      RENVOYER BufferMotDePasse
+      
+      
+      
+      
+      
+     type : 458752
+   -
+     name : GPU_bCrypteMotDePasse
+     procedure_id : 1507403795727073249
+     type_code : 15
+     code : |1+
+      // Résumé : Crypte le mot de passe d'un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_bCrypteMotDePasse (<nIdUtilisateur> est entier, <sMotDePasse> est chaîne UNICODE)
+      //
+      // Paramètres :
+      //	nIdUtilisateur (entier) : identifiant auto de l'utilisateur
+      //	sMotDePasse (chaîne UNICODE) : mot de passe à crypter
+      // Valeur de retour :
+      // 	booléen : Faux en cas d'echec
+      //
+      PROCEDURE GPU_bCrypteMotDePasse(nIdUtilisateur est un entier, sMotDePasse est une chaine unicode)
+      
+      // recherche de l'utilisateur dans le fichier des mots de passe cryptés
+      HLitRecherchePremier(GPU_UtilisateurMDP,IDUtilisateur,nIdUtilisateur)
+      
+      // si l'utilisateur existe
+      SI HTrouve(GPU_UtilisateurMDP)
+      	// modification du mot de passe
+      	GPU_UtilisateurMDP.MotPasseCrypte=gpwCrypteMotDePasse(sMotDePasse)
+      	si HModifie(GPU_UtilisateurMDP)=faux ALORS
+      		renvoyer faux
+      	FIN
+      
+      // si l'utilisateur n'existe pas
+      SINON
+      	// ajoute le mot de passe
+      	HRAZ(GPU_UtilisateurMDP)
+      	GPU_UtilisateurMDP.IDUtilisateur=GPU_Utilisateur.IDUtilisateur
+      	GPU_UtilisateurMDP.MotPasseCrypte=gpwCrypteMotDePasse(sMotDePasse)
+      	si HAjoute(GPU_UtilisateurMDP)=faux ALORS
+      		renvoyer faux
+      	FIN
+      FIN
+      
+      renvoyer vrai
+      
+     type : 458752
+   -
+     name : GPU_sDonneCodeChaine
+     procedure_id : 1513240948334230917
+     type_code : 15
+     code : |1+
+      // Résumé : Retourne une chaine contenant un code
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_sDonneCodeChaine (<sValeur> est chaîne UNICODE)
+      //
+      // Paramètres :
+      //	sValeur (chaîne UNICODE) : chaine initiale
+      // Valeur de retour :
+      // 	chaîne UNICODE : code
+      //
+      PROCEDURE GPU_sDonneCodeChaine(LOCAL sValeur est une chaine unicode)
+      
+      sCode est une chaîne UNICODE=DonneGUID(guidBrut)+sValeur
+      sCode=Crypte(HashChaîne(HA_SHA_256,sCode),"",crypteAucun,encodeBASE64)
+      renvoyer sCode
+     type : 458752
+   -
+     name : GPU_nVersion
+     procedure_id : 1607182650574917707
+     type_code : 15
+     code : |1+
+      // Version du GPU
+      PROCEDURE GPU_nVersion()
+      renvoyer nVERSIONCOLGPU
+     type : 458752
+   -
+     name : GPU_VideCache
+     procedure_id : 1733640867320338359
+     type_code : 15
+     code : |1+
+      // Vide le cache
+      PROCEDURE GPU_VideCache()
+      
+      TableauSupprimeTout(gTabCacheGroupe)
+      TableauSupprimeTout(gTabCacheListeGroupes)
+      TableauSupprimeTout(gtabCacheEtatDefaut)
+      TableauSupprimeTout(gTabCacheElement)
+      TableauSupprimeTout(gTabCacheParent)
+     type : 458752
+   -
+     name : GPU_bAjouteOuModifieUtilisateur
+     procedure_id : 1767780540480060970
+     type_code : 15
+     code : |1+
+      // Résumé : Ajoute ou modifie un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_bAjouteOuModifieUtilisateur (<bAjoute> est booléen, <clUtilisateur> est gpwUtilisateur)
+      //
+      // Paramètres :
+      //	bAjoute (booléen) :Vrai pour ajouter ou Faux pour modifier
+      //	clUtilisateur (gpwUtilisateur) :informations sur l'utilisateur
+      // Valeur de retour :
+      // 	booléen : Retourne Faux en cas d'échec
+      //
+      PROCEDURE GPU_bAjouteOuModifieUtilisateur(bAjoute est un booléen, clUtilisateur est un gpwUtilisateur)
+      
+      // initialisation de l'erreur
+      gsDerniereErreur=""
+      
+      // en ajout
+      SI bAjoute ALORS
+      	HRAZ(GPU_Utilisateur)
+      	HRAZ(GPU_UtilisateurWeb)
+      
+      // en modification
+      SINON
+      	HLitRecherchePremier(GPU_Utilisateur,Login,clUtilisateur.Login)
+      	SI pas htrouve(GPU_Utilisateur) ALORS
+      		gsDerniereErreur=<§@1ff6ec00008eec320008§>
+      		RENVOYER Faux
+      	FIN
+      	HLitRecherchePremier(GPU_UtilisateurWeb,IDUtilisateur,GPU_Utilisateur.IDUtilisateur)
+      	SI PAS HTrouve(GPU_UtilisateurWeb) ALORS
+      		SI PAS GPU_bAjouteUtilisateurWeb(GPU_Utilisateur.IDUtilisateur) ALORS
+      			gsDerniereErreur=<§@1ff6ec00008eec32000a§>
+      			RENVOYER Faux
+      		FIN
+      	FIN
+      FIN
+      
+      bMotsDePasseCryptes est un booléen=gpwMotsDePasseCryptés()
+      
+      // informations sur l'utilisateur
+      GPU_Utilisateur.Login=clUtilisateur.Login
+      GPU_Utilisateur.Nom=clUtilisateur.Nom
+      GPU_Utilisateur.Prenom=clUtilisateur.Prénom
+      GPU_Utilisateur.Téléphone=clUtilisateur.Téléphone
+      GPU_Utilisateur.Superviseur=clUtilisateur.Superviseur
+      GPU_Utilisateur.MotPasseASaisir=Faux
+      
+      SI clUtilisateur.MotDePasse<>"" ALORS
+      	SI bMotsDePasseCryptes ALORS
+      		GPU_Utilisateur.MotPasse=GPU_sDonneCodeChaine(clUtilisateur.MotDePasse+clUtilisateur.Login+GPU_Utilisateur.Nom)
+      		// mot de passe en clair
+      	SINON
+      		GPU_Utilisateur.MotPasse=clUtilisateur.MotDePasse
+      	FIN
+      FIN
+      
+      // ajoute l'utilisateur
+      SI bAjoute ALORS
+      	SI HAjoute(GPU_Utilisateur)=Faux ALORS
+      		gsDerniereErreur=<§@1ff6ec00008eec320009§>
+      		RENVOYER Faux
+      	FIN
+      
+      // modifie l'utilisateur
+      SINON
+      	SI HModifie(GPU_Utilisateur)=Faux ALORS
+      		gsDerniereErreur=<§@1ff6ec00008eec32000a§>
+      		RENVOYER Faux
+      	FIN
+      FIN
+      
+      bModifMotDePasseCrypte est un booléen=Faux
+      
+      // si le mot de passe est précisé et qu'il doit être sauvé en crypé
+      SI clUtilisateur.MotDePasse<>"" _ET_ bMotsDePasseCryptes ALORS
+      	sMotDePasse est une chaîne UNICODE=clUtilisateur.MotDePasse
+      	SI GPU_bCrypteMotDePasse(GPU_Utilisateur.IDUtilisateur,sMotDePasse)=Faux
+      		SI bAjoute ALORS
+      			gsDerniereErreur=<§@1ff6ec00008eec320009§>
+      			HSupprime(GPU_Utilisateur)
+      		SINON
+      			gsDerniereErreur=<§@1ff6ec00008eec32000a§>
+      		FIN
+      		RENVOYER Faux
+      	FIN
+      	
+      	// indique que le mot de passe crypté a été modifié
+      	bModifMotDePasseCrypte=Vrai
+      FIN	
+      
+      // informations web sur l'utilisateur
+      GPU_UtilisateurWeb.IDUtilisateur=GPU_Utilisateur.IDUtilisateur
+      GPU_UtilisateurWeb.Email=clUtilisateur.Email
+      GPU_UtilisateurWeb.ActivationOK=clUtilisateur.Activé
+      SI clUtilisateur..IDExterne<>"" ALORS
+      	GPU_UtilisateurWeb.IDExterne=clUtilisateur..IDExterne
+      FIN
+      
+      // ajoute l'utilisateur
+      SI bAjoute ALORS
+      	SI HAjoute(GPU_UtilisateurWeb)=Faux ALORS
+      		gsDerniereErreur=<§@1ff6ec00008eec320009§>
+      		HSupprime(GPU_Utilisateur)
+      		SI bModifMotDePasseCrypte ALORS
+      			HSupprime(GPU_UtilisateurMDP)
+      		FIN
+      		RENVOYER Faux
+      	FIN
+      	
+      	// ajout de l'utilisateur dans le groupe des utilisateurs connectés
+      	HLitRecherchePremier(GPU_Groupe,Nom,gpwUtilisateursEnregistrés)
+      	SI HTrouve(GPU_Groupe) ALORS
+      		HRAZ(GPU_Utilisateur_Groupe)
+      		GPU_Utilisateur_Groupe.IDGroupe=GPU_Groupe.IDGroupe
+      		GPU_Utilisateur_Groupe.IDUtilisateur=GPU_Utilisateur.IDUtilisateur
+      		SI HAjoute(GPU_Utilisateur_Groupe)=Faux ALORS
+      			HSupprime(GPU_Utilisateur)
+      			HSupprime(GPU_UtilisateurWeb)
+      			SI bModifMotDePasseCrypte ALORS
+      				HSupprime(GPU_UtilisateurMDP)
+      			FIN
+      			RENVOYER Faux
+      		FIN
+      	FIN
+      	
+      	// modifie l'utilisateur
+      SINON
+      	SI HModifie(GPU_UtilisateurWeb)=Faux ALORS
+      		gsDerniereErreur=<§@1ff6ec00008eec32000a§>
+      		RENVOYER Faux
+      	FIN
+      FIN
+      
+      // ok
+      RENVOYER Vrai
+      
+      
+     type : 458752
+   -
+     name : GPU_VideCacheInfoUtilisateur
+     procedure_id : 1806372672480714492
+     type_code : 15
+     code : |1-
+      // Vide le cache des infos de l'utilisateur courant
+      PROCEDURE GPU_VideCacheInfoUtilisateur()
+      
+      gstCacheInfoUtilisateur.sLogin = ""
+      gstCacheInfoUtilisateur.bNom = Faux
+      gstCacheInfoUtilisateur.sNom = ""
+      gstCacheInfoUtilisateur.bPrenom = Faux
+      gstCacheInfoUtilisateur.sPrenom = ""
+      
+      VariableRAZ(gclUtilisateur)
+     type : 458752
+   -
+     name : GPU_AjouteAuthLogin
+     procedure_id : 1951581672714265701
+     type_code : 15
+     code : |1+
+      // Ajoute un paramétrage d'authentification
+      PROCEDURE GPU_AjouteAuthLogin(nTypeAuth est un entier, sLibelle est une chaine unicode, sImage est une chaine unicode)
+      
+      stLogin est une STAuthLogin
+      stLogin.nTypeAuth = nTypeAuth
+      stLogin.sLibelle = sLibelle
+      stLogin.sImage = sImage
+      
+      TableauAjoute(gTabAuthLogin, stLogin)
+      
+      
+      
+     type : 458752
+   -
+     name : GPU_nRechercheUtilisateur
+     internal_properties : BQAAAAUAAADaVcYQD6fw4Rioh3G2NAuuSfbOegbhzVZKrMQRQdpaS9x52yqZ5KBZMnqG7ZaS1Vr4wMRFpjLhY4SgQa5MCDxxYxQqEqQeo4Iags4uGAHCqTpHvYmxuq882PUw6i+oahMf9gWHuB3hipz/HV6nR3onIGb8jXuMN8y3/MunLBysoZGz60kq5Uwp1/RW/jN3AniL1GcGGbI=
+     procedure_id : 1952310047634930480
+     type_code : 15
+     code : |1+
+      // Résumé : Recherche un utilisateur
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_nRechercheUtilisateur (<sLoginOuEmail> est chaîne UNICODE, <clUtilisateur> est gpwUtilisateur [, <bAvecMotPasse> est booléen])
+      //
+      // Paramètres :
+      //	sLoginOuEmail (chaîne UNICODE) : login ou email de l'utilisateur
+      //	clUtilisateur (gpwUtilisateur) : informations sur l'utilisateur trouvé (sortie)
+      //	bAvecMotPasse (booléen - valeur par défaut=0) : Vrai pour récupérer le mot de passe dans le gpwUtilisateur
+      // Valeur de retour :
+      // 	entier : Retourne une constante correspondant au résultat
+      //
+      PROCEDURE GPU_nRechercheUtilisateur(sLoginOuEmail est une chaine UNICODE, clUtilisateur est un gpwUtilisateur, bAvecMotPasse est un booléen=faux)
+      
+      // initialisation de l'erreur
+      gsDerniereErreur=""
+      
+      sReq est une chaine unicode=
+      [
+      	SELECT 	GPU_Utilisateur.Nom AS Nom,	
+      			GPU_Utilisateur.Prenom AS Prenom,	
+      			GPU_Utilisateur.Login AS Login,
+      			GPU_Utilisateur.Superviseur AS Superviseur,	
+      			GPU_Utilisateur.Téléphone AS Téléphone,	
+      			GPU_Utilisateur.MotPasse AS MotPasse,	
+      			GPU_UtilisateurWeb.Email AS Email,	
+      			GPU_UtilisateurWeb.ActivationOK AS ActivationOK,
+      			GPU_UtilisateurWeb.IDExterne AS IDExterne
+      	FROM 	GPU_Utilisateur,	
+      			GPU_UtilisateurWeb
+      	WHERE 	GPU_Utilisateur.IDUtilisateur = GPU_UtilisateurWeb.IDUtilisateur
+      ]
+      
+      bRechercheParLogin est un booleen = FAUX
+      
+      // pour une adresse email
+      SI Contient(sLoginOuEmail,"@") ET  Contient(sLoginOuEmail,".") ALORS
+      	sReq+=RC+"AND GPU_UtilisateurWeb.Email = '%1'"
+      // pour un login
+      SINON
+      	bRechercheParLogin = Vrai
+      	sReq+=RC+"AND GPU_Utilisateur.Login = '%1'"
+      FIN
+      
+      sReq=ChaîneConstruit(sReq,sLoginOuEmail)
+      
+      // exécution de la requête
+      sdReq est une source de donnees
+      SI HExécuteRequêteSQL(sdReq,hRequêteDéfaut,sReq)=Faux ALORS
+      	gsDerniereErreur=<§@1ff6ec00008eec320008§>
+      	RENVOYER gpwErreur
+      FIN
+      
+      // lecture du résultat
+      HLitPremier(sdReq)
+      SI HEnDehors() ALORS
+      	// si on fait une recherche par login, on cherche l'utilisateur uniquement dans le fichier GPU_Utilisateur
+      	SI bRechercheParLogin _ET_ GPU_nRechercheUtilisateurParLogin(sLoginOuEmail,clUtilisateur,bAvecMotPasse) = gpwOk ALORS
+      		RENVOYER gpwOk
+      	FIN
+      
+      	gsDerniereErreur=<§@1ff6ec00008eec320008§>
+      	RENVOYER gpwUtilisateurInconnu
+      FIN
+      
+      // résultat
+      clUtilisateur.Login=sdReq.Login
+      clUtilisateur.Email=sdReq.Email
+      clUtilisateur.Nom=sdReq.Nom
+      clUtilisateur.Prénom=sdReq.Prenom
+      clUtilisateur.Téléphone=sdReq.Téléphone
+      clUtilisateur.Superviseur=sdReq.Superviseur
+      clUtilisateur.Activé=sdReq.ActivationOK
+      clUtilisateur..IDExterne=sdReq.IDExterne
+      IF bAvecMotPasse THEN
+      	clUtilisateur.MotDePasse=sdReq.MotPasse
+      FIN
+      
+      // ok
+      RENVOYER gpwOk
+      
+     type : 458752
+   -
+     name : GPU_nAuthLogin
+     procedure_id : 1952337080151819223
+     type_code : 15
+     code : |1+
+      // Retourne Vrai si un type de connexion est possible
+      PROCEDURE GPU_nAuthLogin(nType est un entier, nIndicePerso = 0) : entier
+      
+      nCpt est un entier = 0
+      nIndice est un entier = 0
+      
+      // parcours du tableau des types de connexion
+      POUR TOUT stAuth de gTabAuthLogin
+      	nIndice++
+      	
+      	// compteur des types perso
+      	si stAuth.nTypeAuth = 0 ALORS
+      		nCpt++
+      	FIN
+      	
+      	// trouvé
+      	si stAuth.nTypeAuth = nType ALORS
+      		// si c'est un type perso, il faut vérifier l'indice
+      		si nType <> 0 _OU_ nCpt = nIndicePerso ALORS
+      			RENVOYER nIndice
+      		FIN
+      	FIN
+      FIN
+      
+      renvoyer 0
+      
+      
+     type : 458752
+   -
+     name : GPU_InitPourInscription
+     procedure_id : 1952588842549778987
+     type_code : 15
+     code : |1+
+      // Création d'un groupe "Utilisateurs enregistrés" si les inscriptions sont autorisées
+      PROCEDURE GPU_InitPourInscription()
+      
+      // si les inscriptions ne sont pas autorisées, ne fait rien
+      si pas gbAvecInscription ALORS
+      	retour
+      FIN
+      
+      sReq est une chaine unicode=
+      [
+      	SELECT	GPU_Groupe.Nom AS Nom,	
+      			GPU_Groupe.IDGroupeParent AS IDGroupeParent
+      	FROM 	GPU_Groupe
+      	WHERE 	GPU_Groupe.IDGroupeParent = 0
+      	AND	GPU_Groupe.Nom = '%1'
+      ]
+      sReq=ChaîneConstruit(sReq,gpwUtilisateursEnregistrés)
+      
+      // exécution de la requête et si le groupe n'existe pas
+      sdReq est une source de donnees
+      SI HExécuteRequêteSQL(sdReq,hRequêteDéfaut,sReq) ALORS
+      	HLitPremier(sdReq)
+      	si HEnDehors() ALORS
+      		// création du groupe des utilisateurs connectés
+      		HRAZ(GPU_Groupe)
+      		GPU_Groupe.Nom=gpwUtilisateursEnregistrés
+      		HAjoute(GPU_Groupe)
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : GPU_nRechercheUtilisateurParLogin
+     procedure_id : 1952971249253818836
+     type_code : 15
+     code : |1-
+      // Recherche d'un utilisateur par son login
+      PROCEDURE GPU_nRechercheUtilisateurParLogin(sLogin est une chaine UNICODE, clUtilisateur est un gpwUtilisateur, bAvecMotPasse est un booléen=faux) : entier
+      
+      // recherche de l'utilisateur en case sensitive
+      HLitRecherchePremier(GPU_Utilisateur,Login,sLogin)
+      SI PAS HTrouve(GPU_Utilisateur) ALORS
+      	// non trouvé, recherche en majuscule
+      	HLitRecherchePremier(GPU_Utilisateur,Login,Majuscule(sLogin))
+      FIN
+      
+      // trouvé
+      SI HTrouve(GPU_Utilisateur) ALORS
+      	// remplit les infos
+      	clUtilisateur.Login=sLogin
+      	clUtilisateur.Nom=GPU_Utilisateur.Nom
+      	clUtilisateur.Prénom=GPU_Utilisateur.Prenom
+      	clUtilisateur.Téléphone=GPU_Utilisateur.Téléphone
+      	clUtilisateur.Superviseur=GPU_Utilisateur.Superviseur
+      	SI bAvecMotPasse ALORS
+      		clUtilisateur.MotDePasse=GPU_Utilisateur.MotPasse
+      	FIN
+      
+      	// ok
+      	RENVOYER gpwOk
+      FIN
+      
+      renvoyer gpwUtilisateurInconnu
+     type : 458752
+   -
+     name : GPU_bAjouteUtilisateurWeb
+     procedure_id : 1954119976935114986
+     type_code : 15
+     code : |1-
+      // Ajout d'un utilisateur Web
+      PROCEDURE GPU_bAjouteUtilisateurWeb(nIDUtilisateur est un entier)
+      
+      // informations web sur l'utilisateur
+      GPU_UtilisateurWeb.IDUtilisateur=nIDUtilisateur
+      
+      // ajoute l'utilisateur
+      SI HAjoute(GPU_UtilisateurWeb)=Faux ALORS
+      	gsDerniereErreur=<§@1ff6ec00008eec320009§>
+      	RENVOYER Faux
+      FIN
+      
+      // ok
+      renvoyer vrai
+     type : 458752
+   -
+     name : GPU_AvecInscription
+     procedure_id : 1954124795889215558
+     type_code : 15
+     code : |1+
+      // Indique si les utilisateurs peuvent s'inscrire
+      PROCEDURE GPU_AvecInscription(bAvecInscription est un booléen)
+      gbAvecInscription = bAvecInscription
+      
+     type : 458752
+   -
+     name : GPU_bAvecInscription
+     procedure_id : 1955629816829510645
+     type_code : 15
+     code : |1+
+      // retourne vrai si les inscriptions sont autorisées
+      PROCEDURE GPU_bAvecInscription()
+      renvoyer gbAvecInscription
+     type : 458752
+   -
+     name : GPU_bAvecConnexionAuth
+     procedure_id : 1955630181901816493
+     type_code : 15
+     code : |1+
+      // Retourne Vrai si on autorise les connexion Google, Facebook, etc.
+      PROCEDURE GPU_bAvecConnexionAuth()
+      renvoyer pas gTabAuthLogin..Vide
+     type : 458752
+   -
+     name : GPU_stDonneAuthLogin
+     procedure_id : 1955631195547954051
+     type_code : 15
+     code : |1+
+      // Retourne un paramétrage pour une connexion Google, Facebook, etc.
+      PROCEDURE GPU_stDonneAuthLogin(nIndice est un entier) : STAuthLogin
+      renvoyer gTabAuthLogin[nIndice]
+      
+      
+     type : 458752
+   -
+     name : GPU_sDonneLibelleAuthLogin
+     procedure_id : 1955643509347691226
+     type_code : 15
+     code : |1+
+      // Retourne le libellé d'une connexion personnalisée
+      PROCEDURE GPU_sDonneLibelleAuthLogin(nIndice est un entier) : chaine unicode
+      renvoyer gTabAuthLogin[nIndice].sLibelle
+     type : 458752
+   -
+     name : GPU_sDonneImageAuthLogin
+     procedure_id : 1955643956024328115
+     type_code : 15
+     code : |1+
+      // Retourne l'image d'une connexion personnalisée
+      PROCEDURE GPU_sDonneImageAuthLogin(nIndice est un entier) : chaine unicode
+      RENVOYER gTabAuthLogin[nIndice].sImage
+      
+     type : 458752
+   -
+     name : GPU_sDonneDernierLogin
+     procedure_id : 1957840428042026056
+     type_code : 15
+     code : |1+
+      // Résumé : Retourne le dernier login
+      // Syntaxe :
+      //[ <Résultat> = ] GPU_sDonneDernierLogin ()
+      //
+      PROCEDURE GPU_sDonneDernierLogin()
+      sLogin est une chaine unicode=gclUtilisateur.Login
+      renvoyer sLogin
+     type : 458752
+   -
+     name : GPU_AjouteRGPDElement
+     procedure_id : 2002320857352993669
+     type_code : 15
+     code : |1-
+      // Ajoute un élément dans le tableau associatif contenant la liste des éléments manipulant des données personnelles
+      PROCEDURE GPU_AjouteRGPDElement(sNomElement est une chaine unicode)
+      gtaRGPDElement[sNomElement] = Vrai
+     type : 458752
+   -
+     name : GPU_bRGPGElement
+     procedure_id : 2002321991224427877
+     type_code : 15
+     code : |1+
+      // Retourne Vrai si l'élément manipule des données personnelles
+      PROCEDURE GPU_bRGPGElement(sNomElement est une chaine unicode) : booléen
+      renvoyer gtaRGPDElement[sNomElement]..Existe
+      
+     type : 458752
+   -
+     name : GPU_ActiveSecurite
+     procedure_id : 2004527980903913380
+     type_code : 15
+     code : |1+
+      // Active la sécurité sur les fichiers
+      PROCEDURE GPU_ActiveSecurite()
+      
+      GPU_ActiveSecuriteSurFichier("GPU_Utilisateur")
+      GPU_ActiveSecuriteSurFichier("GPU_UtilisateurWeb")
+      GPU_ActiveSecuriteSurFichier("GPU_UtilisateurMDP")
+      GPU_ActiveSecuriteSurFichier("GPU_Utilisateur_Groupe")
+      GPU_ActiveSecuriteSurFichier("GPU_Groupe")
+      GPU_ActiveSecuriteSurFichier("GPU_SecuriteExport")
+      GPU_ActiveSecuriteSurFichier("GPU_MotPasseExport")
+      GPU_ActiveSecuriteSurFichier("GPU_Parametres")
+     type : 458752
+   -
+     name : GPU_ActiveSecuriteSurFichier
+     procedure_id : 2004530940136413980
+     type_code : 15
+     code : |1+
+      // Active la sécurité sur un fichier
+      PROCEDURE GPU_ActiveSecuriteSurFichier(sNomFichier)
+      
+      si HFichierExiste(sNomFichier) _et_ {sNomFichier, indFichier}..CryptageFic = hCryptageNon alors
+      	Sablier(Vrai)
+      	HModifieStructure(sNomFichier, hmsSansContrôle+hmsTâcheDeFond)
+      	Sablier(Faux)
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x1ff6ec00008eec32
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text :
+      fr-FR : Une erreur a été détectée pendant la récupération des données.
+      en-GB : An error occurred while retrieving the data.
+      es-ES : An error occurred while retrieving the data.
+     index : 0
+   -
+     text :
+      fr-FR : Erreur lors de l'enregistrement de la connexion.
+      en-GB : Error while saving the connection.
+      es-ES : Error while saving the connection.
+     index : 1
+   -
+     text :
+      fr-FR : Cas non géré
+      en-GB : Case not managed
+      es-ES : Caso no soportado
+     index : 2
+   -
+     text :
+      fr-FR : Incohérence dans la base de données.
+      en-GB : Inconsistency in the database.
+      es-ES : Inconsistency in the database.
+     index : 3
+   -
+     text :
+      fr-FR : "Impossible d'ajouter l'utilisateur "
+      en-GB : "Unable to add the user "
+      es-ES : "Unable to add the user "
+     index : 4
+   -
+     text :
+      fr-FR : Cas non géré
+      en-GB : Case not managed
+      es-ES : Caso no soportado
+     index : 5
+   -
+     text :
+      fr-FR : Utilisateur non trouvé.
+      en-GB : User not found.
+      es-ES : User not found.
+     index : 6
+   -
+     text :
+      fr-FR : Impossible d'ajouter l'utilisateur.
+      en-GB : Unable to add the user.
+      es-ES : Unable to add the user.
+     index : 7
+   -
+     text :
+      fr-FR : Utilisateur non trouvé.
+      en-GB : User not found.
+      es-ES : User not found.
+     index : 8
+   -
+     text :
+      fr-FR : Impossible d'ajouter l'utilisateur.
+      en-GB : Unable to add the user.
+      es-ES : Unable to add the user.
+     index : 9
+   -
+     text :
+      fr-FR : Impossible de modifier l'utilisateur.
+      en-GB : Unable to modify the user.
+      es-ES : Unable to modify the user.
+     index : 10
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

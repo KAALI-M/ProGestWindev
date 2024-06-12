@@ -1,0 +1,199 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_EditeurXLS
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_EditeurXLS
+ identifier : 0x2216b6000b95c9cd
+ internal_properties : BQAAAAUAAAC2D2u51ukfUtFLQSFPm6AvaVm4BybyN8PexYOxcOHHTPio1S1hzR6M57z3s79kmINx9+88l8zHhR4Hk7CXL3zHbC4Xa+CTOnAjdBb/k4RpC4bdfb70BpBqaH5jJtgh1FqO6pV4u7dPC2B5N7p/lxf6WQp9ywVh2IdbP0K7aahm49Jm62mOsAP54qKDJ0ChoLxmklJuJVIaWiu4Trcm3aWE2OWr2E7Y6qTaVHGiI3+73zJAqThNpB0hZNQ57UeQGnmIgwCz0ZHpPB4N0EcFowTtZ5vZRVLy4ZYzqPYHRii1sG6mMotdb9ybyCneJG2L8dqMf1IZc912QVG0TjQs9+Vi9VpCeRPAHeJXQCTzXQSXFUG7nKAqmzk4tdRk5fzB2avvmZiUXmkwdtbbXD40oskVnqkO5jCh20OxoOa+A4Xy79SHS/viqx4IKlRpbFQ32/4t4u0npw4jHMCBnrN41X8RXf6GR1b1PnQPFkVytFcR4fQn7WITTiX9bVPeVBEK6oYHLs6uboG/tUADqnQciY9QT+A1vFMSnYdBBvkvEkTQA6AA9NxaE9tTPFPKPKjjq7yfKYoG+h/hKWOk2ct4zWt9ZhE+fgs+6XWcvfD+Otvgz5d25i/fsWqWp1xv4+fl8UGHpwHXcFteRl5HnISCLMYymzINGSI4O/hkt3R8tdx4E2sFMI06O+tZ4jhhBzwTIU/Qf1vTxasuidt2ufqdffjKbib4UElS
+ controls :
+  -
+    name : FI_EditeurXLS
+    identifier : 0x2216b6000b96c9cd
+    internal_properties : BQAAAAUAAACzMKFky0f7ZSuIthaOJIn+01h815zt40PBW6KRIeSj5M3Vz2FE6qDGlBhLDMAjDsTPsP05HKTsOg/FhN1GJiV6pbrpTu304Tig5oHfERX7RGVojhlbYLJdHKYSQCzerrV85cydMb17MTQnBv9jG65vcJfuAb/m/pufRy6tA33+pAoxaHmuPvqK8SEmZqq9GewKYvwjTMfOEHkzihLlqR8vTwV+kuIvASLdDHxguO1HKAKVV6Vc18jAsL+zotbZvk5Sg2/lIjg0UfaW6r9k/5AqkYmwcxhW/hdY53ClzgtChfP4ueyR3qJ/sRgfoIc8Z0wg7/mUFyzIbfyXq5tCzV1rnDiOwi3CDUT1/j5Fe0QuLeQufj+u3QJ8WyFszihI9i226WRheYEZzXT1abt/dXD78qEEB4AAX7zAM/Nzbc/Dmj6KuoxDbM5jn+DGSvUVur0=
+    controls :
+     -
+       name : TBLR_SansNom
+       identifier : 0x2216b6070bbee331
+       internal_properties : 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
+       columns : []
+       breaks : []
+       type : 114
+       code_elements :
+        type_code : 137
+        p_codes : []
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1+
+         PROCEDURE MaFenêtre(gsChemin est une chaine, IDarchieDoc est un entier sur 8 octets = 0)
+         
+         DocCourrierChargé est un CFichierChargé
+         
+         SI IDarchieDoc > 0 ALORS 
+         	DocCourrierChargé.ChargeFichierParID(IDarchieDoc)
+         	SI DocCourrierChargé.GetCheminFichier() <> "" ALORS
+         		TBLR_SansNom = DocCourrierChargé.ChemFichier
+         		gsChemin	=  DocCourrierChargé.ChemFichier
+         		
+         	SINON 
+         		Info("Le fichier IDArchive : ("+ IDarchieDoc+") n'a pas été trouvé dans l'archive!")
+         	FIN
+         SINON
+         	SI gsChemin <> "" ALORS
+         		//	FEN_EditeurDocuments.Titre						= fExtraitChemin(gsChemin,fFichier)
+         		Tblr_SansNom										= gsChemin
+         		FI_WinDevFAA_RubanTableur.BTN_WDFAA_Nouveau.Visible	= Faux
+         		FI_WinDevFAA_RubanTableur.BTN_WDFAA_Ouvrir.Visible	= Faux
+         	//	FI_WinDevFAA_RubanTableur.BTN_WDFAA_Enregistrer.Visible	= Faux
+         	SINON
+         		
+         	FIN
+         fin
+         
+         fermerSansSauvegarde, fermerAvecSauvgarde est un booléen = (0,0)
+      -
+        code : |1+
+         TBLR_SansNom.Modifié = 0
+        type : 14
+      -
+        code : |1+
+         // enregisrement du Document 
+         SI fermerAvecSauvgarde = 1 ALORS
+         	sauvegardeFichier()
+         SINON
+         	//3* fermeture normal
+         	SI fermerSansSauvegarde ALORS
+         		//rein fermeture
+         	SINON //demande d'action à l’utilisateur
+         		SI TBLR_SansNom.Modifié = 1 ALORS
+         			//1 : &Enregistrer
+         			//2 : &Ne pas enregistrer
+         			//3 : &Annuler
+         			SELON Dialogue(<§?1216B90901C4A3FB§>)
+         				cas 1 
+         					SI gsChemin = "" ALORS // cas d'un nouveau document
+         						gsChemin = fSélecteur(fRepExe(), "NouveauDocument.docx", ...
+         						"Sélectionner un fichier", ...
+         						"Fichier (*.docx)" + TAB + "*.docx"  + TAB + "*.*", "docx", fselCrée+fselExiste)
+         						TBLR_SansNom.Sauve(gsChemin)
+         						TBLR_SansNom.Ferme()
+         					SINON 
+         						TBLR_SansNom.Sauve(gsChemin)
+         						TBLR_SansNom.Ferme()
+         					FIN
+         				cas 2 
+         				cas 3 
+         					RepriseSaisie(TBLR_SansNom)
+         			FIN
+         		FIN
+         	fin
+         fin
+         
+         
+         RENVOYER gsChemin
+        type : 2
+ menu :
+  name : _Menu
+  identifier : 0x2216b5f70b92a4ef
+  internal_properties : BQAAAAUAAADiNkh1O6bsUdojdCyc5rvMKOb4KGdCuKthEpeb9YgToXKniNhTa74qqTWW/kn9AHiAwpYRHxIfmwB4rUjWCTsHt96kYeogf6aF/P/qLr5YC+/q/4GecKHBIXzFYdqjswEetQud+3e/nTe5+xoit8ijZM2EBaVaXCH6Yfad
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+  procedures :
+   -
+     name : fermerFichier
+     procedure_id : 1507087089582546428
+     type_code : 14
+     code : |1+
+      procédure global fermerFichier(avecSauvegarde est un booléen = 0, sansSauvegarde est un booléen = 0 )
+      fermerSansSauvegarde  = sansSauvegarde
+      fermerAvecSauvgarde  = avecSauvegarde
+      
+      
+     type : 458752
+   -
+     name : sauvegardeFichier
+     procedure_id : 1507087128237523799
+     type_code : 14
+     code : |1-
+      procédure global sauvegardeFichier()
+      
+      SI IDarchieDoc > 0 // cas de fichier ouvert par IDArchivedoc ALORS
+      	TBLR_SansNom.Sauve(DocCourrierChargé.ChemFichier) // sauvegarde des modif vers le fichier local
+      	fichierCopie est un chaine = fExtraitChemin(gsChemin,fRépertoire+fFichier)+"(1)"+fExtraitChemin(gsChemin,fExtension)
+      	fCopieFichier(gsChemin,fichierCopie) // copie du fichier car le fichier ne peut être pas 
+      	DocCourrierChargé.ChemFichier = fichierCopie
+      	DocCourrierChargé.SauveFichierDansArchive("","","","","","","",1)  // les paramètre ne seront pas requis	
+      	fSupprime (	fichierCopie ) // supression du fichier crée	
+      	TBLR_SansNom.modifié =0
+      SINON
+      	SI gsChemin = "" ALORS // cas d'un nouveau document
+      		gsChemin = fSélecteur(fRepExe(), "NouveauDocument.docx", ...
+      		"Sélectionner un fichier", ...
+      		"Fichier (*.docx)" + TAB + "*.docx"  + TAB + "*.*", "docx", fselCrée+fselExiste)
+      		TBLR_SansNom.Modifié =0
+      	SINON 
+      		
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : estModifié
+     procedure_id : 1507115500455136708
+     type_code : 14
+     code : |1+
+      procédure global estModifié()
+      
+      renvoyer TBLR_SansNom.Modifié
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x1216b5f700c8a4ef
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+ dialogs :
+  -
+    identifier : 0x1216b90901c4a3fb
+    internal_properties : BQAAAAUAAACh0PAuoqyADyEG+wGMbQCQQkxuv+pRb60n3XEmHNnoQZKP4Z5IlqlyO61G7L/PEEIpViH75ngWKtF60pPgfu0ZZ7qhlYf2T2NamaNN7Qt+nQ==
+    label :
+     fr-FR : "\"voulez-vous enregistrer le fichier modifié ? \""
+    image : {}
+    cancel_button : 2
+    buttons :
+     -
+       label :
+        fr-FR : "&Enregistrer"
+       image : {}
+       value : 1
+     -
+       label :
+        fr-FR : "&Ne pas enregistrer"
+       image : {}
+       value : 2
+     -
+       label :
+        fr-FR : "&Annuler"
+       image : {}
+       value : 3
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

@@ -1,0 +1,3 @@
+//MO644-645.TXT ANA00644 TO ANA00645
+DocAGenerer		NNF*	FcihierAGenerer	nouveau nom DocAGenerer
+DocAGenerer		FRN		

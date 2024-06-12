@@ -1,0 +1,111 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MAutorisAbsence
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x13f5491b09dd5b10
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MAutorisAbsence est une Classe <mapping=AutorisAbsence><§rad:1§>
+      	<§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	<MAPPING><§rad:1§>
+      	m_nIDAutorisAbsence	est un entier sur 8 octets	<mapping=IDAutorisAbsence, clé unique><§rad:1§>
+      	m_nIDUtilisateur	est un entier				<mapping=IDUtilisateur><§rad:1§>
+      	m_dDatedébut		est une date				<mapping=Datedébut><§rad:1§>
+      	m_dDateFin			est une date				<mapping=DateFin>
+      	m_hHeureDébut		est une Heure					<MAPPING=heureDébut>
+      	m_hHeureFin			est une Heure	<MAPPING=heureFin>
+      	m_nIDtypeAutAbsence	est un entier sur 8 octets	<mapping=IDtypeAutAbsence><§rad:1§>
+      	m_sIntérim			est une chaîne UNICODE			<mapping=Intérim>
+      	m_bufFichier		est un buffer				<mapping=Fichier><§rad:1§>
+      	m_sLieuRésidence	est une chaîne unicode			<mapping=LieuRésidence>
+      	m_sDépart			est une chaîne Unicode			<mapping=Départ>
+      	m_sDestinations		est une chaîne UNICODE			<mapping=Destinations>
+      	m_sCauseAbs			est une chaîne UNICODE <mapping=CauseAbs>
+      	m_sNomfichier		est une chaîne ANSI 		<mapping=Nomfichier>
+      	m_nDuréeCongés		est un entier sans signe sur 2 octets <mapping=DuréeCongés>
+      	m_bRémunérée		est un booléen <mapping=Rémunérée>
+      	<FIN><§rad:1§>
+      	
+      	typeAutAbsence	est une chaine 
+      	<§rad:1§>
+      	<§rad:1§>
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1438136036493253407
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()<§rad:1§>
+      VariableRAZ(m_nIDAutorisAbsence	)<§rad:1§>
+      VariableRAZ(m_nIDUtilisateur	)<§rad:1§>
+      VariableRAZ(m_dDatedébut		)
+      VariableRAZ(m_dDateFin			)
+      VariableRAZ(m_nIDtypeAutAbsence	)<§rad:1§>
+      VariableRAZ(m_sIntérim			)<§rad:1§>
+      VariableRAZ(m_bufFichier		)<§rad:1§>
+      VariableRAZ(m_sLieuRésidence	)<§rad:1§>
+      VariableRAZ(m_sDépart			)<§rad:1§>
+      VariableRAZ(m_sDestinations		)<§rad:1§>
+      VariableRAZ(m_sCauseAbs			)
+      VariableRAZ(m_hHeureDébut	)
+      VariableRAZ(m_hHeureFin		)
+      VariableRAZ(typeAutAbsence		)
+      
+      <§rad:1§>
+      <§rad:1§>
+      <§rad:1§>
+      <§rad:1§>
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1438136036493318943
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()<§rad:1§>
+     type : 655360
+   -
+     name : _SetID
+     procedure_id : 1438136633495485451
+     type_code : 12
+     code : |1-
+      procédure _SetID(IDAutoisAbsence est un entier sur 8 octet =0)<§rad:1§>
+      SI IDAutoisAbsence > 0 ALORS<§rad:1§>
+      	REQ_AutoAbsenceUser.paramIDAutAbsence = IDAutoisAbsence
+      	HExécuteRequête(REQ_AutoAbsenceUser,MaConnexion,hRequêteDéfaut)<§rad:1§>
+      	FichierVersMémoire(This,REQ_AutoAbsenceUser)<§rad:1§>
+      	typeAutAbsence = REQ_AutoAbsenceUser.TypeAutAbsence
+      	SINON<§rad:1§>
+      	renvoyer -1<§rad:1§>
+      FIN<§rad:1§>
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x13f5491b09e65b5e
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

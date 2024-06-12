@@ -1,0 +1,3 @@
+//MO624-625.TXT ANA00624 TO ANA00625
+AutorisAbsence		TAR	473	nouvelle taille enregistrement : 473
+AutorisAbsence	ObjetAbsence	RUB+		ObjetAbsence est une nouvelle rubrique

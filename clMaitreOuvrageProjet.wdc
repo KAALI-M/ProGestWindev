@@ -1,0 +1,147 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clMaitreOuvrageProjet
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x12f218c502835cee
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clMaitreOuvrageProjet est une Classe
+      herite de MMaitresOuvrages
+      public CONSTANT
+      	EntitéMO		est un MEntitésOrg
+      	Représentant	est un clReprésenantEntité
+      	tabEntitésHiérarchiques est un tableau dynamique de MEntitésOrg
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1365180871476534510
+     type_code : 27
+     code : |1+
+      procédure Constructeur()
+      EntitéMO.constructeur()
+      Représentant.Constructeur()
+      VariableRAZ(tabEntitésHiérarchiques)
+      
+      
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1365180871476600046
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : ChercheMaitreOuvrage
+     procedure_id : 1365194271774734821
+     type_code : 12
+     code : |1+
+      procédure ChercheMaitreOuvrage (IDprojet est un entier , DateRef est une date ="" )
+      si IDprojet> 0 et DateRef <>"" ALORS
+      	REQ_MaitreOuvragedeProjet.ParamDateRef= DateRef
+      	REQ_MaitreOuvragedeProjet.ParamIDEntitésOrg = Null
+      	REQ_MaitreOuvragedeProjet.ParamIDProjet = IDprojet
+      	
+      	HExécuteRequête(REQ_MaitreOuvragedeProjet,MaConnexion,hRequêteDéfaut)
+      	HLitPremier(REQ_MaitreOuvragedeProjet)
+      	SI PAS HEnDehors(REQ_MaitreOuvragedeProjet) ALORS
+      		FichierVersMémoire(This,REQ_MaitreOuvragedeProjet)
+      		This.DateRéf = DateRef
+      		EntitéMO.SetID(This.m_nIDEntitésOrg)
+      		Représentant.SetID(This.m_nIDEntitésOrg,DateRef)
+      		
+      		// Remplir la table des entités hiérarchiques
+      		Entité est une MEntitésOrg <= EntitéMO
+      		tabEntitésHiérarchiques.Ajoute(Entité)
+      		tantque Entité.m_nIDEntitésOrgParent > 0
+      			Entité.SetID(Entité.m_nIDEntitésOrgParent)
+      			tabEntitésHiérarchiques.Ajoute(Entité)
+      		FIN
+      		TableauInverse(tabEntitésHiérarchiques)
+      		
+      	SINON
+      		this.constructeur()		
+      		RENVOYER -1
+      	FIN
+      FIN
+      
+      
+     type : 458752
+   -
+     name : SupprimeMO
+     procedure_id : 1365194323314353811
+     type_code : 12
+     code : |1+
+      procédure SupprimeMO(IDEntitéOrg	est un entier sur 8 octets, IDProjet		est un entier  )
+      SI IDEntitéOrg> 0 ET IDProjet > 0 ALORS
+      	HLitRecherche(MaitresOuvrages,IDProjet_IDEntitésOrg,HConstruitValClé(MaitresOuvrages,IDProjet_IDEntitésOrg,IDProjet,IDEntitéOrg))
+      	SI HTrouve(MaitresOuvrages) ALORS
+      		HSupprime(MaitresOuvrages)
+      	FIN
+      sinon
+      	RENVOYER -1
+      FIN
+     type : 458752
+   -
+     name : AjouteMO
+     procedure_id : 1365194357674166215
+     type_code : 12
+     code : |1-
+      procédure AjouteMO(IDEntitésOrg	est un entier sur 8 octets, IDProjet		est un entier )
+      SI IDEntitésOrg> 0 ET IDProjet> 0 ALORS
+      	HLitRecherche(MaitresOuvrages,IDProjet_IDEntitésOrg,HConstruitValClé(MaitresOuvrages,IDProjet_IDEntitésOrg,IDProjet,IDEntitésOrg))
+      	SI PAS HTrouve(MaitresOuvrages) ALORS
+      		HAjoute(MaitresOuvrages)
+      	FIN
+      sinon
+      	renvoyer -1
+      FIN
+     type : 458752
+   -
+     name : ModifieMO
+     procedure_id : 1365194387739009745
+     type_code : 12
+     code : |1+
+      procédure ModifieMO()
+      
+     type : 458752
+   -
+     name : RécupèreEntitéHierarchique
+     procedure_id : 1367537451523604558
+     type_code : 12
+     code : |1+
+      procédure RécupèreEntitéHierarchique(rangHierarchique est un entier)
+      Entité est une MEntitésOrg
+      si rangHierarchique > 0 et rangHierarchique <= tabEntitésHiérarchiques.Occurrence() ALORS
+      	RENVOYER tabEntitésHiérarchiques[rangHierarchique]
+      sinon
+      	renvoyer Entité
+      FIN
+      
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x12f218b1027d118e
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,156 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Onglet
+ major_version : 25
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_Onglet
+ identifier : 0x22d47d2c3627d1f1
+ internal_properties : BQAAAAUAAABH49LPyxBqH+vV9CDAC2WZ21gWFZXUsKa4p0WYEVplhA+cRjSeSvjuA5TVpMoRBVIlreyRAbzZkF0ZNyHP3vPJvSz40VpVg/6avCEE9MmC4veFwIZt20M1tqoDCaLcj1PagrV/xR4qr1b4I195uz39z2dEUYTRPZ7N05JRmFvdMssNjVKWzszsDeofo9qe6bneJsLBXGXgMTS+IcNY5elgqKZhqAjV7i72OvRkkEw+jYCTPErSzqrsgf5JWX/bpe0GjTrVKu8Mfeq9tZz5Q+dFbE68MDoaRm1BxtVEFcfDkfjkf1mWJ/f1/wXUyCzpiMepi0shRUsAnJUae61WPO/fQVh6x3/G8w6qbNmnjwFCYVjx9baSBQ1nBBC37aIGX1IM6M48lfhcDd6XtFK81ry8/H4HhbFhL59MwqjDG7GJWVdl5deF3iJG/MwPJ5GcpzWXmMjYrad87JyYEzFp3ZMqCNvNbXw85yUEzneiBJZZf6HLyDCETYhgJphzMDJP6uEZ2u+k1vhSZqT6qCg/GJpKSglnTxkJUy2jq3XEEhqaIocylBhi43eqBIoQHmutVaSKgO/bfCgyeoBuvcQEN2kSzZPnK+FHt5FoXPxibDdf5Ttpiy5GMBq2Mx8MgHgiiOLSmCMYOtEbEfqp21fpF6zgcrY=
+ controls :
+  -
+    name : ONG_Menu
+    identifier : 0x22d47d2c3629d1f1
+    internal_properties : BQAAAAUAAACTA9sacboh6tYhhNIlmfRvtAC5HC714VN+6uaqoKidHUHltGltS0odLfRcyImgPmyei9fm6CKO6Nc5jVkSQRezgr4jjRlbm3AQpOm9UCWImeZeoYxg3/Oet2PT1a+L+1s7QSn+L2G+pp6JkU3V6z09P+i9IUqlyBhx3B6OUD7iwmqGPcZpVlLDn9mOKQBhj65znKOUbkyJSClGK0eRXTFg4IBPSYOXfbMvx97PJ2SFaJj73TGTlt1ATFRbF/D9N00TcMc9M/JTVyQnNInqS4WJOBrTAdiEOd6OMetFRjkyCq3RjgKit0mnOfCM0xFqoHsLAL8LS0Exlq6b1m4xBREkUK70NhqPwzlOhBSHo67ELX/j7uFVkICz/Lh/bBFyXgr6VhXPwypoqfFN3wYe8kAz6lxIdj0p2yGr3lug01D0fiikSeAIto301KYjRIflFHpzuaToitOv0MQGSpm7XIbnbV47tStyryxGl9YS3V8atQ1x5C1qYlQkhCU9yoWCCsUCZKuu8clDapfFU5wp7bcUhvI5teqwJ2yqmTmcYv5wL47wLmK4HKROabsTfQsXkVTg2V5EY4I1gE4is9fnXp5TUygBR9ZQcm8BRpmxzgqjpB8/QhgcpDXke5HvnxdincrA57NtpJaegYZdm+n0m3pRwssJnUcyTQnnb39fNzI9parIDtMgWwKeo3LWLj+CX2OhzPJZY54USHGdXm8lSFvma6Hc3S28TcZM67wDTaUrcHeg6c3tx3+70Xw6XpAVnQICescDIdt1u2X1Xe4X4bHxb9F6s/KvXYhlgqayEjdXN5g0zBRWbcb1T8VRxNjWu14kl3kiS6UzXJa0cnXgkT9DQLtnC/T9pEuTaTR5wilDVOn1CgZ6TdPMPAnNQjU3g2X3HYla0XdvOjsoYmfeRuemqa+P9G5Ay+jsO0NcXlaN3oshd4xc45vOoTsvI5YEEs7tKekhRCQC+GdXYjSawAcqG7IKf329lXQqSucTgX328yMYzF9pNh13Ggqi+rID/SDz42pUIN40Y8hIetqtFNEYKjV2H/eu8O7hHjGbW0HOT6FcPjfU/zmnLNVITr4rrUCRPuFpRyK1yxf2BRMzQgCYSngCDqqR5eE+uEWNVuNU4c7kZvjTt7lbh2/0lPbnr7Cknz3OXTwAoFOEHxOPDoGXr61KBpcvc1jFYCxM6A==
+    tabs : []
+    type : 16
+    code_elements :
+     type_code : 24
+     p_codes : []
+  -
+    name : LIB_MonApplication
+    identifier : 0x22d47d2c3628d1f1
+    internal_properties : BQAAAAUAAADxTDvG9Ewuu2Vs+TiJsfcCd8PkhNja9bTT7pav0VDeVMK6WPzOL7K095vvZWGsDjeb5qGbxeWCZ4QWeVfZyHTrW3R8S6l3AnCkfiBKfPBHXzGfQB9QJFUEFJrC6eheIkYaD+Q7CQ+FSwq3Cj7zF0OXLVShs7yhQ5GIDpbEdtH2JwH6tbYs33EVMuRakjjiSZ19NkoVIofeEX5E3oS1cbBM7W0QHAJEjqACMAWqFZIqa73Jv0pGyiiORldNeEFLN289/gOFYWlEuZz0vj+on3MIaJ3dh2aW4PmmaR92ytI0ekBoYPzJbdV8RSLjvXDaHlPepWOZx9S0mKxb2lskrLfzjS0Jc4LF5T6BXf1irQVbnz/NqtNBBM7xVKVMej1rux1M3z6D40TIaQ==
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1+
+         MoiMême=ProjetInfo(piNomProjet)
+        type : 14
+      -
+        type : 18
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BQAAAAUAAADKsJlg2Ltpl5r+Zc57ji8hPYDMiS+bliLE2xo0GExCKcZS4g8MvJbO2unxMH/Ew39ndfsVCH3lk9Ucyyb/y6CvEtFTeSEEVgWC9VqHT5smVjYSsTm3xSlJws4D0hDxpd8sOBfyevI2eVq/TrbRbp7AxCwyQeebeJ8Vql3El3wPHveQ0bNOFXtUApIe9yo9j3SOLpbdRFl1JQiYphbUcFWvVifGYP6UzeQeq8zpvBmm+2wfsFD1bc0OmaE1khBHvQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : BQAAAAUAAABqPQh6HC8RxAVkp2SqPYLuZrfVhd+1KX4lx22hIT8uqEpE6yP7Sbc2rmVqdmL816EWzXOkEe9ijOtYwchZKAfpy3B1cNqhpJgsnbUs
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      PROCEDURE MaFenêtre()
+      mafenetre..Titre=ProjetInfo(piNomProjet)
+   -
+     code : |1-
+      // ouverture des fenêtres dans l'onglet dynamique
+      //OuvreOuActiveVolet(<Nom de la fenêtre interne, <Nom du fichier>)
+     type : 34
+   -
+     code : |1+
+      
+      
+     type : 2
+   -
+     code : |1+
+      
+      
+     type : 40
+   -
+     code : |1+
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+     type : 165
+   -
+     code : |1+
+      
+      
+     type : 177
+   -
+     code : |1+
+      
+      
+     type : 180
+   -
+     type : 230
+     enabled : false
+  procedures :
+   -
+     name : OuvreOuActiveVolet
+     procedure_id : 1356847015770575345
+     type_code : 14
+     code : |1-
+      // Résumé : Ouverture d'une fenêtre dans un volet de l'onglet dynamique
+      // Syntaxe :
+      //OuvreOuActiveVolet (<sNomFenetre> est chaîne, <sLibelle> est chaîne [, <Cle> [, ...]])
+      //
+      // Paramètres :
+      //	sNomFenetre (chaîne ANSI) : Nom de la fenêtre à ouvrir
+      //	sLibelle (chaîne ANSI) : Libellé du volet
+      //	Cle (valeur par défaut="") : Clé pour la construction de l'alias
+      // 	<*> : Paramètres de la fenêtre
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE OuvreOuActiveVolet(sNomFenetre est une chaine<nom de fenêtre>, sLibelle, Cle="", *)
+      
+      sAlias est une chaine=sNomFenetre+sLibelle+Cle
+      
+      // touche CTRL enfoncée
+      bActif est un booléen=pas ToucheEnfoncée(teControl)
+      
+      // volet courant
+      sAliasCourant est une chaine=ONG_Menu
+      
+      // désactive l'affichage
+      MaFenêtre..AffichageActif=Faux
+      
+      // si le volet n'existe pas encore
+      SI OngletEtat(ONG_Menu,sAlias)=voletInexistant ALORS
+      	// ouverture du nouveau volet
+      	NouvOnglet est un champ <- OngletOuvre(ONG_Menu,sLibelle,sNomFenetre,Cle,MesParamètres[4 A])
+      	NouvOnglet..Alias=sAlias
+      
+      // sinon activation de l'onglet
+      SINON SI bActif
+      	ONG_Menu=sAlias	
+      FIN
+      
+      // si le volet ne doit pas être actif (touche CTRL enfoncée)
+      SI PAS bActif ALORS
+      	ONG_Menu=sAliasCourant
+      FIN
+      
+      // active l'affichage
+      MaFenêtre..AffichageActif=Vrai
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x12d47cdc05299896
+  internal_properties : BQAAAAUAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAADhc0EkBbq4a/KWtoKGBaLSprq8XnPLi4iMJzG/fFbo7k/4synxoef8wqjrsxT82OKKhBy6abwJJOfdpBzwN3zsK9hTE2z0EdYcgbl4cw6izENuG5NHrPsN5XutY2JXyFOrgnVj3TBnRz0=

@@ -1,0 +1,2 @@
+//MO541-542.TXT ANA00541 TO ANA00542
+Contrainte_EntitésOrg_Projet		NWL	EntitésOrg (IDEntitésOrg) et Projet (IDTitulaireEntité)	Nouvelle liaison entre les fichiers EntitésOrg (IDEntitésOrg) et Projet (IDTitulaireEntité)

@@ -1,0 +1,2 @@
+//MO636-637.TXT ANA00636 TO ANA00637
+typeTask	TypeTask	NNR	Type	ATTENTION : la rubrique Type a pour nouveau nom TypeTask

@@ -1,0 +1,3 @@
+//MO572-573.TXT ANA00572 TO ANA00573
+EntitésOrg		TAR	575	nouvelle taille enregistrement : 575
+EntitésOrg	TypePays	RUB+		TypePays est une nouvelle rubrique

@@ -1,0 +1,3 @@
+//MO512-513.TXT ANA00512 TO ANA00513
+GPU_Utilisateur		TAR	1713	nouvelle taille enregistrement : 1713
+GPU_Utilisateur	test	RUB-		la rubrique test est supprimée

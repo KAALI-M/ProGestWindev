@@ -1,0 +1,5 @@
+//MO625-626.TXT ANA00625 TO ANA00626
+AutorisAbsence		TAR	422	nouvelle taille enregistrement : 422
+AutorisAbsence	CauseAbs	NNR	MotifAbs	ATTENTION : la rubrique MotifAbs a pour nouveau nom CauseAbs
+AutorisAbsence	CauseAbs	TAI+	30	la rubrique CauseAbs a comme nouvelle taille 81 au lieu de 51
+AutorisAbsence	ObjetAbsence	RUB-		la rubrique ObjetAbsence est supprimée

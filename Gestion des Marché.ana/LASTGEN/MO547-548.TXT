@@ -1,0 +1,5 @@
+//MO547-548.TXT ANA00547 TO ANA00548
+ControlesdesPrix_Rapports	IDPrix_IDCont_IdRappCont	NNR	IDPrix_IDControle_IdRappControle	ATTENTION : la clé IDPrix_IDControle_IdRappControle a pour nouveau nom IDPrix_IDCont_IdRappCont
+ElemPrixValdés		NNF*	ElementsdePrixValidés	nouveau nom ElemPrixValdés
+ElemPrixValdés	IDPrix_IDCont_IdRappCont	NNR	IDPrix_IDControle_IdRappControle	ATTENTION : la clé IDPrix_IDControle_IdRappControle a pour nouveau nom IDPrix_IDCont_IdRappCont
+ElemPrixValdés	IDPrix_IDContr_IdRappCont_IDElemPrix	NNR	IDPrix_IDControle_IdRappControleIDElementPrix	ATTENTION : la clé IDPrix_IDControle_IdRappControleIDElementPrix a pour nouveau nom IDPrix_IDContr_IdRappCont_IDElemPrix

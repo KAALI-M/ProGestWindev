@@ -1,0 +1,74 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clTitulaire
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x12f6475d19806650
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clTitulaire est une Classe
+      herite de MTitulaires
+      public constant 
+      	EntitéTitulaire est un MEntitésOrg
+      	Représentant	est un clReprésenantEntité
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1366358002138965584
+     type_code : 27
+     code : |1-
+      procédure Constructeur()
+      EntitéTitulaire.constructeur()
+      Représentant.Constructeur()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1366358002139031120
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+     type : 655360
+   -
+     name : ChercheTitulaire
+     procedure_id : 1366358002139096656
+     type_code : 12
+     code : |1+
+      procédure ChercheTitulaire(IDProjet		est un entier , dateRef est une Date = DateSys())
+      REQ_TitulairedeProjet.ParamDateRef		= dateRef
+      REQ_TitulairedeProjet.ParamIDEntitésOrg	= Null
+      REQ_TitulairedeProjet.ParamIDProjet		= IDProjet
+      HExécuteRequête(REQ_TitulairedeProjet,MaConnexion,hRequêteDéfaut)
+      HLitPremier(REQ_TitulairedeProjet)
+      
+      SI PAS  HEnDehors(REQ_TitulairedeProjet) ALORS
+      	FichierVersMémoire(This,REQ_TitulairedeProjet)
+      	this.dateRef= dateRef
+      	EntitéTitulaire.SetID(This.m_nIDEntitésOrg)
+      	Représentant.setid(This.m_nIDEntitésOrg,dateRef)
+      SINON
+      	this.constructeur()
+      	RENVOYER -1
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x12f37f120c13009c
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

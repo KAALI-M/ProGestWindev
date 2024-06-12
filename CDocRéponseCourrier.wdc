@@ -1,0 +1,139 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CDocRéponseCourrier
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1216cd171064f9ff
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CDocRéponseCourrier est une Classe
+      Public Constant
+      IDDocCourrier est un entier sur 8 octets  // si IDDrive>0 Alors Fichier est dans archive (sauvé ou charger depuis)
+      sChemFichier est une chaine
+      estVide est un booléen 
+      Privé
+      bFichierASuprimer est un booléen //si fichier chargé depuis Drive
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1303454641113397775
+     type_code : 27
+     code : |1-
+      procédure Constructeur()
+      IDDocCourrier = 0
+      
+      sChemFichier =""
+      estVide= vrai
+      bFichierASuprimer = faux
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1303454641113463311
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      si  bFichierASuprimer = vrai ALORS
+      	fSupprime(sChemFichier)
+      FIN
+     type : 655360
+   -
+     name : ChargeFichierParID
+     procedure_id : 1303454641113528847
+     type_code : 12
+     code : |1-
+      procédure ChargeFichierParID(_IDarchiveDoc est un entier sur 8 octets)
+      SI  bFichierASuprimer = Vrai ALORS
+      	fSupprime(sChemFichier)
+      FIN
+      IDDocCourrier = _IDarchiveDoc
+      sChemFichier = ""
+      estVide =faux
+      bFichierASuprimer = Faux
+     type : 458752
+   -
+     name : ChargeFichierExterne
+     procedure_id : 1303454641113594383
+     type_code : 12
+     code : |1+
+      procédure ChargeFichierExterne(_chemFichier est un chaine)
+      SI  bFichierASuprimer = Vrai ALORS
+      	fSupprime(sChemFichier)
+      FIN
+      IDDocCourrier	= 0
+      sChemFichier		= _chemFichier
+      estVide = Faux
+      bFichierASuprimer = Faux
+     type : 458752
+   -
+     name : ChargeFichierExterneTemporaire
+     procedure_id : 1303454641113725455
+     type_code : 12
+     code : |1-
+      procédure ChargeFichierExterneTemporaire(_chemFichier est un chaine)
+      SI  bFichierASuprimer = Vrai ALORS
+      	fSupprime(sChemFichier)
+      FIN
+      IDDocCourrier	= 0
+      sChemFichier		= _chemFichier
+      estVide =Faux
+      bFichierASuprimer = vrai
+     type : 458752
+   -
+     name : SupprimeFichier
+     procedure_id : 1303454641113790991
+     type_code : 12
+     code : |1+
+      procédure SupprimeFichier()
+      IDDocCourrier	= 0
+      si bFichierASuprimer = vrai ALORS
+      	fSupprime(sChemFichier)
+      	sChemFichier	= ""
+      	bFichierASuprimer = Faux
+      FIN
+      estVide = Vrai
+     type : 458752
+   -
+     name : GetCheminFichier
+     procedure_id : 1303454641113856527
+     type_code : 12
+     code : |1-
+      procedure GetCheminFichier ()
+      Si sChemFichier <> "" ALORS
+      	renvoyer sChemFichier
+      Sinon
+      	si IDDocCourrier > 0 ALORS //fichier chargé depuis Archive
+      			HExtraitMémo(.,DocumentTemporaire,TempDirectory+fSep() +REQ_DonnésCourrier.NomOuvrage + "_Réponse Courrier_n°"+Courriers.Référence+"_"+DateHeureSys()+".docx")
+      			si fFichierExiste (TempDirectory+fSep() +REQ_DonnésCourrier.NomOuvrage + "_Réponse Courrier_n°"+Courriers.Référence+"_"+DateHeureSys()+".docx") ALORS
+      				sChemFichier		= TempDirectory+fSep() +REQ_DonnésCourrier.NomOuvrage + "_Réponse Courrier_n°"+Courriers.Référence+"_"+DateHeureSys()+".docx"
+      				bFichierASuprimer	= Vrai
+      			sinon
+      				sChemFichier = ""
+      			FIN
+      			
+      			renvoyer sChemFichier
+      	sinon
+      		renvoyer ""
+      	FIN
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x1216cd171076fb95
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,3 @@
+//MO627-628.TXT ANA00627 TO ANA00628
+EntitésOrg		TAR	626	nouvelle taille enregistrement : 626
+EntitésOrg	IntituléArab	CNW	Chaîne unicode$Chaîne	la rubrique IntituléArab a pour nouveau type Chaîne unicode

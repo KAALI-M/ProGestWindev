@@ -1,0 +1,3 @@
+//MO571-572.TXT ANA00571 TO ANA00572
+TabDélais		TAR	405	nouvelle taille enregistrement : 405
+TabDélais	Désignation	TAI+	100	la rubrique Désignation a comme nouvelle taille 301 au lieu de 201

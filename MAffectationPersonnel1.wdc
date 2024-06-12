@@ -1,0 +1,110 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MAffectationPersonnel
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x128566cb0289cedd
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MAffectationPersonnel est une Classe <mapping=AffectationPersonnel><§rad:1§>
+      	<§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	<MAPPING>
+      	m_nIDEntitésOrg				est un entier sur 8 octets <mapping=IDEntitésOrg>
+      	m_nIDEmployé				est un entier <mapping=IDEmployé>
+      	m_sQualité					est une chaîne ANSI <mapping=Qualité>
+      	m_dDatedébut				est une date <mapping=Datedébut>
+      	m_dDateFin					est une date <mapping=DateFin>
+      	m_nIDTypePoste				est un entier <mapping=IDTypePoste>
+      	m_sTypePoste 				est une chaîne ANSI <MAPPING=TypePoste>
+      	<FIN>
+      	
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1334585886692265709
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      VariableRAZ(m_nIDEntitésOrg	)
+      VariableRAZ(m_nIDEmployé)
+      VariableRAZ(m_sQualité)
+      VariableRAZ(m_dDatedébut)
+      VariableRAZ(m_dDateFin)
+      VariableRAZ(m_nIDTypePoste)
+      VariableRAZ(m_sTypePoste )
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1334585886692331245
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()
+     type : 655360
+   -
+     name : CherchePoste
+     procedure_id : 1365234223717476712
+     type_code : 12
+     code : |1+
+      procédure CherchePoste(IDUtilisateur est un entier, DateRéf est une date =DateSys())
+      
+      
+      SI IDUtilisateur > 0 ALORS
+      	REQ_AffectationPersonnel.ParamIDEmployé = IDUtilisateur
+      	REQ_AffectationPersonnel.ParamDateRef = DateRéf
+      	
+      	HExécuteRequête(REQ_AffectationPersonnel,MaConnexion,hRequêteDéfaut)
+      	FichierVersMémoire(This,REQ_AffectationPersonnel)
+      SINON
+      	
+      FIN
+      
+     type : 458752
+   -
+     name : ChercheReprésentant
+     procedure_id : 1365234408401113143
+     type_code : 12
+     code : |1+
+      procédure ChercheReprésentant(IDEntitéOrg est un entier sur 8 octets, DateRéf est une date =DateSys())
+      SI IDEntitéOrg > 0 ALORS
+      	REQ_AffectationPersonnel.ParamDateRef = DateRéf
+      	REQ_AffectationPersonnel.ParamIDEmployé = Null
+      	REQ_AffectationPersonnel.ParamTypePoste = "représentant"
+      	REQ_AffectationPersonnel.ParamIDEntitésOrg = IDEntitéOrg
+      	
+      	HExécuteRequête(REQ_AffectationPersonnel,MaConnexion,hRequêteDéfaut)
+      	FichierVersMémoire(This,REQ_AffectationPersonnel)
+      SINON
+      	
+      FIN
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x128566cb0292cf3b
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

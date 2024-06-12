@@ -1,0 +1,115 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MProfilé
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x165234ea3900a5b8
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MProfilé est une Classe <mapping=Profilé><§rad:1§>
+      <§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	<MAPPING>
+      	
+      		m_nIDProfilé	est un entier sur 8 octets	<mapping=IDProfilé, clé unique>
+      		m_t1			est un entier				<mapping=t1>
+      		m_w1			est un entier				<mapping=w1>
+      		m_t2			est un entier				<mapping=t2>
+      		m_w2			est un entier				<mapping=w2>
+      		m_t3			est un entier				<mapping=t3>
+      		m_w3			est un entier				<mapping=w3>
+      		m_nIDmatériaux	est un entier sur 8 octets	<mapping=IDmatériaux>
+      		
+      	<FIN><§rad:1§>
+      	<§rad:1§>
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1608406197508089303
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      VariableRAZ(m_nIDProfilé	)
+      VariableRAZ(m_t1			)
+      VariableRAZ(m_w1			)
+      VariableRAZ(m_t2			)
+      VariableRAZ(m_w2			)
+      VariableRAZ(m_t3			)
+      VariableRAZ(m_w3			)
+      VariableRAZ(m_nIDmatériaux	)
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1608406197508154839
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()<§rad:1§>
+     type : 655360
+   -
+     name : setID
+     procedure_id : 1608406386487874210
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //setID (<nIDProfilé> est entier sans signe sur 8 octets)
+      //
+      // Paramètres :
+      //	nIDProfilé (entier sans signe sur 8 octets) : <indiquez ici le rôle de nIDProfilé>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure setID(nIDProfilé est un entier sur 8 octets)
+      
+      SI nIDProfilé > 0 ALORS
+      	//	
+      	//	REQ_Projets.ParamestMarché	=null
+      	//	REQ_Projets.ParamIDChargéAff	=null
+      	//	REQ_Projets.ParamIDCreatedBy	=null
+      	//	REQ_Projets.ParamIDEntitésAdmin	=null
+      	//	REQ_Projets.ParamIDEtat	=null
+      	//	REQ_Projets.ParamIDGroupeProjets	=null
+      	//	REQ_Projets.ParamIDOuvrages	=null
+      	REQ_Profilé.ParamIDProfilé=nIDProfilé
+      	
+      	HExécuteRequête(REQ_Profilé,MaConnexion,hRequêteDéfaut)
+      	FichierVersMémoire(This,REQ_Profilé)
+      	
+      SINON
+      	This.Constructeur()
+      	
+      FIN
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x165234ea3909a626
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

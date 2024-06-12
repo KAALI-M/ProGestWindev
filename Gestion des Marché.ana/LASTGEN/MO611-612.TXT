@@ -1,0 +1,3 @@
+//MO611-612.TXT ANA00611 TO ANA00612
+Documents		FIC-	Documents	Fichier supprimé Documents
+Contrainte_archivedocs_Documents1		DEL	archivedocs (idArchiveDocs) et Documents (IdArchiveDocs)	Liaison supprimée entre les fichiers archivedocs (idArchiveDocs) et Documents (IdArchiveDocs)

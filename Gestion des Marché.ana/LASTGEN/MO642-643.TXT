@@ -1,0 +1,2 @@
+//MO642-643.TXT ANA00642 TO ANA00643
+TabDélais	MtPénalitéJournal	NNR	MtPénalitéRetard	ATTENTION : la rubrique MtPénalitéRetard a pour nouveau nom MtPénalitéJournal

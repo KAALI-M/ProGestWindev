@@ -1,0 +1,144 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clUtilisateurActuel
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x12f21757022ac9fe
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clUtilisateurActuel est une Classe
+      herite de MGPU_Utilisateur
+      //Données Entité 
+      PUBLIC CONSTANT
+      	PosteActuel				est un clPosteActuelUtilisateur
+      	EntitéUtilisateurActuel	est une MEntitésOrg
+      	VersionOrganisme		est MVersionsOrganismes
+      	Organisme				est un MOrganismes
+      	IDSousEntités			est une chaine	= ""
+      	
+      	tabEntitésHiérarchiques est un tableau dynamique de MEntitésOrg
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1365179299512699390
+     type_code : 27
+     code : |1-
+      procédure Constructeur()
+      VariableRAZ(PosteActuel				)
+      variableraz(EntitéUtilisateurActuel	)
+      VariableRAZ(VersionOrganisme		)
+      VariableRAZ(Organisme				)
+      VariableRAZ(IDSousEntités			)
+      VariableRAZ(tabEntitésHiérarchiques)
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1365179299512764926
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : SetID
+     procedure_id : 1365179767664767457
+     type_code : 12
+     code : |1+
+      procédure SetID(IDutilisateur est un entier )
+      //Donnés Utilisateur
+      HLitRecherchePremier(GPU_Utilisateur,IDUtilisateur,IDutilisateur)
+      SI HTrouve(GPU_Utilisateur) ALORS
+      	FichierVersMémoire(This,GPU_Utilisateur)
+      SINON
+      	renvoyer -1
+      FIN
+      
+      //Données Entités Utilisateur
+      //SI This.m_nIDUtilisateur <> 0 ALORS
+      //	SI PAS HExécuteRequête(REQ_AffectationPersonnel,MaConnexion,hRequêteDéfaut,This.m_nIDUtilisateur,DateSys()) ALORS	
+      //		Erreur(HErreurInfo())
+      //	SINON
+      //		FichierVersMémoire(This.AffectationActuel,REQ_AffectationPersonnel) // affectation
+      //		FichierVersMémoire(This.EntitéUtilisateurActuel,REQ_AffectationPersonnel) // entité
+      //		//IDSousEntités			
+      //	FIN
+      //FIN
+      This.Posteactuel.SetID (IDutilisateur,DateSys())
+      This.EntitéUtilisateurActuel.SetID(PosteActuel.m_nIDEntitésOrg)
+      This.VersionOrganisme.SetID(EntitéUtilisateurActuel.m_nIDVersionsOrg)
+      This.Organisme.SetID(VersionOrganisme.m_nIDOrganismes)
+      
+      // Remplir la table des entités hiérarchiques
+      Entité est une MEntitésOrg <= EntitéUtilisateurActuel
+      tabEntitésHiérarchiques.Ajoute(Entité)
+      TANTQUE Entité.m_nIDEntitésOrgParent > 0
+      	Entité.SetID(Entité.m_nIDEntitésOrgParent)
+      	tabEntitésHiérarchiques.Ajoute(Entité)
+      FIN
+      TableauInverse(tabEntitésHiérarchiques)
+      //sous entités 
+      SI This.EntitéUtilisateurActuel.m_nIDEntitésOrg <> 0 ALORS
+      	sListSousEntités	est une chaîne	= ""
+      	
+      	SI PAS HExécuteRequête(REQ_EntitéVersion,MaConnexion,hRequêteDéfaut,This.EntitéUtilisateurActuel.m_nIDVersionsOrg) ALORS
+      		Erreur(HErreurInfo())
+      	SINON
+      		IDSousEntités += [","] + This.EntitéUtilisateurActuel.m_nIDEntitésOrg
+      		IDSousEntités += [","] + ChercheSousEntités(This.EntitéUtilisateurActuel.m_nIDEntitésOrg)	
+      	FIN
+      	
+      		PROCÉDURE INTERNE ChercheSousEntités ( LOCAL IDentitéParent est un entier sur 8 octets)
+      		sListEntité est une chaine = ""
+      		POUR TOUT REQ_EntitéVersion AVEC IDEntitésOrgParent = IDentitéParent
+      			sListEntité+= [","] + REQ_EntitéVersion.IDEntitésOrg
+      			npos est un entier = HSauvePosition(REQ_EntitéVersion)
+      			sListEntité+= [","] + ChercheSousEntités(REQ_EntitéVersion.IDEntitésOrg)
+      			HRetourPosition(npos)				
+      		FIN
+      		RENVOYER sListEntité
+      		FIN
+      	
+      FIN
+      
+      
+      
+      
+      
+     type : 458752
+   -
+     name : RécupèreEntitéHierarchique
+     procedure_id : 1391016693545139802
+     type_code : 12
+     code : |1+
+      PROCÉDURE RécupèreEntitéHierarchique(rangHierarchique est un entier)
+      
+      Entité est une MEntitésOrg
+      SI rangHierarchique > 0 ET rangHierarchique <= tabEntitésHiérarchiques.Occurrence() ALORS
+      	RENVOYER tabEntitésHiérarchiques[rangHierarchique]
+      SINON
+      	RENVOYER Entité
+      FIN
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x12f2173d022462f7
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

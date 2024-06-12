@@ -1,0 +1,2 @@
+//MO518-519.TXT ANA00518 TO ANA00519
+AffectationPersonnel		NNF*	EntitéPersonnel	nouveau nom AffectationPersonnel

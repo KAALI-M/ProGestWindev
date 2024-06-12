@@ -1,0 +1,7 @@
+//MO613-614.TXT ANA00613 TO ANA00614
+Courriers		TAR	655	nouvelle taille enregistrement : 655
+Courriers	IDParentProjetRéponse	RUB-		la rubrique IDParentProjetRéponse est supprimée
+Courriers	IDDocProjetRpse	RUB-		la rubrique IDDocProjetRpse est supprimée
+DocProjetRpse		FIC-	DocProjetRpse	Fichier supprimé DocProjetRpse
+Contrainte_DocProjetRpse_Courriers		DEL	DocProjetRpse (IDDocProjetRpse) et Courriers (IDDocProjetRpse)	Liaison supprimée entre les fichiers DocProjetRpse (IDDocProjetRpse) et Courriers (IDDocProjetRpse)
+Courrier ProjetRéposne		DEL	Courriers (IDCourriers) et Courriers (IDParentProjetRéponse)	Liaison supprimée entre les fichiers Courriers (IDCourriers) et Courriers (IDParentProjetRéponse)

@@ -1,0 +1,3 @@
+//MO509-510.TXT ANA00509 TO ANA00510
+GPU_Utilisateur		TAR	1764	nouvelle taille enregistrement : 1764
+GPU_Utilisateur	test	RUB+		test est une nouvelle rubrique

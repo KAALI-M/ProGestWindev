@@ -1,0 +1,141 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_EditeurDocuments
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_EditeurDocuments
+ identifier : 0x2216b0b8227a291a
+ internal_properties : BQAAAAUAAACEg5nKqSTJ/xiNQzHPJz7lc4io7nd7Kw8U7HBu0Y+73k4OROGDlgKy7HYb7bo4ZwnYq3mRaIl0gebgPBlKWH+voKLcdeS2uHV3AYbeMKyoIVGSblfT4UP9rgHemgVp4846bKn4anfF8Ra106PALZq2u0BauL6xDwSzAr7TNAEHCSSC/lbvj7wxR8U4zNaZF87G/pEVtqR/bmGz0poaGUZsUwU2lzcmwqcPFEi1KwClQEMMIi4l0sA/ji7tCmADrmghpRmas3ERVFWE7HMbwOIZ45FUoYlJvrwBpciwgEeDJ0CW0mtm9H5s+v3c7KxP3jP4TA/CRd3/Qj4Cp0rBJX9T+ovfFutrUWxKGOOydtu7PdDET/58/nBBMp06rZ3/1fKAZ2wB6Z7SqWiXlRxzzuIw+GUgUSYH3Zb0/C70A/cOo/KeKy2Ifc77Y5MttLG5/Cgi2VF0a7/wk8AxfRJPonz3PKQeXK8vz1kV+4EhPuC2gOtZ92UsIjwzA0sFZHkvWhs9BpwbBPl3YwiCpp+QfOPI2r8zoKcsGOPd9YaceQcwcn0qCr9SHSuO8we45/O2LxM30MLVvfPclC9oIIadrvho/6ee0w4yEgQU/4WMkXbrlAx3nIlmCAd3foZUPfyMgHXFq2c=
+ controls :
+  -
+    name : FI_EditeurDocuments
+    identifier : 0x2216b0b8227b291a
+    internal_properties : BQAAAAUAAAAQ/1jN3XLFju5V8orDbMTKVBtGIUD9XLdCmxpRo8CTnWeAFBh4cvh+eW6KvMp8RcQ3r+7jBlHxutWWmevr+WkEi4CezHDK9DkA8S7NT6D+wQs4rJeH829QqKspe7ScCXp5CRHQz7q2lf3zogKEGAJSQXcu/jHpFAjRp32DCWEr739Ad+0unN5FXfFHIJmCZyPNoAWvW4LAscFrxnjlgB/sz+zPT2rtGM9e4w20mJkb54GFSRCt85DHJeCYXbupd85lCULqlxUk/MwBkfw/WN5nGX2a4MZvOi09n66hcWUWyiZjfqhrskFVOcsZ+YP+uU/hyC43uJpT6IUdsIlqeSdSzYp0iP1DaOjLbn7mFUyY6t9hxz53uigcSdnmi3pevVsoFPGUX01ww9qSOFLnQfm5Q+n3WYGFbepXdfWdB5zI9k7IrUyczbhAH61igZIPTU4l4Q==
+    controls :
+     -
+       name : CFI_SansNom1
+       identifier : 0x2216b0ca227f6e60
+       internal_properties : BQAAAAUAAABbn4V1EgwmGVNOyxBFFByI+teEWkXO4x4uEX2YnVRO5UijfS53YPq7pPhCTNGBa95/+ks9ptj4jOJmWiR5reBcMymmB3LHeVvSFIa6M6vz76TBg04M4fqEn1W3rrtESHdtnwERmys7ki0Wc9PlnuGwnpX/3hXCR7CD0bg5CfwxgusWPdcGjbE84sIZMgcxpUnfnS/PLllqPuSGEL5iqTz4eDQk7NBOZfJDko82vak+4AKYoPHR4GU81uNrejCJVlu/YJXpaR9WZ2TUpE1IRISOC3opWZhDgTDGeDMMtDbY5HwYkc2rFRsmZPKYEvpD3JguGm2Nk3C5vSKdxVe4JpX1BDjekNtdptg4TuEVYXMwymTJhbMXgZJgzrloazIzTDNdjsdWW6qK9ykIWIC7YVJGRwdpqqUhbV81r82Pg1Ddk2XQBOe6TROF3dK5ayDw09+MdTV5Amn8wJsmoySF5QC2tK1fhicRpZ7yQu+ebAx0tw==
+       controls : []
+       type : 31
+       code_elements :
+        type_code : 73
+        p_codes :
+         -
+           type : 33
+           enabled : false
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE MaFenêtre(chemFichier est une chaine, IDArchiveDoc est un entier sur 8 octets = 0)
+         
+         
+          extension est une chaine =""
+         si IDArchiveDoc > 0 ALORS
+         	HLitRecherchePremier(archivedocs,idArchiveDocs,IDArchiveDoc)
+         	SI HTrouve(archivedocs) ALORS
+         		extension = fExtraitChemin(archivedocs.Nom,fExtension)
+         		
+         	sinon
+         		Info("Le fichier IDArchive : ("+ IDarchiveDoc+") n'a pas été trouvé dans l'archive!") 
+         	FIN
+         sinon
+         	si chemFichier <> "" ALORS
+         		extension = fExtraitChemin(chemFichier,fExtension)
+         	FIN
+         FIN
+         
+         
+         
+         selon extension
+         	cas ".pdf" 
+         		ChangeFenêtreSource(CFI_SansNom1,FI_LecteurPDF,chemFichier, IDArchiveDoc)
+         	Cas ".docx"
+         		ChangeFenêtreSource(CFI_SansNom1,FI_EditeurDocx,chemFichier, IDArchiveDoc)
+         	cas ".xlsx"
+         		ChangeFenêtreSource(CFI_SansNom1,FI_EditeurXLS,chemFichier, IDArchiveDoc)
+         	cas "" //nouveau fichier
+         		SELON extension
+         			CAS "pdf" 
+         				ChangeFenêtreSource(CFI_SansNom1,FI_LecteurPDF,"")
+         			CAS "docx"
+         				ChangeFenêtreSource(CFI_SansNom1,FI_EditeurDocx,"")
+         			CAS "xlsx"
+         				ChangeFenêtreSource(CFI_SansNom1,FI_EditeurXLS,"")			
+         			AUTRE CAS
+         				Erreur("le format du fichier <"+fExtraitChemin(chemFichier,fExtension)+"> n'est pas prix en charge ! seuls <docx, xlsx  et pdf sont prix en charge ")	
+         		FIN
+         	AUTRE CAS
+         		erreur("le format du fichier <"+fExtraitChemin(chemFichier,fExtension)+"> n'est pas prix en charge ! seuls <docx, xlsx  et pdf sont prix en charge ")	
+         FIN
+      -
+        code : |1-
+         
+        type : 14
+      -
+        code : |1+
+         
+         renvoyer chemFichier
+        type : 42
+ menu :
+  name : _Menu
+  identifier : 0x2216b0a92277ec8e
+  internal_properties : BQAAAAUAAADiNkh1O6bsUdojdCyc5rvMKOb4KGdCuKthEpeb9YgToXKniNhTa74qqTWW/kn9AHiAwpYRHxIfmwB4rUjWCTsHt96kYeogf6aF/P/qLr5YC+/q/4GecKHBIXzFYdqjswEetQud+3e/nTe5+xoit8ijZM2EBaVaXCH6Yfad
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+  procedures :
+   -
+     name : fermerFic
+     procedure_id : 1507090302231152729
+     type_code : 14
+     code : |1+
+      procédure global fermerFic(avecSauvegarde est un booléen = 0, sansSauvegarde est un booléen = 0 )
+      
+      ExécuteTraitement(FI_EditeurDocuments.CFI_SansNom1.nom+".fermerFichier", trtProcédure,avecSauvegarde,sansSauvegarde)
+      
+     type : 458752
+   -
+     name : estModifi
+     procedure_id : 1507098892352359657
+     type_code : 14
+     code : |1+
+      procédure global estModifi()
+      renvoyer ExécuteTraitement(FI_EditeurDocuments.CFI_SansNom1.Nom+".estModifié", trtProcédure)
+      
+      
+     type : 458752
+   -
+     name : sauvegardeFic
+     procedure_id : 1507106163182920631
+     type_code : 14
+     code : |1+
+      procédure global sauvegardeFic()
+      ExécuteTraitement(FI_EditeurDocuments.CFI_SansNom1.Nom+".sauvegardeFichier", trtProcédure)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x1216b0a90539ec8e
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

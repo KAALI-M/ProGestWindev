@@ -1,0 +1,74 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_Edition_Projet
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_Edition_Projet
+ identifier : 0x20f4751207f3bcdd
+ internal_properties : BQAAAAUAAACTRsk9MpYyMCLYxEkKIY6dnkSvwb12D7kAX+6fO0wh4CRzvAuorwmMAfyKTdNQIL/S7osNEyjmZ/wMI3oOdwL/dWf4vcB1akH5zUpjmkWFpDGpl958gnb/Fl82tmcIed9lon5zuRs+M4VPpN/wAzj5sOCIbD6JsV9Aj/F7SeV55ic/GOSX36CVxTCz/l5PvBgvQI7PMAAFUkL1l+hJipTJk7loGmfQJ9bs+44foZd1rkz+zEq2hS0FDd25VCc3eKNNLVOdu15PyoHlIzGHdx5Ium/qCrlqVNb5ddAAl2UUFAIzMwJwwLUtx7dAEQ3W114OUVd2vH2zxNAxQyMGBV5rJ658IXXAjJMSJL6csS+fHa8Wi9fYdB6xkDlG6+M6xIjV3LHNhAfXP1o4KXK8LR48dZSTakxenievb6r3HypVV96C4IM6Hb18AlR7mRnuGaT9bQEm82D+Ld9BY63ZcjsvOszhXJINigtOclDDRsiNN9Y+bhmB3W1fKSOz4dADrjfWtoDpgKE1llZMT+nclWgSN/6Oo+546JPoeiucJx5NcAjRRvVQBjukzgd3eoZztk3oOKmC9906j2NlNAgBEpDQYqoVgDkj9TaPw89YY0PldKQtQKFTLWXkUd9bMbmOFxexkbfc20Oc1qnSI4HFsHqOjw==
+ controls :
+  -
+    name : FI_Edition_Projet
+    identifier : 0x20f4751207f4bcdd
+    internal_properties : BQAAAAUAAADR8FJK/tOjw7nswOD5L0rAPH/2JEDyztSwDf2QbfAFUzhfFv3r39m5jr//1nKw1iOoFRNjTkXGhjOpYkt+mvtjjIXOFJtpp6LCBdjSSnpdxZgO7s3fxJ8mssEEnvA4hDhiwuRXTqS+6aHWodtzTMm9IRkM4HqG1ST+xGtxct/hWOTfE3I7dE8+JFcSmivkODN4ffLeZTsS+m2LOV47Wyyl4bejE5naXEf3ZBU0e1Hu1CtEcjoz7WeDogevtFaXfpkffOTo62XwefeTeX+w30ax7RDQG7CnAXQHihZarVygfJau2Kx/aHRU8Zmi3CIxhJeQZzo5Ve0Rx5IuLjjTkjKfydHgcWBpZ+g8Ev3xTAtUGG1niULm5iB7eMN00sGbkWtyPQcpa65+1LKdN7wMOMZ/koiFTyi0auVWxEBZmDewzVbdttCDzPPzgJFJMN5eQmwRoDojToXo6PllqSAi4raC1jPaqQ==
+    controls :
+     -
+       name : FRM_SansNom1
+       identifier : 0x20f4752707f81184
+       internal_properties : BQAAAAUAAAC4jxhPPfelduIPMHH9sGOgsMfj9Xk0zp/z5/VS47CZBv+Y9zbN+DS4ezzI28LVUvatfmEpQPqC5k+0EUGCL4zwNabYKRDlQNDjeuDDzH4XZJ/ekeZT0b2MLvOtZziQs6QBmGkffP6GQ3gCuDCWO+xbPMMq9eLQXrojHrt5aSqn13I+O44SEi1j59y6egm2w+6Qg7REch6+ASYV9lbsJDL8afKm95TwI+qwvlkmePNRUfAPKE4x655tx8JqJ2+LU8fY1eB/Gsxen2nMxAWyEE+LYLKNLnutoUhlz76+yZ8f8gFBYfQ9/bwGZCexYDQpokh78hkg9+1L9aBdyb3dsnPxd5NFkMB9bG47klrXwjw3NA==
+       type : 20
+       code_elements :
+        type_code : 32
+        p_codes : []
+     -
+       name : LIB_ProjetEdition
+       identifier : 0x20f47739086e2573
+       internal_properties : BQAAAAUAAADxClih/I8oTNQK9QsPOh2/PQ4eJRitm3xqA7Hv0JP20L8ZFhF/CN4j7uac7O2BPUrmgUzdD5Ep3FvwzIRIrmLhRN186tu7deOSq8n/OaE4GNCWUw0VJ3ZrlxOufgqQ/wOYEglJ43iWpDfPAKflH2VkTvJ6wM91ydV3+oEOJSerqho6n70ftJJ6+xQGso2HxqkZ8tCEOEM6xuxQgDAGV+5tjrplVF12vuZEo4FMM4cj0qKmqsPabxFz7+ym1pAzwBDYUYYrkPzoX7knW+Sr+yAhrvzcM6dtdKAgNLFJL/7VVVAWC06C7vON1axaqPZ+/yuj+H/DOYsHzU4JyBCDNJYya+LD7I769rxiXIJpOc27S8ysZu0QrcRKkvcbWHuslADwSmLz105iQJ86XUhNXCqOOSan1hWS16tIlWM0JiecXHprFBYqDPTiUonPa36JWZ0Ax/yL
+       type : 3
+       code_elements :
+        type_code : 2
+        p_codes :
+         -
+           type : 18
+           enabled : false
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE MaFenêtre()
+         gnTri est une chaine = 1 // permet le trie initial des projet en etat en cours
+ menu :
+  name : _Menu
+  identifier : 0x20f474f807f0579b
+  internal_properties : BQAAAAUAAABSRlhFi5Y8wUr0EhuV1Jka3CLwjq+O4jlpDY/75TjJoyle9oddWd70q4gGgbQfHm3YI89XkynQtNic3/8C/6UkNhfZUmx+IysMKKS/LBiyRteYdGrX9xQCBy5CN+YdPZ9cD/qMNMaW8kJs6nGdoqE5Hzx0FZUqLHEKcYYN
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x10f474f8007d579b
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe
+embedded_elements :
+ elements :
+  -
+    name : FI_Edition_Projet_1$Requête1
+    internal_properties : BQAAAAUAAAAtr3f/Yr2pq6QpXhVT4O8FJbfipnTLALUKE73eetaIMqhQNe2DJLJSvrR/rz1yAQAjq2nWUFeQjA25gWpL2dfCmTmNE7iV9f8xMs/Q5X8JOwkftjvwuS5Ougt556/8TmHPtyglkU/kFRepiWUcWx+xglmexjG30LM0xFo5ZUlDmu9mXYMZgL9GkNGcf2w4p912lBqLuwPjkt1dnU47fsPcItqPczlG2NM8NcwDlWFEVymi7VDRo0txaCXAKTW/UWKjrFAklcCZnPs8q3T3SxChX1orIatm+wJt2xe0dCu837z2Ihr+B9/Avr5Uh6TkvzXaoay8Y4ButNGA0lay4AIk6SHGctFEJWjoEqfmjVunfKFwBzc0ix6OzP8+zptrcLAGYAUc9qNvcml1jiwS5qwwoSVDCaLNO6if/JNd+0rF9IZ3UpAYiWXyQePQSdf96iMU9gUlsNc8/HVTgu/4YrSTSnNamG7tu29bt/eJf1w7WlA5YUmjvth2ZwcRHNqvl7i3JD0xLjxokpb6544FUhSbEwZutGeE58k8DgJ4hmkGEXop5KQZ7ZwjD6R+KO7SEUPX+TeH4/OttnYRJRT2qhhbsVsgJrWt2tPeIGLzWdzWCKieSy9egj+obVvg3APU3beuE5Z0JrCfEbGTuM5Wx3/ccBIAuqfb9grL/JRpTcqlaWHVbtqhkhKVB2mHFk1panj+tQoH1+/WO76HTvCVrxwHNCt0V76Hqba6+wrXDVmAMy6bUStIi1MHRi6Ey5aX9W1EH6fu2vJGHkeUDuFt4Siq3ms2U81uXBTZEq+vpiyHI8M11zNPbqFCqi+1xk04kzqxxMEggB2NgIcUq7xJmNw8xiYpYfqKpjimjU3iyYcurjBZHWyQrs66A14T+cHW75P/UM/1E1twlqElQx/IEYksk+5agsI4V9/QHveqMJRhL1yIx/Rwn1F8zT7J4toXjiPKXQxz/uMKIP4sW0Sjz70r3EZJj3LPfthLtY8Q0s8u7K9EUL9e10XFAW2occRdinPitOuFyLvKoWoAeAXmZTDCMhy/yTkJ161kp/CMWgtm8P+zQRFQ58tsMYoJSwyASL95d7nmcj5xEGAVq4Ld/FggFYJph8o4f7MrDx1By0O1/0btvA12B9GCYGHjyhw3TxBZCxoyk2wOOzeTP0vpyOdelZ75KppTi2gfEONSwXdThxv5J9mMJYeNeSycKGkvxjpATGk5qThCE0IuYRA+D9IoDCslNuObapwJpu3DhaKugNsgN0O96ocL1rPJeMZ+KSzOyKdYM5uE6D5chpPupfYRS/6IkqbndTA3/zQWCjLX4HxWUfoR6eLJlUPSDiBlH0KIoohmcB192wcFgeKujxqtHrUPG3kOyQ+okXWwoKy1dkm9O11TGCQVc3mfiqAfmcKv/ItKtZL+iXn0JQQ7K/sazXvp9f9Ku1n01QdCT1T4YUyqv93egrKKpUHO2yon4WiBR/VMtXw7CMfHYMdX/IneViVI3mPQbXXF+0nZ90hCGaINoGUUFeEPMUXMyox8Sw4Gb+iHWSxqxDPYkjwj6edLVMRK/AflTWtb4JIB/76l5vl10OPtMltCvW0lWnHjcmEccAtP7f5UMTq3qxjPQVBjUWA4EQqniFCIoGdXQmdyTuloXL/qw0mjkyiXysH/mif+6oxTTlGzYXN3djUz8UZrlkrJBe563WsF

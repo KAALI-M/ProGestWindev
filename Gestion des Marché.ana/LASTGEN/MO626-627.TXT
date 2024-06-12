@@ -1,0 +1,6 @@
+//MO626-627.TXT ANA00626 TO ANA00627
+GPU_Utilisateur		TAR	2317	nouvelle taille enregistrement : 2317
+GPU_Utilisateur	NomArab	CNW	Chaîne unicode$Chaîne	la rubrique NomArab a pour nouveau type Chaîne unicode
+GPU_Utilisateur	PrénomArab	CNW	Chaîne unicode$Chaîne	la rubrique PrénomArab a pour nouveau type Chaîne unicode
+GPU_Utilisateur	CadreArab	CNW	Chaîne unicode$Chaîne	la rubrique CadreArab a pour nouveau type Chaîne unicode
+GPU_Utilisateur	AffectationArab	CNW	Chaîne unicode$Chaîne	la rubrique AffectationArab a pour nouveau type Chaîne unicode

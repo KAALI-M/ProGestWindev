@@ -1,0 +1,49 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_Entonnement
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_Entonnement
+ identifier : 0x2651b02d045822f3
+ internal_properties : BQAAAAUAAAC9Tbfsm6B4wwsusn2lzGgt5+aA3HWuYQKdKDr5ZrfQ3HW6wxyDENNMeox8yRX3lRO3y/+z14hErQyxEXNgLtTuRVb8BuMNQq6E/fZwhIr8QnYU32SOdTmLa95PtJ3snsnTgFgzTm6/Xt31e2EsqxWLWuw+CFX69yJIHLiUmA9awdofrT+LNSDPkd0cEtV/kEWOsNxDE5H/MZ76GJSd1HHQvDX4XL3qQppKeSpn/50AjwZ1rULDKW9BYbsSgtleV3uvPm5rPIfsKWiFamjOUWdY0fCMuVUnFHZRs1VGum2cGc3ME2o8vjWzGGQVyPfEBNhC7PUBqycTBLwieKL2ZTFKRAPuy1Do3fPimkagNrPHmz70eCk+rtSHqe2KJ9nOAg6FJU56sIHo1Yaq2nBOm/QRS2ZwIiKTA+VFM5I2IeRh9IK/Zv9jjefKda/4SXoPpGfF7qjTAlVdRl0bVZQRgjew3mcSpJ7M/gm327hcwDaVPjJdWsrUQNS7q9MK650mdyykXkve2NXjOTyCJ854BwsLY3gLkWJ9n1iB/m9mOpVYaAo/VI2F8IdtWv7mNGGmWUNI+MXQS/3GQZq5nTOuDv2US9QN0wZPiGEUqlUZPEWKfcMELJiJJVmK4RaW6h4=
+ controls :
+  -
+    name : FI_Entonnement
+    identifier : 0x2651b02d045922f3
+    internal_properties : BQAAAAUAAADtb7oMkoVQ1IgFcBTW1fnzGT2OZBU0WzGzKL57l7UdQj8nI9O5RtdiX8hifZR9e+I7Hu/JK1PLCJoKs3MnOZiUZjIBjtD/Z9GQzBsu5ZAW9QLLm899nsQrchcboR8hr/sPvtgdFK+f7DgDH775PHSj/o5s2Ydq6e4OculAfBKYinMMjQvya8wrEXElAH6LxY72Ux1M4I0FS+SUDPmhOIAFcn+C3TZWPEL7YtKNx/0CVtdtbwUPPmdPZJqod5SeMJwZHGlVMwgCP9eOygRAwrZccYIXThTG1ZwpdSFPj7eIQfLY/f1FHb7aIWxJC5pCGGDyL5UYwTgN3/gb409FkZJM9Y8jdjDod3Qq/8TuEEzIUYcn6NvyU0Rbfnr1XcG8AyaWJ0Ba3f1AtT21A8ToVIF369/nSwXQJxTbY1tEBEAKeMClh33f/XPLj8JbRGlSAdxs/S8sPuCiJ4BxJlmAeaf5veJu
+    controls : []
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1+
+         PROCEDURE MaFenêtre()
+ menu :
+  name : _Menu
+  identifier : 0x2651b026045505e6
+  internal_properties : BQAAAAUAAADiNkh1O6bsUdojdCyc5rvMKOb4KGdCuKthEpeb9YgToXKniNhTa74qqTWW/kn9AHiAwpYRHxIfmwB4rUjWCTsHt96kYeogf6aF/P/qLr5YC+/q/4GecKHBIXzFYdqjswEetQud+3e/nTe5+xoit8ijZM2EBaVaXCH6Yfad
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x1651b026022605e6
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

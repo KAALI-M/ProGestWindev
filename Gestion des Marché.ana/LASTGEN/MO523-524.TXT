@@ -1,0 +1,4 @@
+//MO523-524.TXT ANA00523 TO ANA00524
+TypesPoste		TAR	64	nouvelle taille enregistrement : 64
+TypesPoste	Type	NNR	Nom	ATTENTION : la clé Nom a pour nouveau nom Type
+TypesPoste	Type	TAI-	50	la rubrique Type a comme nouvelle taille 51 au lieu de 101

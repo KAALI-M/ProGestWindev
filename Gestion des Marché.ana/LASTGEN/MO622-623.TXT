@@ -1,0 +1,2 @@
+//MO622-623.TXT ANA00622 TO ANA00623
+OS	RéfNOS	NNR	NumOSTotal	ATTENTION : la rubrique NumOSTotal a pour nouveau nom RéfNOS

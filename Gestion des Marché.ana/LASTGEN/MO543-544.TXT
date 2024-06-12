@@ -1,0 +1,2 @@
+//MO543-544.TXT ANA00543 TO ANA00544
+Modules	IDModulesParent	NNR	CopieDeIDModules	ATTENTION : la clé CopieDeIDModules a pour nouveau nom IDModulesParent

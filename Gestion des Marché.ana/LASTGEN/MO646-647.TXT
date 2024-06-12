@@ -1,0 +1,5 @@
+//MO646-647.TXT ANA00646 TO ANA00647
+BPDE		TAR	295	nouvelle taille enregistrement : 295
+BPDE	SousTraitPoss	RUB+		SousTraitPoss est une nouvelle rubrique
+DéfPrix		NFI		nouveau fichier
+Cte_BPDE_DéfPrix		NWL	BPDE (IDBPDE) et DéfPrix (IDBPDE)	Nouvelle liaison entre les fichiers BPDE (IDBPDE) et DéfPrix (IDBPDE)

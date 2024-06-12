@@ -1,0 +1,35 @@
+//MO648-649.TXT ANA00648 TO ANA00649
+Projet		TAR	1193	nouvelle taille enregistrement : 1193
+Projet	CautionProv	RUB+		CautionProv est une nouvelle rubrique
+Projet	NumAO	RUB+		NumAO est une nouvelle rubrique
+Projet	DateOuvPlis	RUB+		DateOuvPlis est une nouvelle rubrique
+Projet	reservePME	RUB+		reservePME est une nouvelle rubrique
+Projet	CrédPaim	RUB+		CrédPaim est une nouvelle rubrique
+Projet	CrédEng	RUB+		CrédEng est une nouvelle rubrique
+Projet	PlansType	RUB+		PlansType est une nouvelle rubrique
+Projet	PlansNmbre	RUB+		PlansNmbre est une nouvelle rubrique
+Projet	PlansForma	RUB+		PlansForma est une nouvelle rubrique
+Projet	NoteTech	RUB+		NoteTech est une nouvelle rubrique
+Projet	CertifQualif	RUB+		CertifQualif est une nouvelle rubrique
+Projet	CertifQualifActivité	RUB+		CertifQualifActivité est une nouvelle rubrique
+Projet	CertifQualifDomaine	RUB+		CertifQualifDomaine est une nouvelle rubrique
+Projet	CertifQualifQualif	RUB+		CertifQualifQualif est une nouvelle rubrique
+Projet	CertfifAgréement	RUB+		CertfifAgréement est une nouvelle rubrique
+Projet	VisiteLieux	RUB+		VisiteLieux est une nouvelle rubrique
+Projet	VisitelieuDate	RUB+		VisitelieuDate est une nouvelle rubrique
+Projet	VisiteLieuxLieu	RUB+		VisiteLieuxLieu est une nouvelle rubrique
+Projet	Echantillons	RUB+		Echantillons est une nouvelle rubrique
+AppelOffres		TAR	1456	nouvelle taille enregistrement : 1456
+AppelOffres	IDProjetdeControle	RUB-		la rubrique IDProjetdeControle est supprimée
+AppelOffres	IDProjetParent	RUB-		la rubrique IDProjetParent est supprimée
+AppelOffres	IDGroupeProjets	RUB-		la rubrique IDGroupeProjets est supprimée
+BPDE_AO		NFI		nouveau fichier
+Contrainte_TypeProjet_AppelOffres		NWL	TypeProjet (IDTyPeProjet) et AppelOffres (IDType)	Nouvelle liaison entre les fichiers TypeProjet (IDTyPeProjet) et AppelOffres (IDType)
+Contrainte_CaractèrePrix_AppelOffres		NWL	CaractèrePrix (IDCaractère_Prix) et AppelOffres (IDCaractère_Prix)	Nouvelle liaison entre les fichiers CaractèrePrix (IDCaractère_Prix) et AppelOffres (IDCaractère_Prix)
+Contrainte_FormeMarché_AppelOffres		NWL	FormeMarché (IDForme) et AppelOffres (IDForme)	Nouvelle liaison entre les fichiers FormeMarché (IDForme) et AppelOffres (IDForme)
+Contrainte_ModePassation_AppelOffres		NWL	ModePassation (IDModePassation) et AppelOffres (IDModePassation)	Nouvelle liaison entre les fichiers ModePassation (IDModePassation) et AppelOffres (IDModePassation)
+Contrainte_archivedocs_AppelOffres		NWL	archivedocs (idArchiveDocs) et AppelOffres (IdArchiveDocs)	Nouvelle liaison entre les fichiers archivedocs (idArchiveDocs) et AppelOffres (IdArchiveDocs)
+Contrainte_Ouvrages_AppelOffres		NWL	Ouvrages (IDOuvrages) et AppelOffres (IDOuvrages)	Nouvelle liaison entre les fichiers Ouvrages (IDOuvrages) et AppelOffres (IDOuvrages)
+Contrainte_BPDE_BPDE_AO		NWL	BPDE (IDBPDE) et BPDE_AO (IDBPDE)	Nouvelle liaison entre les fichiers BPDE (IDBPDE) et BPDE_AO (IDBPDE)
+Contrainte_AppelOffres_BPDE_AO		NWL	AppelOffres (IDAppelOffres) et BPDE_AO (IDAppelOffres)	Nouvelle liaison entre les fichiers AppelOffres (IDAppelOffres) et BPDE_AO (IDAppelOffres)
+BPDE_AO		FRN		

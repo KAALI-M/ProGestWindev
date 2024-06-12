@@ -1,0 +1,13 @@
+//MO549-550.TXT ANA00549 TO ANA00550
+ConfigurationDroitsAccès		TAR	39	nouvelle taille enregistrement : 39
+ConfigurationDroitsAccès	Creation	RUB+		Creation est une nouvelle rubrique
+ConfigurationDroitsAccès	Lecture	RUB+		Lecture est une nouvelle rubrique
+ConfigurationDroitsAccès	Modification	RUB+		Modification est une nouvelle rubrique
+ConfigurationDroitsAccès	Supression	RUB+		Supression est une nouvelle rubrique
+ConfigurationDroitsAccès	Administration	RUB+		Administration est une nouvelle rubrique
+ConfigurationDroitsAccès	AccèsSiChAffaire	RUB+		AccèsSiChAffaire est une nouvelle rubrique
+ConfigurationDroitsAccès	AccèsDonnéesCrée	RUB+		AccèsDonnéesCrée est une nouvelle rubrique
+ConfigurationDroitsAccès	AccèsDonnéesS_Entité	RUB+		AccèsDonnéesS_Entité est une nouvelle rubrique
+ConfigurationDroitsAccès	Droits	RUB-		la rubrique Droits est supprimée
+ConfigurationDroitsAccès	Filtres	RUB-		la rubrique Filtres est supprimée
+TypeProjet_TypeOrganisme		DEL	TypeProjet (Type) et TypeOrganisme (Type)	Liaison supprimée entre les fichiers TypeProjet (Type) et TypeOrganisme (Type)

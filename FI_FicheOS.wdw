@@ -1,0 +1,1707 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_FicheOS
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_FicheOS
+ identifier : 0x21e2f306053cdd28
+ internal_properties : BQAAAAUAAADzxehKcTm8r6nwdvk8XEgPoDnhUc9custaGK3juhBMHgG4ER+6B28izIibAntdqmkkOQw+433/0ctByo/bvqW9QHwaYTPTQJ/+DTC4/rFoKeqLf7+89TOBhMjyo8J1mjr9yNz3st1MoqST6lN2nYBwdnQyvCiHSbv5I9qGYsnfWWVzgMbNZtHXbuXtqP8q3egyOoC31eoFI7ymRWY7lNDUccXFo+s2KNMdtaW0HJmR1b53O30yheG7Oq0pVkOW9eAdJpE2PZcGPBpxBnX6WotwZMPXjg+m14d484BfSQv9q3Av4JfIhNQc9fLVh2U9plaDpQP9fNNvtAcPdX0OcILieD3d7PdBc1zh7egfe7qUtkRWB0FhUqg++yeUoM+bsSuMij2R2R0M1GnqBXiXkc7SLBh0uHi15MsLTVlATTNhYMpuZz9LXkRqXJESKV1vKdriubD+R9UKG+HgMk2JNKlOawE4v2PYkTfNu+mNH2rh0S9ApfJ/EP42Mc8geyO673Ik7yRdZnuFVjZkV3Ai3wx6v42KHSmrjJ3v9YJzyGqHJdYskAgBrVu6ViX91Rt9LIZhkFoEjgtIYCpUTSCM1pKyR65sT+SeJftHXu3mRnrov9l0wRv5AiuelKBEJ4BA+Eg0cdLnc48F/wW8dnoYqLr+zIbfy/nzfnSkQgvY/BbgH3ATNcWTC6iKumWpC20QOkkVL4UdmNs45G6RIPFOwhybq0Clsg3NvsN9wh/28W2JSSpuJJ05Y48Nob/Ll8DTmOWmhZUdEFj5OdkUUZRe6ETqJiOimwjkkFpdqC9S8flGAl3hfW+0l0JM+x126EVi8hsSluz7m3UQP38h+MGT51uxesW6cgJWvzbhJOv0uTqGdTt6RsmTL/yhY94nlpxKfGRAH2la+IobO28GoRXj7ZAEFhqCw+QGGSHzppq7uwe/PvaU6s83XfwYxnIbHHZjjDpy11W3z5laUcINjoTNiUwiMGLP7+qRNGgqtQjz8OFz+PSFAD3/qS7DWBFf3WrEedddrEYN64Ti2lHgV/7uW1dLixAk6iHkcm/gjXfDmRgITe2itQSC4xRPS7QEqb/jdGFBd/DTPMtnXY0we3qiEBr6TYiVbTK4XTvyAx433ww8vFHnvr0UFs5xG44vtA==
+ controls :
+  -
+    name : FI_FicheOS
+    identifier : 0x21e2f3060568dd57
+    internal_properties : BQAAAAUAAAC94rpxwdFTEFItKGevkJHfDqblaKNLY4oUbDui6OoK6t6qrqZTnuC5MsOpx40LLt4Biy3lghjjjT7/XlSPSWGNMBUN+dIGSoa8B3ZuE9lcNb4tCrhCMrEkvtWSbWDoPGEa8fcdJZn33or22xiPK8NrQuitpsBkWxkej0av1yPePHD3jah2mwyUroe3oll1/iqEHbYX92h/wrQSr05LnjRShDdHwVPSGrdsALZ3wqGyAeBbL3fnOOWUrtEVZakbw9Q4XRd1xZNqTI2R1vmGXcJUpWmOQHmtQ01d633AQHOB5cr1vej4Y3K8cMEPdrzw7kbFpEqiCJJ2FpnTWVq3+wN8BrJT9tiQUf6ZbiawOdLpn75E4d9d2v50sOfvksw5CKlZqq9pgAyA8NRGlPS3xT2OCSuN78Qz/Qr6+WB9WtT181JVmbtIUZZM+rWrz+I2UBknMJrYPQIcGw3nkam8udDEafgK1WI5
+    controls :
+     -
+       name : FRM_SansNom1
+       identifier : 0x21e2f3060543dd28
+       internal_properties : BQAAAAUAAABIG3sg3WlfgjpnU+8CR71kFGAGBm1SCB/7h7zwXbWl5s26GWPLE5mDdoLdIVRMcPips5dR4yxexh6onnK+dIlmiJHALId+h2kDDZjC7WCrjwtFQOjmhnxWNYOJ589GprCz5AQJJEazYz/tTwrmObWN3xNoe0pVjxYSP8581D1LIWTIN2ZdCKzJlmBo9cMDIH4vCJChcACsI/9Rw2sMUeEA9eJjpCwwHO9aGo0DT56wYH5zfkf5J+DWd0Rh0XBmqcsb9G4wJMHOmgMsXmo97im7L6fIy5IjzPzX2C7G1ZcUnd39lrgYqeklEydiktCsR3Vr3Lu3QTX2xo78j0ROn4Tqi7o6WCqqwDRoWeqJ726SbZ9ByQ==
+       type : 20
+       code_elements :
+        type_code : 32
+        p_codes : []
+     -
+       name : ONG_FicheOS
+       identifier : 0x21e2f3060544dd28
+       internal_properties : BQAAAAUAAADsZReF5HONvUPcljTgasvjqzG+M/XeTaaV53A1vz4sxfEACwyfa4L2chr91M1wFSiNu29fzmodN7aSfUMSUrBscVJT3GVs/OP2091sUAppKHC/ZUWeo4JCaqn7mJeIKr/MThIYdf0olHd1zo/el85ZHw0y7SvA8HCG+pA5Xdv8RxrCCjHtEmbKVCa2XzoMN9IPvsYTKyesomV5I4k7C07wtrB0WOkA5sl6Q05X7/FdXsVGssU5e92NSz6hd1peb2GSBHMPgRlukjnYLwfFAxEVAOvwKN1i7Am+IQWb52jwJO1q8MxF0OiNJ5ojFByGWDKBV8uLfi6SRqgThAhhXmtb0tw4NTBunD8N3UOZkz8qTvlNA/xTCA0p+svdbggnITM2Dr10ShhU1LKn+/1mTF3oC/y8mm4NKyWl4goaUV7TxvqKKj5l2QBnrDHhztNmoD2glHyWpFFN0+LlF8scyNNj74rKsJLdatzR9RNvTtSsAdQylJoTpWovJJeNjmgqwl+0i7InJJfhO9yEU380NAVZBrBNfoiGeD8ISdonCsi1mrI0ejsXo1dm5Q3k0Jtjowk0YlmnXAV04iln51hXDomCVb7ohtvqQCYuFSds27NQkzO71b91hgldhW3W3/IM9kzbMHpl89BQNmpzczSznmErc9A1hg9Qt+FuxnYmPcucpiwRgtkxp81t3NWxNAbxr9kV8s1wK7xzjkgBy7AUR92a21nkMXSds2NhN/V1AEbnNxGCHAPIQpNwJlNg2vgWnM42e+7IDyvFuJ4evQXsoClbufaZ3ZWbkihHvnYvSkfjjiHSbkxTrsUuUMhNPciQIEOSP9AjQDHbPq+O3RDfdyrcaxOhDHYYfGz6WXcVTauES8IeUAwKMtpEmi4sukfBsb8kugvTRzGSMZST0InES0fhqw/+aewE5ZYtlNPzfBBrYRZVbqGE/nOCSi1PaqWrjHocRACuFpsgELaX1MW/tPscDi/4F9KOWkmKvMPQIbsV4NozqDfAFHDrwLIZliZpvNBQp80LQPIFL8vYhyBRuAX7PEuJoEOCVjzbYkpiMQyvlJGiZHmaCaOpcvkTlk5yu3iTWi3NLo5mwHtKyskEbdsguNkJsT/4O5Qwrg1qb6QNGvTCIj92M96rDIl/nlB+aMoad5NgGHv5cl2Rrf2RsBEvh4NP
+       tabs :
+        -
+          internal_properties : BQAAAAUAAADM5Ikmr4ryKGz4WEjnYHqjyE0AetuKBteKXD0RtlzVYPz3Gq33gjW2Z7uK3+iGRyKd6gZw+NLlR+0IqNgup2qSJQr7UNu8l2PIIn7zwIZkIHLCA53thoslIVMVkueuYiZnTPkW5RRR4hyRYzUhLyn0a2SqS/IQVw==
+          controls :
+           -
+             name : SAI_NumOS
+             identifier : 0x21e2f306054add28
+             internal_properties : BQAAAAUAAADxCDo72n1P3XpvQLsVwagNLodYHcQ1PRFVQ/4EbDKh7MOTjxQ8U6rR0RXo8BinjVQQbFZURJDrtdEjP4YK36YgTvvfppAX9Tbpmgc9nswV89TFNb10gNKT0PI9BPWGFUUne3cZwpvGw/EaVkbLETsgMpBfxF5eyiPpgyDacpaYt/SaT5UNFA8FDR6ttPT2ZeNbBDUfYjO4gyrY8P5morR9KhZOp33B9JktMeO7BQta9BBL5OEm62geIg4EC3RLKnSf7qxdiW8jtSZhRbGg66zn87YtslZlyrARD0EC8c8ohU7cTi7i5vHgyue5rLKn17AmfeOP59eNx+vI9pZBOHWe7uciVPS5a8nget3hKSO77glMKVLPGmupvHZQWzAYKS13ex0JxCHnnvq0HmjhBrd5TrguZctHGkW3L8pbxZw8wjvlIZS7XFzkA1nvl6U+M479lkmvw/1T7gbV+67YJE7bDk4TrPx97o/elhb0ZJIqgYVGyWmjSiagoTkqyOWAkiz8vmxRG3kyNN5k9vHDFfyn9sVdeCt4bLj46xjbUwcnL/zXhjA3itqEaYRqzLQzDQACf6jbcXRB/wx63eqp5FxUjhnX1og74bnZTUqnQZ3H65+GtIBm1xD4eL/IzYmDU3+qDcw4B7hwpuiRS7wxh/QgG4s1bHBka51QkAOKt/s/RWlRXkPUzCv8fUQ6wg7o3yXbMr2blQcFyZWInU0oYnhOvvxvnsD1LVG2tzpodqXJ1hXor/NRtLN5l/ab69i823F9TJmbTBs4hWMCwBrhS0AQq/vqlhOjSyCuUaNjzCF+XUk3mEY/s2318GrGlQftjzsaE2U/udwGUrvFUPnn87MBFXvOzoube828erjFLSmZ/ajIKjdq2bA2FLtiFAI0YzV4nekOcf+ucnv8uxWbiEG1LQ6s8UGmwsyrVRkmwHs0cvd2oJ4irVBUPoaj66EPa4IeDSJPHKZiAjnGD0t+S5ueam3G8f4Izb6So+B636CE94a5IQvjXYHIPC11FT2QJkPtbOzBFOU3+eAWqvZMAmuRq4bBp3eDikjZIxC1OmPLQ0oamGGmDj26pbihP9uo0tW488ZgJbOwsqYf3mgcp+itPNLxyS4/0J98e0LTKX4pZb0eAn93T9PpiDTzhnxNpquhHQSHwU4R3Ma1nC1JH94btCrAyQST
+             type : 2
+             code_elements :
+              type_code : 3
+              p_codes :
+               -
+                 type : 276
+                 enabled : false
+               -
+                 type : 277
+                 enabled : false
+               -
+                 type : 278
+                 enabled : false
+               -
+                 code : |1+
+                  
+                  
+                 type : 17
+           -
+             name : SAI_DateEffet
+             identifier : 0x21e2f306054edd28
+             internal_properties : BQAAAAUAAACTJkHezq3xVmHSTLj+XB7ZvE3axf1VoaAHbvwQBLXmNj0IA3WBe5PA0AXWAlY2VqgF7QNzc7nVwXaQZjzAGY//09Hge0Un04OTuEXDB+URDWrZdbUMcnrOQaQgaFAOGHYbjoot5UiO4wpQ9TRL60SCvuHvhml8nAOfANaZjBuK8TkuIWOmbeZ1UHzuR45O4b4crpW0FiT10HToiD38mXT+irk8GodD0X/T0qekJlqiJyIdllclY6DBSvH1YG20Ar0B/hh4HRJ3HQPJE40oGmWpqPTt3D/TfHSxOkdR7CfX4byHmaEzdQSiCi2yShwgWP2BK4bmbIYZ57xRNpVtpi7PCWXHHmv9X7PXdm/zarb6F7L03qA+r0OTkeU40QWTJTYuMOqf23LclbQySdRTrIbekIEFQofUJCQhzj33mO6I/gm8eEIEitCr4XVsapC7q/T9YVRNbO15UOVgs+PASSZ/d87VpmsKFVueWLbQb85v/o98uBs+hCl7eX2VI1WYYubrF6pFG1iisU1SI3dZgu56oUgJ/9bv4x0G2TurxkkdcoUuUSrl+QMVlstfDiofRn8SjMOdCwVlU6OseQg8KfN2ch03k3XyMdYd1yIUZ5yKlro1ZEYnlgzVIlGGu6Yv/Gk83ncx/GBS0fXZEp6/Oup94T8BhMlMo7fH42xa9I6cWmRwEaRv4mHvKwif9b2DZPHU3a3rMnlwfOFpQH4yiHtGq4DOhZKHdXHSolvWgu4ZQxKMC9gGXkX8yyCwCrkRGk5C6DTE09px4qq1y7wg8jdRhbxKIGD0jgU1a/gFyKdxu0PVbAjpxfHy4vm0H4igTpCL1Za/ONb/LfwqBHiPnsftrbURjetDvafrkDdGv7fQQBpczEH06jbbpK5Z+GVCbkUeFp8GuthNaA77SBS9MpSBm3nhwi4cIdLw0IgmBIbzTwHqsYYy6e2sPEwib5z9t/Tz3ZJj6Yd7PCaUXilHc0fIVrTnWKEYi3f+NAwaCja0FHnHs+D7LV8Ttn4B0QVjO6ZsZbsWq9VjhtndwN3RRRB6wZyPh/7gUHj+IHLc/hS5D4sbPRsaYvUUlnjTOekdvlrwOyiD8jzfe+JCsk7oKVuNva1FaMzPKG2G58YBA6lsK/2O5Nq/vEWh/Tx7Z+CuBtZ4Y2SqXopu+xIAGTIFIEtWNDY/MEEgzf5gv1Kg5awh7tzh669FTCqzNig9CVgN7GdrUQyjqPRgRxRxDgmJioiRK71ovXnQIT651tBUAKzzCLhB1ATUDAhkL7/BAtPGMl5jt9IlGrcA
+             calendar :
+              internal_properties : BQAAAAUAAAAi4V4mdYskUE1fzqHSxLBAxBSJ2zuh1UZa4xIbY95UfJnX5vfjgvXA9Jbr0e4ZD4szDXbxkhW1gVEETxM7npDmd+d1exc35r5Bbs7eqG3MjUGWobVhBe98rYVkOgDxVciSTMZe5Kq/13VrSVY0b6NCRmBcon9PGJBueZr+XuvPgqhjL09WHUCiifBRyKR6+RcNa4qjbH+oCmpewaKVXRLehG8pViNqJJkEnSce5FU0ZoFKnEeGPmfNrSvX2sl7Lk+cZfhnuXOQv05Jtb2cz+g21ybMDNN8cULxskEiGNMPswQ+L/OAGclaPhvIBPoTzewfvEWEJHW4IUcjiOdrpYP2nAki8LNiY8S46fTMMm6vWjf85FZOrAgAaBWd/AQMbKSkJT0vSLWB7AGG8nj4IK5ThUmZy4JsoKPSBLaRS652kavkb06lngs+SVrZuNs1ZrJcfyXByS8uwwgBt0Ge40D4rysv2eqr2o9SGnh73aXTywrssNwYdGK6MKwcV76E3qfy2JwNr3QfGlVGQOjimKQd26dc1J3A65QfYBYvmUtgbyzz9ZCxW6ZhTQcaQ28mYv9ELWThG65JXN+f5Xa4orO0i2DZfoh6uCsAYvUkKyDZngn15WlXewq4qSBnd/lL5ffcN3AfXXqOvPQhOi2KgIzttruBlLjI0UNvG1PYmU5MhdLlo2/RNxbrfnYIfYlWq8kDZmUMedITWl4isAR6bJzyvMp0kZcNlS1ijVUlLCofTJZKoHelA9gH2pNhrsBWdvDQ1Bm/omIfjlsYgLxMFhQjuIH0TitIZys0nMjDHbeu8SeCKG4KU5KzB0NKvkz64Ery2UxKeZDPkQrsyl4Ua4LJG/ArPnDZ7N2XUBZMDq3xuQ1p7PrEWVPCtcZ5sG76Y69/49lQKqTTwU/FQgWVSZJfEUbs2+itSoYUO6yF6+IcEdVioMMROXqg5o1mRBdHF+JoiyqJ883q7fPG2EkOQcdJ75yyLv+m37VkqiVYOf/aoLI2DeC/OX72YnDCqWKXLiHh3kRrxraXRL22xX2727UhJUqZgaHLcKlhHlhbjjttquuEK6ufYhdbDh4YnBeh1axGu89dH2bdVDckK8o5KcK3mL/jp2Ty4QsCvTYLxM9Ltoq7gbl1p/OnXtB5dWWqrtctazSfb+Jj9qYRtVPpWx6lBcZWphLHREBGRp26Uh8HlAMoKFnSgudp6I1aGca26daEf+QRkEUMoPRXU9C6NnbwSqsj2COX6v8bs20pxnv/fqngabpvyjW9piA4PXw5lXs1SljetlnFFtoODOL9cHqPJmfRUl0Y9V6rUgxREiQsBZg64JOHHtJUG3cqBdo3vFf24RM1Qnwa1Momdbz39QqwvvkThfRCoRiiU5Jjwj5r1wY=
+              type : 47
+             type : 2
+             code_elements :
+              type_code : 3
+              p_codes :
+               -
+                 code : |1-
+                  
+                 type : 15
+               -
+                 code : |1-
+                  SI SAI_DateEffet <> dateEffet ALORS
+                  	sListOSExclus = gnIDOS
+                  	RemplirTableAffectDélais(sListOSExclus)
+                  	dateEffet =SAI_DateEffet.Valeur
+                  FIN
+                  // calcul date
+                  SI INT_CalcDatNotif = 1 ALORS
+                  	dateEff EST UNE DATE =SAI_DateEffet
+                  	SI dateEff <> "" ALORS
+                  		SAI_DateNotification				= getJourCalendairePrécedent(dateEff , 2)
+                  		SAI_DateNotification.CouleurFond	= JauneClair
+                  	FIN
+                  FIN
+                 type : 16
+               -
+                 type : 276
+                 enabled : false
+               -
+                 type : 277
+                 enabled : false
+               -
+                 type : 278
+                 enabled : false
+               -
+                 code : |1-
+                  
+                 type : 17
+               -
+                 code : |1+
+                  
+                  
+                  
+                  
+                 type : 166
+           -
+             name : COMBO_TypeOS
+             identifier : 0x21e2f3060550dd37
+             internal_properties : BQAAAAUAAAB3XCqs1uXUvQ0th3pzszsJ4aynSUe/lp5xDFhHRFwDPVbPK/oZvdd2Z635IoWwMuZ1h7bHWz0PXDoSx67b/sCluhgy3I1kSRKbDiHPmSxtJaAFShtM201hK3sf/KMFDIlSxIbo8X4RmVFWLH63QI+aaPVfqsFCH/uGen5YDWKfxCpQaQvoK2NDvzeLH7WUrRmdm247JlXh5SZMZv9lZ7GSkNbc8gh5X5vLJ9hnstD8UM47oLhiiMvlQvq/5L2tBzabXbNg+mWsrs5DlPZ+Xqd3xnrIcy+DLaTqPAmWZzaqMGZLFqLsiDaloDFx1RYIkg7UEZ1wz7/cWkeZnKSjsqLi0UXLCQoiieIeq22ft+OrzDRuYQaBrMMQVAQZDpXVWiScDQPaQySGrZlp3srVOAp/BUjHnKD+pKUHylrasVm0rUY1Hh9e+6zULDcf7l8+CHlFThrxgHxxlfxdBOFv00vVgdWOliyiFpvtAMcYlILfBve2hajG19fj9BPwNt16LHA7yHbjuPrgFGeQrzv94ddY/Ws834zsU9YOnqO9ol2UthRDC+qR0hsOtyAef0W6ub985LySut9cCMyfbdxhLCUqd9DuZFDVxq3pqFfJ8/qeY3hIu1ibVxWxZRFImS+5rrNTXMUjWSZwYoX8aStdQjwxDtw1FxaOzsARtoHKhLBaGqHZ+j8MdEk0eiq+6506BuPiUFKbF7TYVagwHpUFf9VVBSMIKHCd9khDY4Lc6Y2z06zTsUP+3tvjNepFG+AmM+sq+jZP86NeaAdewiplYliokWn7TRAFQ3JPzGf/As6SLAnHqrpbGlJZOmCl7k4FcpRGZ+RBRrRPdFZwo3pXe77lDDPHgSBctzdCluSg9yhzD/14Wi8fAYJg/RcvtPUr7XvEAxscIYJjNJaBaxMPgfMVWumZLcJ4xsoIYGzdGHkGpl+gZL/7t2tVjDB7mRTJwbi9tkGqJ4q7XLwcc9z2ffoPPvu1Avw9UhenkwqUNqkNrBEZvkVc9cMncDryXXvoAaE5h08GKTraoIM1UXlkHBJ+0lW5irzevV5/s/zSxz4pcPOeLpsUW5LHSsJuzuEfpvNISFrVabvVSYKDzeTMX0JSMWz9ewBTsVzg2WIR3RTmmTMi40sKZh60radKn2TnsH8iVYOJFzN2pA02nHcyBQgcrMG90QbW18P9OzDGBStwO/AvjWq9xO6oT7zKkCFXosiSiOB1HtWl4jlbataM/JEhtoOPrStfLaB9kZ0xB6kNeHiJNG1K5lFsLUDb7CFgsIRUSjV2KuwpiLiD7VcUrhSobzhLRWVhD4zn/PhEtkmZPkJagRl/PZQeJI3Z5/zLr7dGwWpKLzrh1a/9ffn0p8hEdiKg4lZIc8Qns4U1u5pqR+4tgELRgIfNqy5HUYPOH90Gjc6kIjo6GPlMfrzouhNFqTy+bKLv7gUYxikjDFcjkpZt6N8NohJlkQxEFs/uYDMqKDuueIXhMUNdSiOMwrKcrw12TYN1TjryAeUdA5jYzJYtfN6jKzu13CRowwC3
+             dropdown :
+              internal_properties : BQAAAAUAAAA+3Gig3W8IMR/jgJBKLsEk/vlJqj0churvQvOP8n+hA4yJS/wuafLogVkoc0zNsE4GM6gaSgYtKXMKxuyvFH6nUJSmn8SvUK7tlIkAmeHuJKqwPdPMDhVDq6De+ej9BBGKjh0eSwbuq4rCC2tTw/fvl+BN4nSj7FiGCv4gJCgIt79zmu1WXIwUO9LL1fhv9TDCxFvngp+xYaAVu7yvVDK8DnHgU/q4Ah0EqcK07Ggy8BChLk1tTCHnLaqfsL5nr2QGBKdRp6WssOaZs5UDML15k4lFv6+h8YC92SnRG3/9wFqlb82J9n/O7jP5irQz9a8KGmzrknjf+1oXPJHO+F8CfnlPJ9lOHDRF2bGa/VJX/ZkgEQuzY16fcnMRHI9Uti+vBz5LWpHuRDIK93e0Wxx3JfZ3pT1UpSpLBkcxIRzqA2N5LaI9zw2j+7DRs5MqTxZnGMNuPZUm28cW8+0F3A3rCBfbpNjlsLrg4+Ngqccd+M/+Tu6UxwXc9gaeRFnVLhy/OlYdL/u6BeSOKMQARvSdpvgrrY6IXaJZcnqbaQ/qZ6ULEI6Zr79bSD/YOPSYZ4vcMKqis6gjkKiRVXMxZm+EX8WVEYvP0/rUDcP+MDf7wNb1pQcPHguv8sFtK9AszC1hRORgvZ8sa5Z9TS+ysZIUovQ+S4QwwMaU/oC8iQRKLGmIISY3eQJveALPscAYto1HLu6Z7Nc6NWIbb20tGM+5amVakJEHlX0PL5EenjBSUahpHLDNrvF43RY83DrJ/KJpkfiNa805Kjt5mBPouHHj/9uVr+wkwkTl2Hfdar/REg==
+              type : 7
+             type : 14
+             code_elements :
+              type_code : 23
+              p_codes :
+               -
+                 code : |1-
+                  
+                 type : 14
+               -
+                 code : |1-
+                  MoiMême =gnIDTypeOS
+                  selon  COMBO_TypeOS.ValeurAffichée
+                  	cas  "notification"
+                  	 	TABLEH_AffectationDélais.COL_Selection.Grisé = Vrai
+                  	cas "arrêt"
+                  	 	SAI_MotifArret.Visible = vrai
+                  	cas "décision"
+                  		TABLEH_AffectationDélais.COL_Selection.Grisé = Vrai
+                  		SAI_Décision.Visible =vrai
+                  		
+                  FIN
+                 type : 35
+               -
+                 code : |1+
+                  // a faire : choix de l'etat des délais en focntion du type de l'OS
+                  gnIDTypeOS								= COMBO_TypeOS
+                  TABLEH_AffectationDélais.AffichageActif	= Faux
+                  TableDésactiveFiltre(TABLEH_AffectationDélais)
+                  
+                  //affichage motif arret
+                  SI COMBO_TypeOS.ValeurAffichée = "arrêt" ALORS
+                  	SAI_MotifArret.Visible =Vrai
+                  SINON
+                  	SAI_MotifArret.Visible =Faux
+                  FIN
+                  // désactivation sélection des délais si Notification
+                  SI COMBO_TypeOS.ValeurAffichée = "notification" ALORS
+                  	TABLEH_AffectationDélais.COL_Selection.Grisé = Vrai
+                  SINON
+                  	TABLEH_AffectationDélais.COL_Selection.Grisé =Faux
+                  FIN
+                  //cas d'un OS autre
+                  SI COMBO_TypeOS.ValeurAffichée = "décision" ALORS
+                  	TABLEH_AffectationDélais.COL_Selection.Grisé = Vrai
+                  	SAI_Décision.Visible =Vrai
+                  SINON
+                  	TABLEH_AffectationDélais.COL_Selection.Grisé =Faux
+                  	SAI_Décision.Visible=  faux
+                  FIN
+                  
+                  //filtre tableh d"élai
+                  SELON COMBO_TypeOS.ValeurAffichée
+                  	CAS  "commencement" 
+                  		TableActiveFiltre(TABLEH_AffectationDélais.COL_Etat,filtreEgal, "non lancé")
+                  	CAS  "arrêt" 
+                  		TableActiveFiltre(TABLEH_AffectationDélais.COL_Etat,filtreEgal, "en cours")
+                  	CAS  "reprise" 
+                  		TableActiveFiltre(TABLEH_AffectationDélais.COL_Etat,filtreEgal, "en arrêt")
+                  	CAS "notification"
+                  	//rien
+                  	AUTRES CAS
+                  		
+                  FIN
+                  TABLEH_AffectationDélais.AffichageActif= Vrai
+                  
+                 type : 33
+               -
+                 type : 17
+                 enabled : false
+           -
+             name : SAI_DateNotification
+             identifier : 0x21e2f3060554dd37
+             internal_properties : BQAAAAUAAADwkgrJYjQMIEvuRIfDFD2GQcv6lH2YaCLtPqVvOEcUUrIwqRNqITAxg+6O71eCEOu183v7gf8A/QM4hjhE7UtQJVNz2dO47EHuUqJxgxT7xrwmAxU+zVDjfcN43zZ100XHh5PcexbzwDGedfU2H7b+9T3jjHnefB8R/NWq6vOXjEQZxgZaPZE4+phGzTtdWZG8jNPEV2rMkRnQ8z7Gvw1NfC5eyr4vT1C2nd8iGOXsKteCHP4jisvcmhlZEHIuKy/Iz7v33UG7Dz0Sco3MDK5mokEl5dU+lcPDuXUCzKchnGDNsEg+QbtMWK5DBuOgc0CKtuZk2L2cCbCv3kyxoUyVhqtnoB5a7h5DK4XkOtzg1cz7clk5X+rxXZlfWQq4bZzq5e3Y8okERBC0rNvSuI2cIcPv/oMK3XOjMEM+OIe95kiGrTliKWqUZhAUx7SgVa6VcfbzgZzxIVp+hndsMbylpa/9Cruj6/t3C33fRaW0ijRu3yUS/sPlkx3QhIx5fRu+Y6rbEzOQ6viDg6LXaKLHmtD2iGas+mPYgfEoTMQd48b20F8QGTcSB4lDOTCpT+XAEpe7HFY1plur8tl1Y+o/WS+BUysv3FS2vreRuJw4A1d3f/yE/2BxkJgnXEuZ1QxrS6Gq/UroEfBD3WNBFuqxJCvy5jJxsO+mHezBKyJQSGCn+bMIGj7T6uXz+edZi9kn+SzNZT+2MFbNP4dsieecnwBhZAFR3ZDqzxlRthQQC1WjSkXGpThzwzJ0rBqMt/Ypg8J3PzlNXYa8paVXxUp0OfvHkhkJZaAoXaYTulb2eA5gydJpkvNQ+GW2BDJRpi9BIIdl0XXKvkE6PegmLIuOhZsf9rcyzTkuzfjMkTnyv0zJJdZLNbsTutlWhPuU+IKixqlxGo90v20lOI4iAU82pea+bl0Zle7k9Sp8XVATJ+TzzyGl6PzFJCLXqiR/mfLu84e1GNDsegW7jR0w+2k7YDyHwqrNoWEU3I0B1If8VErozwl3ZuplWmIjCXiFue+b3D2yDPVrBAL5MRyXflVvG9SQOlNTzSr1I4njreIbvRVxAISx+4/kl8pvhjdVYwfwII5z/XKRKPyah1dj6rS1pcBeBgzxIeXzC5cHDfwqgPyBuMl1LfcfuqHce+l34tP39bcXHlzR1oUspSVIS1TMDrc8KxL4o5FN7uYK6N5IDMJM1vhLtI+FnckZfUVRz6q1nP3USSsI7/sI+WTCrDkKYaULYXBl7kTcmH2ZMX3j9f2jwzHZVawy4xSDS6aVa4npfN6gu87ncl5mFnpubG00h3odOf+E
+             calendar :
+              internal_properties : BQAAAAUAAAAi4V4mdYskUE1fzqHSxLBAxBSJ2zuh1UZa4xIbY95UfJnX5vfjgvXA9Jbr0e4ZD4szDXbxkhW1gVEETxM7npDmd+d1exc35r5Bbs7eqG3MjUGWobVhBe98rYVkOgDxVciSTMZe5Kq/13VrSVY0b6NCRmBcon9PGJBueZr+XuvPgqhjL09WHUCiifBRyKR6+RcNa4qjbH+oCmpewaKVXRLehG8pViNqJJkEnSce5FU0ZoFKnEeGPmfNrSvX2sl7Lk+cZfhnuXOQv05Jtb2cz+g21ybMDNN8cULxskEiGNMPswQ+L/OAGclaPhvIBPoTzewfvEWEJHW4IUcjiOdrpYP2nAki8LNiY8S46fTMMm6vWjf85FZOrAgAaBWd/AQMbKSkJT0vSLWB7AGG8nj4IK5ThUmZy4JsoKPSBLaRS652kavkb06lngs+SVrZuNs1ZrJcfyXByS8uwwgBt0Ge40D4rysv2eqr2o9SGnh73aXTywrssNwYdGK6MKwcV76E3qfy2JwNr3QfGlVGQOjimKQd26dc1J3A65QfYBYvmUtgbyzz9ZCxW6ZhTQcaQ28mYv9ELWThG65JXN+f5Xa4orO0i2DZfoh6uCsAYvUkKyDZngn15WlXewq4qSBnd/lL5ffcN3AfXXqOvPQhOi2KgIzttruBlLjI0UNvG1PYmU5MhdLlo2/RNxbrfnYIfYlWq8kDZmUMedITWl4isAR6bJzyvMp0kZcNlS1ijVUlLCofTJZKoHelA9gH2pNhrsBWdvDQ1Bm/omIfjlsYgLxMFhQjuIH0TitIZys0nMjDHbeu8SeCKG4KU5KzB0NKvkz64Ery2UxKeZDPkQrsyl4Ua4LJG/ArPnDZ7N2XUBZMDq3xuQ1p7PrEWVPCtcZ5sG76Y69/49lQKqTTwU/FQgWVSZJfEUbs2+itSoYUO6yF6+IcEdVioMMROXqg5o1mRBdHF+JoiyqJ883q7fPG2EkOQcdJ75yyLv+m37VkqiVYOf/aoLI2DeC/OX72YnDCqWKXLiHh3kRrxraXRL22xX2727UhJUqZgaHLcKlhHlhbjjttquuEK6ufYhdbDh4YnBeh1axGu89dH2bdVDckK8o5KcK3mL/jp2Ty4QsCvTYLxM9Ltoq7gbl1p/OnXtB5dWWqrtctazSfb+Jj9qYRtVPpWx6lBcZWphLHREBGRp26Uh8HlAMoKFnSgudp6I1aGca26daEf+QRkEUMoPRXU9C6NnbwSqsj2COX6v8bs20pxnv/fqngabpvyjW9piA4PXw5lXs1SljetlnFFtoODOL9cHqPJmfRUl0Y9V6rUgxREiQsBZg64JOHHtJUG3cqBdo3vFf24RM1Qnwa1Momdbz39QqwvvkThfRCoRiiU5Jjwj5r1wY=
+              type : 47
+             type : 2
+             code_elements :
+              type_code : 3
+              p_codes :
+               -
+                 code : |1+
+                  date est une date = MoiMême.Valeur
+                  //SAI_RefRegistre.Valeur = SAI_NumOS.ValeurAffichée+"/" +  date.Année
+                  
+                  
+                 type : 16
+               -
+                 type : 276
+                 enabled : false
+               -
+                 type : 277
+                 enabled : false
+               -
+                 type : 278
+                 enabled : false
+               -
+                 code : |1-
+                  
+                 type : 17
+           -
+             name : SAI_RefRegistre
+             identifier : 0x21e2f306054cdd28
+             internal_properties : BQAAAAUAAAAZ2F8oDpxOq8U5FgU6C/cUL0EvDznTFqR9OKTs8kvKzXE6HfJ3iv0dsp4Gqf5PkZbcOwC+VFBpt/7b6lxuk2f531Xgzw/6ptxSnG8L3qCLb3FhLfI8abMPISahNes4y5aQ/s5A87ZEUhiD5O/1FNH/VNKs+lb+e6dlArj9XrxYNDtfPyChwBtYgWJiGArYyIMSvNjd286AyLYUlj2IPFl5xLjiBvfBjXffyKjh0F7J7Y/UTcNgbcgqM1v0X2lr/SQWVzEGVxjx0rhZigntMzSOw/G1QsqONGIwRNNzIAH579RJLonsX2on1jfaEqiSxGfqEaGbaOF8uU19Yosou8fNF7DOqUwn5Aw0fIPeYwYzEsFSFrUtp3uJfKMlv2vHvxnnHULVuK8V2acjyfOIWY2dUpUEHjfxhHa9w5RUenOSLq91ZA8jumxsrwmvXN83xr8An5pf3fg2uJ1JHAxNLg+scJwcBG/oPipkm/05aTiScbcF7rYQ//qTqZgXBTuiZlPd04JLJJ+dIvu+JA0HwN7e6qcS/jTlGG+UUvpBN3O3keyLAG5axe8dgbEfRO6K0eXzuR85f9Uryr8eDiEN04nhyjVUgBB1hfUzWQv93/FlZed6Z6wOZHqo+36p8izgJTSzJg3pRL0YbZO/rzT0YKIH5FqIkNCUvREjJ4+FtHdRR32g5MkR0P2G+KVolP5bISdJm2xoizU18j64dmQgewWucUayAeTLBLYW6ukOrCLXVP9bzZ6NU9zQ3zbIqPZGBkZGuQx03BZLZeV6NLgC7/vRGvW62ixu4RyMHxfu5bTvCXB5ZY5wRtVhKi50Xok9EdWqDR/ont4Yb2tTZ7ke5OUnUTYjLO0I1tYa8RBUmdyvwWpRN16RGT7WO0Bonab0UC7pb4j+8XNWWwadqwcubFlLgZUUROHOoH43RDQvkrIKhCpBLAArdORZhzzljy0jAl/Ocw1CIlNFEkKkGJy7rNJETOuxn8CC4bkC2WL3Jp8ddulNWNkcHI5mF/30vvr2nhj97EeayjHI7DoN6qtd0msTC3Z1KtuLsD26oBTTBXMSxqnkuZy0yGA7IFu/Cm2K/v4Ygk5xdNhlLgY1qv26G3sj6Bcgui0/ETG4c3DGXjCp+K6IfihC+ecJ3rfjJbJ4nfURkfTD
+             type : 2
+             code_elements :
+              type_code : 3
+              p_codes :
+               -
+                 type : 276
+                 enabled : false
+               -
+                 type : 277
+                 enabled : false
+               -
+                 type : 278
+                 enabled : false
+           -
+             name : COMBO_Projet
+             identifier : 0x21e2f3060548dd28
+             internal_properties : BQAAAAUAAAD32zmOWd1rTwn0wQ/S/rrcb6bHzHzGiJ4NB9FvmrGiCYlCaRw0lgqJiuhH3zed2Nk2xBhmyVNq2W6G/L4g1TTB1eU7N/fpnMiU9RKPsSSMh5nyPc9eKXps4D+kM8LINysKKaLYzFCMIzQa7dESXhGGbIkst9Fjx4DXg7o7oBqGO+fJDnz7oCg65yaSZftY2z3B4GVcLXbZUBrYjzAWJ2R++FhpUZMIns8IQtJaXux/MjhMT4BOoPwn8neo7AS9xws7Uci6G5f/5/LpHe7nMRDDTF5nVaCK/tB25YYuC+Qm6FCirmFRkY4qlbc1tg5LTEP1nu6qhxUbE7bhJ2NfBxfHcCPI/ZhPmx57Sjl8hbrTvVFeaqZmfYiwvKxzTymsK5QkXm9nZWtSCSFy+cEhVimciy42Ajq4p7gF4m+o00sZOH2vRSrtFlRfFefyyXCFKXpk5gzA0F4IBsyYvgXVqbUzIGtVS51/BMKy/cEHgoJTA0IMzSyDRSYcEl6fpvsb7CquwLLcJYDNq99H5OltzIicyKRw/F8lnU11FT0jfsEGrSwwyz9oRLmIeE/08ILsq4Jyz+QjK3Pc2zoETQGUAfoGVqjJtCL+SuGA02oYGS0RMWGHDdILza2x0XtIRyV2Zt6zekcTYxWBi0Dg2a0TcnpnaSGFgMznQnyE6vdpJ4SwrjDkFtk6TiSstCZ51pioOyHvCY+/1soqqMKDmZcF/mXD3dXdNGRIAQ/X/LwGc7eYdflFWamW5ygI/59zKsy8i3HZ7dY4kiwmhkHsjDKERzqtD5R+lgT69rPyyX2Voh4EsYyUg/kql2meLjJFJoNErT5dMC8I8DA0PrMSr4WtP0BbDp6qE1ZAfE8nQBcZh1mS8OOZ7N5YLM0jttiyXuP17a+eq/Rzf3at3+h9TO0P+8/ijc/tmYVc9XrnfXeNPmgaVh/ArD7XclD3Fkn5GoQdpKkZjq1v7JfUD0hzodmWAczLTWwVIHlxl7zvVFKAHmwW9BUZjKWYEh3u03rCKMBiE2iuH03/vKiel0DS/UvedcwVTWF5MRb8InwVhktT1RYqP+609RmoS0JB1Go5F6SpWDqmERdAUd9zlqeSVIxd0YWSSnnx96ePlLHeJMPhj/xJ3FjCtd23pD9hV6VKwcZcchtLRsP5YLXyHlcPrXI+9kSm0AP8Z95LwzqPY4BW2Ynmcgmwh8BYv+kND+fd/RAKqcuK+iti4UnLGNFSRt+7137/xDraS2mVEF2522fCOLEU6xCqLbxAZlsVp6y3uvZl6lKYJtlFfUiBoJbBLWXlghuN1mXLj+sOYMITpshA/+svgYP9zN6HxzcLbxQsLLENyYxSLwpZH5ruV7sakmniT4LxQmyNlc7hCMHmNpSn9WOg8nRVHdUTvrLCvoFfEYC5uR9wiuObv5gY5qs3wdvtqhYCOVbAdtEUbcB+aTyo5qovHcS9KEQ5QoiciF/fkncIabqjYfzwhFedbcnjPxN0OINjZFtVHjAdheDe9UTuKi09s+XY7YgDGovzh5JOUIA3
+             dropdown :
+              internal_properties : BQAAAAUAAAAgKnnjCpNjYH9BuHCPn/A23eoGoUds7DJ2bU27AQdlDa6aTiz7NfWgAWoGlJpL+K6oSWHVORoqyI9asLvtrjFPGKmF1iZMhe0SzLShIkPuGnC+Wv0dRgKxU8IlWsLu6stgp4/gZMHfoAuWF3ymN+SCzTEKx6u78GaGa7TAOH1XHGojIoI574uDkEOz8RfVyN/ZNZFJKyj0vGw1TObD9QnCs4+GzpAmVV5DxMGAhXDPliV1lglvT1Y0VtbHDX5kZBG+gHg/C6/r7uKl6fozayOAFs+A6vtrLjRnNVZbPY4aSEjM2qBYaiAeoH1N3dqOWnRvKj1jVWXCqmwO3ltbom+xAQbdz8Xc6zN+8ICkZR2p8iRKLK8KKV+a7BVREzpVIsIpMRJ3dvLNRDKgejNwj87bKeB53mYMzARKnlFESwMbzqef3+ean0w1ek4dImH/xn/70ncPnhP/n0Ko4VRDXwY8yDWrr9PXvdDxm28V/0QAvQcIBv91F+SOXWQeX9VyWWHRrtBgGs0n7QtUEFf80ZlwesYZiDEKhMTM/Ba6b/Yn+DExPg0Y+5TdA+MeeU7XHJ4KUKjVXpY+5uEp2VA9JfDREUlzpGZpmPoP/w95VFJUoxb7TV4GfPyB++El2CRX+SihUogdYtMpIQkJRQqIFNLy9hSYp37v4E5HElJ7byHRG3eUA6vs7c9r1bDNo4DItW2uw9O0WnTMCrIGxySwobyayhfWIX7AJAYVT90QD0g0JXK1/fpOYtLwrAVQdf5CCFsHTIfD1DwhXBYmpeGyWr7xgi8j
+              type : 7
+             type : 14
+             code_elements :
+              type_code : 23
+              p_codes :
+               -
+                 code : |1+
+                  //l'utilisateur peut affecté son projet à n'mporte quel projet meme si il n'a pas l'accès
+                  masource.ParamestMarché       = Null
+                  masource.ParamIDChargéAff	  = Null
+                  masource.ParamIDCreatedBy	  = Null
+                  masource.ParamIDEntitésAdmin  = NULL
+                  masource.ParamIDEtat	      = Null
+                  masource.ParamIDGroupeProjets = Null	
+                  masource.ParamIDOuvrages		= null    
+                  MaSource.ParamIDProjet     		=  null
+                 type : 14
+               -
+                 code : |1-
+                  MoiMême = gnIDProjet
+                 type : 35
+               -
+                 code : |1+
+                  
+                  SI gnIDProjet <> COMBO_Projet.Valeur ALORS
+                  	gnIDProjet		= COMBO_Projet.Valeur
+                  	// table délais
+                  	SI gnIDProjet > 0 ALORS
+                  		SAI_NumOS = getNombreOS_duProjet(gnIDProjet)+1
+                  		HExécuteRequête(REQ_AffectDélais,MaConnexion,hRequêteDéfaut,gnIDProjet)
+                  		HExécuteRequête(REQ_DélaisduOS,MaConnexion,hRequêteDéfaut,gnIDOS)
+                  		sListOSExclus = gnIDOS
+                  		RemplirTableAffectDélais(sListOSExclus)
+                  	SINON
+                  		SAI_NumOS = 0
+                  		TableSupprimeTout(TABLEH_AffectationDélais)
+                  	FIN
+                  FIN
+                 type : 33
+               -
+                 type : 17
+                 enabled : false
+           -
+             name : SPLIT_SansNom1
+             identifier : 0x21fe7cbb6b814bc1
+             internal_properties : BQAAAAUAAAAzt2QY2RDRphYUNrLAAaDjmh34caixgpSnD3rUpGgMgD5Vocy0HixBpnzFU0Vp189rNvjYkHUIQQKzWEXjDY+gcuOGyVYqPWvfqNZ20pjDsvn+0GSeSt4ujMWlaY7PPaypt5ZXrsQ2VufmoT2J/DT9gSU1lzOT6VKs5N8yiM+q2nVPNI0C8Oh+9HgVa4+HLIEPghxtRZ/iB3i5eW5qCE6dG250gzY5/+SZCwsyin4e2wknVVt3Ayhtbh7mQgV22nt7/XC9Om+X7YuJS8KRYULYSFivc1+S/AhGXdqtZ2t/EHyJ7QTtfxQmWQkj0zI3BgIpgJ8K7u0b0t9z3c/lClLKSaOFTyjzR5pm5RZVqMVJrkc6r5NZ27HsrmxEThRyT9nIc66y0OG2J2tX7TG/qPnwA12Ia2ePAJl/343n6idjdZ7Z1cjqklY8+EZEc/rh7iuCATlNHDxIhbbfzRGI7sFo/RRhf0MCtf3pUQ==
+             type : 28
+             code_elements :
+              type_code : 61
+              p_codes : []
+           -
+             name : DISP_SansNom1
+             identifier : 0x21fed640738d001b
+             internal_properties : BQAAAAUAAAA3ft4NaO9GyNIC0GnNdlIj2lDrsbsY5YmThhR5Xn1tF6Yf4gYbpPDREJbFqmyingTBDnjuNzUpgwvXQizjlveip3PprucekX3KcRkdBbpt5vOHRMisesEk3qmd1eVah3wDIlWK1OVeMTDNXo/ESJxwJdEU1LvJTLSygIpTVzK5caAUwW46SQsTcP+xNxm559hae5eqPwgtwf8MhD8qzPp1/khg0N+Q6aAUS2qESpKfPdn5NyjirEKbiThkvgE7SpQUOnsk4Vy5ahlGrpwCLK3PQoJvdlJ7jOIyyjDrbA/uPZT0JZtx0zMWNJPXb1J9mJbfVhQmCjb8eSlHtOcHIq3uz4+MXKIgwBqfWuJT7I45Ln60jRWmJuRFIkHeDBYYF+DFtz1g38tOckKoIBh6RyJLqraCzeue1YEPZMZmlNnidKb3vvQ/abTOptxMlMKiABApB8NAvHt+pv7cZ04SrflLaWfuoBxSuk5IhfVQJ3AFgoFe0bevxQyml5zsTOWB3jOWje7UCS/shQuwbKw2mWoiod4cLtBRW45feDn47GlgyJz9JucziXVzFnkBR+IseC87vBr0GE5t/xNQCkyHdCAIunmx2YeqxRc17o7SoqXfldcDplYABIiC7rjEZCpX9ymozPqoio/3YjZjMcjMH4Fb6ePO9Pf6k/fP6beN3eXUeIZwU+nmYJjlbVmCL6IB
+             cells :
+              -
+                internal_properties : BQAAAAUAAABU9oiJ0a5fr26VqwfnxlKjH0Mqq3ljPLRuUsfi4CRDK/EM5KTR5Xi+3brW16KdfnrGDmbBTPxx13QX9rS6gd1nWEDj0DyuGNqD1TliYo4Xu+8z96qbrRpGKHCaaZYRyNn16BYkc16YnZI8c2uP
+                controls :
+                 -
+                   name : SAI_Décision
+                   identifier : 0x21e2f3060556dd37
+                   internal_properties : BQAAAAUAAAAUNpNaH94W5FtmeiqTWkX03zNdNF9tqNt9fOTAf7gM7utdzCUxlOOLWFp4DiLyhXWApYmYCUD9LLTTAlUaW1YRV7rIm4mDzdozZlEKPjOA4RTAaFaiCyUuZiRZaGyeMDdZ5rB3KWI8JWsUTtvV19MBr2ZIOVehXLqUfTGLF3wck/dSJIBsas2Yk1IyhZhWADP48iPHiR4eWLtY1WJa3mSal9Vpuk9eC+2TtbZGrDiQqhFp+HN5Qj+bT6l23A8S1JbfsAxQNWaahyO6svO3qD5V4ThE6hdhyDyabHyYwAk/zPkz0gzHJvsF+k+SkZ2jUzQd+BExWiKNrGt9jQWdAaJGnNTl2p2OK9kxaD+5zFYSPyYMQfpfjHbDB5dn/3FvFDhaw89eDqy2Udy9pYusnHJb6mtq8L70LqohyRhwtqKNCNLSACqmOgK8ZjkpDHStV/O6N5IBppA7bXlsuAFbNFoBCdTjXSnqaFj0n2Wi8T3MLOcqI8eaZxk4v+TvR9kaWHgGMxRhcJ35TYQp0ES8N7tyLVyd7E67GodQiGsSjMyR9x0Qge3Hay7xtvP1mSnvjeBPyA8apHV6DDKm+2fFSAughuJkrBBz0R/B7okbdbOVVqh7CyARzLgBqbIPhl1/LjOsNcI+0JP5UfuJjW9dxXASh8WlePn7LDpHYJMfUQoVv35rh5ZUJi3mIWGyr+BFr/WvSpc+F7eX7wbLQe6ZrCEX9LsQw4d2pEkMSiUAJNz0a3+UXCi7fwJ2tml9051tQLSQ890eruWvdapc8UedWSE61lS+kvMSRXJIDvXJ2rK81iTLB/nEPcc2MOMo50ZRM0GCH4Z2rGoj7ExESg7ofEv7FKlH1Bt4lcGx18QhqyDKySRRsh72aUTo7jvEsSxe5NymvyBgMCifqByGMO9YuivGlYZvjnTPq2IeTSjnRG9TTcrRxwEUo4tKyMTXNGh8K/7B03hIcad87E+8+5QeZexX2pSKhX7do8Q+C2bx9snDNa8lnXnh/mufEVs2lqB+/VJlaAxjEarwACT3Bdd5quVjt4mqCfrEcI+dxjpm/hcu43QIyH97TVYrakA6AT3qtchuzgnLeZdC39lB46YjZmK4FKX6BqgYrB2VAaF1KCMM6BhgqR/o9F1+X6rBP9oTtf5ub7qJgaACUno5OUEX0ZkdHoCvO0mut+mtnvevB8QFQSHl
+                   type : 2
+                   code_elements :
+                    type_code : 3
+                    p_codes :
+                     -
+                       type : 276
+                       enabled : false
+                     -
+                       type : 277
+                       enabled : false
+                     -
+                       type : 278
+                       enabled : false
+              -
+                internal_properties : BQAAAAUAAABW6LUJe8HVg4tl6dHB87EYSyll3pJUb+vDYYWNIjubH+OLTY1fcWUGXPzGJleCrrPm5wVrCUIcYu0yrgb416ue+co6o5fCwWtdg4q4TsoeYPizK9mQ3OWDafMsbiboLq6DzXde4lSPR/1DqCg9NZKvr7s=
+                controls :
+                 -
+                   name : SAI_MotifArret
+                   identifier : 0x21e2f3060552dd37
+                   internal_properties : BQAAAAUAAACl0t3FWp6w4T6QNGJcByvIDe3HbSueYl7HjYxzfefxqeO9OzgH/MzzaJd2KmY2OIMoDVPDDg770IMMdOSDJnDPz/wVrhW9FcDHOjbhgFH8EdKoC4LWoJDBk8coDwS2eZ1pPhd6JwHruXp1k8c1o0EiDv5tIbVEvGTzyRfN/lPpShyZ4Szz5MgMSyexoJF0Vn722AbomU3ZsY4ZhHsBGuCMZKHMxfMZ9Qy+c6hCEXrJ95pWFfdN5RtiAS6IWm8RKw7a36il4fFdqAYYCVTZci8CPx6oLLBeq2XQrxvjZRe0g4ytnk7OLitgo82ZxfxVYIYYLHExIHOuu6cKGPV+dZktAynVIY+ykEZqSVIKMo1pnmsY9hfmr3Aqj2eBs2slEGBaivB7IVKSyjoTtPjEM0fX6QNeAM3zCxPUBIHy9AQKct9VgC2slK+54BdQqOWtV9GFpQoNVY6E3loan0YBpW9lQrRuaUJCAxBvHeJUgl5wzoHyraUYfN9pd7SiKl9q1c2H+xfyUxre3K4pOMMYYKpQ0fUoKtwLWwnq8/m8bjF7TiL7+s/PMG+dSx1GgzdG9Nv7SQAV8iaaAGwj7pJmLexpPKZWuvthCBDu2teFLfvX7LyWELb7td+kZN+gtCIvm8h8zb+VV32RW+ggv9Xuz8e+Flm17xIbRsbHSoQI37yQ6jj6E2ptePR/XPZLBBXthrBWwfbZ+xmICYL9VQjlPhj7YaLWCksYXAGNBuAD8leEofjYxjTAmRdzKuxW+sRWV5XHfmzBR+KdcP4u5x1roA1OyLIU4AUFoodvTnb2v/3rN9N6UCCVeXYiaZeSddP+XtbTRXD9NYNljSnoR2Q0eglv0JqbS2mp+cmOmPRZxEwntJFWbwEcamN+/uoSJ+yFto9OEkHTY+VtqEpMx+wDB8toe2WYuohLm5mDPYHz57OA+uawa2rCi9FBCbAFtkZEYj/MYIIvnl5180OwNMNkcuagbVmC9ZCeruBkpSfujhy5Qf/D/6yyLUzy0gYnJcFlVJdpEhDQNrSdf6TLqvKurP3l/QXDx1HV+/9IfgGf8KeF9HbY9SQLwbBEWEieDYu6fPM3rHWb3C68ciBTbVt4HLCgyLpUNmjVvbN0l1CrBk08vCKxa+nyv7DmpejJd6zy4Y9qvl4ZNY7yQ+Rhbu3cveZzmKw=
+                   type : 2
+                   code_elements :
+                    type_code : 3
+                    p_codes :
+                     -
+                       type : 276
+                       enabled : false
+                     -
+                       type : 277
+                       enabled : false
+                     -
+                       type : 278
+                       enabled : false
+              -
+                internal_properties : BQAAAAUAAADZD/Sxi+RM5qBSimoswJMGntS72QYpvqlLliJzgT4MyCWQXYgSDljp/hsoSbbYgrs4GN0xeFOeKh5exSkS6qCY9uZqwLfE2eUbnAeaYpNmxGPfavboH0fPGgFiMxoiU7Qf0hmQvDbZskg7CcyfV9VU
+                controls :
+                 -
+                   name : SAI_Fichier
+                   identifier : 0x21fee3fa06f49df0
+                   internal_properties : BQAAAAUAAAAJ+I0s6pg177m7pFiflT1DGMDLuiLORdstLpr6dvoPclCBb0xyYMWMEWWUyj31cFftf+Nf+tcLTkvhswUFNsy5giIIcObGpTsmARfBsdK4Nk+znqNIZctNHSpAvd8x/XFDQQiromyIxOItRns9GnrE0JAKuB+LKG+I7XYoNXG8T4Ci2pCU9bvOIWRGnuWaSdln6LmCmDLtlEAFr+GRD1tXKpHLMlIkW99AnHlhSeMjViBjZcWkDXFk0e41F3/Ei5/ThZvbjM2cW36Uu36gSwMvWZEe3WkFoKZCw7KyuYuk735eTUFzX3bg6t6iL/aomNNnDUjjuN2XOBBx4TvQavUAIYpYVGUgS1LoYGdl6J03kEQMybSORGHF0TpnDDrUagrApkOxvJ5ZG4gm9X/vdcgXs81zS+gtdnVK+mz4KvU+BcjOvqAuJOEc0Rjes+Qm4z2txEIYEmcfJQRD36PyXHzGIgs0y2XzcqyI1Z0jkMSP63YdBpWo8ba8Uri23coskXZavNViFs7NCtXMBxk4/H/gskHbdcOSl0SV1UJV4Fk/Iqw928ad3li+DWa/lNGyLwfnH0Vb+tWJUvJHsWFKuXu3atsE+SNaoBZjcznWU93GX7ThkCpEeTPaTitW7sDIaXciqPOUK8Yd8lLict4DAKBXH2ignkoj1ivwCzMnpkrAwKW688jOzhBfki3QG1huolbfh4aidE9PfLcR7vCQ8KYw9Wvv2xpHiFrkoQaWl33fuv9WbNclOscpbfPdBrnMtKRkeW1W+qCLA+CEhvJpFWP5/ZYC6P12/LsVBC6WdgOHIA9ukXcRjGipcbKtOVs+hKRxvo97jCmid91J9caGLj1nHddviOC9KE1Ajm0HgVYpv/nwO95xkv08qxbsPC/sTRCJ5jt38QCRWaGX6MLX3mKXvC7Fj6dd85IepfLNx+7l35JNDpjNfTKaSDcLUGWRpM+Elv3kx4yxNZLperPnimKFvaEC9ruahrHYWZGZ83UYFtf5dNm+Z5kxQ4nqhuiti/tv7DcqGpT9gQM0fyucDco5fhW8x6uOc1KuGMZWbnod1mgmAfmLxIgasxLvkxNvuyG2zOd9dXT4uVu68Fit5rKKzGmEOXwowXySGYuNqwTUc0XOmR5r3nuJwVDPtzmZXfmJvpVQTZcTECwJDDN6HQ==
+                   type : 2
+                   code_elements :
+                    type_code : 3
+                    p_codes :
+                     -
+                       code : |1-
+                        
+                       type : 14
+                     -
+                       type : 276
+                       enabled : false
+                     -
+                       type : 277
+                       enabled : false
+                     -
+                       type : 278
+                       enabled : false
+                 -
+                   name : IMG_Cancel
+                   identifier : 0x21fee3fa06f69df0
+                   internal_properties : BQAAAAUAAABKM41+xcm2Cscv2EBvgspsIQNWKRUTvzV2DJponGB9hAihfQnT/F3kqyzV1GtG+zD0LgKSLnXLOORw+BH+nDN7witHTyFNtSJtnxTF98hCbZGOosIOhZ5/pLRYiUMrEaPhWuhC6IQ44nlBfVkTWHupjpeVHd6Wh9/Vx9274TiUKgeIpulIaescON2D5ltnq6kCozmuYtlwzVm7vw1ppfvUB+PFz9UDurxMKIsst2/mzxRAp5DnxION2wEZQyqYuMjuozlOK2GIlPrYKn5rT/frXv6XzOBMWPnMPI5hT60FFThFjit4eMjaoth/YlCK2OtYr4up23R5EDqjTG/yWkRrA7zuVDtQiPRyytIRENEWrHWGvl0qsZWwN7cAHc3DAqT/CeOjUAI7cXuksXwHo/LwuSGDBmb1Xz0KrxFxSuq5ub5Iv1tRpcjrzs46dNw/CT/f6FFdi4taldZGOR/m3gQ1Obkulinq9coJBwBFktWHDnuAXIUqHjB+vSBognmx+DxfIX9nH2qZIPr3QnoQc/XHP6Trz3zYJwB92F/ux9869N4FDi5sEM3MD63PXptDRgznFeLG+Dv0be+5OgPltJg/7ajkmmuqedxE1kihdm5CJQwQjtvrwI0a/SFEYKv8iuWr21DdimfgYVsIc6JBhgPecFihkHBVuoDoRTx2CXfedHrtteUav0Bx3cTAZ5Y1LEdi/dA/QRiGiN2bFnTmDFsIoNWPdLl7pbwpdbHTnIn8esajOvRzEsLzWgalZOm5kaRIfjwIYYiMrXL8GZN30RW/iAN4AGfvxdTv5HfZWH6PLOnZlfrjmVjE3SCCWCqyBgA9PGyxGdC11TmN4d3FawxI/hnqZjNPmzodSehRz0e9
+                   type : 8
+                   code_elements :
+                    type_code : 8
+                    p_codes :
+                     -
+                       code : |1+
+                        
+                        SI DocumentChargé.estVide =Faux ALORS
+                        	DocumentChargé.SupprimeFichier()
+                        	SAI_Fichier = ""
+                        	ChangeFenêtreSource(CFI_Affichage,FI_LecteurPDF,"")
+                        	GR_FIFICHEOSMODIFIEE.Modifié=1
+                        FIN
+                       type : 18
+                 -
+                   name : IMG_Ajout_document_Archive
+                   identifier : 0x21fee3fa06fe9df0
+                   internal_properties : BQAAAAUAAAC0lmgBr0UmW6x38htneoje2RUV7x2I/ViwlGavLAa+utijDyvQu/iAZd13lPp04MwhFQpFbXzKGJz4/apWuaQvlxPgRC6rOzNhT7C97MFjzaFSDwyN9SoZaCvvE1E+DcEflPl3KtV/jsq2+MaMM8Mx1C0reZ1JJZY6Xz5/qtivwFhvcTy/lrwbpqV3vv4Djmn3xFtnKNJBCNOhU1jEmYWF5k+JPd3RdWUeweXlhPDNqFirdYGvFlU4B7KfWFX22MtMa0e6EewVK78PXM5/griCmudCvA7lw3x9TYgRYYfDX/yZdIPraNUHjD33MhkgxSAOeEtAyqXkotEaJIwqrENkLbtd/Og3IvrCEgBh2gP50VanmaMs8Z7sbIgr70SiwdvjK04hrvXq9YPCyRiidSsOd1TZBGZJ9YaRcZ3izTWXCFr20NWQyroRbiJjHpe8X1c+DfNTcO98UAsqaFvfYMLUW4pvCxHGapkjUrECTRL3gh8MYQTkqOHksQtOYyPBqTnpPaN6fi3/SQwxC07U4S8EqATTdTlmahfFjMA92H1WpLL4jsgyqKvUlTF2MJd6AFHz46poES2pnD3q1tVLfvfJ8f2gxECELpnjWqWSGqVMLiVJdB7Y4MIXMJn7tr2GZ+BckuHBIbU3123Ez2zxXH8X25GoD8/3gvnpXERmWSWyy8FBMPNFOTnt4o0GXs2Us/b4rYeXM/w5kR15rObTrcJ+B5RGruXWfxB/QiR6f3s1X+BoaCdOto8iKRLCtSFrQr80KvYCEodB6yhfLgJksZavSii9YbSorRwXu5lM0O78u0Z8M35gQUC/MtxTQTyjGSIKe9vjoYX4SjozTf8k6mhqzV53O+p08y84QhfA7Zzf9Gj7LCER
+                   type : 8
+                   code_elements :
+                    type_code : 8
+                    p_codes :
+                     -
+                       code : |1+
+                        nidretourné est un entier sur 8 octets = 0
+                        nidretourné = Ouvre(FEN_Archive, 1,0) //1 permet de specifier le fenetre en monoselection)
+                        SI nidretourné <> DocumentChargé.IDArchiveDoc ALORS // alors modification du fichier par un fichier de l'archive
+                        	HLitRechercheDernier(archivedocs,idArchiveDocs,nidretourné)
+                        	SI HTrouve (archivedocs) ALORS
+                        		DocumentChargé.ChargeFichierParID(nidretourné)
+                        		SAI_Fichier.Valeur = fExtraitChemin(archivedocs.Nom,fFichier+fExtension)
+                        		ChangeFenêtreSource(CFI_Affichage,FI_LecteurPDF,DocumentChargé.GetCheminFichier())
+                        		GR_FIFICHEOSMODIFIEE..Modifié = Vrai // le champ fichier a été modifié
+                        	fin
+                        FIN
+                       type : 18
+                 -
+                   name : BTN_Fichier
+                   identifier : 0x21fee3fa07029dff
+                   internal_properties : BQAAAAUAAADqfnDTjVU1WtxfovIe+RXM9cCsLNBGH2j6kL8l1G6EqZ5Y5eB4JO5Gcmlh8r+h5/MkjZQcAJoBKzr/O43kcCdb5/2vpU8HB9bKGGJm44PUYm8cWh+ZOvYtyR83R0O3GNLXUdyyMln+8RpAWzMx6EFzxNRi52TpuOKZ8NKBvWon8K7m9hO34NvyQpvvp4/jDAtu9VhxSfvC4w5hKMU5AiQSU58SgTqNHE8B4KfUVYH1ltL13m2h/em2oZ9uMiojDug9Il3HHqTxqEV2w7024+e7JoTxKm0bIsmveozx9yHKxBrpD4djki/S2IkX1SLTePVysJ/6z1LlQScAoP0zpbDyakaEYWShOOIixEhu/U28phVMyrv5B6Ir+6QceNGKQMtHcssG1qnXxf8fkCfegBJ/IjODdlNxUxRoMSabhXtqjPvUUWndpG9V2Zjx6O5CzHOMqw9xZd+MPJyoMUnL+iCIld5gme7rjzZi6uAjTvW6uH369eRWYtPfXq6RvaaJFu6FHGwoVjkel8kTrykW/hiUe1V93vRjWJHCkzs444TU667aYrrauDnnX9Unw3wPXw0XBKNhHzumdYkI0LtJCtyaV3uj4TPEz1tXqgFrNJHOMEOqg1GtrNX3m/hucqWwG2vOq9SZM2hQ/l/sbV2TjjixNkLc2c2WaX10J+NmLQqrF6GZAF1Ue4jE2RddQYdURcdLB7LPYFxGPK9u3BpjIP7SkxILt65ZPjb52qwsA4ngZVbsENnstaKqeJgGlVKHLc+wOciwhuKAblD6oiyCb5aE4eWHDLQ+YKPq2IXIWqgEo+x4R84alSrBMmKs8LEzJwCVRDY8AJq6RJWxQ2FZPg==
+                   type : 4
+                   code_elements :
+                    type_code : 4
+                    p_codes :
+                     -
+                       code : |1+
+                          // contient le chemin vers le ficheir externe
+                        gnIDType est un entier sur 8 octets = 0
+                        fichierRetourné est une chaine =""
+                        fichierRetourné = fSélecteur(fRepExe(), "Fichier.txt", ...
+                        "Sélectionner un fichier", ...
+                        "Fichier (*.PDF)" + TAB + "*.pdf" + RC + "Tous" + TAB + "*.*", "pdf",fselMulti)
+                        // remplissage automatique de certains champs
+                        si fichierRetourné <> "" ALORS // modification du fichier par un fichier externe
+                        	DocumentChargé.ChargeFichierExterne (fichierRetourné)
+                        	SAI_Fichier =fExtraitChemin(fichierRetourné,fFichier + fExtension)
+                        	ChangeFenêtreSource(CFI_Affichage,FI_LecteurPDF,DocumentChargé.GetCheminFichier())
+                        	GR_FIFICHEOSMODIFIEE..Modifié = Vrai
+                        fin
+                        
+                        
+                       type : 18
+                     -
+                       type : 161
+                       enabled : false
+                 -
+                   name : IMG_Affichagedocument
+                   identifier : 0x21fee3fa06fa9df0
+                   internal_properties : BQAAAAUAAABxJuW5Cz3ErVgB4Vr8p0RoFwyj54UGNDnSZ0Yd/csronP4gBhwPMjT9KEu05NIvlGna9T84mx5CZN7wRUweyAYgbZv9okncvbb5JjCyJStR8fdiPWeEiifptrkOqQW6U7RhVpeROkmIrlv40FsSESnqQa0z4TXgNNhoHVhPuDMYodYNSF8SWn5A8Jfkcu8e9lg1FjtzHISOS9rlqlSftD7IabyUMiRNe9y9qPdRBG7q5o4sH4jAz7ISjtFwn8B2rphSWNyko272WdsZcSiUi1cnvIF/i9ig7zsAgm2EWNEQYEgPNgF2N+i4RhGbpBJbucNlvZmeiAajb/gSGxyZy5W0XiDTid+sleK0QnnOOLfspj9jNHPpWXqyfH85RW3C9VKCsFvNV4NEJXnZPCpDypML7E91pyqEXSP9gR9L0A2XRHgHYYvuL3xgvWDJoeANL4nJJgwkKbaIJ5h7s42mDMsnct5X73DDQFy0GitemlHIfJDK9ws6fDkZvtBr+qk78f1OcTvCC6OK4WyWUsXCamdnUPnscFD/Yl4bt13SGFRohoE9Se1mLvND+g5CgtWzZPbAecpctOjo4UROL0l/tSLvcfrZkdBsSM2QEYOv4GqZ84ma8i6Ni7aydRALIIln+zkASeddywArRm34S96Xka8PCXlXvcTQWHrnlDECi1mugRlXsy6/3eR2jAQPjeR3eGiSYhKBE6z1rkXO2tl8MTsemXTg9qbh4bPMCpr5HX1iP0NLST/4wSkzXNhgD7QXjIszlauZCbyP/2tf8BiLvhKCZ85sTS5r2fj/X5y7PadHxLysuG5cvLOBa0/t87qcf6Jpg1PFr3g53ZEsPpZ9QXun/bpFI0b3KVecpa05kfvNwTA
+                   type : 8
+                   code_elements :
+                    type_code : 8
+                    p_codes :
+                     -
+                       code : |1+
+                        
+                        
+                        
+                        
+                       type : 14
+                     -
+                       code : |1+
+                        //bOuvirinterne PERMET DE SPECIFIER SI LE FICHIER SERA OUVERT EN INTERNE OU NN)
+                        
+                        // contient le chemin vers le ficheir externe
+                        
+                        fichierRetourné	est une chaine				= ""
+                        fichierRetourné = Ouvre(FEN_Archive,1,2,1)
+                        
+                        SI fichierRetourné <> "" ALORS
+                        	DocumentChargé.ChargeFichierExterneTemporaire(fichierRetourné)
+                        	SAI_Fichier	= fExtraitChemin(fichierRetourné,fFichier + fExtension)
+                        	ChangeFenêtreSource(CFI_Affichage,FI_LecteurPDF,DocumentChargé.GetCheminFichier())
+                        	GR_FIFICHEOSMODIFIEE..Modifié = Vrai // le champ intitulé a été modifié
+                        FIN
+                        
+                       type : 18
+             type : 126
+             controls : []
+             code_elements :
+              type_code : 151
+              p_codes : []
+           -
+             name : CFI_Affichage
+             identifier : 0x22067e440f8bc19d
+             internal_properties : BQAAAAUAAABe6ihFAYIGOPludLVFymn+JXIG3emevtXCQqoP3s2HZr9/t5kA9JVZRANxt2/OV+QMyT6ds4qJaKfxSS3IHKn7+iKuaJsI5FXTEgNHRe3suJE50gooLJ+Sh4WGKVCJ5AvVRv+9oFh09l28MiCJj7BN3vIxW0TkoHmPTrc5wAVW3fxiXC5DFEw2XVsCUH2b3fhW5crY1gx1P92NzLxFAYrOrkyLacImjwuW63ne39C4TGsqovLRCuzznqlHEhxZ1TebSS3DOywErZgvk23jTVI3b1TtJlLIDefusvls7OnZnJGk7nSjZIwPScxXYOITQVyXqcRsUHnoR91xKn7YANN09BJoVQ1T6A0INBUvZQb6zUW8z7irq1V7GMkOWD/+3rCBAfDl3Gvl0mMxcbE4eKiA6uakkZ01/YsHyjzuunlcOF8iAb9lpc+oIdFZ0+OgwOvbIFvnHG13P4mHdY9sjpz0DSw7zRlW6nDwPc5CvXaaBUvP
+             controls : []
+             type : 31
+             code_elements :
+              type_code : 73
+              p_codes :
+               -
+                 type : 33
+                 enabled : false
+           -
+             name : INT_CalcDatNotif
+             identifier : 0x23da4fb30a686dae
+             internal_properties : BQAAAAUAAAARcyOc9CdNMNm25qXKP8jhlhZxgffBxmGtTclUDIQAJjP1um+p4SKaF5JEjN9D9w+QYa5IOVKahWFbRkIkjBYKEsMQShbP09Qbrb4FEXn4USBy9VG6uTBxQbJgh56vpffdoMDwc0QHVLFrC/LOFjXy/YNspQT5qmov1JL9/al/7r2I1DA4gA1XCFWE44Cz2hZHkh7is9Jy5kIB9rxJw80uByAhV81b9zYQdX71Y1uwjUyM3xfKQ5SpSpNeSUA/DnoCzbPDtvQ1iIgLx8BCC27DLlqRUgjS8Ak8EYHex7Y7+5puD+UTgcO8bGAg1dcpNrU5RyWUj6bkgemmMc6Qj/9RbUNB7Wfnx7jAmidzBKIlfx5B89m5EfulPLxuaqXNqX7qNqfyZkX8L0gbpxlRoXvpge320RnAGUnvGWD53NnUPs8OY1g9fyIRh9PtgzTjzBFprwAaBz0jpUbMdGaepLsPNxwVneDG1lOMv9FSeOSDTOD+oIoGL/vQ3i7wjJvuyyQMzkfbGcvW9QvNI3hZ1CKKAWiw2+fxnVNTYq/waZcZa6+xg6vzBl2VqmKAsYQU8XtrEIpYjwnl+VmlWcPBV3VzyvSysNld1dlhK+evGnNA/IqQxHF7KRqXHTHfUU5AeXcVzQjZaVoWSGS/eVB/UeviHmsbD6Wj/c4NB6HSLmxQ6CyR7W62yvz3HP2eUgbNZkiro2WbMhba/rZpXdkpMwdwnbi7DRcaQKfjmNuiKEnSV+HpnfVEd6+JqVxS4f1PriaB51jhTIGE7J+k0r5AWL5MAk6QqJ722/n6JoydZsQI20Ztli0LObUhPniESvji55K6vliP1FN65eyve4dqopF/kzqVpJIOo33FtRoRLP1ySpb7htwIqDsTOBpSiHBh4tXNcctrY0IEKYfXwGoX+wuTXE11ux/3xaC9l61AEDMSFNEzIzkIESKSKE6hzJ3AMIUEIpDbJpzOEA5ZCO9VpZYAJOA=
+             options :
+              -
+                internal_properties : BQAAAAUAAACrIewoqT6d5cKrrKCrUaG0zNtyDbz0q2G0WNLFOh9e4T7y6N0PFB4qUU45jrDGWV9fTXYBrJGwMfVVg9lXbP5fhllbpe1sNpViH5ZfZdlR54lHh22Cw10g4YdOiqxS+hfQpSn0QNSZC/47gkyt7vKuqtOy9Ci9k7iar7tkzrRY1jvbQScOgRC03W3/H+9LoTrDQX1tJ3o5hb9UERU/7ZKh4svO0pMyy7l4XtZ3Bw4Jnqay
+             type : 5
+             controls : []
+             code_elements :
+              type_code : 5
+              p_codes :
+               -
+                 code : |1+
+                  // Version 1
+                  // Description 
+                  // Interrupteur gérant 3 états : vrai, faux et indéterminé (-1)
+                  
+                  
+                 type : 14
+           -
+             name : INT_CalcRefReg
+             identifier : 0x23da4ff30a8c6617
+             internal_properties : BQAAAAUAAACrObs1Gi7bl8coLdnT/cD+WpkoyFO/T8ug0UrD8cIyl8iE+9BTc4Yi+kWGG6HTz0Z7KX8ZzcmaBasIJ/tzcs7LIXNQ5hlP5cE7vW7wa+487dRr7krRm2DLBGfkgQF2NmIru3GggC/lQy4mLIOYYxb7VDkkwjQHXHSeqShiMLnc2+Tmu06EtdJpblWvR/IS3/qf1iZVi6EREz3a9W/QsY6WXgsyFuogsAnqoZoGjwEF5zkW9hWuCpHtQz6QlktlCf2Qv9ag5YhfS+rE/olNNh/Ri2Twbq4bDIdZ0zoKQEopVuV5i53jKtX3knAFR4H6sERw0kh8c7MyCGzSqBU6hmNcqOG73snxWkdncSQCv7X2TFqp7GBUys2GQDv3zTwM1IsM1Mq40EM8hIrL2xvqVtMS9MMOBbXPP/xWqy4C3Ty1hX/q2qbZuUxJHHYJyZMnEdipzQcwBtN6B1Omlmt+fydMWXDFsCTTUQPCpZ1KAe7pWjCVKAw6U1IcXjWQ5ttKKJMcc1SmPjuMnTL5HyvVpcvsiX3ZLeGOPMjzcHRnT10Smy0Z2OAavaHbzdlIKKxxy+FcucgpBz23Puc29lv+J/Wo+L20WtqF1QxtpsR6jF9W7s2BzAqICWUNPeSkTwTydmuV7nkPzHcfezCRdl+f6cLV4kabZAAnVBNKVcDQKKDmyFIU7LBj/irjD4wMtuVe08hN+g2IxKyP1/NnzZu/poKUVzQ0EeVgPz5yQ7/rdqObEVL7nRp7touh8Wgih2svqXPLHIaYyFRgSS1UR5fUV0wdxjz1SQ4OlU2/nnJ2yxWuVOnDgUlgnQpUytxCWJF4EptbNK89aT/Bnf8KF4Tp5hAvJNDfzy0Tl6oawpooKYoZnSE3afG9b+bmGw0SZVTCSsxRR/DLgN2C1GO/Ymg2nQ==
+             options :
+              -
+                internal_properties : BQAAAAUAAAATLt6VpYERQSZvasR1XE9FVw2jMfUR8+l7LhSG6nbvhd4ryxanodhQzv33wc2+Px53hcxIR024sv6m1KYLTLwuAP135tm9BT9oqwYEHWq3wZjqKwctAKlhvOzjWOgBAS16PvIzVeweTX2XtXmhOgnR48dS26eA4ocz/gY=
+             type : 5
+             controls : []
+             code_elements :
+              type_code : 5
+              p_codes :
+               -
+                 code : |1+
+                  // Version 1
+                  // Description 
+                  // Interrupteur gérant 3 états : vrai, faux et indéterminé (-1)
+                  
+                  
+                 type : 14
+           -
+             name : SAI_RefNOS
+             identifier : 0x2400b9261b029bab
+             internal_properties : BQAAAAUAAADj+nJm3JyxeapKBepBpiDRrTdafoJTK/Hz5u7phePdgHnJE4lF8phsQMj3kHkoEO9uOgXaa1L/hPRr983j5Ge5BL2hrZniTz9YwHCPKAezij8oreOW3WBDkvOgGbMwQjggbpgRDcosxobp5wA6Ih9Lcb5yZmjyWoKryuJGHW1MSM/YCcCwXbIFuidbBZL1htF2g29sRSdMLEGvmZAHrq+e0my9tPFdmQjDduOyOD2eMywFhNGg9gtEPYxyDEblbC1W/J/CHP31YHkfvCuDIVaYciChrA0Kc3LirUrKwfJi0WG6A1iYwR7qFkatA1rf3c3L8Z9j5MbihjBgDVLLVgE2URh/NzGDLu4V51A/M8Ck6obkLc8SevEDnOhbab24DujpJB4ZQSEBWj1+3Gz1cuuGa/wYhw/DkVXIRxyH9gi3hvaHIYgwBPswnCTvKy2JaVRit8NRyo6gvc2Q7DNt/OPTBbECWQ8hT9FXSPBeIMvvDN61MO7/prTAL4EMCEwdftAIQDpA4Fa4T3ZV2OKhTIKEFcF7oaGzdV900bWetd/mDbcWT2aLvMV7axChZD044f9ewO6LOGISClm8dlSACCuq6ipUcUWzj1AtKzcBTDtYb14OVjdszFtV86aVyRVHXydifOzJR8cHrkkBnzaOmy6y4A1MMAcHjK004xsYrk8VhkLp1GRz8FPvlMdlAV2c8kS7SjTVzA2VEGTNU+9uxQgs/W7OnrfCz6r/vBtNM+bnLnlkV4er4U/slG0L9Aib/3pmkPR5UvYPNxqB/w7tqId1lodgNvlv3oL2y9B6WHy54VXbjEgVKtl04A6JwGJqCJOOdmj4uHbyskf7F7BB+R9TQZI2NLGPyEXcmhzwwV0EMwhQKzYsLpM8FNwkP/Ci4on0hbGLXU6zclBwqHOqhdyxtck5MVwTvVwQHwfXL7f0eC9+jGsHdPz9Gxo+I/b+W2eE0WFSxS5Kt8uO2uzT47CdFo/akpkJKNPxvoH3tpvKIBoKlDDg1ncmEG3XBbshICqw6uJSvVwuCROAO71/jp7cMDnLjQXtWP9UZqa+EqO7Oy53pXJYXolIROKkIvjd547kSn/XqlHk3I3x0BUNhi/Qui7ZJD20X0KMriD08YrMsI24EH0JkWBcm9ds93noBJiGSpe/K8LpqPV1+Es4xexv
+             type : 2
+             code_elements :
+              type_code : 3
+              p_codes :
+               -
+                 code : |1+
+                  
+                  date est une Date = SAI_DateNotification.Valeur
+                  
+                  SI INT_CalcRefReg = 1 ALORS
+                  	SAI_RefRegistre.Valeur = MoiMême.ValeurAffichée+"/" +  date.Année
+                  	SAI_RefRegistre.CouleurFond = JauneClair
+                  FIN
+                 type : 16
+               -
+                 type : 276
+                 enabled : false
+               -
+                 type : 277
+                 enabled : false
+               -
+                 type : 278
+                 enabled : false
+        -
+          internal_properties : BQAAAAUAAAD6tGzblfutHm3oFIwuOTE03MnyoPxxwuC0Xf10hz5Q5mAmrEb6ueL2k8fVkA9EVEfL+JxUMi3SENKvAq1Fvs6mubuHvBtdyX7NfUgsm8sgimT/RQ9TfQmIqv4zwB3uZxMazB6GoqYCtYDKpGHbMLsqXO1x
+          controls :
+           -
+             name : INT_AssistanceSelection
+             identifier : 0x21fe616b05989b50
+             internal_properties : BQAAAAUAAABPq12VU8E82MECoPtiRwHm3ZbS+6MwZI3bs3FkRAIaqdlmLWH2QGgFQLAUsVOh8SzwrWuVmgzlqxx4cIwth+Wl4/3PJIWMT/4XUyrql4gZFltZ7Go3RyVjwlbyZzcZHpVduaKw/nr1EoLubb4Yh+6OKRlty8IJ1lludqE4cKckbE9UL5jMVo5ipecnloYwfeSrrqojKuGNMfHySg5sXPb7BnA3ke03XHvvvEkvlDrf3D8Ww1NIrZedH7GYwgFF58aj0sqxqwtiU8xNoQaT7fiToSsankKggKGxXnigc4j6rSytmjU3MmgA+Hv0pSqfcOM04B4XcXL0YcfbQRqsegwCRZFzduoryVVTnPygyITlS6lvNjFCDgK4Wg7TZJUcYrZIe43mawJ817HQyEMhn5rZV2NE8XezqZcDh5xkMiQg9yrdh9EmnBuLB0OozCpPmukHH5dL8OFnccNcTOEJEI/A5nGLFCmbXH6N5xZu0OtJGfwbCcWuEOu75Sn6eICvzr1kbVIPsZ4jOUEO/z341slnKAiLYVh77aMCyf8bmT7tJWLVmZ3Gb8hKoqn5LrPoFuaN62mvZ488F5kkQWuy6UFhfEsuQ9ppElexfZjSHr8jbmGnkSSo8ZNPrc0OU1N6czc9ZgLD8yQXw8D5TbWGBb7XsEWqLd5sEGn21XL41JWPGylOuee1fKBGqOBzQW040f7LcSP7T0bc/1kj0pKXzM7i/dZhK4GAQsAf/W+MAAem7CtISBdEj1tVDGkAEWleLBm90qbztYV1eDRnv8uvKbMiSCRa+zRjW9hiTi+6TdsNhvNOG6DMb+vcvx7e6VJsoys3DrqqmcsWCRBcpUnkGHJrLwU/8dOqYxqJ/O6gStSjyM7G8VioIw==
+             options :
+              -
+                internal_properties : BQAAAAUAAAAg8MVVUmiZJPQS0NxbSgjVW0lFeYNAjnrmqoIBClBH7GnJ5/2wdTZ8LDyPZ9qDsXIdUJekx8YuY6UZ+oYaM5l2+gwWjXU/1FZ69e9h6J6xpG/5P8/byZ3kM7ybDByoxMk2i9APNqTtBhixwkujHJR6g70dyg==
+             type : 5
+             controls : []
+             code_elements :
+              type_code : 5
+              p_codes :
+               -
+                 code : |1+
+                  // Version 1
+                  // Description 
+                  // Interrupteur simple 2 états
+                 type : 14
+           -
+             name : TABLEH_AffectationDélais
+             identifier : 0x21fe616b05b89b50
+             internal_properties : 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
+             columns :
+              -
+                name : COL_Selection
+                identifier : 0x21fe616b05b99b50
+                internal_properties : BQAAAAUAAACXtwchREF5TEmD+brWjCy0wulOjg8TgBodxqKzSMbBOtnLN6jEG3iRAVBhoq93OBm0we6RNjy/R4PBBrtPJ8C6F3Vr1jqp42xbYBCeGNG1GkdZj7VQAb8embU45E3bThfImqS+4JYQF4iXyChM
+                type : 5
+                content :
+                 internal_properties : BQAAAAUAAACpCXg/L7HOjGIsaH/UsfkiiWgv0lBq4G40HqkYLRm6HY39kIs64nZ/JGcYS/71WJublyLS7vnJfsajJN5U9qBSiLfmJE760uE1Hq1955yM56rlVzB01ugm/lo764TcRe2YxKdjI2o8hMuE1tRCA5mImnETpUXtvCtyE9zPPe/AVnsF8mXlDfs6u3XnRpyel+jVf648SmmTKa7s7qoFiNFDywopz2GiFZycBWFOgB6TXHus39YTqH6By4Zt5DR+H16+13a1KC3dC2yk4EMPOmPVccXaeEKci3XqkCeGD2ArDut7IC85c9aGAXwl0LRvceS4T2nUwtoKgjnFpw38HSPaFA8f4dVD0b3Chij1q0gDakN/CiIOGyYgGUUqIsaqTNeEe3HEq6oIF65wG122eGP2WDmsB+RnyPWetpf1J5YTxihJ51ydVRdSUS0tse3WtoktmVgDKG/NKu03BhL5Jm3ar8neJxZyUC/xBG0YAacyvjys1di4Bw4/D6qjb74O0EfoYw7/5H8MVNcPZLoB/br1TCbNoS5DvzUtowOwW+ldU24RRyjH9rZHrWHkhAVVUxQnLExbYpLW7LNhao2gj8AqePMTcw31Mg==
+                 options :
+                  -
+                    internal_properties : BQAAAAUAAABQM1l8wAxO9QC8YHDkmd8RwcuRrUw9ScR6LT0ZrGvBMlV/2/U+oeFkFxfK6rdceajSXhUoTUyL
+                 type : 5
+                code_elements :
+                 internal_properties : BQAAAAUAAAAEfXdxvzQadzvB+1nfBxi2rny4i5dUOZAFKqpUBLh916+QYdsw8WEikK8mrQSyyKW/KLpym8A=
+                 type_code : 5
+                 p_codes :
+                  -
+                    code : |1+
+                     
+                     COL_LigneModif = 1 // permet de prendre en compte la dmodif lros de la sauvagarde 
+                     //assistance selection 
+                     
+                     Si INT_AssistanceSelection.Valeur =Vrai ALORS  // assistance selection
+                     	
+                     	numDélai		est un entier	= 0
+                     	sMsgErreur		est une chaine	= ""
+                     	
+                     	//rechecreh des fils d'un non délia 
+                     	nUmfils est un entier	= 0 
+                     	bExist est un booléen = 0 //existanced'un délai non en arrêt -> parent en cours donc ne sera pas selectioné
+                     	
+                     	//sauvegarde filtre
+                     	slistfiltre est une chaine = TableColonnesFiltrées(TABLEH_AffectationDélais)
+                     	sPostable est un chaine = TableSauvePositionEtSélection(TABLEH_AffectationDélais)
+                     	TABLEH_AffectationDélais.AffichageActif = Faux
+                     	TableDésactiveFiltre(TABLEH_AffectationDélais)
+                     	// vérification type OS
+                     	VérficationOSType()
+                     	
+                     	//selction des OS selon type OS
+                     		selon COMBO_TypeOS.ValeurAffichée 
+                     				cas "commencement", "reprise"
+                     					SI COL_Selection = 1 ALORS   // sélection
+                     						numDélai  = TableRécupèreParent(TABLEH_AffectationDélais,TABLEH_AffectationDélais)
+                     						TANTQUE numDélai > 0
+                     							selon  TABLEH_AffectationDélais[numDélai].COL_Etat.LIB_Etat
+                     								cas  "en arrêt", "non lancé",""
+                     									TABLEH_AffectationDélais[numDélai].COL_Selection.Valeur	= 1
+                     									TABLEH_AffectationDélais[numDélai].COL_LigneModif		= 1
+                     //								cas ""
+                     //									numfils = TableRécupèreFils(TABLEH_AffectationDélais,numDélai,tapremier)
+                     //									tantque numfils > 0 
+                     //										si TABLEH_AffectationDélais[numfils].COL_Etat.LIB_Etat <> "en arrêt" et TABLEH_AffectationDélais[numfils].COL_Etat.LIB_Etat <>  "non lancé"  ALORS
+                     //											bExist = 1
+                     //										FIN
+                     //										numfils =  TableRécupèreFils(TABLEH_AffectationDélais,numDélai,taSuivant)
+                     //									FIN
+                     //									
+                     //									si bExist = 0  ALORS
+                     //										TABLEH_AffectationDélais[numDélai].COL_Selection.Valeur	= 1
+                     //										TABLEH_AffectationDélais[numDélai].COL_LigneModif		= 1							
+                     //									FIN
+                     								cas "en cours"
+                     									//rien. déjà en cours
+                     								AUTRE CAS
+                     							FIN
+                     							numDélai = TableRécupèreParent(TABLEH_AffectationDélais,numDélai)	 
+                     						FIN
+                     					sinon                       //deselection
+                     						// a faire 	: deselection des délais d'un OS reprise/commencement
+                     					FIN
+                     				cas "arrêt"
+                     					SI COL_Selection = 1 ALORS   // sélection
+                     						SelectionArretFils(TableSelect(TABLEH_AffectationDélais))
+                     					SINON                       //deselection
+                     						// a faire 	: deselection des délais d'un OS reprise/commencement
+                     					FIN
+                     					
+                     				AUTRE CAS	
+                     		FIN
+                     
+                     	//restaure filtre
+                     	TableRestaureFiltre(TABLEH_AffectationDélais,slistfiltre)
+                     	TableRestaurePositionEtSélection(TABLEH_AffectationDélais,sPostable)
+                     	TABLEH_AffectationDélais.AffichageActif = Vrai
+                     	
+                     fin
+                     
+                     
+                     
+                    type : 17
+              -
+                name : COL_IDDélais
+                identifier : 0x21fe616b05ba9b50
+                internal_properties : BQAAAAUAAACFIUMC8ETQar6LtgF26inmFxlrKUn9N+x2BQ/d23ZhraVoia7/uJqHkY6IeJnLXNTYZ6Hvw1TnR3m72s28zKN/estZSVK+eFM4BbUZUny02Zj/DkaVaGwqc+KMXkSOA0T8nRglE0wWSG7WYd/ek+XjIHsQdScm41MUxfWkjp80V4+kAIx3U0zN
+                type : 2
+                content :
+                 internal_properties : BQAAAAUAAAD/ZfLrRguU1teSPFPhIVtZHVeOt1qgVKZ69CrH28JwPk3EiZUIi4U7xZMEptUEkKI8cs4evGfOOvLORqdbc6HxV5ZeASCNREjklz7HaLF/7uZr3ogRjkbcf3//A9rQwtRleR3NzWRqg4tID2xGdg3gFq3H5aOADkkbpgxnxu6IewlvKOGpbY45X54qAPgvgXK7072FRBdRrWN4FTCwODMvLSSqdg8K8m112w7lZdvO9dhh9Kw4sxRgks5pTnUqMf2p5F1VDX9BbENJrGcw3zgcvIewsU4blERqsvmGCL17Bfrla04fdD7zgb8/RSr02aZx0S20wZtoc+WyQiiMiZnpWfS+3Z+ODXjbz6dOs1209syXxFWvPjuT2mpC0wvozSCNSUbagEfQL0r1evWsxurW3U612HeFW/cMxKHPo7gcbLYe4V1kXAnU7+i3mmDGfCzopx+eUxjcwWGZU9eAl0DZ9DAL9EFk2D9di6qyCYTX4QErfoMu0Gj1L7wu5ch4j/j15cUxngCefsgs5R4GVVdR2kezu0vNyxL8iMuX83I3n2QLVlsq74HJX+O2TQSMsXYoxOpnxU3t4znY5CWjXD8TGFGoGN4lIoPX/ZJWhcFLxGaOb20UPenJNzfuHX7vuwu1HFBtAN+/KPtF9t3mlxioqpn1jIbq4SAE4+EmYAlA2kJYFfV0BCpxV4meLO9pjWNHbwjAJ2nc2iSse6rz5dqMWq6sPrn6m+Lb7qE6SmefI6gzf3cKKobnkUueiVaVfuAaqU2pLqeHipW1UUbLV6WKWw==
+                 type : 2
+                code_elements :
+                 internal_properties : BQAAAAUAAAAAG2IbkF3i/mhvqPnm5SB8ccf6KZ/SxdtlBgOr7P/0470d7/cIr37f5uR0KkbeX0HQFx+OSoH+RTwBfDPaKbXynAwC
+                 type_code : 3
+                 p_codes :
+                  -
+                    type : 276
+                    enabled : false
+                  -
+                    type : 277
+                    enabled : false
+                  -
+                    type : 278
+                    enabled : false
+              -
+                name : COL_Indice
+                identifier : 0x21fe616b05bb9b50
+                internal_properties : BQAAAAUAAAD4o0fDVIoIRKVSTE93z+qOpM4wtqw4yHp6mkwij1Rm7QnwzJMQ2s4wTz848Od8kowDpDCWs7/rwwptirkCr9iMTP0Kql4ynpa/25q0WtrcSsR4u3k6I68sqhywEEOJUqCrWmriwTva5CAI4YF2A49AGvufUwP74iu+RqgLSs1kD+po
+                type : 2
+                content :
+                 internal_properties : BQAAAAUAAABdtPRIiaSkh+Bi4/+l6sYiW2Em1os6ABpS7REk5blSGgGztKqotQj5EJNZOyRS/dEqJefZZbLI+3+DiJijyg7ve7+YhJKneBV94VzxWJtnLeDk3LdmQAg+s4fJ60idPsWBdW0a4FwqFne37q00kACRQMoq7SgEQpe6GQNxkjVMOomWuq7uvJhiax/leV9XbwrzGDRWLMYlYJfUv+N3arqiaAi/8nN+WhAiF7lXubKLGBCX0hbQyn3PlviMQe/wc79DP4jHLQGZb2u3oUlKrcMA1/x8DHYgUfk4CrX805WpQl7y+fFrI1nYxsmVJv+WsEcu7wSpCKkaomJdGlXyi3yzT9WwwFgZDNiBsPVtz+VXtnaH9XbHYx+Cuk7cfrCQJunPEbCd+lvUyDHJZ09WeD6zKf5o1gWzsBIqW0uAkSBAluC8wU+gHKMs+xYggam+aLpT/W01CxcwMjQEo6qeHCwep3wIKLqQoKoGmYzkgAADzlGXF5xxq9kXDJ6ROx1GQPVSStRioKJ24K+FT2naoxsVC/VUVG1zr7VGQ/0ubtkDddqoDCzjTnL71kTt0LWW7AWBSh0vAI/+cQ0Ail+otJzaFncXW3io/ZOhQI1sOjmI/MYkbrAjxytSWUIGDe3EurA3zVW8Wm95NMoUtqrKorpoVPY95S3fBYe94uyRfOYl4FwglnugGP8sxFG55puoJeCgrmVLJ9ykKj5CXPaMPZs73VZX3CHzql8gInUoaHlDs+iswASvey5Jt+e3h6C9KMVorA==
+                 type : 2
+                code_elements :
+                 internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+                 type_code : 3
+                 p_codes :
+                  -
+                    type : 276
+                    enabled : false
+                  -
+                    type : 277
+                    enabled : false
+                  -
+                    type : 278
+                    enabled : false
+              -
+                name : COL_NumDélai
+                identifier : 0x21fe616b05bc9b50
+                internal_properties : BQAAAAUAAAAtQwkBiXmHrFVXKlL6ZdIDl40LudMhf893mbgEyXGf3pxYA9HzE1DveJz5wfJWTr/bcLbsWrAKtW7sw5XI9cE5+Xa+xDPjbPnZptvyuS2TKlKXW6NeVcI3sKSTUVUQw6j5SV8UJABVXRPqjZXT5ClfUT9g+ASxt6gylKPp9SDZBij1Qi2XEZY=
+                type : 2
+                content :
+                 internal_properties : BQAAAAUAAABo4Yejhq/vLBvVYkbA1XPnCk4gvggapnMWsw9Nb0FWltGnfOrsWVxxOC+pozgGoUWKiRdR4f608ydPGGj3HlKroxMQxFaTfAVdFVzprE8bcbDALAeaDDTG64NBgzxZilHJaWWC/GguFv/jPg3ARKzNUAYSJUwgtmdKvdO5XhFYDsFiGibaKAxSu+PlEbND065DRAzWODrZwLeIb3OjLgZOQITHqt96bgja85Gnra6HTAgjUv58pjm/bpR8aXN8Xxtbi7AHwV11jxMT6UnuWT/cD1hUHOK83WFQlo30b8nlfobGqbGvl42odg29Bqv6/GtG8xQphC22gmpp0t0+Z/CvV+FYSNRNQMiRlL1Vk9kL2m4bld4bF/sSEjocVrScsi1Ha1ZnKD1ioucL3RlUSuTVxxgOoEN9hlRIVWlqF9qOaD52L0HONvnOsSjm+xdA7sRJh6N/qbn+XApGeVx8TmrQ9cbG+uiiXsR0UzoutsqxePcxtW6fTWdBGkjfPfu4Xs/IbPrMXuREmvUnpZOw3dn/EYeidktVnZ9kHeswVNOJ36BSCj7J6EiN3EYj4tNokpd/lJshHqEcexs6aLkmFrqkvPlVrS76O11/iltW2JsuhgwuZMoJ0cHkR3zER1t2gPoN7ztGwMkPlpBWLDx4BNDS2kD7p1vpC4mzBOKTQiBjesLy3LVmWl3WqkP/GKmaK4L+CPM9NRYaXGw8qpj63/nVo+CNFrMPAVCJi9dOxBCoiLr52YsS0JkWOJxo1puyPdgd2Q==
+                 type : 2
+                code_elements :
+                 internal_properties : BQAAAAUAAAAEfXdxvzQadzvB+1nfBxi2rny4i5dUOZAFKqpUBLh916+QYdsw8WEikK8mrQSyyKW/KLpym8A=
+                 type_code : 3
+                 p_codes :
+                  -
+                    type : 276
+                    enabled : false
+                  -
+                    type : 277
+                    enabled : false
+                  -
+                    type : 278
+                    enabled : false
+              -
+                name : COL_Désignation
+                identifier : 0x21fe616b05bd9b50
+                internal_properties : BQAAAAUAAACxmPG/sIGSNSKM5Vpjkyx5/SXZNesJwBpljjdjWThsZh/eEuH1M8pND4CXzUOXlNsjHREneDivfxuBST7gathDt3V/R0ts8CjLgEkdrgMWQ9lYt3coQiUbWfWzOYTgw797x1BZTEyKtid2vD/54GxBvAZbSJwFyFF+JnmSjyefnKxp6oKVnWxzGQ==
+                type : 2
+                content :
+                 internal_properties : BQAAAAUAAAA7zAOPLB2QJNTSMyI+rKuO/alrX51UTo+lu0yyd43XGDS0K7UgaAnkaH+zGMUBCA+EdFzudch+0ALpryPieRFlSHrPbIluT/FzIaC1xfT1H/g6otkE3U60FjlC4Jx2R54hjToUU78udXBOLjBEeOl2jhGqRdOw6lWeqv7gIwqsi3heNi8g8n2qH9Sy+a/aT0hsixKI92LbehKUMexAia3kE+VW4AJIsPQUg/LpwISEjcuNL6VgX6KJ+MlWQJKLcqLvqMCW/TRavPlo5nVjwIwdFcZOsZqY7j3kI3zA5X+gEzav7Zmx9s+evDVz39B5GQ+Nc5swsjNFGwseHuY32G0Bt9/op9NvUOujviq9Z9QwB0ncHsvOB19SmKBI3p74aPKfwsGkWUooXW3ezMok11+N5G0fP/UnSH3JF0Ns4xn5tz+f0cQELFwWzFlvDXJrFWvprCchN2wZpWJKsTagSOVs4Qftd63wleUgDJxhWbMiVgD0anzSdEuXQKWI0h5xMN8YSlfaFJqxuifH/7UCKFZmOcbtGsWb4qJxNYnGUynqiAtW3G7oucAXykq44GLPmCNhk5Jmu4cqCWAr3t7HWZSWz+KaS951EXkiiJBzPxCmXf/HS+p2cyS9wKbMaGywBOZsaVbOAm2w4uQCDHDgNCmvi57fC4aKkG6tUiH1pjQDH98rATg6fssTNAT259Hw6Ojq6mLDE3WPTL89Xc3h9ER65SJ5yNe3g5q/9+aTSS/8n0+hDzv+s9Au+VE=
+                 type : 2
+                code_elements :
+                 internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+                 type_code : 3
+                 p_codes :
+                  -
+                    code : |1+
+                     
+                     
+                    type : 14
+                  -
+                    type : 276
+                    enabled : false
+                  -
+                    type : 277
+                    enabled : false
+                  -
+                    type : 278
+                    enabled : false
+              -
+                name : COL_Etat
+                identifier : 0x21fe616b05be9b50
+                internal_properties : BQAAAAUAAADdmaEqs8m1h/rzevvW6HB+EXMGkDUXslzDMJCbgfECU4Tm7TC7cq+tWnvfnAcPyWGKw9BYi9mPhdagti9cyh8aKeVLE3U60p6ze2UDjq763nlmtQqmGV+rdBYL2+gtPv+ejHI03ZzXYzvZ54PfbLmcUUFQAdsgXamZuWdwq1F3MhM3AgVBjnEf9Q==
+                type : 40
+                content :
+                 internal_properties : BQAAAAUAAAAC70+qp8Kw9SVpHLTQ1zE5J9i9vuX7WBfebtBSZd3FL//lo27vxGiQpj9VGDRol19WVeKfvjLWhd2FSwZBfPaYy5Z6wfFz1Apd3sT0vmBzmzhqHFU37ZeX3v0NeTUjz/3k19Q39WQUlAPROUyjrNdFJMpDZgJxLnMIff6Z4NJWWBq+ccIqBTU3V8AmMEYDdsQB1tTYqb6YzarAwYHIAZkIK/PXJzQZw5o9fGf+M6J5k6b8q42F0PiagHKtN+EbcO0e5LlAfO0jXE4W6D1BkW7bG+ku1k8iX/72hEnDONAbl8y2UPc2NJ1w5w5ALiPv6zUln3tRIpwch4Shj+Ko53tuDYzvfUmiGU99yHktbqYAeLS+igWzYsQ0DeZEMFwhPqtrFbhCtmNG3oVc8p6Z4996LdRLY5JkwPFcDkjjyD8csbnCEIlvzORtm0alaZHVh7U/omQsb0BvQbs3atRUXmcnp+oPTOKu3innVFbufnNpbAVk+ul3cedphByvx7DfwUkpdbxOcQHIp4AvfS/Ie5seEkGlJK1FC+qZ01H7E8l4Cvq79yXaujzQdm06ofoWVmWjuytAT+sLCg==
+                 controls :
+                  -
+                    name : LIB_ErrorOS
+                    identifier : 0x21fe616b05c19b50
+                    internal_properties : BQAAAAUAAAB++VmU9HsmKIQjZ/GzyCf+UMYF1mQXYS/k+dbFNlXW9JoaJQz9bQb89pwowPbo9ep2RjBe/M1kABh3x4iYBJpcKkOoYZSJBQalSQo3FqUWEmmWqxjcU4SSd6ArH6QjOWy5sxnGfYWBv7XicNHOOZAmFWwwFbXUMql7/Ms320yhjoO2B9jkvkJdc+a5TX/xCQEZji1hkxTRqO9pJkRBg7WC2acpDA/fO+/wNfjaq5hgNVJ/2vIgy1qwoKZev7LGFP/NWA+v5DtG+qjm1uT6TdDt0gHnRFmc4YNqiQpaF0aHpdh1YBDyzaTIZ4/cdipa9Cnl/pnia0U4fd4r+v0hxWMamIzjVIJXs0hW3d3VlNLu/SH/HJk10Kmpj1ar6XHUDcYpxWK2Om/ewKSdJMkwH9zl02n1
+                    type : 3
+                    code_elements :
+                     type_code : 2
+                     p_codes :
+                      -
+                        type : 18
+                        enabled : false
+                  -
+                    name : LIB_Etat
+                    identifier : 0x21fe616b05c09b50
+                    internal_properties : BQAAAAUAAAAX6O4YV1P2EVT/WSCQ5OuDyuL/9A/UpU6mz4R5FTOSNcTJYr3kfoO+VE6Vhvz1MRfCGT+IyDUIfqVr9MdL+qFark8WDb2/oXUDrs9D6Dnlo0gNUepZ3oZomR22/dtKrK5pdZ2P5SDN3j/8mD0P5bqjhxIQ0fWjlacHsGcP+aIgH3SQfDHyHaSNK/Eb0oUJyuIbcaIHn17L8aVvtUtc9qwisPPe4cAp55acJRnHhJXhE6+RBd0v57jF7F4REpGRBxngXrBmV/l2uRb+TaXvSGu598WA4druyQbi+xVJGtU6gzWHkwkXVZrYVPzDry+l12dalK/yUc849mfFuN4fV06WeeLP/J3e7hBzvptumI/6uAfIGTcuvHshr82CXGHBPpneyjHFwKG6hCBrMaLbQSwCEw==
+                    type : 3
+                    code_elements :
+                     type_code : 2
+                     p_codes :
+                      -
+                        type : 18
+                        enabled : false
+                  -
+                    name : IMG_SansNom1
+                    identifier : 0x21fe616b05bf9b50
+                    internal_properties : BQAAAAUAAADgxjOituoZIv//p9W9PR9Z3oPNYrt9ox4QOCxPv+ucMASrzOiNjM805gXyh7g9jP3OuhsIj50lb7LKGbfC+AaLBn4LsPeRLPv1zdz1sw5V11Nwq691LbEfXSl3r4WJ7zWaxcp7xydF2KfAk8hcdJIkGz4hlqqabCiJRL5EgSw0hal78GObSssAhm9SUdbNDfEItF/BBhMLNSuVoUKPurVJQnmwwyZk8mRHcoB/MShpC6UoLPkn+CPrAjN7NxppFkm5+bDdbFIT490nIwP9ZrEUm6GQRYS+HMOxTzHaV79xXP94zt96IGP/BlFTyAmibhrlA/BEM4VS64No1m3MSL2o08wfZDpGLpCFTVeKnW/Kyg9CXil5Q3Td3i6kbw6dFXrRZul71HfuZbjkTuFUi41URxD0iQ5MGZz1lCfNEdYN4YRPKo0sQwHD/+Fkde4pZnvIB0yzvwB4MTF/JYB5OiBp01dI34NmHRQWNwrP+wvrBejLs952sX94UAC5OpNYCdvTbwTnWui+6eKcJ2F45l5sb9+4JYyiitTd1/4NwgfSDDW4tPpWIDfIYMZfkcEM3pvY4SJRVml9qwcOp3qO20FY/cwbdDfELmF8DrSY76CbRRmV5YAT4Ffsj/JMOYzXzTk29Xk3rIB0dx29wG9aFPMPRkw4v1bA3rsrzfXH3SLp1NJOcMNn2xkknrnH5GnMxMS2oklPd2b0XJpCkuIgL3WA5Dmnao5PmTlk6yMtK3BAc8s/7LMH4ciCcTHE6PDYqL1c
+                    type : 8
+                    code_elements :
+                     type_code : 8
+                     p_codes :
+                      -
+                        code : |1-
+                         SI LIB_ErrorOS.Valeur <> "" ALORS 
+                         	Erreur(LIB_ErrorOS.Valeur)
+                         FIN
+                        type : 18
+                 type : 40
+                controls : []
+                code_elements :
+                 internal_properties : BQAAAAUAAADPUhtC1xovqz+ADS/X5gkFxCzB0jSPYDzQUShW+XXVjKqEaSLjvcBxJKxaBmK0MRHwx70uGtu0+uFm0eaVbu6p1cVL
+                 type_code : 34
+                 p_codes :
+                  -
+                    enabled : false
+                  -
+                    type : 234
+                    enabled : false
+                  -
+                    type : 43
+                    enabled : false
+                  -
+                    type : 42
+                    enabled : false
+              -
+                name : COL_DélaisRestant
+                identifier : 0x21fe616b05c29b50
+                internal_properties : BQAAAAUAAAASIngxfrOTlZfaEWqYZefpehEZR9bdaNq3uTHZh0x8aXd2+mST951kgMCmHSeu7TwfHWJQulZNn0S4x5bevykHxXCNKtQf/ZNEB9EziAYePB98OWn+jKJsN++etZIutoANXWNrmfXi6AclYxfaOeWv5IniKQUURrn6w846QpEA1fDPcedMJK84vmYt7cNkkHuZNi3iiBiQCJC4
+                type : 2
+                content :
+                 internal_properties : BQAAAAUAAAA9ndIBU611t5jM+mjCW5ZrnSzVKtKQihBb0i42fkXFMKSHazD0AabdthhFohSnHq/tQgLAcnp4Ffcdaq43vXoDUksYh/NHZN1Czl16+lkMWO0WwxkZsHcR6PZnzCyVF4hp306c1lQtpjcRI61H446vguwi5sCy5BiucEifM1Li6irQBTgy56YVlpnjSbxHxJLjWeLC+nkWMQk2GGJQ2Bu7VOO4n8stL+xqrjI/hi/52EEp46M+YYxv6wKI0Qwordm2+sSZ7TPH6pIGgv/9h3w+nJlZ/H+y3ZgYmrv8KvOUywFwXPaQcsEy2b5w/DxB1IuDn8YspOcA/4AKalDDYDEdjGaaBkHFDyF61x5L7zoXDnTwZnzmvh7y3WXmEwNGSkhdVrUrI5ecgpQbtcTwD+PgMU/JrB14zBfrOE52bpWQBQ+lfFlySFISOC2YJyA7eZvMk/qP+OjqFtM1c41m35xevV5ChwgoG8m87KQ73DenIx+ihLocuKxYpQB3uuk7fkiwOVBOh4i0WyQuUkVB7vgXe/3uiVWK9PDzl02pWRlanR9r8TTX+2h+04FtwrX/oLDXLHfA8m0r2vl0EFrea+qlrCR6I9XiV/sY8nf/OrrsQOPURjhLy+0IUpzWF4BPpk2H+CX31mxftVMVd0Bl6O1cl9Xa/y0cTVls52h7oK1iUjaOPjdDxuaepEZOf90hmfM+IXxpVMPh3wP8eZdcFmuHwmlACTAgHm3VyMzDLPBA2jvSHg==
+                 type : 2
+                code_elements :
+                 internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+                 type_code : 3
+                 p_codes :
+                  -
+                    type : 276
+                    enabled : false
+                  -
+                    type : 277
+                    enabled : false
+                  -
+                    type : 278
+                    enabled : false
+              -
+                name : COL_LigneModif
+                identifier : 0x21fe616b05c39b50
+                internal_properties : BQAAAAUAAABPLWujL+uaITliZKMw6SZoI+8o+4V9A0vrrTxep9/eIpzncV92lpqK2VhHZOeTP42E8EgVXDBgm7+UIgl0HA1btgiIN/JZCtTpGX3Kz3r5dcG+fV2SuVd00biJZ3kwsjyd22k7sosSGhXun1kvuN1LzXuelOtkivpCdvnsKGgtZ0qP5Is1szQ=
+                type : 5
+                content :
+                 internal_properties : BQAAAAUAAACT/fZb61pvEBr6fHPXUnqlliRWHk0Bqlan9tFGwqqEJixVhf+ZcDABewfrETmBj/MaU72m6rxr9ETCDgoQZR6SI7Sl81JKz6cC9GA7OrtMaenOnodXcM3fJ0BfNQ49Y6XTeJz2srErLlxyRDZjm0xUCLooyWp80UboXE06uA6v7+3b2Zd3WVEAUUJGBSx4wA6mbh2/kNR9iverrVbwIePwua27MJJAI4m7YsYFe1KWeR2KM0wn/Kh2CS14ibcW+nVeuAn0pxrCEgdOlC8VnpmMKCMOQFeTsW8A2XT/bAnV+XhYi7KNCSXnCLz27e5Zre9ziAvfTIVW/mLabSD/SRRE7KmlrxtyDmENbXy+WYUPFKxiFjvluVMt6mJEVAklgSrGYqP/peTPK1o6BITvwHlfppSIgLp4uNO3PLiwNUD41o7Rw8vPzDGgwBxu8oLqfA5ekg8r161HlW2sJro6DG+50Sf9Pu1/eQAijv3pm65yXoWsHnNGlYgUPhUAmfIGhP2UZsPr/ckB6VG4HMdpcgWNUl2jQJKB7vuEWCGWplUX0VYFH98sLJCWYf3J8IuwymZY/fjyS5dUwuKkVeQ74U7ChoI=
+                 options :
+                  -
+                    internal_properties : BQAAAAUAAABQM1l8wAxO9QC8YHDkmd8RwcuRrUw9ScR6LT0ZrGvBMlV/2/U+oeFkFxfK6rdceajSXhUoTUyL
+                 type : 5
+                code_elements :
+                 internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+                 type_code : 5
+                 p_codes : []
+              -
+                name : COL_IDDélaisParent
+                identifier : 0x21fe616b05c49b50
+                internal_properties : BQAAAAUAAAAy/thlMK528V7YsoQO/DQvIVlthZ5FYiy7Tdk0117cXmwHgrBMLtHG1zsRFabW1UvflYj8olBu+XMJDYzovb+oCV1/WeEkEo39QP2GaN43AkVXzc8t+Zval+NVR3OgddsihuXOiRASRYk1gVKCJKRUPu2yIzan/Rw0cvm8777B4r1J1ONOLWSGinJbaZ0=
+                type : 2
+                content :
+                 internal_properties : BQAAAAUAAABFCuQYanj5l5ChqtDZTqQWpGam4i4YSH8Nu2EstqvYZywtWS1R3g9l81j0uhtkt5UAST3kSxLlObgYVcS2sFBkFJm0cSYcXiSPA8owC16Bi+M8bS3X+U9y89IiHpMdj/FTztEysTMveHX28WX2B4PND96PxwmT0jl9yc1dbg9x0Bf5rfpBIxZdTNM15yQO1cYtYF6mH3ssav1KReqfs3c9vbblQVBFX3vH3r0t19FU4UHhY7kcJOA4bMSqwum4YCQv4DtGR46QqP8A549fXE1wXWaT/h9Fkq/EWssAykbHrg3qfoEONIE3qsVOJ5/UzrUz99rHhhMqGkt0/ayicmU+IGEnlxHyLENyG09dyV6gyYKVnU5EAoCxxJlx3KCph5/TsBlJW/VPO9QFzEtSPDp3H811EOfRM31X+aqwSSiG2PTpkpMwlDrDXLgB2eMkRvRzoohtv5vf2Rl8BlToggKgP40bzA5EX1FxC1GmCjaT5vs0LKx5o4AOr9ZC8/NQhg/KMw8ABgSzydJdpk941TfxBZjXjE1TkMpBKcyUfknnCbxBHcBVZA2iOehQKqGamAHTW+4JGPd5VDgi5/WezrxaXBKciwzcNtjKlphKXDfcmOQx36z9LSTrUJjbDxVM/vyhohysREXyeQfysyQKIgS+0E2O8/ELaCZigmXLUkD9SL4LKRUGOqz9Hx3kypPgseR6I8yxq1Bf7XUpNul+aqCeiPTfFemDvJHsNN1skq0sAdnTskKaxnzTd1qBc9VfEkhXYOcW7EpLRCPJueI=
+                 type : 2
+                code_elements :
+                 internal_properties : BQAAAAUAAAD2Rkbx+OjeaV6cz3eLdX7jB0Jgs6WDDXWz15HdSBZm9oeZQ2BKnjRAOa1wH4EQ9d5x
+                 type_code : 3
+                 p_codes :
+                  -
+                    type : 276
+                    enabled : false
+                  -
+                    type : 277
+                    enabled : false
+                  -
+                    type : 278
+                    enabled : false
+             breaks : []
+             type : 35
+             controls : []
+             code_elements :
+              type_code : 89
+              p_codes :
+               -
+                 type : 35
+                 enabled : false
+               -
+                 code : |1-
+                  
+                 type : 20
+               -
+                 type : 22
+                 enabled : false
+               -
+                 type : 24
+                 enabled : false
+               -
+                 type : 23
+                 enabled : false
+               -
+                 type : 25
+                 enabled : false
+               -
+                 code : |1-
+                  
+                 type : 66051
+           -
+             name : COMBO_Etat_Délais2
+             identifier : 0x21fe63870690dbfc
+             internal_properties : BQAAAAUAAAA6Z4iYTcnh376nq5TKzAjNCkYwAa5Ze288N35V8IHFZI7DHjhEkU9wWOD00jVGZsxykKIaVq4JDQW6WF5zLhtD6S4pmrlCYN1OE47mGI/D88syCfSjMupWdQ8mrxWG8vzZZ7YkA0fYc3Xk2Q21xfQj2nHgNgUcsnYThTuiivs3YNaL9i/VTWloRohM3L/HvJLJrM9kR3N0TBqn0UbLrRsl9+6/2STP9fv0M7ccFUzozb/Hmn9an6ESJMvEwh6Vkb9yszZ5xCKlrnQnlZQT3MU1AF0uEPKgW8rX0pzGEZ8Z0ckii30X6hEt3uLluHfKvkuOLxGsJ+xb3/bnKlP9GcOFVbxX3zMf3rzo4X74663l0p7RErnifWWvlUFKw7CQJwC7TZZXrO55Xkl9WmBnOIA7htoF9gkcuqZ+11g12lbdm0jkiaURySsx9gcFU7rtBLwjvb558P0oGf7CMtoTDCAN7hY9EbLL0dCe7IpGqWHme2ZkHza9XwmDWmm6bs3iyZ1oRn5XPPWr6Ptb9w6VDnjGRUTlAJB9eDhi5wNbaNY2sxnPU6zsPYB/Y4YWnO3vpVAopZ6/EgX0YsuiWHFQmysfUFMzjp3Zc/7RAyJgQ4Mw2CKYBD5U4OrTyyNVeW1KzVE7pq3JPvszi7t3djKJv2inMuB1L3TfyBPoQv7ohKM5PhNSMYE4L+BB+jtBhQKzXDozLC4dIfTkj36d+FZQXFhqX8SaZBu9F97LOgb3rQ7fusjSkLrI9Nmfv09zHrTaQohtMsJndfRLOdYQiMy9Mcpv6DG+3j6QkORF0tSFy7vqggN8+EzDOFFlFOtybYxrViRb9hQNC1wb3qPYzReDvkHrMnmitbBVLUgvNUGXlDG63iW8tC8QSXPak600d1InkfSpBkzR9S5Brf9xMy6wDNI0HijDJ8U1gP7eAkwd3QxX5kA6hAuFKo0o0x3WMgePFnryOuF/vUmkBbsz5k/G3ti8ivSOoE1bfQD9F924LjjR0ZIcjTarcAG4r8avAIBTuBu9glJL3EbM5bXO0TZMzqfKyPr1SH72AxLkX4AKzOSiMud6t+fq1LATQwUTyDylbIFqbpUaox87NYrbu0hRAOcaEITYsvAp2zDYt4OgBqiTTvUjbtwYteqOgauxHCQGMkf0JO0C4kAB7YWHjNjVx65Iq60CLpg/x/z4vLlv1W05Cy8LgU1MYT6XLBwtPqFl2OsKffpdNnUrBezcnAxcpegvwAfXsltUpDPeP/UnkxLz0T2lNb+RockG0mmNw3rk3HyfavuxYOCmO+eywgT+30n+qjosmHschWweUYuZlGQySUwtz1L5uOIElCEP8rptED9Tp7js7hEm6Fl5h/CwVhA5/F2Kxt0zHcHPs703LtnXgPRLt8IFO0YUEo3ZR77AirY3Fv5k5I8kAOpG7vo1wbwK490AYzO1T4PPu2u5F4TE9AgjpgLjhr2jgTe1VDen+BNYZltjjRMzMg==
+             dropdown :
+              internal_properties : BQAAAAUAAACKLRa95eef7PQtUepNv/FVy7i5CGsKMlBn/vMhRTkbZ0/bU5ox3YN6sSSv5Lz3BfzIx7bUlAgCqmZvu4kUN0tbbSEQDuAeF09J4WMIb7MjC2I+x3cRPhXpci5uzvjh0rWN+TtJBEjdzvwWj6MzlmIGKEVtzDfn7qXM9DrBtEs8zifJNItwwZ7ZpMKu90lRRA9WSRE/suxVq1lJr5GAAPtubhOC0nRqrlu1Ikh6iNCdBXdcIK8AI+Vtc2dZBBRekUFSn6wmCTsIvkfcE3pvkwKlvodedKpcJwd/knyIqDijzigj1Ewrfa54gsVYqDYk3p+Yb9Kzf1uEZw2YWhSgos/T7b3/xOo/pYunMP+qH8N7NKdy6v/QkOHBTBTHvxfkNT3dl2LIsmlwBJIBbIIe2KdzSMxfdewrjBBS9AGPB86WqsKHNepwZrzB2ko5WzFs8wv0grdyGgqJpYyO5bMPGi22nV+1AvNws2JPrXfEDfNjRR4kVp7FRHBWuRRgSmNTrq0KrvYlNFQJE/UGeERCtCyw1YKBjyvxzAj4IuKjhctY5vw7GLbSnJKHzf0EdOTYTZzrkir6Smf0+JMbN4HLlBN/di13N0LadsQ1yQfSFuFnn3O3I5l4d9IrFf0lA6Iq3AhY2kRAMhRvSedFhbOmPaLYR9Ld46k5VWWsYiJOVwpOsFbZ5BMqaldIPFC2tQX6FeIljxlm6xR/k8mt6+DgZ32YdAoZmSsX/froQD5Dot701rtPTtN1/0ezWGBIV6y6LiAnQXDFdCALAOiYFCNee2LpDsgkrTQ3pydg2A==
+              type : 7
+             type : 14
+             code_elements :
+              type_code : 23
+              p_codes :
+               -
+                 type : 35
+                 enabled : false
+               -
+                 code : |1-
+                  
+                  //tri table délai 
+                  TABLEH_AffectationDélais.AffichageActif = Faux
+                  Selon COMBO_Etat_Délais2.ValeurMémorisée
+                  cas  "Tout" 
+                  	TableDésactiveFiltre(TABLEH_AffectationDélais.COL_Etat)
+                  autres cas:
+                  	TableActiveFiltre(TABLEH_AffectationDélais.COL_Etat,filtreEgal,COMBO_Etat_Délais2.ValeurMémorisée)
+                  FIN
+                  TABLEH_AffectationDélais.AffichageActif= Vrai
+                 type : 33
+               -
+                 type : 17
+                 enabled : false
+       type : 16
+       controls : []
+       code_elements :
+        type_code : 24
+        p_codes : []
+     -
+       name : DISP_SansNom2
+       identifier : 0x22f61c69318d9d6e
+       internal_properties : BQAAAAUAAADdFqduPSHjaL2ifvmsJ4lBTXRAs3/IeZb5LnwEWB+P8Ted0nAX6CKVqI3ft4zKBHzP+EPXf+VH+PWtNRn8ilZ7r40iCd+64Yf43pxlDqgV4J0dIXmKajcnDnk0loLDtgfflJrtFK5JVIJ95SP1OVX5UCoK3UU8ZmZouiNo6tpjumLxNI3sSR0H02Y3INn8vE0RbOnERVDbygqv+qjurjYi02/S/YwTDW3sdqAptXskS4yZYGbxl/IYkaaRBghzUvPZ9M/puAaSKUD+lAlnlHMGi5iuceNeNCUgo2mswG7AYHYzNHqZpoa5cumSfSHxcuPktRE4XJ2NhgGT9TzY2B8mj9zXcy1AdfGGV8RcD/FjnhFbwuUUYEOzx1NWrdwg76s30/Rbexwu96CGZW2NUFiUQ7441mLDdiGaP1tI1f1otdiAdtmBw4ugWjYWsVxbptmMVXL29Odxh2NYM5c/4VE4qS+pv7UEQHuPrNMP2GbtjHMQ8gDDNQm6TxERocSzhK46ERiyNmBOINSzwbcJD5B7MKzrnPqy/X0elNx1gvXi3zOLDjt/MkCGmdw6TmW0KOyd0DA8MM+g+w0ZIIxPqUl+4uvVKErLb2G03sAQtwBcRfTpTZBsNmQoAHpCDkaCzzSZC2nZenHR0nrBJLBjiGuyIUDkESdNGedwPngoH0laWaK1+SFhstRV
+       cells :
+        -
+          internal_properties : BQAAAAUAAABx/nkUs8k64zqZokHJCSaO1pWUlcs8qXkEZZqRj+vyb/K7FPKNpFj87jHqZsBuTXQXJ5Tpj+X/B+7gPINj+jcaZPF6lqzgxYllobLXGx1ZLokrBJ0ZTFFN2ydZxhSCbWH08nW/MOj4dKuT
+          controls :
+           -
+             name : IMG_AddProject
+             identifier : 0x21e2f306053edd28
+             internal_properties : BQAAAAUAAAC5wNBjDG+2BvvD5EtfavLMDrCRapNgdanKvCFY0R4TpmJrhzdFuvYtuvjAnEKp253IgLdRVNT8jvR7KO0dCOk8lY7Cm4+/1tNelxP9qSiubvVAOZXZIZwSrBMS5LyYDCSpvP5hdjZk+uP/FVe6P9l5BQgGEMooh+ErZbdxmF62aW5teDbhnmNZWUhFIJ2fV8wVLlWkYODghjQ6FQ47iyRA2xycvxc0u7TF0t6+WlEZy9QppXavxYkagKCGBJ6nuuTNEmmve2O2hu37zk1m3c4fA9n1dGLwP08eHUKmE8rqk1ZDtXh4eem+OzyAKoEB9qA/vecD9Fu4eYmfWHoVUtiwQ2C/KjJqXvoTUC+9qxKmHkDGb7cewgSVMDadCNIJl0xQkHnYnLU3l0I6yOzW7EB2W9GHrv88vwLxHDwEsoyplidhWfB4IGdV5rbhzvO+lGvEXn0m9KaGsaYz86Bk5hGt5t7h6isulkWKt9SkuqDgKzNDh+MuAfqFJfS7ZcBuZYl2kEbE68rGb6ClWTpwJBihT491zEIR9wDIbIkf5AdF0YvRa4Gim1BsZ+S27kyiHwOXpWzPBXfS0e579Q/c2aUK55z4yR3OzAaZNeum8ZdHM+kLMrnDbH+8zajEXQXKV4Z7veLJmgfP+CPfaTR5SAuQPBmhkiKhapYajMfp4o5dAlHF3X2uxOZQdH9qpCo5IuaDyIoLqvqYhwsHgc03D0oX0d5DRcFf3V5PqHoKY5KWVrKR6OnuFsYxnCTnRPqdp6SoXB6MNbshfqVpln5u3rYa4mjFe+lcNpE48YJd/rQNkrQmor4UrgqNMIRGlM7aYuCdoOglskFWchqzieMjsaA8eh2+SQq6LhnyfOsOgrTO
+             type : 8
+             code_elements :
+              type_code : 8
+              p_codes :
+               -
+                 code : |1+
+                  OuvreOnglet(FEN_ProGest.OngletPrincipal,"Nouvel OS","FI_FicheOS",0,gnIDProjet)
+                 type : 18
+               -
+                 code : |1-
+                  
+                 type : 17
+        -
+          internal_properties : BQAAAAUAAAD1+lCzfLZafsUK/yEYNxEiS14/xyCf9x2V7FD9uTflGuLg52LdBp1ZkHKb7/zbvvaoqwgfpaViBt88oC4VifLtjgHCreyRn/jKbZQMZRREpX/DlFh/x3MOgk0Nw0TB4EicDAeYWL+6a1vMZA==
+          controls :
+           -
+             name : IMG_Save
+             identifier : 0x21e2f306053fdd28
+             internal_properties : BQAAAAUAAAAzOXI0eFFdzZGc5t82eD+8rBmtb65+agVjRINpjo1LC1TYi+ibiTvacezNsDvoieJoET4jyU5AT3KeyKgumtMTE0exHLKiRyde6lAoMI7HBor1df1e9ouFNj5WJJHHgtSKavcOZkTc+Mm8kGAcvQe/Zc1v4h2VSNyTXayx0ChtV5DZ2lVap+JP7dsO7i8HqxP1WAE2cBqacSnKfR0pwG7hIOKAWmYJ5AlgKJC4W5SOXfQAY5fSpV9BCE5nxvKw5MEsySrUA3qVr6Lv/y2ARvMhjy/QBV8ouv3MfuHzgl+3QOmwLQxd99uXt0LQSsuSd41d3bDX8K1yp+EToZpbJIEEy2tJ+8n1kNnpn2w07DUA2JZK17QymDxEax/xkUSQn1ElnhLv4o/E8yYbV9OvgUldutBpmDflnrwPH0q0KbYbZQg+4bSYRwgU74pks2WTw01r8V8chunnvlKrgWA6Qkn+lXiEdeud0uIJfAN1GKryEb7JMBVC29MebVXVOU0z0ti4c7Uupdn+xRzNcY68IBmnugX73TZcHEKuYW8mpBKwuBLJ35pT3ttR/7awZ/MPz3NFyFZrFHx98yBHIyz+YxKsAwpsfw6WKbSkfbUDYUAgm0hTZ4yeAbQ8GvHMNpJPxYeaIQ1cOnijKTPf4xy7Ph1FSXsZ55T+5irmhHHfQrDjN62jB3PPBNAVeJczh4qDA9NuPL3Bze7nJZ/NbWmRVIIFjJd/ieLdrB8gCU8fHmVi2FfkoKCknCvqr8bvrHV8RhK2bd5xtyrE7rR/MjANBcm6sreDFL1xe9tREejfsROeNNd7nTE2dRcNUcFIBKv8HoT/T86/ANgkBUB1sY1G+GQWUYY2IjxMLmu2Uufs
+             type : 8
+             code_elements :
+              type_code : 8
+              p_codes :
+               -
+                 code : |1-
+                  
+                 type : 14
+               -
+                 code : |1-
+                  //detection nouveau OS d'arret -> creation arret pour projet de controle 
+                  bCréeArret est un booleen = 0
+                  Si gnIDOS = 0  et COMBO_TypeOS.ValeurAffichée = "arrêt" ALORS
+                  	bCréeArret = 1
+                  FIN
+                  
+                  // traitement sauvegarde OS 
+                  msgErreur	est une chaine	
+                  (msgErreur,OSModifié)= SauverFicheOS()
+                  
+                  SI msgErreur = "" ALORS 
+                  	ToastAffiche("OS sauvegardé",toastCourt,cvbas,chCentre)
+                  	GR_FIFICHEOSMODIFIEE.Modifié = Faux
+                  	//{VoletDuChamp(MoiMême.Libellé),indChamp}..Libellé = "OS "+ SAI_NumOS
+                  	
+                  	// creation OS arret pour projet controle 
+                  	oProjet est clProjet
+                  	oProjet.SetID(gnIDProjet)
+                  	SI COMBO_TypeOS.ValeurAffichée = "arrêt" et oProjet.m_nIDProjetdeControle > 0 ALORS
+                  		//OuvreFille(fen_ficheos,0,gnIDProjet)
+                  		SELON  OuiNon(1,"le Présent Os est un OS d'arrêt. voulez vous arrêter le projet de contrôle ? ")
+                  			CAS 1 
+                  				OuvreOnglet(FEN_ProGest.OngletPrincipal,"Nouv. OS Arrêt P Contrôle","FI_FicheOS",0,oProjet.m_nIDProjetdeControle,"arrêt",SAI_DateEffet,SAI_DateNotification,"arrêt du Marché des Travaux correspondants ")
+                  				
+                  			CAS 2 
+                  				//rien				
+                  		FIN
+                  	FIN
+                  SINON 
+                  	Erreur(msgErreur)
+                  FIN
+                 type : 18
+        -
+          internal_properties : BQAAAAUAAABpHoTnAJpuSz1AJ9l6q51gr1ztY4QDPe01Yky9Y/PVvCrywUox4nPV+IjT+8qTbvj4hUL7ZdgfP8wlow00cFVyFQY5zJvA8FVP7scTnPNfgpbch6tqUviTt2YA8qt4441vXUq8JOvuHw8w2A==
+          controls :
+           -
+             name : IMG_Delete
+             identifier : 0x21e2f3060542dd28
+             internal_properties : BQAAAAUAAABYTPGROR4+OlQfagGK6I9BHWjYriMTUqT2e/0aN57YsPdzyHsiljLmEcb6+7txeosJQf2IutTUKhVAHx4RteQ2IYVCy1/OSx73qb3bKXe6kRxRcSL/5xNRbnUx/Lfgy4+wXOgHc12SZpCgPbdSXMIaBqlaAWidiX6DWpwjOBvYC6xD3C2w+Mq77zAjeFu6s0gXcpNDZbNCjOPrFxcek4UO3hG09TIDtJOCHMTVUxkl27KsK2TyrHrUn6iFiSUGX1XasUosiNyqC0cF9IRyXEKd+8wfqm3EmpGwatVntpN3cH0cNcKdtzsXt4Jwausy1629fZB3sG1Sp2ETQXp7xOHkq5El9y4qD2och2RMBB0oKF5CT/xqsGTcM/c5mfx4t7k9hvrPWof8i+1cssePzK41QxsrRtZJwgkcDNSbtlxD+5IrCeilUPqcWPd4E9/ohC4Z7mZAOfSd5Ha+6A3stjcFTUg+5RttsjJR9EttUGK6mWaxKC36IxvmBT3NAT0T4qi4Q2WUCXXwx2rTAd7sECm3ynXLrYbMrDJesT82VEKAiOL5L+ojzutBFXxKoVEhwRlr4vg1kj5Hqzn3kHHdj4hwZmzO/DvoCSmJatLuOu4khioDyTmW4pAyW6hhn8Eh2Bg8T5PkvC6LESJOc4CIwDRxdZtOkITQDe6lsyTW5HJaAniL7gTUgVRf9l8VnbwwxQl+LHigvpwhgqMkenP+aiXWssZqtahR1xmv5VMvyZevh5xAAdkV1ZujlRAdjhZLIbftnGOIanivObPMAtXoomrpVM3CM4ybmNg4YOyZXRNApcYe62hKIc2t08O6ej9oKNK9tFcuXbr01RZJ/XfW4+an8xFJKymnH7pB13wX
+             type : 8
+             code_elements :
+              type_code : 8
+              p_codes :
+               -
+                 code : |1+
+                  
+                  SI OuiNon("voulez vous supprimer l'OS: "+ SAI_NumOS)  ALORS
+                  	HLitRecherchePremier(OS,IDOS,gnIDOS)
+                  	SI HTrouve(OS) ALORS
+                  		HSupprime(OS)
+                  		ToastAffiche("L'OS l'OS: "+ SAI_NumOS+ " a été supprimé !",toastCourt,cvBas,chCentre)
+                  	sINON
+                  		ToastAffiche("L'OS: "+ SAI_NumOS+ " n'existe pas dans la BDD !",toastCourt,cvBas,chCentre)
+                  	FIN
+                  	Temporisation(150,tempoRien)
+                  	//ParentObjet(MoiMême)
+                  FIN
+                 type : 18
+        -
+          internal_properties : BQAAAAUAAAAr3EZNaryQtRuiMQvcJW/CAWKfeT6lL/97PPY3xW0HRrToy2hT3AWnXqoVXXzVMCqSM5wgj/nObQ73JYMyYluEF4BDMiEqVruRkIlRos3F1HjeoaFgtHaRQcDa2KFi+bcJ14zSEsXEdVHyGg==
+          controls :
+           -
+             name : IMG_Print
+             identifier : 0x21e2f3060540dd28
+             internal_properties : BQAAAAUAAAD6zM+ybp6PrvCjomVvssI4h2dF6v1PaY/cBL2eg+R3aGkGs4E1Lnl+X6vgsbCcyojlxOqq7Gmup7bG/A96oamlqavwIm8iOW2vDjQPUobzAu/N2FW/ES8szER3swlXCVmyWiqQjNXv+gfMs5oYtNDg8xzduoy23z8aKllR6NMEHDxi4I8iYIPCbvCutCrjhEIGcaAXtENnOlorLU48kCLVRjMDgWtGdOlL+wrW7nTgykzQiwSrkNBSoaVegfX6Pd8zC7z94ozfO21EdJgpnrxINrg/zE/aokGYMN3uMj8Qgrz5fU7qL08Ez31H3B8ChYuKphhxVYyBHJnEkPS319RfwmwpU+At5yvuMcMFHIasyMpOKD2VND7hFvt+Lw5HY+Pc+oeoobaBefSO05TWMSf09/dqyA4r0Kk+9Au8KvXyNyJTi4Aer/BqAF3x2qnBAezC/sLM2iIo8y59nEsu2SodMc7XLtijUI/Fo3qbIuMtJpJ24g5mCbnAHRrt234bIDaKjydnUahTHQTbIj+Mm24dhWuL5j7g4texkO1T2qtyrsSYvk1rkBNEW2aXIQxDgMOi6j7sM+ncCRtOgvB82QjdG/frejISZbzO5/oXhkagerZK1lGgLQZ/ZGmfwoHeh8v0BrCqnQMB9DAMzcqgmENKX4zSx6NggO4GyO0SczubohVPvQqIjV2cbHO4GFjDR6Q5n4YeakCEN3rgf5Zm6wFg7KSIv9aZyWkfEIcdYofcL89Ku/b5KgiTLp+pb2KRUfiLNH7bLFJGLhRGqevkSf2S8Ypm1RE8SFN7yBzSUD1kx9DixEm9
+             type : 8
+             code_elements :
+              type_code : 8
+              p_codes :
+               -
+                 code : |1-
+                  chemFichier est une chaine = GénèreOS(gnIDOS)
+                  
+                  Ouvre_Document(0,chemFichier,"")
+                 type : 18
+       type : 126
+       controls : []
+       code_elements :
+        type_code : 151
+        p_codes : []
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1+
+         PROCÉDURE MaFenêtre(gnIDOS est un entier sur 8 octets=0,gnIDProjet	est un entier  = 0, sTypeOS est un chaine ="", dDateEffet est une date ="",dDateNotif est une date ="", sMotifArret est une chaine ="")
+         //sTypeOS est un chaine ="", dDateEffet est une date ="",dDateNotif est une date ="", sMotifArret est une chaine ="",
+         OSModifié est un booléen=0
+         //si IDprojet<>0 et IDOS <> 0 --> modification OS
+         // si IDOS = 0  nouvel OS 
+         // si changement de projet -> nouvel OS
+         dateEffet		est une date				= ""
+         sListOSExclus	est une chaine				= ""	// liste des OS exclus et nn pris en compte dans le calcul de l'etat 
+         gnIDTypeOS		est un entier				= 0
+         gnidCourrierParent est un entier sur 8 octets = 0
+         
+         
+         //modification d'un OS 
+         
+         
+         
+         
+         //Droits Accés
+         //poliAccès est un  clPolitiqueAccès(ffff)
+         //SI poliAccès.DroitsAccès.Accès= 0 ALORS
+         //	Erreur("accès refusé !")
+         //SINON
+         //	
+         //FIN
+         //GR_FI_FICHEOS_ADMINISTRATION.Visible = poliAccès.DroitsAccès.DroitsAccès.Administration
+         //GR_FI_FICHEOS_CREATION.visible = poliAccès.DroitsAccès.DroitsAccès.Creation
+         //GR_FI_FICHEOS_LECTURE.visible =poliAccès.droitsAccès.DroitsAccès.Lecture
+         //GR_FI_FICHEOS_MODIFCATION.visible = poliAccès.DroitsAccès.DroitsAccès.Modification
+         //GR_FI_FICHEOS_SUPPRESSION.visible = poliAccès.DroitsAccès.DroitsAccès.Suppression
+         
+         
+         //
+         DocumentChargé est un CFichierChargé
+         HExécuteRequête(REQ_DonnésMarché,MaConnexion,hRequêteDéfaut,gnIDProjet)
+         
+         SI gnIDOS < 0  ALORS //erreur pas d'OS sans Projet
+         	Erreur("Erreur : l'ID de l'OS ("+ gnIDOS+ ") ne peut pas être négatif")<§aad:0§>
+         	Ferme(MoiMême)
+         FIN
+         
+         SI  gnIDOS = 0 ALORS // NouveauOS
+         	//initialisation de combo projet effectuée dans son code de fin d'initialisaition a cause du probleme d'acces à la requetinterne
+         	SAI_DateNotification	= getJourCalendairePrécedent(DateSys()) //aujdhui
+         	//Réfregistre sans réf
+         	dateEffet				= getJourCalendaireSuivant(DateSys()) //demain
+         	SAI_DateEffet			= dateEffet
+         	si sTypeOS <> "" ALORS
+         		HLitRecherche(TypeOS,TypeOS,sTypeOS)
+         		si HTrouve(typeos) ALORS
+         			gnIDTypeOS = typeos.idTypeOS
+         			GR_FIFICHEOSMODIFIEE.Modifié= vrai
+         			si typeos.TypeOS = "arrêt" ALORS
+         				SAI_MotifArret = sMotifArret
+         			FIN
+         		FIN
+         	FIN
+         	si dDateEffet <> "" ALORS
+         		SAI_DateEffet = dDateEffet
+         		GR_FIFICHEOSMODIFIEE.Modifié= Vrai
+         	FIN
+         	si dDateNotif <> "" ALORS
+         		SAI_DateNotification = dDateNotif
+         		GR_FIFICHEOSMODIFIEE.Modifié= Vrai
+         	FIN
+         	
+         	//MoiMême.titre					= "Nouvel OS"
+         	// tabledélai
+         	SI gnIDProjet > 0 ALORS
+         		SAI_NumOS = getNombreOS_duProjet(gnIDProjet)+1
+         		
+         		date est une date  = SAI_DateNotification.Valeur
+         		SAI_RefRegistre.Valeur = SAI_NumOS.ValeurAffichée+"/" +  date.année
+         		
+         		HExécuteRequête(REQ_AffectDélais,MaConnexion,hRequêteDéfaut,gnIDProjet)  // liste des délais 
+         		HExécuteRequête(REQ_DélaisduOS,MaConnexion,hRequêteDéfaut,gnIDOS)  // délais affecté au OS actuel
+         		sListOSExclus = gnIDOS
+         		RemplirTableAffectDélais(sListOSExclus)
+         	SINON
+         		SAI_NumOS = 1
+         	FIN
+         FIN
+         
+         SI gnIDOS > 0 ALORS //Modification OS
+         	COMBO_Projet.Grisé=Vrai
+         	HExécuteRequête(req_os,MaConnexion,hRequêteDéfaut,null,gnIDOS)
+         	SI HNbEnr(req_os) >0 ALORS
+         		//projet initialise dans code combo
+         		gnIDProjet				= REQ_OS.IDProjet
+         		SAI_NumOS				= REQ_OS.NumOS
+         		SAI_RefNOS  			= req_os.refnos
+         		SAI_RefRegistre			= REQ_OS.RefRegistre
+         		SAI_DateEffet			= REQ_OS.DateEffet
+         		SAI_DateNotification	= REQ_OS.DateNotification
+         		SAI_Décision 			= REQ_OS.Décisions_Infos 
+         		SAI_MotifArret			= REQ_OS.MotifArret
+         		dateEffet				= SAI_DateEffet
+         		gnIDTypeOS				=REQ_OS.IDTypeOS
+         		
+         		
+         		si REQ_OS.IdArchiveDocs > 0 ALORS
+         			DocumentChargé.ChargeFichierParID(REQ_OS.idArchiveDocs)
+         			SI DocumentChargé.GetCheminFichier() <> "" ALORS
+         				ChangeFenêtreSource(CFI_Affichage,FI_LecteurPDF,DocumentChargé.GetCheminFichier())
+         				SAI_Fichier = fExtraitChemin(DocumentChargé.GetCheminFichier(),fFichier+fExtension)
+         			SINON 
+         				Info("Le fichier IDArchive : ("+ REQ_OS.idArchiveDocs +") n'a pas été trouvé dans l'archive!")
+         			FIN
+         		FIN
+         		//MoiMême.Titre						= "OS " + OS.NumOS
+         				
+         		HExécuteRequête(REQ_AffectDélais,MaConnexion,hRequêteDéfaut,gnIDProjet) //// liste des délais 
+         		HExécuteRequête(REQ_DélaisduOS,MaConnexion,hRequêteDéfaut,gnIDOS) // liste des délais affecté au OS actuel
+         		sListOSExclus = gnIDOS
+         		RemplirTableAffectDélais(sListOSExclus)
+         	SINON
+         		Erreur("L'OS ayant l'ID: (" + gnIDOS +") n'est pas dans la BDD !")
+         		//Ferme(MoiMême)
+         	FIN
+         FIN   
+         
+      -
+        code : |1+
+         
+         //detection nouveau OS d'arret -> creation arret pour projet de controle 
+         bCréeArret est un booleen = 0
+         SI gnIDOS = 0  ET COMBO_TypeOS.ValeurAffichée = "arrêt" ALORS
+         	bCréeArret = 1
+         FIN
+         
+         // traitement sauvegarde OS 
+         SI GR_FIFICHEOSMODIFIEE.Modifié ALORS
+         	//1 : &Enregistrer
+         	//2 : &Ne pas enregistrer
+         	//3 : &Voir Fiche
+         	SELON Dialogue(<§?11B48294005F8280§>)
+         		CAS 1 :
+         			msgErreur	est une chaine	
+         			(msgErreur,OSModifié)= SauverFicheOS()
+         			//
+         			SI msgErreur = "" ALORS 
+         				GR_FIFICHEOSMODIFIEE.Modifié = Faux
+         				
+         				// creation OS arret pour projet controle 
+         				oProjet est clProjet
+         				oProjet.SetID(gnIDProjet)
+         				SI  oProjet.m_nIDProjetdeControle > 0 ALORS
+         					//OuvreFille(fen_ficheos,0,gnIDProjet)
+         					SELON  OuiNon(1,"le Présent Os est un OS d'arrêt. voulez vous arrêter le projet de contrôle ? ")
+         						CAS 1 
+         							OuvreOnglet(FEN_ProGest.OngletPrincipal,"Nouv. OS Arrêt P Contrôle","FI_FicheOS",0,oProjet.m_nIDProjetdeControle,"arrêt",SAI_DateEffet,SAI_DateNotification,"arrêt du Marché des Travaux correspondants ")
+         							
+         						CAS 2 
+         							//rien				
+         					FIN
+         				FIN
+         				
+         			SINON 
+         				Erreur(msgErreur)
+         				RepriseSaisie(COMBO_Projet)
+         			FIN
+         		CAS 2 : 
+         		CAS 3 : RepriseSaisie(COMBO_Projet)
+         	FIN
+         FIN
+         
+         HLibèreRequête(REQ_AffectDélais)
+         HLibèreRequête(REQ_DélaisduOS)
+         
+         RENVOYER OSModifié
+        type : 2
+ menu :
+  name : _Menu
+  identifier : 0x20f492c20b0fb4f9
+  internal_properties : BQAAAAUAAADKsJlg2Ltpl5r+Zc57ji8hPYDMiS+bliLE2xo0GExCKcZS4g8MvJbO2unxMH/Ew39ndfsVCH3lk9Ucyyb/y6CvEtFTeSEEVgWC9VqHT5smVjYSsTm3xSlJws4D0hDxpd8sOBfyevI2eVq/TrbRbp7AxCwyQeebeJ8Vql3El3wPHveQ0bNOFXtUApIe9yo9j3SOLpbdRFl1JQiYphbUcFWvVifGYP6UzeQeq8zpvBmm+2wfsFD1bc0OmaE1khBHvQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+  procedures :
+   -
+     name : AjoutFilsAffectDélais
+     procedure_id : 1288859650530073896
+     type_code : 14
+     code : |1+
+      // necessite que la requete REQ_Délais_Projets oit executé avant
+      procédure AjoutFilsAffectDélais(LOCAL nIdActuel est un entier sur 8 octets, Local nNumActuel est un entier = Null,sListOSExcluss est une chaine = null,sListReceptionExclues est une chaine = null )
+      
+      
+      bFilsexiste est un booléen = 0 //retourné pour indiquer si des fils d'un id  donné ont été ajoutés (existent)
+      
+      nPosActuel est un entier
+      nPositionFils est un entier
+      bCase est un entier = 0
+      nQteAffecté est un entier = 0
+      nQteRestante est un entier = 0
+      
+      //etat et délai consomé d'un délai 
+      dAteref		est une date	= SAI_DateEffet
+      //sDateFC		est une chaine	= ""
+      stDélai				est un stDuréeMoisJours 
+      
+      nDélaiCons					est un stDuréeMoisJours
+      //sNDélaiConsLettre			est une chaine	= ""
+      nDuréeRestante			est un stDuréeMoisJours
+      nDuréeRestanteLettre	est une chaîne
+      
+      
+      sEtat		est une chaîne	= ""
+      dAtefinContract est une date = ""
+      sErreurOS est une chaine = ""
+      EtatImge est une chaine =""
+      
+      
+      //Délai sélectionnés de l'OS 
+      HLitRecherchePremier(REQ_DélaisduOS,IDTabDélais, nIdActuel) 
+      si htrouve(REQ_DélaisduOS) ALORS
+      	bCase = 1
+      FIN
+      
+      // calcul délais restant et état
+      (sEtat,stDélai,nDélaiCons,dAtefinContract,nDuréeRestante, , ,sErreurOS, )  = SituationDélai(dAteref,nIdActuel,REQ_AffectDélais.Délai,REQ_AffectDélais.unité,sListOSExcluss,sListReceptionExclues)
+      
+      Si nDuréeRestante.Jour >0 ou nDuréeRestante.Mois>0 ALORS
+      	nDuréeRestanteLettre = nDuréeRestante.Mois +"m " + nDuréeRestante.Jour+"j"
+      FIN
+      SELON sEtat 
+      	CAS "non lancé" : EtatImge = fRepExe+fSep()+"icons ProGest"+fSep()+"stop.png"
+      	CAS "en cours" : EtatImge = fRepExe+fSep()+"icons ProGest"+fSep()+"play.png"
+      	CAS "en arrêt" : EtatImge = fRepExe+fSep()+"icons ProGest"+fSep()+"pause.png"
+      	CAS "clôturé" : EtatImge = fRepExe+fSep()+"icons ProGest"+fSep()+"Closed.png"
+      	CAS "erreur" :  EtatImge = fRepExe+fSep()+"icons ProGest"+fSep()+"error.png"
+      FIN
+      
+      nPosActuel = TableAjouteFils(TABLEH_AffectationDélais,nNumActuel,bCase,REQ_AffectDélais.IDTabDélais,REQ_AffectDélais.Indice,REQ_AffectDélais.NumDélais,REQ_AffectDélais.Désignation,sEtat,nDuréeRestanteLettre,0,REQ_AffectDélais.IDTabDélaisParent)   
+      
+      //SI bCase = 1 ALOR
+      
+      //	TABLEH_AffectationDélais[nPosActuel]..CouleurFond = GrisClair
+      //FIN
+      TABLEH_AffectationDélais[nPosActuel].COL_Etat.IMG_SansNom1			= EtatImge 
+      TABLEH_AffectationDélais[nPosActuel].COL_Designation.ImageDéroulée	= fRepExe+fSep()+"icons ProGest"+fSep()+"hourglass.png"
+      TABLEH_AffectationDélais[nPosActuel].COL_Designation.ImageEnroulée	=  fRepExe+fSep()+"icons ProGest"+fSep()+"hourglass.png"
+      
+      SI sErreurOS <> "" ALORS
+      	TABLEH_AffectationDélais[nPosActuel].COL_Etat.CouleurFond=JauneClair
+      	TABLEH_AffectationDélais[nPosActuel].COL_Etat.LIB_ErrorOS	= sErreurOS
+      fin
+      //Couleur des colonnes de selection
+      TABLEH_AffectationDélais[nPosActuel].COL_Selection.CouleurFond = CouleurZoneSaisie
+      
+      
+      SI nPosActuel <>-1 ALORS	
+      	// Recherche des Fils
+      	POUR TOUT REQ_AffectDélais  sur Indice AVEC "IDTabDélaisParent="+   nIdActuel 
+      		nPositionFils = HSauvePosition(REQ_AffectDélais) //sauve la position actuelle la fonction suivante chnagera la psoition sur la requete
+      		bFilsexiste = 1
+      		
+      		AjoutFilsAffectDélais(REQ_AffectDélais.IDTabDélais,nPosActuel,sListOSExcluss ,sListReceptionExclues) //ajout des fils ayant le parent IDactuel
+      		
+      		HRetourPosition(nPositionFils)
+      	FIN 
+      	
+      sinon
+        
+      	Info(REQ_AffectDélais.Désignation + " n'a pas pu être crée")
+      FIN
+      
+      
+      
+      //TableModifie(TABLEH_BaseControlesTechniques,REQ_BaseControlesTechniques.IDControle,REQ_BaseControlesTechniques.Indice,REQ_BaseControlesTechniques.Désignation,REQ_BaseControlesTechniques.IdArchiveDocs,fRepExe()+fSep()+"papier.png",REQ_BaseControlesTechniques.Nom,REQ_BaseControlesTechniques.IDBasecontroleParent,REQ_BaseControlesTechniques.IDDocument,nPosActuel)
+      
+      
+      
+     type : 458752
+   -
+     name : RemplirTableAffectDélais
+     procedure_id : 1288859650530139432
+     type_code : 14
+     code : |1-
+      
+      procédure RemplirTableAffectDélais(sListOSExcluss est une chaine = null,sListReceptionExclues est une chaine = null)
+      TableSupprimeTout(TABLEH_AffectationDélais)
+      nPosition	est un entier
+      POUR TOUT REQ_AffectDélais   SUR Indice AVEC "IDTabDélaisParent=  0 "
+      	nPosition	= HSauvePosition(REQ_AffectDélais)
+      	AjoutFilsAffectDélais(REQ_AffectDélais.IDTabDélais,Null,sListOSExcluss ,sListReceptionExclues)
+      	HRetourPosition(nPosition)
+      FIN
+      TableDérouleTout(TABLEH_AffectationDélais)
+     type : 458752
+   -
+     name : getNombreOS_duProjet
+     procedure_id : 1288859650530204968
+     type_code : 14
+     code : |1-
+      procédure getNombreOS_duProjet(gnIDProjet est un entier )
+      gnBreOS est un entier sur 8 octets = 0
+       
+      SI gnIDProjet > 0 ALORS
+      	HExécuteRequête(REQ_NombreTotalDesOS_duProjet,MaConnexion,hRequêteDéfaut,gnIDProjet)
+      	gnBreOS = REQ_NombreTotalDesOS_duProjet.NbreOS
+      	HLibère(REQ_NombreTotalDesOS_duProjet)
+      	renvoyer gnBreOS
+      SINON
+      	renvoyer 0 
+      FIN
+     type : 458752
+   -
+     name : SauverFicheOS
+     procedure_id : 1288859650530270504
+     type_code : 14
+     code : |1-
+      procédure SauverFicheOS()
+      // renvoi "" si pas d'erreur sinon elle renvoi les erreurs
+      bErreur est un booléen = 0 
+      sMsgErreur est une chaine = ""
+      OSmodifié est un booléen
+      
+      VérficationOSType()
+      
+      // Vérification des champs
+      SI gnIDProjet = 0 ALORS
+      	Info("Veuillez sélectionner un Projet !")
+      	RepriseSaisie(COMBO_Projet)
+      FIN
+      SI SAI_NumOS = 0  ALORS
+      	Info("Veuillez saisir le numéro de l'OS !")
+      	RepriseSaisie(SAI_NumOS)
+      FIN
+      SI COMBO_TypeOS.valeur = ""  ALORS
+      	Info("Veuillez sélectionner le type de l'OS !")
+      	RepriseSaisie(COMBO_TypeOS)
+      FIN
+      si COMBO_TypeOs.ValeurAffichée ="arrêt" et SAI_MotifArret.valeur = "" ALORS
+      	Info("Veuillez préciser le motif d’arrêt !")
+      	RepriseSaisie(SAI_MotifArret)
+      FIN
+      SI SAI_DateEffet =""  ALORS
+      	Info("Veuillez saisir le date d'effet de l'OS !")
+      	RepriseSaisie(SAI_DateEffet)
+      FIN
+      SI SAI_DateNotification =""  ALORS
+      	Info("Veuillez saisir le date de notification de l'OS !")
+      	SAI_DateNotification.Couleur = RougeClair
+      	RepriseSaisie(SAI_DateNotification)
+      FIN
+      
+      Si COMBO_TypeOS.ValeurAffichée <> "commencement" et COMBO_TypeOS.ValeurAffichée <>  "arrêt" et COMBO_TypeOS.ValeurAffichée <>  "reprise"   ALORS
+      	Pour tout ligne de TABLEH_AffectationDélais
+      		TABLEH_AffectationDélais.COL_Selection = 0 
+      	FIN
+      FIN
+      Si COMBO_TypeOS.ValeurAffichée <> "arrêt" ALORS
+      	SAI_MotifArret =""
+      FIN
+      SI COMBO_TypeOS.ValeurAffichée <> "décision" ALORS
+      	SAI_Décision =""
+      FIN
+      
+      
+      //MAJ de la réception
+      SI GR_FIFICHEOSMODIFIEE.modifié = Vrai ALORS
+      	SI  gnIDOS> 0 ALORS // Modification OS
+      		HLitRecherchePremier(OS,IDOS,gnIDOS)
+      		SI HTrouve (OS) ALORS
+      			OS.IDProjet			= COMBO_Projet.ValeurMémorisée
+      			OS.NumOS			= SAI_NumOS
+      			OS.RéfNOS			= SAI_RefNOS
+      			OS.RefRegistre		= SAI_RefRegistre
+      			OS.DateEffet		= SAI_DateEffet.Valeur
+      			OS.DateNotification	= SAI_DateNotification.Valeur
+      			OS.IDTypeOS			= COMBO_TypeOS.ValeurMémorisée
+      			OS.MotifArret		= SAI_MotifArret.Valeur
+      			os.Décisions_Infos  = SAI_Décision.Valeur
+      			SELON DocumentChargé.SauveFichierDansArchive(SAI_Fichier,REQ_DonnésMarché.nomOuvrage + "_"+REQ_DonnésMarché.NumeroMarché+"_OS "+SAI_NumOS ,ChaîneVersDate(SAI_DateEffet),GetIDTypeDocument("ordre de service"),REQ_DonnésMarché.IDProjet,REQ_DonnésMarché.IDOuvrage,"")
+      				CAS >= 0 
+      					// rien
+      					OS.IdArchiveDocs = DocumentChargé.IDArchiveDoc
+      					SI PAS HModifie(OS) ALORS
+      						bErreur = 1
+      						sMsgErreur += ["- "] + "L'ordre de service (id:"+OS.IDOS + ") n'a pas pu être modifié dans la BDD"
+      					sinon
+      						OSmodifié = 1
+      					FIN			
+      				CAS -2  // doublon
+      					sMsgErreur += ["- "] + "Un fichier de même nom existe déjà dans la BDD !"
+      				CAS -1
+      					sMsgErreur += ["- "] + "Le fichier sélectionné n'a pas pu être sauvegardé dans la BDD!"
+      			FIN
+      		SINON 
+      			
+      			bErreur = 1
+      			sMsgErreur += ["- "] + "L'OS Ayant l'ID = "+ gnIDOS + " n’existe pas dans la bas de donnés !"
+      		FIN
+      	FIN
+      	SI  gnIDOS= 0 ALORS  //Nouvel OS
+      		OS.IDProjet			= COMBO_Projet.ValeurMémorisée
+      		OS.NumOS			= SAI_NumOS
+      		OS.RéfNOS			= SAI_RefNOS
+      		OS.RefRegistre		= SAI_RefRegistre
+      		OS.DateEffet		= SAI_DateEffet.Valeur
+      		OS.DateNotification	= SAI_DateNotification.Valeur
+      		OS.IDTypeOS			= COMBO_TypeOS.Valeur
+      		OS.MotifArret			= SAI_MotifArret.Valeur
+      		OS.Décisions_Infos		= SAI_Décision.Valeur
+      		SELON DocumentChargé.SauveFichierDansArchive(SAI_Fichier,REQ_DonnésMarché.NomOuvrage + "_"+REQ_DonnésMarché.NumeroMarché+"_OS "+SAI_NumOS ,ChaîneVersDate(SAI_DateEffet),GetIDTypeDocument("ordre de service"),REQ_DonnésMarché.IDProjet,REQ_DonnésMarché.IDOuvrage,"")
+      			CAS >= 0
+      				// rien
+      				OS.IdArchiveDocs = DocumentChargé.IDArchiveDoc
+      				SI HAjoute(OS) ALORS
+      					gnIDOS	= OS.IDOS
+      					OSmodifié = 1
+      				SINON
+      					sMsgErreur += ["- "] + "L'ordre de service (id:"+OS.IDOS + ") n'a pas pu être modifié dans la BDD"
+      				FIN			
+      			CAS -2  // doublon
+      				sMsgErreur += ["- "] + "Un fichier de même nom existe déjà dans la BDD !"
+      			CAS -1
+      				sMsgErreur += ["- "] + "Le fichier sélectionné n'a pas pu être sauvegardé dans la BDD!"
+      		FIN
+      	FIN
+      	
+      	//ajout des Délais à L'OS
+      	SI bErreur = 0 ALORS
+      		POUR TOUT ligne de TABLEH_AffectationDélais
+      			si TABLEH_AffectationDélais.COL_LigneModif = 1
+      				SI COL_Selection = Faux ALORS    // suppression du délai
+      					HLitRecherchePremier(OS_TabDélais,IDOSIDTabDélais,[gnIDOS,COL_IDDélais])
+      					SI HTrouve(OS_TabDélais)=Vrai ALORS
+      						SI PAS HSupprime(OS_TabDélais) ALORS
+      							bErreur =1
+      							sMsgErreur += ["- "] + " le délai (id:"+COL_IDDélais + ") n'a pas pu être désaffecté de l'os(id:"+OS.IDOS + ") dans la BDD !"
+      						FIN
+      					FIN
+      				SINON // ajout du délai ou modification si existant
+      					HLitRecherchePremier(OS_TabDélais,IDOSIDTabDélais,[gnIDOS,COL_IDDélais])
+      					SI HTrouve(OS_TabDélais)=Vrai ALORS
+      						OS_TabDélais.IDTabDélais	= COL_IDDélais
+      						OS_TabDélais.IDOS			= gnIDOS
+      						SI PAS HModifie(OS_TabDélais) ALORS
+      							bErreur =1
+      							sMsgErreur += ["- "] + " le délai (id:"+COL_IDDélais + ") n'a pas pu être modifié dans l'os (id:"+OS.IDOS + ") dans la BDD !"
+      						FIN
+      					Sinon
+      						OS_TabDélais.IDTabDélais	= COL_IDDélais
+      						OS_TabDélais.IDOS			= gnIDOS
+      						SI PAS HAjoute(OS_TabDélais) ALORS
+      							bErreur =1
+      							sMsgErreur += ["- "] + " le délai (id:"+COL_IDDélais + ") n'a pas pu être affecté à l'os (id:"+OS.IDOS + ") dans la BDD !"
+      						FIN
+      					FIn
+      				FIN
+      				si bErreur =0 ALORS
+      					COL_LigneModif = 0
+      				FIN
+      			fin
+      		FIN
+      	FIN
+      FIN
+      RENVOYEr (sMsgErreur,OSmodifié)
+     type : 458752
+   -
+     name : GetTypeOSAdéquat
+     procedure_id : 1288859650530336040
+     type_code : 14
+     code : |1+
+      procédure GetTypeOSAdéquat()
+      bCommencement, bReprise, bArret, bErreur est un booléen = (0,0,0,0)
+      
+      
+      POUR TOUTE LIGNE DE TABLEH_AffectationDélais
+      	SI COL_Selection = 1 ALORS
+      		SELON COL_Etat
+      			CAS "non lancé"
+      				bCommencement= Vrai
+      			CAS "en arrêt"
+      				bReprise = Vrai
+      			CAS "en cours"
+      				bArret =Vrai
+      			CAS "erreur","clôturé"
+      				bErreur =vrai
+      			cas ""  //non délai
+      				//rien
+      			AUTRE CAS
+      				Erreur("Le type de l'OS '" + COL_Etat+"' n'est pas pris en charge")			
+      		FIN
+      	FIN
+      FIN
+      si bCommencement et PAs (bReprise ou bArret ou bErreur) ALORS
+      	Renvoyer "commencement"
+      FIN
+      si (bReprise ou bCommencement) et PAS (bArret OU bErreur) ALORS
+      	renvoyer "reprise"
+      FIN
+      si bArret et pas (bCommencement ou bReprise OU bErreur) ALORS
+      	renvoyer "arrêt"
+      FIN
+      si bErreur ou ((bCommencement ou bReprise)et bArret) ALORS
+      	renvoyer "erreur"
+      FIN
+      Si bCommencement =0 et bReprise=0 et bArret=0 et bErreur=0 ALORS
+      	renvoyer ""
+      FIN
+     type : 458752
+   -
+     name : SelectionArretFils
+     procedure_id : 1288859650530401576
+     type_code : 14
+     code : |1-
+      procédure SelectionArretFils(local NumPosition est un entier )
+      	bFilsSeléctionés est un booléen = 0
+      	bActuelSelectionnés est un  booléen = 0
+      
+      
+      SI NumPosition <> -1 ALORs
+      	Parent est un entier = NumPosition
+      	//recherche du fils et des soeurs du fils
+      	bFilsSeléctionés = SelectionArretFils(TableRécupèreFils(TABLEH_AffectationDélais,NumPosition,taPremier))
+      
+      	//charche soeurs du parent
+      	NumSoeur est un entier = TableRécupèreFils(TABLEH_AffectationDélais,Parent,taSuivant)
+      	TANTQUE (NumSoeur <> -1)
+      		bFilsSeléctionés = SelectionArretFils (NumSoeur)
+      		 NumSoeur = TableRécupèreFils(TABLEH_AffectationDélais,Parent,taSuivant)
+      	FIN	
+      	
+      	SI TABLEH_AffectationDélais[NumPosition].COL_Etat = "en cours" OU bFilsSeléctionés ALORS
+      		TABLEH_AffectationDélais[NumPosition].COL_Selection			= 1
+      		TABLEH_AffectationDélais[NumPosition].COL_LigneModif		= 1
+      		bActuelSelectionnés =1 
+      	FIN
+      Fin
+      RENVOYER bFilsSeléctionés // permet de connaitre si des fils ont été sélectionné pour selectionnée un titre
+     type : 458752
+   -
+     name : VérficationOSType
+     procedure_id : 1288859650530467112
+     type_code : 14
+     code : |1-
+      procédure VérficationOSType()
+      
+      // vérification OS type
+      sTypeOSProposé	est une chaine	= ""
+      sTypeOSProposé = GetTypeOSAdéquat()
+      SELON  sTypeOSProposé 
+      	CAS "erreur" 
+      		Erreur("Erreur détectée lors de la vérification du type de l'OS.", "Vérifier si : ", "- Un délai sélectionné présente une erreur ou clôturé!", "- un mix de délais 'en arrêt ou non lancés et en cours' a été sélectionné !")
+      	CAS ""
+      	//rien
+      	AUTRES CAS
+      		SI COMBO_TypeOS.ValeurAffichée <> sTypeOSProposé ALORS
+      			//1 : &Modifier
+      			//2 : &Ne pas modifier
+      			SELON Dialogue(<§?11B79779027B23B7§>,COMBO_TypeOS.ValeurAffichée ,sTypeOSProposé )
+      				// &Modifier
+      				CAS 1
+      					ListeSelectPlus(COMBO_TypeOS,ListeCherche(COMBO_TypeOS,sTypeOSProposé))
+      					ExécuteTraitement(COMBO_TypeOS,trtSélection)		
+      				// &Ne pas modifier
+      				CAS 2
+      					
+      			FIN
+      		FIN
+      FIN	
+     type : 458752
+   -
+     name : AfficheDocument
+     procedure_id : 1298864669439676244
+     type_code : 14
+     code : |1-
+      procédure AfficheDocument(Fichier est une chaine)
+      ChangeFenêtreSource(CFI_Affichage,FI_LecteurPDF,Fichier)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x11e2f30b0344ef58
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text :
+      fr-FR : "Erreur pendant la sauvegarde de l'OS "
+     index : 0
+ dialogs :
+  -
+    identifier : 0x11b48294005f8280
+    internal_properties : BQAAAAUAAAAWZFE7kc2H2Cgp/uSZ4k9bPb8jjB3y7j7aFAzlxZ5oQdKPYd4IVmmyGw0mzF9vsKJJdsOB3E7iYBkyrMncIlHTh9pDM1UAcymyKdVjvZfpCg==
+    label :
+     fr-FR : "voulez vous enregistrer les modifications apportées à l'OS ? \r\n"
+    image : {}
+    cancel_button : 2
+    buttons :
+     -
+       label :
+        fr-FR : "&Enregistrer"
+       image : {}
+       value : 1
+     -
+       label :
+        fr-FR : "&Ne pas enregistrer"
+       image : {}
+       value : 2
+     -
+       label :
+        fr-FR : "&Voir Fiche"
+       image : {}
+       value : 3
+  -
+    identifier : 0x11b79779027b23b7
+    internal_properties : BQAAAAUAAACOOfquKOj0NaXlK3Uki7kE1PCgBEUIT/KRPFE2z1tKWQmfTPlvKfzE135vK80zeZSjkeBfBVX+Ltzwcp4aa34YGoSKUxxIVcvMZA==
+    label :
+     fr-FR : "Les états des délais sélectionnés nécessite la modification du type de l'OS '%1' en '%2'. Voulez-vous le modifier ? "
+    image : {}
+    cancel_button : 1
+    buttons :
+     -
+       label :
+        fr-FR : "&Modifier"
+       image : {}
+       value : 1
+     -
+       label :
+        fr-FR : "&Ne pas modifier"
+       image : {}
+       value : 2
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe
+embedded_elements :
+ elements :
+  -
+    name : FI_FicheOS_1$Requête
+    internal_properties : BQAAAAUAAACFGqPXEWYWtv6uKR97UnllT7YnG4h9HrzBmINgQsCEy83JhyotjuNrxw+ssCNHufQPcPsGVvfvG+PVWNRxVuzNI2YeWds69TgXyRg+EX3OCUGywrhXoNtGaTYTIGIk9Ds10kkjrtg8BfD4z/OM2Myo0+x/gt/mn32CGxm9AucnNcH3Ru+eR/F/EoM6yOHGa4szf74gQ2VgFev0BODcij9n2ifaQF1LMAdv5/wA3p8FJflbA406CJd54RlTU05mByJjpigbuPJaw3Nbza15dbt//yz+iYDKEVWU1nuhVl+FOPFqa/mnXVsbU03IMsslm68EK4m3x6CT8UkDOt3/0aUu+ZdLjkvlGYngZMyXTaOxrcwEkfmct8Gj69aDNJpv47XZkbgL38eeRjXMrNXa5qNY/9hpN5XwJ3thlI4SiE5MqnFerUJwSugJgWVEMG+AuDPbwacSXYRE8FEof4EjsDW98FWFDpPUF0yNxJ78ZnzMzo3hnuFePR2oChpFoOoL+2ljQqTDdId2+gJXWp0sdX4TFq1+jpJ10Z8fTVJZug+xi3uUTvid5YARVnjO4yaDwGduSyLs4vWujRzRI7buhs837c73PH+WTCB7OMC+PraJyvNqe/oCRLRWfXT8HlHiJvbP1N+CvsLNP5pCj959f3XJtum/duHWvKiErvp+7CeLiNgHpMS8eIgAQqsRrvcrj1UkZ/uc5ZXRQVhQjtH3ny3jUihhxyw2IFFCztkeNOKnb0Kiff1LPiaqMYOfH3YQNluVPdy2Yk5aRM3Lcbk+DsUqmjEb/7gOH/BmUHmnbZ/QGiWBV3ZUz4a8aLAuhesG6GXFDd8DDABaNIqeIksvsrKnzw5iKkOK+D2LHmff7xf9mGXHTAG8rfUyE7Vaeqq33gwmfdnTTo/dRLEpKTFaK+sJCIHkl1zAQ5AVo5YSZIpUTzwRYTswq+PqrzqmrY/4RZbjBWtcVUWutRCMOy6Pw2ewNv70fnfCA1x1cR85shaU7NJ41uzetR149P++iqcMg3DqimmVBP8qK3glgu0+6C5ulCSa2eOcHul0OdBQzOR88neKXSs3E4Zm+rHAzkPTqkRGqmvEVBqfdbioUFeXh+A5eHVh6Kn5pQ7v9OAuW+puPELVmU1UFz/2llq0ALcwhUWqVNPIIng4XRZXcyofA/FRh5T/ReA7bfUFhqHQE0YO4YTsgdb2ft1IuZeWYhjJQCgFuaebtNvqejh6qOI6Iy2knlYlHD2nbhfiGoUuzEzlvYvIIlTfmupPaTQ0HyCEBHUa8xjyR/FY1pd2szixjpvq1fnj+jjjxhvqfpK5XP9ImFF18llINjVOALflGrCvUl+RwYHbRvGh+Z4rd3Q0JIy2iIn64eAqsAFzgRMz8MICKA7XCnX/ZsVEUaG/qonY5Pd5qewHDkprsGKNavd9qYHEMeKLKTGYXilaDXSyHjTYm/J97kz2JDGJwtxchLkVSUWUSJfxVaoRITpzAvgUEPj3AAAtYqqwTlHq+5iVURNs8teDLDltsCkKmV+nDmpwiHJIxHuPvLb4HWHIXO0Qp+O9jY1l8Rqm+34vL2mHZlagOPe7LqMD1QfB0B0sM5bFrLptkNonTJ3Cv9yqKpS2PgsIUdPFa4cIYWZcOWqfQ+wTbdVfRo2hy34nVWZbjvkfMkUKmSy0WAevXCN8aDjX6c/9536ZxzPl6Bma9kVaKWExgmimzaMrKLd40BA2Z75WEAidP15u0QnKzW04oVSLBHWCDAjT7ZNFLd1MTGc7elvExz/UlUtnugvsbXnYyqHRQZKYVDuJdZoj0HknRtt6LKkUlIJhH1QEC9Ebgz4hsO5ou1OD0eM+GVSzRDPQXrqE8g==
+  -
+    name : FI_FicheOS_3$Requête
+    internal_properties : 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
+  -
+    name : FI_FicheOS_2$Requête
+    internal_properties : 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
+  -
+    name : FI_FicheOS_4$Requête
+    internal_properties : BQAAAAUAAACHFu/1hiq9qfHYEULtUJJ230mKQJreRGen1mVL+PSrq8hM88A2DC1AIKxIyucHV//Mukk+VuzrKAJRzhrP8+xPJWpThGZnxuyRTMFp0kSUn05la3ya4dq/RjmmyKEVdwbqvHk7IGeCIGSvpPZVPDXS3SWY8RZGpIuk7aNvZWspezZbbpl8QAFpX44NSNYLZ2TVAdj+1LtGFTHLwglrF4GFVd6fWpeB9HsdS5l2dvPPKrUrWQ9M+gg0mlSm1r9UX5Trce5Z0AZbC4EL0cbq/uCqvHXF8+xg1GZhpMY1dvX3lKT3wMZtbzmeFHiHapnwmLE1UpukVNrS2mL1DJz3bpwFCkI+7KienyRs0GCQ6yD4kP3EnnBd4MrVP8Is99leighFoj5xXmwfrm6f6h2qp94SdGwJaihgKwdkQJ2GRZl3cSVEsftDMxMwiu01tBc0xSHeZkZ/fpBnf2kgwTbhd5z9Mscz6H3QouW+q/A7SLoQ+qXEnV67oUYbAQ4nhXALwlBEcOer3oqykk6Luq3JQOY9ukhGrVA7IJJjDz5VtV13qyeRUtPoHEhxu5aub/lpTIP/CsPqBVFhyob37ubG4xtzgkCk+Xxl5HasvYkbuw7CJWHoxstFA5OI/RvCkf1vQIT/HwxYscozBANInM80FWyZhCM3bRApiApe3z0WXynNbqL6F6VSigstbPc8UYmplQkFeR6uQx1yjxDjrcHRqM0cI8Po8UpWHYWqRAw9gYajmh8+lM42sGHiaUtzwkEscUFfZki8IZyIcFz3gzdd6kCCwF4gLi8Fd2SdRSlxJ0YMuHUsr5KhzT5q+VSJnj6JMu0R0estIimDkKVO5dX0ma66Tb8we0rXJ4UQjdAkN1jaAcTCziIUBz2nId7uJVNWSH2f29JAr0sQu7nQeW+IKQ4V6/YL89VvjNHmkbKKwwJ8hnQDc0cU7A/YDmScc0UgWKT0ENNxsjnENWRuRdB+hrFUT5mhyyDu+8eKtvhW6yJxk2rKzHB9yVnRr5NEEb3dCAuFSVEhxYW91UQAsqOdHTxCNxSslH3qmIwgjuTAug6Y6yi5hYGvAbPk0b1LMGJwjZJQ1gFu44B/55lnAIHxfJ3qrxMDHP3tlpsvvwgeqpnduuid60RiqHlyvYEZHHD05rSLKc8oys71HtNdfGGAxHVdiSJnCTTDtM7GIRsNEsMzivlZPYpF9iUeIgxuzpc2V7iBzeHbZKOOKigBckqS1IYVhbYTKv526kcqM31XdyotJJoHw2YE3iP/gk8e8PfGiVvUJ287gH/FX13VhDYdzc+OvJUq3kQriBBW+xzNvWci4YmwTM/39oczQTEK/HiaC+jME9apvK+GNEqiCSTBthwp0UzF5iDH7LnPgZJiDg0y70r9RqSSunJbAtWWHyg6b8uKwpxYukt9Qs8nVHg2WRgGRjIII0NjXFZ2f3f/GUIVLUrq4Hj68p5RRO0H2diIIN/xXZ45X4C9VYjqIRtMooPvhylxs5MJBeQ0iKYIWoZRSwfR2+UK9740b1/iyWEOG9HFLwd1y2lZCpm1ZLk8Eg8we4jrD8RzUKpVHjfHGc9epuXC7yE8+KlJcp57dA1BPGutWi3oDlpMsO9d0DiYEoNhpapxpR2zzAfxrHrhPxKDs7Jj5Xt6yolRLIhezjb+vwcCNOi9KfMgA8LVGUMxv8/KiU/vF9Ag1WYyXhSA1wolMWjShItmFV/RaKRPbfCreLYCGhyRQ9EGKNNRtjbk4I11lmLmA88N1lAPH4PhTcD5P3icbBgJRYeeQe0=

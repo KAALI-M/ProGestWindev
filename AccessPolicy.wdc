@@ -1,0 +1,112 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clPolitiqueAccès
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x12d82c77059a39ef
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clPolitiqueAccès est une Classe
+      	Public CONSTANT
+      	DroitsAccès est une stAccès_DroitsFiltre
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1357884177358993903
+     type_code : 27
+     code : |1+
+      procédure Constructeur (Module est une chaîne )
+      REQ_DroitsAccès.ParamidUtilisateurs = Utilisateur.m_nIDUtilisateur
+      REQ_DroitsAccès.ParamModule = Module
+      
+      HExécuteRequête(REQ_DroitsAccès,MaConnexion,hRequêteDéfaut)
+      
+      //RAZ
+      DroitsAccès.filtreAccès.IDChargéAffaire = -1
+      DroitsAccès.filtreAccès.IDCreatedBy = -1
+      DroitsAccès.filtreAccès.IDEntitéAdmin = -1
+      
+      pour TOUT REQ_DroitsAccès
+      	//droits accès 
+      	si REQ_DroitsAccès.Administration = 1 ALORS
+      		DroitsAccès.DroitsAccès.Administration = 1
+      	FIN
+      	SI REQ_DroitsAccès.Creation = 1 ALORS
+      		DroitsAccès.DroitsAccès.Creation = 1
+      	FIN
+      	SI REQ_DroitsAccès.Lecture = 1 ALORS
+      		DroitsAccès.DroitsAccès.Lecture = 1
+      	FIN
+      	SI REQ_DroitsAccès.Modification = 1 ALORS
+      		DroitsAccès.DroitsAccès.Modification = 1
+      	FIN
+      	SI REQ_DroitsAccès.SupPression = 1 ALORS
+      		
+      		DroitsAccès.DroitsAccès.Suppression = 1
+      	FIN
+      	// droits d'accès au données filtres des requêtes 
+      	SI REQ_DroitsAccès.AccèsSiChAffaire = 1 ALORS
+      		DroitsAccès.filtreAccès.IDChargéAffaire = 1
+      	FIN
+      	SI REQ_DroitsAccès.AccèsDonnéesCrée = 1 ALORS
+      		DroitsAccès.filtreAccès.IDCreatedBy = 1
+      	FIN
+      	SI REQ_DroitsAccès.AccèsDonnéesS_Entité = 1 ALORS
+      		DroitsAccès.filtreAccès.IDEntitéAdmin = 1
+      	FIN
+      FIN
+      
+      DroitsAccès.Accès = droitsAccès.DroitsAccès.Administration or  DroitsAccès.DroitsAccès.Creation or DroitsAccès.DroitsAccès.Lecture or DroitsAccès.DroitsAccès.Modification or DroitsAccès.DroitsAccès.Suppression
+      
+      si DroitsAccès.filtreAccès.IDChargéAffaire = 1 ALORS
+      	DroitsAccès.filtreAccès.IDChargéAffaire = Utilisateur.m_nIDUtilisateur
+      FIN
+      SI DroitsAccès.filtreAccès.IDCreatedBy = 1 ALORS
+      	DroitsAccès.filtreAccès.IDCreatedBy = Utilisateur.m_nIDUtilisateur
+      FIN
+      SI DroitsAccès.filtreAccès.IDEntitéAdmin = 1 ALORS
+      	DroitsAccès.filtreAccès.IDEntitéAdmin = Utilisateur.IDSousEntités
+      FIN
+      
+      
+      
+      RENVOYER DroitsAccès.Accès 
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1357884177359059439
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+     type : 655360
+   -
+     name : VerifieDroisAccès
+     procedure_id : 1357884177359124975
+     type_code : 12
+     code : |1-
+      procédure public global VerifieDroisAccès()
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : clAccessPolicy
+resources :
+ string_res :
+  identifier : 0x1244e85a06858a41
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

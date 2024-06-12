@@ -1,0 +1,124 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_ChoixImpressionRéception
+ major_version : 25
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : FEN_ChoixImpressionRéception
+ identifier : 0x21ab93022d19acf4
+ internal_properties : BQAAAAUAAADFOaGtnbeR6fmvzTH6alrCZuC0u35kBowRMXngXuuxmcuc2GxkRIv3KHps3kw8Xb5cvlwDS3DDK3fAixmXSmJEXEBAk4iH2BP8Z9lwhFOdl7+oYBAfxIGD6llFiumC+eSGPPQ/KPJGAYwoFjoFNw/OOEbQP+2B3pbNj5S5/yY8OFrvZyNdp00nKWpstUjX49/g2M2Wvsm9COL9C5A5gUwPThBYfqbsA1fDouR4ciLPyvZnRddYhf17hsGfSAsPXnlr9bZ3Y9QLH4oOunk565OnV3p5txW403KpEKEr+auTZbA6blvKdaQSXC0MrOARUGQgU4s1hLmM4xDg/3VWakYhb1qZjdZgbie/lnkBYLLkAQTRw/LW/PYQYxnM7A+zwgRGWaO1AqFD4iOFcZb9Ndg5qqaSGK26lKu4X8LGkv5ZM6msmNHgzX0pZpQImR1hsVtr2WDRkXjyZnKciqqk2Ihr7rIvrawLpkrOufIxFOeq2R4GegGhD4BAlraioBUsNJh3Rq7kIUzC6eJx9Xi/FG3X3qwK+T5kIKwcXHfimLG/4jN5rImStOPHVSf/NrBa8SBbhqWcBWfdG2O6sNo/mVnAo32sOMaEcDWsJHDZMOPrPR6KRrMKdxnSTHMM3zab/kB1V4RPumOjElGpVeRD7wO/zPHv3wYNoYdt
+ controls :
+  -
+    name : INT_SansNom1
+    identifier : 0x21ab93022d1aad03
+    internal_properties : BQAAAAUAAAB9uXJ4IGIrvjrN3uUF0cBO1vQO10Zeoxal2JQtdNe9vP8nHOBEG0fAKtCDD9h/HQoSmWNJVJCvr1vdzGg69+1U2+eovIIiZgtYWT1G7/3DKXzPd/7kpig1KwtqxMpvHJPQLz8iPWgNhcwMFwI3jNqMFvbXgT7tq/9UZuR4bx5bNoGOE4Oosq2waVl9SREFCSudiJGO1eSNyjA2/wYLnxZDZZmVIUAft6Bfoa6PkgjCI9s7OjKZokedyHlCC7f5rfTu3vjJoPhH7+fpIBnIpO3kfhky9LJgHsYZyDLcSl+vZ8qALZ46WiRWqV+2b7EhCfEAcgxOmSD1+wjLZmOXo0DRQK/mwbTjowkVu8FUq3KQobkdinoeKEWWJ1lifIAZVDgNO+kIpRPmKhpzKtniW44QDR5/nK9Vjr8dREuXwhdNdrLMp7fhx1M2A4lte1gUJ031dbvJ7Rs5tKvkRnr3Aimy3va6wDiFtbgC5zIrKjZCmqx8lkkWcQPsnxAXCg1WyLIKSFquaWD6CnI7i+gZsyysIiXH8XivxEAp2AqCIt5/poJF5QnmtX0IKdr9g6KuH9nNo7lFzDpKfEaFcPM4r+db6v+lHncblT3x5+HAz0IarIz2Cu2yGBOjcWiuyKizZ26aELkA79wYw8SXpbkYKzaiE13X/yYGIX7wKXXmX7Fy9C0EuA2ipYHD5EvV9p/+BHK3YYucQGK3Tp2AlDL4hqdaiEDua7fIoTw4jtABXBrLQoerNy6ybQsFz/pAFOvPNj7lRyAsw1NoJ+Jrm7DrelI1XDQFPTj9l1pZzkzNOPj+dNSlUlgszddvhWawMWfLwEQDrCnlnGA036hFXpft+SHpV5AKrFACw3Elb39kf29WUx0nYkg8zwSQemz0
+    options :
+     -
+       internal_properties : BQAAAAUAAABEjIl5Xh3dpWeIow0oexmOppslu9HWPnjmwfz3b7O6CiWuOBI5rO0ir9racPu6NtkK4thqDhCuTCybV3u+BlVhM/cCLf/Gj/AVMJVNz0nP2dtOQhHK7lxHPU6eBzWJtw6cJGSZHqwDHJJ/N5iAMsjGT+E5Lg==
+     -
+       internal_properties : BQAAAAUAAADXb3hC+i3krK5epI3IUrieuY0spFj8VEab8/h0r1bLG6D8CZlhJgdVI0OAocT7d6X0ZSyg3o5Ot63YfM3k/G2d4G/fb5FI+u9bpRxXyTvFf8ogzDtOjtt0EFqmVZtRdXSTaRaVuSFNO8mjilKEPmMwLjo=
+    type : 5
+    controls : []
+    code_elements :
+     type_code : 5
+     p_codes : []
+  -
+    name : BTN_Annuler
+    identifier : 0x21ab93022d1ead03
+    internal_properties : BQAAAAUAAADboDG+kG+2BVc87oeCyGXRFgW+H4h4XQHikxHAQ4hkWxB12Fc8XqdzDDnyY2wpqBXh7MqPau3LZRLCBdSRKhWnCsvCVwusDIO+PV1YzHxO1W3x9deizSfsMw1/SrfCFiLLAZ05agU6JIGNMnE5C9f0SUKLbIPrPtg9AyZvQoCDpQxY+M/nVqoECLkuxRcIHV3zn4aqOubhWJeJWhAvTl4iAa6oL5z+LAZBedv4D6Ob7rUE7wBoJJLbwEZSWJu5jBfIEiI0M2fF6t9tltsmxYBpZy0nRAPdkd14QAHfMNN77y8QxX0eJXDaEN9B+3gemsyZsyOGXLVTKfZaDQwNX7HrZynrKnUekMGeCNyBFRVXjDfMY82sUGEopS6jYaYGGFnIfwwefjKWkZPUJ2TUdJmXVIgSZ1WVhh/4ISugdtq2IWVt+urqgeRyPtA8693/jyDHHuJP8iBY5UgaVNmcTmBchIJtsQXQUxGO8CgQiL8CqLBUyRklFFTSW1Y7Eb12mNM2i3xIYNQ5RaNvWLkeW5OOFn7ZofJWK0iIYFhugBX10m6y2Nv/3A6+hEKRuk9m3i47155NqjyFyZokizu3vYxYI7xB2/ReDS8OgOIL3upiKo/hdjLqxwQykiRWJInISFyMS1wamH/MbZeIOFHuCzSkS69OBi5IF6TGSLt7uC0BgG0n33Msm+YsBKwVBAouGp0ncsCIbGKvR09jE6fTgRACs/gGQIzWZuEC/UNE6B6IqBvQ/f1h23RRILNdvNlaB8kjlLUiqjDRM6OAWI1uRn6xuFCfbK0MbiO9uoN833cBbBen7xiarpqclz+ckiY1i1KavEodDqaB4PHoduXwVW05rNgvx8GDXxxGTHwzMabWsYax1qE=
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Bouton en annulation
+         
+        type : 14
+      -
+        internal_properties : BQAAAAUAAADlg+MZNL4UeN0CScoq3Rxf5gUg+iFD8TrM0IfnmXTmBKnXFNpcar1erZwYI1JZ4ul1VlNr8SlCSqUmSE/t8z2z4c2+cp3Psfdy+iN4xUHIwl5xUoKjn7dnHGqeRB4bYV3hoAh6uZDhZG7DA8DKlJ0/EDI8mUO8cvaPRnoI7rwYYjpPF/Vtuayt
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Générer
+    identifier : 0x21ab93022d1fad03
+    internal_properties : BQAAAAUAAADXXWXPe69zxw4LWFOt3Q9EezIny3cfCdUMnfWLY+KrBUB+sY55GyJqTNpr05oKmXvnKYmZJjJaR41avTigs1bOSUUyvMeLuxeUKh3C8k1bH7i1h6RqXJpdzHaWGv99jDhbz0xuiRl9GUjFHqJWGbS4yttywGtsHs841D+zAMoY+Thl4fMVXUaSD71G/gkAJmm/pvegoAKwi2vGQb5Y0YrcpS/6Q7R76mPO1R1aS8qx2zBKAOh5y6GKNQxkwN4MCNxosgk1TvN5qyc/+bpFE5TJeq0oX7uG/RECSquOJECS7GCHLovW7XnX8N9LbuWSZxFzcVRYqtOu9A4DRxt9rkhcg8wNKNWs8aLTxcLCblVo5IOUp4ITKDo+SudQ3yuFFjZhWMprGrf5SXuGqdCCWxQ76V/Jm8bid5F+pEzWVU+Y43SeIMsZRryPeIqMtAYNaYFr3vq4FuvDFT0U+29nhpLmNhuJx8yIM3LUFyawlQ9ILT8Y08QuFNglpa1hc3k1/6dQcJCIFp+1xV4di7ZzLWY9p4tLOy1gu4VHXSANDAyute1d2XV+6FEZHJyOQWHvpqMYskz4NOFsILK6jQB8oVa3Gywi1B2iG2vb8+B289K1k5Qi3JNdaIdtjQTYRShh/0sbfnZmmaz5uw9KAaUWuHGCtQ83lToFUBbl3TUtAJjYhQyKQx7w6hs3hhNCZ6dBPSo12Lu5CORtWodsZYul3nRwf2Fyl71B94Jr/hEM+QIKfPGikBhFfMFBNq2UtEVkbN43NXRLOASPS6+qAqoHKYWF7GQ0aAbFG0Hnr6Ecm8B5Is+Jj3NCm59I/Gxt7AxDWAAyoWBIRvimi1FX/jB7OKTc3SXpsvZlEZNNrAMWRnbtkIYiR8Ygqw==
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         // Version 1
+         // Description 
+         // Bouton en validation
+        type : 14
+      -
+        code : |1+
+         
+         monDoc1,monDoc2 est un chaine
+         
+         //iDestination(iVisualisateur)
+         
+         SI INT_SansNom1[1].Valeur = 1 ALORS
+         	
+         	monDoc1 = GénèrePVRéception (gnIDRéception)
+         	
+         	Ouvre_Document(0,monDoc1,"")
+         		
+         Fin
+         SI INT_SansNom1[2].Valeur = 1 ALORS
+         	monDoc2 = GénèreAttRéception(gnIDRéception)
+         	Ouvre_Document(0,monDoc2,"")
+         FIN
+         
+         //iEnchaînementImprime()
+         
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : BQAAAAUAAADKsJlg2Ltpl5r+Zc57ji8hPYDMiS+bliLE2xo0GExCKcZS4g8MvJbO2unxMH/Ew39ndfsVCH3lk9Ucyyb/y6CvEtFTeSEEVgWC9VqHT5smVjYSsTm3xSlJws4D0hDxpd8sOBfyevI2eVq/TrbRbp7AxCwyQeebeJ8Vql3El3wPHveQ0bNOFXtUApIe9yo9j3SOLpbdRFl1JQiYphbUcFWvVifGYP6UzeQeq8zpvBmm+2wfsFD1bc0OmaE1khBHvQ==
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : BQAAAAUAAABqPQh6HC8RxAVkp2SqPYLuZrfVhd+1KX4lx22hIT8uqEpE6yP7Sbc2rmVqdmL816EWzXOkEe9ijOtYwchZKAfpy3B1cNqhpJgsnbUs
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      //--- Fenêtre Popup ---
+      // Pour accéder au champ ou à la combo popup qui a ouvert cette fenêtre
+      // vous pouvez utiliser : MonChampPopup
+      PROCEDURE MaFenêtre(gnIDProejt est une entier sur 4 octets, gsObjet est une chaine, gnIDReception est un entier sur 8 octets)
+      
+       
+   -
+     type : 230
+     enabled : false
+ code_parameters :
+  internal_properties : BQAAAAUAAAAwjDLmDSZ0H1P68nJIeNfqR9EvRjU/K+sVcM1T6rhVNr+VTV1mZ/rmoweYbFDZUhBGcv8UsxlDxVCOnb2U/SQOvlGWzNby3/w/V+ppSymxv+Vh
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x11aa31fa0058a69e
+  internal_properties : BQAAAAUAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

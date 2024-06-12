@@ -1,0 +1,191 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : clProfilé
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1651cbcc00830973
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      clProfilé est une Classe
+      	
+      	PUBLIC CONSTANT 
+      		hérite de MProfilé
+      		Leff est un réel
+      		eb est un réel
+      		Sb,Igb,yb  est un réel  // surf bordé avec Leff
+      		S1,Ig1,y1 est un réel  // surf  1
+      		S2,Ig2,y2 est un réel
+      		S3, Ig3,y3 est un réel
+      		
+      		St  est un réel
+      		
+      		d1 est un réel //distance au bord sup de Cen de grav qui sont ocntion de lEff et eb de la tole participante
+      		d2 est un réel
+      		Igz  est un réel
+      		
+      		
+      		
+      fin
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1608290618990397811
+     type_code : 27
+     code : |1+
+      procédure Constructeur()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1608290618990463347
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+      
+      
+     type : 655360
+   -
+     name : setID
+     procedure_id : 1608408662822446486
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //setID (<nIDProfilé> est entier sur 8 octets)
+      //
+      // Paramètres :
+      //	nIDProfilé (entier sur 8 octets) : <indiquez ici le rôle de nIDProfilé>
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCÉDURE setID(nIDProfilé est un entier sur 8 octets)
+      
+      SI nIDProfilé > 0 ALORS
+      	
+      	REQ_Profilé.ParamIDProfilé=nIDProfilé
+      	
+      	HExécuteRequête(REQ_Profilé,MaConnexion,hRequêteDéfaut)
+      	FichierVersMémoire(This,REQ_Profilé)
+      	
+      	S1 = m_t1*m_w1
+      	y1= m_t1/2+eb
+      	Ig1 = (m_t1^3*m_w1)/12
+      	S2 = m_t2*m_w2
+      	y2	= m_w2/2+m_t1+eb
+      	Ig2	= (m_t2*m_w2^3)/12
+      	S3 = m_t3*m_w3
+      	y3	= m_t3/2+m_w2+m_t1+eb
+      	Ig3	= (m_t3^3*m_w3)/12
+      	
+      	// 
+      	sb = leff*eb
+      	yb	= eb/2
+      	Igb	= (Leff*eb^3)/12
+      	
+      	st = s1+s2+s3+Sb
+      	d1 =((Leff*eb)*yb+(m_w1*m_t1)*y1+(m_w2*m_t2)*y2+(m_w3*m_t3)*y3)/(St)
+      	
+      	d2 =m_t3+m_w2+m_t1+eb-d1
+      	igz = (igb+ig1+ig2+ig3)+sb*(d1-yb)^2+S1*(d1-y1)^2+S2*((d1-y2)^2)+S3*(d1-y3)^2
+      	
+      SINON
+      	This.Constructeur()	
+      FIN
+      
+     type : 458752
+   -
+     name : AjouteTolle
+     procedure_id : 1608409070844696688
+     type_code : 12
+     code : |1+
+      procédure AjouteTolle(Leff est un réel=0 , eb est un réel=0)
+      
+      // 
+      Sb	= Leff*eb
+      yb	= eb/2
+      Igb	= (Leff*eb^3)/12
+      
+      St	= S1+S2+S3+Sb
+      d1	= ((Leff*eb)*yb+(m_w1*m_t1)*y1+(m_w2*m_t2)*y2+(m_w3*m_t3)*y3)/(St)
+      
+      d2	= m_t3+m_w2+m_t1+eb-d1
+      Igz	= (Igb+Ig1+Ig2+Ig3)+Sb*(d1-yb)^2+S1*(d1-y1)^2+S2*((d1-y2)^2)+S3*(d1-y3)^2
+      
+      RENVOYER Igz
+      
+      
+      
+      
+      
+      
+      
+     type : 458752
+   -
+     name : Sy
+     procedure_id : 1608423197734538021
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] Sy ( [<z> est réel])
+      //
+      // Paramètres :
+      //	z (réel - valeur par défaut=0) : <indiquez ici le rôle de z>
+      // Valeur de retour :
+      // 	réel : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      procédure Sy(z est un réel = 0)
+      	Sy est un réel
+      	z1,z2,z3,z4,z5 est un réel 
+      	z1=-d2
+      	z2= -d2+m_t3
+      	z3 = -d2+m_t3+m_w2
+      	z4 = -d2+m_t3+m_w2+m_t1
+      	z5 =-d2+m_t3+m_w2+m_t1+eb
+      	
+      	Sy = m_w3/2*(z2^2-(calZ(z,z1,z2))^2)+m_t2/2*(z3^2-(calZ(z,z2,z3))^2)+m_w1/2*(z4^2-(calZ(z,z3,z4))^2)+eb/2*(z5^2-(calZ(z,z4,z5))^2)
+      	
+      	renvoyer Sy	
+      	
+      
+      	PROCÉDURE INTERNE calZ(local zr est un réel,local zb est un réel, local zh est un réel)
+      	SI zr <= zb ALORS
+      		zr=zb
+      	SINON
+      		SI zr>=zh ALORS
+      			zr=zh
+      		FIN
+      		
+      	FIN
+      	RENVOYER zr
+      	FIN
+      
+      	
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1651cbab007d84f1
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

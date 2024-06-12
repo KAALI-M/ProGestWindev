@@ -1,0 +1,7 @@
+//MO614-615.TXT ANA00614 TO ANA00615
+AutorisAbsence		NFI		nouveau fichier
+DonnéesAdminUtilisteur		NFI		nouveau fichier
+typeAutAbsence		NFI		nouveau fichier
+Contrainte_GPU_Utilisateur_AutorisAbsence		NWL	GPU_Utilisateur (IDUtilisateur) et AutorisAbsence (IDUtilisateur)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et AutorisAbsence (IDUtilisateur)
+Contrainte_GPU_Utilisateur_DonnéesAdminUtilisteur		NWL	GPU_Utilisateur (IDUtilisateur) et DonnéesAdminUtilisteur (IDUtilisateur)	Nouvelle liaison entre les fichiers GPU_Utilisateur (IDUtilisateur) et DonnéesAdminUtilisteur (IDUtilisateur)
+Contrainte_typeAutAbsence_AutorisAbsence		NWL	typeAutAbsence (IDtypeAutAbsence) et AutorisAbsence (IDtypeAutAbsence)	Nouvelle liaison entre les fichiers typeAutAbsence (IDtypeAutAbsence) et AutorisAbsence (IDtypeAutAbsence)

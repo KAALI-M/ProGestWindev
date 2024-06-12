@@ -1,0 +1,4 @@
+//MO598-599.TXT ANA00598 TO ANA00599
+PJCourrier	Qté	RUB+		Qté est une nouvelle rubrique
+PJCourrier	IDProjet	RUB-		la rubrique IDProjet est supprimée
+Contrainte_Projet_Rapports		DEL	Projet (IDProjet) et PJCourrier (IDProjet)	Liaison supprimée entre les fichiers Projet (IDProjet) et PJCourrier (IDProjet)

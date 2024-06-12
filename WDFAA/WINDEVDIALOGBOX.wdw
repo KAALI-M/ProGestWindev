@@ -1,0 +1,1046 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WINDEVDIALOGBOX
+ major_version : 25
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : WINDEVDIALOGBOX
+ identifier : 0x21ec60d41e6ef3c6
+ internal_properties : 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
+ controls :
+  -
+    name : ICON_Question
+    identifier : 0x21ec60d41e6ff3c6
+    internal_properties : BQAAAAUAAAA07TZ7gtXJaOUK1vOtWaoBU1xriUjVYKifNiI1QhFWN1LUJcoW7Khj0w4bLBx9ChzYa7ij6xyADLntEJmZXVWVqVc7uXu4B6E/pmB3d+dBqlaZ3jUPj+QrVYOd7G4qE9SJdK1a0q0P/iHGb++odLL6BLMnNpC/XJ5jQKNOG4DsCwyZQfgjohZCtqR967tC3hmDRG/H9xEg74hqvqzMaZssj5Di9a3K1UWkW6M8Rf0ytCmGz7zwvh3ANHEkBEYm5gMoD45iqBgWOAoY5RSugdZBouI8oioRh5GILTE7wyB9WB61Q5B/yB0p94ftnWM9mcwA51lXuPv1YEVnU9sBfe4GlKDSBT+94QM7Iu1Yjyk+oaowNqeyMNYEnlUIyoMcjk7xYnPUt4oH55b3d3zZ2GdJYu5FsTYLvtgNW8lH8wHqkyde1ZPICOlcGwcxav347Qv04RGuYj0A8y4cSq1YJKU6o7E47NefG3DUn8jjaCLn0o2NzITcQGjsY8SAkJ4LrZi3A3rf7G5D5VbA0zCiuFqdhL+tJqXDa0fmZDL8uZ15sTZV45xR/qc9J+DSh4FblU50mpe5pgAihBUdt0wNjT8WerjrUP/BuzBYQmwc9aAoB2LK2wUzvYsUVekUdI4RmtPulDUwBnV8lxBA9nxQS4vV0EMju900GGoM8dFHeonN0J+EzQ6s5TS6nCyLzOQUKlc0UyMq2CP2narlIm2wusrpD/+2arUeAuJWw0hixCKbTRwoXe5P10ozIpMzjrWz9A7n4L2RePddHXGzDz6x8w7DnfyH/73qJIneUN6zp+ZBfhYhJA0m7Z332LwlNmQplT/GIWKdrL9ltn4KzF0Jn1iMZraYQimI1ZKWvHNbyUGhRvP5yUoarOkwBanEsKmiiswvmh8bcafdjnfKDiV1Xz0HJb8z5OZDwRM3AwAh8r5VdiljOmR312hVXWESSprSayQac9WO06+so5M+gSZN02Nk+kqH7e2ja0Irj7WnX9jfIOOzQRQmRspBw+gKRjlrE9z9cP3Wng85P+6f/qhtZC+5l49bWDexXcdWEsaDIpQjcOml0bE1b82UXFXUnVIHreo3nEOZuWFeVrc+9III+3h0j2RicsKCVDEgbC6+tF617U2ShfLxPRqB2e4XqTOiN72hdNCWHWlRAG2IYt6YbwmV3zEpGCzvoxEqGWO44z2QBkU/fgaqtVYdcpe4t23PGdaX8R1/RXSBEtM83ihI5Wr+PFud9vedCuLKWkGJpaKqLyma3xsQnHEW9CRoUWom8B4nS69+1LXRv4coBqSRh9/u0nHASb+wvhc1LrReUmzXhLLj8nNrX3A4AEojLaEjXBgZ6yEpiBjY4p1N6G6E8f7t8g4dnFm8pjdqSdSZZnV/Piw0CV8iPZ17Pukb8k8EIbuK2kxHRe9AosKyODWRDbaRpVltlLvZdy/gyRNRyCv8Mo2BbDkSDHAZ9bqHZYiO467fhpJeLhzNKxfwZ3MNEBg0HArPym5DMUDfhYlrOwHyXDagwvvz+S4lImAyPSOBlM/xDuf2ooU70rKZbIupiNF1PbtRpHDNwr8vnfwF5ucd3hEPr6J//Dgsklu2fVjoanXHOQiqx1KFicjVMHYqu63KW3zZZaAzKBJimX9SrV6n30d6Fb2a8yv+Q4Mc3fsAN0b5c42AzLjcPXRI99ZFRlWiTZH4puowbwmGhOzyOlrrcwzjz3cQaWOzXBaszho6nM9MfXZv3fBhCMM5JFheqVuN9Tio+3JR88zKCVkFuzVNRUkCa6bBd99qEA==
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : ICON_INFORMATION
+    identifier : 0x21ec60d41e70f3d6
+    internal_properties : BQAAAAUAAACAaIncgOhn68fW2mcTBuw4YlCN3rtKbOqeoMluWvLsAbqa/QihCC7D4Sk5qC2vEWQbDTviI5tzQkhFW1ercT/0n9S2DuITC2fky9NX0KRUxmY2zvWRa3x4nNRDBDBtVh9cC8QnEoVAOfgLm0BQpfDR6Kq1uEfVLPHGXeMBHJDNTPYzX1XgK7i3H6dtBkWYnDB5gWnn0mC3a+cgI95e7YE+mTpoLdNTtiLeBjmrTCQgk+h7dowIH5HKnvkOnORUYDBulx3SuIIi7v6evQMyVZbpaOrdJcwN7XRXe5Wxse3Ccind1vKd30mNjkTwN7cpU/XTKXFkkDLs64SUlepWVTJkzLeeOaMEIBmtvA54GbhV4ZmdWDsJVhAJXOOyVn/LFmdeEd/Rozo81SoyPd7NepCaP5fYqqvx3vhmzXV0uVUIUXSX99qbrnqkv1cBmycxbxWKd7tjcq/NbToWJPhro2S27v8XiAXhZ9l0RGtNA/4zkNSFn50QMK48ZCbV4EfJBk6uodCWwfyttqzKVt2d9DMr2929KT77DqBvqcIFr8ikL0nzTbX7/E1tRsTjlsDtnbVfduJUFa/M05rfKVhk3n5m3fdcjFl8I1KABmJ2chx7O8soEEV1q2Lyo399RvIEfUk/mqGaXYinYmI/LBvC1+Ytsl00qoDBMOcpXEHTXY0d8tNlbAD5FAM4Kiq6sUa5264fkL/ETvvLtWR+0Gl9CIxO+HpyrOdLDDL1heveqE4zNg3W5iQ1A7ouvVw09J3T8aja15zRyStozz95bje06eR7RLAU8/5ZDC7/6sm4pBIGSvRrDpPx/cE+9k/DtNH3bMY+ZiYVixDnWLBqciKhk41sNg/MKel75y53GuKy8bWaCLcPMfPy6rUf/b2fjyfcnUi7jCxb/173LVOUregRIGaAoDvZGRZZw8MH6upbJ/W1rHyLda1ZfhqS0JQBlLVoGSFB3Q/jXxTxu/53ow3ek+0haf9fQ2wapBfehTH2Tqp4QAC/gu7XRtnC6fRHvWvickHk5DqDZ2pcJI7MDgkpqgiod35e0XoQtYUMv834D7SBsl4snHNPWmQj2zGUoCZrPmix9lzfCn0FB2morVPq/tInTTAszbJz2KEn/zD4cEw/L8iI2Hi4VcdgNUgnkbqL7cYKMON6PXVJAqVZzbTt1EZxgrjIUzF/ttjewHo9HXi/YKkFJvdxScS7cjiRgRnrDLnWKBsu/PgCs3oP9a75LyfrieGvI9JPI1zbz5lyN8VQcnWFkxvJBpadHynVTJjVAjXmvFUWKsBXX0dVX/sN1op/gXm30bI+8xOsyGnahLIi9a2WHRkiIq608vOPOtcVoxav4YYJXoskQQCSgb80/iScwspkGObhlAnXou+Ds2DV0/GssVRR7o1amw01k6j24LKBYT22xr4WIp3BzQRdzbb7Nr7r3E40w+aJuCZg7AJVXOrN6ZBPczMhbxEeNOBfIPBCRZNRY3c6RhND7ButT5ueSB8XIH5wwAKyGEZPJEQTq8iD/MDR1aKRCrkl2tE/dCrjhhHz2azLxA7DDj9MCO4akTDxPPyfHt9PrNePvSbXzbf+ZKAByaYG63K8ApSsMFDR1gg5aG4Oc3XHVFLejPVl5bjT9iw6s3zwr++bOLUzW2bSA0eH2uwXsxjcB057fO1SHdWr3uvioXlOj5aLIKyr7FNSCZmdh6OXH9j7wJKuTaLdiez/PpauswAPFZhK6AqQLhORlgHNcNPAW5ahbPNWrCcBnnZj
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : ICON_ERREUR
+    identifier : 0x21ec60d41e71f3d6
+    internal_properties : BQAAAAUAAAB3R6Vtn4RA1CaFpWQAXeeEhEEFKkU/xPaSXtspwTbQ54QfY+qlGhB2wBFHjJ7cIqJ+WS3VJ7mppSrW/voUPVQunqXrUa7//VMZQC5CSmhHk+K7jSGLtBq6E1UFCJFuw8TNbphAO7OWWguZWb7JpOFcqkPLJsXHwzWizFmzEPtBBG3g5bQBj95t/nwvzI2D5wbddz8tJ+v5Tp3SGorQyQc/ayct2SiUy91tI6xWkRPsUwK7j71MPqht68rvY4mosti1O9QwgOg4zB8l3xAYdkxJ6ToWz62XsDpYEQazHX41++lHkOaDR8TxMKBTTz4tMKW/zI91lUhcwhOOhv9MbT5lLKfI5dnUdw/L1SdYY7Lt8QcKZds3R2xy62F7kXDzSIdlwoA/ugIr45jIA/PUDjC/3+kpQBzwZx2YtpK8tvXLAeJsHHF9+ZS3ZoTuHgxm4PwTaI1WQA1wbtDSBHjVZXgNZhcxeq4JyfGDkJPS6WpwAOp5ppEcQjtS0aKZvhtTs91KdRgQK14o1V4elL+kWFW5bKiPEyp4asVM29hO5DPbzJ04vGSh1koqtL6dwc0eNwFqHE/r7OnLArYEqdZKgItYRusoIWrkACMjAzMJQLOttQJWNslvla2HnmxQ9kKUXGag1H+/j2/PzIadZKQE4GyXt9+g/cB+P5fTx8LudGiH5eObmBR9WpIXaF6CqSpTQbdismdJwLWHDVZNz6kVrjpIC0Fkvg9Cc59/lG8kedHIg6jn/yo5H9cVFnudGUIeAdAXBa5+TsxbHn9awJ1Tj4MpWoh3sYskFGEoKmtARYT9fRmG7UQjXXL8J94J2ckuFgfA37p8YgwmTZ/ux1KaieNdkoh1DRwqOLp3lw502es1LXLYMFOQNobdgFlbCBSmrx5fOccY4CQuu1LCd61qtbDDoFWg1EiLOiTSG4iKDAPJQcJ37WLTTdkazQ5fHv9U8H68AElhaIDQDDZ7PheuxEYQNpqIp4kJVkj1VLoNn9uXYYCZHgR4dPxTOauNnJYxGpbqgL4ojaLDV6ITQn/FWyADfzYJO9HHZrRP9Ji4EN+LYSpb+Y6o2oOzr210jLHn5vds/TWxjO2CX/yEml3GXiyWrzhJt5x5o+oXaqh+wWp5Ks/ViHniRYWeiR07oGlE6j0Jhpubn3GL/yhqlvdoQpKvF7BFdQPvhrjIePC3V4y9WuzObaKMYh1M8Q9Z1eJy15lAvDnAuzxgJfI2nBuUfm4IKCL64McvC8wW9rbBrS/sp5XEdC3Sfh7BYxzA0eOa2Y4dU4p8ndQMzfetrA2a+ExmMpk1BXCtPGhxNbpRXGDWdSMiw6X9BRgCJi8+PDglVY+YSqZG5RI3mtN4odLYITLu8KhECB956s4VIDm5nhj3jUliVQ+RwGu+O33f7uBw9AlUYLY7W/MsUg+zKCKvnPbj3Nf12ldNGroLF4F2Gh5hL2HEjpFO2gN+Dyeklz87GBG3CYegoDNI6FxociFCzzHqSiHrM+1C0pICAfYsPpcJNuSNE5ZrYfI5Dbm4PjK90wJwsJMaR9a60ZlqB2FCIudX728WJ0dcbWPuM7wAoVveMjBIt6GHlsVt72xGNOmTOQorPA4PtwfK1mHuZU/9bGCSbJSCsRLBizcqnAzgGIJ6CMSy+z5GKkQP3EgUMbAdWyP/36NNmmllghGmh/AlP3vzb+22ABlv1vDQoEhqAA5GJhZGr+sk5DmKVpk4o6Eqn8wMQ8EUyadEQYz/qvtWr967PKcbj4cS
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : LIB_INFO
+    identifier : 0x21ec60d41e72f3d6
+    internal_properties : BQAAAAUAAADB5dnKoUEJHnvb97cACdwZb7B5yrU+W/azS6wzOFHkHE0qqT9lt+MDQS5mpfC65AYrqA9dpUlCA0oUr4Y4L1xvAemceyTZr+2dhhqSjWi733yi3FSgTERqxhKodmFzgXaQ0eqrDQUna5ldM/etYPZnAi+E2GnPp04QgGO1b1rInSaAJtvqTBzwHm3akAC7gl9o4w43Z4KCnNoS/QMhLuJbAmBU84qX5ytjWPzod9lWCiwfSGE2fL/24iGlrUz8PORK2564p3PG7NySzrrYtsjML+RkBB54OAbDKWg8W1H66JRxSo3Jer2Hjq7i6rLn/cNNWoCMN9azmlQzb9oO6uqLoy2OBXlC7swnrMWX3LulEIb2NaoECiXhq4+eycDDS7cnCMs9H+/WszcKBSpX6Mwbp3d6ystLquxIUh4VkkPm/cwKN975lU/IcIlk49LREMfAbmtl5MvkMkdL5qtJmczJtMIOiDFCwzkd7UenV9A1/v4oLVMvQlmw1zdRlX1XXZt4YSqu8XqHxL4VAR6xec3t/TrWhzvt4OhVE0KidbdcIayu+vzbsTtF6iWHXusiLXOJb+ULNgVyPuHOTblLAe/BCYu8YVL/1qioSZepugFw+4wf+SG3RH10XGuUlQ4PMpNiunZGLvoJwj4aI2mVDsWllrsO2x3fwDfQmmsEKGap/N3ZCS0e09EVQnefQODO8Bn3I2DbO/iOZCpP6tzr23DEnyA1EX9riun05afffrdEUhgqUu6on2sgBy+sNfjw6ar7ezjRwf1+SDzMbW+VSotO01FMrQQKw4hkHutKXX/SNfvZX2Dzb6aBq1fe/HItIjzccUrH5dF34h5KoNcmH1LkWJDFOQiIMfLnOh7OC3+BV33XvOKZ1b8F/Sk=
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : BTN_ESC
+    identifier : 0x21ec60d41e73f3d6
+    internal_properties : BQAAAAUAAABGlkD6oWAAqMBpXsbVUll1OQR2hpxBKnh8iTGWg4MVZPdr47FnIr+iepHtgX7EPigYZA03PX9hfoR7rkaC85DTQMfGFsVXwzOWaaWZD0bzmVzRUn4xdLB8bsT7wj9q+G+mOYW5pDYR3F5a0K5pBqkrbaDyYYwZ5sNVCmaif8jqHXIANnhBdUuxvpansQCrwyXI++kAW1tpOAu+xiIAkx24uEA42BOWpMxOgHYg2hU5//EkIIrYSjybEW5ID5gAhegS611AoP0Ou9p4TPZNv/VKpZgQaHTuT5VNcubP9X4PyhrZQ6adLNep5G2v+2v/CCs98jO89pSBshLJrR4nwMswYq0iThqWHc6L+qQMA+ojz70Vf6vRrM3wmuLZWqSuxSFLFReq8hAZe+VsJeuBmc7pYT8FvOZkE9rY3jhxV4PpEjlgbmKcEVvbXbAeJ/J41mS9QR8A+734taN+yzIncI0makHeIVpzgzOrdyzgw8fcausee49cBRbtqtWH0k/v72q2JUz16rLP2t6shxIFLb5X1FgIRkxLQUavg3M/gLvdGMsaFSw8zbYnxnlPTakBhjgqxkqTFRZJPsB7aphUB18JZm9dCUpA+6quIb4q0NXUsIC0gnuJ1E/ZJNLG1lBqmoaDeB6aVCA9zWruMMVL5d2muhPzwFmCqTbjuNJNckr4yXqivIHXC2SUg3cu3E4+oqMax1QvMCnRrO4itx/B/zbuQOD7x5sP9zcSqmxBuJe6eqVoimJG5gz3qQ28LXGSfB25Ky7TUmdeefCRqoxL7AAvedXIuJmvrEjwYzIjue6C6Je6aDby/OU0blftvpJlwnAhRMAB2dM0aerlF4uK8hhhcSBH+Gnvhh4dyVhF/jwG8cT3m/FgfM/l40r3aU2o7hXPf+YYpsSp/ptnIX8Ey/H+Z7FA/1/JeaglpSutjfBioY0OeBmMMUDR8mxC32pOQaohkE6HynxyenenDwsI4PVNXtHxyyw5CpSSSwWbybCq/D4lXZiGP5DrsoUD00/xlXKjDanAF0f3oe/AEIhYD5UlCZY4JYUzhNf3uBch5LLL7AIO9EvY80NE6SGX3PCdD3IVK9UyWkaZbYEkLOAmz+2z83W5uow0UGPfJ1SqJSzlVSn7pp4QN+sheZ9D9Xj64tSW/+4KY19djDjQzrQ+kS/BtFJ7PTQrfeTg7VIh6Pl6VwKTe+LFhYfwmY9x0W4rfnkxWvQzEc3c5ewwXZKTVbsc4rT3pKTvG6MwRSFZZwFwj69DXum8ir6zmCLloEIgWt3JBIzWF6dULglmtWwPQB9gyCizyrcfotilj6HsuPqu3tEJAj0TU7f7ZoDEzP0cUbCf2kE9/bcdZxLwUTEaT0sGerECBXuZDb1hSbloX2vKcbxL3ZRZkBU6Fuoe+0Ac838ISrOTmC1tflGQOwouSyR5OXwYDqulVuD6kYLa80MT1CSDIBn6W/AjUC4Q7lhrHgmTuO+27l/dZWPvnpqMuX++dXBPmH9CWvITi03YSiE06AP9/Pd0ulyMEwdhdjZknxNQOnwDRK3E3yEu8i+r8xOA3Os3MA==
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         ExécuteTraitement(gsNomBoutonAnnulation,trtClic)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : ICONE
+    identifier : 0x21ec60d41e74f3d6
+    internal_properties : BQAAAAUAAACCRh/D3OgnxtZ09NKRcE4tvOwgceSAtFGrzIzr5McMcQKKjfD+HXbK7ChWH6QDGSxGHgLaqDeQUH8IS4CzPKhn9da26p0LLgAhYtThervOeW+I3wK6i+p3cZxOsLAa5uP1sR4pON4Nut38GYU1V29RWxNMBJcySCHd5S1WCHJ5vLJ6gglvQ6Yx0syV/6uZtywsiU7AQnVXfz2EcGGx9DUNcowmNyGV97Vs8YXooFXtxr64kRdmwymLzepPw+I4TyYd4w5/jAmJRCG6ZDS65zf/M5Le9zA6qpdppJPJIGlUQty+x8AblnGjTYrzPbcuPEzCo2U3w6ug2vl+skthDSb4Q7qa+RAVI1AWuDreSrtva8teEV3HdM7kQMpyCK7nMxYnVk4tfuZvPdzt9O/VPnfZaOoMzOJzJTTSJpr4q50nxMZQ3KNPgt9z48l8u8UDoSbu2xuGU6TcBAugXNRCNqpf5cFj8CPZgWIjvfYgP/32qlhy6AeM9E2OONJdb7CGtU4fjZteF4uXa9o5UCv2KAEzy84LnOtCrOPYQJustX9qm7caybqpbftgaKAczkNU72dkKxtoi87ORrhvVFPNaQI8J8A1QHpG12rprgbayqfqbT6THeJld7dcMsiubd3eb6T2Cqv7VblusNUeSH2JkV4QPyTBXN8osRuH+qxb8ZEJf0Bt2Ua9nI6c1xaip0vHekcOcpnef66wvdu/cX2lbFvGqposl58ch78nT0fJ9dVg8MZezqBT27ug9kQjmDkUXucGkbNUfd8cCbPBvqpNwzE2NbS26INXdVIf8PpzUa26IsP3f6f0Vd940bK84VafslJnNYKzzvVr+Oo22RHbX7u5O0H5URSpA0nSWCB/+ygT74xCy2Ov6NivVd5Do0/avFvvdVvd3AuQfpPhF8fMNMaxvlNhowGWST5sj02XoZk5aQraXVA3bonMx2Tb1X1oFDQirTcybTiMsKI2BT0UXxnZW19uu2HAQ6m/79Jw9pKRpZm/jbJ53vZdvLmfGlXO/r+RvXKaRGfM4cWKxEObM/iT/uMxKpd3UW+GCC2e64uiKB6H8UP6IHiTTrFnB3CpTSQl33SK9taWRJDG3XR6PoSzSp9VXZlcaHKJuRh+McG2KWvJkshJGrmRBLtgOcFeu7DXvcGI6jChMUnDUZYl8Ha8XNq0T2TFzPkA3jwN67tUNkq1R182yTSxUQacHF0ZKVOCqXkSnwLoiCHFy1X1WRgAPQ4ewJk7fnRBz8alENYp/waKp/etIN0fGCxkJm0Is0uzMWaS8EacPquJ72AX+OuHYC5bqKsbZHUckfVAeUi3ueHHmG/WhRCrHcYuFrFar/yrQq5HKtiPoRLAVlqZLi+a26naIr04I0cs/i1jvmBYbDgB6mFoqdExNBuPbSKNiX4y1l3gF5IGaJ3X6qo6D2znUAJyT/u2ofn0QatbRTRg/G5rTEr8X73gO1Xvu4MNgpT7NHMdD+cr0B5KveGzk1x8E/cyWdIrh1RvV9nFRm2Ip4qBmPp9MGnj2H34GkmRDS+4X61LyY0nEcAAK9MttXlP/vWEid2G8qJmnDiJ+A0YaM0M/kulZIQ8OGV1NtlUE6C/Hpe0hxs6z82xnvHuLsY8zsK9ZlLxekbs77M5y9adXMg8R8TNqW+DFVnd7xc=
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : LIB_TITRE
+    identifier : 0x21ec60d41e75f3d6
+    internal_properties : BQAAAAUAAACRQ96T1qF0AXRMaIoATTyDg9lb58QmbMH7oEChzYFWDMKXDu+muDqmWbWiCT1RHcMj62dXd/giDkigbsKNpaa2e2/CJfrmF9+0vFsRfM3fS1xzZhozfCgyH0Ifl1/i3ZbUZDYNpimqnTAJo3IB7umtvFQR3UeOCjUFjcrPwmkKec99veLlUGCA5sgOFdLzZaxHGkSgp9ryfALmOY6iSuOXsRggcsmG22Mn6q4QZx44977Z2Qz3fbBzapmYs3WD3AyJjxX6CVBGOW/h/bE+Bj9Jp3EPUVNMEsxWgaCJl1mEASLku9TBQHNUbM2/uZIJHRA8OJPdpfR1NiwUwRLgXzWwvhRGgFIDjsRHQ06v3DWfTo/xIXiD3s1pa2kDEyqizIkqrIHJUNG9fHax+BwSMrRZUZrxXD3sCA/M+lsC2sGaK1WlQpxOhzCMRExVoHLs8/DxTbXQkhaOWZw8nyQxjtgTrYO+aNEifbRNs9SMrrWEm34ZE42uUCxB8ckF4YJGbUt/13w47hMcEsMfbTiTogk5TVIA+vIDX8Z8Br9Rf6Vc7hEa1NoRi2yydcYP21YLqEh3n2sLmnye02Vc8dd8gq0kOLeMGasyEuUGcVJ1HTyOxNo59cf89wl8iyXytiLF4XhGxqepM+z7MNRYYSiXy7AHZpQDEAR+0qcyYzIN2azLQUFJFngGzeUMWm5a/iCXqyCMxH3JGUwOaKjIf1h8HL9S3wZD9PFUZOuiDte/lfuIBbV0f/cla3RGsMMbI4zvj930GMmBEAoosAyLFt88brhbL26WmhQAEFyVEFjuCg==
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        type : 18
+        enabled : false
+  -
+    name : SAI_1
+    identifier : 0x21ec60d41e76f3d6
+    internal_properties : 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
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1+
+         <compile si TypeConfiguration<>UniversalWindowsApp>
+         	MoiMême..RetraitDroit  = 2
+         <fin>
+         
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : INT_1
+    identifier : 0x21ec60d41e77f3d6
+    internal_properties : BQAAAAUAAABpg/5xkehd9p765GPkk92ak1LASwA967Eq6D1+LQAFMbeFb/a/WAu0AyY0g8xoc+zvTiJ4F6Hk27tbeQ6pMw+XtDJqGA2baZ499bp01AvfXVB3gRQYtg8v7sfQxjZ7YJPc5Ajimy/4N2jgRbyiZqwfe1wMcwST3Xzu8BedABat8alOlQdCm2zffeQ4DVU6Sd90TvbxtTn4ti/7kadAiHsnDk6BwQ26VfFJ2FfROoMSBW+Us68MDGp5IHFojqplODzgVNXGZaRii4LjkHmhHneAwP2W4mLI4hkNfcBfMimO2qaxWGEAktfmGPRoggdlxlhEuY1fpdNSqiLWwQtKZVGn2qXgAZ5yve9tqhWtIQm+LDn442eUmygFtVhsdRhdOKopQHFwgtiNjDnUpLbOtHXdy9HOshCnRa1bqsSSZzKGowcD3zlGvyHOlYSE0VVJtu29WYtnhnKQrkknK4P44GXfS6HlHOWSMu3+ZRG1Mhlt82Ij8CiBoJQHrIl203HnnuSEPHok5oSUyEGA45Khs0Ssb73qMeFYyO03cTJFTWDfVu9Dun+ZXBi5xpO0ofTQWRWzS5A8MpNsO/usVJK3qbqxZghEa7tVoDbgvwl93CCJFgmueeM0zB3QLxv1XJiHyfbzWzT8RYugUVdUuKN4u10PvwNS2yIHKRWzJzQwB5tFv/FSLVJfXckkV+t7gf8zZDB7+9fIvTi0kd3jz2fRduDmwH4WlSkEnD4FgrIebhCgoYn+oOmH4Rrx61ruw5N0XAlRGm2sxfke+Es+EQ3d0GFoEMhbHygEF8q6c1ntlaTV7f1axtJLK5l5XQG33gaeVyxstThdSlKbLtChc03NQcNnYsROBMoXot56IfPHP4jDHrUMNC8KlsyjqrU9i75KybKhxJe06X7IdiD3f3k9rs5fGxdgZHvLFj95pf3M1GTzGYSEgw/XAh2le3J2Xzbg+47h4bq4YCKhtmtt8qBbLq0M0UxliDnug60pjJtU8xwRKOfuqLMT9dIaCRnieTaDLyfpEI3iyzzucp9wPDTYHecApkk5TUQ3oERtdMeBEdeudpZrSz24uJAHrRwAGWcrIgH684uIwxm13FeBYO3SEUmAVQVfN4OF+xlyMaAemvNmTbp5pB2ScRPs/LfnMQol1mgLQV535fmgOiF1jWjxk3Jb58HU1vQyk/XeO3vdQkngOxd4z0ITamt/qGklLo0cUo9SwxtoYBrLexuCwq7Jek7gPp3oxVLuHukP28rKLuK2d/GcwXUdobM4FNH1TCnLuk9ruAXyDQTjNxbPUhw2QzWCMdvx2UXa2Mwp75oex7oyX7hZAt14wUPnbjCqM8QqO4PIhk2S69tcZtKaGv6Kb3hDpV3yVx7cCF0C/PeaJqCO00x7oVecYs3HNTFBXzlz9Pm73wqpGTpwu+kLf0yTLeNwTRniYl9w+mtl+Fe8Gx6QAPvib0fVnBEVESqOqTqfS5lt+SK4UhWn4A53Db0HqGe5gO+EM88qJDwBmAQ45VNMtwyJcyYFF5otzDbeu4SD+RLXB+eFA0wc7gCCyga5iPDaKFkIuYxweMklh6JlVRYvC/zXw8KHgcq5PP49+T1lm1yNR9vi0dGy+N60R30STN+oqCmtlLYhJVYiASI2FjSz1qgCoIrJPUE4Lb1fsOODGqR726jTgmQF4652xCIGWwgmtyUYAyCgxebq/i3sUEJeL4UUNsNyRDb9ooTZvWikq11gnWFyOD7cQKq94ybMtjwhtHwceWrBCtSmTK5eUGpn4uTRcCIF+PtFdPu9NhWE3TzgrLcZvjhntS2wuuEL2G6bS/BPKq/Q00AFitt6gSh+Yjjx/altWJJvOLgAtFhIMN/fX1WdUCnCoVO/wlV4nrdaP8tRABxDQIBKNF+7soreUcnoERmHTY/ZGIK7uy5lnQ==
+    options :
+     -
+       internal_properties : BQAAAAUAAAABqegZeScAMB14eAh5OB5Tp6SszaAs/YFzx7RylVG+fxT/YoCHBUJswgvoDfJRA3u7wIeHSi3PTlxMWPRwPRnxLN040fWLB0/4nqN/mWMXYYrHQuRZNZcy12qYA76Ph65oZKSVE9xZKQMeV0EcR49S8AQ=
+    type : 5
+    controls : []
+    code_elements :
+     type_code : 5
+     p_codes : []
+  -
+    name : BTN_1
+    identifier : 0x21ec60d41e79f3d6
+    internal_properties : BQAAAAUAAACMw6/lOmSphWEahcKIAQrRM5S/7QKF+5zQZtTn8mn2tyOnv4XtCWqx7DkgUqLX1O4XtANC35EwcAA8Zyr+GgmgS5yom/j6MNuwSa2RUc3dEC0G57m8ygrM/cD03P+QqUbjs5H64eyRiiws69iVbnPowd+M8dWoGgfr74iuvTL2VYYYi/+peXrWETGRE+aovjfsL+y+o2lKjImlKPx9oVVFRT70i5aeUyb2Egm9LdGw12Ewg0vc9gauGo5MapwbUl5BxHxJAn1j6RK+Rvr9VsKkl57LKTGR8ue26kXE2LEDcsYZSh/gwCRw4viQPCU5f1a+jTB9kO/fb+B7oGQh5zJckc/lzORBHClayYrE8xE4t7iO43xTL9r+LiGpGQVRJe/Ty+vV3+zGqwVE9888ohUWOvCoy6q4XR+ZJwFUQsb/JAxOS3rybOiXejlvw6nCbrCwVHgQIKE7ydFZpNxBrkaqw2edIDZXP65sp4bORKfZTXOuOGac/qTWl0Ih/54vg6qfd48YU+Q8otnr3KeFXV2UbRwbo5Sxplpoe63mCtJc91UkxTGI5vTe7SAv7Xi/LSBJLzdnD8P3aUxgc0fekAprCxbRg/ryZIU7HujNODwNWGIrMvPfItdc5dEJSrnVcvF+FbGPkIC61Ac46byi0Rj7vm2ZnN29Ggc/+0NU00TtFNY3N1e2Ln6kZ/18MGGZ8/75uWcvay11hSv4Ji/D2DHj4f+qI88VvY1sS7AxTE9r19ttyLjxp8aNTRu6BOh0tBHEpYIHjSKOQlfa1d40XAkQ+l1lRU4QAaWFLyaE2Wk7BUllpa5vxmHBB1e4gpwhbo5hk8Dy9FQFRJFwDcvZixHieNLbrXvhws7RWD6dXaXCZcCv+5NYb5BTMsSQ3BOqzE5eK7XESACVIqx2lVf4U1rLBFjNlxM3q5Dkni7dLAAJZr232RgVzDn9dHcQqjIezbwIElmv3dUUXFXQzSFtx/app3Hl6zC9rsx81SyYC6tHyzcfyQ9c537QUQtseacKROjQnvUJKFUNz9pp7Y7Zgnpy1DCTNWroPUAAbOfJF/IeuFx40uWntr6KqVg4AM250rJomlM6mJT6Qr6qdgA2h9Dxa3JkLCitoETJ2K13tN7PYmPkxZ13YZmBSRGab5uT8qtYdZ23rVZ++8O8TiMvzXtoX6yqYXU2tzmcLW06hvWWKwGhq74bPmM6THisbxAYs0h+tJ2nYr/CUn3z1La2HXJcpl3ccKSZXaKasbLTUHLjkMIzKLvYGva5Cwpy6VsuW9uQ9fJyqYxir4rIuTVFLGd5CBgS0end7nbacLcgGuLqN+DO99jX5LgrNg7VgzABHkiLvOhqwT22JLU12TNVQMNE9iNkJ4GGNiozWDmBlrQRG6br+qwWRIWNuiF8EHmN1LdvIaiM2jF6134JT23UvlIinTLt0FBTU/0ErlC5IjK+u8/Xm+rjpFl56INKEplbYzOkc5Ma0Altc+iwjqtUsaB/Lif1vku+5IUzQhNRnWKxFnVeqcFi9LhDAFfqCOSPn2lIj6GkPiJlt37aAoR0lF7rmwWvC5B3xPPTx3LG65dEPHoFOioloAc=
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         FermeDialogue(MoiMême..Note)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_MOBILE_1
+    identifier : 0x21ec60d41e7af3d6
+    internal_properties : BQAAAAUAAAAY49LjEwtkJAt4l0ikGy/+qDNxit5E0vNfJukduYZ/IS91pJB9VJrsSjkytWb5YyhZq4JwQ3yqBmkVF9iMoZc59pKmF1vbJYG/C0T2stuAiO6JSRW1yVo71EicJFPSXKBsB3pC/vLExksw6LLS7tBM44pGtHpS3htx2YY+GcNv+l4QV8wSekOzXHZgiXaGeC0ibJeScpA2xTbCMLwK7Gqc7YwhZ1KTyeIZzgKMPjQsTFchvc1sUWPc8US9fMl/yAgEzLH7nrh/WnNW9JG0tKMmp3n2dR35rt9GFXEwq6vQSZJyZ2iEXglhkBPtOcEJ3d/V5aEm8XN4QH7FCX3X7KX7947TCsHhRmEfi0F6XymszwM8OvX49ODrfeFYuKCcNPv3t99kBBnrfEeiAt7A/EZ3wBO7LUtKmjkjeCu1UPwddoEtKCINlb3EfTZvg6sI2+TI4yvaPq85HS1g+RevWflweoBmIc/RQ5MwIpaWCXb9ekkle70Y1KA4ameHMcrE6t1ido9FH3OiBrBrAkLkTstmYt2Iktp/88ZU8ECNtVZp6XzlO7rVwywTRCeR2gvLlHDbr5TkO4+JebO89ZeFcKUOSbJ68QgjJezHyhZyi3pJ9dTwj+8eOsS94oqRvrv+XrrVYvjlWVtu2j4L75puM2rmfeAVa7CwPI0tWJuUTzcR02WqyXfJkxAGjJJ/VzbVCSLR9Wevih1WOUcsTFdURk4bYDi5jbsJXEb4k1NMOfQa6wsS+geKmOG85V2MyWJ2Uwqf+WSVs3VgqICVrax8+kG7fV0EAeZy8CcVADTcW2g1bUtTKGcKAndw/rmwjQ0fGQUH3TIZ1fXOhrx3yJVu8Rb53MqUabY20rWhJOjQw69q0JhIWrtX+Bn+BEQLo6I9TZvmRlWuDIaIvZ3espPQe93uYkPhkNP/8mbo30PUzj15fmGCBDrDo3uJwypajApteZcfDvqZcJZ0BZmvHx+CFGRAIj1QYPxVEjjz3VZqubSJ2ahOE3HROYeUUSVzs4SqpJ8W4tHa4FX2aO1CLCWt9ix6hcmKhrBn7k9hTq9fHYE5fgPdI6tQvChM9BWkOKmXLRAeNbrgPWNq+h93ZbuzNgnHi2iofevdPtjw6zvdnlix85eH3mf+UM3g91nv4A5HiOY5vRS0uYjdafZPBGKWB+YRORzrDuXDA100wyU0ssN2V/NmVSHxN/eC5YDkOgfNKQXQzH02l62OyWwuFAbxvQXipUKDWZ8gd3hrkgEHpJD9HbrpwwM95gfKtiBWgTDCve/GQ92cU/95aj7KOHAThfNaHEhBgSGn08aJj2+EJACa7gtnVi9NIBmfGAT8zTfS/jaCrqwuUnRMAVKcjFCxnmxBwnSXq7uN3eJedzMbu2AMeo6aG3ObD9gkCyjP+8qRDrUXgQKt8jN08/nbu9+3/a1YdT8Vpq4O7oxSklRxZPf/rzysKoy5bBgQy4XXPnvsvOlsEHsEhxUSHPMhqvfXk2wQyBTfBiFtzIT2DocNldN/oPijqeXezcDT/VYePWji8/p87/35WAtBsSQCuRrWWDYhH+ktTgrHwzPCevJD9kZL7woI
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         FermeDialogue(MoiMême..Note)
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292574611901dae6
+  internal_properties : BQAAAAUAAADRSH5JaBLgHBwaisBFlWbxgBGFn6yxzHww796qMBn24O5qqVEatFM9DRcla5r0eKk82RC/q0V6T25EZRe0qYolLTBINthqUWe7bd8N0iWVcnXBvp9Ydda0AMEmi0BmqrkEhTjqUwVraroDh64OMqcl/4ob80wtiKZaszR/5t/lj8LnRTqkoefLUlFRG4M6iPH8UuZQ7ROXVB3mkqmzQpc16bw1cB7nRHaM7OBWqi/Ns6j6tR2PTzv3Fa+kzQIkrQ7caNnrzZiShrptQSGnfLSLlS9gZkWKOMtJ/EAf0bHKTteaZbRgowbA37mk8HIG40Nklm9dh6XrRs/E+rk5EsM8b5M3MGsg6ihdKvq4Q9q953fzU2hpzgygxxYETc1J7JYOWc4X4cbOSTx+fA4yPB5tpAX+MDYHAk0OeZZ0fyxXVV1SIxr5Z6rvPxZCvPKWSrjF92T5j5KsnRlRwOniNT5wtwcPsJ/Zaf98oy0i4jlacqMK7Mdt36a6K2uk9GoiCogoIeGkWICM5AObBrUqOub47hBe6SSz
+  options : []
+ languages :
+  - fr-FR
+  - en-GB
+  - es-ES
+ popup_menus : []
+ message_bar :
+  internal_properties : BQAAAAUAAADc0eDbp6dDZk5+IDcpmMdh0yEBmNbjzZk11IeTg3gm2CDk0riD1oCVXnb9K5dGAHRMMAsdNVq6TGPTUg/yZRGXka+LGc6ZRBNxaygkmckj
+ code_elements :
+  internal_properties : BQAAAAUAAABNngmV3H0Lz2G7mVywvh3JxfjCvxMh+exnJCj0+NqqU+eXfUskM2GrL7ZnW2Js8em3SeTOWg==
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      // gParamDial est un variant avec des membres:
+      //  .titre   = "Titre du  dialogue"
+      //  .message = "Message ligne1 1"+RC+"ligne 2"
+      //  .tabBouton[1].lib = "OK"
+      //  .tabBouton[2].lib = "Annuler"
+      //  .boutonParDefaut  = 1
+      //  .boutonAnnulation = 2
+      //...
+      Procédure WINDEVDIALOGBOX( gParamDial  )
+      
+      
+      GLOBAL
+      	gnLargeurBtn 			est un entier  			// Largeur pour les boutons du dialogue.
+      	gnNbBouton 				est un entier  = 1
+      	gnMargeBordBtn			est un entier  = 100	// Marge en plus des boutons pour la LargeurMin
+      	gnLargeurMinFen			est un entier  = 200	// Largeur mini de la fenêtre
+      	gnMargeinterBtnX  		est un entier  = 12 	// Marge entre les boutons 
+      	gnMargeinterBtny 		est un entier  = 2
+      	gbEmpileSiDépasse 		est un booléen = faux 	// indique si on empile les boutons en Y si ils dépassent en largeur
+      	gbBoutonEmpile 			est un booléen = faux 	// indique si il faut empiler les bouton les un sur les autres  (pour mobile)
+      	gnLargeurMaxFen 	    est un entier  = 4000  	// largeur Max de la fenêtre. sera mis a jour selon la taille de l'écran
+       	gsPrefixeBouton			est chaine     = "BTN_" 	// préfixe du nom du bouton a  clone. pour différentier le look Mobile/Win32
+      	gsNomBoutonAnnulation 	est chaine	   = BTN_1..Nom /// nom du bouton annulation
+      	gsChampSaisie 			est une chaine 			// initialisé dans le cas de la fonction Saisie(). Laissé a "" pour Dialogue()
+      	
+      
+      // Init du dialogue
+      InitDialogue( )
+      
+   -
+     code : |1+
+      
+      
+     type : 34
+   -
+     code : |1+
+      
+      
+      
+     type : 2
+   -
+     code : |1+
+      
+      
+      
+     type : 40
+   -
+     code : |1+
+      
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+      
+     type : 165
+   -
+     code : |1+
+      
+      
+      
+     type : 177
+   -
+     code : |1+
+      
+      
+      
+     type : 180
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1+
+      
+      
+      
+     type : 11
+   -
+     code : |1+
+      
+      
+      
+     type : 12
+   -
+     code : |1+
+      
+      
+      
+     type : 17
+   -
+     code : |1+
+      
+      
+      
+     type : 13
+  procedures :
+   -
+     name : __bBitPresent
+     procedure_id : 1291513656869843910
+     type_code : 14
+     code : |1+
+      // indique si un bit est actif dans un entier
+      // pour ne pas utiliser OuBinaire et ne pas avoir de dépendance sur la MAT
+      Procédure __bBitPresent(dwFlag est entier, dwPOWOF2 est entier)
+      
+      si dwFlag = dwPOWOF2 alors renvoyer vrai
+      nRes est entier = dwFlag & dwPOWOF2
+      renvoyer nRes<>0
+      
+     type : 458752
+   -
+     name : AfficherBoutons
+     procedure_id : 1291513656869909446
+     type_code : 14
+     code : |1+
+      // Procédure qui permet d'afficher les différents boutons selon la fonction demandée 
+      // Init libellé et valeur de retour 
+      Procédure AfficherBoutons(tabBouton, local nBoutonDefaut entier, local nBoutonAnnulation entier <utile>, local nDelaiAvantFermeture entier)
+      
+      gnLargeurBtn=0
+      
+      // largeur du bouton le plus large
+      nLargeurBtnMax est un entier=0
+      nNbParamParBouton est un entier=1
+      gnNbBouton = tabBouton..Occurrence
+      
+      
+      // si a on une fermeture automatique mais pas de bouton par défaut
+      si nDelaiAvantFermeture > 0 _et_ nBoutonDefaut <= 0 ALORS
+      	// on utilise le premier
+      	nBoutonDefaut = 1;
+      FIN
+      
+      
+      i est un entier
+      sNomBouton est une chaine 
+      pour i=1 _a_ gnNbBouton
+      	
+      	sLib est une chaine= tabBouton[i].lib	
+      	sNomBouton  = gsPrefixeBouton+i
+      	
+      	//clone le bouton si nécessaire
+      	si i>1 alors
+      		si pas ChampExiste(sNomBouton)
+      			ChampClone(gsPrefixeBouton + "1",sNomBouton)
+      		fin
+      	fin
+      	// ..NumTab non supporté en IOS/Android
+      <compile si TypeConfiguration<>iOS _et_ TypeConfiguration<>Android>
+      	{sNomBouton,indChamp}..NumTAB=i  
+      <fin>
+      	
+      	
+      	//modifie le libellé
+      	SI _bModeMobile()  ALORS
+      		// pas de & dans les libellés des boutons en mobile 
+      		// car pas de clavier pour raccourci par lettre  d(appel.
+      		sLib = Remplace(sLib,"&","")
+      	FIN
+      	{sNomBouton,indChamp}..Libellé=sLib
+      	
+      	// init valeur de retour
+      	nValeurRetour est entier = i
+      	si tabBouton[i].val..existe alors  nValeurRetour = tabBouton[i].val
+      	{sNomBouton,indChamp}..Note=nValeurRetour// utilisé dans le code de clic du bouton
+      	
+      
+      
+      	sTexteMax est une chaine
+      	// si la fenêtre est en validation automatique et que ce bouton est le bouton de validation
+      	si nDelaiAvantFermeture > 0 _et_ i = nBoutonDefaut ALORS
+      		// on réserve la place pour le compteur
+      		sTexteMax = {sNomBouton,indChamp}..Libellé +" ("+NumériqueVersChaine(nDelaiAvantFermeture, "d")+" s)"
+      	sinon
+      		sTexteMax = {sNomBouton,indChamp}..Libellé
+      	FIN
+      	//modifie la largeur
+      	nLargeurMINBTN est entier = 80
+      	nMARGE est entier = 2*gnMargeinterBtnX
+      	nLargeurBnI est entier = max(nLargeurMINBTN, TexteLargeur({sNomBouton,indChamp}, sTexteMax,tMonoligne)+nMARGE)
+      
+      	si nLargeurBnI > nLargeurBtnMax ALORS
+      		nLargeurBtnMax = nLargeurBnI; // nouveau Max
+      	FIN
+      	{sNomBouton,indChamp}..largeur= nLargeurBnI;
+      
+      	//cumule la largeur
+      	gnLargeurBtn += {sNomBouton,indChamp}..largeur
+      	
+      fin
+      
+      
+      <COMPILE SI TypeConfiguration<>Android>	
+      POUR i=1 _À_ gnNbBouton
+      	sNomBouton  = gsPrefixeBouton+i
+      	// si c'est le bouton annulation
+      	SI i = nBoutonAnnulation ALORS
+      		{sNomBouton,indChamp}..TypeBouton= btnAbandon
+      	FIN	
+      	// si c'est le bouton par défaut
+      	SI i = nBoutonDefaut ALORS
+      		{sNomBouton,indChamp}..TypeBouton= btnValidation
+      	FIN
+      fin
+      <FIN>	
+      
+      
+      //par défaut, si on annule, c'est comme si on clique sur le bouton annulation
+      MaFenêtre..valeurrenvoyee=gParamDial.boutonAnnulation
+      gsNomBoutonAnnulation = gsPrefixeBouton + gParamDial.boutonAnnulation
+      
+      //on prend en compte l'espacement entre les boutons
+      gnLargeurBtn+=(gnNbBouton-1)*gnMargeinterBtnX
+      
+      //si la largeur de bouton est > à l'écran
+      si gbEmpileSiDépasse _et_ gnLargeurBtn >= gnLargeurMaxFen-gnMargeinterBtnX ALORS
+      	// tous les boutons ont la même largeur, celle du bouton le plus large
+      	gnLargeurBtn = nLargeurBtnMax
+      	// on dessine en mode "boutons les un sous les autres"
+      	gbBoutonEmpile = vrai
+      	
+      FIN
+     type : 458752
+   -
+     name : AfficherImage
+     procedure_id : 1291513656869974982
+     type_code : 14
+     code : |1+
+      // affiche un icone prédéfini ou bien un perso si <nFlagImage=0>
+      Procédure AfficherImage(local nFlagImage entier, local sImage chaine )
+      
+      // si c'est  un image prédéfinie
+      SI nFlagImage<>0 ALORS
+      	SI 	EnModeiOS()				  _OU_ 
+      		EnModeAndroid()			  ALORS 
+      		//  pas d''icone système en android ou IOS
+      		ICONE..Visible = faux
+      		LIB_TITRE..x 	   -= ICONE..Largeur
+      		LIB_TITRE..Largeur += ICONE..Largeur
+      		// si pas de libellé non plus
+      		si LIB_TITRE = "" alors 
+      			// récupérer l'espace pour le texte
+      			LIB_TITRE..Visible = faux
+      			LIB_INFO..Y -= LIB_TITRE..Hauteur
+      		FIN
+      		
+      	fin
+      	
+      	
+      	// MB_ICONEXCLAMATION 	= 0x00000030
+      	SI __bBitPresent(nFlagImage , 0x20) _ET_ __bBitPresent(nFlagImage , 0x10)  ALORS 
+      		ICONE = ICON_ERREUR
+      		// MB_ICONQUESTION    	= 0x00000020
+      	SINON SI __bBitPresent(nFlagImage,0x20) ALORS 
+      		ICONE = ICON_QUESTION
+      		// MB_ICONASTERISK    	= 0x00000040
+      	SINON SI __bBitPresent(nFlagImage,0x00000040) ALORS 
+      		ICONE  = ICON_INFORMATION
+      	FIN
+      // si c'est une image perso
+      SINON
+      	ICONE = sImage
+      FIN
+     type : 458752
+   -
+     name : EmpileBoutons
+     procedure_id : 1291513656870040518
+     type_code : 14
+     code : |1+
+      // Procédure qui mets les boutons les un en dessous des autres si l'écran n'est pas assez large
+      // Pour mobile
+      Procédure EmpileBoutons()
+       
+      nPosX est entier = 0
+      nPosY est entier = 	MaFenêtre..Hauteur - (({gsPrefixeBouton + "1",indChamp}..Hauteur + gnMargeinterBtny) * (gnNbBouton)) 
+      nPosY -= gnMargeBordBtn/2
+      
+      
+      // Calculer la position de départ
+      nPosX = (MaFenêtre..largeur - gnLargeurBtn) / 2
+      
+      // pour tous les boutons
+      i est un entier
+      pour i=1 _a_ gnNbBouton
+      	sNomBouton est une chaine= gsPrefixeBouton+i
+      	// on les centre et on on leur donne leur positon et taille correcte
+      	{sNomBouton,indChamp}..X = nPosX
+      	{sNomBouton,indChamp}..Y = nPosY
+      	{sNomBouton,indChamp}..Ancrage = 0
+      	{sNomBouton,indChamp}..Largeur = gnLargeurBtn
+      	nPosY+={sNomBouton,indChamp}..Hauteur+gnMargeinterBtny // bouton suivant
+      FIN
+      
+     type : 458752
+   -
+     name : CentrerBoutons
+     procedure_id : 1291513656870106054
+     type_code : 14
+     code : |1+
+      // Procédure qui permet de centrer les boutons dans la fenêtre
+      Procédure CentrerBoutons()
+      
+      nPosDébut est entier = 0
+      
+      // en android l'ancrage n'est pas appliqué avant la fin de l’initialisation. on force les postions Y
+      nMargeBas est entier = 5
+      nPosY est entier = MaFenêtre..Hauteur - BTN_1..Hauteur - nMargeBas 
+      
+      // Calculer la position de départ
+      nPosDébut = (MaFenêtre..largeur - gnLargeurBtn) / 2
+      // en android les boutons sont cadrés a droite
+      si EnModeAndroid() ALORS
+      	nPosDébut = MaFenêtre..Largeur - gnLargeurBtn - gnMargeBordBtn/2
+      FIN
+      
+      // MAJ position des boutons
+      i est un entier
+      pour i=1 _a_ gnNbBouton
+      	sNomBouton est une chaine= gsPrefixeBouton+i
+      	{sNomBouton,indChamp}..X = nPosDébut
+      	SI _bModeMobile() alors
+      		{sNomBouton,indChamp}..Y = nPosY
+      	fin
+      	nPosDébut+={sNomBouton,indChamp}..Largeur+gnMargeinterBtnX
+      FIN
+      
+     type : 458752
+   -
+     name : RedimensionnerFenêtre
+     procedure_id : 1291513656870171590
+     type_code : 14
+     code : |1+
+      Procédure RedimensionnerFenêtre(szLibelleParam)
+      // Procédure qui permet de redimensionner la boîte de dialogue en fonction du libellé à afficher
+      szLibelle est chaine = szLibelleParam // contournement si UNICODE
+      
+      //nLargeurMax 	est un entier = 800
+      nLargeurMin 	est entier = 0
+      nLargeurTexte 	est entier = 0
+      nHauteurTexte 	est entier = 0
+      nLargeurFen 	est entier = 0
+      nHauteurFen 	est entier = 0
+      nHauteurMinFen  est entier = MaFenêtre..HauteurInitiale
+      
+      	
+      // Calculer la largeur min (celle des boutons + une marge sur les côtés)
+      nLargeurMin = gnLargeurBtn + gnMargeBordBtn
+      // pour TB#102180, 400 px mini
+      SI nLargeurMin< 400 _et_ pas _bModeMobile() ALORS
+      	nLargeurMin = 400
+      FIN
+      nLargeurTitre est un entier
+      si FenAgencementEnCours() =1 ALORS
+      	// en WIN32 on utilise pas de libellé large
+      	nLargeurTitre=TexteLargeur(LIB_INFO, MoiMême..Titre, tMonoligne)
+      sinon
+      	nLargeurTitre=textelargeur(LIB_TITRE, moimeme..titre, tMonoligne)
+      fin
+      
+      si nLargeurMin < nLargeurTitre+ gnMargeBordBtn alors 
+      	nLargeurMin = nLargeurTitre+ gnMargeBordBtn                                                             
+      FIN
+      si nLargeurMin < gnLargeurMinFen alors nLargeurMin = gnLargeurMinFen
+      
+      // Calculer les dimensions nécessaires au dessin libellé (@@+20 : Marge supplémentaire)
+      CalculeMeilleureDimensionTexte(nLargeurTexte, nHauteurTexte,szLibelle)
+      
+      
+      nHauteurSaisie est un entier=0
+      si ChampExiste(gsChampSaisie) ALORS
+      	nHauteurSaisie={gsChampSaisie,indChamp}..Hauteur
+      	// +10 : marge a droite pour Qw#262752
+      	nLargeurTexte=max(nLargeurTexte, {gsChampSaisie,indChamp}..Largeur + 10)
+      FIN
+      
+      // La hauteur minimale ne peut pas être inférieure à l'icône à gauche
+      si nHauteurTexte +nHauteurSaisie +6 < ICONE..Hauteur alors
+      	nHauteurTexte = ICONE..Hauteur - nHauteurSaisie - 6
+      FIN
+      
+      // Calculer la largeur de la fenêtre
+      nLargeurFen = nLargeurTexte + MaFenêtre..largeur - LIB_INFO..largeur
+      
+      // La largeur de la fenêtre ne doit pas être inférieure à la largeur min
+      si nLargeurFen < nLargeurMin alors nLargeurFen = nLargeurMin
+      
+      // La largeur de la fenêtre ne doit pas être supérieure à la largeur max
+      si nLargeurFen > gnLargeurMaxFen alors
+      	nLargeurFen = gnLargeurMaxFen
+      FIN
+      
+      // Calculer la hauteur de la fenêtre
+      nHauteurFen = MaFenêtre..HauteurInitiale + nHauteurTexte + nHauteurSaisie - LIB_INFO..Hauteur
+      si nHauteurSaisie>0 ALORS
+      	nHauteurFen+=6
+      FIN
+      // en mode bouton emplie on ajoute la hauteur des boutons a partir de 2eme
+      si gbBoutonEmpile ALORS
+      	nHauteurFen += ({ gsPrefixeBouton +"1",indChamp}..Hauteur + gnMargeinterBtnY) * (gnNbBouton-1)
+      FIN
+      
+      // PAD le 02/11/2008, pour Dialogue en mobile.
+      si nHauteurFen<nHauteurMinFen ALORS
+      	nHauteurFen = nHauteurMinFen
+      FIN
+      
+      // Redimensionner la fenêtre avec les nouveaux paramètres
+      FenTaille("", nLargeurFen, nHauteurFen)
+      
+      
+      // Redimensionner le libellé
+      LIB_INFO..Hauteur = nHauteurTexte
+      LIB_INFO = szLibelle
+      
+      
+      // Placement des éléments
+      nEspaceH est un entier = (nLargeurFen - (ICONE..largeur + LIB_INFO..largeur)) / 3
+      SI _bModeMobile() ALORS
+      	nEspaceH = ICONE..X // ne pas déplacer.
+      FIN
+      ICONE..x 	 = nEspaceH
+      SI pas _bModeMobile() ALOrs //QW#189203
+      	LIB_INFO..X = 2*nEspaceH + ICONE..Largeur
+      fin
+      
+      si ChampExiste(gsChampSaisie) ALORS
+      	// Aligner le champ de saisie/l'interrupteur avec le libelle en X
+      	{gsChampSaisie,indChamp}..X = LIB_INFO..X
+      	// fixer lal argeur du champ a "toute la fenetre"
+      	nLargeurPourAlignSai est entier = nLargeurFen - LIB_INFO..X  - 16 // 16 : marge
+      	{gsChampSaisie,indChamp}..Largeur = nLargeurPourAlignSai
+      	SI gParamDial.saisie.adapteLargeur ALORS
+      		AdapteLargeurSaisie()
+      	FIN
+      	// MEttre  champ de saisie/l'interrupteur sous le libelle 
+      	{gsChampSaisie,indChamp}..y=LIB_INFO..Y+nHauteurTexte-6
+      	
+      fin
+      
+      nEspaceV est un entier = (nHauteurTexte - ICONE..Hauteur) / 2
+      si nEspaceV<0 ALORS
+      	nEspaceV=0
+      FIN
+      si _bModeMobile() ALORS
+      	nEspaceV = 0
+      FIN
+      
+      ICONE..Y 	 +=  nEspaceV
+      si pas gbBoutonEmpile alors
+      	i est entier
+      	pour i=2 _à_ gnNbBouton
+      		{gsPrefixeBouton +i,indChamp}..Y={gsPrefixeBouton +  "1",indChamp}..Y 
+      	FIN
+      fin
+      
+      
+     type : 458752
+   -
+     name : CalculeMeilleureDimensionTexte
+     procedure_id : 1291513656870237126
+     type_code : 14
+     code : |1+
+      // calcule et redimensionne le libellé qu a affiche le message principal
+      Procédure CalculeMeilleureDimensionTexte(nLargeurTexte est entier, nHauteurTexte est un entier,szLibelle est une chaine)
+      
+      
+      nLargeurInfoInit est un entier= LIB_INFO..largeur
+      nHauteurInfoInit est un entier= LIB_INFO..Hauteur
+      
+      //recherche de la meilleure largeur hauteur, en respectant si possible un rapport 4/3
+      //calcule de la largeur la plus grande
+      LIB_INFO..largeur=1000
+      nLargeur0 est un entier= Textelargeur(LIB_INFO, szLibelle, tMultiligne ) + 40
+      nHauteur0 est un entier= TexteHauteur(LIB_INFO, szLibelle, tMultiligne ) + 20
+      
+      nLargeurTexte=nLargeur0
+      nHauteurTexte=nHauteur0
+      rRapport est un numérique=nLargeurTexte/nHauteurTexte
+      //trace("("+nLargeur0+","+nHauteur0+")="+rRapport)
+      nbPasse est un entier=0
+      tantque rRapport>2 _et_ (nbPasse<10)
+      	//si la fenêtre est très large
+      	si nLargeurTexte>100 alors
+      		LIB_INFO..largeur=nLargeurTexte-100
+      	sinon
+      		LIB_INFO..largeur=nLargeurTexte-50
+      	fin
+      		
+      	nLargeur0 = Textelargeur(LIB_INFO, szLibelle, tMultiligne ) + 40
+      	nHauteur0 = TexteHauteur(LIB_INFO, szLibelle, tMultiligne ) + 20
+      	rRapport=nLargeur0/nHauteur0
+      	si rRapport <1.4 ALORS
+      		//le nouveau rapport montre une fenetre trop haute
+      		//on reste sur la dernière dimension calculée
+      		sortir	
+      	FIN
+      	//si la nouvelle largeur ne change pas
+      	si nLargeurTexte=nLargeur0 ALORS
+      		sortir
+      	FIN
+      	
+      	//on prend la nouvelle dimension
+      	nLargeurTexte=nLargeur0
+      	nHauteurTexte=nHauteur0
+      	nbPasse++ //sécurité anti boucle infini
+      FIN
+      
+      
+      ///si nHauteurTexte < 50 alors nHauteurTexte = 50
+      
+      //rétablit les dimensions du champs
+      LIB_INFO..largeur=nLargeurInfoInit
+      LIB_INFO..Hauteur=nHauteurInfoInit
+     type : 458752
+   -
+     name : FermeDialogue
+     procedure_id : 1291513656870302662
+     type_code : 14
+     code : |1+
+      // ferme le dialogue et renvoie la valeur du bouton cliqué
+      // remplis aussi la valeur du champ de saisie/de l'interrupteur dans le cas de la fonction Saisie( "XXX", ValSaisie )
+      Procédure FermeDialogue(local ValeurRet est un entier)
+      
+      // si on est utilisé pour la fonction Saisie()
+      si gParamDial.saisie.valeur..Existe _et_ gsChampSaisie<>"" ALORS
+      	// affecte la valeur OUT dans le variant d'entrée
+      	gParamDial.saisie.valeur = {gsChampSaisie, indChamp}..Valeur
+      FIN
+      
+      
+      Ferme("", ValeurRet)
+      
+     type : 458752
+   -
+     name : InitDialogue
+     procedure_id : 1291513656870368198
+     type_code : 14
+     code : |1+
+      // Initialisation du dialogue
+      // en fonction des paramètre passé a la fenêtre, en particulier le  variant <gParamDial>
+      Procédure InitDialogue( )
+      
+      
+      // MAJ des globales si on est en mobile / linux
+      InitSiMobile()
+      si EnModeLinux() ALORS
+      	FenChangeAgencement(1) // comme Windows
+      FIN
+      
+      // Initialisation de la largeur max du dialogue
+      InitLargeurMaxFen()
+      
+      // Mettre à jour le titre de la fenêtre
+      MoiMême..titre = gParamDial.titre
+      LIB_TITRE	   = gParamDial.titre
+      
+      // Mettre a jour le message
+      LIB_INFO	   = gParamDial.message
+      
+      // Initialiser champ de saisie ou l'interrupteur pour la fonction Saisie()
+      InitChampSaisieOuInterrupteur(gParamDial.saisie )
+      
+      // Initialiser les boutons
+      AfficherBoutons(gParamDial.tabBouton, gParamDial.boutonParDefaut, gParamDial.boutonAnnulation, gParamDial.delaisAvantFermeture)
+      
+      // Afficher l'image
+      AfficherImage(gParamDial.type, gParamDial.image)
+      
+      // Calcule la largeur et la hauteur de la boîte de dialogue
+      RedimensionnerFenêtre(gParamDial.message)
+      
+      si gbBoutonEmpile alors 
+      	// Empiler les boutons les un sur les autres 
+      	EmpileBoutons()	
+      sinon
+      	// Centrer les boutons
+      	CentrerBoutons()
+      fin
+      
+      
+      //bouton par défaut
+      si ChampExiste(gsChampSaisie) ALORS
+      	DonneFocus(gsChampSaisie)
+      sinon
+      	DonneFocus(gsPrefixeBouton+gParamDial.boutonParDefaut)	
+      FIN
+     type : 458752
+   -
+     name : InitChampSaisieOuInterrupteur
+     procedure_id : 1291513656870433734
+     type_code : 14
+     code : |1+
+      // Résumé : Initialisation du champ de saisie
+      // <varSaisie> : sous partie du variant paramètre pour la partie saisie.
+      // ex:
+      // x.saisie.type = typSaisieTexte
+      PROCEDURE InitChampSaisieOuInterrupteur( varSaisie )
+      
+      // que si on a défini un type de Saisie()
+      si pas varSaisie.type..existe ALORS
+      	retour
+      FIN
+      
+      // si on veut un interrupteur
+      si  varSaisie.type = typInterr ALORS
+      	INT_1..Visible = vrai
+      	// nom a utiliser
+      	gsChampSaisie = MaFenêtre..Nom + "." + INT_1..Nom
+      	// Init Libellé
+      	INT_1[1]..Libellé =	varSaisie.libelleOptionnel
+      	
+      	// Init valeur
+      	INT_1 = varSaisie.valeur
+      	
+      	retour
+      FIN
+      
+      // autre cas : on veut un champ de saisie
+      
+      // nom a utiliser
+      gsChampSaisie = MaFenêtre..Nom + "." + SAI_1..Nom
+      
+      // type de saisie (date, numérique, texte, ... )
+      SAI_1..TypeSaisie = varSaisie.type
+      //  masque
+      si varSaisie.masqueSaisie..existe alors
+      	SAI_1..MasqueSaisie = varSaisie.masqueSaisie
+      fin
+      // init propriété supplémentaires
+      <COMPILE SI TypeConfiguration<>Android>
+      si varSaisie.effacementAutomatique..Existe ALORS
+      	SAI_1..EffacementAutomatique = varSaisie.effacementAutomatique
+      FIN
+      <FIN>
+      <COMPILE SI TypeConfiguration<>iOS>	
+      // init format mémorisée pour le cas des date+heure
+      SI varSaisie.formatMemorise..Existe ALORS
+      	SAI_1..FormatMémorisé = varSaisie.formatMemorise
+      FIN
+      SI varSaisie.motDePasse..Existe ALORS
+      	SAI_1..MotDePasse = varSaisie.motDePasse
+      FIN
+      <FIN>
+      SI varSaisie.tailleSaisie..Existe ALORS
+      	SAI_1..Taille = varSaisie.tailleSaisie
+      FIN
+      //chDroite non dispo en IOS
+      <COMPILE SI TypeConfiguration<>iOS>	
+      // on aligne a droite les chaamp numérique, date
+      si  _bEstNumriqueOuDateOuHeure( varSaisie.type ) alors
+      	SAI_1..CadrageHorizontal = chDroite
+      fin
+      <FIN>
+      // si chaine avec RC on utilise un champ multi-ligne
+      sValeurInitiale est chaine = varSaisie.valeur
+      SI varSaisie.type = typSaisieTexte _ET_ Position(sValeurInitiale,RC)>0 ALORS
+      	{gsChampSaisie, indChamp}..Multiligne = Vrai
+      	nLargeurCur  est entier = {gsChampSaisie, indChamp}..Largeur // Max pour ne pas descendre a 0.
+      	{gsChampSaisie, indChamp}..Largeur	  = Max(nLargeurCur, TexteLargeur(SAI_1, sValeurInitiale,tMultiligne))
+      	{gsChampSaisie, indChamp}..hauteur    = TexteHauteur(SAI_1, sValeurInitiale,tMultiligne)
+      	
+      FIN	
+      <COMPILE SI TypeConfiguration<>Android ET TypeConfiguration<>iOS >	
+      si varSaisie.boutonCalculatrice ALORS
+      	SAI_1..BoutonCalculatrice = vrai
+      FIN
+      <FIN>
+      si _bModeMobile() ALORS
+      	SAI_1..PoliceTaille  = LIB_INFO..PoliceTaille
+      FIN
+      
+      SAI_1..Visible = vrai
+      
+      // valeur initiale
+      SAI_1 = sValeurInitiale
+      
+      
+      
+      
+      
+     type : 458752
+   -
+     name : AdapteLargeurSaisie
+     procedure_id : 1291513656870499270
+     type_code : 14
+     code : |1+
+      // Adapte la largeur du champ de saisie
+      PROCEDURE AdapteLargeurSaisie()
+      
+      nNbCharMax est un entier
+      // W est généralement le caractère le plus large
+      nlargeurMax1Char est un entier
+      nlargeurMax1Char = TexteLargeur(SAI_1,"W" ) 
+      	
+      // si texte
+      si SAI_1..TypeSaisie = typSaisieTexte ALORS
+      	// le max dépend du nombre de char qu'on peut saisir
+      	nNbCharMax = SAI_1..Taille
+      	// si pas de max
+      	si nNbCharMax= 0 ALORS
+      		retour // ne rien faire, pas de max
+      	FIN
+      	
+      	
+      sinon
+      	// le max de char saisissable est équivalent au nombre de char dans le champ de saisie
+      	// ex: "999 999,99" 
+      	//    "JJ/MM/AAAA"
+      	nNbCharMax = Taille(SAI_1..MasqueSaisie)
+      FIN
+      
+      // si numérique ou date ou heure
+      SI  _bEstNumriqueOuDateOuHeure( SAI_1..TypeSaisie ) ALORS
+      	// le char max saisissable est un nombre
+      	nlargeurMax1Char = TexteLargeur(SAI_1, "0" ) 
+      	
+      FIN
+      
+      // taille nécessaire
+      nMarges est entier = 8
+      nLargeurNécessaire est entier = nNbCharMax *nlargeurMax1Char + nMarges
+      SAI_1..Largeur = nLargeurNécessaire
+      
+      
+      
+      
+      
+      
+     type : 458752
+   -
+     name : _bEstNumriqueOuDateOuHeure
+     procedure_id : 1291513656870564806
+     type_code : 14
+     code : |1+
+      // Résumé : indique si un type de champ de saisie représente un numérique, une date ou une heure
+      PROCEDURE _bEstNumriqueOuDateOuHeure(local type entier)
+      
+      // on aligne a droite les chaamp numérique, date
+      SI  type = typSaisieNum			  	_OU_ 
+      	type = typSaisieMonétaire		_OU_ 
+      	type = typSaisieDate			_ou_
+      	type = typSaisieheure				 ALORS
+      	//  numérique, une date ou une heure
+      		renvoyer vrai
+      	
+      FIN
+      
+      // autre
+      renvoyer faux
+     type : 458752
+   -
+     name : InitLargeurMaxFen
+     procedure_id : 1291513656870630342
+     type_code : 14
+     code : |1+
+      // Résumé : initialisation de <gnLargeurMaxFen>
+      PROCEDURE InitLargeurMaxFen()
+      
+      si EnModeLinux() ALORS
+      	retour // SysXRes() non dispo en linux
+      	
+      FIN
+      
+      // récupération de la largeur de l'écran moins la marge de chaque coté
+      nMarge			est un entier	= 8
+      nLargeurEcran	est entier 
+      <COMPILE si TypeConfiguration<>ApplicationLinux>
+      	nLargeurEcran    = SysXRes() - nMarge*2
+      <fin>
+      // récupération de la largeur de l'écran moins la marge de chaque coté
+      
+      
+      // on ne fait pas dépasser de la taille de l'écran
+      SI gnLargeurMaxFen > nLargeurEcran ALORS
+      	gnLargeurMaxFen = nLargeurEcran
+      FIN
+     type : 458752
+   -
+     name : InitSiMobile
+     procedure_id : 1291513656870695878
+     type_code : 14
+     code : |1+
+      // Résumé : Initialisation des paramètres si la fenetre est utilisée en mobile
+      // exécution ou simulation.
+      PROCEDURE InitSiMobile()
+      
+      
+      SI _bModeMobile()  ALORS
+      	// Marge entre les boutons. plus petite qu'en WD WIN32 
+      	gnMargeinterBtnX = 5
+      	gnMargeBordBtn   = 20
+      	// utiliser l'algorithme d’empilement V si ca dépasse
+      	gbEmpileSiDépasse = Vrai
+      	gsPrefixeBouton   = "BTN_MOBILE_" // ex BTN_MOBILE_1
+      	BTN_1..Visible = Faux// pour ne pas superposer
+      
+      FIN
+      
+      
+     type : 458752
+   -
+     name : _bModeMobile
+     procedure_id : 1291513656870761414
+     type_code : 14
+     code : |1+
+      // Indique si on est en mode windows mobile
+      PROCEDURE _bModeMobile()
+      
+      SI  EnModeSimulateurAndroid() _OU_ 
+      	EnModeAndroid()			  _OU_ 
+      	EnModeSimulateuriOS() 	  _OU_ 
+      	EnModeSimulateurPocket()  _OU_ 
+      	EnModeiOS()				  ALORS
+      
+      renvoyer vrai
+      
+      fin
+      
+      RENVOYER faux
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAACHGhwBv0qfCPkInsQGWAJ9+QnqPBKXy8uWT0FTpvwK/d9AcZZMh9hpD3V3mKgBGA/QzaxCD6IqO0F7a2YIK0smJ4PmDANCmpDGLSx98Kc=
+  original_name : WindevQuestionDefaut
+resources :
+ string_res :
+  identifier : 0x11ec60d40459f3e5
+  internal_properties : BQAAAAUAAAAa2Zm8J9E/zh+/WIrVvz1fER/So3PB0gjQuxc1xKQVWY4ZDm5lfg==
+  strings :
+   -
+     text :
+      fr-FR : Annuler
+      en-GB : Cancel
+      es-ES : Cancelar
+     index : 0
+   -
+     text :
+      fr-FR : "&Abandonner"
+      en-GB : "&Abort"
+      es-ES : "&Abandonar"
+     index : 1
+   -
+     text :
+      fr-FR : "&Réessayer"
+      en-GB : "&Retry"
+      es-ES : "&Reintentar"
+     index : 2
+   -
+     text :
+      fr-FR : "&Ignorer"
+      en-GB : "&Ignore"
+      es-ES : "&Ignorar"
+     index : 3
+   -
+     text :
+      fr-FR : "&Oui"
+      en-GB : "&Yes"
+      es-ES : "&Sí"
+     index : 4
+   -
+     text :
+      fr-FR : "&Non"
+      en-GB : "&No"
+      es-ES : "&No"
+     index : 5
+   -
+     text :
+      fr-FR : "&Annuler"
+      en-GB : "&Cancel"
+      es-ES : Desha&cer
+     index : 6
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

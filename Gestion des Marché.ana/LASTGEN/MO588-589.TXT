@@ -1,0 +1,3 @@
+//MO588-589.TXT ANA00588 TO ANA00589
+GPU_Utilisateur		TAR	1909	nouvelle taille enregistrement : 1909
+GPU_Utilisateur	OneDriveToken	RUB+		OneDriveToken est une nouvelle rubrique

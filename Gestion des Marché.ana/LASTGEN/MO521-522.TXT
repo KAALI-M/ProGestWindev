@@ -1,0 +1,7 @@
+//MO521-522.TXT ANA00521 TO ANA00522
+AffectationPersonnel		TAR	94	nouvelle taille enregistrement : 94
+AffectationPersonnel	IDTypePoste	NNR	Représentant	ATTENTION : la clé Représentant a pour nouveau nom IDTypePoste
+AffectationPersonnel	IDTypePoste	CLEN*		la rubrique IDTypePoste est maintenant une clé
+AffectationPersonnel	IDTypePoste	CNW	Entier sur 4 octets$Booléen	la rubrique IDTypePoste a pour nouveau type Entier sur 4 octets
+TypePoste		NFI		nouveau fichier
+Contrainte_TypePoste_AffectationPersonnel		NWL	TypePoste (IDTypePoste) et AffectationPersonnel (IDTypePoste)	Nouvelle liaison entre les fichiers TypePoste (IDTypePoste) et AffectationPersonnel (IDTypePoste)

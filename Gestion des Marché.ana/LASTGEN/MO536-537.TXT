@@ -1,0 +1,2 @@
+//MO536-537.TXT ANA00536 TO ANA00537
+MaitresOuvrages	IDProjet_IDEntitésOrg	NNR	IDProjet_IDEntitésDeVersionsOrganismes	ATTENTION : la clé IDProjet_IDEntitésDeVersionsOrganismes a pour nouveau nom IDProjet_IDEntitésOrg

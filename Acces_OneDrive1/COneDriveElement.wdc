@@ -1,0 +1,364 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : COneDriveElement
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x15e6e85300bc1450
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      // Classe modélisant un répertoire ou un fichier dans OneDrive
+      COneDriveElement est une Classe
+      	m_pclConnexion est un CConnexionOneDrive dynamique  //la connexion de l'utilisateur
+      	m_description est un STItem  // structure de l'element
+      	
+      	m_path est une chaine		// Chemin de l'objet au root
+      	m_driveId est une chaine	// Identifiant du drive contenant l'objet
+      	
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1578204162632258655
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur( pclConnexion est un CConnexionOneDrive dynamique )
+      
+      m_pclConnexion = pclConnexion
+      
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1578204162632324191
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : ListeRépertoire
+     internal_properties : BQAAAAUAAAAS/gmwswZenFz7+JAueFV56TQKtL5HHoWSS8q5TLA5ZdEF+4ClfsmGu4vx+yylI/mQk3455ulFjQRidWBOOZJb8nj1rWO+kMf30QIkc8zBx9WLlilvLagOWdv6Mkxf5Xl66iZf3iQUEserEhPZ/UHHZ4Pe2oYSJR+DA7Ero6vk5ydcBR3EK0VmTT5twRJKdWWTXqKnaDaB
+     procedure_id : 1578204162632389727
+     type_code : 12
+     code : |1-
+      // Résumé : Liste les sous-répertoires contenus dans un répertoire OneDrive
+      // Syntaxe :
+      //[ <Résultat> = ] ListeRépertoire ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	tableau : tableau des sous-répertoires
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE ListeRépertoire()
+      
+      tabRépertoire est un tableau de COneDriveElement dynamique
+      
+      stResultat est un STItemList
+      
+      sPath est une chaine = ""
+      si m_path ="" ALORS
+      	sPath = "/drive/root/children"
+      sinon
+      	sPath = "/drives/"+m_driveId+"/root:"+ChaîneSupprime(m_path,"/drive/root:")+":/children"
+      FIN
+      m_pclConnexion.RequeteAPI_JSON(sPath,stResultat)
+      POUR TOUT stRep de stResultat.value
+      	// On identifie un élément comme un répertoire si les trois propriétés "type MIME", "Hash SHA1" et "Hash "CRC32" sont vides
+      	si stRep.file.mimeType="" _et_ stRep.file.hashes.crc32Hash="" _et_ stRep.file.hashes.sha1Hash="" alors	
+      		pclRep est un COneDriveElement dynamique = allouer un COneDriveElement(m_pclConnexion)
+      		pclRep.m_description = stRep
+      		pclRep.m_path = stRep.parentReference.path+"/"+stRep.name
+      		pclRep.m_driveId = m_driveId
+      		ajoute(tabRépertoire,pclRep)
+      	fin
+      FIN
+      
+      RENVOYER tabRépertoire
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      	TableauSupprimeTout(tabRépertoire)
+      	renvoyer tabRépertoire
+     type : 458752
+   -
+     name : ListeFichier
+     internal_properties : BQAAAAUAAABKhsF4gD5akMB9wvgUYKuJGzYizlB3wu0+qQQBgqg/DT9z26rjunlet82vM8K9OeHiNSK33O29vdTAB5CcycR3KF41D7XmfJ+Du8jJENnIHsriHRheAqEH1lo5EwmMNIhTzQEK6eVx1xhuXcieMrB2fJqFvZkz6kCQ4pDU0ChnIrjX6LBveJY3kvWUascDwDDUqXpfoP5J
+     procedure_id : 1578204162632455263
+     type_code : 12
+     code : |1+
+      // Résumé : Liste les fichiers contenus dans un répertoire OneDrive
+      // Syntaxe :
+      //[ <Résultat> = ] ListeFichier ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	tableau : Tableau des fichiers
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE ListeFichier()
+      
+      tabFichiers est un tableau de COneDriveElement dynamique
+      
+      stResultat est un STItemList
+      sPath est une chaine =""
+      
+      SI m_path="" ALORS
+      	sPath = "/drive/root/children"
+      SINON
+      	sPath = "/drives/"+m_driveId+"/root:"+ChaîneSupprime(m_path,"/drive/root:")+":/children"
+      FIN
+      m_pclConnexion.RequeteAPI_JSON(sPath,stResultat)
+      POUR TOUT stFic de stResultat.value
+      	// On identifie un élément comme un fichier si l'une des trois propriétés "type MIME", "Hash SHA1" et "Hash "CRC32" est renseignée
+      	SI stFic.file.mimeType<>"" _OU_ stFic.file.hashes.crc32Hash<>"" _OU_ stFic.file.hashes.sha1Hash<>"" ALORs
+      		pclFic est un COneDriveElement dynamique = allouer un COneDriveElement(m_pclConnexion)
+      		pclFic.m_description = stFic
+      		pclFic.m_path = stFic.parentReference.path+"/"+stFic.name
+      		pclFic.m_driveId = m_driveId
+      		ajoute(tabFichiers,pclFic)
+      	fin
+      FIN
+      
+      RENVOYER tabFichiers
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      TableauSupprimeTout(tabFichiers)
+      RENVOYER tabFichiers
+     type : 458752
+   -
+     name : InitialiseParId
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1578204162632520799
+     type_code : 12
+     code : |1-
+      // Résumé : Initialise l'objet à partir de l'identifiant unique d'un élément OneDrive
+      // Syntaxe :
+      //InitialiseParId (<sDriveId> est chaîne, <sItemId> est chaîne)
+      //
+      // Paramètres :
+      //	sDriveId (chaîne UNICODE) : Identifiant unique du drive (peut être une chaîne vide pour le drive par défaut de l'utilisateur)
+      //	sItemId (chaîne UNICODE) : Identifiant unique du répertoire/fichier
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE InitialiseParId( sDriveId est une chaine, sItemId est une chaine )
+      
+      m_driveId = sDriveId
+      m_pclConnexion.RequeteAPI_JSON("/drives/"+sDriveId+"/items/"+sItemId,m_description)
+      m_path += ChaîneSupprime(m_description.parentReference.path,"/drive/root:")+"/"+m_description.name
+      si EstRacine() ALORS
+      	m_path = ""
+      FIN
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      	retour
+     type : 458752
+   -
+     name : EstUnFichier
+     procedure_id : 1578204355908256089
+     type_code : 12
+     code : |1+
+      // Résumé : Permet de savoir si l'objet correspond à un fichier ou un répertoire dans OneDrive
+      // Syntaxe :
+      //[ <Résultat> = ] EstUnFichier ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	booléen : Vrai si l'objet est un fichier
+      //
+      PROCEDURE EstUnFichier()
+      
+      renvoyer m_description.file.mimeType<>"" _ou_ m_description.file.hashes.crc32Hash<>"" _ou_ m_description.file.hashes.sha1Hash<>""
+      
+     type : 458752
+   -
+     name : InitialiseParPath
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1578215570070804609
+     type_code : 12
+     code : |1-
+      // Résumé : Initialise l'objet à partir d'un chemin dans OneDrive
+      // Syntaxe :
+      //InitialiseParPath (<sDriveId> est chaîne [, <sRootPath> est chaîne [, <sSpecialComande> est chaîne]])
+      //
+      // Paramètres :
+      //	sDriveId (chaîne UNICODE) : Identifiant unique du drive (peut être une chaîne vide pour le drive par défaut de l'utilisateur)
+      //	sRootPath (chaîne UNICODE - valeur par défaut="") : Chemin du répertoire/fichier
+      // 	sSpecialComande (chaîne UNICODE - valeur par défaut="") : <indiquez ici le rôle de sSpecialComande>
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE InitialiseParPath(sDriveId est une chaine, sRootPath est une chaine="", sSpecialComande est une chaine ="" )
+      
+      //si sDriveId="" ALORS //drive par défaut
+      //	pclDisqueDefaut est une COneDriveDisque dynamique = m_pclConnexion.Disque_Defaut()
+      //	sDriveId = pclDisqueDefaut.m_description.id
+      //FIN
+      
+      
+      m_driveId = sDriveId
+      request est une chaine =""
+      si m_driveId="" ALORS
+      	request="/drive"
+      sinon
+      	request="/drives/"+m_driveId
+      	SI sRootPath <>"" ALORS
+      		request+= "/root:/"+ChaîneSupprime(m_path,"/drive/root:")+sSpecialComande
+      	FIN
+      FIN
+      
+      m_pclConnexion.RequeteAPI_JSON(request,m_description)
+      
+      
+      
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      	retour
+     type : 458752
+   -
+     name : EstRacine
+     procedure_id : 1578217850700739523
+     type_code : 12
+     code : |1-
+      // Résumé : Vrai si l'objet correspond au répertoire racine du Drive
+      // Syntaxe :
+      //[ <Résultat> = ] EstRacine ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	booléen
+      //
+      PROCEDURE EstRacine()
+      
+      renvoyer m_description.parentReference.path="" _et_ m_description.name="root"
+     type : 458752
+   -
+     name : ChargeBuffer
+     internal_properties : BQAAAAUAAABUHz8hVhFi02/J7EhBrMlSNO0MeAqWBppfCjnxm/4kgJdm7XWgB5T6wjMexC1lxpG0E9/miOIxDqpCyq3t86PoLtBkATH/1oB8x09XjEnNP/qUDpwcbSPg0NLupmnY36w8JgJ/5axk6CsPJRVV4Ib+UFiKlFTTIkF739C1c2Up+mtV1Q==
+     procedure_id : 1578234377743788725
+     type_code : 12
+     code : |1-
+      // Résumé : Charge le contenu du fichier correspondant à l'objet et retourne le buffer correspondant
+      // Syntaxe :
+      //ChargeBuffer ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE ChargeBuffer()
+      
+      si pas EstUnFichier() ALORS
+      	renvoyer ""
+      FIN
+       si m_path ="" ALORS
+       	RENVOYER m_pclConnexion.RequeteAPI_Brut("/drive/root:"+ChaîneSupprime(m_path,"/drive/root:")+":/content")//)
+       sinon
+       	RENVOYER m_pclConnexion.RequeteAPI_Brut("/drives/"+m_driveId+"/items/"+m_description.id+"/content")//"/drive/root:"+ChaîneSupprime(m_path,"/drive/root:")+":/content")
+       FIN
+      
+      
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      	renvoyer ""
+     type : 458752
+   -
+     name : SauveBuffer
+     internal_properties : BQAAAAUAAADHZJML4SXTk2q+nCjCElOJVLRdx1etBl9hg3zBZ0cncwOVESbVj8HxmepqyPgiMXnla2F0HDdAMeL1H3YzTpVqZVAE5Weldi8hb3VYvrg2UTtASOhwlWu5rPuoU0riFE13MmTbJUsLmClCEHqH8L6Tsm2qGjV9bnFBcHUcr4BB58c9vrVZVH0XR19/QPxRB6jE+h1i+HAXvYm+H+SDJ9KtRVgrum/yB99RP5eXrVFU/iJtqp0=
+     procedure_id : 1578257269904818096
+     type_code : 12
+     code : |1-
+      // Résumé : Sauve un buffer dans un fichier OneDrive
+      // Syntaxe :
+      //SauveBuffer (<buf> est buffer)
+      //
+      // Paramètres :
+      //	buf (buffer) : données à sauver
+      // Valeur de retour :
+      // 	Aucune
+      //// Traitement automatique des erreurs :   exécuter le bloc de code CAS ERREUR
+      //
+      
+      PROCEDURE SauveBuffer( buf est un buffer )
+      
+      m_pclConnexion.RequeteAPI_Brut(m_path+":/content",httpput,"application/xml",buf)
+      
+      CAS ERREUR:
+      
+      <si CibleExécution=ApplicationWindows ou CibleExécution=iOS>
+      	
+      	ErreurPropage()
+      	
+      <fin>
+      
+      	retour
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x15e5a66d0384a3c5
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

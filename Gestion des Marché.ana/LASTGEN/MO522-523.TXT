@@ -1,0 +1,3 @@
+//MO522-523.TXT ANA00522 TO ANA00523
+TypesPoste		NNF*	TypePoste	nouveau nom TypesPoste
+TypesPoste		FRN		

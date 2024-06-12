@@ -1,0 +1,3 @@
+//MO638-639.TXT ANA00638 TO ANA00639
+Tasks		TAR	781	nouvelle taille enregistrement : 781
+Tasks	OSNotif	RUB+		OSNotif est une nouvelle rubrique

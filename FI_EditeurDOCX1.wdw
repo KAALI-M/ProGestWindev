@@ -1,0 +1,114 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FI_EditeurDOCX1
+ major_version : 25
+ minor_version : 0
+ type : 8
+ description : ""
+ subtype : 0
+window :
+ name : FI_EditeurDOCX1
+ identifier : 0x2216b40306170518
+ internal_properties : BQAAAAUAAAAZ6EhXDLNp/uuiwWCdkPwa8dCxo0jbOEjBhAkIuFt/+y8jSyLvyRVte5H7bBGz1+0IB3ivZDDckfdmBJvhCfovDxdCEMbogb0kllEad9gUeQdgy2ewOWi3ctb5Gmsu4tUfymNbubmSn+JVoOBWzyRzk9Kg5XKELF/BXXNxMKq2D6LfCf+iJoRbyephiLgLdffSC51sCXafGgwtkH5eznZVQTmp7bei93YjuT9K5E7TcihmB2l4zF8y2xXhec3wL3p/SH+XA+Ee95au/iKdBmMSF5DHm1kWI/1E88E4BLAnHT/hd+vTpYM++ZQ5P+sPfEQnIijXPuSZhmeylM0/5EUtVpMeTehKOKnHLTeeDB7C3RiSjZ+VDBzHVfQBR5YHRWRIVvlRVR81G/0xejrJTuNc6hoXhHcGcHV4xP/XiG1UQ68YMHnHE0UgTbWcVbylvCQGILJD6LCVapC+GU6AcKdlac/73pImWZS7hmkrm2nL1ueyzb99zQ0Hl3GZmlIRDCjhONcKFmhG2wnsb3kcOtg+H1LSJI4MUgXbtx+DdeAXapw0IxWzTMCzXATILWgt60099ZAz80Px2B30qtq8uyVich0+2RCYEjs1BURm7vAvcUfAE0LySs8q34fwfR+CvnpjBh6xQX99tkSI78Zi
+ controls :
+  -
+    name : FI_EditeurDOCX1
+    identifier : 0x2216b40306180527
+    internal_properties : BQAAAAUAAAAuuYuha+Cq+sDl2xfwIk3DMQRrt43P5fOXUt8+dwMobrXMu2ik8DR0SShigbkvNRr5ZqjK+3qt7Tq2TUTHleyty7gLCOOZe25U/+zwRHxrC9JUHKmbOCOGzBN0GK4KYvaAdH7XyrjSmTO4zX15GmfbW8ceYAb6iYT00u9fKCn/3n5lid7XWHPartFygOmmHrn2Z6xmHdNKLg+lpWwBMRbPg1U5XwlyrJeppv3yjYOsMlHuy79euigCjSr8DZFU6TawpbH54p5FhMJa3ug77Em2kl2pkEPUMt/i/WMDIAGjAZsTsWGqta1PnNDTucFKY/DNHJ9CnKbOCkF1a+Gut4UMUlKt6sdCJGdPqSauY6yr4V5ovus1R53+zx5192C8zCCL7miI1BUHWS0IGum5M32gjatIfF3Pf/DNI5c6waZjMrWUNWE8G0R6m4gwCfc1dSGkM0UoS4Dt7/BsoCkr6an3rQoh0g==
+    controls :
+     -
+       name : TT_SansNom
+       identifier : 0x2216b40306190527
+       internal_properties : BQAAAAUAAABunVKn7848UHsdP0+nQEHS82z/FRk7m0WhdJhvXaww4LP4/OqmqrNkE00mwsARXMp9hEv80mwgbfbacCpyHw+n3IBt2QHz2OpHS2cG6XWEo09yxYmbCvHx4wmcbu37fYcpG5Tsa3NovF8DICuskV9JjFE/YFnppPBCS0i40IzeEiFTnZLbqmfdAUq60gUKT+mV5FpdlbULgCR+DDKog/xFSxERzsPfVgkFtCkENTzg4zcZMDRLqJ9uwa3mokKVqRl0fTIM3ipqZJOBpbhCUXZ3rs6ZnexcHS757h0+uX39NbxvpzYRSWKHW9jxVSCxPy0n+zVtn8COtmDHl9UMcqnI3l/H89bEngewAEYyl5XRYs/T8SA8kHgcdia6SFTsIylKvTheVNsmhthJ6qSQkGnX139totmrVnOsrnpS3ZFf8jCjZ9r5SW+wqb4lDbWTF/IpF/wPQeAk67yHr/wf0UqzMd8b2P4kLwTyadKSq1eIGwN3qIcI5MdE7zflXkUpI9V3zZ7YbkK4ZQDB9p5QQfmvKp/XB8BKg/a4XRnuCgfb7tMibHTcxiToWrnFzZHHaRpVDkhql8a8YUmFSu7mcqG/puftBvmvaXYJKiP7+9+7cRhLdYZskc31s64XVV0OFuPqFkJYw6G8oGTgOjkkPrpOjbNG7FxvLXZyaJiDwJHYe6Zq/ns8e+S9z6y9aGgqNf4QE3903vl3/knsCTGkN2bWfJ4Sn8jrxspyLS0l2PP5oshRYM27KMMuBCpVPB5/ylrUKKE9MYniV/+efQg5FbUfkBb2WkWlCOuHg7IJoKtvboWvjpB9y2Hk
+       type : 120
+       code_elements :
+        type_code : 147
+        p_codes : []
+    type : 32
+    code_elements :
+     type_code : 70
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE MaFenêtre( IDArchiveDoc est un entier sur 8 octets =0,gsChemin est une chaîne = "")
+         
+         // cette fenêtre permet le traitement de texte de l'application 
+         // en entrée elle récupère l'emplacement du fichier
+         // en sortie, elle renvoie l'emplacement du fichier traité
+         // gschemin doit etre "Null" pour la création d'un nouveau document
+         
+         
+         SI gsChemin <> "" ALORS
+         //	FEN_EditeurDocuments.Titre						= fExtraitChemin(gsChemin,fFichier)
+         	TT_SansNom										= gsChemin
+         	FI_WinDevFAA_RubanTT.BTN_WDFAA_Nouveau.Visible	= Faux
+         	FI_WinDevFAA_RubanTT.BTN_WDFAA_Ouvrir.Visible	= Faux
+         	FI_WinDevFAA_RubanTT.BTN_WDFAA_Save.Visible = faux
+         SINON
+         	TT_SansNom.Ouvre("")
+         FIN
+         gsRépertoire est un chaine
+      -
+        code : |1+
+         TT_SansNom.Modifié = 0
+         
+        type : 14
+      -
+        code : |1-
+         // enregisrement du Document selon qu'il est externe ou interne  IDArchiveDoc
+         
+         SI TT_SansNom.Modifié = 1 ALORS
+         	SI OuiNon(1, "voulez-vous enregistrer le fichier modifié ? ")=Oui ALORS
+         		si IDArchiveDoc >0 ALORS
+         			HLitRecherchePremier(archivedocs, IdArchiveDocs, IDArchiveDoc)
+         			si HTrouve(archivedocs) ALORS
+         				TT_SansNom.Sauve(gsChemin)
+         				TT_SansNom.Ferme()
+         				HAttacheMémo(archivedocs,Document,gsChemin)
+         				Si HModifie(archivedocs) alors
+         				sinon
+         					Erreur(HErreurInfo())
+         				FIN
+         			sinon
+         				Erreur(HErreurInfo())
+         			FIN
+         		sinon
+         			SI gsChemin = "" ALORS // cas d'un nouveau document
+         				gsRépertoire = fSélecteur(fRepExe(), "NouveauDocument.docx", ...
+         				"Sélectionner un fichier", ...
+         				"Fichier (*.docx)" + TAB + "*.docx"  + TAB + "*.*", "docx", fselCrée+fselExiste)
+         				TT_SansNom.Sauve(gsRépertoire)
+         				TT_SansNom.Ferme()
+         			SINON 
+         				TT_SansNom.Sauve(gsChemin)
+         				TT_SansNom.Ferme()
+         			FIN
+         		FIN
+         		
+         	FIN
+         FIN
+        type : 2
+ menu :
+  name : _Menu
+  identifier : 0x2103cdb107872e13
+  internal_properties : BQAAAAUAAADiNkh1O6bsUdojdCyc5rvMKOb4KGdCuKthEpeb9YgToXKniNhTa74qqTWW/kn9AHiAwpYRHxIfmwB4rUjWCTsHt96kYeogf6aF/P/qLr5YC+/q/4GecKHBIXzFYdqjswEetQud+3e/nTe5+xoit8ijZM2EBaVaXCH6Yfad
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar : {}
+ code_elements :
+  type_code : 71
+  p_codes : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : FI_SansNom1
+resources :
+ string_res :
+  identifier : 0x1103cdb100692e13
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : BQAAAAUAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

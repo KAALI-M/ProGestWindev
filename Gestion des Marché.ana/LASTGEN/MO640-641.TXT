@@ -1,0 +1,10 @@
+//MO640-641.TXT ANA00640 TO ANA00641
+TabDélais		TAR	424	nouvelle taille enregistrement : 424
+TabDélais	Retenue	RUB+		Retenue est une nouvelle rubrique
+TabDélais	Valeur	RUB+		Valeur est une nouvelle rubrique
+TabDélais	IDCatPénalitéRetard	RUB+		IDCatPénalitéRetard est une nouvelle clé
+TabDélais	IDRéfPénalitéRetard	RUB+		IDRéfPénalitéRetard est une nouvelle clé
+CatPénalitéRetard		NFI		nouveau fichier
+RéfPénalitéRetard		NFI		nouveau fichier
+Contrainte_CatPénalitéRetard_TabDélais		NWL	CatPénalitéRetard (IDCatPénalitéRetard) et TabDélais (IDCatPénalitéRetard)	Nouvelle liaison entre les fichiers CatPénalitéRetard (IDCatPénalitéRetard) et TabDélais (IDCatPénalitéRetard)
+Contrainte_RéfPénalitéRetard_TabDélais		NWL	RéfPénalitéRetard (IDRéfPénalitéRetard) et TabDélais (IDRéfPénalitéRetard)	Nouvelle liaison entre les fichiers RéfPénalitéRetard (IDRéfPénalitéRetard) et TabDélais (IDRéfPénalitéRetard)

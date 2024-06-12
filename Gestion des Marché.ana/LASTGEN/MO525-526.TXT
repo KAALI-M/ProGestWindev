@@ -1,0 +1,6 @@
+//MO525-526.TXT ANA00525 TO ANA00526
+AffectationPersonnel		TAR	141	nouvelle taille enregistrement : 141
+AffectationPersonnel	TypePoste	NNR	IDTypePoste	ATTENTION : la clé IDTypePoste a pour nouveau nom TypePoste
+AffectationPersonnel	TypePoste	CNW	Chaîne$Entier sur 4 octets	la rubrique TypePoste a pour nouveau type Chaîne
+TypePoste		FIC-	TypePoste	Fichier supprimé TypePoste
+Contrainte_TypePoste_AffectationPersonnel		DEL	TypePoste (IDTypePoste) et AffectationPersonnel (IDTypePoste)	Liaison supprimée entre les fichiers TypePoste (IDTypePoste) et AffectationPersonnel (IDTypePoste)
